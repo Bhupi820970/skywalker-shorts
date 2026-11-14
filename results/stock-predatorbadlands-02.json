@@ -1,0 +1,170 @@
+{
+  "id": "stock-predatorbadlands-02",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-15 02:52 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43640947117",
+  "slot": null,
+  "title": "The moment she realized she is the prey #predatorbadlands #ellefanning #scifi",
+  "hook": "You are not the hunter",
+  "description": "You are not the hunter. Elle Fanning faces a terrifying new threat in the isolated wilderness of Badlands. From the official Predator: Badlands trailer. Edit by Skywalker.\nSource: official trailer.\n#predatorbadlands #ellefanning #scifi #shorts #edit",
+  "tags": [
+    "predatorbadlands",
+    "ellefanning",
+    "scifi",
+    "predator",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "The hunter became prey",
+    "title": "The hunter became prey | A young Predator hunts alone | #edit",
+    "description": "The hunter became prey. From the official Predator: Badlands trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #predator",
+    "tags": [
+      "predator",
+      "predatorbadlands",
+      "edit",
+      "shorts",
+      "trending"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "The moment she realized she is the prey",
+      "click_score": 92.0
+    },
+    {
+      "title": "Predator Badlands is not a fair fight",
+      "click_score": 88.0
+    },
+    {
+      "title": "Elle Fanning's survival instincts in Badlands",
+      "click_score": 85.0
+    },
+    {
+      "title": "This scene changes everything in the hunt",
+      "click_score": 82.0
+    },
+    {
+      "title": "What happens when the Predator finds you",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 32.2,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.7,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.7,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-predatorbadlands",
+  "stock": true,
+  "stock_topic": "backup-predatorbadlands",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/predatorbadlands_trailer_h264.mp4",
+      "music": "sw_worthnothingfeatolivertr.mp3"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-predatorbadlands-02.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 2.547,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/predatorbadlands_trailer_h264.mp4",
+  "music": "sw_worthnothingfeatolivertr.mp3",
+  "music_credit": "Song: PHONK DRIFT - WORTH NOTHING (feat. Oliver Tree) (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "You are not the hunter. Elle Fanning faces a terrifying new threat in the isolated wilderness of Badlands. From the official Predator: Badlands trailer. Edit by Skywalker.\nSource: official trailer.\n#predatorbadlands #ellefanning #scifi #shorts #edit\n\nMusic:\nSong: PHONK DRIFT - WORTH NOTHING (feat. Oliver Tree) (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.733333,
+      "audio": true
+    },
+    "lufs": -14.3,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.2,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all criteria: it is a clean, song-only edit with a strong hook, proper layout, and no dialogue or trailer audio."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  }
+}
