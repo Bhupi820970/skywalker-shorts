@@ -26,6 +26,8 @@ jobs:
           python-version: "3.12"
       - name: Fill queue + health check
         id: h
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
         run: |
           python3 scripts/fill_queue.py || true
           set +e

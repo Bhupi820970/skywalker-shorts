@@ -34,6 +34,7 @@ RELEASE = "backup-stock"
 LEAD_MIN = 60
 PENDING_HOURS = 3
 PAST_HOURS = 6
+TITLE_LOOKBACK_DAYS = 7
 OFFICIAL_FALLBACK = ["06:30", "09:00", "11:30", "13:30", "16:00", "18:30", "20:30", "22:30"]
 
 try:
@@ -160,12 +161,38 @@ def is_ready_result(r: dict | None) -> bool:
     return True
 
 
+def norm_title(t: str) -> str:
+    return " ".join((t or "").lower().split())
+
+
+def is_title_match_miss(r: dict, slot_s: str | None = None) -> bool:
+    """True when publish recorded an existing Buffer post by title that is not this slot.
+
+    Buffer's title-match idempotency swallowed 15 Nov 13:30 (same Avatar title as
+    14 Nov 12:30). A match whose dueAt/sentAt is this slot is real coverage.
+    """
+    if (r.get("buffer_note") or "") != "matched existing post by title":
+        return False
+    slot_s = slot_s or r.get("slot")
+    due = r.get("buffer_due_at") or r.get("buffer_posted_at")
+    if not slot_s or not due:
+        return True
+    try:
+        slot = datetime.fromisoformat(slot_s)
+        due_dt = datetime.fromisoformat(str(due).replace("Z", "+00:00"))
+        if due_dt.tzinfo is None:
+            due_dt = due_dt.replace(tzinfo=timezone.utc)
+        return abs((due_dt - slot).total_seconds()) > 15 * 60
+    except Exception:
+        return True
+
+
 def slot_is_covered(root: Path, slot_s: str) -> bool:
     """True when a publishable done video already belongs to this slot."""
     for r in iter_results(root):
         if r.get("slot") != slot_s:
             continue
-        if is_ready_result(r):
+        if is_ready_result(r) and not is_title_match_miss(r, slot_s):
             return True
     return False
 
@@ -178,6 +205,8 @@ def slot_post_conflicts(r: dict, rows: list[dict]) -> bool:
     iid = r.get("id")
     for o in rows:
         if o.get("id") == iid or o.get("slot") != slot:
+            continue
+        if is_title_match_miss(o, slot):
             continue
         if o.get("buffer_post_id"):
             return True
@@ -214,6 +243,82 @@ def topics_used_on_day(root: Path, day: str) -> set[str]:
             except Exception:
                 pass
     return used
+
+
+def _parse_when(s: str) -> datetime | None:
+    if not s:
+        return None
+    try:
+        raw = str(s).replace(" IST", "").replace("Z", "+00:00")
+        if "T" in raw:
+            dt = datetime.fromisoformat(raw)
+        else:
+            dt = datetime.strptime(raw[:16], "%Y-%m-%d %H:%M")
+            dt = dt.replace(tzinfo=IST)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(IST)
+    except Exception:
+        return None
+
+
+def recent_titles_and_topics(root: Path, now: datetime | None = None,
+                             days: int = TITLE_LOOKBACK_DAYS,
+                             buffer_posts: list | None = None) -> tuple[set[str], set[str]]:
+    """Titles and topic slugs sent or scheduled in the last `days` (results + Buffer)."""
+    now = now or now_ist()
+    start = now - timedelta(days=days)
+    end = now + timedelta(days=1)
+    titles: set[str] = set()
+    slugs: set[str] = set()
+
+    def _in_window(dt: datetime | None) -> bool:
+        return bool(dt and start <= dt <= end)
+
+    for r in iter_results(root):
+        if r.get("no_publish") or r.get("demo"):
+            continue
+        posted = (r.get("buffer_status") in ("sent", "scheduled")
+                  or r.get("buffer_post_id") or r.get("youtube_url")
+                  or r.get("assigned_from_stock") or r.get("assigned_slot"))
+        if not posted:
+            continue
+        when = None
+        for key in ("buffer_posted_at", "buffer_due_at", "buffer_created_at",
+                    "used_at", "slot", "assigned_slot"):
+            when = _parse_when(r.get(key) or "")
+            if when:
+                break
+        if not _in_window(when):
+            continue
+        nt = norm_title(r.get("title") or "")
+        if nt:
+            titles.add(nt)
+        slug = _slug_of(r)
+        if slug:
+            slugs.add(slug)
+
+    posts = buffer_posts
+    if posts is None and os.environ.get("BUFFER_API_KEY"):
+        try:
+            import buffer_post  # noqa: WPS433
+            posts = buffer_post.channel_posts()
+        except Exception as e:
+            print(f"buffer title scan skipped: {e}", file=sys.stderr)
+            posts = None
+    for x in posts or []:
+        if (x.get("status") or "") not in ("sent", "scheduled"):
+            continue
+        when = _parse_when(x.get("sentAt") or "") or _parse_when(x.get("dueAt") or "")
+        if when and not _in_window(when):
+            continue
+        if not when:
+            # no timestamp: still treat as recent so a title collision cannot sneak through
+            pass
+        nt = norm_title(((x.get("metadata") or {}).get("title") or ""))
+        if nt:
+            titles.add(nt)
+    return titles, slugs
 
 
 def _slug_of(r: dict) -> str:
@@ -318,13 +423,26 @@ def pending_entries(man: dict) -> list[dict]:
     return [e for e in man.get("items") or [] if e.get("status") == "pending"]
 
 
-def pick_stock(man: dict, root: Path, day: str) -> dict | None:
+def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
+               buffer_posts: list | None = None) -> dict | None:
     ready = ready_entries(man)
     if not ready:
         return None
+    now = now or now_ist()
     used = topics_used_on_day(root, day)
-    prefer = [e for e in ready if e.get("slug") not in used]
-    return (prefer or ready)[0]
+    recent_titles, recent_slugs = recent_titles_and_topics(root, now, buffer_posts=buffer_posts)
+    used |= recent_slugs
+
+    def conflicts(e: dict) -> bool:
+        if (e.get("slug") or "") in used:
+            return True
+        src = read_result(root, e.get("id") or "") or {}
+        title = norm_title(src.get("title") or e.get("title") or "")
+        return bool(title and title in recent_titles)
+
+    prefer = [e for e in ready if not conflicts(e)]
+    # Never fall back to a title/topic Buffer would swallow (same-title miss).
+    return prefer[0] if prefer else None
 
 
 def assign_to_slot(root: Path, slot_s: str, now: datetime | None = None) -> dict | None:
@@ -340,7 +458,7 @@ def assign_to_slot(root: Path, slot_s: str, now: datetime | None = None) -> dict
         code = slot.strftime("%Y%m%d-%H%M")
     except Exception:
         return None
-    ent = pick_stock(man, root, day)
+    ent = pick_stock(man, root, day, now=now)
     if not ent:
         return None
     stock_id = ent["id"]
@@ -356,8 +474,8 @@ def assign_to_slot(root: Path, slot_s: str, now: datetime | None = None) -> dict
         new_id = f"{code}-stock-{slug}"
     dest = dict(src)
     for k in ("buffer_post_id", "buffer_status", "buffer_due_at", "buffer_posted_at",
-              "buffer_created_at", "buffer_edited_at", "buffer_error", "youtube_url",
-              "stock_used", "assigned_slot", "assigned_result", "used_at"):
+              "buffer_created_at", "buffer_edited_at", "buffer_error", "buffer_note",
+              "youtube_url", "stock_used", "assigned_slot", "assigned_result", "used_at"):
         dest.pop(k, None)
     dest["id"] = new_id
     dest["slot"] = slot_s

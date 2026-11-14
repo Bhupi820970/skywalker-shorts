@@ -233,6 +233,10 @@ def test_missing_official_slot_gets_stock_before_lead(tmp_path, monkeypatch):
            _ready_result("stock-superman-01", stock_topic="backup-superman"))
     _write(root / "results" / "stock-zootopia2-01.json",
            _ready_result("stock-zootopia2-01", stock_topic="backup-zootopia2"))
+    # A third topic not already in today's queue, so 18:30 is not left empty
+    # when same-day slugs are skipped.
+    _write(root / "results" / "stock-twisters-01.json",
+           _ready_result("stock-twisters-01", stock_topic="backup-twisters"))
     # Real 14 Nov shape: leftover 12:30/17:30, official 13:30 and 18:30 missing.
     q = [
         ("06:30", "howtorobabank"), ("09:00", "runningman"), ("11:30", "mandalorian"),
@@ -320,3 +324,77 @@ def test_plan_backup_for_missing_official_only_when_stock_empty(tmp_path, monkey
         items, lambda i: None, pool, set(), now, ahead=2, busy=set()
     )
     assert picks2 == []
+
+
+def test_assign_skips_title_used_in_last_7_days(tmp_path, monkeypatch):
+    """A stock video whose title/topic already went out in the last 7 days must
+    not be assigned; Buffer would swallow the new slot by title match."""
+    root = _root(tmp_path, monkeypatch)
+    _write(root / "results" / "stock-zootopia2-01.json",
+           _ready_result("stock-zootopia2-01", stock_topic="backup-zootopia2",
+                         title="Varang's aura in this scene is terrifying #avatar #varang #scifi"))
+    _write(root / "results" / "stock-superman-01.json",
+           _ready_result("stock-superman-01", stock_topic="backup-superman",
+                         title="Superman takes flight in this scene #superman #dc #action"))
+    # Yesterday's posted Avatar (same title as zootopia2 stock, different day)
+    _write(root / "results" / "20261114-1230-avatarfireandash.json", {
+        "id": "20261114-1230-avatarfireandash",
+        "slot": "2026-11-14T12:30:00+05:30",
+        "status": "done",
+        "title": "Varang's aura in this scene is terrifying #avatar #varang #scifi",
+        "asset_url": "https://example.com/a.mp4",
+        "assigned_from_stock": True,
+        "stock_id": "stock-avatarfireandash-01",
+        "buffer_post_id": "bp-old",
+        "buffer_status": "sent",
+        "buffer_due_at": "2026-11-14T07:12:45.371Z",
+    })
+    now = datetime(2026, 11, 15, 0, 30, tzinfo=IST)
+    got = backup_stock.assign_to_slot(root, "2026-11-15T13:30:00+05:30", now)
+    assert got is not None
+    assert got["stock_id"] == "stock-superman-01"
+    assert "zootopia2" not in got["id"]
+    assert got["title"] != "Varang's aura in this scene is terrifying #avatar #varang #scifi"
+
+
+def test_title_match_miss_does_not_cover_slot(tmp_path, monkeypatch):
+    root = _root(tmp_path, monkeypatch)
+    slot = "2026-11-15T13:30:00+05:30"
+    _write(root / "results" / "20261115-1330-avatarfireandash.json",
+           _ready_result("20261115-1330-avatarfireandash", slot=slot,
+                         title="Varang's aura in this scene is terrifying #avatar #varang #scifi",
+                         assigned_from_stock=True, stock_id="stock-avatarfireandash-02",
+                         buffer_post_id="bp-old", buffer_status="sent",
+                         buffer_due_at="2026-11-14T07:12:45.371Z",
+                         buffer_note="matched existing post by title"))
+    assert backup_stock.is_title_match_miss(
+        json.loads((root / "results" / "20261115-1330-avatarfireandash.json").read_text()), slot
+    ) is True
+    assert backup_stock.slot_is_covered(root, slot) is False
+    _write(root / "results" / "stock-superman-01.json",
+           _ready_result("stock-superman-01", stock_topic="backup-superman",
+                         title="Superman takes flight in this scene #superman #dc #action"))
+    now = datetime(2026, 11, 15, 0, 30, tzinfo=IST)
+    got = backup_stock.assign_to_slot(root, slot, now)
+    assert got is not None
+    assert got["id"] == "20261115-1330-superman"
+    assert got["stock_id"] == "stock-superman-01"
+    assert backup_stock.slot_is_covered(root, slot) is True
+    # the swallowed Avatar result must not block Buffer from posting the new one
+    assert backup_stock.slot_post_conflicts(
+        got, [
+            json.loads((root / "results" / "20261115-1330-avatarfireandash.json").read_text()),
+            got,
+        ]
+    ) is False
+
+
+def test_same_slot_title_match_is_real_coverage():
+    r = {"buffer_note": "matched existing post by title",
+         "slot": "2026-11-15T13:30:00+05:30",
+         "buffer_due_at": "2026-11-15T08:00:00.000Z"}
+    assert backup_stock.is_title_match_miss(r) is False
+    r2 = {"buffer_note": "matched existing post by title",
+          "slot": "2026-11-15T13:30:00+05:30",
+          "buffer_due_at": "2026-11-14T07:12:45.371Z"}
+    assert backup_stock.is_title_match_miss(r2) is True
