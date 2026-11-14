@@ -314,12 +314,26 @@
       "result_id": "stock-nobody2-01"
     },
     {
+      "id": "stock-nobody2-02",
+      "topic_id": "backup-nobody2",
+      "slug": "nobody2",
+      "status": "pending",
+      "queued_at": "2026-11-15 02:34 IST"
+    },
+    {
       "id": "stock-onepiece-01",
       "topic_id": "backup-onepiece",
       "slug": "onepiece",
       "status": "failed",
       "queued_at": "2026-11-14 12:51 IST",
       "result_id": "stock-onepiece-01"
+    },
+    {
+      "id": "stock-onepiece-02",
+      "topic_id": "backup-onepiece",
+      "slug": "onepiece",
+      "status": "pending",
+      "queued_at": "2026-11-15 02:34 IST"
     },
     {
       "id": "stock-predatorbadlands-01",
