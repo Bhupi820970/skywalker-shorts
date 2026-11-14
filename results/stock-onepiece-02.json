@@ -1,0 +1,108 @@
+{
+  "id": "stock-onepiece-02",
+  "status": "retry_queued",
+  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 3.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-15 03:18 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43640875705",
+  "slot": null,
+  "title": "Egghead changes One Piece forever | Luffy on Egghead Island | #edit",
+  "hook": "Egghead changes One Piece forever",
+  "description": "Egghead changes One Piece forever. From the official ONE PIECE Egghead Arc trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #onepiece",
+  "tags": [
+    "onepiece",
+    "anime",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.5,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.3,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.5,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-onepiece",
+  "stock": true,
+  "stock_topic": "backup-onepiece",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 3.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepiece_crunchyroll_trailer_h264.mp4",
+      "music": "sw_metamorphosis.mp3"
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 3.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepiece_crunchyroll_trailer_h264.mp4",
+      "music": "sw_metamorphosis.mp3"
+    },
+    {
+      "attempt": 3,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 3.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepiece_crunchyroll_trailer_h264.mp4",
+      "music": "sw_phonkmusicarchiveultimat.mp3"
+    }
+  ],
+  "last_error": "pipeline/QA failed (exit 1): only 3.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+}
