@@ -46,6 +46,13 @@
       "used_at": "2026-11-15 00:22 IST"
     },
     {
+      "id": "stock-avatarfireandash-03",
+      "topic_id": "backup-avatarfireandash",
+      "slug": "avatarfireandash",
+      "status": "pending",
+      "queued_at": "2026-11-15 00:22 IST"
+    },
+    {
       "id": "stock-chainsawman-01",
       "topic_id": "backup-chainsawman",
       "slug": "chainsawman",
@@ -100,6 +107,13 @@
       "assigned_slot": "2026-11-15T18:30:00+05:30",
       "assigned_result": "20261115-1830-deadpool3",
       "used_at": "2026-11-15 00:22 IST"
+    },
+    {
+      "id": "stock-deadpool3-03",
+      "topic_id": "backup-deadpool3",
+      "slug": "deadpool3",
+      "status": "pending",
+      "queued_at": "2026-11-15 00:22 IST"
     },
     {
       "id": "stock-despicableme4-01",
