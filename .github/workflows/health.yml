@@ -1,6 +1,6 @@
 name: health
 
-# Verify next 24h slots are covered; assign ready stock to failed/imminent slots;
+# Verify next 24h official (+ extra queue) slots are covered; assign ready stock to failed/missing/imminent slots;
 # keep backup pool healthy; refill pre-rendered stock (2/run) until the target of 30; auto-fill queue.
 on:
   schedule:

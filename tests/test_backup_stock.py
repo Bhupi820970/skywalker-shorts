@@ -193,6 +193,12 @@ def test_plan_skips_backup_render_when_stock_covers(tmp_path, monkeypatch):
     _write(tmp_path / "results" / "20261114-1600-superman.json",
            _ready_result("20261114-1600-superman", slot=slot, assigned_from_stock=True,
                          stock_id="stock-superman-01"))
+    # Other official times are already queued so this test only checks the
+    # failed 16:00 slot, which stock already covers.
+    for hhmm, iid in (("11:30", "a"), ("13:30", "b"), ("18:30", "c"), ("20:30", "d")):
+        iso = f"2026-11-14T{hhmm}:00+05:30"
+        items[iid] = {"id": iid, "slot": iso, "status": "queued"}
+        results[iid] = {"status": "retry_queued"}
     pool = [{"id": "backup-zootopia2"}]
     picks, _ = plan.select_slot_backups(
         items, lambda i: results.get(i), pool, set(), now, ahead=6, busy=set()
@@ -217,3 +223,100 @@ def test_plan_accepts_forced_stock_ids(tmp_path, monkeypatch, capsys):
     text = out.out + out.err
     assert "stock-alienromulus-01" in text
     assert "stock-avatarfireandash-01" in text
+
+
+def test_missing_official_slot_gets_stock_before_lead(tmp_path, monkeypatch):
+    """Official 18:30 with nothing in the queue must be assigned immediately,
+    not only inside the 60-minute window (that narrow window is how 14 Nov missed)."""
+    root = _root(tmp_path, monkeypatch)
+    _write(root / "results" / "stock-superman-01.json",
+           _ready_result("stock-superman-01", stock_topic="backup-superman"))
+    _write(root / "results" / "stock-zootopia2-01.json",
+           _ready_result("stock-zootopia2-01", stock_topic="backup-zootopia2"))
+    # Real 14 Nov shape: leftover 12:30/17:30, official 13:30 and 18:30 missing.
+    q = [
+        ("06:30", "howtorobabank"), ("09:00", "runningman"), ("11:30", "mandalorian"),
+        ("12:30", "zootopia2"), ("16:00", "fantasticfour"), ("17:30", "kalki2898ad"),
+        ("20:30", "mortalkombat2"), ("22:30", "rajinikanth"),
+    ]
+    rows = []
+    for hhmm, slug in q:
+        iid = f"20261114-{hhmm.replace(':','')}-{slug}"
+        iso = f"2026-11-14T{hhmm}:00+05:30"
+        rows.append({"id": iid, "slot": iso, "status": "queued"})
+        # Earlier/queued slots already have a publishable video; only the
+        # official holes should consume stock.
+        _write(root / "results" / f"{iid}.json", _ready_result(iid, slot=iso))
+    _write(root / "queue" / "2026-11-14.json", rows)
+    now = datetime(2026, 11, 14, 15, 10, tzinfo=IST)  # ~3h before 18:30
+    slot_1830 = "2026-11-14T18:30:00+05:30"
+    slot_1330 = "2026-11-14T13:30:00+05:30"
+    assert backup_stock.slot_needs_stock(root, slot_1830, now) is True
+    assert slot_1830 in backup_stock.upcoming_slots(root, now)
+    got = backup_stock.assign_needed(root, now)
+    slots = {g["slot"] for g in got}
+    assert slot_1830 in slots
+    assert slot_1330 in slots
+    assert backup_stock.slot_is_covered(root, slot_1830) is True
+    assert backup_stock.slot_is_covered(root, slot_1330) is True
+
+
+def test_queued_unready_waits_until_lead(tmp_path, monkeypatch):
+    root = _root(tmp_path, monkeypatch)
+    slot = "2026-11-15T06:30:00+05:30"
+    _write(root / "queue" / "2026-11-15.json", [
+        {"id": "20261115-0630-werwulf", "slot": slot, "status": "queued",
+         "fallback_asset": "werwulf_trailer_h264.mp4"}
+    ])
+    now = datetime(2026, 11, 15, 0, 15, tzinfo=IST)  # more than 60 min before
+    assert backup_stock.slot_needs_stock(root, slot, now) is False
+    late = datetime(2026, 11, 15, 5, 40, tzinfo=IST)
+    assert backup_stock.slot_needs_stock(root, slot, late) is True
+
+
+def test_plan_backup_for_missing_official_only_when_stock_empty(tmp_path, monkeypatch):
+    now = datetime(2026, 11, 15, 0, 15, tzinfo=IST)
+    slot = "2026-11-15T13:30:00+05:30"
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("SKY_ROOT", str(tmp_path))
+    monkeypatch.setattr(backup_stock, "REPO", tmp_path)
+    (tmp_path / "results").mkdir(exist_ok=True)
+    (tmp_path / "config").mkdir(exist_ok=True)
+    (tmp_path / "queue").mkdir(exist_ok=True)
+    # Official 13:30 (and 18:30) missing; every other official time is queued.
+    official_queued = ["06:30", "09:00", "11:30", "16:00", "20:30", "22:30"]
+    extras = ["12:30", "17:30"]
+    items = {}
+    qrows = []
+    for hhmm in official_queued + extras:
+        iso = f"2026-11-15T{hhmm}:00+05:30"
+        iid = f"20261115-{hhmm.replace(':','')}-x"
+        items[iid] = {"id": iid, "slot": iso, "status": "queued"}
+        qrows.append(items[iid])
+    _write(tmp_path / "queue" / "2026-11-15.json", qrows)
+    pool = [{"id": "backup-twisters", "fallback_asset": "twisters_trailer_h264.mp4"}]
+    _write(tmp_path / "config" / "backup_pool.json", {"items": pool})
+    _write(tmp_path / "config" / "backup_stock.json", {
+        "target": 30, "refill_at": 5, "max_refill_per_run": 2, "items": []
+    })
+    # Tight window so only 13:30 (not 18:30) is due.
+    now = datetime(2026, 11, 15, 12, 45, tzinfo=IST)
+    picks, _ = plan.select_slot_backups(
+        items, lambda i: None, pool, set(), now, ahead=2, busy=set()
+    )
+    assert picks == ["backup-twisters@20261115-1330"]
+
+    # Once a ready stock video exists, plan must not start an on-demand render.
+    _write(tmp_path / "results" / "stock-superman-01.json",
+           _ready_result("stock-superman-01", stock_topic="backup-superman"))
+    _write(tmp_path / "config" / "backup_stock.json", {
+        "target": 30, "items": [{
+            "id": "stock-superman-01", "slug": "superman",
+            "topic_id": "backup-superman", "status": "ready",
+            "asset_url": _ready_result("stock-superman-01")["asset_url"],
+        }]
+    })
+    picks2, _ = plan.select_slot_backups(
+        items, lambda i: None, pool, set(), now, ahead=2, busy=set()
+    )
+    assert picks2 == []

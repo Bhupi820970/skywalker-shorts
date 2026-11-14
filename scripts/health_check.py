@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Verify the next 24h of IST slots have a ready video (or a renderable backup).
 
-A slot is healthy when:
-  - a results/<id>.json for that slot is status=done with an asset_url, OR
-  - a queued item for that slot still has a sources-release fallback (can render), OR
-  - the backup pool still has an unused pre-uploaded topic for that slot.
+Every official IST slot is checked, plus any extra slot already in the queue
+(legacy 12:30/17:30 included). A slot is healthy when:
+  - a results/<id>.json for that slot is publishable (done + asset_url), OR
+  - health just assigned a ready backup-stock video to it, OR
+  - a queued item for that slot still has a sources-release fallback (can render).
 
-If short, write config/health_status.json and optionally append extra ready
-backup renders into the plan (BACKUPS_ONLY / EXTRA_READY). Never deletes videos.
+An official slot missing from the queue is not treated as covered just because
+the on-demand backup pool is non-empty; those pool renders are only planned
+when stock is empty. If short, write config/health_status.json so the workflow
+can dispatch an on-demand backup-pool render. Never deletes videos.
 """
 from __future__ import annotations
 
@@ -101,28 +104,51 @@ def main() -> int:
             if now - timedelta(hours=2) <= dt <= horizon:
                 slots.setdefault(iso, [])
 
+    # Assign ready stock first so missing official slots (and failed/QC-rejected
+    # items) are covered before we classify short vs ready.
+    assigned = backup_stock.assign_needed(REPO, now)
+    assigned_by_slot = {g["slot"]: g for g in assigned}
+    stock = backup_stock.status_summary(REPO, now)
+
     short = []
     ready = []
     for slot_s, group in sorted(slots.items()):
-        done = False
-        for it in group:
-            r = result_for(it["id"])
-            if r and r.get("status") == "done" and r.get("asset_url"):
-                done = True
-                ready.append({"slot": slot_s, "id": it["id"], "how": "done"})
-                break
-        if done:
-            continue
         if backup_stock.slot_is_covered(REPO, slot_s):
-            ready.append({"slot": slot_s, "id": "stock", "how": "backup_stock"})
+            how, iid = "done", None
+            for it in group:
+                r = result_for(it["id"])
+                if backup_stock.is_ready_result(r):
+                    iid = it["id"]
+                    break
+            if slot_s in assigned_by_slot:
+                iid = assigned_by_slot[slot_s]["id"]
+                how = "backup_stock"
+            elif iid is None:
+                how, iid = "backup_stock", "stock"
+            ready.append({"slot": slot_s, "id": iid, "how": how})
             continue
-        # renderable primary?
-        if any(has_preuploaded(it) and it.get("status", "queued") == "queued" for it in group):
-            ready.append({"slot": slot_s, "id": group[0]["id"], "how": "queued+fallback"})
+        live = [it for it in group if it.get("status", "queued") == "queued"]
+
+        def _st(it):
+            r = result_for(it["id"]) or {}
+            if r.get("qc_rejected"):
+                return "failed"
+            return r.get("status")
+
+        can_render = any(
+            has_preuploaded(it) and _st(it) not in ("failed", "done") for it in live
+        )
+        if can_render:
+            ready.append({"slot": slot_s, "id": live[0]["id"], "how": "queued+fallback"})
             continue
-        # backup pool with preuploaded source
+        # Failed or missing official slot: the on-demand backup pool can still
+        # cover a *failed* queued item (plan.py will render it if stock is empty).
+        # A slot with no queue item is short so health dispatches that render;
+        # merely having a free pool topic is not coverage (plan never picked it
+        # for the missed 18:30 on 14 Nov).
+        all_failed = bool(live) and all(_st(it) == "failed" for it in live)
         cand = next((b for b in pool if b["id"] not in used_backups and has_preuploaded(b)), None)
-        if cand:
+        if cand and all_failed:
             ready.append({"slot": slot_s, "id": cand["id"], "how": "backup_pool"})
             used_backups.add(cand["id"])
             continue
@@ -140,14 +166,6 @@ def main() -> int:
             spare_done.append(r["id"])
 
     preuploaded_pool = [b for b in pool if has_preuploaded(b)]
-    assigned = backup_stock.assign_needed(REPO, now)
-    stock = backup_stock.status_summary(REPO, now)
-    # Re-check shorts after assignment
-    if assigned:
-        covered = {g["slot"] for g in assigned}
-        short = [s for s in short if s not in covered]
-        for g in assigned:
-            ready.append({"slot": g["slot"], "id": g["id"], "how": "backup_stock"})
     status = {
         "at": now.strftime("%Y-%m-%d %H:%M IST"),
         "slots_checked": len(slots),

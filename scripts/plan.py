@@ -25,6 +25,23 @@ def select_slot_backups(items, result_fn, pool, used, now, ahead, busy, past_h=6
     for i, it in items.items():
         if it.get("slot"):
             slots.setdefault(it["slot"], []).append(i)
+    # Official IST times must appear even when the day's queue still has
+    # leftover 12:30/17:30 and never added 13:30/18:30.
+    try:
+        import slot_times
+        day0 = now.date()
+        for d in range(0, 3):
+            day = (day0 + timedelta(days=d)).isoformat()
+            for hhmm in slot_times.official_times():
+                iso = slot_times.slot_iso(day, hhmm)
+                try:
+                    dt = datetime.fromisoformat(iso)
+                except Exception:
+                    continue
+                if now - timedelta(hours=past_h) <= dt <= now + timedelta(hours=ahead):
+                    slots.setdefault(iso, [])
+    except Exception as e:
+        print(f"official slot scan skipped: {e}", file=sys.stderr)
     for slot_s, ids in sorted(slots.items()):
         try:
             slot = datetime.fromisoformat(slot_s)
@@ -37,8 +54,15 @@ def select_slot_backups(items, result_fn, pool, used, now, ahead, busy, past_h=6
             continue
         st = [(result_fn(i) or {}).get("status") for i in ids]
         live = [i for i in ids if items[i].get("status", "queued") == "queued"]
-        if "done" in st or not live or any((result_fn(i) or {}).get("status") != "failed" for i in live):
+        if "done" in st:
             continue
+        if live and any((result_fn(i) or {}).get("status") != "failed" for i in live):
+            continue
+        if not live:
+            # Missing official slot: health assigns stock when any is ready.
+            # Only fall back to an on-demand backup-pool render when stock is empty.
+            if backup_stock.has_ready_stock(root):
+                continue
         code = slot.strftime("%Y%m%d-%H%M")
         slot_status = {}
         for b in pool:

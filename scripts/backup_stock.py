@@ -2,9 +2,12 @@
 """Pre-rendered, QC-passed backup Shorts that can be assigned to a slot instantly.
 
 A ready stock video has already been rendered and Gemini-QC-passed, lives on the
-`backup-stock` GitHub release, and has no slot until it is assigned. When a live
-item fails or a slot is still empty ~60 minutes out, health assigns the next
-unused stock video and Buffer posts it at the slot time (or shareNow if late).
+`backup-stock` GitHub release, and has no slot until it is assigned. Health
+checks every official IST slot (and any extra queue slot). If a live item fails
+or QC-rejects, or an official slot is missing from the queue entirely, the next
+unused stock video is assigned immediately. A queued item that is still
+rendering is given until ~60 minutes before the slot. Buffer then posts it at
+the slot time (or shareNow if late).
 Used entries are never posted twice. Whenever ready stock is below the
 target of 30, health dispatches a few new stock renders per run (evergreen
 sources-release topics only, 2 per run, own concurrency group) until 30 is
@@ -31,6 +34,26 @@ RELEASE = "backup-stock"
 LEAD_MIN = 60
 PENDING_HOURS = 3
 PAST_HOURS = 6
+OFFICIAL_FALLBACK = ["06:30", "09:00", "11:30", "13:30", "16:00", "18:30", "20:30", "22:30"]
+
+try:
+    if str(REPO) not in sys.path:
+        sys.path.insert(0, str(REPO))
+    import slot_times as _slot_times  # noqa: E402
+except Exception:
+    _slot_times = None
+
+
+def official_times() -> list[str]:
+    if _slot_times is not None:
+        return list(_slot_times.official_times())
+    return list(OFFICIAL_FALLBACK)
+
+
+def official_iso(day: str, hhmm: str) -> str:
+    if _slot_times is not None:
+        return _slot_times.slot_iso(day, hhmm)
+    return f"{day}T{hhmm}:00+05:30"
 
 
 def _repo() -> Path:
@@ -272,6 +295,25 @@ def ready_entries(man: dict) -> list[dict]:
     return [e for e in man.get("items") or [] if e.get("status") == "ready" and e.get("asset_url")]
 
 
+def has_ready_stock(root: Path | None = None) -> bool:
+    """Read-only: True when at least one unused, publishable stock video exists."""
+    root = root or _repo()
+    man = load_manifest(root)
+    for e in ready_entries(man):
+        iid = e.get("id") or ""
+        if e.get("assigned_slot"):
+            continue
+        r = read_result(root, iid)
+        if is_ready_result(r) and not (r or {}).get("stock_used") and not (r or {}).get("assigned_slot"):
+            return True
+    for r in iter_results(root):
+        if not parse_stock_id(r.get("id") or ""):
+            continue
+        if is_ready_result(r) and not r.get("stock_used") and not r.get("assigned_slot"):
+            return True
+    return False
+
+
 def pending_entries(man: dict) -> list[dict]:
     return [e for e in man.get("items") or [] if e.get("status") == "pending"]
 
@@ -375,14 +417,24 @@ def slot_needs_stock(root: Path, slot_s: str, now: datetime | None = None,
     results = {it["id"]: read_result(root, it["id"]) for it in items}
 
     def st(it):
-        return (results.get(it["id"]) or {}).get("status")
+        r = results.get(it["id"]) or {}
+        if r.get("qc_rejected"):
+            return "failed"
+        return r.get("status")
 
     all_failed = bool(items) and all(st(it) == "failed" for it in items)
+    no_item = not items
     imminent = timedelta(minutes=-past_h * 60) <= slot - now <= timedelta(minutes=lead_min)
     if all_failed:
         return True
+    if no_item:
+        # Official (or leftover) slot with nothing in the queue: do not wait
+        # until T-60. A missed health run in that narrow window is how 18:30
+        # on 14 Nov was skipped.
+        return True
     if imminent:
-        # Nothing publishable is ready, and the slot is close (or already late).
+        # Queued item still has no publishable video, and the slot is close
+        # (or already late).
         return True
     return False
 
@@ -401,22 +453,17 @@ def upcoming_slots(root: Path, now: datetime | None = None, past_h: float = PAST
             continue
         if now - timedelta(hours=past_h) <= dt <= horizon:
             slots.add(s)
-    try:
-        sys.path.insert(0, str(root))
-        import slot_times  # noqa: WPS433
-        day0 = now.date()
-        for d in range(0, 2):
-            day = (day0 + timedelta(days=d)).isoformat()
-            for hhmm in slot_times.official_times():
-                iso = slot_times.slot_iso(day, hhmm)
-                try:
-                    dt = datetime.fromisoformat(iso)
-                except Exception:
-                    continue
-                if now - timedelta(hours=past_h) <= dt <= horizon:
-                    slots.add(iso)
-    except Exception:
-        pass
+    day0 = now.date()
+    for d in range(0, 3):
+        day = (day0 + timedelta(days=d)).isoformat()
+        for hhmm in official_times():
+            iso = official_iso(day, hhmm)
+            try:
+                dt = datetime.fromisoformat(iso)
+            except Exception:
+                continue
+            if now - timedelta(hours=past_h) <= dt <= horizon:
+                slots.add(iso)
     return sorted(slots)
 
 
