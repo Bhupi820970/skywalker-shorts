@@ -204,5 +204,6 @@
   "buffer_status": "sent",
   "buffer_due_at": "2026-11-14T07:12:45.371Z",
   "youtube_url": "https://www.youtube.com/shorts/iMaWKD9yRAM",
-  "buffer_note": "matched existing post by title"
+  "buffer_note": "matched existing post by title",
+  "buffer_posted_at": "2026-11-14T07:12:47.670Z"
 }
