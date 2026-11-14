@@ -1,0 +1,94 @@
+{
+  "id": "stock-twisters-01",
+  "status": "retry_queued",
+  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 15.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-15 03:28 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43643756670",
+  "slot": null,
+  "title": "The sky turned against them | Twisters | #edit",
+  "hook": "The sky turned against them",
+  "description": "The sky turned against them. From the official Twisters trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #twisters",
+  "tags": [
+    "twisters",
+    "glenpowell",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.6,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.0,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.0,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-twisters",
+  "stock": true,
+  "stock_topic": "backup-twisters",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): QA no_logo failed: {'ok': False, 'shots_flagged': 1, 'flags': [{'scene': 41, 't_src': 58.77, 't_out': 6.26, 'reasons': ['near_black', 'flat_card'], 'luma': 0.0}]}; only 16.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; auto_qc: 4 frame(s) failed empty-dark/logo/text detectors; auto_qc: only 16.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 16.59s of unique clean shots (need ≥18.0s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/twisters_trailer_h264.mp4",
+      "music": "sw_metamorphosis.mp3"
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): QA no_logo failed: {'ok': False, 'shots_flagged': 1, 'flags': [{'scene': 41, 't_src': 58.77, 't_out': 6.26, 'reasons': ['near_black', 'flat_card'], 'luma': 0.0}]}; only 16.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; auto_qc: 4 frame(s) failed empty-dark/logo/text detectors; auto_qc: only 16.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 16.59s of unique clean shots (need ≥18.0s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/twisters_trailer_h264.mp4",
+      "music": "sw_metamorphosis.mp3"
+    },
+    {
+      "attempt": 3,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 15.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/twisters_trailer_h264.mp4",
+      "music": "sw_montagemfujin.mp3"
+    }
+  ],
+  "last_error": "pipeline/QA failed (exit 1): only 15.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+}
