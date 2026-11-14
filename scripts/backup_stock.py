@@ -5,9 +5,10 @@ A ready stock video has already been rendered and Gemini-QC-passed, lives on the
 `backup-stock` GitHub release, and has no slot until it is assigned. When a live
 item fails or a slot is still empty ~60 minutes out, health assigns the next
 unused stock video and Buffer posts it at the slot time (or shareNow if late).
-Used entries are never posted twice. When ready stock drops to 5 or fewer,
-health dispatches a few new stock renders per run (evergreen sources-release
-topics only) until the target of 30 is reached again.
+Used entries are never posted twice. Whenever ready stock is below the
+target of 30, health dispatches a few new stock renders per run (evergreen
+sources-release topics only, 2 per run, own concurrency group) until 30 is
+reached again.
 """
 from __future__ import annotations
 
@@ -441,12 +442,11 @@ def next_refill_ids(root: Path | None = None, limit: int | None = None,
     now = now or now_ist()
     man = sync(root, now)
     target = int(man.get("target") or TARGET)
-    refill_at = int(man.get("refill_at") or REFILL_AT)
     cap = int(limit if limit is not None else man.get("max_refill_per_run") or MAX_REFILL)
     ready = ready_entries(man)
     pending = pending_entries(man)
-    if len(ready) > refill_at:
-        return []
+    # Keep filling (capped per run) until ready+pending reaches the target of 30.
+    # refill_at is kept in the manifest for compatibility but no longer gates this.
     need = target - len(ready) - len(pending)
     if need <= 0 or cap <= 0:
         return []
@@ -534,8 +534,7 @@ def status_summary(root: Path | None = None, now: datetime | None = None) -> dic
         "used": len(used),
         "target": int(man.get("target") or TARGET),
         "refill_at": int(man.get("refill_at") or REFILL_AT),
-        "need_refill": len(ready) <= int(man.get("refill_at") or REFILL_AT)
-        and (len(ready) + len(pending) < int(man.get("target") or TARGET)),
+        "need_refill": (len(ready) + len(pending)) < int(man.get("target") or TARGET),
         "ready_ids": [e["id"] for e in ready],
         "pending_ids": [e["id"] for e in pending],
     }

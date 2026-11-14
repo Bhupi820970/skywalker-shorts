@@ -62,21 +62,25 @@ def test_refill_when_empty_picks_two_diverse_ids(tmp_path, monkeypatch):
     assert len(slugs) == 2  # different topics in one batch
 
 
-def test_no_refill_when_above_floor(tmp_path, monkeypatch):
+def test_no_refill_when_at_target(tmp_path, monkeypatch):
     root = _root(tmp_path, monkeypatch)
     items = []
-    for i in range(6):
-        iid = f"stock-zootopia2-{i+1:02d}"
-        _write(root / "results" / f"{iid}.json", _ready_result(iid, stock_topic="backup-zootopia2"))
-        items.append({"id": iid, "slug": "zootopia2", "topic_id": "backup-zootopia2",
+    for i in range(30):
+        slug = "zootopia2" if i < 15 else "superman"
+        n = (i % 15) + 1
+        iid = f"stock-{slug}-{n:02d}"
+        _write(root / "results" / f"{iid}.json", _ready_result(iid, stock_topic=f"backup-{slug}"))
+        items.append({"id": iid, "slug": slug, "topic_id": f"backup-{slug}",
                       "status": "ready", "asset_url": _ready_result(iid)["asset_url"]})
     _write(root / "config" / "backup_stock.json", {
         "target": 30, "refill_at": 5, "max_refill_per_run": 2, "items": items
     })
     assert backup_stock.next_refill_ids(root, limit=2) == []
+    assert backup_stock.status_summary(root)["need_refill"] is False
 
 
-def test_refill_at_five_fills_toward_target(tmp_path, monkeypatch):
+def test_refill_while_below_target(tmp_path, monkeypatch):
+    # 6 ready used to be above the old floor of 5; refill must still run toward 30.
     root = _root(tmp_path, monkeypatch)
     items = []
     for i in range(5):
@@ -87,6 +91,7 @@ def test_refill_at_five_fills_toward_target(tmp_path, monkeypatch):
     _write(root / "config" / "backup_stock.json", {
         "target": 30, "refill_at": 5, "max_refill_per_run": 2, "items": items
     })
+    assert backup_stock.status_summary(root)["need_refill"] is True
     ids = backup_stock.next_refill_ids(root, limit=2)
     assert len(ids) == 2
     # already has stock-zootopia2-01..05, next zootopia2 would be 06; other topics start at 01
