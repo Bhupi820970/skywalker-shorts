@@ -1,66 +1,101 @@
 {
   "id": "20261115-0630-werwulf",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 15.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-15 01:25 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43628982762",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-15 03:13 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43640848513",
   "slot": "2026-11-15T06:30:00+05:30",
-  "title": "Nobody leaves the village after dark | The beast in the snow | #edit",
-  "hook": "Nobody leaves the village after dark",
-  "description": "Nobody leaves the village after dark. The beast in the snow from the official Werwulf trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=CL1EFACsWag). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #werwulf",
+  "title": "POV: you're trapped in Robert Eggers' Werwulf #werwulf #roberteggers #horrormovie",
+  "hook": "He claimed the king sent him",
+  "description": "He claimed the king sent him. A royal envoy brings dark news to a frozen medieval village while a sinister beast hunts in the snow. From the official Werwulf trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=CL1EFACsWag). All rights to the film/series belong to their owners; short commentary edit.\n#werwulf #roberteggers #horrormovie #shorts #edit",
   "tags": [
     "werwulf",
-    "horrormovie",
     "roberteggers",
+    "horrormovie",
     "focusfeatures",
     "werewolf",
     "edit",
     "shorts",
     "trending"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Nobody leaves the village after dark",
+    "title": "Nobody leaves the village after dark | The beast in the snow | #edit",
+    "description": "Nobody leaves the village after dark. The beast in the snow from the official Werwulf trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=CL1EFACsWag). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #werwulf",
+    "tags": [
+      "werwulf",
+      "horrormovie",
+      "roberteggers",
+      "focusfeatures",
+      "werewolf",
+      "edit",
+      "shorts",
+      "trending"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "POV: you're trapped in Robert Eggers' Werwulf",
+      "click_score": 94.0
+    },
+    {
+      "title": "Werwulf aura in this teaser is unreal",
+      "click_score": 88.0
+    },
+    {
+      "title": "This scene in Werwulf hits different",
+      "click_score": 85.0
+    },
+    {
+      "title": "Nobody noticed this horror detail in Werwulf",
+      "click_score": 82.0
+    },
+    {
+      "title": "Werwulf didn't come to show mercy",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 503"
+      "s": 31.2,
+      "ok": true
     },
     {
-      "purpose": "scenes",
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 7.6,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
       "model": "gemini-3.8-flash",
       "key": "key1",
       "err": "HTTP 429"
     },
     {
-      "purpose": "scenes",
+      "purpose": "qc",
       "model": "gemini-flash-latest",
       "key": "key1",
-      "err": "HTTP 429"
+      "err": "HTTP 503"
     },
     {
-      "purpose": "scenes",
+      "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 3.6,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.1,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 5.2,
+      "s": 1.4,
       "ok": true
     }
   ],
@@ -68,30 +103,75 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 17.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "ok": true,
+      "error": null,
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/werwulf_trailer_h264.mp4",
-      "music": "sw_coiltheanalstaircaseaggr.mp3"
-    },
-    {
-      "attempt": 2,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 17.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/werwulf_trailer_h264.mp4",
-      "music": "sw_coiltheanalstaircaseaggr.mp3"
-    },
-    {
-      "attempt": 3,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 15.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/werwulf_trailer_h264.mp4",
-      "music": "sw_coiltheanalstaircaseaggr2.mp3"
+      "music": "sw_lycans.mp3"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 15.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261115-0630-werwulf",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261115-0630-werwulf/render-20261115-0630-werwulf.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 3.321,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/werwulf_trailer_h264.mp4",
+  "music": "sw_lycans.mp3",
+  "music_credit": "Song: Dj Belkin - Lycans (http://creativecommons.org/licenses/by/3.0/)",
+  "description_final": "He claimed the king sent him. A royal envoy brings dark news to a frozen medieval village while a sinister beast hunts in the snow. From the official Werwulf trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=CL1EFACsWag). All rights to the film/series belong to their owners; short commentary edit.\n#werwulf #roberteggers #horrormovie #shorts #edit\n\nMusic:\nSong: Dj Belkin - Lycans (http://creativecommons.org/licenses/by/3.0/)",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 20.8,
+      "audio": true
+    },
+    "lufs": -14.0,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -17.5,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all technical and creative requirements.",
+        "The hook is clear and engaging.",
+        "The audio is clean and music-only as requested.",
+        "The layout and framing are correct."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  }
 }
