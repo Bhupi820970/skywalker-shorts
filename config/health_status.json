@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-15 02:23 IST",
+  "at": "2026-11-15 02:34 IST",
   "slots_checked": 10,
   "ready": [
     {
@@ -10,7 +10,7 @@
     {
       "slot": "2026-11-15T09:00:00+05:30",
       "id": "20261115-0900-bonetemple",
-      "how": "queued+fallback"
+      "how": "done"
     },
     {
       "slot": "2026-11-15T12:30:00+05:30",
@@ -86,7 +86,7 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 7,
-  "stock_pending": 6,
+  "stock_pending": 8,
   "stock_used": 11,
   "stock_target": 30,
   "stock_need_refill": true,
