@@ -1,9 +1,9 @@
 {
   "id": "stock-chainsawman-04",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 14.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-15 14:23 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43694612203",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): only 13.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-15 21:56 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43732932933",
   "slot": null,
   "title": "Denji fell for Reze | Denji meets Reze | #edit",
   "hook": "Denji fell for Reze",
@@ -25,38 +25,14 @@
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 13.3,
+      "s": 21.1,
       "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 3.0,
+      "s": 18.3,
       "ok": true
     }
   ],
@@ -64,30 +40,30 @@
   "stock": true,
   "stock_topic": "backup-chainsawman",
   "spare": true,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 16.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 15.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/chainsawman_trailer_h264.mp4",
-      "music": "sw_worthnothingfeatolivertr.mp3"
+      "music": "sw_murderinmymind.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 16.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 15.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/chainsawman_trailer_h264.mp4",
-      "music": "sw_worthnothingfeatolivertr.mp3"
+      "music": "sw_murderinmymind.mp3"
     },
     {
       "attempt": 3,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 14.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 13.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/chainsawman_trailer_h264.mp4",
-      "music": "sw_sramotamemphisphonkarchi.mp3"
+      "music": "sw_dudidamphonkremixdrifted.mp3"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 14.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": "pipeline/QA failed (exit 1): only 13.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
 }
