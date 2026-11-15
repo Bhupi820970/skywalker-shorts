@@ -50,6 +50,13 @@
       "result_id": "stock-alienromulus-05"
     },
     {
+      "id": "stock-alienromulus-06",
+      "topic_id": "backup-alienromulus",
+      "slug": "alienromulus",
+      "status": "pending",
+      "queued_at": "2026-11-15 21:23 IST"
+    },
+    {
       "id": "stock-avatarfireandash-01",
       "topic_id": "backup-avatarfireandash",
       "slug": "avatarfireandash",
@@ -122,6 +129,13 @@
       "status": "pending",
       "queued_at": "2026-11-15 13:57 IST",
       "result_id": "stock-chainsawman-04"
+    },
+    {
+      "id": "stock-chainsawman-05",
+      "topic_id": "backup-chainsawman",
+      "slug": "chainsawman",
+      "status": "pending",
+      "queued_at": "2026-11-15 21:23 IST"
     },
     {
       "id": "stock-civilwar-01",
