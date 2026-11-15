@@ -1,0 +1,154 @@
+{
+  "id": "stock-superman-02",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-15 14:14 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43693251860",
+  "slot": null,
+  "title": "David Corenswet's aura in this scene is unreal #superman #davidcorenswet #dc",
+  "hook": "Saving lives made him a target",
+  "description": "Saving lives made him a target. Superman faces intense government backlash after stepping in to save innocent lives. From the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#superman #davidcorenswet #dc #shorts #edit",
+  "tags": [
+    "superman",
+    "davidcorenswet",
+    "dc",
+    "jamesgunn",
+    "superhero",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Superman still saves everyone",
+    "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
+    "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
+    "tags": [
+      "superman",
+      "dc",
+      "davidcorenswet",
+      "jamesgunn",
+      "superhero",
+      "edit",
+      "shorts",
+      "trending"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "cold-open statement",
+  "title_candidates": [
+    {
+      "title": "David Corenswet's aura in this scene is unreal",
+      "click_score": 95.0
+    },
+    {
+      "title": "POV: Superman saved them but became the villain",
+      "click_score": 89.0
+    },
+    {
+      "title": "The moment Superman stood against the entire world",
+      "click_score": 84.0
+    },
+    {
+      "title": "Nobody noticed this detail in the Superman trailer",
+      "click_score": 78.0
+    },
+    {
+      "title": "David Corenswet didn't come to play in Superman",
+      "click_score": 72.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 12.7,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 7.4,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 4.0,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-superman",
+  "stock": true,
+  "stock_topic": "backup-superman",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4",
+      "music": "sw_closeeyes.mp3"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-superman-02.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 2.498,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4",
+  "music": "sw_closeeyes.mp3",
+  "music_credit": "Song: DVRST - Close Eyes",
+  "description_final": "Saving lives made him a target. Superman faces intense government backlash after stepping in to save innocent lives. From the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#superman #davidcorenswet #dc #shorts #edit\n\nMusic:\nSong: DVRST - Close Eyes",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 30.7,
+      "audio": true
+    },
+    "lufs": -14.2,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -13.5,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "watched_video": true
+    }
+  }
+}
