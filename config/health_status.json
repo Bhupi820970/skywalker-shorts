@@ -1,17 +1,7 @@
 {
-  "at": "2026-11-15 19:09 IST",
-  "slots_checked": 12,
+  "at": "2026-11-15 21:03 IST",
+  "slots_checked": 11,
   "ready": [
-    {
-      "slot": "2026-11-15T17:30:00+05:30",
-      "id": "20261115-1730-alienromulus",
-      "how": "backup_stock"
-    },
-    {
-      "slot": "2026-11-15T18:30:00+05:30",
-      "id": "stock",
-      "how": "backup_stock"
-    },
     {
       "slot": "2026-11-15T20:30:00+05:30",
       "id": "20261115-2030-toystory5",
@@ -19,8 +9,8 @@
     },
     {
       "slot": "2026-11-15T22:30:00+05:30",
-      "id": "20261115-2230-dragonballsuper",
-      "how": "queued+fallback"
+      "id": "20261115-2230-sololeveling",
+      "how": "backup_stock"
     },
     {
       "slot": "2026-11-16T06:30:00+05:30",
@@ -49,8 +39,13 @@
     },
     {
       "slot": "2026-11-16T18:30:00+05:30",
-      "id": "20261116-1830-nobody2",
+      "id": "stock",
       "how": "backup_stock"
+    },
+    {
+      "slot": "2026-11-16T20:30:00+05:30",
+      "id": "20261116-2030-sololeveling",
+      "how": "queued+fallback"
     }
   ],
   "short": [
@@ -74,6 +69,7 @@
     "20261115-1130-runningman",
     "20261115-1330-mortalkombat2",
     "stock-predatorbadlands-01",
+    "20261115-2230-sololeveling",
     "stock-dune2-01",
     "20261114-1230-avatarfireandash",
     "stock-sololeveling-01",
@@ -110,14 +106,13 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 18,
-  "stock_pending": 4,
-  "stock_used": 15,
+  "stock_ready": 17,
+  "stock_pending": 6,
+  "stock_used": 16,
   "stock_target": 30,
   "stock_need_refill": true,
   "stock_assigned": [
-    "20261115-1730-alienromulus",
-    "20261116-1830-nobody2"
+    "20261115-2230-sololeveling"
   ],
   "ok": false
 }
