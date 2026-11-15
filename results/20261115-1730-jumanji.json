@@ -1,0 +1,89 @@
+{
+  "id": "20261115-1730-jumanji",
+  "status": "retry_queued",
+  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): auto_qc: 3 frame(s) failed empty-dark/logo/text detectors",
+  "at": "2026-11-15 14:02 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43689230343",
+  "slot": "2026-11-15T17:30:00+05:30",
+  "title": "Nobody wants to play Jumanji again | The game goes open world | #edit",
+  "hook": "Nobody wants to play Jumanji again",
+  "description": "Nobody wants to play Jumanji again. The game goes open world from the official Jumanji: Open World trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=zhApeaHMvfs). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jumanji",
+  "tags": [
+    "jumanji",
+    "jumanjiopenworld",
+    "dwaynejohnson",
+    "kevinhart",
+    "comedy",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 9.9,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 11.9,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): auto_qc: 2 frame(s) failed empty-dark/logo/text detectors",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jumanji_trailer_h264.mp4",
+      "music": "sw_jujalarimfunkoverslowed2.mp3"
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): auto_qc: 3 frame(s) failed empty-dark/logo/text detectors",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jumanji_trailer_h264.mp4",
+      "music": "sw_dudidamphonkremixdrifted.mp3"
+    }
+  ],
+  "last_error": "pipeline/QA failed (exit 1): auto_qc: 3 frame(s) failed empty-dark/logo/text detectors"
+}
