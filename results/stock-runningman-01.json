@@ -168,5 +168,9 @@
       "low": [],
       "watched_video": true
     }
-  }
+  },
+  "stock_used": true,
+  "assigned_slot": "2026-11-15T11:30:00+05:30",
+  "assigned_result": "20261115-1130-runningman",
+  "used_at": "2026-11-15 11:46 IST"
 }
