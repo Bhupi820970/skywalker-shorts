@@ -453,6 +453,13 @@
       "used_at": "2026-11-15 19:09 IST"
     },
     {
+      "id": "stock-nobody2-04",
+      "topic_id": "backup-nobody2",
+      "slug": "nobody2",
+      "status": "pending",
+      "queued_at": "2026-11-15 21:14 IST"
+    },
+    {
       "id": "stock-onepiece-01",
       "topic_id": "backup-onepiece",
       "slug": "onepiece",
@@ -528,6 +535,13 @@
       "assigned_slot": "2026-11-15T22:30:00+05:30",
       "assigned_result": "20261115-2230-sololeveling",
       "used_at": "2026-11-15 21:03 IST"
+    },
+    {
+      "id": "stock-sololeveling-02",
+      "topic_id": "backup-sololeveling",
+      "slug": "sololeveling",
+      "status": "pending",
+      "queued_at": "2026-11-15 21:14 IST"
     },
     {
       "id": "stock-superman-01",
