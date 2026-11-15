@@ -167,5 +167,9 @@
     }
   },
   "stock_id": "stock-sololeveling-01",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "buffer_post_id": "6af9d0dcb9a106584cb8fbf7",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-15T17:00:00.000Z",
+  "buffer_created_at": "2026-11-15 21:03 IST"
 }
