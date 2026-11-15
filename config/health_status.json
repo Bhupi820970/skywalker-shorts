@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-15 21:03 IST",
+  "at": "2026-11-15 21:14 IST",
   "slots_checked": 11,
   "ready": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "slot": "2026-11-15T22:30:00+05:30",
-      "id": "20261115-2230-sololeveling",
+      "id": "stock",
       "how": "backup_stock"
     },
     {
@@ -107,12 +107,10 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 17,
-  "stock_pending": 6,
+  "stock_pending": 8,
   "stock_used": 16,
   "stock_target": 30,
   "stock_need_refill": true,
-  "stock_assigned": [
-    "20261115-2230-sololeveling"
-  ],
+  "stock_assigned": [],
   "ok": false
 }
