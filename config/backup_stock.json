@@ -45,7 +45,7 @@
       "id": "stock-alienromulus-05",
       "topic_id": "backup-alienromulus",
       "slug": "alienromulus",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 19:09 IST",
       "result_id": "stock-alienromulus-05"
     },
@@ -54,7 +54,8 @@
       "topic_id": "backup-alienromulus",
       "slug": "alienromulus",
       "status": "pending",
-      "queued_at": "2026-11-15 21:23 IST"
+      "queued_at": "2026-11-15 21:23 IST",
+      "result_id": "stock-alienromulus-06"
     },
     {
       "id": "stock-avatarfireandash-01",
@@ -126,7 +127,7 @@
       "id": "stock-chainsawman-04",
       "topic_id": "backup-chainsawman",
       "slug": "chainsawman",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 13:57 IST",
       "result_id": "stock-chainsawman-04"
     },
@@ -135,7 +136,8 @@
       "topic_id": "backup-chainsawman",
       "slug": "chainsawman",
       "status": "pending",
-      "queued_at": "2026-11-15 21:23 IST"
+      "queued_at": "2026-11-15 21:23 IST",
+      "result_id": "stock-chainsawman-05"
     },
     {
       "id": "stock-civilwar-01",
@@ -165,7 +167,7 @@
       "id": "stock-civilwar-04",
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 14:02 IST",
       "result_id": "stock-civilwar-04"
     },
@@ -174,7 +176,8 @@
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
       "status": "pending",
-      "queued_at": "2026-11-15 21:30 IST"
+      "queued_at": "2026-11-15 21:30 IST",
+      "result_id": "stock-civilwar-05"
     },
     {
       "id": "stock-deadpool3-01",
@@ -295,7 +298,7 @@
       "id": "stock-fnaf2-04",
       "topic_id": "backup-fnaf2",
       "slug": "fnaf2",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 19:09 IST",
       "result_id": "stock-fnaf2-04"
     },
@@ -348,7 +351,7 @@
       "id": "stock-gladiator2-04",
       "topic_id": "backup-gladiator2",
       "slug": "gladiator2",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 21:03 IST",
       "result_id": "stock-gladiator2-04"
     },
@@ -380,7 +383,7 @@
       "id": "stock-jurassicworldrebirth-04",
       "topic_id": "backup-jurassicworldrebirth",
       "slug": "jurassicworldrebirth",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 21:03 IST",
       "result_id": "stock-jurassicworldrebirth-04"
     },
@@ -502,7 +505,7 @@
       "id": "stock-onepiece-03",
       "topic_id": "backup-onepiece",
       "slug": "onepiece",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 13:14 IST",
       "result_id": "stock-onepiece-03"
     },
@@ -543,7 +546,7 @@
       "id": "stock-runningman-02",
       "topic_id": "backup-runningman",
       "slug": "runningman",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 13:40 IST",
       "result_id": "stock-runningman-02"
     },
@@ -564,7 +567,8 @@
       "topic_id": "backup-sololeveling",
       "slug": "sololeveling",
       "status": "pending",
-      "queued_at": "2026-11-15 21:14 IST"
+      "queued_at": "2026-11-15 21:14 IST",
+      "result_id": "stock-sololeveling-02"
     },
     {
       "id": "stock-superman-01",

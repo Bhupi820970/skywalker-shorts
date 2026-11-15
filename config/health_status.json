@@ -1,21 +1,11 @@
 {
-  "at": "2026-11-15 21:30 IST",
-  "slots_checked": 11,
+  "at": "2026-11-16 02:01 IST",
+  "slots_checked": 10,
   "ready": [
-    {
-      "slot": "2026-11-15T20:30:00+05:30",
-      "id": "20261115-2030-toystory5",
-      "how": "done"
-    },
-    {
-      "slot": "2026-11-15T22:30:00+05:30",
-      "id": "stock",
-      "how": "backup_stock"
-    },
     {
       "slot": "2026-11-16T06:30:00+05:30",
       "id": "20261116-0630-predatorbadlands",
-      "how": "queued+fallback"
+      "how": "done"
     },
     {
       "slot": "2026-11-16T09:00:00+05:30",
@@ -45,6 +35,11 @@
     {
       "slot": "2026-11-16T20:30:00+05:30",
       "id": "20261116-2030-sololeveling",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-16T22:30:00+05:30",
+      "id": "20261116-2230-alluarjun",
       "how": "queued+fallback"
     }
   ],
@@ -107,10 +102,10 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 17,
-  "stock_pending": 13,
+  "stock_pending": 5,
   "stock_used": 16,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": false
 }
