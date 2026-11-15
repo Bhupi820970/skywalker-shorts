@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-15 13:57 IST",
+  "at": "2026-11-15 14:02 IST",
   "slots_checked": 12,
   "ready": [
     {
@@ -30,7 +30,7 @@
     {
       "slot": "2026-11-15T20:30:00+05:30",
       "id": "20261115-2030-toystory5",
-      "how": "queued+fallback"
+      "how": "done"
     },
     {
       "slot": "2026-11-15T22:30:00+05:30",
@@ -109,7 +109,7 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 16,
-  "stock_pending": 11,
+  "stock_pending": 13,
   "stock_used": 13,
   "stock_target": 30,
   "stock_need_refill": true,
