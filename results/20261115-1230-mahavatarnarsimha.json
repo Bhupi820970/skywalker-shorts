@@ -1,0 +1,153 @@
+{
+  "id": "20261115-1230-mahavatarnarsimha",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-15 06:33 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43658137824",
+  "slot": "2026-11-15T12:30:00+05:30",
+  "title": "POV: You chain Prahlad but his faith remains unbroken #mahavatarnarsimha #prahlad #indiananimation",
+  "hook": "Chained for worshipping the wrong god",
+  "description": "Chained for worshipping the wrong god. Young Prahlad stands unshaken in his devotion despite being bound in chains in Mahavatar Narsimha. From the official Hombale animated epic from the official Mahavatar Narsimha trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=p7eE_dn9u4k). All rights to the film/series belong to their owners; short commentary edit.\n#mahavatarnarsimha #prahlad #indiananimation #shorts #edit",
+  "tags": [
+    "mahavatarnarsimha",
+    "prahlad",
+    "indiananimation",
+    "hombale",
+    "devotional",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Mahavatar Narsimha stays in everyone's heart",
+    "title": "Mahavatar Narsimha stays in everyone's heart | The official Hombale epic | #edit",
+    "description": "Mahavatar Narsimha stays in everyone's heart. The official Hombale animated epic from the official Mahavatar Narsimha trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=p7eE_dn9u4k). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #mahavatarnarsimha #hombale #devotional",
+    "tags": [
+      "mahavatarnarsimha",
+      "hombale",
+      "devotional",
+      "indiananimation",
+      "edit",
+      "shorts",
+      "trending"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "POV: You chain Prahlad but his faith remains unbroken",
+      "click_score": 92.0
+    },
+    {
+      "title": "Prahlad feared no torment in Mahavatar Narsimha",
+      "click_score": 88.0
+    },
+    {
+      "title": "The moment young Prahlad defied the ultimate ruler",
+      "click_score": 85.0
+    },
+    {
+      "title": "Prahlad's devotion in Mahavatar Narsimha hits different",
+      "click_score": 81.0
+    },
+    {
+      "title": "Nobody noticed Prahlad smiling through the chains",
+      "click_score": 78.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 30.3,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 18.7,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "TimeoutError"
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mahavatarnarsimha_trailer_h264.mp4",
+      "music": "sw_aura1hourauramusicplayli.mp3"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261115-1230-mahavatarnarsimha",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261115-1230-mahavatarnarsimha/render-20261115-1230-mahavatarnarsimha.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 2.429,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mahavatarnarsimha_trailer_h264.mp4",
+  "music": "sw_aura1hourauramusicplayli.mp3",
+  "music_credit": "Song: d - AURA ♾️ 1 HOUR AURA MUSIC PLAYLIST 2025 🔥 EMPIRE PHONK (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "Chained for worshipping the wrong god. Young Prahlad stands unshaken in his devotion despite being bound in chains in Mahavatar Narsimha. From the official Hombale animated epic from the official Mahavatar Narsimha trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=p7eE_dn9u4k). All rights to the film/series belong to their owners; short commentary edit.\n#mahavatarnarsimha #prahlad #indiananimation #shorts #edit\n\nMusic:\nSong: d - AURA ♾️ 1 HOUR AURA MUSIC PLAYLIST 2025 🔥 EMPIRE PHONK (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.4,
+      "audio": true
+    },
+    "lufs": -14.3,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -13.4,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": "skipped (unavailable/budget) - heuristic gate only"
+  }
+}
