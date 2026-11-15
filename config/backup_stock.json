@@ -342,7 +342,8 @@
       "topic_id": "backup-gladiator2",
       "slug": "gladiator2",
       "status": "pending",
-      "queued_at": "2026-11-15 21:03 IST"
+      "queued_at": "2026-11-15 21:03 IST",
+      "result_id": "stock-gladiator2-04"
     },
     {
       "id": "stock-jurassicworldrebirth-01",
@@ -373,7 +374,8 @@
       "topic_id": "backup-jurassicworldrebirth",
       "slug": "jurassicworldrebirth",
       "status": "pending",
-      "queued_at": "2026-11-15 21:03 IST"
+      "queued_at": "2026-11-15 21:03 IST",
+      "result_id": "stock-jurassicworldrebirth-04"
     },
     {
       "id": "stock-kalki2898ad-01",
