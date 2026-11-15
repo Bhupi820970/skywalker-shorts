@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-15 03:06 IST",
+  "at": "2026-11-15 06:26 IST",
   "slots_checked": 10,
   "ready": [
     {
       "slot": "2026-11-15T06:30:00+05:30",
       "id": "20261115-0630-werwulf",
-      "how": "queued+fallback"
+      "how": "done"
     },
     {
       "slot": "2026-11-15T09:00:00+05:30",
@@ -66,10 +66,13 @@
     "stock-predatorbadlands-01",
     "stock-dune2-01",
     "20261114-1230-avatarfireandash",
+    "stock-sololeveling-01",
     "20261114-1600-furiosa",
     "20261114-1830-predatorbadlands",
     "stock-despicableme4-01",
     "stock-despicableme4-04",
+    "stock-superman-01",
+    "stock-predatorbadlands-02",
     "stock-mortalkombat2-02",
     "stock-missionimpossible-01",
     "stock-missionimpossible-02",
@@ -84,11 +87,12 @@
     "stock-avatarfireandash-03",
     "stock-kalki2898ad-01",
     "20261114-1330-dune2",
-    "20261115-1330-avatarfireandash"
+    "20261115-1330-avatarfireandash",
+    "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 9,
-  "stock_pending": 12,
+  "stock_ready": 13,
+  "stock_pending": 5,
   "stock_used": 11,
   "stock_target": 30,
   "stock_need_refill": true,
