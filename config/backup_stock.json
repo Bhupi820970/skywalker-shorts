@@ -455,6 +455,20 @@
       "slug": "venom3",
       "status": "pending",
       "queued_at": "2026-11-15 06:35 IST"
+    },
+    {
+      "id": "stock-wickedforgood-01",
+      "topic_id": "backup-wickedforgood",
+      "slug": "wickedforgood",
+      "status": "pending",
+      "queued_at": "2026-11-15 06:49 IST"
+    },
+    {
+      "id": "stock-zootopia2-01",
+      "topic_id": "backup-zootopia2",
+      "slug": "zootopia2",
+      "status": "pending",
+      "queued_at": "2026-11-15 06:49 IST"
     }
   ]
 }
