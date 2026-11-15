@@ -166,5 +166,9 @@
       "low": [],
       "watched_video": true
     }
-  }
+  },
+  "stock_used": true,
+  "assigned_slot": "2026-11-15T17:30:00+05:30",
+  "assigned_result": "20261115-1730-alienromulus",
+  "used_at": "2026-11-15 19:09 IST"
 }

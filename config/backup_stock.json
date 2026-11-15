@@ -25,15 +25,19 @@
       "id": "stock-alienromulus-03",
       "topic_id": "backup-alienromulus",
       "slug": "alienromulus",
-      "status": "pending",
+      "status": "used",
       "queued_at": "2026-11-15 06:26 IST",
-      "result_id": "stock-alienromulus-03"
+      "result_id": "stock-alienromulus-03",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-alienromulus-03.mp4",
+      "assigned_slot": "2026-11-15T17:30:00+05:30",
+      "assigned_result": "20261115-1730-alienromulus",
+      "used_at": "2026-11-15 19:09 IST"
     },
     {
       "id": "stock-alienromulus-04",
       "topic_id": "backup-alienromulus",
       "slug": "alienromulus",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 06:54 IST",
       "result_id": "stock-alienromulus-04"
     },
@@ -99,7 +103,7 @@
       "id": "stock-chainsawman-03",
       "topic_id": "backup-chainsawman",
       "slug": "chainsawman",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 06:26 IST",
       "result_id": "stock-chainsawman-03"
     },
@@ -108,7 +112,8 @@
       "topic_id": "backup-chainsawman",
       "slug": "chainsawman",
       "status": "pending",
-      "queued_at": "2026-11-15 13:57 IST"
+      "queued_at": "2026-11-15 13:57 IST",
+      "result_id": "stock-chainsawman-04"
     },
     {
       "id": "stock-civilwar-01",
@@ -130,7 +135,7 @@
       "id": "stock-civilwar-03",
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 06:34 IST",
       "result_id": "stock-civilwar-03"
     },
@@ -139,7 +144,8 @@
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
       "status": "pending",
-      "queued_at": "2026-11-15 14:02 IST"
+      "queued_at": "2026-11-15 14:02 IST",
+      "result_id": "stock-civilwar-04"
     },
     {
       "id": "stock-deadpool3-01",
@@ -252,7 +258,7 @@
       "id": "stock-fnaf2-03",
       "topic_id": "backup-fnaf2",
       "slug": "fnaf2",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 11:46 IST",
       "result_id": "stock-fnaf2-03"
     },
@@ -297,7 +303,7 @@
       "id": "stock-gladiator2-03",
       "topic_id": "backup-gladiator2",
       "slug": "gladiator2",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 11:46 IST",
       "result_id": "stock-gladiator2-03"
     },
@@ -321,7 +327,7 @@
       "id": "stock-jurassicworldrebirth-03",
       "topic_id": "backup-jurassicworldrebirth",
       "slug": "jurassicworldrebirth",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-15 06:34 IST",
       "result_id": "stock-jurassicworldrebirth-03"
     },
@@ -408,8 +414,13 @@
       "id": "stock-nobody2-03",
       "topic_id": "backup-nobody2",
       "slug": "nobody2",
-      "status": "pending",
-      "queued_at": "2026-11-15 13:14 IST"
+      "status": "used",
+      "queued_at": "2026-11-15 13:14 IST",
+      "result_id": "stock-nobody2-03",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-nobody2-03.mp4",
+      "assigned_slot": "2026-11-16T18:30:00+05:30",
+      "assigned_result": "20261116-1830-nobody2",
+      "used_at": "2026-11-15 19:09 IST"
     },
     {
       "id": "stock-onepiece-01",
@@ -432,7 +443,8 @@
       "topic_id": "backup-onepiece",
       "slug": "onepiece",
       "status": "pending",
-      "queued_at": "2026-11-15 13:14 IST"
+      "queued_at": "2026-11-15 13:14 IST",
+      "result_id": "stock-onepiece-03"
     },
     {
       "id": "stock-predatorbadlands-01",
@@ -472,7 +484,8 @@
       "topic_id": "backup-runningman",
       "slug": "runningman",
       "status": "pending",
-      "queued_at": "2026-11-15 13:40 IST"
+      "queued_at": "2026-11-15 13:40 IST",
+      "result_id": "stock-runningman-02"
     },
     {
       "id": "stock-sololeveling-01",
@@ -499,8 +512,10 @@
       "id": "stock-superman-02",
       "topic_id": "backup-superman",
       "slug": "superman",
-      "status": "pending",
-      "queued_at": "2026-11-15 13:40 IST"
+      "status": "ready",
+      "queued_at": "2026-11-15 13:40 IST",
+      "result_id": "stock-superman-02",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-superman-02.mp4"
     },
     {
       "id": "stock-toystory5-01",
@@ -540,8 +555,10 @@
       "id": "stock-twisters-02",
       "topic_id": "backup-twisters",
       "slug": "twisters",
-      "status": "pending",
-      "queued_at": "2026-11-15 13:57 IST"
+      "status": "ready",
+      "queued_at": "2026-11-15 13:57 IST",
+      "result_id": "stock-twisters-02",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-twisters-02.mp4"
     },
     {
       "id": "stock-venom3-01",

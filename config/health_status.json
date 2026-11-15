@@ -1,26 +1,11 @@
 {
-  "at": "2026-11-15 14:03 IST",
+  "at": "2026-11-15 19:09 IST",
   "slots_checked": 12,
   "ready": [
     {
-      "slot": "2026-11-15T12:30:00+05:30",
-      "id": "20261115-1230-mahavatarnarsimha",
-      "how": "done"
-    },
-    {
-      "slot": "2026-11-15T13:30:00+05:30",
-      "id": "stock",
-      "how": "backup_stock"
-    },
-    {
-      "slot": "2026-11-15T16:00:00+05:30",
-      "id": "20261115-1600-hoppers",
-      "how": "done"
-    },
-    {
       "slot": "2026-11-15T17:30:00+05:30",
-      "id": "20261115-1730-jumanji",
-      "how": "queued+fallback"
+      "id": "20261115-1730-alienromulus",
+      "how": "backup_stock"
     },
     {
       "slot": "2026-11-15T18:30:00+05:30",
@@ -56,14 +41,26 @@
       "slot": "2026-11-16T13:30:00+05:30",
       "id": "stock",
       "how": "backup_stock"
+    },
+    {
+      "slot": "2026-11-16T17:30:00+05:30",
+      "id": "20261116-1730-wildhorsenine",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-16T18:30:00+05:30",
+      "id": "20261116-1830-nobody2",
+      "how": "backup_stock"
     }
   ],
   "short": [
-    "2026-11-16T11:30:00+05:30"
+    "2026-11-16T11:30:00+05:30",
+    "2026-11-16T16:00:00+05:30"
   ],
   "backup_pool_size": 28,
   "backup_pool_preuploaded": 26,
   "spare_done": [
+    "stock-nobody2-03",
     "20261114-0900-deadpool3",
     "stock-avatarfireandash-04",
     "stock-furiosa-01",
@@ -72,6 +69,7 @@
     "stock-deadpool3-03",
     "stock-deadpool3-02",
     "20261115-1830-deadpool3",
+    "stock-superman-02",
     "stock-avatarfireandash-02",
     "20261115-1130-runningman",
     "20261115-1330-mortalkombat2",
@@ -88,12 +86,16 @@
     "20261116-1330-superman",
     "stock-tronares-02",
     "stock-mortalkombat2-02",
+    "20261116-1830-nobody2",
     "stock-missionimpossible-01",
     "stock-missionimpossible-02",
     "20261114-2030-missionimpossible",
+    "20261115-1730-alienromulus",
+    "stock-twisters-02",
     "stock-runningman-01",
     "stock-avatarfireandash-01",
     "stock-dune2-02",
+    "stock-alienromulus-03",
     "stock-mortalkombat2-01",
     "stock-wickedforgood-01",
     "stock-furiosa-02",
@@ -108,11 +110,14 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 16,
-  "stock_pending": 14,
-  "stock_used": 13,
+  "stock_ready": 18,
+  "stock_pending": 4,
+  "stock_used": 15,
   "stock_target": 30,
-  "stock_need_refill": false,
-  "stock_assigned": [],
+  "stock_need_refill": true,
+  "stock_assigned": [
+    "20261115-1730-alienromulus",
+    "20261116-1830-nobody2"
+  ],
   "ok": false
 }
