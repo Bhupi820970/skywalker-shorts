@@ -58,6 +58,13 @@
       "result_id": "stock-alienromulus-06"
     },
     {
+      "id": "stock-alienromulus-07",
+      "topic_id": "backup-alienromulus",
+      "slug": "alienromulus",
+      "status": "pending",
+      "queued_at": "2026-11-16 02:24 IST"
+    },
+    {
       "id": "stock-avatarfireandash-01",
       "topic_id": "backup-avatarfireandash",
       "slug": "avatarfireandash",
@@ -577,6 +584,13 @@
       "status": "failed",
       "queued_at": "2026-11-15 13:40 IST",
       "result_id": "stock-runningman-02"
+    },
+    {
+      "id": "stock-runningman-03",
+      "topic_id": "backup-runningman",
+      "slug": "runningman",
+      "status": "pending",
+      "queued_at": "2026-11-16 02:24 IST"
     },
     {
       "id": "stock-sololeveling-01",
