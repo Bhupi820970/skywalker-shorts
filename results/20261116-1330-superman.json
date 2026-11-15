@@ -180,5 +180,9 @@
     }
   },
   "stock_id": "stock-superman-01",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "buffer_post_id": "6af968ffe86a5789a6f9eb5c",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-16T08:00:00.000Z",
+  "buffer_created_at": "2026-11-15 13:40 IST"
 }
