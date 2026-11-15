@@ -1,0 +1,172 @@
+{
+  "id": "stock-venom3-01",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1280x720 source -> 2160x3840), QA ok",
+  "at": "2026-11-15 06:59 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43661391258",
+  "slot": null,
+  "title": "Eddie Brock finally meets his match #venom #tomhardy #marvel",
+  "hook": "Eddie Brock is out of options",
+  "description": "Eddie Brock is out of options. Eddie Brock and Venom are pushed to their absolute limits as they face an unstoppable threat from their own kind. From the official Venom: The Last Dance trailer. Edit by Skywalker.\nSource: official trailer.\n#venom #tomhardy #marvel #shorts #edit",
+  "tags": [
+    "venom",
+    "tomhardy",
+    "marvel",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Venom's last dance starts now",
+    "title": "Venom's last dance starts now | Eddie and Venom face Knull | #edit",
+    "description": "Venom's last dance starts now. From the official Venom: The Last Dance trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #venom",
+    "tags": [
+      "venom",
+      "tomhardy",
+      "edit",
+      "shorts",
+      "trending"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Eddie Brock finally meets his match",
+      "click_score": 92.0
+    },
+    {
+      "title": "The moment Venom realized he was doomed",
+      "click_score": 88.0
+    },
+    {
+      "title": "Venom's aura in this final showdown is insane",
+      "click_score": 85.0
+    },
+    {
+      "title": "POV: you are Eddie Brock and there is no escape",
+      "click_score": 82.0
+    },
+    {
+      "title": "Nobody noticed the terror in Venom's eyes here",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.4,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.3,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.5,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-venom3",
+  "stock": true,
+  "stock_topic": "backup-venom3",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/venom3_trailer_h264.mp4",
+      "music": "sw_dudidamphonkremixdrifted.mp3"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-venom3-01.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 2.429,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/venom3_trailer_h264.mp4",
+  "music": "sw_dudidamphonkremixdrifted.mp3",
+  "music_credit": "Song: Unknown - Dudi Dam ( Phonk Remix) [ DRIFT EDIT] (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "Eddie Brock is out of options. Eddie Brock and Venom are pushed to their absolute limits as they face an unstoppable threat from their own kind. From the official Venom: The Last Dance trailer. Edit by Skywalker.\nSource: official trailer.\n#venom #tomhardy #marvel #shorts #edit\n\nMusic:\nSong: Unknown - Dudi Dam ( Phonk Remix) [ DRIFT EDIT] (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.5,
+      "audio": true
+    },
+    "lufs": -14.3,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -14.0,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards for a song-only edit.",
+        "The hook is clear and well-placed.",
+        "The footage is clean, uncropped, and properly formatted for a vertical short.",
+        "The audio is clean with no leftover trailer dialogue."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  }
+}
