@@ -1,0 +1,78 @@
+name: clips
+
+# Daily: Gemini picks the official scene clips we need (config/clip_requests.json),
+# then GitHub fetches what it can from non-YouTube official sources (DailyMotion/Bilibili).
+# The box timer fetches YouTube official-channel clips from the same list (~10:15 IST).
+# If the box has not uploaded for >36h, GitHub widens its own non-YouTube fetch; stock covers slots.
+on:
+  schedule:
+    - cron: "17 3 * * *"   # ~08:47 IST
+  workflow_dispatch:
+    inputs:
+      skip_generate:
+        description: "Reuse existing clip_requests.json"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: clips
+  cancel-in-progress: false
+
+jobs:
+  clips:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ffmpeg + yt-dlp
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q "yt-dlp[default]" curl_cffi
+      - name: Gemini clip requests
+        if: github.event.inputs.skip_generate != 'true'
+        timeout-minutes: 10
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+          GEMINI_API_KEY_6: ${{ secrets.GEMINI_API_KEY_6 }}
+        run: |
+          python3 scripts/clip_requests.py || true
+          git config user.name "skywalker-clips"
+          git config user.email "actions@users.noreply.github.com"
+          git add config/clip_requests.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "clip requests: $(date -u +%F)"
+          for i in 1 2 3 4; do git pull --rebase -q && git push && break; sleep 7; done
+      - name: Fetch non-YouTube official clips
+        timeout-minutes: 90
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          STALE=$(python3 - <<'PY'
+          import json, datetime as dt
+          try:
+              s = json.load(open("config/clip_fetch_status.json")).get("box", {}).get("last_upload_at")
+              age = (dt.datetime.now(dt.timezone.utc) - dt.datetime.fromisoformat(s.replace("Z", "+00:00"))).total_seconds() / 3600
+          except Exception:
+              age = 999
+          print("1" if age > 36 else "0")
+          PY
+          )
+          if [ "$STALE" = "1" ]; then
+            echo "::warning::box clip uploader silent >36h -> GitHub fetches all requests from non-YouTube sources (stock covers slots)"
+            LIMIT=0
+          else
+            LIMIT=6
+          fi
+          python3 scripts/clip_fetch.py --no-youtube --limit "$LIMIT" --per-title 2 || true
