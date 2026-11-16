@@ -24,6 +24,7 @@ IST = timezone(timedelta(hours=5, minutes=30))
 REQ = REPO / "config" / "clip_requests.json"
 STATUS = REPO / "config" / "clip_fetch_status.json"
 CATALOG = REPO / "config" / "topic_catalog.json"
+DENY = REPO / "config" / "clip_denylist.json"
 WORK = Path(os.environ.get("CLIP_WORK", "/tmp/sky_clips"))
 LOG = os.environ.get("CLIP_LOG")  # box: /workspace/skywalker-cron.log
 FMT = "bv*[height>=1080][height<=2160]+ba/b[height>=1080][height<=2160]"
@@ -60,6 +61,42 @@ def retry(fn, tries=3, base=8):
 
 def norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
+
+def denied_ids() -> set[str]:
+    """Permanent fetch denylist (yt:<id> plus the bare id)."""
+    ids: set[str] = set()
+    try:
+        for x in json.loads(DENY.read_text()).get("ids") or []:
+            s = str(x).strip().lower()
+            if not s:
+                continue
+            ids.add(s)
+            bare = s.split(":", 1)[-1]
+            if bare:
+                ids.add(bare)
+                ids.add(f"yt:{bare}")
+    except Exception:
+        pass
+    return ids
+
+
+def is_denied_clip(cid: str, url: str = "") -> bool:
+    deny = denied_ids()
+    tokens = [cid or "", url or ""]
+    for token in tokens:
+        s = str(token).strip().lower()
+        if not s:
+            continue
+        if s in deny:
+            return True
+        bare = s.split(":", 1)[-1]
+        if bare in deny or f"yt:{bare}" in deny:
+            return True
+        m = re.search(r"(?:v=|/youtu\.be/|/shorts/)([A-Za-z0-9_-]{6,})", s)
+        if m and (m.group(1).lower() in deny or f"yt:{m.group(1).lower()}" in deny):
+            return True
+    return False
 
 
 def official_set(req: dict) -> set[str]:
@@ -264,7 +301,7 @@ def main() -> int:
         for c in cands:
             if got >= per:
                 break
-            if c["id"] in done_ids:
+            if c["id"] in done_ids or is_denied_clip(c.get("id") or "", c.get("url") or ""):
                 continue
             if c["kind"] == "trailer" or TRAILER.search(c.get("title") or "") or sourcing.is_trailer_source(c.get("url") or ""):
                 continue  # never download trailers

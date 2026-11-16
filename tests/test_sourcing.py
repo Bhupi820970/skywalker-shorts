@@ -54,7 +54,8 @@ def test_usable_false_blocks_the_catalog_asset():
     names = sourcing.unusable_asset_names({"id": "demo-clips-bluelockisagi", "slug": "bluelockisagi"})
     assert "bluelockisagi_scene1_h264.mp4" in names
     assert sourcing.is_unusable_source("bluelockisagi_scene1_h264.mp4", {"id": "demo-clips-bluelockisagi", "slug": "bluelockisagi"})
-    assert not sourcing.is_unusable_source("jjkgojovstoji_scene1_h264.mp4", {"id": "demo-clips-jjkgojovstoji-v3", "slug": "jjkgojovstoji"})
+    assert sourcing.is_unusable_source("jjkgojovstoji_scene1_h264.mp4", {"id": "demo-clips-jjkgojovstoji-v3", "slug": "jjkgojovstoji"})
+    assert sourcing.is_unusable_source("https://www.youtube.com/watch?v=7LzDcr20SHc", {"id": "demo-clips-jjkgojovstoji-v3", "slug": "jjkgojovstoji"})
 
 
 def test_topic_key_from_queue_id():

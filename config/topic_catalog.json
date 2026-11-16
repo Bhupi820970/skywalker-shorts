@@ -1792,6 +1792,12 @@
       "scene_assets": [
         "jjkgojovstoji_scene1_h264.mp4"
       ],
+      "unusable_assets": {
+        "jjkgojovstoji_scene1_h264.mp4": "owner-rejected"
+      },
+      "unusable_urls": [
+        "https://www.youtube.com/watch?v=7LzDcr20SHc"
+      ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "fallback_asset": "jjkgojovstoji_trailer_h264.mp4"
