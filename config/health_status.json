@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-16 18:12 IST",
-  "slots_checked": 11,
+  "at": "2026-11-16 18:36 IST",
+  "slots_checked": 12,
   "ready": [
     {
       "slot": "2026-11-16T17:30:00+05:30",
@@ -58,7 +58,9 @@
       "how": "queued+fallback"
     }
   ],
-  "short": [],
+  "short": [
+    "2026-11-17T18:30:00+05:30"
+  ],
   "backup_pool_size": 52,
   "backup_pool_preuploaded": 52,
   "spare_done": [
@@ -127,5 +129,5 @@
   "stock_target": 30,
   "stock_need_refill": false,
   "stock_assigned": [],
-  "ok": true
+  "ok": false
 }
