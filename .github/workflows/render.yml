@@ -60,8 +60,10 @@ jobs:
           RENDER_AHEAD_HOURS: "8"
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Optional one-shot force file (used when workflow_dispatch is unavailable).
-          if [ -f config/force_render.json ]; then
+          # One-shot force file only on the push that edits it. A stale file must
+          # not hijack the scheduled planner or a later queue push.
+          HONOR_FORCE="${{ github.event_name == 'push' && contains(toJSON(github.event.head_commit.modified), 'force_render.json') }}"
+          if [ "$HONOR_FORCE" = "true" ] && [ -f config/force_render.json ]; then
             F_IDS=$(python3 -c "import json; d=json.load(open('config/force_render.json')); print(','.join(d.get('ids') or []))")
             F_NP=$(python3 -c "import json; d=json.load(open('config/force_render.json')); print('1' if d.get('no_publish') else '0')")
             if [ -n "$F_IDS" ] && [ -z "$IDS" ]; then export IDS="$F_IDS"; fi
@@ -74,7 +76,8 @@ jobs:
         run: |
           NP="${{ github.event.inputs.no_publish == 'true' && '1' || '0' }}"
           if [ "${FORCE_NO_PUBLISH:-0}" = "1" ]; then NP=1; fi
-          if [ -f config/force_render.json ]; then
+          HONOR_FORCE="${{ github.event_name == 'push' && contains(toJSON(github.event.head_commit.modified), 'force_render.json') }}"
+          if [ "$HONOR_FORCE" = "true" ] && [ -f config/force_render.json ]; then
             NP_F=$(python3 -c "import json; d=json.load(open('config/force_render.json')); print('1' if (d.get('no_publish') and d.get('ids')) else '0')")
             if [ "$NP_F" = "1" ]; then NP=1; fi
           fi
