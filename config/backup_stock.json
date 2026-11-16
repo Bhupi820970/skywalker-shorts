@@ -385,7 +385,8 @@
       "topic_id": "backup-fnaf2",
       "slug": "fnaf2",
       "status": "pending",
-      "queued_at": "2026-11-16 14:09 IST"
+      "queued_at": "2026-11-16 14:09 IST",
+      "result_id": "stock-fnaf2-07"
     },
     {
       "id": "stock-furiosa-01",
@@ -453,7 +454,8 @@
       "topic_id": "backup-gladiator2",
       "slug": "gladiator2",
       "status": "pending",
-      "queued_at": "2026-11-16 14:09 IST"
+      "queued_at": "2026-11-16 14:09 IST",
+      "result_id": "stock-gladiator2-06"
     },
     {
       "id": "stock-jurassicworldrebirth-01",
@@ -508,7 +510,8 @@
       "topic_id": "backup-jurassicworldrebirth",
       "slug": "jurassicworldrebirth",
       "status": "pending",
-      "queued_at": "2026-11-16 14:16 IST"
+      "queued_at": "2026-11-16 14:16 IST",
+      "result_id": "stock-jurassicworldrebirth-07"
     },
     {
       "id": "stock-kalki2898ad-01",
@@ -653,7 +656,8 @@
       "topic_id": "backup-onepiece",
       "slug": "onepiece",
       "status": "pending",
-      "queued_at": "2026-11-16 14:16 IST"
+      "queued_at": "2026-11-16 14:16 IST",
+      "result_id": "stock-onepiece-06"
     },
     {
       "id": "stock-predatorbadlands-01",
@@ -855,8 +859,10 @@
       "id": "stock-wickedforgood-02",
       "topic_id": "backup-wickedforgood",
       "slug": "wickedforgood",
-      "status": "pending",
-      "queued_at": "2026-11-16 14:00 IST"
+      "status": "ready",
+      "queued_at": "2026-11-16 14:00 IST",
+      "result_id": "stock-wickedforgood-02",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-wickedforgood-02.mp4"
     },
     {
       "id": "stock-zootopia2-01",
