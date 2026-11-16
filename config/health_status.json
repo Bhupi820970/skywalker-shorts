@@ -1,12 +1,7 @@
 {
-  "at": "2026-11-16 21:59 IST",
+  "at": "2026-11-16 22:48 IST",
   "slots_checked": 11,
   "ready": [
-    {
-      "slot": "2026-11-16T20:30:00+05:30",
-      "id": "backup-arcane2",
-      "how": "backup_pool"
-    },
     {
       "slot": "2026-11-16T22:30:00+05:30",
       "id": "20261116-2230-alluarjun",
@@ -50,6 +45,11 @@
     {
       "slot": "2026-11-17T20:30:00+05:30",
       "id": "20261117-2030-onepieceegghead",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-17T22:30:00+05:30",
+      "id": "20261117-2230-shangrilafrontier",
       "how": "queued+fallback"
     }
   ],
