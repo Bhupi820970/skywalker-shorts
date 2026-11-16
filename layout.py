@@ -1,7 +1,8 @@
 """White-hook-bar geometry for the 1080x1920 master (published at 2160x3840).
 
-The bar is its own band at the top. The picture is scaled to fit the area
-under it and is never cropped. Leftover space in that area is letterbox or blur.
+The bar is its own band at the top and never overlaps the picture. The
+uncropped plate is scaled to fit under the bar, then vertically centered in
+the full frame. Leftover space above and below the plate is letterbox or blur.
 """
 from __future__ import annotations
 
@@ -14,7 +15,7 @@ def even(n: int) -> int:
 
 
 def whitebar_layout(plate_h: int, bar_h: int, plate_w: int | None = None) -> dict:
-    """Bar at y=0. Uncropped plate flush underneath, fitted into the rest."""
+    """Bar at y=0. Uncropped plate centered in the frame, never under the bar."""
     pw0 = int(plate_w or W)
     ph0 = max(2, int(plate_h))
     bar_h = int(bar_h)
@@ -37,11 +38,19 @@ def whitebar_layout(plate_h: int, bar_h: int, plate_w: int | None = None) -> dic
     plate_x = even(max(0, (W - pw) // 2))
     if plate_x + pw > W:
         plate_x = max(0, W - pw)
+    # Center in the full 1080x1920 frame when that leaves the bar clear.
+    plate_y = even((H - ph) // 2)
+    min_y = bar_h
+    max_y = even(max(min_y, H - ph))
+    if plate_y < min_y:
+        plate_y = min_y
+    if plate_y > max_y:
+        plate_y = max_y
     return {
         "bar_y": 0,
         "bar_h": bar_h,
-        "video_y": bar_h,
-        "plate_y": bar_h,
+        "video_y": plate_y,
+        "plate_y": plate_y,
         "plate_x": plate_x,
         "plate_w": pw,
         "plate_h": ph,

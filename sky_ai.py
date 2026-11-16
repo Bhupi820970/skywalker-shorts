@@ -604,8 +604,9 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
     if mode == "music_only":
         expected = (
             "Expected: a tight WHITE bar with black italic English hook text in its own band at the TOP of the frame, "
-            "directly ABOVE (never over) the full, uncropped landscape movie frame. The picture is scaled to fit the "
-            "area under the bar; blur or letterbox fills only the leftover space. This is a SONG-ONLY edit: the hype song plays at full level "
+            "directly ABOVE (never over) the full, uncropped landscape movie frame. The picture is vertically centered "
+            "in the frame, scaled to fit under the bar without cropping; blur or letterbox fills the leftover space "
+            "above and below the picture. This is a SONG-ONLY edit: the hype song plays at full level "
             "from second 0 over beat-cut action/visuals. There is NO character voice, NO trailer audio, and NO "
             "lower-third dialogue subtitles (that is correct — do not reject for missing dialogue or captions). "
             "Nothing else is written on the footage. The first shot should be the strongest hook visual."
@@ -620,8 +621,9 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
     else:
         expected = (
             "Expected: a tight WHITE bar with black italic English hook text sitting directly ABOVE (never over) the full, uncropped "
-            "landscape movie frame. The bar is a band at the top; the picture is scaled to fit underneath "
-            "(blur or letterbox only in the leftover space). Only lower-third dialogue subtitles under the picture; nothing else on the footage. "
+            "landscape movie frame. The bar is a band at the top; the picture is vertically centered in the frame "
+            "and scaled to fit underneath without cropping (blur or letterbox above and below the picture). "
+            "Only lower-third dialogue subtitles under the picture; nothing else on the footage. "
             "Audio structure: ACT 1 (opening, about 30%, never more than ~38%) = only the characters talking, crystal clear, NO song; "
             "ACT 2 = the hype song at full level over beat-cut action, no dialogue. The song must start once and never pop in and out between lines."
         )
@@ -644,7 +646,7 @@ title (curiosity/emotion, character-focused, English, would you tap it),
 shake (10 = steady; low if footage is jittery/handheld-shaky in a distracting way),
 crop (10 = full uncropped frame; low if faces/heads are cut by a zoom or the picture is cropped),
 length (pacing fits {dur:.0f}s; no dead air, no abrupt cut-off),
-layout (white bar flush ABOVE the uncropped frame, never covering it, black canvas, nothing else written on the footage),
+layout (white bar at the top ABOVE the uncropped frame, never covering it; picture vertically centered with blur above and below; nothing else written on the footage),
 clean_footage (no studio logo intro, title/date/rating card, watermark, or repeated shot),
 {cap_crit},
 post_worthy (overall: would a top edit channel post this as is?).

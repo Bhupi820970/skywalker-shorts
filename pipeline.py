@@ -70,8 +70,9 @@ FONTS = _fonts_dir()
 W, H = 1080, 1920
 FPS = 30            # output / mux frame rate (auto_qc requires >= 30)
 # Caption-bar template: white hook bar is a band at the top of the
-# 1080x1920 master. The uncropped frame is scaled to fit underneath.
-# The bar never covers the picture. Never crop the source.
+# 1080x1920 master. The uncropped frame is scaled to fit under it and
+# vertically centered in the frame. Blur fills leftover space above and
+# below the picture. The bar never covers the picture. Never crop the source.
 BAR_PAD_Y = 30             # padding above and below the hook text
 SEP_H = 2                  # 2px hairline at the bottom of the bar (no gap)
 # BAR_H is computed from the text; this is only a fallback estimate
@@ -3272,7 +3273,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         run(cmd)
         return out
     # whitebar: hook bar is its own band at the top. The plate is scaled to
-    # fit the area under it and is never cropped.
+    # fit under it, vertically centered in the frame, and never cropped.
     bar = WORK / "caption_bar.png"
     if not bar.exists():
         draw_caption_bar(bar, hook_lines())
@@ -3344,16 +3345,19 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     except Exception as e:
         print(f"  lower-thirds skipped: {e}")
     # Stacked: [white bar] over [video area]. The bar is not drawn on the
-    # picture. The picture is contain-fit; blur fills only the leftover
-    # space under the bar.
+    # picture. The picture is contain-fit and vertically centered in the
+    # full frame; blur fills leftover space above and below the plate.
     region_h = int(lay["region_h"])
+    plate_oy = int(lay["plate_y"]) - int(lay["bar_h"])
+    if plate_oy < 0:
+        plate_oy = 0
     vfilt = (
         f"[0:v]split=2[fg][bgraw];"
         f"[bgraw]scale={W}:{region_h}:force_original_aspect_ratio=increase,"
         f"crop={W}:{region_h},gblur=sigma=36:steps=3,"
         f"eq=brightness=-0.14:saturation=0.80:contrast=0.95,setsar=1[bg];"
         f"[fg]scale={lay['plate_w']}:{lay['plate_h']}:flags=lanczos,setsar=1[plate];"
-        f"[bg][plate]overlay={lay['plate_x']}:0:format=auto[vid];"
+        f"[bg][plate]overlay={lay['plate_x']}:{plate_oy}:format=auto[vid];"
         f"[2:v]format=rgb24,scale={W}:{lay['bar_h']}[bar];"
         f"[bar][vid]vstack=inputs=2{fx},format=yuv420p{ass_extra}[v]"
     )
@@ -3361,7 +3365,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     (WORK / "layout.json").write_text(json.dumps(layout, default=str))
     print(
         f"Muxing stacked whitebar (bar {lay['bar_h']}px at y=0, "
-        f"plate {lay['plate_w']}x{lay['plate_h']} under it) + dialogue/music…"
+        f"plate {lay['plate_w']}x{lay['plate_h']} centered at y={lay['plate_y']}) + dialogue/music…"
     )
     cmd = [
         "ffmpeg", "-y",
@@ -3603,12 +3607,19 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
         ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
          "-of", "csv=p=0", str(src)], text=True).strip().split(",")[:2]]
     ar_src, ar_plate = mw / mh, lay["plate_w"] / max(1, lay["plate_h"])
-    flush = int(lay.get("plate_y", lay.get("video_y", -1))) == int(lay["bar_y"]) + int(lay["bar_h"])
+    plate_y = int(lay.get("plate_y", lay.get("video_y", -1)))
+    bar_bottom = int(lay["bar_y"]) + int(lay["bar_h"])
+    no_overlap = plate_y >= bar_bottom
+    fits = plate_y + int(lay["plate_h"]) <= H
+    ideal = (H - int(lay["plate_h"])) // 2
+    ideal = ideal - (ideal % 2)
+    room = ideal >= bar_bottom and ideal + int(lay["plate_h"]) <= H
+    centered = (not room) or abs(plate_y - ideal) <= 2
     geo_ok = (
         abs(ar_src - ar_plate) / ar_src < 0.01
         and 2 <= int(lay["plate_w"]) <= W
         and int(lay["bar_y"]) == 0
-        and flush
+        and no_overlap and fits and centered
     )
     # letterbox rows removed must be black on well-lit frames, not on one fade
     lb_ok = True
@@ -3682,14 +3693,14 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
                          "edge_corr_median": round(float(np.median(edges)), 3) if edges else None,
                          "shift_px_median": round(float(np.median(shifts)), 2) if shifts else None,
                          "pairs": len(corrs)}
-    # 3. caption visible: white bar with dark type directly on top of the plate
+    # 3. caption visible: white bar with dark type at the top, above the plate
     o = _frame(out, max(0.3, (body[0]["t1"] if body else 1.0) / 2))
     cap_ok = False
     if o is not None:
         barr = o[lay["bar_y"]:lay["bar_y"] + lay["bar_h"], :]
         white = float((barr > 235).mean()) if barr.size else 0.0
         ink = float((barr < 60).mean()) if barr.size else 0.0
-        cap_ok = white > 0.6 and 0.01 < ink < 0.4 and lay["plate_y"] == lay["bar_y"] + lay["bar_h"]
+        cap_ok = white > 0.6 and 0.01 < ink < 0.4 and int(lay["plate_y"]) >= int(lay["bar_y"]) + int(lay["bar_h"])
         checks["caption"] = {"ok": cap_ok, "white_frac": round(white, 3), "ink_frac": round(ink, 3),
                              "bar_y": lay["bar_y"], "bar_h": lay["bar_h"]}
     else:
