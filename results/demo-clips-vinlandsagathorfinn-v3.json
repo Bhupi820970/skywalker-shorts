@@ -1,0 +1,242 @@
+{
+  "id": "demo-clips-vinlandsagathorfinn-v3",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok [no-publish]",
+  "at": "2026-11-16 19:50 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43879068511",
+  "slot": "2026-12-01T13:00:00+05:30",
+  "title": "Watch the last two seconds | Vinland Saga #vinlandsaga #thorfinn #movieedit",
+  "hook": "Watch the last two seconds",
+  "description": "Watch the last two seconds. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #movieedit #shorts #edit",
+  "tags": [
+    "vinlandsaga",
+    "thorfinn",
+    "movieedit",
+    "askeladd",
+    "animeedit",
+    "vinland",
+    "anime",
+    "ihavenoenemies"
+  ],
+  "queue_meta": {
+    "hook": "Why Thorfinn dropped his daggers forever",
+    "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+    "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+    "tags": [
+      "vinlandsaga",
+      "thorfinn",
+      "askeladd",
+      "animeedit",
+      "vinland",
+      "anime",
+      "ihavenoenemies"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "fallback",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 17.7,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 37.4,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+      "music": "sw_interworldrapturephonk.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/test-renders",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-clips-vinlandsagathorfinn-v3.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 2.833,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+  "music": "sw_interworldrapturephonk.mp3",
+  "music_credit": "Song: InterWorld - INTERWORLD RAPTURE (PHONK) (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "Watch the last two seconds. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #movieedit #shorts #edit\n\nMusic:\nSong: InterWorld - INTERWORLD RAPTURE (PHONK) (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": true,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.3,
+      "audio": true
+    },
+    "lufs": -14.3,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.1,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 9.0,
+        "title": 9.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 63,
+      "src_start": 158.5,
+      "dur": 1.05,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 16,
+      "src_start": 42.733,
+      "dur": 1.783,
+      "gemini_score": 9.5,
+      "reason": "gemini score 9.5"
+    },
+    {
+      "id": 17,
+      "src_start": 47.0,
+      "dur": 1.718,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 57,
+      "src_start": 151.133,
+      "dur": 1.718,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 25,
+      "src_start": 68.9,
+      "dur": 1.96,
+      "gemini_score": 8.8,
+      "reason": "gemini score 8.8"
+    },
+    {
+      "id": 46,
+      "src_start": 129.933,
+      "dur": 2.034,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 2,
+      "src_start": 1.7,
+      "dur": 1.718,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 13,
+      "src_start": 36.0,
+      "dur": 1.718,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 22,
+      "src_start": 61.6,
+      "dur": 1.96,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 19,
+      "src_start": 51.7,
+      "dur": 1.5,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 5,
+      "src_start": 11.7,
+      "dur": 1.672,
+      "gemini_score": 7.2,
+      "reason": "gemini score 7.2"
+    },
+    {
+      "id": 29,
+      "src_start": 84.9,
+      "dur": 1.5,
+      "gemini_score": 8.8,
+      "reason": "gemini score 8.8"
+    },
+    {
+      "id": 45,
+      "src_start": 125.4,
+      "dur": 1.5
+    }
+  ],
+  "qc_status": "pass"
+}
