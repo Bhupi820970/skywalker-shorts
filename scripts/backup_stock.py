@@ -149,6 +149,59 @@ def pool_slug(b: dict) -> str:
     return bid[len("backup-"):] if bid.startswith("backup-") else bid
 
 
+def qc_was_skipped(r: dict | None) -> bool:
+    """True when Gemini QC was skipped, errored, or never recorded as a real verdict."""
+    if not r:
+        return False
+    if r.get("qc_status") == "skipped" or r.get("qc_pending"):
+        return True
+    g = r.get("gate") if isinstance(r.get("gate"), dict) else {}
+    qc = g.get("gemini_qc")
+    if isinstance(qc, str) and "skipped" in qc.lower():
+        return True
+    if r.get("audit_hold") and "qc_skipped" in (r.get("audit_hold") or []):
+        return True
+    return False
+
+
+def source_topic_mismatch(r: dict | None, ent: dict | None = None) -> bool:
+    """True when the footage topic does not match the title/slug (e.g. Blue Lock under a Vinland title)."""
+    if not r:
+        return False
+    if r.get("audit_hold") and "topic_mismatch" in (r.get("audit_hold") or []):
+        return True
+    import sourcing
+    src = r.get("source") or ""
+    if not src:
+        return False
+    probe = {
+        "id": (ent or {}).get("id") or r.get("id") or "",
+        "title": r.get("title") or (ent or {}).get("title") or "",
+        "words": r.get("words") or "",
+        "fallback_asset": sourcing.source_filename(src),
+        "fallback_mp4": [src],
+        "stock_topic": (ent or {}).get("topic_id") or r.get("stock_topic") or "",
+        "tags": r.get("tags") or [],
+    }
+    # Prefer the stock/entry slug as the expected topic.
+    slug = (ent or {}).get("slug") or _slug_of(r)
+    if slug:
+        probe["fallback_asset"] = slug + "_trailer_h264.mp4"
+        if not sourcing.source_matches_topic({"id": f"stock-{slug}-01", "fallback_asset": slug + "_scene1_h264.mp4",
+                                              "stock_topic": f"backup-{slug}"}, src):
+            # also compare against the result title's topic words
+            title = (r.get("title") or "").lower()
+            src_slug = sourcing.source_topic_slug(src)
+            compact = re.sub(r"[^a-z0-9]+", "", title)
+            if src_slug and src_slug in compact:
+                return False
+            if slug and (src_slug == slug or src_slug.startswith(slug) or slug.startswith(src_slug)):
+                return False
+            return True
+        return False
+    return not sourcing.source_matches_topic(probe, src)
+
+
 def is_ready_result(r: dict | None) -> bool:
     if not r:
         return False
@@ -157,6 +210,10 @@ def is_ready_result(r: dict | None) -> bool:
     if r.get("no_publish") or r.get("demo"):
         return False
     if "/test-renders/" in str(r.get("asset_url") or ""):
+        return False
+    if r.get("stock_ready") is False:
+        return False
+    if qc_was_skipped(r) or source_topic_mismatch(r):
         return False
     return True
 
@@ -350,6 +407,8 @@ def _entry_status(ent: dict, root: Path, now: datetime) -> str:
         return "failed"
     if is_ready_result(r) and not (r or {}).get("stock_used"):
         return "ready"
+    if r and r.get("status") == "done" and not (r or {}).get("stock_used"):
+        return "not_ready"
     if r and r.get("status") in ("retry_queued",):
         return "pending"
     if ent.get("status") == "pending":
@@ -684,6 +743,51 @@ def mark_pending(ids: list[str], root: Path | None = None, now: datetime | None 
     man["items"] = sorted(by_id.values(), key=lambda e: e.get("id") or "")
     save_manifest(man, root)
     return man
+
+
+def audit_ready_stock(root: Path | None = None, now: datetime | None = None) -> list[dict]:
+    """Mark ready stock not-ready when the source topic mismatches the title or QC was skipped.
+
+    Never deletes videos or release assets. Stamps the result and manifest only.
+    """
+    root = root or _repo()
+    now = now or now_ist()
+    man = sync(root, now)
+    held = []
+    for ent in man.get("items") or []:
+        r = read_result(root, ent.get("id") or "")
+        # Inspect anything that looks ready, plus already-done unused clips.
+        if not r:
+            continue
+        if (ent.get("status") not in ("ready", "not_ready")
+                and not (r.get("status") == "done" and r.get("asset_url") and not r.get("stock_used"))):
+            continue
+        if r.get("stock_used") or ent.get("assigned_slot"):
+            continue
+        reasons = []
+        if qc_was_skipped(r):
+            reasons.append("qc_skipped")
+        if source_topic_mismatch(r, ent):
+            reasons.append("topic_mismatch")
+        if not reasons:
+            continue
+        ent["status"] = "not_ready"
+        ent["audit_hold"] = reasons
+        r["stock_ready"] = False
+        r["audit_hold"] = reasons
+        # Keep status=done so the video is not deleted or re-rendered as failed.
+        rp = root / "results" / f"{ent['id']}.json"
+        rp.write_text(json.dumps(r, indent=2, ensure_ascii=False) + "\n")
+        held.append({"id": ent.get("id"), "reasons": reasons, "title": r.get("title"),
+                     "source": r.get("source")})
+    man["items"] = sorted({e.get("id"): e for e in (man.get("items") or []) if e.get("id")}.values(),
+                          key=lambda e: e.get("id") or "")
+    # re-apply statuses after stamps
+    for ent in man.get("items") or []:
+        if ent.get("id") in {h["id"] for h in held}:
+            ent["status"] = "not_ready"
+    save_manifest(man, root)
+    return held
 
 
 def status_summary(root: Path | None = None, now: datetime | None = None) -> dict:

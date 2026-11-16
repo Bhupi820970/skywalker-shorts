@@ -266,18 +266,12 @@ def list_source_siblings():
         seeds.append(item["fallback_asset"])
     for u in item.get("fallback_mp4") or []:
         seeds.append(u.rstrip("/").split("/")[-1])
-    tokens = set()
-    for s in seeds:
-        tokens |= _stem_tokens(s)
-    for part in str(item.get("id") or "").lower().split("-"):
-        if len(part) >= 4 and part.isalpha():
-            tokens.add(part)
     already = set(seeds)
     out = []
     for name in assets:
         if name in already or not str(name).lower().endswith(".mp4"):
             continue
-        if tokens & _stem_tokens(name):
+        if sourcing.source_matches_topic(item, name):
             out.append(
                 f"https://github.com/{repo}/releases/download/sources/{name}"
             )
@@ -301,7 +295,10 @@ def download_source(src, force_fallback=False, skip=None):
     used, ferr = download_fallback(src, skip=skip)
     errors.extend(ferr)
     if used and not _is_skipped(used, skip):
-        return used, errors
+        if sourcing.source_matches_topic(item, used):
+            return used, errors
+        errors.append(f"skip different-topic source: {used}")
+        skip = set(skip) | {used}
 
     siblings = list_source_siblings()
     allow_yt = os.environ.get("SKY_ALLOW_YOUTUBE", "1") != "0"
@@ -319,13 +316,17 @@ def download_source(src, force_fallback=False, skip=None):
     )
     errors.extend(serr)
     if used and not _is_skipped(used, skip):
-        return used, errors
+        if sourcing.source_matches_topic(item, used):
+            return used, errors
+        errors.append(f"skip different-topic source: {used}")
 
     # Optional last-resort: official/legal Pexels clip if a key is already in the env.
-    # Never required; never committed.
+    # Never required; never committed. Only if it can be tied to this topic.
     pex = _try_pexels(src)
-    if pex:
+    if pex and sourcing.source_matches_topic(item, pex):
         return pex, errors
+    if pex:
+        errors.append(f"skip different-topic source: {pex}")
     return None, errors
 
 
@@ -494,6 +495,111 @@ def _is_short_failure(reason, qa) -> bool:
     return any(k in blob for k in keys)
 
 
+
+def qc_verdict(gem_qc) -> str:
+    return gate.qc_verdict(gem_qc)
+
+
+def last_gemini_key() -> str | None:
+    return gemini.last_key_from_log(gemini._budget().get("log") or [])
+
+
+def run_gemini_qc(out, work) -> dict | None:
+    """Run Gemini QC, rotating to the next key when a reserved retry was requested."""
+    if not gemini.available():
+        return None
+    try:
+        return sky_ai.qc_judge(out, work, item.get("hook", ""), item.get("title", ""),
+                               item.get("description", ""))
+    except Exception as e:
+        print("gemini QC skipped:", e)
+        return None
+
+
+def scenes_picked(work: Path) -> list[dict]:
+    """Compact EDL + Gemini scores for the result json (used by demo reports)."""
+    out = []
+    try:
+        edl = json.loads((work / "edl.json").read_text())
+    except Exception:
+        return out
+    by_id = {}
+    sp = work / "scenes_scored.json"
+    if sp.exists():
+        try:
+            for s in json.loads(sp.read_text()) or []:
+                if isinstance(s, dict) and s.get("id") is not None:
+                    by_id[s["id"]] = s
+        except Exception:
+            pass
+    for shot in edl:
+        sid = shot.get("scene")
+        if sid in (None, "end"):
+            continue
+        s = by_id.get(sid) or {}
+        rec = {
+            "id": sid,
+            "src_start": shot.get("src_start"),
+            "dur": shot.get("visible") or shot.get("dur"),
+        }
+        if s.get("gemini") is not None:
+            rec["gemini_score"] = s.get("gemini")
+        if s.get("reason"):
+            rec["reason"] = s.get("reason")
+        elif s.get("gemini") is not None:
+            rec["reason"] = f"gemini score {s.get('gemini')}"
+        out.append(rec)
+    return out[:16]
+
+
+def _qc_only_retry(prev, auto_retries):
+    """Re-judge an already-rendered cut with the next Gemini key. No re-render."""
+    url = prev.get("asset_url")
+    if not url:
+        return None
+    print("=== QC-only retry (no re-render) ===", flush=True)
+    gemini.allow_qc_retry(after_key=gemini.last_key_from_log(prev.get("gemini_calls") or []))
+    dest = OUT / f"render-{iid}.mp4"
+    ok, info = download_url(url, dest)
+    if not ok or not dest.exists():
+        print(f"  QC retry: could not download previous render: {info}")
+        return None
+    work = OUT / f"work_{iid}_qc"
+    work.mkdir(parents=True, exist_ok=True)
+    gem_qc = run_gemini_qc(dest, work)
+    verdict = qc_verdict(gem_qc)
+    print(f"gemini QC (retry): {verdict}", json.dumps(gem_qc, ensure_ascii=False) if gem_qc else "")
+    extra = {k: prev.get(k) for k in (
+        "release_url", "asset_url", "qa", "drop_t", "energy", "source",
+        "music", "music_credit", "description_final", "gate", "no_publish",
+        "scenes_picked",
+    ) if prev.get(k) is not None}
+    attempts = list(prev.get("attempts") or [])
+    attempts.append({"attempt": "qc_retry", "ok": verdict == "pass",
+                     "error": None if verdict == "pass" else f"gemini QC {verdict}",
+                     "source": prev.get("source"), "music": prev.get("music")})
+    if verdict == "pass":
+        g = extra.get("gate") or {}
+        if isinstance(g, dict):
+            g = dict(g)
+            g["gemini_qc"] = gem_qc
+            g["ok"] = True
+            extra["gate"] = g
+        write("done", (prev.get("detail") or "rendered") + " (QC retry pass)",
+              auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
+              attempts=attempts, last_error=None, qc_status="pass", **extra)
+        return 0
+    if verdict == "fail":
+        write("failed", "gemini QC reject on retry: " + "; ".join(
+            (gem_qc or {}).get("reasons") or (gem_qc or {}).get("low") or ["?"])[:800],
+              auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
+              attempts=attempts, last_error="gemini QC reject", qc_rejected=True,
+              qc_status="fail", **extra)
+        return 1
+    # still skipped
+    return "skipped"
+
+
 def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_music=None, music_salt=""):
     src = OUT / f"{iid}_src.mp4"
     print(f"=== attempt {n}: force_fallback={force_fallback} relax={relax} alt_scenes={alt_scenes} ===", flush=True)
@@ -512,6 +618,12 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
                 return False, last
             return False, {"attempt": n, "ok": False, "error": "no unused official source left",
                            "source": used, "music": None}
+        if not sourcing.source_matches_topic(item, used):
+            print(f"  skip different-topic source: {used}", flush=True)
+            last = {"attempt": n, "ok": False,
+                    "error": "no unused official source left for this topic",
+                    "source": used, "music": None}
+            continue
         tried.append(used)
         src_i += 1
         print(f"  source {src_i}: {used}", flush=True)
@@ -548,29 +660,43 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
             GEMINI_META = meta
             print(f"hook/title from clip ({meta.get('source')}): {meta['hook']!r} | {meta['title']!r}")
         item["_avoid_openers"] = AVOID_OPENERS
-        gem_qc = None
-        if gemini.available() and gemini.budget_left() > 0:
-            try:
-                gem_qc = sky_ai.qc_judge(out, work, item.get("hook", ""), item.get("title", ""),
-                                         item.get("description", ""))
-            except Exception as e:
-                print("gemini QC skipped:", e)
+        gem_qc = run_gemini_qc(out, work)
+        verdict = qc_verdict(gem_qc)
+        if verdict == "skipped":
+            gemini.allow_qc_retry(after_key=last_gemini_key())
+            gem_qc = run_gemini_qc(out, work)
+            verdict = qc_verdict(gem_qc)
         if gem_qc is not None:
             print("gemini QC:", json.dumps(gem_qc, ensure_ascii=False))
-            if not gem_qc.get("pass"):
-                return False, {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
-                               "error": "gemini QC reject: " + "; ".join(gem_qc.get("reasons") or gem_qc.get("low") or ["?"])[:600]}
+        if verdict == "fail":
+            return False, {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
+                           "qc_status": "fail",
+                           "error": "gemini QC reject: " + "; ".join(gem_qc.get("reasons") or gem_qc.get("low") or ["?"])[:600]}
         try:
             final = OUT / f"render-{iid}.mp4"
             fw, fh, up = upscale(src, out, final)
+            if verdict == "skipped":
+                # Keep the cut for a later QC retry with the next key. Never mark pass/ready.
+                extra = publish(final, fw, fh, up, used, checks, credit, qa)
+                extra["gate"] = {"ok": False, "failures": ["gemini QC skipped (unavailable/budget)"],
+                                 "gemini_qc": "skipped (unavailable/budget)"}
+                extra["scenes_picked"] = scenes_picked(work)
+                extra["edit_mode"] = (qa or {}).get("edit_mode") or item.get("edit_mode")
+                extra.update({"attempt": n, "ok": False, "error": "gemini QC skipped",
+                              "qc_pending": True, "qc_status": "skipped",
+                              "source": used, "music": credit.get("file"), "qa": checks})
+                return False, extra
             g = gate.run_gate(final, qa_obj=qa, checks=checks, item=item, work=work, gemini_qc=gem_qc, out_res=OUT_RES)
             print("publish gate:", json.dumps(g, ensure_ascii=False, default=str))
             if not g["ok"]:
                 return False, {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
-                               "gate": g, "error": "publish gate failed: " + "; ".join(g["failures"])[:600]}
+                               "gate": g, "qc_status": verdict,
+                               "error": "publish gate failed: " + "; ".join(g["failures"])[:600]}
             extra = publish(final, fw, fh, up, used, checks, credit, qa)
             extra["gate"] = g
+            extra["scenes_picked"] = scenes_picked(work)
             extra["edit_mode"] = (qa or {}).get("edit_mode") or item.get("edit_mode")
+            extra["qc_status"] = "pass"
         except Exception as e:
             return False, {"attempt": n, "ok": False, "error": f"upscale/release failed: {e}",
                            "source": used, "music": credit.get("file"), "qa": checks}
@@ -592,6 +718,32 @@ def _budget_left_for(next_est_s: float) -> bool:
         print(f"::warning::time budget: {used/60:.1f} min used, next attempt ~{next_est_s/60:.1f} min "
               f"would pass the {JOB_BUDGET_S/60:.0f} min budget; skipping further attempts", flush=True)
     return ok
+
+
+RESULT_KEYS = (
+    "release_url", "asset_url", "qa", "drop_t", "energy", "source",
+    "music", "music_credit", "description_final", "gate", "no_publish",
+    "scenes_picked", "qc_status",
+)
+
+
+def _result_extra(info):
+    return {k: v for k, v in info.items() if k in RESULT_KEYS}
+
+
+def _record_attempt(attempts_log, info):
+    attempts_log.append({k: info.get(k) for k in ("attempt", "ok", "error", "source", "music", "qc_status")})
+
+
+def _write_qc_pending(info, attempts_log, auto_retries):
+    """Render exists but Gemini QC was skipped — never mark done/ready."""
+    write("retry_queued",
+          "gemini QC skipped; will retry QC with the next key (no re-render)",
+          auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
+          attempts=attempts_log, last_error="gemini QC skipped",
+          qc_pending=True, qc_status="skipped", **_result_extra(info))
+    print(f"::warning::{iid}: QC skipped; queued QC retry with next Gemini key")
+    return 0
 
 
 def main():
@@ -621,57 +773,79 @@ def main():
     global RECENT_MUSIC
     RECENT_MUSIC = recent
 
+    if prev.get("qc_pending") and prev.get("asset_url"):
+        rc = _qc_only_retry(prev, auto_retries)
+        if rc in (0, 1):
+            return rc
+        print("  QC-only retry still skipped; leaving item queued", flush=True)
+        if auto_retries < MAX_AUTO_RETRIES:
+            write("retry_queued", "gemini QC still skipped; will retry QC with the next key",
+                  auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
+                  attempts=list(prev.get("attempts") or []) + [{"attempt": "qc_retry", "ok": False,
+                                                                "error": "gemini QC skipped"}],
+                  last_error="gemini QC skipped", qc_pending=True, qc_status="skipped",
+                  **{k: prev[k] for k in RESULT_KEYS if k in prev})
+            return 0
+        write("failed", "gemini QC skipped after retries; not marking ready",
+              auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
+              attempts=prev.get("attempts") or [], last_error="gemini QC skipped",
+              qc_status="skipped", **{k: prev[k] for k in RESULT_KEYS if k in prev})
+        return 1
+
     attempts_log = []
     # Attempt 1: normal
     t_a = time.monotonic()
     ok, info = attempt(1, force_fallback=False)
     est = time.monotonic() - t_a
-    attempts_log.append({k: info.get(k) for k in ("attempt", "ok", "error", "source", "music")})
+    _record_attempt(attempts_log, info)
+    if info.get("qc_pending"):
+        return _write_qc_pending(info, attempts_log, auto_retries)
     if ok:
         write("done", info["detail"], auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
-              attempts=attempts_log, last_error=None, **{k: v for k, v in info.items()
-                if k in ("release_url", "asset_url", "qa", "drop_t", "energy", "source",
-                         "music", "music_credit", "description_final", "gate", "no_publish")})
+              attempts=attempts_log, last_error=None, **_result_extra(info))
         return 0
 
     # Attempt 2: sources-release fallback mp4
     if _qc_rejects(attempts_log) >= 2 or not _budget_left_for(est):
-        return _give_up(attempts_log, auto_retries)
+        return _give_up(attempts_log, auto_retries, last_info=info)
     t_a = time.monotonic()
     ok, info = attempt(2, force_fallback=True)
     est = max(est, time.monotonic() - t_a)
-    attempts_log.append({k: info.get(k) for k in ("attempt", "ok", "error", "source", "music")})
+    _record_attempt(attempts_log, info)
+    if info.get("qc_pending"):
+        return _write_qc_pending(info, attempts_log, auto_retries)
     if ok:
         write("done", info["detail"] + " (retry: sources fallback)", auto_retries=auto_retries,
               max_auto_retries=MAX_AUTO_RETRIES, attempts=attempts_log, last_error=None,
-              **{k: v for k, v in info.items()
-                 if k in ("release_url", "asset_url", "qa", "drop_t", "energy", "source",
-                          "music", "music_credit", "description_final", "gate", "no_publish")})
+              **_result_extra(info))
         return 0
 
     # Attempt 3: fallback + different music + alt scenes + relaxed non-hard thresholds
     if _qc_rejects(attempts_log) >= 2 or not _budget_left_for(est):
-        return _give_up(attempts_log, auto_retries)
+        return _give_up(attempts_log, auto_retries, last_info=info)
     excl = list(dict.fromkeys([m for m in prior_music + [attempts_log[0].get("music"), attempts_log[1].get("music")] if m]))
     ok, info = attempt(3, force_fallback=True, relax=True, alt_scenes=True,
                        exclude_music=excl, music_salt=f"retry3-{auto_retries}")
-    attempts_log.append({k: info.get(k) for k in ("attempt", "ok", "error", "source", "music")})
+    _record_attempt(attempts_log, info)
+    if info.get("qc_pending"):
+        return _write_qc_pending(info, attempts_log, auto_retries)
     if ok:
         write("done", info["detail"] + " (retry: alt music/scenes, non-hard relax)", auto_retries=auto_retries,
               max_auto_retries=MAX_AUTO_RETRIES, attempts=attempts_log, last_error=None,
-              **{k: v for k, v in info.items()
-                 if k in ("release_url", "asset_url", "qa", "drop_t", "energy", "source",
-                          "music", "music_credit", "description_final", "gate", "no_publish")})
+              **_result_extra(info))
         return 0
 
-    return _give_up(attempts_log, auto_retries)
+    return _give_up(attempts_log, auto_retries, last_info=info)
 
 
 def _qc_rejects(attempts_log) -> int:
     return sum(1 for a in attempts_log if "gemini QC reject" in str(a.get("error") or ""))
 
 
-def _give_up(attempts_log, auto_retries):
+def _give_up(attempts_log, auto_retries, last_info=None):
+    last_info = last_info or {}
+    if last_info.get("qc_pending"):
+        return _write_qc_pending(last_info, attempts_log, auto_retries)
     last = attempts_log[-1].get("error") or "unknown failure"
     # Gemini QC watched the final cut and rejected it twice: do not burn more renders; mark failed so
     # plan.py's backup rule renders a backup item for this slot (never a skipped slot).

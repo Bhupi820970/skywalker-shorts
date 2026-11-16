@@ -78,9 +78,62 @@ def budget_left() -> int:
     return max(0, mx - int(_budget().get("calls", 0)))
 
 
+def _key_env_from_label(label: str | None) -> str | None:
+    """Map a log label (key1, key2, ...) or env name to an env name."""
+    if not label:
+        return None
+    if label in KEY_ENVS:
+        return label
+    if label == "key1":
+        return "GEMINI_API_KEY"
+    if label.startswith("key") and label[3:].isdigit():
+        return f"GEMINI_API_KEY_{label[3:]}"
+    return None
+
+
+def start_after_key(label: str | None) -> None:
+    """On the next call, try the key after `label` first (rotation after a skip/429)."""
+    env = _key_env_from_label(label)
+    if not env:
+        return
+    names = [n for n, _ in _keys()]
+    if env not in names:
+        return
+    nxt = names[(names.index(env) + 1) % len(names)]
+    b = _budget()
+    b["good_key"] = nxt
+    b["start_after_key"] = env
+    _save_budget(b)
+
+
+def allow_qc_retry(after_key: str | None = None) -> None:
+    """Reserve one extra QC call and rotate to the next Gemini key."""
+    b = _budget()
+    b["qc_retry"] = int(b.get("qc_retry") or 0) + 1
+    _save_budget(b)
+    if after_key:
+        start_after_key(after_key)
+
+
+def last_key_from_log(log: list | None) -> str | None:
+    for ev in reversed(log or []):
+        if ev.get("key"):
+            return ev["key"]
+    return None
+
+
 def _ordered_keys() -> list[tuple[str, str]]:
     keys = _keys()
-    good = _budget().get("good_key")
+    b = _budget()
+    start_after = _key_env_from_label(b.get("start_after_key"))
+    if start_after and any(n == start_after for n, _ in keys):
+        names = [n for n, _ in keys]
+        i = names.index(start_after)
+        keys = keys[i + 1:] + keys[: i + 1]
+        b["start_after_key"] = None  # consume once
+        _save_budget(b)
+        return keys
+    good = b.get("good_key")
     if good and any(n == good for n, _ in keys):
         keys = [(n, k) for n, k in keys if n == good] + [(n, k) for n, k in keys if n != good]
     return keys
@@ -145,8 +198,13 @@ def generate_json(prompt: str, images: list | None = None, *, purpose: str = "",
     mx_calls = int(os.environ.get("GEMINI_MAX_CALLS", "5"))
     mx_http = int(os.environ.get("GEMINI_MAX_HTTP", "16"))
     if b.get("calls", 0) >= mx_calls:
-        print(f"  gemini[{purpose}]: budget exhausted ({mx_calls} calls); using heuristics")
-        return None
+        if purpose == "qc" and int(b.get("qc_retry") or 0) > 0:
+            b["qc_retry"] = int(b.get("qc_retry") or 0) - 1
+            _save_budget(b)
+            print(f"  gemini[qc]: reserved retry after budget; rotating key")
+        else:
+            print(f"  gemini[{purpose}]: budget exhausted ({mx_calls} calls); using heuristics")
+            return None
     parts = [{"text": prompt}] + [_img_part(p) for p in (images or []) if p and Path(p).exists()]
     body = json.dumps({
         "contents": [{"role": "user", "parts": parts}],

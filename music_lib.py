@@ -13,6 +13,45 @@ LIB_PILLAR_GENRE = {
     "funny": ("funk", "dance", "phonk"),
 }
 
+CURATED_MARKERS = ("phonk", "funk", "slowed", "drift", "brazilian", "reverb", "sped")
+_GENERIC_BEAT_NAMES = (
+    "hip-hop beat", "hip hop beat", "type beat", "phonk hip-hop beat", "phonk beat",
+)
+
+
+def is_generic_cc_beat(t: dict) -> bool:
+    """Jamendo / Creative Commons 'Phonk Hip-Hop Beat' instrumentals, not trending edit songs."""
+    title = (t.get("title") or "").lower()
+    credit = (t.get("credit") or "").lower()
+    license_ = (t.get("license") or "").lower()
+    sid = (t.get("source_id") or "").lower()
+    if "jamendo" in sid:
+        return True
+    if any(w in title for w in _GENERIC_BEAT_NAMES):
+        return True
+    cc = "creativecommons.org" in license_ or "creativecommons.org" in credit
+    if cc and "beat" in title and "phonk" in title:
+        return True
+    return False
+
+
+def is_curated_edit_song(t: dict) -> bool:
+    """Claim-safe trending phonk, drift phonk, slowed/sped-up edit songs."""
+    if is_generic_cc_beat(t):
+        return False
+    blob = " ".join([
+        t.get("genre") or "", t.get("mood") or "",
+        " ".join(t.get("tags") or []), t.get("title") or "",
+    ]).lower()
+    return any(w in blob for w in CURATED_MARKERS)
+
+
+def curated_tracks(tracks: list[dict]) -> list[dict]:
+    """Prefer the curated phonk/edit library; only if it is empty, allow the rest (incl. CC beats)."""
+    curated = [t for t in tracks if is_curated_edit_song(t)]
+    return curated if curated else list(tracks)
+
+
 
 def catalog(AE: Path, exclude: list[str] | None = None) -> list[dict]:
     """Compact library rows for a Gemini prompt (no paths, no licenses)."""
@@ -25,8 +64,9 @@ def catalog(AE: Path, exclude: list[str] | None = None) -> list[dict]:
         return []
     excl = {x for x in (exclude or []) if x}
     out = []
-    for t in lib.get("tracks") or []:
-        if not t.get("file") or t["file"] in excl:
+    pool = curated_tracks([t for t in (lib.get("tracks") or []) if t.get("file")])
+    for t in pool:
+        if t["file"] in excl:
             continue
         out.append({k: t.get(k) for k in (
             "file", "title", "artist", "genre", "mood", "bpm", "energy", "pillars",
@@ -55,10 +95,15 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
     except Exception:
         return None
     ldir = AE / (lib.get("dir") or "music/lib")
-    tracks = [t for t in lib.get("tracks") or [] if (ldir / t["file"]).exists()]
+    tracks = [t for t in lib.get("tracks") or [] if t.get("file") and (ldir / t["file"]).exists()]
     if not tracks:
         print("  music library: no mp3s present locally; falling back to credits.json")
         return None
+    curated = [t for t in tracks if is_curated_edit_song(t)]
+    if curated:
+        tracks = curated
+    else:
+        print("  music library: curated phonk/edit tracks missing; allowing generic CC fallback")
     p = (pillar or "movie").lower()
     market = (os.environ.get("SKY_MARKET") or "").upper()
     excl = {x for x in (exclude or []) if x}

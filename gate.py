@@ -44,6 +44,13 @@ def subtitle_cues(work: Path | None) -> int:
     return sum(1 for ln in p.read_text(encoding="utf-8", errors="ignore").splitlines() if ln.startswith("Dialogue:"))
 
 
+def qc_verdict(gem_qc) -> str:
+    """'pass' | 'fail' | 'skipped' — skipped includes errors and budget misses."""
+    if not isinstance(gem_qc, dict) or "pass" not in gem_qc:
+        return "skipped"
+    return "pass" if gem_qc.get("pass") else "fail"
+
+
 def run_gate(final: Path, *, qa_obj: dict, checks: dict, item: dict, work: Path | None,
              gemini_qc: dict | None, out_res: int = 2160) -> dict:
     fails, info = [], {}

@@ -124,6 +124,100 @@ def topic_key(item: dict) -> str:
     return w or iid.lower()
 
 
+# Tokens that must never be treated as a topic (the Vinland retry matched
+# bluelockisagi_scene1 only because both names share "scene1").
+_GENERIC_SOURCE_TOKENS = {
+    "scene", "scene1", "scene2", "scene3", "scene4", "scene5", "trailer", "teaser",
+    "official", "clip", "clips", "src", "video", "h264", "demo", "stock", "backup",
+    "test", "edit", "anime", "movie",
+}
+_ASSET_TOPIC_RE = re.compile(
+    r"^(?P<slug>.+?)(?:_(?:scene\d*|trailer|teaser|official|clip\d*|src))?(?:_h264)?(?:\.[a-z0-9]+)?$",
+    re.I,
+)
+
+
+def source_filename(url_or_name: str) -> str:
+    return (url_or_name or "").rstrip("/").split("/")[-1].split("?")[0]
+
+
+def source_topic_slug(url_or_name: str) -> str:
+    """Topic prefix of a sources-release asset, e.g. vinlandsagathorfinn_scene1_h264.mp4."""
+    name = source_filename(url_or_name).lower()
+    if not name:
+        return ""
+    m = _ASSET_TOPIC_RE.match(name)
+    slug = (m.group("slug") if m else name.rsplit(".", 1)[0]).lower()
+    slug = re.sub(r"[^a-z0-9]+", "", slug)
+    if slug in _GENERIC_SOURCE_TOKENS or len(slug) < 4:
+        return ""
+    return slug
+
+
+def item_topic_slugs(item: dict) -> set[str]:
+    """All slugs that identify this item's topic (never generic tokens like scene1)."""
+    slugs: set[str] = set()
+
+    def add(raw: str) -> None:
+        s = re.sub(r"[^a-z0-9]+", "", (raw or "").lower())
+        if len(s) >= 4 and s not in _GENERIC_SOURCE_TOKENS:
+            slugs.add(s)
+
+    add(source_topic_slug(item.get("fallback_asset") or ""))
+    for u in (item.get("fallback_mp4") or []) + (item.get("sources") or []) + (item.get("alt_source_urls") or []):
+        add(source_topic_slug(u))
+    st = item.get("stock_topic") or item.get("backup_item") or ""
+    if str(st).startswith("backup-"):
+        st = st[len("backup-"):]
+    add(st)
+    add(topic_key(item))
+    iid = (item.get("id") or "").lower()
+    parts = iid.split("-")
+    if len(parts) >= 3 and parts[0].isdigit():
+        add("-".join(parts[2:]))
+    elif iid.startswith("stock-"):
+        add(re.sub(r"-\d{2}$", "", iid[len("stock-"):]))
+    elif iid.startswith("demo-clips-"):
+        add(iid[len("demo-clips-"):])
+    elif iid.startswith("demo-"):
+        add(iid[len("demo-"):])
+    add(item.get("words") or "")
+    return slugs
+
+
+def source_matches_topic(item: dict, url_or_name: str) -> bool:
+    """True only when this file belongs to the same topic as the queue item."""
+    src = source_topic_slug(url_or_name)
+    if not src:
+        return False
+    specific: set[str] = set()
+    for u in [item.get("fallback_asset") or ""] + list(item.get("fallback_mp4") or []) + list(item.get("sources") or []):
+        s = source_topic_slug(u)
+        if s:
+            specific.add(s)
+    iid = (item.get("id") or "").lower()
+    if iid.startswith("demo-clips-"):
+        s = re.sub(r"[^a-z0-9]+", "", iid[len("demo-clips-"):])
+        if len(s) >= 4:
+            specific.add(s)
+    elif iid.startswith("stock-"):
+        s = re.sub(r"[^a-z0-9]+", "", re.sub(r"-\d{2}$", "", iid[len("stock-"):]))
+        if len(s) >= 4:
+            specific.add(s)
+    st = item.get("stock_topic") or item.get("backup_item") or ""
+    if str(st).startswith("backup-"):
+        s = re.sub(r"[^a-z0-9]+", "", st[len("backup-"):])
+        if len(s) >= 4:
+            specific.add(s)
+    slugs = specific or item_topic_slugs(item)
+    for s in slugs:
+        if src == s:
+            return True
+        if len(s) >= 5 and (src.startswith(s) or s.startswith(src)):
+            return True
+    return False
+
+
 def catalog_urls_for(item: dict) -> list[str]:
     """Known official URLs from config/source_catalog.json for this topic."""
     cat = load_catalog()
