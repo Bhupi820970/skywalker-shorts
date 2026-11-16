@@ -181,7 +181,9 @@
     }
   },
   "buffer_post_id": "6afa1be8daa378ad68905c6f",
-  "buffer_status": "scheduled",
+  "buffer_status": "sent",
   "buffer_due_at": "2026-11-16T01:00:00.000Z",
-  "buffer_created_at": "2026-11-16 02:24 IST"
+  "buffer_created_at": "2026-11-16 02:24 IST",
+  "youtube_url": "https://www.youtube.com/shorts/yIA2JnjZTYU",
+  "buffer_posted_at": "2026-11-16T01:00:09.951Z"
 }

@@ -4,7 +4,7 @@
   "detail": "rendered 2160x3840 (lanczos 640x360 source -> 2160x3840), QA ok",
   "at": "2026-11-15 11:58 IST",
   "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43684691723",
-  "slot": "2026-11-15T16:00:00+05:30",
+  "slot": "2026-11-16T10:00:00+05:30",
   "title": "She put her whole mind into a beaver in Pixar Hoppers #hoppers #pixar #animation",
   "hook": "Putting a human mind inside a beaver",
   "description": "Putting a human mind inside a beaver. A scientist transfers human consciousness into a robotic beaver to infiltrate and study the wild animal kingdom. From the official Hoppers trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=rzysdbZgkMg). All rights to the film/series belong to their owners; short commentary edit.\n#hoppers #pixar #animation #shorts #edit",
@@ -149,10 +149,12 @@
       "watched_video": true
     }
   },
-  "buffer_post_id": "6af968fe918fe79d2ece14d7",
-  "buffer_status": "error",
-  "buffer_due_at": "2026-11-15T10:30:00.000Z",
-  "buffer_created_at": "2026-11-15 13:40 IST",
+  "buffer_post_id": "6afa6cb4d7e5fee63896cf21",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-16T04:30:00.000Z",
+  "buffer_created_at": "2026-11-16 08:08 IST",
   "youtube_url": null,
-  "buffer_error": "You've hit the daily video upload limit for an unverified YouTube account. Verify your account and retry sharing your post."
+  "buffer_retry_count": 1,
+  "buffer_prev_post_id": "6af968fe918fe79d2ece14d7",
+  "slot_original": "2026-11-15T16:00:00+05:30"
 }
