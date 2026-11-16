@@ -33,8 +33,9 @@ JUNK = re.compile(r"(#shorts|\bedit\b|amv|status|whatsapp|4k\s*edit|compilation|
 
 def log(msg: str) -> None:
     line = f"{datetime.now(IST):%Y-%m-%d %H:%M:%S} IST clip_fetch: {msg}"
-    print(line, flush=True)
-    if LOG:
+    if not LOG:
+        print(line, flush=True)
+    else:
         with open(LOG, "a") as f:
             f.write(line + "\n")
 
