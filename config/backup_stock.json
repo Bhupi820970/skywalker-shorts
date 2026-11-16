@@ -73,6 +73,13 @@
       "result_id": "stock-alienromulus-08"
     },
     {
+      "id": "stock-alienromulus-09",
+      "topic_id": "backup-alienromulus",
+      "slug": "alienromulus",
+      "status": "pending",
+      "queued_at": "2026-11-16 15:46 IST"
+    },
+    {
       "id": "stock-avatarfireandash-01",
       "topic_id": "backup-avatarfireandash",
       "slug": "avatarfireandash",
@@ -793,6 +800,13 @@
       "status": "failed",
       "queued_at": "2026-11-16 06:29 IST",
       "result_id": "stock-tronares-03"
+    },
+    {
+      "id": "stock-tronares-04",
+      "topic_id": "backup-tronares",
+      "slug": "tronares",
+      "status": "pending",
+      "queued_at": "2026-11-16 15:46 IST"
     },
     {
       "id": "stock-twisters-01",
