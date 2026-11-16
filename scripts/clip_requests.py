@@ -70,10 +70,11 @@ DO NOT pick these (used in the last 7 days): {json.dumps(sorted(recent))[:2500]}
 Known official channels: {json.dumps(channels)[:1500]}
 
 Return JSON {{"requests": [...]}} with 14 items: about 5 anime, 4 hollywood, 3 bollywood, 2 south (Telugu/Tamil/Kannada).
-Pick trending or evergreen titles whose OFFICIAL distributor/studio channels post real SCENE CLIPS in HD (not just trailers).
+Pick trending or evergreen titles whose OFFICIAL distributor/studio channels post at least 3 real SCENE CLIPS in Full HD or 4K.
+NEVER pick trailer-only titles. NEVER ask for trailers, teasers, or TV spots, even as a fallback.
 Each item: {{"slug": short lowercase a-z0-9 id, "pillar": one of {list(PILLARS)}, "words": display title in caps,
 "characters": [main characters], "scene_types": subset of ["fight","romance","emotional","aura","comedy","entrance"],
-"search_queries": [3-5 YouTube search strings for official scene clips, e.g. "<title> <character> fight scene official clip"],
+"search_queries": [3-5 YouTube search strings for official scene clips only (no trailer/teaser words), e.g. "<title> <character> fight scene official clip"],
 "official_channels": [exact official channel names that upload these clips, e.g. Crunchyroll, Netflix, Movieclips, YRF, Sony Pictures Entertainment],
 "hook": 3-7 word English character-specific curiosity hook (like "Why Jinshi cannot stop watching her"),
 "title": "<hook> | <scene> | #edit", "tags": [6-8 lowercase tags], "market": "US/UK" or "IN"}}"""
@@ -95,7 +96,7 @@ Each item: {{"slug": short lowercase a-z0-9 id, "pillar": one of {list(PILLARS)}
         r["pillar"] = r.get("pillar") if r.get("pillar") in PILLARS else "hollywood"
         r["known_topic"] = slug in known
         out.append(r)
-    doc = {"generated_at": now.strftime("%Y-%m-%d %H:%M IST"), "max_clips_per_title": 3,
+    doc = {"generated_at": now.strftime("%Y-%m-%d %H:%M IST"), "max_clips_per_title": 4,
            "min_height": 1080, "requests": out}
     OUT.write_text(json.dumps(doc, indent=1, ensure_ascii=False) + "\n")
     print(f"clip_requests: {len(out)} -> " + ", ".join(f"{r['slug']}({r['pillar']})" for r in out))

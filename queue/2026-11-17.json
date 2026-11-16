@@ -23,10 +23,47 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "fallback_release": "sources",
-  "fallback_asset": "violentnight2_trailer_h264.mp4"
+  "fallback_asset": "violentnight2_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261117-0630-arcane2"
+ },
+ {
+  "id": "20261117-0630-arcane2",
+  "slot": "2026-11-17T06:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+  "template": "whitebar",
+  "hook": "Jinx never wanted this war",
+  "words": "ARCANE",
+  "title": "Jinx never wanted this war | Arcane | #edit",
+  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane2",
+  "tags": [
+   "arcane2",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "jinx"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "arcane2_scene1_h264.mp4"
  },
  {
   "id": "20261117-0900-fnaf2",
@@ -47,14 +84,51 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "content_kind": "trailer",
   "fallback_mp4": [
    "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/fnaf2_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "fnaf2_trailer_h264.mp4"
+  "fallback_asset": "fnaf2_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261117-0900-dandadanevil"
+ },
+ {
+  "id": "20261117-0900-dandadanevil",
+  "slot": "2026-11-17T09:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
+  "template": "whitebar",
+  "hook": "Evil Eye was a lonely kid",
+  "words": "DAN DA DAN",
+  "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+  "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+  "tags": [
+   "dandadanevil",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "okarun"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dandadanevil_scene1_h264.mp4"
  },
  {
   "id": "20261117-1130-gladiator2",
@@ -75,14 +149,51 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "content_kind": "trailer",
   "fallback_mp4": [
    "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gladiator2_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "gladiator2_trailer_h264.mp4"
+  "fallback_asset": "gladiator2_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261117-1130-frieren2"
+ },
+ {
+  "id": "20261117-1130-frieren2",
+  "slot": "2026-11-17T11:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=V-HHMISl0Cs",
+  "template": "whitebar",
+  "hook": "Frieren finally gets serious",
+  "words": "FRIEREN",
+  "title": "Frieren finally gets serious | Frieren | #edit",
+  "description": "Frieren finally gets serious. From official Frieren clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #frieren2",
+  "tags": [
+   "frieren2",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "frieren"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "frieren2_scene1_h264.mp4"
  },
  {
   "id": "20261117-1230-saiyaara",
@@ -107,10 +218,47 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "IN",
   "fallback_release": "sources",
-  "fallback_asset": "saiyaara_trailer_h264.mp4"
+  "fallback_asset": "saiyaara_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261117-1230-kaiju8"
+ },
+ {
+  "id": "20261117-1230-kaiju8",
+  "slot": "2026-11-17T12:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=0MBLk3Hyd_o",
+  "template": "whitebar",
+  "hook": "Kafka hides a monster inside",
+  "words": "KAIJU NO. 8",
+  "title": "Kafka hides a monster inside | Kaiju No. 8 | #edit",
+  "description": "Kafka hides a monster inside. From official Kaiju No. 8 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #kaiju8",
+  "tags": [
+   "kaiju8",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "kafka"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "kaiju8_scene1_h264.mp4"
  },
  {
   "id": "20261117-1600-missionimpossible",
@@ -131,14 +279,51 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "content_kind": "trailer",
   "fallback_mp4": [
    "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/missionimpossible_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "missionimpossible_trailer_h264.mp4"
+  "fallback_asset": "missionimpossible_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261117-1600-lazarus"
+ },
+ {
+  "id": "20261117-1600-lazarus",
+  "slot": "2026-11-17T16:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
+  "template": "whitebar",
+  "hook": "Axel has thirty days to run",
+  "words": "LAZARUS",
+  "title": "Axel has thirty days to run | Lazarus | #edit",
+  "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+  "tags": [
+   "lazarus",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "axel"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "lazarus_scene1_h264.mp4"
  },
  {
   "id": "20261117-1730-ebenezer",
@@ -164,10 +349,47 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "fallback_release": "sources",
-  "fallback_asset": "ebenezer_trailer_h264.mp4"
+  "fallback_asset": "ebenezer_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261117-1730-mononoke"
+ },
+ {
+  "id": "20261117-1730-mononoke",
+  "slot": "2026-11-17T17:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=xpJWvpumgxs",
+  "template": "whitebar",
+  "hook": "The Medicine Seller sees everything",
+  "words": "MONONOKE",
+  "title": "The Medicine Seller sees everything | Mononoke | #edit",
+  "description": "The Medicine Seller sees everything. From official Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mononoke",
+  "tags": [
+   "mononoke",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "medicineseller"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mononoke_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mononoke_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mononoke_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mononoke_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mononoke_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mononoke_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "mononoke_scene1_h264.mp4"
  },
  {
   "id": "20261117-2030-jurassicworldrebirth",
@@ -188,14 +410,51 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "content_kind": "trailer",
   "fallback_mp4": [
    "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jurassicworldrebirth_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "jurassicworldrebirth_trailer_h264.mp4"
+  "fallback_asset": "jurassicworldrebirth_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261117-2030-onepieceegghead"
+ },
+ {
+  "id": "20261117-2030-onepieceegghead",
+  "slot": "2026-11-17T20:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=G9bqtUiyxyQ",
+  "template": "whitebar",
+  "hook": "Luffy laughs while gods fall",
+  "words": "ONE PIECE",
+  "title": "Luffy laughs while gods fall | One Piece | #edit",
+  "description": "Luffy laughs while gods fall. From official One Piece clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #onepieceegghead",
+  "tags": [
+   "onepieceegghead",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "luffy"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepieceegghead_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepieceegghead_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepieceegghead_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepieceegghead_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepieceegghead_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepieceegghead_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "onepieceegghead_scene1_h264.mp4"
  },
  {
   "id": "20261117-2230-onepiece",
@@ -221,9 +480,46 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "fallback_release": "sources",
-  "fallback_asset": "onepiece_trailer_h264.mp4"
+  "fallback_asset": "onepiece_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261117-2230-shangrilafrontier"
+ },
+ {
+  "id": "20261117-2230-shangrilafrontier",
+  "slot": "2026-11-17T22:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=EyUe192A3KU",
+  "template": "whitebar",
+  "hook": "He plays the hardest game alive",
+  "words": "SHANGRI-LA FRONTIER",
+  "title": "He plays the hardest game alive | Shangri-La Frontier | #edit",
+  "description": "He plays the hardest game alive. From official Shangri-La Frontier clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #shangrilafrontier",
+  "tags": [
+   "shangrilafrontier",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "sunraku"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "shangrilafrontier_scene1_h264.mp4"
  }
 ]

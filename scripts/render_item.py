@@ -204,13 +204,15 @@ def download_fallback(src, skip=None):
     used = None
     skip = set(skip or [])
     for u in item.get("fallback_mp4", []) or []:
+        if sourcing.is_trailer_source(u):
+            continue
         if _is_skipped(u, skip) or _is_skipped(f"gh:{u}", skip):
             continue
         ok, info = download_url(u, src)
         if ok:
             return info, []
         errors.append(info)
-    if item.get("fallback_release") and item.get("fallback_asset"):
+    if item.get("fallback_release") and item.get("fallback_asset") and not sourcing.is_trailer_source(item.get("fallback_asset") or ""):
         tag, asset = item["fallback_release"], item["fallback_asset"]
         repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
         r = subprocess.run(["gh", "release", "download", tag, "-p", asset, "-R", repo, "-D", str(OUT), "--clobber"],
@@ -224,11 +226,14 @@ def download_fallback(src, skip=None):
     # last resort: sources release, guess asset from fallback_mp4 names or id
     repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
     guesses = []
-    if item.get("fallback_asset"):
+    if item.get("fallback_asset") and not sourcing.is_trailer_source(item.get("fallback_asset") or ""):
         guesses.append(item["fallback_asset"])
     for u in item.get("fallback_mp4") or []:
-        guesses.append(u.rstrip("/").split("/")[-1])
+        if not sourcing.is_trailer_source(u):
+            guesses.append(u.rstrip("/").split("/")[-1])
     for g in guesses:
+        if sourcing.is_trailer_source(g):
+            continue
         r = subprocess.run(["gh", "release", "download", "sources", "-p", g, "-R", repo, "-D", str(OUT), "--clobber"],
                            capture_output=True, text=True)
         cand = OUT / g
@@ -249,7 +254,7 @@ def _stem_tokens(name: str) -> set[str]:
 
 
 def list_source_siblings():
-    """Other official trailers/teasers already uploaded to the sources release."""
+    """Other official SCENE clips already uploaded to the sources release (never trailers)."""
     repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
     r = subprocess.run(
         ["gh", "release", "view", "sources", "-R", repo, "--json", "assets"],
@@ -271,63 +276,134 @@ def list_source_siblings():
     for name in assets:
         if name in already or not str(name).lower().endswith(".mp4"):
             continue
+        if sourcing.is_trailer_source(name):
+            continue
         if sourcing.source_matches_topic(item, name):
             out.append(
                 f"https://github.com/{repo}/releases/download/sources/{name}"
             )
-    # official scene clips before trailers (trailer edits look low quality)
     out.sort(key=lambda u: 0 if "_scene" in u.rsplit("/", 1)[-1] else 1)
     return out
 
 
-def download_source(src, force_fallback=False, skip=None):
-    """Long official fallback chain (sourcing.py): GitHub sources release ->
-    studio/press -> trailer/clip sites -> DM/Vimeo/Archive/Bilibili/... ->
-    Indian free clips -> YouTube last (cookies only if a download-only account
-    is provided via YTDLP_COOKIES_FILE). Also tries best-scene / official-clip
-    catalog URLs, not trailers alone.
+def _concat_scene_files(paths, dest):
+    """Join 2+ official scene clips of the same title into one source file."""
+    if not paths:
+        return False
+    dest.unlink(missing_ok=True)
+    if len(paths) == 1:
+        srcp = Path(paths[0])
+        if srcp.resolve() != dest.resolve():
+            dest.write_bytes(srcp.read_bytes())
+        return _ok_src(dest)
+    lst = dest.parent / f"{dest.stem}_concat.txt"
+    lst.write_text("".join(f"file '{Path(p).resolve()}'\n" for p in paths))
+    r = subprocess.run(
+        ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
+         "-c", "copy", "-movflags", "+faststart", str(dest)],
+        capture_output=True, text=True,
+    )
+    if r.returncode == 0 and _ok_src(dest):
+        return True
+    dest.unlink(missing_ok=True)
+    # Same size/fps so concat is valid; pad (never crop) to 1920x1080.
+    parts = []
+    for i, pth in enumerate(paths):
+        q = dest.parent / f"{dest.stem}_n{i}.mp4"
+        q.unlink(missing_ok=True)
+        rr = subprocess.run(
+            ["ffmpeg", "-y", "-i", str(pth),
+             "-vf", "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=30",
+             "-c:v", "libx264", "-preset", "veryfast", "-crf", "18",
+             "-c:a", "aac", "-ar", "44100", "-ac", "2", str(q)],
+            capture_output=True, text=True,
+        )
+        if rr.returncode == 0 and _ok_src(q):
+            parts.append(q)
+    if not parts:
+        return False
+    lst.write_text("".join(f"file '{Path(p).resolve()}'\n" for p in parts))
+    r = subprocess.run(
+        ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
+         "-c", "copy", "-movflags", "+faststart", str(dest)],
+        capture_output=True, text=True,
+    )
+    return r.returncode == 0 and _ok_src(dest)
+
+
+def download_scene_bundle(src, skip=None):
+    """Download up to 3 official scene clips of this topic and merge them.
+
+    Trailers are never downloaded. Topics with no scene clips fail.
     """
     errors = []
     skip = set(skip or [])
-    # Always try the in-repo fallback / sources-release ladder first when forced
-    # or when YouTube is known-blocked; sourcing.build_candidate_urls already
-    # ranks github release assets first.
-    used, ferr = download_fallback(src, skip=skip)
-    errors.extend(ferr)
-    if used and not _is_skipped(used, skip):
-        if sourcing.source_matches_topic(item, used):
-            return used, errors
-        errors.append(f"skip different-topic source: {used}")
-        skip = set(skip) | {used}
-
-    siblings = list_source_siblings()
+    urls = []
+    for u in list(item.get("fallback_mp4") or []) + list(item.get("sources") or []):
+        if u and not sourcing.is_trailer_source(u) and u not in urls:
+            urls.append(u)
+    for u in list_source_siblings():
+        if u not in urls and not sourcing.is_trailer_source(u):
+            urls.append(u)
     allow_yt = os.environ.get("SKY_ALLOW_YOUTUBE", "1") != "0"
+    for u in sourcing.build_candidate_urls(item, include_youtube=allow_yt):
+        if u and not sourcing.is_trailer_source(u) and u not in urls:
+            urls.append(u)
+    urls = [u for u in urls if not _is_skipped(u, skip) and not _is_skipped(f"gh:{u}", skip)]
+    paths, useds = [], []
+    for u in urls:
+        if len(paths) >= 3:
+            break
+        if not sourcing.source_matches_topic(item, u) and "youtube.com" not in u and "youtu.be" not in u:
+            # github/release assets must match this title; search URLs are checked after download
+            if "github.com" in (u or "") or (u or "").lower().endswith(".mp4"):
+                continue
+        part = src.parent / f"{src.stem}_p{len(paths)+1}.mp4"
+        part.unlink(missing_ok=True)
+        ok, info = (False, "")
+        is_direct = (
+            (u or "").lower().endswith(".mp4")
+            or ("github.com" in u and "/releases/download/" in u)
+            or "archive.org/download/" in u
+        )
+        if is_direct:
+            ok, info = download_url(u, part)
+        if not ok:
+            ok, info = sourcing.download_ytdlp(u, part, allow_youtube=allow_yt)
+        if not ok or not _ok_src(part):
+            errors.append(info or f"fail:{u}")
+            part.unlink(missing_ok=True)
+            continue
+        if not sourcing.source_matches_topic(item, info) and not sourcing.source_matches_topic(item, u):
+            # Keep non-asset page downloads (unique official clip, no foreign slug in the name).
+            if sourcing.source_topic_slug(info) or sourcing.source_topic_slug(u):
+                errors.append(f"skip different-topic source: {info}")
+                part.unlink(missing_ok=True)
+                continue
+        print(f"  scene clip {len(paths)+1}: {info}", flush=True)
+        paths.append(part)
+        useds.append(info)
+    if not paths:
+        return None, errors or ["no official scene clips for this topic"]
+    if not _concat_scene_files(paths, src):
+        return None, errors + ["failed to merge official scene clips"]
+    return useds[0], errors
 
-    def _log(u):
-        print(f"  try source: {u[:120]}", flush=True)
 
-    used, serr = sourcing.download_source(
-        item, src,
-        force_fallback=force_fallback,
-        skip=skip,
-        sibling_urls=siblings,
-        allow_youtube=allow_yt,
-        on_try=_log,
-    )
-    errors.extend(serr)
-    if used and not _is_skipped(used, skip):
-        if sourcing.source_matches_topic(item, used):
+def download_source(src, force_fallback=False, skip=None):
+    """Official scene clips only: GitHub sources release + catalog studio/clip
+    sites + DM/Vimeo/Archive/Bilibili. Merges up to 3 same-title scene clips.
+    Trailers/teasers are never used, even as a last fallback.
+    """
+    errors = []
+    skip = set(skip or [])
+    used, berr = download_scene_bundle(src, skip=skip)
+    errors.extend(berr)
+    if used and not _is_skipped(used, skip) and not sourcing.is_trailer_source(used):
+        if sourcing.source_matches_topic(item, used) or not sourcing.source_topic_slug(used):
             return used, errors
         errors.append(f"skip different-topic source: {used}")
-
-    # Optional last-resort: official/legal Pexels clip if a key is already in the env.
-    # Never required; never committed. Only if it can be tied to this topic.
-    pex = _try_pexels(src)
-    if pex and sourcing.source_matches_topic(item, pex):
-        return pex, errors
-    if pex:
-        errors.append(f"skip different-topic source: {pex}")
-    return None, errors
+    return None, errors or ["no official scene clips for this topic"]
 
 
 def _try_pexels(dest):
@@ -648,7 +724,7 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
             last = {"attempt": n, "ok": False, "error": reason, "source": used,
                     "music": credit.get("file"), "qa": checks}
             if _is_short_failure(reason, qa):
-                print(f"  source too short / under duration gate; trying next official trailer", flush=True)
+                print(f"  source too short / under duration gate; trying next official scene clip", flush=True)
                 continue
             return False, last
         hm = work / "hook_meta.json"

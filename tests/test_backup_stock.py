@@ -298,7 +298,7 @@ def test_plan_backup_for_missing_official_only_when_stock_empty(tmp_path, monkey
         items[iid] = {"id": iid, "slot": iso, "status": "queued"}
         qrows.append(items[iid])
     _write(tmp_path / "queue" / "2026-11-15.json", qrows)
-    pool = [{"id": "backup-twisters", "fallback_asset": "twisters_trailer_h264.mp4"}]
+    pool = [{"id": "backup-twisters", "fallback_asset": "twisters_scene1_h264.mp4"}]
     _write(tmp_path / "config" / "backup_pool.json", {"items": pool})
     _write(tmp_path / "config" / "backup_stock.json", {
         "target": 30, "refill_at": 5, "max_refill_per_run": 2, "items": []

@@ -15,6 +15,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 import hook_text  # noqa: E402
+import sourcing  # noqa: E402
 import perf  # noqa: E402
 import slot_times  # noqa: E402
 
@@ -58,10 +59,14 @@ def release_assets() -> set[str] | None:
 
 
 def topic_assets(topic: dict, have: set[str] | None) -> list[str]:
-    """Official scene clips first, trailer only as the last fallback; only assets that exist."""
-    names = list(topic.get("scene_assets") or [])
-    if topic.get("fallback_asset"):
-        names.append(topic["fallback_asset"])
+    """Official scene clips only (never trailers/teasers); only assets that exist."""
+    names: list[str] = []
+    for n in list(topic.get("scene_assets") or []):
+        if n and not sourcing.is_trailer_source(n) and n not in names:
+            names.append(n)
+    fa = topic.get("fallback_asset") or ""
+    if fa and not sourcing.is_trailer_source(fa) and "_scene" in fa.lower() and fa not in names:
+        names.append(fa)
     if have is None:
         return names
     return [n for n in names if n in have]
@@ -104,14 +109,11 @@ def _make_item(day: str, hhmm: str, topic: dict, have: set[str] | None = None) -
         "target_dur": max(24, min(29, int(topic.get("target_dur") or 26))),
         "status": "queued",
         "market": topic.get("market") or "US/UK",
-        "content_kind": topic.get("content_kind") or "trailer",
+        "content_kind": "best scene",
     }
-    if asset and "_scene" in asset and item["content_kind"] == "trailer":
-        item["content_kind"] = "best scene"
     if asset:
-        url = f"{GH}/{asset}"
         item["fallback_mp4"] = [f"{GH}/{a}" for a in assets]
-        item["sources"] = [url]
+        item["sources"] = [f"{GH}/{a}" for a in assets]
         item["fallback_release"] = "sources"
         item["fallback_asset"] = asset
     if topic.get("alt_source_urls"):
@@ -127,9 +129,10 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
         return 0
     added = 0
     # rotate catalog: prefer unused slugs, weighted by stats performance
-    if have is not None:
-        # never queue a topic whose official clip/trailer is not on the sources release yet
-        catalog = [t for t in catalog if topic_assets(t, have)] or catalog
+    # never queue a topic that has no official scene clips (trailers are not used)
+    catalog = [t for t in catalog if topic_assets(t, have)]
+    if not catalog:
+        return 0
     pool = [t for t in catalog if t["slug"] not in used]
     if not pool:
         pool = list(catalog)
@@ -146,9 +149,12 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
                 base = float(perf.topic_bonus(perf_data, t.get("tags"), t.get("pillar")))
             except Exception:
                 base = 0.0
-        # Real scene clips beat trailer-only topics (trailer edits look low quality).
-        if t.get("scene_assets"):
-            base += 2.0
+        # Prefer titles with 3+ official scene clips so the render can merge shots.
+        n_scenes = len(topic_assets(t, have))
+        if n_scenes >= 3:
+            base += 3.0
+        elif n_scenes:
+            base += 1.5
         # Exploration jitter so we do not lock onto one pillar forever.
         return base + rng.random() * 4.0
 

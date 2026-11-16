@@ -11,7 +11,11 @@ import glob, json, os, sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+_REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(_REPO))
+sys.path.insert(0, str(_REPO / 'scripts'))
 import backup_stock
+import sourcing
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -82,7 +86,7 @@ def select_slot_backups(items, result_fn, pool, used, now, ahead, busy, past_h=6
             continue
         if any(s == "retry_queued" for s in slot_status.values()):
             continue
-        cand = [b for b in pool if b["id"] not in used]
+        cand = [b for b in pool if b["id"] not in used and sourcing.item_has_scene_source(b)]
         if not cand:
             print(f"::warning::slot {slot_s} failed and the backup pool is empty", file=sys.stderr)
             continue
@@ -143,6 +147,9 @@ def main():
                 continue
             if r and r.get("status") == "retry_queued" and not retry_failed and not stale_retry(r):
                 continue  # auto-retry.yml handles these
+            if not sourcing.item_has_scene_source(it):
+                print(f"skip {i}: no official scene clips (trailers are not used)", file=sys.stderr)
+                continue
             try:
                 slot = datetime.fromisoformat(it["slot"])
             except Exception:

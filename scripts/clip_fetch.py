@@ -4,9 +4,10 @@
 Box:    python3 scripts/clip_fetch.py               (YouTube official channels + DM/Bilibili)
 GitHub: python3 scripts/clip_fetch.py --no-youtube  (DailyMotion / Bilibili only; YouTube blocks GitHub)
 
-Rules: official channels only, no fan reuploads/watermark farms, real scene clips first, trailers as
-fallback, >=1080p (up to 4K), bitrate gate, no re-encode, idempotent (done_ids + release asset check),
-retry with backoff, local files deleted after upload. Never prints secrets.
+Rules: official channels only, no fan reuploads/watermark farms, official SCENE clips only
+(never trailers/teasers, even as fallback), 3+ clips per title, >=1080p (up to 4K), bitrate gate,
+no re-encode, idempotent (done_ids + release asset check), retry with backoff, local files
+deleted after upload. Never prints secrets.
 """
 from __future__ import annotations
 import argparse, json, os, re, subprocess, sys, time
@@ -77,40 +78,40 @@ def is_official(entry: dict, chans: set[str]) -> bool:
 
 def search(req: dict, youtube: bool) -> list[dict]:
     words = req.get("words") or req["slug"]
-    scene_q = list(req.get("search_queries") or [])[:5] or [f"{words} {t} scene official clip" for t in (req.get("scene_types") or ["fight"])]
-    trailer_q = [f"{words} official trailer"]
-    prefixes = (["ytsearch8"] if youtube else []) + ["dmsearch5", "bilibilisearch3"]
+    scene_q = [q for q in (req.get("search_queries") or []) if q and not TRAILER.search(q)][:6]
+    if not scene_q:
+        scene_q = [f"{words} {t} scene official clip" for t in (req.get("scene_types") or ["fight", "emotional", "aura"])]
+    prefixes = (["ytsearch10"] if youtube else []) + ["dmsearch5", "bilibilisearch3"]
     chans = official_set(req)
     found, seen = [], set()
-    for kind, qs in (("scene", scene_q), ("trailer", trailer_q)):
-        for q in qs:
-            for p in prefixes:
-                r = run(["yt-dlp", "--flat-playlist", "-J", "--no-warnings", f"{p}:{q}"], timeout=90)
-                if r.returncode != 0:
+    for q in scene_q:
+        for pfx in prefixes:
+            r = run(["yt-dlp", "--flat-playlist", "-J", "--no-warnings", f"{pfx}:{q}"], timeout=90)
+            if r.returncode != 0:
+                continue
+            try:
+                entries = json.loads(r.stdout).get("entries") or []
+            except Exception:
+                continue
+            for e in entries:
+                vid, title = e.get("id"), e.get("title") or ""
+                dur = e.get("duration") or 0
+                if not vid or vid in seen:
                     continue
-                try:
-                    entries = json.loads(r.stdout).get("entries") or []
-                except Exception:
+                seen.add(vid)
+                if sourcing._BAD_TITLE.search(title) or sourcing._WATERMARK_HINT.search(title) or JUNK.search(title):
                     continue
-                for e in entries:
-                    vid, title = e.get("id"), e.get("title") or ""
-                    dur = e.get("duration") or 0
-                    if not vid or vid in seen:
-                        continue
-                    seen.add(vid)
-                    if sourcing._BAD_TITLE.search(title) or sourcing._WATERMARK_HINT.search(title) or JUNK.search(title):
-                        continue
-                    if dur and not (20 <= dur <= 900):
-                        continue
-                    if not is_official(e, chans):
-                        continue
-                    url = e.get("webpage_url") or e.get("url") or ""
-                    if p.startswith("yt") and not url.startswith("http"):
-                        url = f"https://www.youtube.com/watch?v={vid}"
-                    k = "trailer" if (kind == "trailer" or TRAILER.search(title)) else "scene"
-                    found.append({"id": f"{p[:2]}:{vid}", "url": url, "title": title, "kind": k,
-                                  "channel": e.get("channel") or e.get("uploader")})
-    found.sort(key=lambda c: c["kind"] == "trailer")  # real scenes first
+                if TRAILER.search(title) or sourcing.is_trailer_source(title):
+                    continue  # never download trailers/teasers
+                if dur and not (20 <= dur <= 900):
+                    continue
+                if not is_official(e, chans):
+                    continue
+                url = e.get("webpage_url") or e.get("url") or ""
+                if pfx.startswith("yt") and not url.startswith("http"):
+                    url = f"https://www.youtube.com/watch?v={vid}"
+                found.append({"id": f"{pfx[:2]}:{vid}", "url": url, "title": title, "kind": "scene",
+                              "channel": e.get("channel") or e.get("uploader")})
     return found
 
 
@@ -179,10 +180,11 @@ def apply_records(records: list[dict], who: str, requests_done: list[str]) -> No
                  "scene_assets": [], "content_kind": "best scene", "added_by": f"clip_fetch:{who}"}
             items.append(t)
             by[t["slug"]] = t
-        if rec["kind"] == "trailer":
-            t.setdefault("fallback_asset", rec["asset"])
-        elif rec["asset"] not in (t.get("scene_assets") or []):
+        if rec["kind"] == "trailer" or sourcing.is_trailer_source(rec.get("asset") or rec.get("title") or ""):
+            continue  # never index trailers
+        if rec["asset"] not in (t.get("scene_assets") or []):
             t.setdefault("scene_assets", []).append(rec["asset"])
+        t["content_kind"] = "best scene"
     CATALOG.write_text(json.dumps(cat, indent=2, ensure_ascii=False) + "\n")
     st = json.loads(STATUS.read_text()) if STATUS.exists() else {}
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -232,7 +234,8 @@ def main() -> int:
     reqs = doc.get("requests") or []
     if a.limit:
         reqs = reqs[: a.limit]
-    per = a.per_title or int(doc.get("max_clips_per_title") or 3)
+    per = a.per_title or int(doc.get("max_clips_per_title") or 4)
+    per = max(per, 3)  # always grab 3+ scene clips per title when they exist
     st = json.loads(STATUS.read_text()) if STATUS.exists() else {}
     done_ids = set(st.get("done_ids") or [])
     have = retry(release_assets, 3, 5) or set()
@@ -254,15 +257,12 @@ def main() -> int:
                 break
             if c["id"] in done_ids:
                 continue
-            if c["kind"] == "trailer" and (scenes or any(n.startswith((f"{slug}_trailer", f"{slug}_scene")) for n in have)):
-                continue  # trailer only as fallback
-            if c["kind"] == "trailer":
-                asset = f"{slug}_trailer_h264.mp4"
-            else:
-                n = 1
-                while f"{slug}_scene{n}_h264.mp4" in have:
-                    n += 1
-                asset = f"{slug}_scene{n}_h264.mp4"
+            if c["kind"] == "trailer" or TRAILER.search(c.get("title") or "") or sourcing.is_trailer_source(c.get("url") or ""):
+                continue  # never download trailers
+            n = 1
+            while f"{slug}_scene{n}_h264.mp4" in have:
+                n += 1
+            asset = f"{slug}_scene{n}_h264.mp4"
             dest = WORK / asset
             try:
                 ok = retry(lambda: download(c["url"], dest), 2, 15)

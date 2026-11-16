@@ -1,13 +1,11 @@
 """Official video source chain for Skywalker Shorts.
 
 YouTube often blocks GitHub runners ("Sign in to confirm you're not a bot").
-download_source builds a long fallback chain: studio/press kits -> trailer/clip
-sites -> official channels on other platforms -> Indian free clip sites ->
-YouTube via yt-dlp last. Only free official trailers and clips (720p+). No DRM
-breaking, no paid OTT rips, no third-party channel watermarks.
-
-Content is not trailer-only: best scenes (action, fight, romance, emotional)
-from official clip channels are first-class candidates.
+download_source builds a long fallback chain: studio/press kits -> official
+scene-clip sites -> official channels on other platforms -> Indian free clip
+sites -> YouTube via yt-dlp last. Only free official SCENE clips (720p+).
+No trailers or teasers, even as fallback. No DRM breaking, no paid OTT rips,
+no third-party channel watermarks.
 """
 from __future__ import annotations
 
@@ -59,10 +57,15 @@ INDIAN_HOSTS = (
 
 YOUTUBE_HOSTS = ("youtube.com", "youtu.be", "youtube-nocookie.com")
 
-# Content kinds the queue / catalog may request (not trailer-only).
+# Queue / catalog request kinds. Trailers/teasers are never sourced.
 CONTENT_KINDS = (
-    "trailer", "teaser", "official clip", "best scene", "action scene",
+    "official clip", "best scene", "action scene",
     "fight scene", "war scene", "romance scene", "love scene", "emotional scene",
+)
+
+_TRAILER_ASSET = re.compile(
+    r"(?:^|[._-])(trailer|teaser|tvspot|tv_spot|tv-spot|promo)(?:[._-]|$)",
+    re.I,
 )
 
 # Reject obvious fan edits / watermark farms in titles when searching.
@@ -139,6 +142,43 @@ _ASSET_TOPIC_RE = re.compile(
 
 def source_filename(url_or_name: str) -> str:
     return (url_or_name or "").rstrip("/").split("/")[-1].split("?")[0]
+
+
+def is_trailer_source(url_or_name: str) -> bool:
+    """True for trailer/teaser/promo assets or Apple Trailer URLs. Never use these."""
+    u = (url_or_name or "").strip()
+    if not u:
+        return False
+    if "trailers.apple.com" in u.lower():
+        return True
+    return bool(_TRAILER_ASSET.search(source_filename(u)))
+
+
+def scene_only(urls: list[str] | tuple[str, ...] | None) -> list[str]:
+    out: list[str] = []
+    for u in urls or []:
+        if u and not is_trailer_source(u) and u not in out:
+            out.append(u)
+    return out
+
+
+def item_scene_urls(item: dict) -> list[str]:
+    """Known official scene-clip URLs or asset names on a queue/catalog item."""
+    urls: list[str] = []
+    for u in list(item.get("fallback_mp4") or []) + list(item.get("sources") or []) + list(
+        item.get("alt_source_urls") or []
+    ) + list(item.get("scene_assets") or []):
+        if u and not is_trailer_source(u) and u not in urls:
+            urls.append(u)
+    fa = item.get("fallback_asset") or ""
+    if fa and not is_trailer_source(fa) and fa not in urls:
+        urls.append(fa)
+    return urls
+
+
+def item_has_scene_source(item: dict) -> bool:
+    """True when this item already has at least one official scene clip (not a trailer)."""
+    return bool(item_scene_urls(item))
 
 
 def source_topic_slug(url_or_name: str) -> str:
@@ -231,36 +271,24 @@ def catalog_urls_for(item: dict) -> list[str]:
                 row = topics[t]
                 break
     urls: list[str] = []
-    for field in ("studio_urls", "press_kit_urls", "trailer_urls", "clip_urls",
+    for field in ("studio_urls", "press_kit_urls", "clip_urls", "scene_urls",
                   "platform_urls", "indian_urls", "archive_urls", "youtube_urls",
                   "alt_source_urls", "urls"):
         for u in row.get(field) or []:
-            if u and u not in urls:
+            if u and u not in urls and not is_trailer_source(u):
                 urls.append(u)
-    # content-kind extras (best scenes etc.)
-    kind = (item.get("content_kind") or row.get("content_kind") or "trailer").lower()
-    for u in row.get("scene_urls") or []:
-        if u and u not in urls:
-            urls.append(u)
-    if kind not in ("trailer", "teaser") and row.get("prefer_scenes"):
-        # put scene clips ahead of trailers when the item asks for scenes
-        scenes = list(row.get("scene_urls") or [])
-        urls = [u for u in scenes if u] + [u for u in urls if u not in scenes]
-    return urls
+    return scene_only(urls)
 
 
 def search_queries(item: dict) -> list[str]:
     """yt-dlp search strings across platforms (official phrasing only)."""
     film = (item.get("words") or "").strip() or topic_key(item).replace("-", " ")
-    kind = (item.get("content_kind") or "trailer").lower()
+    kind = (item.get("content_kind") or "best scene").lower()
+    if kind in ("trailer", "teaser", ""):
+        kind = "best scene"
     pillar = (item.get("pillar") or "movie").lower()
     queries = []
-    if kind in ("trailer", "teaser", ""):
-        queries += [
-            f"{film} official trailer",
-            f"{film} official teaser",
-        ]
-    scene_kinds = [kind] if kind not in ("trailer", "teaser", "") else [
+    scene_kinds = [kind] if "scene" in kind or "clip" in kind else [
         "best scene", "action scene", "fight scene", "emotional scene",
     ]
     if pillar == "romance":
@@ -269,8 +297,8 @@ def search_queries(item: dict) -> list[str]:
         scene_kinds = ["best fight", "anime clip", "official clip"] + scene_kinds
     for sk in scene_kinds[:4]:
         queries.append(f"{film} {sk} official")
-    # platform-scoped searches (yt-dlp prefixes)
-    bases = [f"{film} official trailer", f"{film} official clip"]
+    # platform-scoped searches (yt-dlp prefixes) — never "trailer" / "teaser"
+    bases = [f"{film} official clip", f"{film} best scene official"]
     out = list(queries)
     for b in bases:
         out += [
@@ -307,10 +335,15 @@ def build_candidate_urls(item: dict, *, include_youtube: bool = True) -> list[st
     # 3) Catalog (studio -> clips -> platforms -> indian -> youtube)
     for u in catalog_urls_for(item):
         add(u)
-    # 4) Primary source_url (often YouTube) — kept but ranked last among hosts
-    add(item.get("source_url"))
+    # 4) Primary source_url only when it is not a trailer/teaser
+    su = item.get("source_url")
+    kind = (item.get("content_kind") or "").lower()
+    if su and not is_trailer_source(su) and kind not in ("trailer", "teaser"):
+        add(su)
 
     # Sort non-github by host rank, but keep github fallbacks first.
+    # Trailers are never candidates, even as a last fallback.
+    urls = scene_only(urls)
     gh, rest = [], []
     for u in urls:
         if "github.com" in u and "/releases/download/" in u:
@@ -440,6 +473,9 @@ def download_source(
 
     for u in candidates:
         if not u or skipped(u) or skipped(f"gh:{u}"):
+            continue
+        if is_trailer_source(u):
+            errors.append(f"skip trailer: {u}")
             continue
         if on_try:
             on_try(u)

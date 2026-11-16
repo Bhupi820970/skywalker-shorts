@@ -54,9 +54,9 @@ def test_failed_backup_picks_next_topic(tmp_path, monkeypatch):
         json.dumps({"status": "failed", "backup_item": "backup-zootopia2"})
     )
     pool = [
-        {"id": "backup-zootopia2"},
-        {"id": "backup-kalki2898ad"},
-        {"id": "backup-superman"},
+        {"id": "backup-zootopia2", "fallback_asset": "zootopia2_scene1_h264.mp4"},
+        {"id": "backup-kalki2898ad", "fallback_asset": "kalki2898ad_scene1_h264.mp4"},
+        {"id": "backup-superman", "fallback_asset": "superman_scene1_h264.mp4"},
     ]
     picks, used = plan.select_slot_backups(
         items, lambda i: results.get(i), pool, set(), now, ahead=6, busy=set()
@@ -77,7 +77,7 @@ def test_done_backup_does_not_pick_another(tmp_path, monkeypatch):
     (tmp_path / "results" / "20261113-1230-zootopia2.json").write_text(
         json.dumps({"status": "done", "backup_item": "backup-zootopia2"})
     )
-    pool = [{"id": "backup-zootopia2"}, {"id": "backup-kalki2898ad"}]
+    pool = [{"id": "backup-zootopia2", "fallback_asset": "zootopia2_scene1_h264.mp4"}, {"id": "backup-kalki2898ad", "fallback_asset": "kalki2898ad_scene1_h264.mp4"}]
     picks, used = plan.select_slot_backups(
         items, lambda i: results.get(i), pool, set(), now, ahead=6, busy=set()
     )

@@ -75,4 +75,4 @@ jobs:
           else
             LIMIT=6
           fi
-          python3 scripts/clip_fetch.py --no-youtube --limit "$LIMIT" --per-title 2 || true
+          python3 scripts/clip_fetch.py --no-youtube --limit "$LIMIT" --per-title 4 || true

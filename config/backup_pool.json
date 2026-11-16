@@ -2,686 +2,1710 @@
   "note": "Backup pool (>=20) for the 8-slot IST day. Every item should have a sources-release fallback_asset so a failed render can swap topics without downloading from YouTube. plan.py renders backup-<slug>@YYYYMMDD-HHMM when a slot fails. Aim for 2+ spare ready renders per day; health_check.py verifies the next 24h.",
   "items": [
     {
-      "id": "backup-zootopia2",
-      "pillar": "funny",
-      "source_url": "https://www.youtube.com/watch?v=5AwtptT8X8k",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/zootopia2_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Judy can't trust anyone",
-      "words": "ZOOTOPIA 2",
-      "title": "Judy can't trust anyone | Judy and Nick go undercover | #edit",
-      "description": "Judy can't trust anyone. Judy and Nick go undercover from the official Zootopia 2 trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=5AwtptT8X8k). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #zootopia2 #disney",
-      "tags": [
-        "zootopia2",
-        "disney",
-        "judyhopps",
-        "nickwilde",
-        "animation",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 32,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "zootopia2_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-kalki2898ad",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=kQDd1AhGIHk",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kalki2898ad_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Kalki's world is ending",
-      "words": "KALKI 2898 AD",
-      "title": "Kalki's world is ending | Prabhas faces Ashwatthama | #edit",
-      "description": "Kalki's world is ending. Prabhas faces Ashwatthama from the official Kalki 2898 AD trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=kQDd1AhGIHk). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #kalki2898ad #prabhas",
-      "tags": [
-        "kalki2898ad",
-        "prabhas",
-        "amitabhbachchan",
-        "deepikapadukone",
-        "scifi",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 32,
-      "market": "IN",
-      "fallback_release": "sources",
-      "fallback_asset": "kalki2898ad_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-superman",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Superman still saves everyone",
-      "words": "SUPERMAN",
-      "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
-      "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
-      "tags": [
-        "superman",
-        "dc",
-        "davidcorenswet",
-        "jamesgunn",
-        "superhero",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 32,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "superman_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-conjuringlastrites",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=168U5JgEeu8",
-      "template": "whitebar",
-      "hook": "There's something in the attic",
-      "words": "THE CONJURING LAST RITES",
-      "title": "There's something in the attic | Ed and Lorraine's last case | #edit",
-      "description": "There's something in the attic. Ed and Lorraine's last case from the official The Conjuring: Last Rites trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=168U5JgEeu8). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #theconjuring #lastrites",
-      "tags": [
-        "theconjuring",
-        "lastrites",
-        "edwarren",
-        "lorrainewarren",
-        "horror",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 32,
-      "market": "US/UK"
-    },
-    {
-      "id": "backup-fnaf2",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=dSDpoobO6yM",
-      "template": "whitebar",
-      "hook": "The animatronics came back",
-      "words": "FIVE NIGHTS AT FREDDY'S 2",
-      "title": "The animatronics came back | Freddy's opens its doors again | #edit",
-      "description": "The animatronics came back. Freddy's opens its doors again from the official Five Nights at Freddy's 2 trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=dSDpoobO6yM). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #fnaf2 #fivenightsatfreddys",
-      "tags": [
-        "fnaf2",
-        "fivenightsatfreddys",
-        "freddyfazbear",
-        "horror",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 32,
-      "market": "US/UK",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/fnaf2_trailer_h264.mp4"
-      ],
-      "fallback_release": "sources",
-      "fallback_asset": "fnaf2_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-jurassicworldrebirth",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=jan5CFWs9ic",
-      "template": "whitebar",
-      "hook": "The island is still hunting us",
-      "words": "JURASSIC WORLD REBIRTH",
-      "title": "The island is still hunting us | a new team enters the park | #edit",
-      "description": "The island is still hunting us. A new team enters the park from the official Jurassic World Rebirth trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=jan5CFWs9ic). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jurassicworld #jurassicworldrebirth",
-      "tags": [
-        "jurassicworld",
-        "jurassicworldrebirth",
-        "dinosaurs",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 32,
-      "market": "US/UK",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jurassicworldrebirth_trailer_h264.mp4"
-      ],
-      "fallback_release": "sources",
-      "fallback_asset": "jurassicworldrebirth_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-f1themovie",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=CT2_P2DZBR0",
-      "template": "whitebar",
-      "hook": "He came back to race again",
-      "words": "F1 THE MOVIE",
-      "title": "He came back to race again | Brad Pitt returns to the grid | #edit",
-      "description": "He came back to race again. Brad Pitt returns to the grid from the official F1 The Movie trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=CT2_P2DZBR0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #f1themovie #bradpitt",
-      "tags": [
-        "f1themovie",
-        "bradpitt",
-        "formula1",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 32,
-      "market": "US/UK"
-    },
-    {
-      "id": "backup-nobody2",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=-5X2pt95cIo",
-      "template": "whitebar",
-      "hook": "Hutch is done staying quiet",
-      "words": "NOBODY 2",
-      "title": "Hutch is done staying quiet | Bob Odenkirk fights back again | #edit",
-      "description": "Hutch is done staying quiet. Bob Odenkirk fights back again from the official Nobody 2 trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=-5X2pt95cIo). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #nobody2 #bobodenkirk",
-      "tags": [
-        "nobody2",
-        "bobodenkirk",
-        "action",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 32,
-      "market": "US/UK",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/nobody2_trailer_h264.mp4"
-      ],
-      "fallback_release": "sources",
-      "fallback_asset": "nobody2_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-missionimpossible",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=fsQgc9pCyDU",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/missionimpossible_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Ethan Hunt has one last mission",
-      "words": "FINAL RECKONING",
-      "title": "Ethan Hunt has one last mission | The Final Reckoning begins | #edit",
-      "description": "Ethan Hunt has one last mission. The Final Reckoning begins from the official Mission: Impossible trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #missionimpossible",
-      "tags": [
-        "missionimpossible",
-        "tomcruise",
-        "action",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "missionimpossible_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-gladiator2",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=JY7_-dzWK40",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gladiator2_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Rome wants blood again",
-      "words": "GLADIATOR II",
-      "title": "Rome wants blood again | Lucius enters the arena | #edit",
-      "description": "Rome wants blood again. Lucius enters the arena from the official Gladiator II trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #gladiator2",
-      "tags": [
-        "gladiator2",
-        "ridleyscott",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "gladiator2_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-venom3",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=__2bjWbetsA",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/venom3_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Venom's last dance starts now",
-      "words": "LAST DANCE",
-      "title": "Venom's last dance starts now | Eddie and Venom face Knull | #edit",
-      "description": "Venom's last dance starts now. From the official Venom: The Last Dance trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #venom",
-      "tags": [
-        "venom",
-        "tomhardy",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "venom3_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-deadpool3",
-      "pillar": "funny",
-      "source_url": "https://www.youtube.com/watch?v=73_1biulkYk",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/deadpool3_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Deadpool dragged Wolverine into this",
-      "words": "DEADPOOL",
-      "title": "Deadpool dragged Wolverine into this | the MCU's messiest team-up | #edit",
-      "description": "Deadpool dragged Wolverine into this. From the official Deadpool & Wolverine trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #deadpool",
-      "tags": [
-        "deadpool",
-        "wolverine",
-        "marvel",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "deadpool3_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-dune2",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=Way9Dexny3w",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Paul Atreides became something else",
-      "words": "DUNE PART TWO",
-      "title": "Paul Atreides became something else | the desert answers | #edit",
-      "description": "Paul Atreides became something else. From the official Dune: Part Two trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #dune",
-      "tags": [
-        "dune",
-        "duneparttwo",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "dune2_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-alienromulus",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=x0XDEhP4MQs",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Something woke up on the station",
-      "words": "ROMULUS",
-      "title": "Something woke up on the station | Alien: Romulus | #edit",
-      "description": "Something woke up on the station. From the official Alien: Romulus trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #alienromulus",
-      "tags": [
-        "alienromulus",
-        "horror",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "alienromulus_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-twisters",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=jufrkwWbAy0",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/twisters_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "The sky turned against them",
-      "words": "TWISTERS",
-      "title": "The sky turned against them | Twisters | #edit",
-      "description": "The sky turned against them. From the official Twisters trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #twisters",
-      "tags": [
-        "twisters",
-        "glenpowell",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "twisters_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-furiosa",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=XJ55q4YikzA",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/furiosa_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "She took the wasteland back",
-      "words": "FURIOSA",
-      "title": "She took the wasteland back | Furiosa | #edit",
-      "description": "She took the wasteland back. From the official Furiosa trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #furiosa",
-      "tags": [
-        "furiosa",
-        "madmax",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "furiosa_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-civilwar",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=aDyQxtg0V2w",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/civilwar_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "America split in front of their lens",
-      "words": "CIVIL WAR",
-      "title": "America split in front of their lens | Civil War | #edit",
-      "description": "America split in front of their lens. From the official Civil War trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #civilwar",
-      "tags": [
-        "civilwar",
-        "a24",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "civilwar_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-despicableme4",
-      "pillar": "funny",
-      "source_url": "https://www.youtube.com/watch?v=LtNYiHjd4Aw",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/despicableme4_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "The Minions broke everything again",
-      "words": "DESPICABLE ME",
-      "title": "The Minions broke everything again | Despicable Me | #edit",
-      "description": "The Minions broke everything again. From the official Despicable Me trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #despicableme",
-      "tags": [
-        "despicableme",
-        "minions",
-        "animation",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "despicableme4_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-predatorbadlands",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=43R9l7EkJwE",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/predatorbadlands_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "The hunter became prey",
-      "words": "BADLANDS",
-      "title": "The hunter became prey | A young Predator hunts alone | #edit",
-      "description": "The hunter became prey. From the official Predator: Badlands trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #predator",
-      "tags": [
-        "predator",
-        "predatorbadlands",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "predatorbadlands_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-runningman",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=KD18ddeFuyM",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/runningman_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "The whole nation is hunting him",
-      "words": "RUNNING MAN",
-      "title": "The whole nation is hunting him | The Running Man | #edit",
-      "description": "The whole nation is hunting him. From the official The Running Man trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #therunningman",
-      "tags": [
-        "therunningman",
-        "glenpowell",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "runningman_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-mortalkombat2",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=b24oG7qCwp4",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mortalkombat2_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Earth belongs to Shao Kahn",
-      "words": "MORTAL KOMBAT",
-      "title": "Earth belongs to Shao Kahn | Mortal Kombat II | #edit",
-      "description": "Earth belongs to Shao Kahn. From the official Mortal Kombat II trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #mortalkombat",
-      "tags": [
-        "mortalkombat",
-        "action",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "mortalkombat2_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-toystory5",
-      "pillar": "funny",
-      "source_url": "https://www.youtube.com/watch?v=-Ax3Zmd9S_o",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/toystory5_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Tech is replacing Bonnie's toys",
-      "words": "TOY STORY",
-      "title": "Tech is replacing Bonnie's toys | Toy Story 5 | #edit",
-      "description": "Tech is replacing Bonnie's toys. From the official Toy Story 5 trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #toystory5",
-      "tags": [
-        "toystory5",
-        "pixar",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "toystory5_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-sololeveling",
+      "id": "backup-apothecarydiaries2",
       "pillar": "anime",
-      "source_url": "https://www.youtube.com/watch?v=byJ7pxxhaDY",
+      "source_url": "https://www.youtube.com/watch?v=cWu6Q72jfuM",
       "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/sololeveling_trailer_h264.mp4"
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries2_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries2_scene3_h264.mp4"
       ],
       "template": "whitebar",
-      "hook": "Sung Jinwoo's power finally awoke",
-      "words": "SOLO LEVELING",
-      "title": "Sung Jinwoo's power finally awoke | Solo Leveling | #edit",
-      "description": "Sung Jinwoo's power finally awoke. From the official Solo Leveling trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #sololeveling",
+      "hook": "Why Jinshi only looks at her",
+      "words": "APOTHECARY DIARIES",
+      "title": "Why Jinshi only looks at her | The Apothecary Diaries | #edit",
+      "description": "Why Jinshi only looks at her. From official The Apothecary Diaries clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #apothecarydiaries2",
       "tags": [
-        "sololeveling",
+        "apothecarydiaries2",
         "anime",
+        "animeedit",
         "edit",
         "shorts",
-        "trending"
+        "trending",
+        "maomao",
+        "jinshi"
       ],
       "target_dur": 26,
       "market": "US/UK",
       "fallback_release": "sources",
-      "fallback_asset": "sololeveling_trailer_h264.mp4"
+      "fallback_asset": "apothecarydiaries2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "apothecarydiaries2_scene1_h264.mp4",
+        "apothecarydiaries2_scene2_h264.mp4",
+        "apothecarydiaries2_scene3_h264.mp4"
+      ]
     },
     {
-      "id": "backup-avatarfireandash",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=nb_fFj_0rq8",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/avatarfireandash_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Pandora is burning",
-      "words": "FIRE AND ASH",
-      "title": "Pandora is burning | The Ash People attack | #edit",
-      "description": "Pandora is burning. From the official Avatar: Fire and Ash trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #avatar",
-      "tags": [
-        "avatar",
-        "avatarfireandash",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "avatarfireandash_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-wickedforgood",
-      "pillar": "romance",
-      "source_url": "https://www.youtube.com/watch?v=R2Xubj7lazE",
-      "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wickedforgood_trailer_h264.mp4"
-      ],
-      "template": "whitebar",
-      "hook": "Elphaba had to let go",
-      "words": "WICKED: FOR GOOD",
-      "title": "Elphaba had to let go | Elphaba and Fiyero's last choice | #edit",
-      "description": "Elphaba had to let go. From the official Wicked: For Good trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #wicked",
-      "tags": [
-        "wicked",
-        "wickedforgood",
-        "edit",
-        "shorts",
-        "trending"
-      ],
-      "target_dur": 26,
-      "market": "US/UK",
-      "fallback_release": "sources",
-      "fallback_asset": "wickedforgood_trailer_h264.mp4"
-    },
-    {
-      "id": "backup-chainsawman",
+      "id": "backup-arcane2",
       "pillar": "anime",
-      "source_url": "https://www.youtube.com/watch?v=tAzAhDNdehs",
+      "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
       "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/chainsawman_trailer_h264.mp4"
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
       ],
       "template": "whitebar",
-      "hook": "Denji fell for Reze",
-      "words": "REZE ARC",
-      "title": "Denji fell for Reze | Denji meets Reze | #edit",
-      "description": "Denji fell for Reze. From the official Chainsaw Man Reze Arc trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #chainsawman",
+      "hook": "Jinx never wanted this war",
+      "words": "ARCANE",
+      "title": "Jinx never wanted this war | Arcane | #edit",
+      "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane2",
       "tags": [
-        "chainsawman",
+        "arcane2",
         "anime",
+        "animeedit",
         "edit",
         "shorts",
-        "trending"
+        "trending",
+        "jinx"
       ],
       "target_dur": 26,
       "market": "US/UK",
       "fallback_release": "sources",
-      "fallback_asset": "chainsawman_trailer_h264.mp4"
+      "fallback_asset": "arcane2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "arcane2_scene1_h264.mp4",
+        "arcane2_scene2_h264.mp4",
+        "arcane2_scene3_h264.mp4"
+      ]
     },
     {
-      "id": "backup-onepiece",
+      "id": "backup-bluelock2",
       "pillar": "anime",
-      "source_url": "https://www.youtube.com/watch?v=2QjJMT554Bc",
+      "source_url": "https://www.youtube.com/watch?v=ckEUVyKanhw",
       "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepiece_trailer_h264.mp4"
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene3_h264.mp4"
       ],
       "template": "whitebar",
-      "hook": "Egghead changes One Piece forever",
+      "hook": "Isagi sees the whole field",
+      "words": "BLUE LOCK",
+      "title": "Isagi sees the whole field | Blue Lock | #edit",
+      "description": "Isagi sees the whole field. From official Blue Lock clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bluelock2",
+      "tags": [
+        "bluelock2",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "isagi"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "bluelock2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "bluelock2_scene1_h264.mp4",
+        "bluelock2_scene2_h264.mp4",
+        "bluelock2_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-cyberpunkedgerunners",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "David wanted to be a legend",
+      "words": "EDGERUNNERS",
+      "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+      "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
+      "tags": [
+        "cyberpunkedgerunners",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "david"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "cyberpunkedgerunners_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "cyberpunkedgerunners_scene1_h264.mp4",
+        "cyberpunkedgerunners_scene2_h264.mp4",
+        "cyberpunkedgerunners_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-dandadan",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Okarun was never ready for this",
+      "words": "DAN DA DAN",
+      "title": "Okarun was never ready for this | Dandadan | #edit",
+      "description": "Okarun was never ready for this. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
+      "tags": [
+        "dandadan",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "okarun"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "dandadan_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "dandadan_scene1_h264.mp4",
+        "dandadan_scene2_h264.mp4",
+        "dandadan_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-dandadan2",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=_41-0Pj8IN8",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Momo never lets him go",
+      "words": "DAN DA DAN",
+      "title": "Momo never lets him go | Dandadan | #edit",
+      "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+      "tags": [
+        "dandadan2",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "momo"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "dandadan2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "dandadan2_scene1_h264.mp4",
+        "dandadan2_scene2_h264.mp4",
+        "dandadan2_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-dandadanevil",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Evil Eye was a lonely kid",
+      "words": "DAN DA DAN",
+      "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+      "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+      "tags": [
+        "dandadanevil",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "okarun"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "dandadanevil_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "dandadanevil_scene1_h264.mp4",
+        "dandadanevil_scene2_h264.mp4",
+        "dandadanevil_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-drstone",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=j8YijNavM7Y",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Senku rebuilt the world with science",
+      "words": "DR. STONE",
+      "title": "Senku rebuilt the world with science | Dr. Stone | #edit",
+      "description": "Senku rebuilt the world with science. From official Dr. Stone clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #drstone",
+      "tags": [
+        "drstone",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "senku"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "drstone_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "drstone_scene1_h264.mp4",
+        "drstone_scene2_h264.mp4",
+        "drstone_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-firforce3",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=ThozbbykMdY",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firforce3_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firforce3_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firforce3_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Shinra moves faster than fire",
+      "words": "FIRE FORCE",
+      "title": "Shinra moves faster than fire | Fire Force | #edit",
+      "description": "Shinra moves faster than fire. From official Fire Force clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #firforce3",
+      "tags": [
+        "firforce3",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "shinra"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "firforce3_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "firforce3_scene1_h264.mp4",
+        "firforce3_scene2_h264.mp4",
+        "firforce3_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-frieren",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=-uIpCTGDX44",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "She outlived everyone she loved",
+      "words": "FRIEREN",
+      "title": "She outlived everyone she loved | Frieren | #edit",
+      "description": "She outlived everyone she loved. From official Frieren clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #frieren",
+      "tags": [
+        "frieren",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "frieren"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "frieren_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "frieren_scene1_h264.mp4",
+        "frieren_scene2_h264.mp4",
+        "frieren_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-frieren2",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=V-HHMISl0Cs",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Frieren finally gets serious",
+      "words": "FRIEREN",
+      "title": "Frieren finally gets serious | Frieren | #edit",
+      "description": "Frieren finally gets serious. From official Frieren clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #frieren2",
+      "tags": [
+        "frieren2",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "frieren"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "frieren2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "frieren2_scene1_h264.mp4",
+        "frieren2_scene2_h264.mp4",
+        "frieren2_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-gachiakuta",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=3J0KJCJdWU4",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Rudo turned trash into weapons",
+      "words": "GACHIAKUTA",
+      "title": "Rudo turned trash into weapons | Gachiakuta | #edit",
+      "description": "Rudo turned trash into weapons. From official Gachiakuta clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #gachiakuta",
+      "tags": [
+        "gachiakuta",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "rudo"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "gachiakuta_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "gachiakuta_scene1_h264.mp4",
+        "gachiakuta_scene2_h264.mp4",
+        "gachiakuta_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-kaiju8",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=0MBLk3Hyd_o",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Kafka hides a monster inside",
+      "words": "KAIJU NO. 8",
+      "title": "Kafka hides a monster inside | Kaiju No. 8 | #edit",
+      "description": "Kafka hides a monster inside. From official Kaiju No. 8 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #kaiju8",
+      "tags": [
+        "kaiju8",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "kafka"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "kaiju8_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "kaiju8_scene1_h264.mp4",
+        "kaiju8_scene2_h264.mp4",
+        "kaiju8_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-kaiju8s2",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=gd2pP8LgWVo",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Kafka cannot control it anymore",
+      "words": "KAIJU NO. 8",
+      "title": "Kafka cannot control it anymore | Kaiju No. 8 | #edit",
+      "description": "Kafka cannot control it anymore. From official Kaiju No. 8 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #kaiju8s2",
+      "tags": [
+        "kaiju8s2",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "kafka"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "kaiju8s2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "kaiju8s2_scene1_h264.mp4",
+        "kaiju8s2_scene2_h264.mp4",
+        "kaiju8s2_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-lazarus",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Axel has thirty days to run",
+      "words": "LAZARUS",
+      "title": "Axel has thirty days to run | Lazarus | #edit",
+      "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+      "tags": [
+        "lazarus",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "axel"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "lazarus_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "lazarus_scene1_h264.mp4",
+        "lazarus_scene2_h264.mp4",
+        "lazarus_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-mashle",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mashle_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mashle_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mashle_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Mash breaks magic with muscles",
+      "words": "MASHLE",
+      "title": "Mash breaks magic with muscles | Mashle | #edit",
+      "description": "Mash breaks magic with muscles. From official Mashle clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mashle",
+      "tags": [
+        "mashle",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "mash"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "mashle_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "mashle_scene1_h264.mp4",
+        "mashle_scene2_h264.mp4",
+        "mashle_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-mhafinal",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=3BgfbZt2GXY",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhafinal_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhafinal_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhafinal_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Bakugo finally understood Deku",
+      "words": "MY HERO ACADEMIA",
+      "title": "Bakugo finally understood Deku | My Hero Academia | #edit",
+      "description": "Bakugo finally understood Deku. From official My Hero Academia clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mhafinal",
+      "tags": [
+        "mhafinal",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "deku"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "mhafinal_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "mhafinal_scene1_h264.mp4",
+        "mhafinal_scene2_h264.mp4",
+        "mhafinal_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-mononoke",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=xpJWvpumgxs",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mononoke_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mononoke_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mononoke_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "The Medicine Seller sees everything",
+      "words": "MONONOKE",
+      "title": "The Medicine Seller sees everything | Mononoke | #edit",
+      "description": "The Medicine Seller sees everything. From official Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mononoke",
+      "tags": [
+        "mononoke",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "medicineseller"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "mononoke_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "mononoke_scene1_h264.mp4",
+        "mononoke_scene2_h264.mp4",
+        "mononoke_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-mushokutensei2",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=Hp15zFNq1qY",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Rudeus finally grew up",
+      "words": "MUSHOKU TENSEI",
+      "title": "Rudeus finally grew up | Mushoku Tensei | #edit",
+      "description": "Rudeus finally grew up. From official Mushoku Tensei clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mushokutensei2",
+      "tags": [
+        "mushokutensei2",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "rudeus"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "mushokutensei2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "mushokutensei2_scene1_h264.mp4",
+        "mushokutensei2_scene2_h264.mp4",
+        "mushokutensei2_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-onepieceegghead",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=G9bqtUiyxyQ",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepieceegghead_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepieceegghead_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepieceegghead_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Luffy laughs while gods fall",
       "words": "ONE PIECE",
-      "title": "Egghead changes One Piece forever | Luffy on Egghead Island | #edit",
-      "description": "Egghead changes One Piece forever. From the official ONE PIECE Egghead Arc trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #onepiece",
+      "title": "Luffy laughs while gods fall | One Piece | #edit",
+      "description": "Luffy laughs while gods fall. From official One Piece clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #onepieceegghead",
       "tags": [
-        "onepiece",
+        "onepieceegghead",
         "anime",
+        "animeedit",
         "edit",
         "shorts",
-        "trending"
+        "trending",
+        "luffy"
       ],
       "target_dur": 26,
       "market": "US/UK",
       "fallback_release": "sources",
-      "fallback_asset": "onepiece_trailer_h264.mp4"
+      "fallback_asset": "onepieceegghead_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "onepieceegghead_scene1_h264.mp4",
+        "onepieceegghead_scene2_h264.mp4",
+        "onepieceegghead_scene3_h264.mp4"
+      ]
     },
     {
-      "id": "backup-tronares",
-      "pillar": "movie",
-      "source_url": "https://www.youtube.com/watch?v=YShVEXb7-ic",
+      "id": "backup-rezero3",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=TG-HGj5V5TM",
       "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/tronares_trailer_h264.mp4"
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene3_h264.mp4"
       ],
       "template": "whitebar",
-      "hook": "The Grid came for us",
-      "words": "TRON: ARES",
-      "title": "The Grid came for us | Ares enters the real world | #edit",
-      "description": "The Grid came for us. From the official Tron: Ares trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #tron",
+      "hook": "Subaru dies so they can live",
+      "words": "RE:ZERO",
+      "title": "Subaru dies so they can live | Re:Zero | #edit",
+      "description": "Subaru dies so they can live. From official Re:Zero clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #rezero3",
       "tags": [
-        "tron",
-        "tronares",
+        "rezero3",
+        "anime",
+        "animeedit",
         "edit",
         "shorts",
-        "trending"
+        "trending",
+        "subaru"
       ],
       "target_dur": 26,
       "market": "US/UK",
       "fallback_release": "sources",
-      "fallback_asset": "tronares_trailer_h264.mp4"
+      "fallback_asset": "rezero3_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "rezero3_scene1_h264.mp4",
+        "rezero3_scene2_h264.mp4",
+        "rezero3_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-sakamotodays",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=05EIB6kOu6Y",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/sakamotodays_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/sakamotodays_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/sakamotodays_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Retired assassin still hits hardest",
+      "words": "SAKAMOTO DAYS",
+      "title": "Retired assassin still hits hardest | Sakamoto Days | #edit",
+      "description": "Retired assassin still hits hardest. From official Sakamoto Days clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #sakamotodays",
+      "tags": [
+        "sakamotodays",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "sakamoto"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "sakamotodays_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "sakamotodays_scene1_h264.mp4",
+        "sakamotodays_scene2_h264.mp4",
+        "sakamotodays_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-shangrilafrontier",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=EyUe192A3KU",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "He plays the hardest game alive",
+      "words": "SHANGRI-LA FRONTIER",
+      "title": "He plays the hardest game alive | Shangri-La Frontier | #edit",
+      "description": "He plays the hardest game alive. From official Shangri-La Frontier clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #shangrilafrontier",
+      "tags": [
+        "shangrilafrontier",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "sunraku"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "shangrilafrontier_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "shangrilafrontier_scene1_h264.mp4",
+        "shangrilafrontier_scene2_h264.mp4",
+        "shangrilafrontier_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-sololeveling2",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=kIFY5rqD0pE",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/sololeveling2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/sololeveling2_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/sololeveling2_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Nobody expected the weakest hunter",
+      "words": "SOLO LEVELING",
+      "title": "Nobody expected the weakest hunter | Solo Leveling | #edit",
+      "description": "Nobody expected the weakest hunter. From official Solo Leveling clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #sololeveling2",
+      "tags": [
+        "sololeveling2",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "jinwoo",
+        "sungjinwoo"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "sololeveling2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "sololeveling2_scene1_h264.mp4",
+        "sololeveling2_scene2_h264.mp4",
+        "sololeveling2_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-spyxfamily3",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=hBgWzYapwi8",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamily3_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamily3_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamily3_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Anya knows every single secret",
+      "words": "SPY X FAMILY",
+      "title": "Anya knows every single secret | Spy x Family | #edit",
+      "description": "Anya knows every single secret. From official Spy x Family clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #spyxfamily3",
+      "tags": [
+        "spyxfamily3",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "anya",
+        "loid"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "spyxfamily3_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "spyxfamily3_scene1_h264.mp4",
+        "spyxfamily3_scene2_h264.mp4",
+        "spyxfamily3_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-spyxfamilycodewhite",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=TLpqTS1iKSM",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Loid almost blew his cover",
+      "words": "SPY X FAMILY",
+      "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
+      "description": "Loid almost blew his cover. From official Spy x Family Code White clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #spyxfamilycodewhite",
+      "tags": [
+        "spyxfamilycodewhite",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "anya"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "spyxfamilycodewhite_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "spyxfamilycodewhite_scene1_h264.mp4",
+        "spyxfamilycodewhite_scene2_h264.mp4",
+        "spyxfamilycodewhite_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-suzume",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "She keeps closing doors alone",
+      "words": "SUZUME",
+      "title": "She keeps closing doors alone | Suzume | #edit",
+      "description": "She keeps closing doors alone. From official Suzume clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #suzume",
+      "tags": [
+        "suzume",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "suzume"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "suzume_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "suzume_scene1_h264.mp4",
+        "suzume_scene2_h264.mp4",
+        "suzume_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-vinlandsaga2",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=l3zQNgXdmj0",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Thorfinn took every punch",
+      "words": "VINLAND SAGA",
+      "title": "Thorfinn took every punch | Vinland Saga | #edit",
+      "description": "Thorfinn took every punch. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #vinlandsaga2",
+      "tags": [
+        "vinlandsaga2",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "thorfinn"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "vinlandsaga2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "vinlandsaga2_scene1_h264.mp4",
+        "vinlandsaga2_scene2_h264.mp4",
+        "vinlandsaga2_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-windbreaker",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=AHx6LbgczvQ",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Sakura only fights for his town",
+      "words": "WIND BREAKER",
+      "title": "Sakura only fights for his town | Wind Breaker | #edit",
+      "description": "Sakura only fights for his town. From official Wind Breaker clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #windbreaker",
+      "tags": [
+        "windbreaker",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "sakura"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "windbreaker_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "windbreaker_scene1_h264.mp4",
+        "windbreaker_scene2_h264.mp4",
+        "windbreaker_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-witchhatatelier",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene2_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Coco drew her first spell",
+      "words": "WITCH HAT ATELIER",
+      "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
+      "description": "Coco drew her first spell. From official Witch Hat Atelier clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #witchhatatelier",
+      "tags": [
+        "witchhatatelier",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "coco"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "witchhatatelier_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "witchhatatelier_scene1_h264.mp4",
+        "witchhatatelier_scene2_h264.mp4",
+        "witchhatatelier_scene3_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-bluegiant",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=KaB7tTJ2T5o",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluegiant_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "His saxophone hits like thunder",
+      "words": "BLUE GIANT",
+      "title": "His saxophone hits like thunder | Blue Giant | #edit",
+      "description": "His saxophone hits like thunder. From official Blue Giant clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bluegiant",
+      "tags": [
+        "bluegiant",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "dai"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "bluegiant_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "bluegiant_scene1_h264.mp4",
+        "bluegiant_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-dbsuperhero",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=fAfLl6_0h7Y",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Gohan woke up the beast",
+      "words": "DRAGON BALL SUPER",
+      "title": "Gohan woke up the beast | Dragon Ball Super | #edit",
+      "description": "Gohan woke up the beast. From official Dragon Ball Super clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dbsuperhero",
+      "tags": [
+        "dbsuperhero",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "gohan"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "dbsuperhero_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "dbsuperhero_scene1_h264.mp4",
+        "dbsuperhero_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-dragonballdaima",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Goku got small, not weak",
+      "words": "DRAGON BALL DAIMA",
+      "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+      "description": "Goku got small, not weak. From official Dragon Ball Daima clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dragonballdaima",
+      "tags": [
+        "dragonballdaima",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "goku"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "dragonballdaima_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "dragonballdaima_scene1_h264.mp4",
+        "dragonballdaima_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-jjk0",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Yuta only fights for her",
+      "words": "JUJUTSU KAISEN 0",
+      "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
+      "description": "Yuta only fights for her. From official Jujutsu Kaisen 0 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jjk0",
+      "tags": [
+        "jjk0",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "yuta"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "jjk0_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "jjk0_scene1_h264.mp4",
+        "jjk0_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-jujutsukaisencullinggame",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Yuji has nothing left to lose",
+      "words": "JUJUTSU KAISEN",
+      "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+      "description": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame",
+      "tags": [
+        "jujutsukaisencullinggame",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "yuji"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "jujutsukaisencullinggame_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "jujutsukaisencullinggame_scene1_h264.mp4",
+        "jujutsukaisencullinggame_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-mhayourenext",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=9q0qUPC_qO4",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhayourenext_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhayourenext_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Deku refuses to stay down",
+      "words": "MY HERO ACADEMIA",
+      "title": "Deku refuses to stay down | My Hero Academia | #edit",
+      "description": "Deku refuses to stay down. From official My Hero Academia clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mhayourenext",
+      "tags": [
+        "mhayourenext",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "deku"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "mhayourenext_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "mhayourenext_scene1_h264.mp4",
+        "mhayourenext_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-oshinoko2",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=B6dq_yNQG4M",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/oshinoko2_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/oshinoko2_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Ruby cannot forgive him",
+      "words": "OSHI NO KO",
+      "title": "Ruby cannot forgive him | Aqua and Ruby | #edit",
+      "description": "Ruby cannot forgive him. From official Oshi no Ko clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #oshinoko",
+      "tags": [
+        "oshinoko",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "aqua",
+        "ruby"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "oshinoko2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "oshinoko2_scene1_h264.mp4",
+        "oshinoko2_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-princessmononoke",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "San would die for the forest",
+      "words": "PRINCESS MONONOKE",
+      "title": "San would die for the forest | Princess Mononoke | #edit",
+      "description": "San would die for the forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke",
+      "tags": [
+        "princessmononoke",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "ashitaka",
+        "san"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "princessmononoke_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "princessmononoke_scene1_h264.mp4",
+        "princessmononoke_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-spiritedaway",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spiritedaway_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spiritedaway_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Chihiro had to forget her name",
+      "words": "SPIRITED AWAY",
+      "title": "Chihiro had to forget her name | Spirited Away | #edit",
+      "description": "Chihiro had to forget her name. From official Spirited Away clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #spiritedaway",
+      "tags": [
+        "spiritedaway",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "chihiro"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "spiritedaway_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "spiritedaway_scene1_h264.mp4",
+        "spiritedaway_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-weatheringwithyou",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "He chose her over the sky",
+      "words": "WEATHERING WITH YOU",
+      "title": "He chose her over the sky | Weathering With You | #edit",
+      "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
+      "tags": [
+        "weatheringwithyou",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "hina",
+        "hodaka"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "weatheringwithyou_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "weatheringwithyou_scene1_h264.mp4",
+        "weatheringwithyou_scene2_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-aotfinal",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=g2fGSThhFl4",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/aotfinal_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Mikasa never stopped protecting him",
+      "words": "ATTACK ON TITAN",
+      "title": "Mikasa never stopped protecting him | Attack on Titan | #edit",
+      "description": "Mikasa never stopped protecting him. From official Attack on Titan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #aotfinal",
+      "tags": [
+        "aotfinal",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "eren"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "aotfinal_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "aotfinal_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-bleachtybw",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=4Gti6YqvMzE",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Ichigo was born for this war",
+      "words": "BLEACH",
+      "title": "Ichigo was born for this war | Bleach | #edit",
+      "description": "Ichigo was born for this war. From official Bleach clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bleachtybw",
+      "tags": [
+        "bleachtybw",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "ichigo"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "bleachtybw_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "bleachtybw_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-bluelockisagi",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=ckEUVyKanhw",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Isagi predicted Rin next move",
+      "words": "BLUE LOCK",
+      "title": "Why Isagi predicted Rin next move 💀 | Isagi Metavision | #edit",
+      "description": "Why Isagi predicted Rin next move. From official Blue Lock clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #bluelock #isagiyoichi #rinitoshi",
+      "tags": [
+        "bluelock",
+        "isagiyoichi",
+        "rinitoshi",
+        "bluelockedit",
+        "animeedit",
+        "anime",
+        "football"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "bluelockisagi_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "bluelockisagi_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-boyandheron",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "The heron knew his secret",
+      "words": "THE BOY AND THE HERON",
+      "title": "The heron knew his secret | The Boy and the Heron | #edit",
+      "description": "The heron knew his secret. From official The Boy and the Heron clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #boyandheron",
+      "tags": [
+        "boyandheron",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "mahito"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "boyandheron_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "boyandheron_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-firstslamdunk",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=84D05D2KMHk",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firstslamdunk_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "The shortest player wanted it most",
+      "words": "SLAM DUNK",
+      "title": "The shortest player wanted it most | The First Slam Dunk | #edit",
+      "description": "The shortest player wanted it most. From official The First Slam Dunk clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #firstslamdunk",
+      "tags": [
+        "firstslamdunk",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "ryota"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "firstslamdunk_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "firstslamdunk_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-haikyuudumpster",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "The rematch everyone waited for",
+      "words": "HAIKYU",
+      "title": "The rematch everyone waited for | Haikyu | #edit",
+      "description": "The rematch everyone waited for. From official Haikyu clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #haikyuudumpster",
+      "tags": [
+        "haikyuudumpster",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "hinata"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "haikyuudumpster_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "haikyuudumpster_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-hellsparadise",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=JKvNlvV6ZW4",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Gabimaru fights to go home",
+      "words": "HELL'S PARADISE",
+      "title": "Gabimaru fights to go home | Hell's Paradise | #edit",
+      "description": "Gabimaru fights to go home. From official Hell's Paradise clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #hellsparadise",
+      "tags": [
+        "hellsparadise",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "gabimaru"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "hellsparadise_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "hellsparadise_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-jjkgojovstoji",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Toji could not break Gojo",
+      "words": "JUJUTSU KAISEN",
+      "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
+      "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
+      "tags": [
+        "jujutsukaisen",
+        "gojosatoru",
+        "tojifushiguro",
+        "jjk",
+        "animeedit",
+        "anime",
+        "gojo"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "jjkgojovstoji_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "jjkgojovstoji_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-onepunchman3",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/onepunchman3_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Saitama ends fights in one hit",
+      "words": "ONE PUNCH MAN",
+      "title": "Saitama ends fights in one hit | One Punch Man | #edit",
+      "description": "Saitama ends fights in one hit. From official One Punch Man clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #onepunchman3",
+      "tags": [
+        "onepunchman3",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "saitama"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "onepunchman3_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "onepunchman3_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-undeadunluck",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/undeadunluck_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "One touch changed his life",
+      "words": "UNDEAD UNLUCK",
+      "title": "One touch changed his life | Undead Unluck | #edit",
+      "description": "One touch changed his life. From official Undead Unluck clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #undeadunluck",
+      "tags": [
+        "undeadunluck",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "andy"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "undeadunluck_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "undeadunluck_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-vinlandsagathorfinn",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=yWBA876qftM",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Thorfinn dropped his daggers forever",
+      "words": "VINLAND SAGA",
+      "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+      "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+      "tags": [
+        "vinlandsaga",
+        "thorfinn",
+        "askeladd",
+        "animeedit",
+        "vinland",
+        "anime",
+        "ihavenoenemies"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "vinlandsagathorfinn_scene1_h264.mp4"
+      ]
+    },
+    {
+      "id": "backup-yourname",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
+      "fallback_mp4": [
+        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "He forgot her name again",
+      "words": "YOUR NAME",
+      "title": "He forgot her name again | Your Name | #edit",
+      "description": "He forgot her name again. From official Your Name clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #yourname",
+      "tags": [
+        "yourname",
+        "anime",
+        "animeedit",
+        "edit",
+        "shorts",
+        "trending",
+        "taki"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "yourname_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "yourname_scene1_h264.mp4"
+      ]
     }
   ]
 }

@@ -23,10 +23,48 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "fallback_release": "sources",
-  "fallback_asset": "avatarfireandash_trailer_h264.mp4"
+  "fallback_asset": "avatarfireandash_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261118-0630-spyxfamily3"
+ },
+ {
+  "id": "20261118-0630-spyxfamily3",
+  "slot": "2026-11-18T06:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=hBgWzYapwi8",
+  "template": "whitebar",
+  "hook": "Anya knows every single secret",
+  "words": "SPY X FAMILY",
+  "title": "Anya knows every single secret | Spy x Family | #edit",
+  "description": "Anya knows every single secret. From official Spy x Family clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #spyxfamily3",
+  "tags": [
+   "spyxfamily3",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "anya",
+   "loid"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamily3_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamily3_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamily3_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamily3_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamily3_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamily3_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "spyxfamily3_scene1_h264.mp4"
  },
  {
   "id": "20261118-0900-venom3",
@@ -47,14 +85,51 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "content_kind": "trailer",
   "fallback_mp4": [
    "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/venom3_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "venom3_trailer_h264.mp4"
+  "fallback_asset": "venom3_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261118-0900-vinlandsaga2"
+ },
+ {
+  "id": "20261118-0900-vinlandsaga2",
+  "slot": "2026-11-18T09:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=l3zQNgXdmj0",
+  "template": "whitebar",
+  "hook": "Thorfinn took every punch",
+  "words": "VINLAND SAGA",
+  "title": "Thorfinn took every punch | Vinland Saga | #edit",
+  "description": "Thorfinn took every punch. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #vinlandsaga2",
+  "tags": [
+   "vinlandsaga2",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "thorfinn"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "vinlandsaga2_scene1_h264.mp4"
  },
  {
   "id": "20261118-1130-alienromulus",
@@ -75,14 +150,51 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "content_kind": "trailer",
   "fallback_mp4": [
    "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "alienromulus_trailer_h264.mp4"
+  "fallback_asset": "alienromulus_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261118-1130-witchhatatelier"
+ },
+ {
+  "id": "20261118-1130-witchhatatelier",
+  "slot": "2026-11-18T11:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
+  "template": "whitebar",
+  "hook": "Coco drew her first spell",
+  "words": "WITCH HAT ATELIER",
+  "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
+  "description": "Coco drew her first spell. From official Witch Hat Atelier clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #witchhatatelier",
+  "tags": [
+   "witchhatatelier",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "coco"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "witchhatatelier_scene1_h264.mp4"
  },
  {
   "id": "20261118-1230-dhurandhar",
@@ -108,10 +220,45 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "IN",
   "fallback_release": "sources",
-  "fallback_asset": "dhurandhar_trailer_h264.mp4"
+  "fallback_asset": "dhurandhar_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261118-1230-jjk0"
+ },
+ {
+  "id": "20261118-1230-jjk0",
+  "slot": "2026-11-18T12:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
+  "template": "whitebar",
+  "hook": "Yuta only fights for her",
+  "words": "JUJUTSU KAISEN 0",
+  "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
+  "description": "Yuta only fights for her. From official Jujutsu Kaisen 0 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jjk0",
+  "tags": [
+   "jjk0",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "yuta"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "jjk0_scene1_h264.mp4"
  },
  {
   "id": "20261118-1600-dune2",
@@ -132,14 +279,49 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "content_kind": "trailer",
   "fallback_mp4": [
    "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "dune2_trailer_h264.mp4"
+  "fallback_asset": "dune2_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261118-1600-mhayourenext"
+ },
+ {
+  "id": "20261118-1600-mhayourenext",
+  "slot": "2026-11-18T16:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=9q0qUPC_qO4",
+  "template": "whitebar",
+  "hook": "Deku refuses to stay down",
+  "words": "MY HERO ACADEMIA",
+  "title": "Deku refuses to stay down | My Hero Academia | #edit",
+  "description": "Deku refuses to stay down. From official My Hero Academia clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mhayourenext",
+  "tags": [
+   "mhayourenext",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "deku"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhayourenext_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhayourenext_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhayourenext_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhayourenext_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "mhayourenext_scene1_h264.mp4"
  },
  {
   "id": "20261118-1730-freakierfriday",
@@ -165,10 +347,46 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "fallback_release": "sources",
-  "fallback_asset": "freakierfriday_trailer_h264.mp4"
+  "fallback_asset": "freakierfriday_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261118-1730-princessmononoke"
+ },
+ {
+  "id": "20261118-1730-princessmononoke",
+  "slot": "2026-11-18T17:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
+  "template": "whitebar",
+  "hook": "San would die for the forest",
+  "words": "PRINCESS MONONOKE",
+  "title": "San would die for the forest | Princess Mononoke | #edit",
+  "description": "San would die for the forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke",
+  "tags": [
+   "princessmononoke",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "ashitaka",
+   "san"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "princessmononoke_scene1_h264.mp4"
  },
  {
   "id": "20261118-2030-deadpool3",
@@ -189,14 +407,47 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "content_kind": "trailer",
   "fallback_mp4": [
    "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/deadpool3_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "deadpool3_trailer_h264.mp4"
+  "fallback_asset": "deadpool3_trailer_h264.mp4",
+  "note": "replaced: trailers are no longer used; slot moved to 20261118-2030-bleachtybw"
+ },
+ {
+  "id": "20261118-2030-bleachtybw",
+  "slot": "2026-11-18T20:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=4Gti6YqvMzE",
+  "template": "whitebar",
+  "hook": "Ichigo was born for this war",
+  "words": "BLEACH",
+  "title": "Ichigo was born for this war | Bleach | #edit",
+  "description": "Ichigo was born for this war. From official Bleach clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bleachtybw",
+  "tags": [
+   "bleachtybw",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "ichigo"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "bleachtybw_scene1_h264.mp4"
  },
  {
   "id": "20261118-2230-jananayagan",
@@ -222,10 +473,43 @@
    "trending"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "IN",
   "fallback_release": "sources",
   "fallback_asset": "jananayagan_trailer_h264.mp4",
-  "dialogue_lang": "ta"
+  "dialogue_lang": "ta",
+  "note": "replaced: trailers are no longer used; slot moved to 20261118-2230-firstslamdunk"
+ },
+ {
+  "id": "20261118-2230-firstslamdunk",
+  "slot": "2026-11-18T22:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=84D05D2KMHk",
+  "template": "whitebar",
+  "hook": "The shortest player wanted it most",
+  "words": "SLAM DUNK",
+  "title": "The shortest player wanted it most | The First Slam Dunk | #edit",
+  "description": "The shortest player wanted it most. From official The First Slam Dunk clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #firstslamdunk",
+  "tags": [
+   "firstslamdunk",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "ryota"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firstslamdunk_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firstslamdunk_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "firstslamdunk_scene1_h264.mp4"
  }
 ]
