@@ -791,10 +791,13 @@
       "id": "stock-venom3-01",
       "topic_id": "backup-venom3",
       "slug": "venom3",
-      "status": "ready",
+      "status": "used",
       "queued_at": "2026-11-15 06:35 IST",
       "result_id": "stock-venom3-01",
-      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-venom3-01.mp4"
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-venom3-01.mp4",
+      "assigned_slot": "2026-11-16T16:00:00+05:30",
+      "assigned_result": "20261116-1600-venom3",
+      "used_at": "2026-11-16 11:54 IST"
     },
     {
       "id": "stock-wickedforgood-01",
