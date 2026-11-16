@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-16 11:18 IST",
-  "slots_checked": 10,
+  "at": "2026-11-16 11:53 IST",
+  "slots_checked": 11,
   "ready": [
     {
       "slot": "2026-11-16T11:30:00+05:30",
-      "id": "20261116-1130-twisters",
+      "id": "stock",
       "how": "backup_stock"
     },
     {
@@ -45,6 +45,11 @@
     {
       "slot": "2026-11-17T09:00:00+05:30",
       "id": "20261117-0900-fnaf2",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-17T11:30:00+05:30",
+      "id": "20261117-1130-gladiator2",
       "how": "queued+fallback"
     }
   ],
@@ -109,12 +114,10 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 16,
-  "stock_pending": 9,
+  "stock_pending": 11,
   "stock_used": 18,
   "stock_target": 30,
   "stock_need_refill": true,
-  "stock_assigned": [
-    "20261116-1130-twisters"
-  ],
+  "stock_assigned": [],
   "ok": false
 }
