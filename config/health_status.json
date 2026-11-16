@@ -1,12 +1,7 @@
 {
-  "at": "2026-11-16 19:17 IST",
-  "slots_checked": 12,
+  "at": "2026-11-16 19:51 IST",
+  "slots_checked": 11,
   "ready": [
-    {
-      "slot": "2026-11-16T17:30:00+05:30",
-      "id": "20261116-1730-wildhorsenine",
-      "how": "done"
-    },
     {
       "slot": "2026-11-16T18:30:00+05:30",
       "id": "stock",
@@ -14,7 +9,7 @@
     },
     {
       "slot": "2026-11-16T20:30:00+05:30",
-      "id": "backup-apothecarydiaries2",
+      "id": "backup-arcane2",
       "how": "backup_pool"
     },
     {
