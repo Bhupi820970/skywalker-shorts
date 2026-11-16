@@ -267,5 +267,110 @@
   "content_kind": "trailer",
   "edit_mode": "music_only",
   "note": "v2 dry-run after seamless-loop audio fix. Never posted."
+ },
+ {
+  "id": "demo-clips-jjkgojovstoji",
+  "slot": "2026-11-16T13:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
+  "template": "whitebar",
+  "hook": "Why Toji could not break Gojo",
+  "words": "JUJUTSU KAISEN",
+  "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
+  "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
+  "tags": [
+   "jujutsukaisen",
+   "gojosatoru",
+   "tojifushiguro",
+   "jjk",
+   "animeedit",
+   "anime",
+   "gojo"
+  ],
+  "target_dur": 26,
+  "status": "retired",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_trailer_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "jjkgojovstoji_scene1_h264.mp4",
+  "demo": true,
+  "no_publish": true,
+  "retired_reason": "Demo render of Gemini-chosen box clips (no_publish, test-renders only)"
+ },
+ {
+  "id": "demo-clips-vinlandsagathorfinn",
+  "slot": "2026-11-16T13:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=yWBA876qftM",
+  "template": "whitebar",
+  "hook": "Why Thorfinn dropped his daggers forever",
+  "words": "VINLAND SAGA",
+  "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+  "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+  "tags": [
+   "vinlandsaga",
+   "thorfinn",
+   "askeladd",
+   "animeedit",
+   "vinland",
+   "anime",
+   "ihavenoenemies"
+  ],
+  "target_dur": 26,
+  "status": "retired",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
+  "demo": true,
+  "no_publish": true,
+  "retired_reason": "Demo render of Gemini-chosen box clips (no_publish, test-renders only)"
+ },
+ {
+  "id": "demo-clips-mobpsycho100per",
+  "slot": "2026-11-16T13:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=VwwZU7YgC6A",
+  "template": "whitebar",
+  "hook": "Why Mob never used full power",
+  "words": "MOB PSYCHO 100",
+  "title": "Why Mob never used full power 💀 | Mob 100 Percent | #edit",
+  "description": "Why Mob never used full power. From official Mob Psycho 100 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #mobpsycho100 #shigeokageyama #reigen",
+  "tags": [
+   "mobpsycho100",
+   "shigeokageyama",
+   "reigen",
+   "mobpsycho",
+   "animeedit",
+   "anime"
+  ],
+  "target_dur": 26,
+  "status": "retired",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mobpsycho100per_trailer_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mobpsycho100per_trailer_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "mobpsycho100per_trailer_h264.mp4",
+  "demo": true,
+  "no_publish": true,
+  "retired_reason": "Demo render of Gemini-chosen box clips (no_publish, test-renders only)"
  }
 ]

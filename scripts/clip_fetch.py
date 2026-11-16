@@ -254,7 +254,7 @@ def main() -> int:
                 break
             if c["id"] in done_ids:
                 continue
-            if c["kind"] == "trailer" and (scenes or any(n.startswith(f"{slug}_trailer") for n in have)):
+            if c["kind"] == "trailer" and (scenes or any(n.startswith((f"{slug}_trailer", f"{slug}_scene")) for n in have)):
                 continue  # trailer only as fallback
             if c["kind"] == "trailer":
                 asset = f"{slug}_trailer_h264.mp4"
