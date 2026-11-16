@@ -238,7 +238,8 @@
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
       "status": "pending",
-      "queued_at": "2026-11-16 11:53 IST"
+      "queued_at": "2026-11-16 11:53 IST",
+      "result_id": "stock-civilwar-08"
     },
     {
       "id": "stock-deadpool3-01",
@@ -807,7 +808,8 @@
       "topic_id": "backup-venom3",
       "slug": "venom3",
       "status": "pending",
-      "queued_at": "2026-11-16 11:54 IST"
+      "queued_at": "2026-11-16 11:54 IST",
+      "result_id": "stock-venom3-02"
     },
     {
       "id": "stock-wickedforgood-01",
