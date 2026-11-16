@@ -168,5 +168,9 @@
       "low": [],
       "watched_video": true
     }
-  }
+  },
+  "stock_used": true,
+  "assigned_slot": "2026-11-17T13:30:00+05:30",
+  "assigned_result": "20261117-1330-wickedforgood",
+  "used_at": "2026-11-16 14:00 IST"
 }
