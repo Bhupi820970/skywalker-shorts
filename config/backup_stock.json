@@ -217,6 +217,13 @@
       "result_id": "stock-civilwar-06"
     },
     {
+      "id": "stock-civilwar-07",
+      "topic_id": "backup-civilwar",
+      "slug": "civilwar",
+      "status": "pending",
+      "queued_at": "2026-11-16 05:58 IST"
+    },
+    {
       "id": "stock-deadpool3-01",
       "topic_id": "backup-deadpool3",
       "slug": "deadpool3",
