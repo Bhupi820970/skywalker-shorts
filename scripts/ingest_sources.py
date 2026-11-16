@@ -117,22 +117,49 @@ def upload(files: list[Path]) -> bool:
     if r.returncode != 0:
         print("upload failed:", (r.stderr or "")[-400:])
         return False
+    if _ASSETS is not None:
+        _ASSETS.update(p.name for p in files)
     return True
 
 
+_ASSETS: set[str] | None = None
+
+
 def release_has(asset: str) -> bool:
-    repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
-    r = subprocess.run(
-        ["gh", "release", "view", "sources", "-R", repo, "--json", "assets"],
-        capture_output=True, text=True,
-    )
-    if r.returncode != 0:
-        return False
-    try:
-        names = {a.get("name") for a in json.loads(r.stdout).get("assets") or []}
-    except Exception:
-        return False
-    return asset in names
+    global _ASSETS
+    if _ASSETS is None:
+        repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+        r = subprocess.run(
+            ["gh", "release", "view", "sources", "-R", repo, "--json", "assets", "-q", ".assets[].name"],
+            capture_output=True, text=True,
+        )
+        if r.returncode != 0:
+            return False
+        _ASSETS = set(r.stdout.split())
+    return asset in _ASSETS
+
+
+def ingest_scenes(slug: str) -> list[dict]:
+    """Official scene clips ({slug}_sceneN_h264.mp4) rank above trailers in renders."""
+    row = (sourcing.load_catalog().get("topics") or {}).get(slug) or {}
+    out = []
+    for i, url in enumerate(row.get("scene_urls") or [], 1):
+        asset = f"{slug}_scene{i}_h264.mp4"
+        if release_has(asset):
+            out.append({"slug": slug, "asset": asset, "ok": True, "via": "already-on-release"})
+            continue
+        dest = OUT / asset
+        item = {"id": f"ingest-{slug}-s{i}", "words": slug.upper(), "source_url": url,
+                "alt_source_urls": [url], "content_kind": "best scene"}
+        used, errs = sourcing.download_source(item, dest, allow_youtube=True)
+        ok = bool(used) and dest.exists() and dest.stat().st_size > 500_000
+        if ok:
+            tmp = OUT / f"_enc_{asset}"
+            if to_h264(dest, tmp):
+                tmp.replace(dest)
+            ok = upload([dest])
+        out.append({"slug": slug, "asset": asset, "ok": ok, "via": used, "errors": errs[-3:] if not ok else []})
+    return out
 
 
 def ingest_topic(slug: str) -> dict:
@@ -191,9 +218,14 @@ def main() -> int:
     if not topics:
         # gaps: catalog topics without a sources asset
         cat = sourcing.load_catalog().get("topics") or {}
-        topics = [s for s in cat if not release_has(f"{s}_trailer_h264.mp4")]
+        topics = [s for s, row in cat.items()
+                  if not release_has(f"{s}_trailer_h264.mp4")
+                  or any(not release_has(f"{s}_scene{i}_h264.mp4") for i in range(1, len(row.get("scene_urls") or []) + 1))]
     print("topics:", topics)
-    rows = [ingest_topic(t) for t in topics]
+    rows = []
+    for t in topics:
+        rows.extend(ingest_scenes(t))
+        rows.append(ingest_topic(t))
     summary = REPO / "out" / "source_ingest_summary.json"
     summary.write_text(json.dumps({"results": rows}, indent=2) + "\n")
     print(json.dumps(rows, indent=2)[:2000])

@@ -11,29 +11,85 @@
     "{film} official teaser"
   ],
   "official_channels": {
-    "marvel": ["Marvel Entertainment", "Marvel UK"],
-    "disney": ["Walt Disney Studios", "Pixar", "Disney+"],
-    "warner": ["Warner Bros. Pictures", "DC"],
-    "sony": ["Sony Pictures Entertainment"],
-    "universal": ["Universal Pictures", "Focus Features"],
-    "paramount": ["Paramount Pictures"],
-    "lionsgate": ["Lionsgate Movies"],
-    "a24": ["A24"],
-    "netflix": ["Netflix", "Netflix Anime", "Netflix India"],
-    "prime": ["Prime Video"],
-    "apple": ["Apple TV"],
-    "crunchyroll": ["Crunchyroll"],
-    "toho": ["TOHO"],
-    "tseries": ["T-Series", "T-Series Tamil", "T-Series Telugu"],
-    "yrf": ["YRF"],
-    "dharma": ["Dharma Productions"],
-    "hombale": ["Hombale Films"],
-    "mythri": ["Mythri Movie Makers"],
-    "sun": ["Sun Pictures"],
-    "lyca": ["Lyca Productions"],
-    "geetha": ["Geetha Arts"],
-    "movieclips": ["Movieclips", "Fandango Movieclips"],
-    "imdb": ["IMDb"]
+    "marvel": [
+      "Marvel Entertainment",
+      "Marvel UK"
+    ],
+    "disney": [
+      "Walt Disney Studios",
+      "Pixar",
+      "Disney+"
+    ],
+    "warner": [
+      "Warner Bros. Pictures",
+      "DC"
+    ],
+    "sony": [
+      "Sony Pictures Entertainment"
+    ],
+    "universal": [
+      "Universal Pictures",
+      "Focus Features"
+    ],
+    "paramount": [
+      "Paramount Pictures"
+    ],
+    "lionsgate": [
+      "Lionsgate Movies"
+    ],
+    "a24": [
+      "A24"
+    ],
+    "netflix": [
+      "Netflix",
+      "Netflix Anime",
+      "Netflix India"
+    ],
+    "prime": [
+      "Prime Video"
+    ],
+    "apple": [
+      "Apple TV"
+    ],
+    "crunchyroll": [
+      "Crunchyroll"
+    ],
+    "toho": [
+      "TOHO"
+    ],
+    "tseries": [
+      "T-Series",
+      "T-Series Tamil",
+      "T-Series Telugu"
+    ],
+    "yrf": [
+      "YRF"
+    ],
+    "dharma": [
+      "Dharma Productions"
+    ],
+    "hombale": [
+      "Hombale Films"
+    ],
+    "mythri": [
+      "Mythri Movie Makers"
+    ],
+    "sun": [
+      "Sun Pictures"
+    ],
+    "lyca": [
+      "Lyca Productions"
+    ],
+    "geetha": [
+      "Geetha Arts"
+    ],
+    "movieclips": [
+      "Movieclips",
+      "Fandango Movieclips"
+    ],
+    "imdb": [
+      "IMDb"
+    ]
   },
   "topics": {
     "runningman": {
@@ -144,6 +200,908 @@
         "https://www.youtube.com/watch?v=byJ7pxxhaDY"
       ],
       "scene_urls": []
+    },
+    "sololeveling2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=byJ7pxxhaDY",
+        "https://www.youtube.com/watch?v=VEa-32eURrc",
+        "https://www.youtube.com/watch?v=Mgk5_MXodvY"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=kIFY5rqD0pE",
+        "https://www.youtube.com/watch?v=7Wbwr--JiT0",
+        "https://www.youtube.com/watch?v=MoVYF42TB2Q"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll India"
+      ]
+    },
+    "demonslayerinfinitycastle": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=x7uLutVRBfI",
+        "https://www.youtube.com/watch?v=wyiZWYMilgk",
+        "https://www.youtube.com/watch?v=tuNkXA2kdVI"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "Crunchyroll",
+        "Netflix Anime",
+        "Sony Pictures Entertainment"
+      ]
+    },
+    "demonslayerhashira": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=rq1tllAUS1I",
+        "https://www.youtube.com/watch?v=PraFso1sVIc",
+        "https://www.youtube.com/watch?v=7w5Vfjozzb8"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "Aniplex USA",
+        "Crunchyroll"
+      ]
+    },
+    "jujutsukaisen": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=Pm-wNmS9RGI",
+        "https://www.youtube.com/watch?v=9OhV3IWUsxE",
+        "https://www.youtube.com/watch?v=pkKu9hLT-t8"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "Crunchyroll",
+        "Netflix Anime"
+      ]
+    },
+    "jujutsukaisencullinggame": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=MPfZhgLiK6w",
+        "https://www.youtube.com/watch?v=HGCsAcFzaFw",
+        "https://www.youtube.com/watch?v=OogqtP3BvJY"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=w1YzClnTZ8c",
+        "https://www.youtube.com/watch?v=hw8IHAB4XNg"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Netflix Anime",
+        "TOHO animation チャンネル and 2 more"
+      ]
+    },
+    "jjk0": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=2docezZl574",
+        "https://www.youtube.com/watch?v=8QkHWlrHqlE",
+        "https://www.youtube.com/watch?v=Yl_f0sYMaGk"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
+        "https://www.youtube.com/watch?v=ealC2TsX6es"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll Store Australia",
+        "Prime Video India"
+      ]
+    },
+    "chainsawmanreze": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=tAzAhDNdehs",
+        "https://www.youtube.com/watch?v=EPaoHkV0dYw",
+        "https://www.youtube.com/watch?v=d1n552v1ng0"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "MAPPA CHANNEL",
+        "Sony Pictures Entertainment"
+      ]
+    },
+    "frieren": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=Iwr1aLEDpe4",
+        "https://www.youtube.com/watch?v=01WEqntM1NI",
+        "https://www.youtube.com/watch?v=EOMVXqH9DSg"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=-uIpCTGDX44",
+        "https://www.youtube.com/watch?v=L6_16v_DdZ8",
+        "https://www.youtube.com/watch?v=UqgdxZgStYs"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Netflix Anime"
+      ]
+    },
+    "frieren2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=EOMVXqH9DSg",
+        "https://www.youtube.com/watch?v=n6HZo_33YaQ",
+        "https://www.youtube.com/watch?v=5ZVND5zGZCU"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=V-HHMISl0Cs",
+        "https://www.youtube.com/watch?v=oj1F_T_vXAc",
+        "https://www.youtube.com/watch?v=5zY8W9L7AFs"
+      ],
+      "official_channels": [
+        "Crunchyroll"
+      ]
+    },
+    "dandadan": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=0XJxfbN36Uw",
+        "https://www.youtube.com/watch?v=6Kj1hc54nu0",
+        "https://www.youtube.com/watch?v=V3xNYDFsnN8"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+        "https://www.youtube.com/watch?v=FpR2IaKqF64",
+        "https://www.youtube.com/watch?v=-VE7havwyoM"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Netflix Anime"
+      ]
+    },
+    "dandadan2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=uXr9Ha9qRHE",
+        "https://www.youtube.com/watch?v=Ua4NZ3yW2lk",
+        "https://www.youtube.com/watch?v=0G7HX16YTLU"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=_41-0Pj8IN8",
+        "https://www.youtube.com/watch?v=-VE7havwyoM",
+        "https://www.youtube.com/watch?v=FpR2IaKqF64"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Netflix Anime"
+      ]
+    },
+    "kaiju8": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=JwF7bhvnCxI",
+        "https://www.youtube.com/watch?v=_NihiaU1xR8",
+        "https://www.youtube.com/watch?v=KYebQ0QhsN8"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=0MBLk3Hyd_o",
+        "https://www.youtube.com/watch?v=TdQ99ojxggA",
+        "https://www.youtube.com/watch?v=VRFFN7DV55w"
+      ],
+      "official_channels": [
+        "Ani-One Clips",
+        "Crunchyroll",
+        "Crunchyroll India"
+      ]
+    },
+    "kaiju8s2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=_NihiaU1xR8",
+        "https://www.youtube.com/watch?v=86pUz-brRJQ",
+        "https://www.youtube.com/watch?v=1ry0cE8Gr0k"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=gd2pP8LgWVo",
+        "https://www.youtube.com/watch?v=TdQ99ojxggA",
+        "https://www.youtube.com/watch?v=VRFFN7DV55w"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll India",
+        "TOHO animation チャンネル"
+      ]
+    },
+    "apothecarydiaries2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=yo8rklUv1EY",
+        "https://www.youtube.com/watch?v=XYNGkSvFT8c",
+        "https://www.youtube.com/watch?v=9A3Itqpl26M"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=cWu6Q72jfuM",
+        "https://www.youtube.com/watch?v=Y3pmO6q8jSU",
+        "https://www.youtube.com/watch?v=Gk30NUs9oRI"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll India",
+        "TOHO animation チャンネル"
+      ]
+    },
+    "onepieceegghead": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=3NUizzImhig",
+        "https://www.youtube.com/watch?v=2QjJMT554Bc",
+        "https://www.youtube.com/watch?v=BG89ff1tjLU"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=G9bqtUiyxyQ",
+        "https://www.youtube.com/watch?v=5L_Ek_CcREc",
+        "https://www.youtube.com/watch?v=REXhLXvN-bE"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Netflix Anime",
+        "ONE PIECE Official - ENG"
+      ]
+    },
+    "onepiecered": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=AmTUaFdTETc",
+        "https://www.youtube.com/watch?v=8dfGSzacxzc",
+        "https://www.youtube.com/watch?v=r0FvP_Ui-xY"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "ONE PIECE公式YouTubeチャンネル",
+        "Toei Animation"
+      ]
+    },
+    "spyxfamily3": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=5ASJJI_RkiA",
+        "https://www.youtube.com/watch?v=-5FZTzsCz0Y",
+        "https://www.youtube.com/watch?v=fqWKCELEdYM"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=hBgWzYapwi8",
+        "https://www.youtube.com/watch?v=-oLVCaDR4m8",
+        "https://www.youtube.com/watch?v=y_orFYC4lFk"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll India",
+        "TOHO animation チャンネル"
+      ]
+    },
+    "spyxfamilycodewhite": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=m5TxWbtQ7qU",
+        "https://www.youtube.com/watch?v=6Gx7EG8sBdw",
+        "https://www.youtube.com/watch?v=KLegMm-q97g"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=TLpqTS1iKSM",
+        "https://www.youtube.com/watch?v=I8OiDqpoUDE",
+        "https://www.youtube.com/watch?v=Ipr0YNnwlXA"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Netflix Anime",
+        "Sony Pictures Entertainment",
+        "Sony Pictures Releasing Australia"
+      ]
+    },
+    "yourname": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=RuyHIkXdYf8",
+        "https://www.youtube.com/watch?v=Ja1q9DnLI6M"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=Ja1q9DnLI6M"
+      ],
+      "official_channels": [
+        "Crunchyroll India",
+        "GKIDS Films"
+      ]
+    },
+    "suzume": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=g0JMPkn7Wuo",
+        "https://www.youtube.com/watch?v=Q6iK6DjV_iE",
+        "https://www.youtube.com/watch?v=Ja1q9DnLI6M"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
+        "https://www.youtube.com/watch?v=pEwoisyyvl0",
+        "https://www.youtube.com/watch?v=aFNXuHyizz0"
+      ],
+      "official_channels": [
+        "Crunchyroll India",
+        "GKIDS Films",
+        "Netflix Anime"
+      ]
+    },
+    "weatheringwithyou": {
+      "content_kind": "best scene",
+      "youtube_urls": [],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+        "https://www.youtube.com/watch?v=oddK59XKKK0"
+      ],
+      "official_channels": [
+        "GKIDS Films"
+      ]
+    },
+    "aotlastattack": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=3xNH23QkNpk",
+        "https://www.youtube.com/watch?v=_ypUKBQCFsE",
+        "https://www.youtube.com/watch?v=sBLsE-NKEoI"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "Crunchyroll",
+        "Sony Pictures Releasing UK"
+      ]
+    },
+    "aotfinal": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=sBLsE-NKEoI",
+        "https://www.youtube.com/watch?v=3xNH23QkNpk",
+        "https://www.youtube.com/watch?v=cR0zTG2czV0"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=g2fGSThhFl4"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll Dubs",
+        "The Official Dubbers"
+      ]
+    },
+    "haikyuudumpster": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=MqVA0dl36bc",
+        "https://www.youtube.com/watch?v=9shq18hVeUY",
+        "https://www.youtube.com/watch?v=pl4a2eQUgpc"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=pl4a2eQUgpc"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Sony Pictures New Zealand Official",
+        "TOHO animation チャンネル"
+      ]
+    },
+    "mhayourenext": {
+      "content_kind": "best scene",
+      "youtube_urls": [],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=9q0qUPC_qO4",
+        "https://www.youtube.com/watch?v=TyQu-ms4ElI"
+      ],
+      "official_channels": [
+        "Crunchyroll"
+      ]
+    },
+    "mhafinal": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=FwE87GX3dEc",
+        "https://www.youtube.com/watch?v=zz37nGym3OQ",
+        "https://www.youtube.com/watch?v=ErlRR6b7A-E"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=3BgfbZt2GXY",
+        "https://www.youtube.com/watch?v=219jCehokJo",
+        "https://www.youtube.com/watch?v=O6hYwLiNbIU"
+      ],
+      "official_channels": [
+        "Ani-One India",
+        "Crunchyroll",
+        "Crunchyroll India"
+      ]
+    },
+    "bluelock2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=hTfnf4y-sgQ",
+        "https://www.youtube.com/watch?v=KrsUSyEnlcg",
+        "https://www.youtube.com/watch?v=StlX879LIGk"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=ckEUVyKanhw",
+        "https://www.youtube.com/watch?v=Mzit8geNCKQ",
+        "https://www.youtube.com/watch?v=eL-NUQIdG9A"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll India"
+      ]
+    },
+    "vinlandsaga2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=Ph50sNkApVM",
+        "https://www.youtube.com/watch?v=VHGotYh6hPM",
+        "https://www.youtube.com/watch?v=GY2UAAn8mmo"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=l3zQNgXdmj0",
+        "https://www.youtube.com/watch?v=yWBA876qftM",
+        "https://www.youtube.com/watch?v=CT7ZsgVtumY"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll India",
+        "MAPPA CHANNEL"
+      ]
+    },
+    "bleachtybw": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=e8YBesRKq_U",
+        "https://www.youtube.com/watch?v=QoIMRS2xCkI",
+        "https://www.youtube.com/watch?v=g2iWIWqJ39s"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=4Gti6YqvMzE"
+      ],
+      "official_channels": [
+        "vizmedia",
+        "『BLEACH』アニメ公式チャンネル",
+        "『BLEACH』アニメ公式チャンネル and 2 more",
+        "アニプレックス チャンネル"
+      ]
+    },
+    "dragonballdaima": {
+      "content_kind": "best scene",
+      "youtube_urls": [],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+        "https://www.youtube.com/watch?v=m3G3Z6HYNE0"
+      ],
+      "official_channels": [
+        "Netflix Anime"
+      ]
+    },
+    "dbsuperhero": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=t5CIs0jDqC8",
+        "https://www.youtube.com/watch?v=W9JHZwtObqs",
+        "https://www.youtube.com/watch?v=5nY9eXbRzlg"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=fAfLl6_0h7Y",
+        "https://www.youtube.com/watch?v=HQ0j_Vhsfx0"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll Dubs",
+        "Sony Pictures India"
+      ]
+    },
+    "firstslamdunk": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=iwZYmpj81_0",
+        "https://www.youtube.com/watch?v=9o7-Cgetho4"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=84D05D2KMHk"
+      ],
+      "official_channels": [
+        "GKIDS Films",
+        "Netflix Italia",
+        "東映アニメーション公式YouTubeチャンネル"
+      ]
+    },
+    "boyandheron": {
+      "content_kind": "best scene",
+      "youtube_urls": [],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=YU5eVD0J3_A"
+      ],
+      "official_channels": [
+        "GKIDS Films"
+      ]
+    },
+    "hellsparadise": {
+      "content_kind": "best scene",
+      "youtube_urls": [],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=JKvNlvV6ZW4"
+      ],
+      "official_channels": [
+        "Netflix Anime"
+      ]
+    },
+    "windbreaker": {
+      "content_kind": "best scene",
+      "youtube_urls": [],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=AHx6LbgczvQ",
+        "https://www.youtube.com/watch?v=Y0S3Qcnmw-4",
+        "https://www.youtube.com/watch?v=BI5TEhPKhFU"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll India"
+      ]
+    },
+    "gachiakuta": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=ylpE6QkgMKI",
+        "https://www.youtube.com/watch?v=yeRvDchyo44",
+        "https://www.youtube.com/watch?v=zHQzXiMQoRE"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=3J0KJCJdWU4",
+        "https://www.youtube.com/watch?v=Dl1hSMXlCFk",
+        "https://www.youtube.com/watch?v=-cKs3ZAaaZ4"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Crunchyroll India"
+      ]
+    },
+    "cyberpunkedgerunners": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=JtqIas3bYhg",
+        "https://www.youtube.com/watch?v=urV5GzXcXsQ",
+        "https://www.youtube.com/watch?v=ax5YUmkWf_Y"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=YRL74JmhVgk",
+        "https://www.youtube.com/watch?v=Zq4zTcIM0yQ",
+        "https://www.youtube.com/watch?v=Fn9gKhU_2_Q"
+      ],
+      "official_channels": [
+        "Netflix",
+        "Netflix Anime"
+      ]
+    },
+    "arcane2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=ysqiEC6bLUI",
+        "https://www.youtube.com/watch?v=JpQOtc-YgUY",
+        "https://www.youtube.com/watch?v=AEbfiLaOdJA"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+        "https://www.youtube.com/watch?v=nH-KoegdUvs",
+        "https://www.youtube.com/watch?v=ZVTDEZvFU6k"
+      ],
+      "official_channels": [
+        "Netflix",
+        "Still Watching Netflix"
+      ]
+    },
+    "onepunchman3": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=eW-nFonrsnA",
+        "https://www.youtube.com/watch?v=iOFHoZWeEw4",
+        "https://www.youtube.com/watch?v=oh7bd-CDY6U"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=lgZDNZbggVg"
+      ],
+      "official_channels": [
+        "Crunchyroll India",
+        "Netflix Anime",
+        "vizmedia"
+      ]
+    },
+    "drstone": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=JxaJXnWDAN8",
+        "https://www.youtube.com/watch?v=FVNQnGIeRmc",
+        "https://www.youtube.com/watch?v=pkMgTN4Joi4"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=j8YijNavM7Y",
+        "https://www.youtube.com/watch?v=SCspnoheYus",
+        "https://www.youtube.com/watch?v=Q_Nz2riyUy0"
+      ],
+      "official_channels": [
+        "Crunchyroll"
+      ]
+    },
+    "rezero3": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=lXs3yIc_2CU",
+        "https://www.youtube.com/watch?v=qMJNdQFPaHk",
+        "https://www.youtube.com/watch?v=7IQM5EPf2Y0"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=TG-HGj5V5TM",
+        "https://www.youtube.com/watch?v=BXCPJ0HwkwU",
+        "https://www.youtube.com/watch?v=iq3O6wOURv8"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "KADOKAWAanime"
+      ]
+    },
+    "mushokutensei2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=ts5NGoDI1V0",
+        "https://www.youtube.com/watch?v=wwKZYTsxIhk",
+        "https://www.youtube.com/watch?v=jfgJQ42FN1Q"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=Hp15zFNq1qY",
+        "https://www.youtube.com/watch?v=Cowh5GNiB0o",
+        "https://www.youtube.com/watch?v=ar38uMdl46E"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Muse Asia"
+      ]
+    },
+    "lookback": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=ILBDFlYMGAY",
+        "https://www.youtube.com/watch?v=H6HOnlTnVwc",
+        "https://www.youtube.com/watch?v=wkRR2VUsWfU"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "GKIDS Films",
+        "Prime Video"
+      ]
+    },
+    "firforce3": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=w-vkoK1asrc",
+        "https://www.youtube.com/watch?v=JOlRi9YFA5c",
+        "https://www.youtube.com/watch?v=voLZJvdwUEE"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=ThozbbykMdY",
+        "https://www.youtube.com/watch?v=FSoNO2TbAAo",
+        "https://www.youtube.com/watch?v=CkXsyEEhYdo"
+      ],
+      "official_channels": [
+        "Crunchyroll"
+      ]
+    },
+    "tokyorevengers": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=Fwyc8XhXVSA",
+        "https://www.youtube.com/watch?v=UY_diXXl4UM"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "vizmedia",
+        "フジテレビ公式"
+      ]
+    },
+    "undeadunluck": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=o2EARYV9-94",
+        "https://www.youtube.com/watch?v=ot9mHEQGA5M",
+        "https://www.youtube.com/watch?v=_1XiSfrS2F0"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=KouVeivPcOI"
+      ],
+      "official_channels": [
+        "Anime! on TMS Official Channel",
+        "vizmedia"
+      ]
+    },
+    "mashle": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=dKA-QWW_wc8",
+        "https://www.youtube.com/watch?v=hxnl9nYl67k",
+        "https://www.youtube.com/watch?v=R67NmkIwhco"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=_z6rvtx3tps",
+        "https://www.youtube.com/watch?v=vmudCv56law",
+        "https://www.youtube.com/watch?v=ApYlyPRGVSA"
+      ],
+      "official_channels": [
+        "Aniplex USA",
+        "Aniplex USA and Sony",
+        "Crunchyroll"
+      ]
+    },
+    "shangrilafrontier": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=ZMpfkJiQrGg",
+        "https://www.youtube.com/watch?v=OfrzeFDCKH8",
+        "https://www.youtube.com/watch?v=VA0rTiDlm8w"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=EyUe192A3KU",
+        "https://www.youtube.com/watch?v=R52sxrAO4nk",
+        "https://www.youtube.com/watch?v=bVpa24tfmg4"
+      ],
+      "official_channels": [
+        "Crunchyroll"
+      ]
+    },
+    "bluegiant": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=gUf5R-MzITU"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=KaB7tTJ2T5o",
+        "https://www.youtube.com/watch?v=9_TWejd17WQ"
+      ],
+      "official_channels": [
+        "GKIDS Films",
+        "Netflix Thailand",
+        "TOHO animation チャンネル"
+      ]
+    },
+    "summerhikarudied": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=dhihVoP_6gw",
+        "https://www.youtube.com/watch?v=sFaO07LwAVg",
+        "https://www.youtube.com/watch?v=jJdIU3GaoQU"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "Netflix Anime"
+      ]
+    },
+    "witchhatatelier": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=QrCd-oNLGmY",
+        "https://www.youtube.com/watch?v=d1reryPOMX0",
+        "https://www.youtube.com/watch?v=rc26AwBXlUE"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=uNprGrZfkkQ",
+        "https://www.youtube.com/watch?v=YR6UqlVdJFY",
+        "https://www.youtube.com/watch?v=kcXgCtylzbA"
+      ],
+      "official_channels": [
+        "Crunchyroll",
+        "Netflix Anime",
+        "TVアニメ「とんがり帽子のアトリエ」公式 and 2 more"
+      ]
+    },
+    "lazarus": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=cL2oDgSYyHE",
+        "https://www.youtube.com/watch?v=LpG8vtFMkD0",
+        "https://www.youtube.com/watch?v=GTL8nPD9nPY"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=1VUqQqUlSv4",
+        "https://www.youtube.com/watch?v=2xsR9kGy0GA",
+        "https://www.youtube.com/watch?v=sdxtg4xyGxg"
+      ],
+      "official_channels": [
+        "Adult Swim",
+        "Adult Swim Europe",
+        "MAPPA CHANNEL"
+      ]
+    },
+    "castlevanianocturne": {
+      "content_kind": "trailer",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=_afpwpbKPs0",
+        "https://www.youtube.com/watch?v=wYvJZ3Itw8A",
+        "https://www.youtube.com/watch?v=AlHrhysomJo"
+      ],
+      "scene_urls": [],
+      "official_channels": [
+        "Netflix"
+      ]
+    },
+    "spiritedaway": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=ByXuk9QqQkk",
+        "https://www.youtube.com/watch?v=fDUFP7EeXLE",
+        "https://www.youtube.com/watch?v=k6HzOTKfkxQ"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=70NhEBzLKU8",
+        "https://www.youtube.com/watch?v=20hcTad8EWk"
+      ],
+      "official_channels": [
+        "Crunchyroll Store Australia",
+        "GKIDS Films",
+        "Netflix Anime"
+      ]
+    },
+    "princessmononoke": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=vf6c6n35wr4",
+        "https://www.youtube.com/watch?v=4OiMOHRDs14",
+        "https://www.youtube.com/watch?v=I1dHzoRl0sQ"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=BU--ttm4nYs",
+        "https://www.youtube.com/watch?v=OoEU8GnGlcU"
+      ],
+      "official_channels": [
+        "Crunchyroll Store Australia",
+        "GKIDS Films",
+        "Netflix Anime"
+      ]
+    },
+    "mononoke": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=NJejE1Xv8vw",
+        "https://www.youtube.com/watch?v=OVDCDT_Lldw",
+        "https://www.youtube.com/watch?v=ImGqxNS3Xxk"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=xpJWvpumgxs",
+        "https://www.youtube.com/watch?v=bokqzOcaO18",
+        "https://www.youtube.com/watch?v=pNDmdFWDDS4"
+      ],
+      "official_channels": [
+        "Netflix Anime",
+        "Netflix Philippines"
+      ]
+    },
+    "dandadanevil": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=f06mKPJU9EI",
+        "https://www.youtube.com/watch?v=RX-eGtIDjtk",
+        "https://www.youtube.com/watch?v=Ua4NZ3yW2lk"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=YuIR94VIC7k",
+        "https://www.youtube.com/watch?v=XM6aRpeXh-M",
+        "https://www.youtube.com/watch?v=b2l8sz4TAY4"
+      ],
+      "official_channels": [
+        "GKIDS Films",
+        "Netflix Anime"
+      ]
+    },
+    "oshinoko2": {
+      "content_kind": "best scene",
+      "youtube_urls": [
+        "https://www.youtube.com/watch?v=4dBiHSkf4u4",
+        "https://www.youtube.com/watch?v=B6dq_yNQG4M"
+      ],
+      "scene_urls": [
+        "https://www.youtube.com/watch?v=B6dq_yNQG4M",
+        "https://www.youtube.com/watch?v=z260gPj1iYA"
+      ],
+      "official_channels": [
+        "Crunchyroll"
+      ]
     }
   }
 }

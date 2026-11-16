@@ -22,7 +22,7 @@ IST = timezone(timedelta(hours=5, minutes=30))
 
 def yt_search_sample():
     out = []
-    for q in ("bollywood movie edit shorts", "south movie edit shorts", "hollywood movie edit shorts phonk"):
+    for q in ("bollywood movie edit shorts", "south movie edit shorts", "hollywood movie edit shorts phonk", "anime edit shorts phonk"):
         try:
             r = subprocess.run(["yt-dlp", "--flat-playlist", "-J", "--no-warnings", f"ytsearch8:{q}"],
                                capture_output=True, text=True, timeout=45)
@@ -32,7 +32,7 @@ def yt_search_sample():
                                 "views": e.get("view_count"), "duration": e.get("duration")})
         except Exception:
             pass
-    return out[:24]
+    return out[:32]
 
 
 def _slot_hhmm(slot):
