@@ -21,6 +21,8 @@ import urllib.request
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO))
+import music_lib  # noqa: E402
 CFG_PATH = REPO / "config" / "music_sources.json"
 LIB_PATH = REPO / "music" / "library.json"
 LIB_DIR = REPO / "music" / "lib"
@@ -316,6 +318,9 @@ def process_candidate(item: dict, fileinfo: dict, lib: dict, cfg: dict, taken: s
         artist = ", ".join(str(a) for a in artist[:3])
     license_url = item.get("licenseurl") or ""
     if not license_ok(license_url):
+        return None
+    if music_lib.is_denied_track({"title": title, "artist": artist, "source_id": ident,
+                                  "source_file": fileinfo.get("name") or ""}):
         return None
     fname = unique_filename(slugify(title, ident), taken)
     raw = LIB_DIR / f"_raw_{fname}"

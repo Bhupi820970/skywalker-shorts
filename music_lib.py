@@ -3,9 +3,68 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 
 import perf
+
+ROOT = Path(__file__).resolve().parent
+_DENY_CACHE: list[dict] | None = None
+
+
+def _norm_music(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", (s or "").lower())
+
+
+def denylist_entries(AE: Path | None = None) -> list[dict]:
+    global _DENY_CACHE
+    if _DENY_CACHE is not None:
+        return _DENY_CACHE
+    entries: list[dict] = []
+    for base in (AE, ROOT):
+        if not base:
+            continue
+        fp = Path(base) / "config" / "music_denylist.json"
+        if not fp.exists():
+            continue
+        try:
+            doc = json.loads(fp.read_text())
+        except Exception:
+            continue
+        for e in doc.get("entries") or []:
+            if isinstance(e, dict):
+                entries.append(e)
+        break
+    _DENY_CACHE = entries
+    return entries
+
+
+def is_denied_track(t: dict | None, AE: Path | None = None) -> bool:
+    """True if this track is on the permanent music denylist."""
+    if not t:
+        return False
+    entries = denylist_entries(AE)
+    if not entries:
+        return False
+    fname = (t.get("file") or "").lower()
+    sid = (t.get("source_id") or "").lower()
+    blob = _norm_music(" ".join([
+        t.get("file") or "", t.get("source_id") or "",
+        t.get("artist") or "", t.get("title") or "",
+        t.get("credit") or "", t.get("source_file") or "",
+    ]))
+    for e in entries:
+        ef = (e.get("file") or "").lower()
+        es = (e.get("source_id") or "").lower()
+        if ef and fname and ef == fname:
+            return True
+        if es and sid and es == sid:
+            return True
+        for key in ("artist", "title", "file", "source_id"):
+            val = _norm_music(e.get(key) or "")
+            if len(val) >= 8 and val in blob:
+                return True
+    return False
 
 LIB_PILLAR_GENRE = {
     "anime": ("phonk", "rock", "dark"), "movie": ("phonk", "rock", "dark", "mass", "slowed"),
@@ -64,7 +123,7 @@ def catalog(AE: Path, exclude: list[str] | None = None) -> list[dict]:
         return []
     excl = {x for x in (exclude or []) if x}
     out = []
-    pool = curated_tracks([t for t in (lib.get("tracks") or []) if t.get("file")])
+    pool = curated_tracks([t for t in (lib.get("tracks") or []) if t.get("file") and not is_denied_track(t, AE)])
     for t in pool:
         if t["file"] in excl:
             continue
@@ -95,7 +154,7 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
     except Exception:
         return None
     ldir = AE / (lib.get("dir") or "music/lib")
-    tracks = [t for t in lib.get("tracks") or [] if t.get("file") and (ldir / t["file"]).exists()]
+    tracks = [t for t in lib.get("tracks") or [] if t.get("file") and (ldir / t["file"]).exists() and not is_denied_track(t, AE)]
     if not tracks:
         print("  music library: no mp3s present locally; falling back to credits.json")
         return None

@@ -1,0 +1,11 @@
+{
+  "note": "Permanently banned tracks. Matched on file, source_id, artist, or title so a re-ingest cannot add them back.",
+  "entries": [
+    {
+      "file": "sw_pkonkbetapkonkphenomenon.mp3",
+      "source_id": "phonk-beta-phonkphenomnnon",
+      "artist": "187_NOTOR1OUS_ENEMY",
+      "title": "PKONK BETA - PKONKPHENOMENON"
+    }
+  ]
+}
