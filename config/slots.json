@@ -12,6 +12,6 @@
     "22:30"
   ],
   "per_day": 8,
-  "min_ahead_days": 2,
+  "min_ahead_days": 4,
   "note": "Eight public Shorts per day, all times IST. Existing Buffer-scheduled posts keep their original slot (including retired 12:30/17:30 times) and are never moved or cancelled. New queue items use only these eight times. plan.py still renders any item that has a slot, official or not."
 }

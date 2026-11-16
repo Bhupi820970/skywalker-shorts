@@ -281,6 +281,8 @@ def list_source_siblings():
             out.append(
                 f"https://github.com/{repo}/releases/download/sources/{name}"
             )
+    # official scene clips before trailers (trailer edits look low quality)
+    out.sort(key=lambda u: 0 if "_scene" in u.rsplit("/", 1)[-1] else 1)
     return out
 
 

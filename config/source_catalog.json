@@ -1,14 +1,14 @@
 {
-  "note": "Official free trailers/clips only (720p+). No DRM/OTT rips. Chain order: studio/press -> trailer sites -> platforms (DM/Vimeo/Archive/...) -> Indian free clips -> YouTube last. content_kind may be trailer or best/action/fight/romance/emotional scene from official clip channels.",
+  "note": "Official free trailers/clips only (720p+). No DRM/OTT rips. Chain order: studio/press -> trailer sites -> platforms (DM/Vimeo/Archive/...) -> Indian free clips -> YouTube last. Official scene clips ({slug}_sceneN_h264.mp4) rank above trailers; trailers are fallback only. content_kind may be trailer or best/action/fight/romance/emotional scene from official clip channels.",
   "clip_queries": [
-    "{film} official trailer",
-    "{film} official teaser",
     "{film} best scene official",
     "{film} fight scene official",
+    "{film} official clip",
     "{film} action scene official",
     "{film} romance scene official",
     "{film} emotional scene official",
-    "{film} official clip"
+    "{film} official trailer",
+    "{film} official teaser"
   ],
   "official_channels": {
     "marvel": ["Marvel Entertainment", "Marvel UK"],

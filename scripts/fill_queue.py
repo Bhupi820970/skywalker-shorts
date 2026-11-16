@@ -38,6 +38,35 @@ def _load_day(day: str) -> list[dict]:
         return []
 
 
+def release_assets() -> set[str] | None:
+    """Asset names on the sources release (None when unknown, e.g. offline)."""
+    import subprocess
+    try:
+        r = subprocess.run(["gh", "api", "--paginate", "repos/chatgpt820970/skywalker-shorts/releases/tags/sources",
+                            "-q", ".assets[].name"], capture_output=True, text=True, timeout=60)
+        if r.returncode == 0 and r.stdout.strip():
+            return set(r.stdout.split())
+    except Exception:
+        pass
+    try:
+        import urllib.request
+        url = "https://api.github.com/repos/chatgpt820970/skywalker-shorts/releases/tags/sources"
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "skywalker"}), timeout=30) as r:
+            return {a["name"] for a in json.loads(r.read()).get("assets") or []}
+    except Exception:
+        return None
+
+
+def topic_assets(topic: dict, have: set[str] | None) -> list[str]:
+    """Official scene clips first, trailer only as the last fallback; only assets that exist."""
+    names = list(topic.get("scene_assets") or [])
+    if topic.get("fallback_asset"):
+        names.append(topic["fallback_asset"])
+    if have is None:
+        return names
+    return [n for n in names if n in have]
+
+
 def _used_slugs() -> set[str]:
     used = set()
     for p in QUEUE.glob("2026-*.json"):
@@ -56,10 +85,11 @@ def _used_slugs() -> set[str]:
     return used
 
 
-def _make_item(day: str, hhmm: str, topic: dict) -> dict:
+def _make_item(day: str, hhmm: str, topic: dict, have: set[str] | None = None) -> dict:
     code = day.replace("-", "") + "-" + hhmm.replace(":", "")
     slug = topic["slug"]
-    asset = topic.get("fallback_asset")
+    assets = topic_assets(topic, have)
+    asset = assets[0] if assets else None
     item = {
         "id": f"{code}-{slug}",
         "slot": slot_times.slot_iso(day, hhmm),
@@ -76,9 +106,11 @@ def _make_item(day: str, hhmm: str, topic: dict) -> dict:
         "market": topic.get("market") or "US/UK",
         "content_kind": topic.get("content_kind") or "trailer",
     }
+    if asset and "_scene" in asset and item["content_kind"] == "trailer":
+        item["content_kind"] = "best scene"
     if asset:
         url = f"{GH}/{asset}"
-        item["fallback_mp4"] = [url]
+        item["fallback_mp4"] = [f"{GH}/{a}" for a in assets]
         item["sources"] = [url]
         item["fallback_release"] = "sources"
         item["fallback_asset"] = asset
@@ -87,7 +119,7 @@ def _make_item(day: str, hhmm: str, topic: dict) -> dict:
     return item
 
 
-def fill_day(day: str, catalog: list[dict], used: set[str]) -> int:
+def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | None = None) -> int:
     items = _load_day(day)
     existing_isos = [it.get("slot") for it in items if it.get("slot")]
     need = slot_times.next_official_to_add(existing_isos, day)
@@ -95,6 +127,9 @@ def fill_day(day: str, catalog: list[dict], used: set[str]) -> int:
         return 0
     added = 0
     # rotate catalog: prefer unused slugs, weighted by stats performance
+    if have is not None:
+        # never queue a topic whose official clip/trailer is not on the sources release yet
+        catalog = [t for t in catalog if topic_assets(t, have)] or catalog
     pool = [t for t in catalog if t["slug"] not in used]
     if not pool:
         pool = list(catalog)
@@ -111,6 +146,9 @@ def fill_day(day: str, catalog: list[dict], used: set[str]) -> int:
                 base = float(perf.topic_bonus(perf_data, t.get("tags"), t.get("pillar")))
             except Exception:
                 base = 0.0
+        # Real scene clips beat trailer-only topics (trailer edits look low quality).
+        if t.get("scene_assets"):
+            base += 2.0
         # Exploration jitter so we do not lock onto one pillar forever.
         return base + rng.random() * 4.0
 
@@ -125,7 +163,7 @@ def fill_day(day: str, catalog: list[dict], used: set[str]) -> int:
         item = None
         tries = 0
         while tries < len(pool):
-            cand = _make_item(day, hhmm, topic)
+            cand = _make_item(day, hhmm, topic, have)
             bad = topic["slug"] in day_slugs or hook_text.check_item_hook_fields(cand)
             if not bad:
                 item = cand
@@ -155,13 +193,14 @@ def main() -> int:
         print("empty topic catalog", file=sys.stderr)
         return 1
     used = _used_slugs()
+    have = release_assets()
     total = 0
     # Always cover through min_ahead_days (plus one extra day of buffer).
     targets = days_ahead()
     for day in targets:
         if day < "2026-11-14":
             continue
-        n = fill_day(day, cat, used)
+        n = fill_day(day, cat, used, have)
         if n:
             print(f"{day}: added {n} slot(s)")
         total += n
