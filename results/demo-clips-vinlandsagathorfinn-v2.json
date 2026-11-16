@@ -1,0 +1,133 @@
+{
+  "id": "demo-clips-vinlandsagathorfinn-v2",
+  "status": "failed",
+  "detail": "gemini QC rejected 2 re-renders; backup item takes the slot: gemini QC reject: The video contains a persistent 'Crunchyroll' watermark in the top left corner of the footage, which violates the requirement for clean, unbranded footage.; The layout requirement specifies a white bar flush on top of the full, uncropped landscape movie frame; however, the white bar is placed over the top portion of the video frame itself, rather than bei",
+  "at": "2026-11-16 17:59 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43862823400",
+  "slot": "2026-12-01T13:00:00+05:30",
+  "title": "Askeladd decides to end this conversation #vinlandsaga #askeladd #anime",
+  "hook": "Askeladd has no patience left",
+  "description": "Askeladd has no patience left. Askeladd calmly confronts a group of warriors before aggressively asserting his dominance. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #askeladd #anime #shorts #edit",
+  "tags": [
+    "vinlandsaga",
+    "askeladd",
+    "anime",
+    "thorfinn",
+    "animeedit",
+    "vinland",
+    "ihavenoenemies"
+  ],
+  "queue_meta": {
+    "hook": "Why Thorfinn dropped his daggers forever",
+    "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+    "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+    "tags": [
+      "vinlandsaga",
+      "thorfinn",
+      "askeladd",
+      "animeedit",
+      "vinland",
+      "anime",
+      "ihavenoenemies"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "Character-focused tension",
+  "title_candidates": [
+    {
+      "title": "Askeladd decides to end this conversation",
+      "click_score": 92.0
+    },
+    {
+      "title": "Watch how Askeladd handles these fools",
+      "click_score": 88.0
+    },
+    {
+      "title": "Nobody expected Askeladd to act this fast",
+      "click_score": 85.0
+    },
+    {
+      "title": "Askeladd shows exactly who is in charge",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment Askeladd loses his temper",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 27.9,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.7,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.8,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.8,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC reject: The video contains leftover dialogue subtitles from the original source, which violates the requirement for a clean song-only edit.; The video contains a visible 'Crunchyroll' watermark/logo, which violates the requirement for clean footage.; The video contains original character dialogue audio, which violates the requirement for a music-only edit.",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+      "music": "sw_interworldrapturephonk.mp3",
+      "qc_status": "fail"
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "error": "gemini QC reject: The video contains a persistent 'Crunchyroll' watermark in the top left corner of the footage, which violates the requirement for clean, unbranded footage.; The layout requirement specifies a white bar flush on top of the full, uncropped landscape movie frame; however, the white bar is placed over the top portion of the video frame itself, rather than bei",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+      "music": "sw_interworldrapturephonk.mp3",
+      "qc_status": "fail"
+    }
+  ],
+  "last_error": "gemini QC reject: The video contains a persistent 'Crunchyroll' watermark in the top left corner of the footage, which violates the requirement for clean, unbranded footage.; The layout requirement specifies a white bar flush on top of the full, uncropped landscape movie frame; however, the white bar is placed over the top portion of the video frame itself, rather than bei",
+  "qc_rejected": true
+}
