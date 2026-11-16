@@ -7,10 +7,9 @@ Default template (caption-bar, from the "Rocket knew something" style):
   ~195px for two lines) with a bold black italic 1-2 line hook, centered
   in the bar, fully on-screen, never cut.
 - The full UNCROPPED source frame, scaled to 1080 width, sits DIRECTLY
-  below the bar with no gap. Bar + frame form one block, centered
-  vertically on the canvas. Never crop the source; leftover letterbox
-  space is filled with a heavily blurred, slightly darkened, scaled-up
-  copy of the SAME clip (no black bars).
+  below the bar with no gap. The bar never covers any part of the frame.
+  Bar + frame form one block, centered vertically on a black canvas.
+  Never crop the source.
 - Moody/desaturated cinematic grade, stabilized, no Ken Burns.
 - No text is burned onto the footage itself.
 - HARD: never include studio/distributor logo intros (Netflix N, Warner,
@@ -70,8 +69,8 @@ W, H = 1080, 1920
 FPS = 30            # output / mux frame rate (auto_qc requires >= 30)
 # Caption-bar template: tight white hook bar directly above the
 # uncropped 1080-wide frame. Bar + frame are one block, centered
-# vertically on a 1080x1920 canvas with blurred letterbox fill.
-# Never crop the source.
+# vertically on a black 1080x1920 canvas. The bar never covers the
+# picture. Never crop the source.
 BAR_PAD_Y = 30             # padding above and below the hook text
 SEP_H = 2                  # 2px hairline at the bottom of the bar (no gap)
 # BAR_H is computed from the text; this is only a fallback estimate
@@ -227,7 +226,14 @@ def make_mezzanine(src: Path, dst: Path, crop) -> Path:
             stale.unlink()
     keyf.write_text(key)
     w, h, x, y = crop
-    vf = f"crop={w}:{h}:{x}:{y},format=yuv420p"
+    # Downscale to at most 1080p before vidstab. A 4K multi-minute source
+    # otherwise spends the whole job encode+stabilize pass and can be
+    # cancelled with no result JSON (demo-clips-jjkgojovstoji-v2).
+    vf = (
+        f"crop={w}:{h}:{x}:{y},"
+        "scale=w='min(1920,iw)':h='min(1080,ih)':force_original_aspect_ratio=decrease:flags=lanczos,"
+        "scale=trunc(iw/2)*2:trunc(ih/2)*2,format=yuv420p"
+    )
     run([
         "ffmpeg", "-y", "-i", str(src), "-vf", vf,
         "-c:v", "libx264", "-preset", "fast", "-crf", "16", "-an", str(dst),
@@ -3272,7 +3278,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     bar = WORK / "caption_bar.png"
     if not bar.exists():
         draw_caption_bar(bar, hook_lines())
-    # silent is the uncropped 1080-wide plate; bar sits flush on top, rest black.
+    # silent is the uncropped 1080-wide plate; bar sits flush ABOVE it, rest black.
     # The hook lives only in the bar, so xfades never fade or clip the type.
     pw, ph = _mezz_size(silent)
     bar_h = Image.open(bar).size[1]
@@ -3340,25 +3346,20 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         print(f"  lower-thirds {len(caps)} dialogue lines at Y={layout['caption_y']} (plate ends {plate_bottom})")
     except Exception as e:
         print(f"  lower-thirds skipped: {e}")
-    # Blurred / darkened cover of the SAME clip behind the uncropped plate.
-    # Plate stays width-fit and uncropped; empty top/bottom (16:9 letterbox) is
-    # filled with scale-to-cover + heavy gblur + slight darken — never black bars.
-    # White hook bar stays on top of the plate block.
+    # Black canvas. The uncropped plate sits immediately below the white
+    # hook bar as one centered block. The bar is never composited over the
+    # picture (a blurred fill behind the bar looked like the bar covered
+    # the top of the frame).
     vfilt = (
-        f"[0:v]split=2[fg][bgraw];"
-        f"[bgraw]scale={W}:{H}:force_original_aspect_ratio=increase,"
-        f"crop={W}:{H},gblur=sigma=36:steps=3,"
-        f"eq=brightness=-0.14:saturation=0.80:contrast=0.95,setsar=1[bg];"
-        f"[fg]setpts=PTS-STARTPTS[plate];"
-        f"[bg][plate]overlay=0:{lay['video_y']}:format=auto[comp];"
+        f"[0:v]setpts=PTS-STARTPTS,pad={W}:{H}:0:{lay['video_y']}:color=black,format=yuv420p[comp];"
         f"[2:v]format=rgb24[bar];"
         f"[comp][bar]overlay=0:{lay['bar_y']}:format=auto{fx},format=yuv420p{ass_extra}[v]"
     )
-    layout["blur_fill"] = True
+    layout["blur_fill"] = False
     (WORK / "layout.json").write_text(json.dumps(layout, default=str))
     print(
         f"Muxing tight whitebar (bar {bar_h}px + plate {ph}px @{lay['bar_y']}) "
-        f"on blurred fill + dialogue/music…"
+        f"on black canvas + dialogue/music…"
     )
     cmd = [
         "ffmpeg", "-y",

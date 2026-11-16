@@ -603,7 +603,7 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
     mode = (ac.get("mode") or "")
     if mode == "music_only":
         expected = (
-            "Expected: a tight WHITE bar with black italic English hook text directly on top of the full, uncropped "
+            "Expected: a tight WHITE bar with black italic English hook text sitting directly ABOVE (never over) the full, uncropped "
             "landscape movie frame, centered on black. This is a SONG-ONLY edit: the hype song plays at full level "
             "from second 0 over beat-cut action/visuals. There is NO character voice, NO trailer audio, and NO "
             "lower-third dialogue subtitles (that is correct — do not reject for missing dialogue or captions). "
@@ -618,7 +618,7 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
         reject_bits = "logo/title card, cropped picture, leftover trailer voice under the song, non-English hook/title, a different film"
     else:
         expected = (
-            "Expected: a tight WHITE bar with black italic English hook text directly on top of the full, uncropped "
+            "Expected: a tight WHITE bar with black italic English hook text sitting directly ABOVE (never over) the full, uncropped "
             "landscape movie frame, centered on black; only lower-third dialogue subtitles under the picture; nothing else on the footage. "
             "Audio structure: ACT 1 (opening, about 30%, never more than ~38%) = only the characters talking, crystal clear, NO song; "
             "ACT 2 = the hype song at full level over beat-cut action, no dialogue. The song must start once and never pop in and out between lines."
@@ -642,7 +642,7 @@ title (curiosity/emotion, character-focused, English, would you tap it),
 shake (10 = steady; low if footage is jittery/handheld-shaky in a distracting way),
 crop (10 = full uncropped frame; low if faces/heads are cut by a zoom or the picture is cropped),
 length (pacing fits {dur:.0f}s; no dead air, no abrupt cut-off),
-layout (white bar flush on top, black canvas, nothing else written on the footage),
+layout (white bar flush ABOVE the uncropped frame, never covering it, black canvas, nothing else written on the footage),
 clean_footage (no studio logo intro, title/date/rating card, watermark, or repeated shot),
 {cap_crit},
 post_worthy (overall: would a top edit channel post this as is?).

@@ -150,6 +150,34 @@ jobs:
           GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
           GEMINI_API_KEY_6: ${{ secrets.GEMINI_API_KEY_6 }}
         run: python3 scripts/render_item.py "${{ matrix.id }}"
+      - name: Write result if render left none
+        if: always()
+        env:
+          ITEM_ID: ${{ matrix.id }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          from pathlib import Path
+          iid = os.environ["ITEM_ID"]
+          p = Path("results") / f"{iid}.json"
+          if p.exists() and p.stat().st_size > 20:
+              raise SystemExit(0)
+          p.parent.mkdir(parents=True, exist_ok=True)
+          run_id = os.environ.get("GITHUB_RUN_ID") or ""
+          repo = os.environ.get("GITHUB_REPOSITORY") or "chatgpt820970/skywalker-shorts"
+          server = os.environ.get("GITHUB_SERVER_URL") or "https://github.com"
+          doc = {
+              "id": iid,
+              "status": "failed",
+              "detail": "render job ended with no result JSON (timed out or cancelled mid-render)",
+              "at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "run_url": f"{server}/{repo}/actions/runs/{run_id}",
+              "last_error": "no result JSON; job cancelled or timed out",
+          }
+          p.write_text(json.dumps(doc, indent=2) + "\n")
+          print(f"wrote missing result for {iid}")
+          PY
       - name: Upload result
         if: always()
         uses: actions/upload-artifact@v4
