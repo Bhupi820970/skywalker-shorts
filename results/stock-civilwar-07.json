@@ -1,9 +1,9 @@
 {
   "id": "stock-civilwar-07",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.977, 'edge_corr_median': 0.978, 'shift_px_median': 0.07, 'pairs': 6}",
-  "at": "2026-11-16 06:25 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43780570962",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.985, 'edge_corr_median': 0.989, 'shift_px_median': 0.15, 'pairs': 6}; auto_qc: 1 near-duplicate shot pair(s) in the output",
+  "at": "2026-11-16 13:39 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43820622034",
   "slot": null,
   "title": "America split in front of their lens | Civil War | #edit",
   "hook": "America split in front of their lens",
@@ -25,27 +25,13 @@
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 15.0,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 5.1,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
       "err": "HTTP 429"
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "HTTP 429"
+      "err": "HTTP 503"
     },
     {
       "purpose": "scenes",
@@ -57,7 +43,45 @@
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 3.7,
+      "s": 2.6,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.3,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.0,
       "ok": true
     }
   ],
@@ -65,30 +89,30 @@
   "stock": true,
   "stock_topic": "backup-civilwar",
   "spare": true,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.977, 'edge_corr_median': 0.984, 'shift_px_median': 0.71, 'pairs': 6}",
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.992, 'edge_corr_median': 0.99, 'shift_px_median': 0.05, 'pairs': 6}",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/civilwar_trailer_h264.mp4",
-      "music": "sw_pkonkbetapkonkphenomenon.mp3"
+      "music": "sw_murderinmymind.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.977, 'edge_corr_median': 0.984, 'shift_px_median': 0.71, 'pairs': 6}",
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.992, 'edge_corr_median': 0.99, 'shift_px_median': 0.05, 'pairs': 6}",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/civilwar_trailer_h264.mp4",
-      "music": "sw_pkonkbetapkonkphenomenon.mp3"
+      "music": "sw_murderinmymind.mp3"
     },
     {
       "attempt": 3,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.977, 'edge_corr_median': 0.978, 'shift_px_median': 0.07, 'pairs': 6}",
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.985, 'edge_corr_median': 0.989, 'shift_px_median': 0.15, 'pairs': 6}; auto_qc: 1 near-duplicate shot pair(s) in the output",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/civilwar_trailer_h264.mp4",
-      "music": "sw_nsassitsafakebike2022.mp3"
+      "music": "sw_interworldrapturephonk.mp3"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.977, 'edge_corr_median': 0.978, 'shift_px_median': 0.07, 'pairs': 6}"
+  "last_error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [854, 480], 'letterbox_free': [854, 462], 'plate': [1080, 584], 'letterbox_rows_black': False, 'frame_corr_median': 0.985, 'edge_corr_median': 0.989, 'shift_px_median': 0.15, 'pairs': 6}; auto_qc: 1 near-duplicate shot pair(s) in the output"
 }

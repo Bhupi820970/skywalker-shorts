@@ -1,9 +1,9 @@
 {
   "id": "stock-jurassicworldrebirth-06",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 16.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-16 08:49 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43793480778",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): only 15.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-16 13:09 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43820622034",
   "slot": null,
   "title": "The island is still hunting us | a new team enters the park | #edit",
   "hook": "The island is still hunting us",
@@ -26,14 +26,14 @@
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 12.7,
+      "s": 12.3,
       "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 14.5,
+      "s": 37.3,
       "ok": true
     }
   ],
@@ -41,30 +41,30 @@
   "stock": true,
   "stock_topic": "backup-jurassicworldrebirth",
   "spare": true,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 14.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 12.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jurassicworldrebirth_trailer_h264.mp4",
-      "music": "sw_worthnothingfeatolivertr.mp3"
+      "music": "sw_murderinmymind.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 14.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 12.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jurassicworldrebirth_trailer_h264.mp4",
-      "music": "sw_worthnothingfeatolivertr.mp3"
+      "music": "sw_murderinmymind.mp3"
     },
     {
       "attempt": 3,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 16.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 15.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jurassicworldrebirth_trailer_h264.mp4",
-      "music": "sw_pkonkbetapkonkphenomenon.mp3"
+      "music": "sw_interworldrapturephonk.mp3"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 16.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": "pipeline/QA failed (exit 1): only 15.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
 }
