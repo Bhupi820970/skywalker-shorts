@@ -1,11 +1,12 @@
 {
  "box": {
-  "last_run_at": "2026-11-16T07:02:44Z",
-  "last_upload_at": "2026-11-16T07:02:44Z"
+  "last_run_at": "2026-11-16T07:09:54Z",
+  "last_upload_at": "2026-11-16T07:09:54Z"
  },
  "done_ids": [
   "yt:7LzDcr20SHc",
   "yt:HGCsAcFzaFw",
+  "yt:VwwZU7YgC6A",
   "yt:yWBA876qftM"
  ],
  "clips": [
@@ -41,6 +42,17 @@
    "kbps": 1358,
    "by": "box",
    "at": "2026-11-16T07:02:44Z"
+  },
+  {
+   "asset": "mobpsycho100per_trailer_h264.mp4",
+   "id": "yt:VwwZU7YgC6A",
+   "title": "TVアニメ『モブサイコ100 III』本PV / Mob Psycho 100 III New Trailer",
+   "channel": "Warner Bros. Japan Anime",
+   "kind": "trailer",
+   "res": "1920x1080",
+   "kbps": 2344,
+   "by": "box",
+   "at": "2026-11-16T07:09:54Z"
   }
  ],
  "github": {

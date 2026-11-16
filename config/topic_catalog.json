@@ -1819,6 +1819,28 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "mobpsycho100per",
+      "pillar": "anime",
+      "words": "MOB PSYCHO 100",
+      "hook": "Why Mob never used full power",
+      "title": "Why Mob never used full power 💀 | Mob 100 Percent | #edit",
+      "description": "Why Mob never used full power. From official Mob Psycho 100 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #mobpsycho100 #shigeokageyama #reigen",
+      "tags": [
+        "mobpsycho100",
+        "shigeokageyama",
+        "reigen",
+        "mobpsycho",
+        "animeedit",
+        "anime"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=VwwZU7YgC6A",
+      "scene_assets": [],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "fallback_asset": "mobpsycho100per_trailer_h264.mp4"
     }
   ]
 }
