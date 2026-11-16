@@ -1,0 +1,280 @@
+[
+ {
+  "id": "20261122-0630-rezero3",
+  "slot": "2026-11-22T06:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=TG-HGj5V5TM",
+  "template": "whitebar",
+  "hook": "Subaru dies so they can live",
+  "words": "RE:ZERO",
+  "title": "Subaru dies so they can live | Re:Zero | #edit",
+  "description": "Subaru dies so they can live. From official Re:Zero clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #rezero3",
+  "tags": [
+   "rezero3",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "subaru"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "rezero3_scene1_h264.mp4"
+ },
+ {
+  "id": "20261122-0900-gachiakuta",
+  "slot": "2026-11-22T09:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=3J0KJCJdWU4",
+  "template": "whitebar",
+  "hook": "Rudo turned trash into weapons",
+  "words": "GACHIAKUTA",
+  "title": "Rudo turned trash into weapons | Gachiakuta | #edit",
+  "description": "Rudo turned trash into weapons. From official Gachiakuta clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #gachiakuta",
+  "tags": [
+   "gachiakuta",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "rudo"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "gachiakuta_scene1_h264.mp4"
+ },
+ {
+  "id": "20261122-1130-kaiju8s2",
+  "slot": "2026-11-22T11:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=gd2pP8LgWVo",
+  "template": "whitebar",
+  "hook": "Kafka cannot control it anymore",
+  "words": "KAIJU NO. 8",
+  "title": "Kafka cannot control it anymore | Kaiju No. 8 | #edit",
+  "description": "Kafka cannot control it anymore. From official Kaiju No. 8 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #kaiju8s2",
+  "tags": [
+   "kaiju8s2",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "kafka"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "kaiju8s2_scene1_h264.mp4"
+ },
+ {
+  "id": "20261122-1330-windbreaker",
+  "slot": "2026-11-22T13:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=AHx6LbgczvQ",
+  "template": "whitebar",
+  "hook": "Sakura only fights for his town",
+  "words": "WIND BREAKER",
+  "title": "Sakura only fights for his town | Wind Breaker | #edit",
+  "description": "Sakura only fights for his town. From official Wind Breaker clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #windbreaker",
+  "tags": [
+   "windbreaker",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "sakura"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "windbreaker_scene1_h264.mp4"
+ },
+ {
+  "id": "20261122-1600-mushokutensei2",
+  "slot": "2026-11-22T16:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=Hp15zFNq1qY",
+  "template": "whitebar",
+  "hook": "Rudeus finally grew up",
+  "words": "MUSHOKU TENSEI",
+  "title": "Rudeus finally grew up | Mushoku Tensei | #edit",
+  "description": "Rudeus finally grew up. From official Mushoku Tensei clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mushokutensei2",
+  "tags": [
+   "mushokutensei2",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "rudeus"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "mushokutensei2_scene1_h264.mp4"
+ },
+ {
+  "id": "20261122-1830-bluelock2",
+  "slot": "2026-11-22T18:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=ckEUVyKanhw",
+  "template": "whitebar",
+  "hook": "Isagi sees the whole field",
+  "words": "BLUE LOCK",
+  "title": "Isagi sees the whole field | Blue Lock | #edit",
+  "description": "Isagi sees the whole field. From official Blue Lock clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bluelock2",
+  "tags": [
+   "bluelock2",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "isagi"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "bluelock2_scene2_h264.mp4"
+ },
+ {
+  "id": "20261122-2030-hellsparadise",
+  "slot": "2026-11-22T20:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=JKvNlvV6ZW4",
+  "template": "whitebar",
+  "hook": "Gabimaru fights to go home",
+  "words": "HELL'S PARADISE",
+  "title": "Gabimaru fights to go home | Hell's Paradise | #edit",
+  "description": "Gabimaru fights to go home. From official Hell's Paradise clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #hellsparadise",
+  "tags": [
+   "hellsparadise",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "gabimaru"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "hellsparadise_scene1_h264.mp4"
+ },
+ {
+  "id": "20261122-2230-spyxfamilycodewhite",
+  "slot": "2026-11-22T22:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=TLpqTS1iKSM",
+  "template": "whitebar",
+  "hook": "Loid almost blew his cover",
+  "words": "SPY X FAMILY",
+  "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
+  "description": "Loid almost blew his cover. From official Spy x Family Code White clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #spyxfamilycodewhite",
+  "tags": [
+   "spyxfamilycodewhite",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "anya"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "spyxfamilycodewhite_scene1_h264.mp4"
+ }
+]
