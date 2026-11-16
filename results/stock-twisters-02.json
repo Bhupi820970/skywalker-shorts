@@ -145,5 +145,9 @@
       "low": [],
       "watched_video": true
     }
-  }
+  },
+  "stock_used": true,
+  "assigned_slot": "2026-11-16T11:30:00+05:30",
+  "assigned_result": "20261116-1130-twisters",
+  "used_at": "2026-11-16 11:18 IST"
 }

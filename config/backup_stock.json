@@ -362,7 +362,8 @@
       "topic_id": "backup-fnaf2",
       "slug": "fnaf2",
       "status": "pending",
-      "queued_at": "2026-11-16 08:09 IST"
+      "queued_at": "2026-11-16 08:09 IST",
+      "result_id": "stock-fnaf2-06"
     },
     {
       "id": "stock-furiosa-01",
@@ -470,7 +471,8 @@
       "topic_id": "backup-jurassicworldrebirth",
       "slug": "jurassicworldrebirth",
       "status": "pending",
-      "queued_at": "2026-11-16 08:09 IST"
+      "queued_at": "2026-11-16 08:09 IST",
+      "result_id": "stock-jurassicworldrebirth-06"
     },
     {
       "id": "stock-kalki2898ad-01",
@@ -742,10 +744,13 @@
       "id": "stock-twisters-02",
       "topic_id": "backup-twisters",
       "slug": "twisters",
-      "status": "ready",
+      "status": "used",
       "queued_at": "2026-11-15 13:57 IST",
       "result_id": "stock-twisters-02",
-      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-twisters-02.mp4"
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-twisters-02.mp4",
+      "assigned_slot": "2026-11-16T11:30:00+05:30",
+      "assigned_result": "20261116-1130-twisters",
+      "used_at": "2026-11-16 11:18 IST"
     },
     {
       "id": "stock-venom3-01",
