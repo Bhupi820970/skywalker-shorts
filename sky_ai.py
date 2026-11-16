@@ -256,16 +256,18 @@ Write ONE hook for the white bar on top of the video: 3-7 words, PURE ENGLISH, s
 these shots and lines actually show (a character, a moment, a line, a stake). Look at the faces, action and
 the dialogue first; avoid vague praise like "never backs down" or "changes everything". Pick the best style for this clip:
 curiosity gap, shock, bold claim, emotional line, question, or quoting/teasing the key dialogue (translate to English).
-What works on the fastest-growing edit channels right now: cold-open statements (most common), curiosity gaps,
-contradictions ("He smiled. Then everyone ran."), sharp questions, a quoted/teased line of dialogue, "POV:" or
-"<character> aura"/"<scene> core" style for character edits. Bar text is read in under 1 second: short, concrete words.
-FORBIDDEN: "The reason why...", generic templates, emoji, hashtags, Hindi/Hinglish words.
+What works on our channel and the fastest-growing edit channels right now: a specific character-obsession hook
+("Why Jinshi cannot stop watching her"), a comedy entrance ("Gru arrives to steal the show"), a tight moment hook
+("Watch the last two seconds"), curiosity gaps, contradictions, sharp questions, or a quoted/teased line of dialogue.
+Bar text is read in under 1 second: short, concrete words. Do not write generic "aura" praise.
+FORBIDDEN: "The reason why...", "<Name>'s aura in this scene is ...", repeating the same hook twice in the title,
+generic templates, emoji, hashtags, Hindi/Hinglish words.
 Do NOT start with any of these openers (used recently): {avoid}.
 Then write 5 DIFFERENT title candidates for this Short and rank them by click potential like the top movie/anime
-edit channels (character-focused, emotional, curiosity): styles like "<Character>'s aura in this scene is unreal",
-"POV: you're <character> and ...", "This scene hits different when you know ...", "Nobody noticed <detail> in this scene",
-"<Character> didn't come to play", "The moment <character> ...". Each: pure English, max 62 chars, punchy, names the
-character/actor or film, never "The reason why", no emoji, no hashtags, no plain announcement like "<Actor> is the new <X>".
+edit channels (character-focused, emotional, curiosity): styles like "Why <character> cannot stop watching her",
+"<Character> entering the scene is peak ...", "Watch the last two seconds", "Nobody suspected <character> was this dangerous",
+"<Character> did not expect this from <other>", "The moment <character> ...". Each: pure English, max 62 chars, punchy, names the
+character/actor or film, never "The reason why", never "aura in this scene is", no emoji, no hashtags, no plain announcement like "<Actor> is the new <X>", and do not repeat the hook on both sides of a pipe.
 Give each a click_score 0-100 (honest: would a scroller tap it?). Also a one-sentence English description line about
 this exact moment, and 3 relevant lowercase hashtags (film, character/actor, genre; no '#').
 Return JSON: {{"hook": str, "titles": [{{"title": str, "click_score": n}}, ...5], "line": str,

@@ -105,6 +105,10 @@ def own_performance():
             "slot": x.get("slot"),
         }
         result = by_title.get(_title_key(x.get("title")))
+        title = x.get("title") or ""
+        # Keep pipeline Shorts. Drop off-brand / one-off uploads that would skew learnings.
+        if not result and "#edit" not in title.lower() and "💀" not in title:
+            continue
         measured_drop = False
         if result:
             if not row.get("music"):
@@ -122,7 +126,7 @@ def own_performance():
             clean["drop_t"] = None
         vids.append(clean)
     vids.sort(key=lambda r: -(r.get("views") or 0))
-    return vids[:30]
+    return vids
 
 
 def main():
@@ -141,13 +145,14 @@ screen, title patterns, typical lengths in seconds, edit templates (beat sync, s
 edit songs/audios right now (phonk, Bollywood/Punjabi mashups, slowed+reverb, South mass songs), hashtags, and best
 posting times for India + global audiences. Be specific and current; list song titles with artists.""",
         purpose="trends-research", search=True) or ""
-    prompt = f"""You are the growth strategist for "Skywalker", a YouTube Shorts channel posting 4 movie/trailer edits a day
-(slots 06:30, 09:00, 11:30, 13:30, 16:00, 18:30, 20:30, 22:30 IST; vary Hollywood / Indian / anime / romance across the day). Layout is fixed (white
-English hook bar on top of the uncropped frame, lower-third subtitles, aim about 20-28s, hard publish 18-32s).
+    prompt = f"""You are the growth strategist for "Skywalker", a YouTube Shorts channel posting 8 movie/trailer edits a day
+(slots 06:30, 09:00, 11:30, 13:30, 16:00, 18:30, 20:30, 22:30 IST; vary Hollywood / Bollywood / South / anime / romance across the day). Layout is fixed (white
+English hook bar on top of the uncropped frame, lower-third subtitles, aim 24-29s, hard minimum 18s, never above 32s).
+FORBIDDEN in hook_styles and title_patterns: "The reason why...", "X's aura in this scene is unreal/terrifying", titles that repeat the same hook on both sides of a pipe, generic templated hooks. Prefer character-specific curiosity (like "Why Jinshi cannot stop watching her"), comedy character entrances, and tight moment hooks ("Watch the last two seconds"). Prefer phonk / drift phonk / Brazilian phonk / slowed-reverb / South mass songs already in our library; do not recommend NCS-style instrumentals.
 Fresh research notes:
 {research[:7000]}
 Best-effort YouTube search sample: {json.dumps(sample, ensure_ascii=False)[:2500]}
-Our own videos (views so far; music, energy, drop_t and slot are joined from local render results when stats omit them): {json.dumps(ours, ensure_ascii=False)[:6000]}
+Our own videos (views so far; music, energy, drop_t and slot are joined from local render results when stats omit them): {json.dumps(ours[:30], ensure_ascii=False)[:6000]}
 Songs currently in our music library: {json.dumps(songs, ensure_ascii=False)}
 
 Return JSON with keys:
@@ -166,7 +171,20 @@ Return JSON with keys:
     if not isinstance(data, dict):
         print("::warning::trends synthesis failed; keeping previous trends/latest.json")
         return 0 if (REPO / "trends" / "latest.json").exists() else 1
-    data["best_length_s"] = max(20, min(28, float(data.get("best_length_s") or 24)))
+    data["best_length_s"] = max(24, min(29, float(data.get("best_length_s") or 26)))
+    try:
+        import hook_text  # noqa: WPS433
+        def _clean(seq):
+            out = []
+            for s in seq or []:
+                if hook_text.template_errors(str(s)):
+                    continue
+                out.append(s)
+            return out
+        data["hook_styles"] = _clean(data.get("hook_styles"))
+        data["title_patterns"] = _clean(data.get("title_patterns"))
+    except Exception:
+        pass
     data.update(generated_at=now.strftime("%Y-%m-%d %H:%M IST"), research_chars=len(research),
                 yt_sample=len(sample), own_videos=len(ours))
     (REPO / "trends").mkdir(exist_ok=True)

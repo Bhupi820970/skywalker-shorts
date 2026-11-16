@@ -96,6 +96,10 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
             sc += 12
         if market and market != "IN" and is_in:
             sc -= 12
+        # Owner rule: prefer phonk/edit songs, not NCS-style instrumentals even if one scored well.
+        fn = (t.get("file") or "").lower()
+        if fn.startswith("ncs_") or "nocopyrightsounds" in (t.get("credit") or "").lower():
+            sc -= 20
         name = f"{t.get('title','')} {t.get('artist','')}".lower()
         if any(k and (k in name or name.split(' (')[0] in k) for k in picks):
             sc += 8

@@ -56,12 +56,28 @@ def hook_language_errors(text: str, *, label: str = "hook") -> list[str]:
 
 
 # Owner rule (12 Nov 2026 night): no fixed "The reason why ..." template in the hook bar or title.
+# 16 Nov 2026 review: "X's aura in this scene is ..." became a new repeated template and clustered
+# around ~1k views; ban that phrase too. Also reject titles that paste the same hook twice.
 TEMPLATE_RE = re.compile(r"^\W*(the\s+)?reasons?\s+why\b", re.I)
+AURA_TEMPLATE_RE = re.compile(r"\baura in this scene is\b", re.I)
+PIPE_SPLIT = re.compile(r"\s*\|\s*")
 
 
 def template_errors(text: str, *, label: str = "hook") -> list[str]:
+    errors: list[str] = []
     if TEMPLATE_RE.search(text or ""):
-        return [f"{label} uses the banned 'The reason why' template"]
+        errors.append(f"{label} uses the banned 'The reason why' template")
+    if AURA_TEMPLATE_RE.search(text or ""):
+        errors.append(f"{label} uses the banned 'aura in this scene is' template")
+    return errors
+
+
+def duplicate_title_errors(item: dict) -> list[str]:
+    """Flag '<hook> | <hook> | #edit' titles where both sides of the pipe are the same."""
+    title = item.get("title") or ""
+    parts = [p.strip() for p in PIPE_SPLIT.split(title) if p.strip() and not p.strip().startswith("#")]
+    if len(parts) >= 2 and parts[0].casefold() == parts[1].casefold():
+        return ["title repeats the same hook on both sides of the pipe"]
     return []
 
 
@@ -84,6 +100,7 @@ def check_item_hook_fields(item: dict) -> list[str]:
         text = item.get(key) or ""
         errors.extend(hook_language_errors(text, label=key))
         errors.extend(template_errors(text, label=key))
+    errors.extend(duplicate_title_errors(item))
     return errors
 
 

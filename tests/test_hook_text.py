@@ -59,6 +59,25 @@ def test_accepts_english_hooks():
         assert not errs, f"should accept {text!r}: {errs}"
 
 
+
+
+def test_rejects_aura_template():
+    errs = hook_text.template_errors("Ashwatthama's aura in this scene is unreal", label="title")
+    assert any("aura in this scene is" in e for e in errs)
+    assert not hook_text.template_errors("Ashwatthama awakens to challenge the god")
+
+
+def test_rejects_duplicate_pipe_title():
+    errs = hook_text.duplicate_title_errors({
+        "hook": "The greatest hitman retired for love",
+        "title": "The greatest hitman retired for love | The greatest hitman retired for love | #edit",
+    })
+    assert any("repeats" in e for e in errs)
+    assert not hook_text.duplicate_title_errors({
+        "hook": "The hunter became prey",
+        "title": "The hunter became prey | A young Predator hunts alone | #edit",
+    })
+
 def test_item_checks_hook_and_title():
     bad = {
         "hook": "The reason why SRK ka Jawan still hits different",
@@ -70,8 +89,13 @@ def test_item_checks_hook_and_title():
     assert any("banned" in e for e in errs)
     hook_text.require_english_hook({
         "hook": "Doctor Doom terrifies every Avenger",
-        "title": "Doctor Doom terrifies every Avenger 💀 | #edit",
+        "title": "Doctor Doom terrifies every Avenger 💀 | Doom arrives | #edit",
     })
+    dup = hook_text.check_item_hook_fields({
+        "hook": "He makes even fear fear him",
+        "title": "He makes even fear fear him | He makes even fear fear him | #edit",
+    })
+    assert any("repeats" in e for e in dup)
 
 
 def _rendered_done(item_id: str) -> bool:

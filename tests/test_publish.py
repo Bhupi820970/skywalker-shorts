@@ -116,7 +116,11 @@ def test_own_performance_joins_render_facts():
     from pathlib import Path
     n_stats = len(json.loads(Path("stats/latest.json").read_text()).get("videos") or {})
     rows = trends.own_performance()
-    assert len(rows) == n_stats and n_stats >= 12
+    assert 12 <= len(rows) <= n_stats
+    # Off-brand / one-off uploads must not steer hook and song learnings.
+    blob = " ".join((r.get("title") or "") for r in rows)
+    assert "Jensen Huang" not in blob
+    assert "CONCESSIONS" not in blob
     # Music/energy/drop/slot are joined from results; views come from live stats.
     hay = next(r for r in rows if "Haymitch" in (r.get("title") or ""))
     assert hay["views"] >= 1000

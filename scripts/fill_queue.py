@@ -14,6 +14,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
+import hook_text  # noqa: E402
 import perf  # noqa: E402
 import slot_times  # noqa: E402
 
@@ -70,7 +71,7 @@ def _make_item(day: str, hhmm: str, topic: dict) -> dict:
         "title": topic["title"],
         "description": topic["description"],
         "tags": list(topic.get("tags") or [])[:10],
-        "target_dur": int(topic.get("target_dur") or 26),
+        "target_dur": max(24, min(29, int(topic.get("target_dur") or 26))),
         "status": "queued",
         "market": topic.get("market") or "US/UK",
         "content_kind": topic.get("content_kind") or "trailer",
@@ -78,6 +79,7 @@ def _make_item(day: str, hhmm: str, topic: dict) -> dict:
     if asset:
         url = f"{GH}/{asset}"
         item["fallback_mp4"] = [url]
+        item["sources"] = [url]
         item["fallback_release"] = "sources"
         item["fallback_asset"] = asset
     if topic.get("alt_source_urls"):
@@ -118,14 +120,21 @@ def fill_day(day: str, catalog: list[dict], used: set[str]) -> int:
         hhmm = iso[11:16]
         topic = pool[pi % len(pool)]
         pi += 1
-        # avoid same slug twice same day
+        # avoid same slug twice same day, and skip banned hook/title templates
         day_slugs = {"-".join(it["id"].split("-")[2:]) for it in items if it.get("id")}
+        item = None
         tries = 0
-        while topic["slug"] in day_slugs and tries < len(pool):
+        while tries < len(pool):
+            cand = _make_item(day, hhmm, topic)
+            bad = topic["slug"] in day_slugs or hook_text.check_item_hook_fields(cand)
+            if not bad:
+                item = cand
+                break
             topic = pool[pi % len(pool)]
             pi += 1
             tries += 1
-        item = _make_item(day, hhmm, topic)
+        if item is None:
+            continue
         items.append(item)
         used.add(topic["slug"])
         added += 1
@@ -147,8 +156,8 @@ def main() -> int:
         return 1
     used = _used_slugs()
     total = 0
-    # Always cover through min_ahead_days and explicitly Nov 17-19 if still short
-    targets = sorted(set(days_ahead() + ["2026-11-17", "2026-11-18", "2026-11-19"]))
+    # Always cover through min_ahead_days (plus one extra day of buffer).
+    targets = days_ahead()
     for day in targets:
         if day < "2026-11-14":
             continue

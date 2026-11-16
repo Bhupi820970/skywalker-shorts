@@ -1,20 +1,20 @@
 {
  "hook_styles": [
-  "The reason why he changed 💀",
-  "Why everyone fears this character 💀",
-  "The moment he lost it 💀",
-  "This scene changed cinema forever 💀",
-  "Why this villain is iconic 💀",
-  "The truth behind this scene 💀",
-  "He was never the same 💀"
+  "Why Jinshi cannot stop watching her",
+  "Gru arrives to steal the show",
+  "Watch the last two seconds",
+  "Nobody suspected Judy was this dangerous",
+  "Logan finally met his match",
+  "Ethan Hunt has reached his limit",
+  "The hunter became prey"
  ],
  "title_patterns": [
-  "<hook> 💀 | <character name> enters the scene | #edit",
-  "<hook> 💀 | <movie title> best moment | #edit",
-  "<hook> 💀 | <character> vs everyone | #edit",
-  "<hook> 💀 | <movie title> climax | #edit"
+  "<specific character moment> #<film> #<character> #<genre>",
+  "<hook> | <character names> | #edit",
+  "Nobody suspected <character> was this dangerous #<film> #<character>",
+  "<character> did not expect this from <other> #<film> #<franchise>"
  ],
- "best_length_s": 24.0,
+ "best_length_s": 26.0,
  "posting_times_ist": [
   "06:30",
   "09:00",
@@ -32,16 +32,14 @@
   "Include a call to action like 'Rate this 1-10' to boost engagement."
  ],
  "song_picks": [
-  "METAMORPHOSIS - INTERWORLD",
-  "MURDER IN MY MIND - Kordhell",
-  "WORTH NOTHING (feat. Oliver Tree) - PHONK DRIFT",
-  "Close Eyes - DVRST",
-  "After Dark - Mr.Kitty",
-  "Hukum - Anirudh Ravichander",
-  "Fear Song - Anirudh Ravichander",
-  "MONTAGEM FUJIN (Super Slowed) - dj Samir, Mxng0, Nulteex",
-  "Can You Feel My Heart - Bring Me The Horizon",
-  "Memory Reboot (Slowed) - VØJ, Narvent"
+  "Memory Reboot (Slowed)",
+  "Goofy Ahh Phonk [Full Version]",
+  "MURDER IN MY MIND",
+  "INTERWORLD RAPTURE (PHONK)",
+  "METAMORPHOSIS",
+  "Close Eyes",
+  "WORTH NOTHING (feat. Oliver Tree)",
+  "MONTAGEM FUJIN (Super Slowed)"
  ],
  "songs_to_add": [
   "Sahara - Hensonn",
@@ -67,11 +65,12 @@
   "edit"
  ],
  "avoid": [
-  "Long intros before the hook appears.",
-  "Using low-energy music for high-intensity action scenes.",
-  "Over-editing with too many transitions that distract from the scene.",
-  "Publishing content without a clear 'drop' moment synced to the beat.",
-  "Using generic or boring fonts for the hook bar."
+  "Templated hooks or titles starting with 'The reason why...'.",
+  "Repeating '<Name>'s aura in this scene is unreal/terrifying' as a title formula.",
+  "Titles that paste the same hook on both sides of the pipe.",
+  "NCS-style instrumentals; prefer phonk, slowed-reverb, or mass beat-drop songs.",
+  "YouTube-only sources with no pre-downloaded official fallback (runners get bot-checked).",
+  "Long intros before the hook appears, or music sitting over the dialogue act."
  ],
  "top_channels": [
   "Aditya Movies - Masterclass in high-retention South Indian action cuts.",
@@ -81,14 +80,15 @@
   "FDR Edit - Effective use of short, punchy evolution-style edits."
  ],
  "our_insights": [
-  "High-energy edits with a clear drop (11-12s) perform 10x better than low-energy ones.",
-  "Character-focused titles ('The reason why...') drive significantly more clicks than generic descriptive titles.",
-  "Early morning slots (06:30) are currently our highest performing, likely due to fresh feed algorithm pushes.",
-  "Consistency in the 'white hook bar' layout is building brand recognition; don't change the visual format.",
-  "Avoid 'filler' edits; our lowest performing videos lack a clear emotional hook or high-impact scene."
+  "The best pipeline Short since the last review is the Apothecary Diaries edit (Why Jinshi cannot stop watching her, Memory Reboot, 29s, 17:30 IST) with about 19k views.",
+  "Comedy character entrances also outperform generic action: Despicable Me / Gru with Goofy Ahh Phonk did about 4.3k; Jawan also did well.",
+  "24-29 second cuts are the sweet spot. Mid-pack videos using the 'aura in this scene' title formula stall around 1k views.",
+  "Afternoon and evening slots currently outperform early morning; 06:30 is solid but not the top slot.",
+  "Trailers without a pre-hosted official fallback fail on GitHub runners because YouTube bot-checks yt-dlp."
  ],
- "generated_at": "2026-11-13 12:57 IST",
+ "generated_at": "2026-11-16 11:20 IST",
  "research_chars": 0,
  "yt_sample": 24,
- "own_videos": 12
+ "own_videos": 12,
+ "note": "Updated 16 Nov 2026 growth review from own stats (Nov 15 snapshot) plus pipeline results; hook/title templates banned."
 }
