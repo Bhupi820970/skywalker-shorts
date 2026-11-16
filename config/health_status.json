@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-16 12:29 IST",
-  "slots_checked": 11,
+  "at": "2026-11-16 12:30 IST",
+  "slots_checked": 12,
   "ready": [
     {
       "slot": "2026-11-16T11:30:00+05:30",
@@ -55,6 +55,11 @@
     {
       "slot": "2026-11-17T11:30:00+05:30",
       "id": "20261117-1130-gladiator2",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-17T12:30:00+05:30",
+      "id": "20261117-1230-saiyaara",
       "how": "queued+fallback"
     }
   ],
