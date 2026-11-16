@@ -381,6 +381,13 @@
       "result_id": "stock-fnaf2-06"
     },
     {
+      "id": "stock-fnaf2-07",
+      "topic_id": "backup-fnaf2",
+      "slug": "fnaf2",
+      "status": "pending",
+      "queued_at": "2026-11-16 14:09 IST"
+    },
+    {
       "id": "stock-furiosa-01",
       "topic_id": "backup-furiosa",
       "slug": "furiosa",
@@ -440,6 +447,13 @@
       "status": "failed",
       "queued_at": "2026-11-16 02:01 IST",
       "result_id": "stock-gladiator2-05"
+    },
+    {
+      "id": "stock-gladiator2-06",
+      "topic_id": "backup-gladiator2",
+      "slug": "gladiator2",
+      "status": "pending",
+      "queued_at": "2026-11-16 14:09 IST"
     },
     {
       "id": "stock-jurassicworldrebirth-01",
