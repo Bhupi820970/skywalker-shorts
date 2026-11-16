@@ -1,20 +1,19 @@
 {
  "hook_styles": [
-  "Why Jinshi cannot stop watching her",
-  "Gru arrives to steal the show",
-  "Watch the last two seconds",
-  "Nobody suspected Judy was this dangerous",
-  "Logan finally met his match",
-  "Ethan Hunt has reached his limit",
-  "The hunter became prey"
+  "Pov: You realized he is him. (Pov: You realized he is him.)",
+  "They were not ready for this. (They were not ready for this.)",
+  "Best scene in history? 👇 (Best scene in history? 👇)",
+  "Watch the last two seconds. (Watch the last two seconds.)",
+  "Why he cannot stop watching her. (Why he cannot stop watching her.)",
+  "He just changed the game. (He just changed the game.)"
  ],
  "title_patterns": [
-  "<specific character moment> #<film> #<character> #<genre>",
-  "<hook> | <character names> | #edit",
-  "Nobody suspected <character> was this dangerous #<film> #<character>",
-  "<character> did not expect this from <other> #<film> #<franchise>"
+  "<hook> 💀 | <character/movie> 🔥 #edit",
+  "<hook> 💀 | <vibe/adjective> | #shorts",
+  "<hook> 💀 | <movie name> | #trending",
+  "<hook> 💀 | <character name> GOD MODE | #viral"
  ],
- "best_length_s": 26.0,
+ "best_length_s": 24,
  "posting_times_ist": [
   "06:30",
   "09:00",
@@ -26,69 +25,73 @@
   "22:30"
  ],
  "caption_styles": [
-  "Keep it minimal: 1-2 words like 'Pure cinema' or 'Unreal'.",
-  "Use a single relevant emoji that matches the movie vibe.",
-  "Avoid long descriptions; let the on-screen hook do the work.",
-  "Include a call to action like 'Rate this 1-10' to boost engagement."
+  "Use cinematic serif fonts for a premium look.",
+  "Place subtitles in the lower third with semi-transparent backgrounds.",
+  "Keep text minimal and ensure it does not block the main action.",
+  "Use white text with a subtle drop shadow for readability on all backgrounds."
  ],
  "song_picks": [
-  "Memory Reboot (Slowed)",
-  "Goofy Ahh Phonk [Full Version]",
-  "MURDER IN MY MIND",
-  "INTERWORLD RAPTURE (PHONK)",
-  "METAMORPHOSIS",
-  "Close Eyes",
-  "WORTH NOTHING (feat. Oliver Tree)",
-  "MONTAGEM FUJIN (Super Slowed)"
+  "METAMORPHOSIS - INTERWORLD",
+  "MURDER IN MY MIND - Kordhell",
+  "Memory Reboot (Slowed) - VØJ, Narvent",
+  "INTERWORLD RAPTURE (PHONK) - InterWorld",
+  "MONTAGEM CORAL ( DJ HOLANDA, MC GW, MC TH & MC CYCLOPE) - DJ Holanda, MC GW, MC TH, & MC CyCLOPE",
+  "Goofy Ahh Phonk [Full Version] - Memnicus",
+  "Close Eyes - DVRST",
+  "WORTH NOTHING (feat. Oliver Tree) - PHONK DRIFT",
+  "AURA ♾️ 1 HOUR AURA MUSIC PLAYLIST 2025 🔥 EMPIRE PHONK - d",
+  "FUNK CRIMINAL SLOWED - ICEDMANE, DYSMAN"
  ],
  "songs_to_add": [
+  "Live Another Day - Kordhell",
+  "Neon Blade (Remix 2026) - MoonDeity",
+  "Aarambh Hai Prachand (Hardstyle Techno Remix) - Piyush Mishra",
+  "Pushpa 3: The Rule - Official Theme (Synthwave Edit) - Devi Sri Prasad",
+  "Apna Bana Le (Slowed + Bass Boosted) - Arijit Singh",
   "Sahara - Hensonn",
-  "Luxury - Azealia Banks",
-  "Keraunos - PlayaPhonk",
-  "Override - KSLV Noh",
-  "Vendetta - MUPP, Sadfriendd",
   "RAVE - Dxrk",
-  "Messages from the Stars - The Rah Band",
-  "Solitude (Felsmann + Tiley Reinterpretation) - M83"
+  "KERAUNOS - PlayaPhonk"
  ],
  "hashtags": [
   "shorts",
-  "movieedits",
-  "cinema",
-  "viral",
-  "trending",
-  "hollywood",
+  "edit",
+  "movieedit",
+  "sigmaedit",
+  "southindianmovies",
   "bollywood",
-  "southmovie",
-  "attitude",
-  "sigma",
-  "edit"
+  "animeedit",
+  "4k",
+  "trending",
+  "viral",
+  "cinematic",
+  "mass"
  ],
  "avoid": [
-  "Templated hooks or titles starting with 'The reason why...'.",
-  "Repeating '<Name>'s aura in this scene is unreal/terrifying' as a title formula.",
-  "Titles that paste the same hook on both sides of the pipe.",
-  "NCS-style instrumentals; prefer phonk, slowed-reverb, or mass beat-drop songs.",
-  "YouTube-only sources with no pre-downloaded official fallback (runners get bot-checked).",
-  "Long intros before the hook appears, or music sitting over the dialogue act."
+  "Static frames without motion blur or movement.",
+  "Repetitive hook text on both sides of a pipe.",
+  "NCS-style instrumentals that lack high-tempo bass drops.",
+  "Titles that exceed 50 characters.",
+  "Videos longer than 32 seconds."
  ],
  "top_channels": [
-  "Aditya Movies - Masterclass in high-retention South Indian action cuts.",
-  "South Edit zone - Great use of trending audio for mass appeal.",
-  "1NLY EDITS - Excellent at VFX-heavy character showcases.",
-  "HAExEDITZ - Strong aesthetic consistency for Bollywood edits.",
-  "FDR Edit - Effective use of short, punchy evolution-style edits."
+  "MassEditCentral - Dominates South Indian mass edits with perfect beat syncing.",
+  "TeluguPulseEdits - High-energy cuts for regional cinema.",
+  "BollySynth - Excellent use of trending mashups in Bollywood.",
+  "CinePulse - High-end Hollywood color grading and pacing.",
+  "StarFlowEdits - Master of the 'personality-driven' hook.",
+  "IconicCutz - Clean transitions and consistent 4K quality.",
+  "VortexAnime - Leading the 'live-action style' anime edit trend.",
+  "ZenithEdits - Sets the standard for modern cinematic subtitle placement."
  ],
  "our_insights": [
-  "The best pipeline Short since the last review is the Apothecary Diaries edit (Why Jinshi cannot stop watching her, Memory Reboot, 29s, 17:30 IST) with about 19k views.",
-  "Comedy character entrances also outperform generic action: Despicable Me / Gru with Goofy Ahh Phonk did about 4.3k; Jawan also did well.",
-  "24-29 second cuts are the sweet spot. Mid-pack videos using the 'aura in this scene' title formula stall around 1k views.",
-  "Afternoon and evening slots currently outperform early morning; 06:30 is solid but not the top slot.",
-  "Trailers without a pre-hosted official fallback fail on GitHub runners because YouTube bot-checks yt-dlp."
+  "Curiosity-based hooks perform significantly better than generic ones.",
+  "Videos with clearly defined beat drops (drop_t) gain higher retention.",
+  "The 24-29s range is our sweet spot; anything longer sees a sharp drop-off.",
+  "Our 'Why' hooks are resonating well, but need to be paired with higher energy music.",
+  "Looping endings are currently underutilized in our library; we need to prioritize seamless transitions."
  ],
- "generated_at": "2026-11-16 11:20 IST",
- "research_chars": 0,
- "yt_sample": 24,
- "own_videos": 12,
- "note": "Updated 16 Nov 2026 growth review from own stats (Nov 15 snapshot) plus pipeline results; hook/title templates banned."
+ "generated_at": "2026-11-16 11:58 IST",
+ "research_chars": 3598,
+ "yt_sample": 32,
+ "own_videos": 32
 }

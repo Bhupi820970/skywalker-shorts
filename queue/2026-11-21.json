@@ -1,0 +1,268 @@
+[
+ {
+  "id": "20261121-0630-haikyuudumpster",
+  "slot": "2026-11-21T06:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
+  "template": "whitebar",
+  "hook": "The rematch everyone waited for",
+  "words": "HAIKYU",
+  "title": "The rematch everyone waited for | Haikyu | #edit",
+  "description": "The rematch everyone waited for. From official Haikyu clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #haikyuudumpster",
+  "tags": [
+   "haikyuudumpster",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "hinata"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/haikyuudumpster_trailer_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "haikyuudumpster_scene1_h264.mp4"
+ },
+ {
+  "id": "20261121-0900-dandadan",
+  "slot": "2026-11-21T09:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+  "template": "whitebar",
+  "hook": "Okarun was never ready for this",
+  "words": "DAN DA DAN",
+  "title": "Okarun was never ready for this | Dandadan | #edit",
+  "description": "Okarun was never ready for this. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
+  "tags": [
+   "dandadan",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "okarun"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_trailer_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dandadan_scene1_h264.mp4"
+ },
+ {
+  "id": "20261121-1130-drstone",
+  "slot": "2026-11-21T11:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=j8YijNavM7Y",
+  "template": "whitebar",
+  "hook": "Senku rebuilt the world with science",
+  "words": "DR. STONE",
+  "title": "Senku rebuilt the world with science | Dr. Stone | #edit",
+  "description": "Senku rebuilt the world with science. From official Dr. Stone clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #drstone",
+  "tags": [
+   "drstone",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "senku"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_trailer_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "drstone_scene1_h264.mp4"
+ },
+ {
+  "id": "20261121-1330-yourname",
+  "slot": "2026-11-21T13:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
+  "template": "whitebar",
+  "hook": "He forgot her name again",
+  "words": "YOUR NAME",
+  "title": "He forgot her name again | Your Name | #edit",
+  "description": "He forgot her name again. From official Your Name clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #yourname",
+  "tags": [
+   "yourname",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "taki"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_trailer_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "yourname_scene1_h264.mp4"
+ },
+ {
+  "id": "20261121-1600-boyandheron",
+  "slot": "2026-11-21T16:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
+  "template": "whitebar",
+  "hook": "The heron knew his secret",
+  "words": "THE BOY AND THE HERON",
+  "title": "The heron knew his secret | The Boy and the Heron | #edit",
+  "description": "The heron knew his secret. From official The Boy and the Heron clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #boyandheron",
+  "tags": [
+   "boyandheron",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "mahito"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "boyandheron_scene1_h264.mp4"
+ },
+ {
+  "id": "20261121-1830-dbsuperhero",
+  "slot": "2026-11-21T18:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=fAfLl6_0h7Y",
+  "template": "whitebar",
+  "hook": "Gohan woke up the beast",
+  "words": "DRAGON BALL SUPER",
+  "title": "Gohan woke up the beast | Dragon Ball Super | #edit",
+  "description": "Gohan woke up the beast. From official Dragon Ball Super clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dbsuperhero",
+  "tags": [
+   "dbsuperhero",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "gohan"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_trailer_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dbsuperhero_scene1_h264.mp4"
+ },
+ {
+  "id": "20261121-2030-mashle",
+  "slot": "2026-11-21T20:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
+  "template": "whitebar",
+  "hook": "Mash breaks magic with muscles",
+  "words": "MASHLE",
+  "title": "Mash breaks magic with muscles | Mashle | #edit",
+  "description": "Mash breaks magic with muscles. From official Mashle clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mashle",
+  "tags": [
+   "mashle",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "mash"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mashle_trailer_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mashle_trailer_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "mashle_trailer_h264.mp4"
+ },
+ {
+  "id": "20261121-2230-dragonballdaima",
+  "slot": "2026-11-21T22:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+  "template": "whitebar",
+  "hook": "Goku got small, not weak",
+  "words": "DRAGON BALL DAIMA",
+  "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+  "description": "Goku got small, not weak. From official Dragon Ball Daima clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dragonballdaima",
+  "tags": [
+   "dragonballdaima",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "goku"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dragonballdaima_scene1_h264.mp4"
+ }
+]
