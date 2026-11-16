@@ -68,7 +68,7 @@
       "id": "stock-alienromulus-08",
       "topic_id": "backup-alienromulus",
       "slug": "alienromulus",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 05:48 IST",
       "result_id": "stock-alienromulus-08"
     },
@@ -166,7 +166,7 @@
       "id": "stock-chainsawman-07",
       "topic_id": "backup-chainsawman",
       "slug": "chainsawman",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 05:48 IST",
       "result_id": "stock-chainsawman-07"
     },
@@ -229,7 +229,7 @@
       "id": "stock-civilwar-07",
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 05:58 IST",
       "result_id": "stock-civilwar-07"
     },
@@ -376,7 +376,7 @@
       "id": "stock-fnaf2-06",
       "topic_id": "backup-fnaf2",
       "slug": "fnaf2",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 08:09 IST",
       "result_id": "stock-fnaf2-06"
     },
@@ -437,7 +437,7 @@
       "id": "stock-gladiator2-05",
       "topic_id": "backup-gladiator2",
       "slug": "gladiator2",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 02:01 IST",
       "result_id": "stock-gladiator2-05"
     },
@@ -485,7 +485,7 @@
       "id": "stock-jurassicworldrebirth-06",
       "topic_id": "backup-jurassicworldrebirth",
       "slug": "jurassicworldrebirth",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 08:09 IST",
       "result_id": "stock-jurassicworldrebirth-06"
     },
@@ -623,7 +623,7 @@
       "id": "stock-onepiece-05",
       "topic_id": "backup-onepiece",
       "slug": "onepiece",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 11:19 IST",
       "result_id": "stock-onepiece-05"
     },
@@ -758,7 +758,7 @@
       "id": "stock-tronares-03",
       "topic_id": "backup-tronares",
       "slug": "tronares",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 06:29 IST",
       "result_id": "stock-tronares-03"
     },
