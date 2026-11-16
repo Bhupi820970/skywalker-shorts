@@ -4,7 +4,7 @@ name: stats
 # secret exists, else Buffer metrics + best-effort public scrape).
 on:
   schedule:
-    - cron: "15 3 * * *"   # 08:45 IST
+    - cron: "17 3 * * *"   # 08:47 IST (box timer dispatches if this is skipped)
   workflow_dispatch: {}
 
 permissions:

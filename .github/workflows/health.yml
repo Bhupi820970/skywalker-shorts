@@ -2,9 +2,14 @@ name: health
 
 # Verify next 24h official (+ extra queue) slots are covered; assign ready stock to failed/missing/imminent slots;
 # keep backup pool healthy; refill pre-rendered stock (2/run) until the target of 30; auto-fill queue.
+# GitHub's schedule is best-effort and was firing only every few hours (13-16 Nov), so the box
+# also dispatches this via /home/box/skywalker-timer when the newest run is >28 min old.
+# Double triggers are harmless: one concurrency group, and checkout uses latest main (not the
+# stale trigger SHA) so a queued run sees the previous run's assignments.
 on:
   schedule:
     - cron: "5,35 * * * *"
+    - cron: "19,49 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -21,6 +26,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -28,6 +35,7 @@ jobs:
         id: h
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           python3 scripts/fill_queue.py || true
           set +e

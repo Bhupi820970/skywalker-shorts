@@ -50,6 +50,8 @@ jobs:
       no_publish: ${{ steps.flags.outputs.no_publish }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - id: p
         env:
           IDS: ${{ github.event.inputs.ids }}
