@@ -1,0 +1,181 @@
+{
+  "id": "stock-wickedforgood-02",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-16 14:45 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43831740929",
+  "slot": null,
+  "title": "Elphaba had to let go | Elphaba and Fiyero's last choice | #edit",
+  "hook": "Elphaba had to let go",
+  "description": "Elphaba had to let go. From the official Wicked: For Good trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #wicked",
+  "tags": [
+    "wicked",
+    "wickedforgood",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Elphaba had to let go",
+    "title": "Elphaba had to let go | Elphaba and Fiyero's last choice | #edit",
+    "description": "Elphaba had to let go. From the official Wicked: For Good trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #wicked",
+    "tags": [
+      "wicked",
+      "wickedforgood",
+      "edit",
+      "shorts",
+      "trending"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.9,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-wickedforgood",
+  "stock": true,
+  "stock_topic": "backup-wickedforgood",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wickedforgood_trailer_h264.mp4",
+      "music": "sw_basscrusaderz2.mp3"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-wickedforgood-02.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wickedforgood_trailer_h264.mp4",
+  "music": "sw_basscrusaderz2.mp3",
+  "music_credit": "Song: praetorian_z@hotmail.com - BassCrusaderz (http://creativecommons.org/licenses/by/3.0/)",
+  "description_final": "Elphaba had to let go. From the official Wicked: For Good trailer. Edit by Skywalker.\nSource: official trailer.\n#edit #shorts #wicked\n\nMusic:\nSong: praetorian_z@hotmail.com - BassCrusaderz (http://creativecommons.org/licenses/by/3.0/)",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.8,
+      "audio": true
+    },
+    "lufs": -14.3,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.5,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards, including the correct layout, clean audio, and appropriate hook."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  }
+}
