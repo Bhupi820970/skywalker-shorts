@@ -171,6 +171,13 @@
       "result_id": "stock-chainsawman-07"
     },
     {
+      "id": "stock-chainsawman-08",
+      "topic_id": "backup-chainsawman",
+      "slug": "chainsawman",
+      "status": "pending",
+      "queued_at": "2026-11-16 11:53 IST"
+    },
+    {
       "id": "stock-civilwar-01",
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
@@ -765,6 +772,13 @@
       "assigned_slot": "2026-11-16T11:30:00+05:30",
       "assigned_result": "20261116-1130-twisters",
       "used_at": "2026-11-16 11:18 IST"
+    },
+    {
+      "id": "stock-twisters-03",
+      "topic_id": "backup-twisters",
+      "slug": "twisters",
+      "status": "pending",
+      "queued_at": "2026-11-16 11:53 IST"
     },
     {
       "id": "stock-venom3-01",
