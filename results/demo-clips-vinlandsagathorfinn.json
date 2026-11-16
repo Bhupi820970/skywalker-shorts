@@ -1,0 +1,143 @@
+{
+  "id": "demo-clips-vinlandsagathorfinn",
+  "status": "retry_queued",
+  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: gemini QC reject: The video contains hard-coded dialogue subtitles from the source material, which violates the requirement for a song-only edit with no dialogue subtitles.; The video contains a persistent 'crunchyroll' watermark in the top left corner, which violates the requirement for clean footage.",
+  "at": "2026-11-16 13:30 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43821875665",
+  "slot": "2026-11-16T13:00:00+05:30",
+  "title": "Thorfinn is not interested in their war #vinlandsaga #thorfinn #anime",
+  "hook": "I have no time for games",
+  "description": "I have no time for games. Thorfinn dismisses a group of warriors by declaring he has no time for their conflict. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #anime #shorts #edit",
+  "tags": [
+    "vinlandsaga",
+    "thorfinn",
+    "anime",
+    "askeladd",
+    "animeedit",
+    "vinland",
+    "ihavenoenemies"
+  ],
+  "queue_meta": {
+    "hook": "Why Thorfinn dropped his daggers forever",
+    "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+    "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+    "tags": [
+      "vinlandsaga",
+      "thorfinn",
+      "askeladd",
+      "animeedit",
+      "vinland",
+      "anime",
+      "ihavenoenemies"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "character-focused",
+  "title_candidates": [
+    {
+      "title": "Thorfinn is not interested in their war",
+      "click_score": 92.0
+    },
+    {
+      "title": "Watch how Thorfinn silences the entire room",
+      "click_score": 88.0
+    },
+    {
+      "title": "Nobody expected Thorfinn to be this cold",
+      "click_score": 85.0
+    },
+    {
+      "title": "Thorfinn did not hesitate to walk away",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment Thorfinn realized he is free",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.0,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.3,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 10.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.4,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+      "music": "sw_murderinmymind.mp3"
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+      "music": "sw_murderinmymind.mp3"
+    },
+    {
+      "attempt": 3,
+      "ok": false,
+      "error": "gemini QC reject: The video contains hard-coded dialogue subtitles from the source material, which violates the requirement for a song-only edit with no dialogue subtitles.; The video contains a persistent 'crunchyroll' watermark in the top left corner, which violates the requirement for clean footage.",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+      "music": "sw_interworldrapturephonk.mp3"
+    }
+  ],
+  "last_error": "gemini QC reject: The video contains hard-coded dialogue subtitles from the source material, which violates the requirement for a song-only edit with no dialogue subtitles.; The video contains a persistent 'crunchyroll' watermark in the top left corner, which violates the requirement for clean footage."
+}
