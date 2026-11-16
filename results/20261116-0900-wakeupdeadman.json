@@ -1,9 +1,9 @@
 {
   "id": "20261116-0900-wakeupdeadman",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-16 02:23 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43758045514",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): only 13.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-16 06:15 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43779602004",
   "slot": "2026-11-16T09:00:00+05:30",
   "title": "This crime appears perfectly impossible | This crime appears perfectly impossible | #edit",
   "hook": "This crime appears perfectly impossible",
@@ -27,7 +27,7 @@
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 16.8,
+      "s": 30.1,
       "ok": true
     },
     {
@@ -46,43 +46,13 @@
       "purpose": "scenes",
       "model": "gemini-flash-latest",
       "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 11.0,
+      "s": 3.1,
       "ok": true
     }
   ],
@@ -90,30 +60,30 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 13.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 15.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wakeupdeadman_trailer_h264.mp4",
-      "music": "sw_worthnothingfeatolivertr.mp3"
+      "music": "sw_pkonkbetapkonkphenomenon.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 13.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 15.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wakeupdeadman_trailer_h264.mp4",
-      "music": "sw_worthnothingfeatolivertr.mp3"
+      "music": "sw_pkonkbetapkonkphenomenon.mp3"
     },
     {
       "attempt": 3,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 13.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wakeupdeadman_trailer_h264.mp4",
-      "music": "sw_interworldrapturephonk.mp3"
+      "music": "sw_aura1hourauramusicplayli.mp3"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": "pipeline/QA failed (exit 1): only 13.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
 }
