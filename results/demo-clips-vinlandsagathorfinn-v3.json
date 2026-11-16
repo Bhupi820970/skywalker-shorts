@@ -2,20 +2,19 @@
   "id": "demo-clips-vinlandsagathorfinn-v3",
   "status": "done",
   "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok [no-publish]",
-  "at": "2026-11-16 19:50 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43879068511",
+  "at": "2026-11-17 01:15 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43938976149",
   "slot": "2026-12-01T13:00:00+05:30",
-  "title": "Watch the last two seconds | Vinland Saga #vinlandsaga #thorfinn #movieedit",
-  "hook": "Watch the last two seconds",
-  "description": "Watch the last two seconds. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #movieedit #shorts #edit",
+  "title": "Nobody suspected Thorfinn was this dangerous #vinlandsaga #thorfinn #anime",
+  "hook": "They called him just a child",
+  "description": "They called him just a child. Askeladd orders a raid from the river while Thorfinn scales the enemy ramparts to cut down soldiers alone. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #anime #shorts #edit",
   "tags": [
     "vinlandsaga",
     "thorfinn",
-    "movieedit",
+    "anime",
     "askeladd",
     "animeedit",
     "vinland",
-    "anime",
     "ihavenoenemies"
   ],
   "queue_meta": {
@@ -33,15 +32,36 @@
     ]
   },
   "gemini_meta": true,
-  "hook_source": "fallback",
-  "hook_style": null,
-  "title_candidates": null,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Nobody suspected Thorfinn was this dangerous",
+      "click_score": 94.0
+    },
+    {
+      "title": "Askeladd unleashing Thorfinn was terrifying",
+      "click_score": 90.0
+    },
+    {
+      "title": "The moment Thorfinn leaped into the battle",
+      "click_score": 86.0
+    },
+    {
+      "title": "Watch Thorfinn take on the entire garrison",
+      "click_score": 82.0
+    },
+    {
+      "title": "Vinland Saga proved Thorfinn was born to fight",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 17.7,
+      "s": 35.8,
       "ok": true
     },
     {
@@ -54,25 +74,32 @@
       "purpose": "hook",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "TimeoutError"
+      "s": 89.4,
+      "ok": true
     },
     {
-      "purpose": "hook",
+      "purpose": "qc",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "TimeoutError"
+      "err": "HTTP 429"
     },
     {
       "purpose": "qc",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 37.4,
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.0,
       "ok": true
     }
   ],
@@ -107,7 +134,7 @@
   "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
   "music": "sw_interworldrapturephonk.mp3",
   "music_credit": "Song: InterWorld - INTERWORLD RAPTURE (PHONK) (https://creativecommons.org/publicdomain/mark/1.0/)",
-  "description_final": "Watch the last two seconds. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #movieedit #shorts #edit\n\nMusic:\nSong: InterWorld - INTERWORLD RAPTURE (PHONK) (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "They called him just a child. Askeladd orders a raid from the river while Thorfinn scales the enemy ramparts to cut down soldiers alone. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #anime #shorts #edit\n\nMusic:\nSong: InterWorld - INTERWORLD RAPTURE (PHONK) (https://creativecommons.org/publicdomain/mark/1.0/)",
   "no_publish": true,
   "gate": {
     "ok": true,
@@ -115,7 +142,7 @@
     "probe": {
       "w": 2160,
       "h": 3840,
-      "dur": 25.3,
+      "dur": 25.533333,
       "audio": true
     },
     "lufs": -14.3,
@@ -131,8 +158,8 @@
     "gemini_qc": {
       "pass": true,
       "scores": {
-        "hook": 9.0,
-        "title": 9.0,
+        "hook": 10.0,
+        "title": 10.0,
         "speech_clarity": 10.0,
         "shake": 10.0,
         "crop": 10.0,
@@ -142,7 +169,9 @@
         "captions": 10.0,
         "post_worthy": 10.0
       },
-      "reasons": [],
+      "reasons": [
+        "The video meets all quality standards: it uses a clean song-only audio track, follows the requested layout with a white hook bar, maintains the original aspect ratio of the footage, and features high-"
+      ],
       "low": [],
       "watched_video": true
     }
@@ -152,26 +181,26 @@
       "id": 63,
       "src_start": 158.5,
       "dur": 1.05,
-      "gemini_score": 5.0,
-      "reason": "gemini score 5.0"
+      "gemini_score": 4.5,
+      "reason": "gemini score 4.5"
     },
     {
       "id": 16,
       "src_start": 42.733,
       "dur": 1.783,
-      "gemini_score": 9.5,
-      "reason": "gemini score 9.5"
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
     },
     {
       "id": 17,
       "src_start": 47.0,
       "dur": 1.718,
-      "gemini_score": 6.0,
-      "reason": "gemini score 6.0"
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
     },
     {
-      "id": 57,
-      "src_start": 151.133,
+      "id": 29,
+      "src_start": 84.9,
       "dur": 1.718,
       "gemini_score": 9.0,
       "reason": "gemini score 9.0"
@@ -180,62 +209,67 @@
       "id": 25,
       "src_start": 68.9,
       "dur": 1.96,
-      "gemini_score": 8.8,
-      "reason": "gemini score 8.8"
-    },
-    {
-      "id": 46,
-      "src_start": 129.933,
-      "dur": 2.034,
       "gemini_score": 9.0,
       "reason": "gemini score 9.0"
     },
     {
       "id": 2,
       "src_start": 1.7,
-      "dur": 1.718,
+      "dur": 1.96,
       "gemini_score": 8.5,
       "reason": "gemini score 8.5"
     },
     {
       "id": 13,
       "src_start": 36.0,
+      "dur": 1.792,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 46,
+      "src_start": 129.933,
       "dur": 1.718,
-      "gemini_score": 7.0,
-      "reason": "gemini score 7.0"
+      "gemini_score": 9.2,
+      "reason": "gemini score 9.2"
+    },
+    {
+      "id": 57,
+      "src_start": 151.133,
+      "dur": 1.727,
+      "gemini_score": 8.9,
+      "reason": "gemini score 8.9"
     },
     {
       "id": 22,
       "src_start": 61.6,
-      "dur": 1.96,
+      "dur": 1.686,
       "gemini_score": 7.0,
       "reason": "gemini score 7.0"
     },
     {
-      "id": 19,
-      "src_start": 51.7,
-      "dur": 1.5,
-      "gemini_score": 6.0,
-      "reason": "gemini score 6.0"
-    },
-    {
       "id": 5,
       "src_start": 11.7,
-      "dur": 1.672,
-      "gemini_score": 7.2,
-      "reason": "gemini score 7.2"
+      "dur": 1.5,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
     },
     {
-      "id": 29,
-      "src_start": 84.9,
-      "dur": 1.5,
+      "id": 28,
+      "src_start": 78.4,
+      "dur": 1.5
+    },
+    {
+      "id": 42,
+      "src_start": 119.933,
+      "dur": 1.46
+    },
+    {
+      "id": 48,
+      "src_start": 139.467,
+      "dur": 0.527,
       "gemini_score": 8.8,
       "reason": "gemini score 8.8"
-    },
-    {
-      "id": 45,
-      "src_start": 125.4,
-      "dur": 1.5
     }
   ],
   "qc_status": "pass"
