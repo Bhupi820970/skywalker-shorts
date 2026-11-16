@@ -475,5 +475,75 @@
   "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
   "demo": true,
   "no_publish": true
- }
+ },
+  {
+    "id": "demo-clips-vinlandsagathorfinn-v3",
+    "slot": "2026-12-01T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=B0pIISs-o8w",
+    "template": "whitebar",
+    "hook": "Why Thorfinn dropped his daggers forever",
+    "words": "VINLAND SAGA",
+    "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+    "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+    "tags": [
+      "vinlandsaga",
+      "thorfinn",
+      "askeladd",
+      "animeedit",
+      "vinland",
+      "anime",
+      "ihavenoenemies"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "vinlandsagathorfinn_scene2_h264.mp4",
+    "demo": true,
+    "no_publish": true
+  },
+  {
+    "id": "demo-clips-jjkgojovstoji-v3",
+    "slot": "2026-12-01T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
+    "template": "whitebar",
+    "hook": "Why Toji could not break Gojo",
+    "words": "JUJUTSU KAISEN",
+    "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
+    "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
+    "tags": [
+      "jujutsukaisen",
+      "gojosatoru",
+      "tojifushiguro",
+      "jjk",
+      "animeedit",
+      "anime",
+      "gojo"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "jjkgojovstoji_scene1_h264.mp4",
+    "demo": true,
+    "no_publish": true
+  }
 ]

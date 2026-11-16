@@ -1,13 +1,15 @@
 {
  "box": {
-  "last_run_at": "2026-11-16T07:13:26Z",
-  "last_upload_at": "2026-11-16T07:12:03Z"
+  "last_run_at": "2026-11-16T13:45:43Z",
+  "last_upload_at": "2026-11-16T13:45:43Z"
  },
  "done_ids": [
   "yt:7LzDcr20SHc",
+  "yt:B0pIISs-o8w",
   "yt:HGCsAcFzaFw",
   "yt:VwwZU7YgC6A",
   "yt:ckEUVyKanhw",
+  "yt:golG9lmaR_U",
   "yt:yWBA876qftM"
  ],
  "clips": [
@@ -65,6 +67,28 @@
    "kbps": 3175,
    "by": "box",
    "at": "2026-11-16T07:12:03Z"
+  },
+  {
+   "asset": "vinlandsagathorfinn_scene2_h264.mp4",
+   "id": "yt:B0pIISs-o8w",
+   "title": "Thorfinn's Sneak Attack | Vinland Saga | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1442,
+   "by": "box",
+   "at": "2026-11-16T13:45:43Z"
+  },
+  {
+   "asset": "vinlandsagathorfinn_scene3_h264.mp4",
+   "id": "yt:golG9lmaR_U",
+   "title": "Thorfinn vs Thorkell | VINLAND SAGA Season 1 | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2651,
+   "by": "box",
+   "at": "2026-11-16T13:45:43Z"
   }
  ],
  "github": {
