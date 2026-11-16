@@ -504,6 +504,13 @@
       "result_id": "stock-jurassicworldrebirth-06"
     },
     {
+      "id": "stock-jurassicworldrebirth-07",
+      "topic_id": "backup-jurassicworldrebirth",
+      "slug": "jurassicworldrebirth",
+      "status": "pending",
+      "queued_at": "2026-11-16 14:16 IST"
+    },
+    {
       "id": "stock-kalki2898ad-01",
       "topic_id": "backup-kalki2898ad",
       "slug": "kalki2898ad",
@@ -640,6 +647,13 @@
       "status": "failed",
       "queued_at": "2026-11-16 11:19 IST",
       "result_id": "stock-onepiece-05"
+    },
+    {
+      "id": "stock-onepiece-06",
+      "topic_id": "backup-onepiece",
+      "slug": "onepiece",
+      "status": "pending",
+      "queued_at": "2026-11-16 14:16 IST"
     },
     {
       "id": "stock-predatorbadlands-01",
