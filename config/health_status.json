@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-16 02:30 IST",
+  "at": "2026-11-16 05:48 IST",
   "slots_checked": 10,
   "ready": [
     {
@@ -67,6 +67,7 @@
     "20261115-2230-sololeveling",
     "stock-dune2-01",
     "20261114-1230-avatarfireandash",
+    "stock-sololeveling-02",
     "stock-sololeveling-01",
     "20261114-1600-furiosa",
     "20261114-1830-predatorbadlands",
@@ -101,11 +102,11 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 17,
-  "stock_pending": 13,
+  "stock_ready": 18,
+  "stock_pending": 9,
   "stock_used": 16,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": false
 }
