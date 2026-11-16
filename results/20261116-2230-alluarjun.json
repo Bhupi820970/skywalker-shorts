@@ -1,0 +1,152 @@
+{
+  "id": "20261116-2230-alluarjun",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-16 17:48 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43861127502",
+  "slot": "2026-11-16T22:30:00+05:30",
+  "title": "Nobody suspected Pushpa was this dangerous #pushpa2 #alluarjun #tollywood",
+  "hook": "He is not prey, he is wild",
+  "description": "He is not prey, he is wild. Allu Arjun unleashes pure chaos and wild energy as Pushpa Raj takes over the screen in Pushpa 2 The Rule. From the official Pushpa 2 The Rule trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=1kVK0MZlbI4). All rights to the film/series belong to their owners; short commentary edit.\n#pushpa2 #alluarjun #tollywood #shorts #edit",
+  "tags": [
+    "pushpa2",
+    "alluarjun",
+    "tollywood",
+    "sukumar",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Pushpa's rule never stopped",
+    "title": "Pushpa's rule never stopped | Allu Arjun as Pushpa Raj | #edit",
+    "description": "Pushpa's rule never stopped. Allu Arjun as Pushpa Raj from the official Pushpa 2 The Rule trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=1kVK0MZlbI4). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #pushpa2 #alluarjun #tollywood",
+    "tags": [
+      "pushpa2",
+      "alluarjun",
+      "tollywood",
+      "sukumar",
+      "edit",
+      "shorts",
+      "trending"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "dialogue-teaser",
+  "title_candidates": [
+    {
+      "title": "Nobody suspected Pushpa was this dangerous",
+      "click_score": 95.0
+    },
+    {
+      "title": "Pushpa entering the scene is peak mass",
+      "click_score": 92.0
+    },
+    {
+      "title": "Why Allu Arjun dominates every frame in Pushpa 2",
+      "click_score": 89.0
+    },
+    {
+      "title": "Watch the last two seconds of Pushpa",
+      "click_score": 87.0
+    },
+    {
+      "title": "Pushpa did not come to play this time",
+      "click_score": 84.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 15.5,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 12.0,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 7.9,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/alluarjun_trailer_h264.mp4",
+      "music": "sw_murderinmymind.mp3"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261116-2230-alluarjun",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261116-2230-alluarjun/render-20261116-2230-alluarjun.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/alluarjun_trailer_h264.mp4",
+  "music": "sw_murderinmymind.mp3",
+  "music_credit": "Song: Kordhell - MURDER IN MY MIND",
+  "description_final": "He is not prey, he is wild. Allu Arjun unleashes pure chaos and wild energy as Pushpa Raj takes over the screen in Pushpa 2 The Rule. From the official Pushpa 2 The Rule trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=1kVK0MZlbI4). All rights to the film/series belong to their owners; short commentary edit.\n#pushpa2 #alluarjun #tollywood #shorts #edit\n\nMusic:\nSong: Kordhell - MURDER IN MY MIND",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.4,
+      "audio": true
+    },
+    "lufs": -14.0,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.6,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "watched_video": true
+    }
+  }
+}
