@@ -603,8 +603,9 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
     mode = (ac.get("mode") or "")
     if mode == "music_only":
         expected = (
-            "Expected: a tight WHITE bar with black italic English hook text sitting directly ABOVE (never over) the full, uncropped "
-            "landscape movie frame, centered on black. This is a SONG-ONLY edit: the hype song plays at full level "
+            "Expected: a tight WHITE bar with black italic English hook text in its own band at the TOP of the frame, "
+            "directly ABOVE (never over) the full, uncropped landscape movie frame. The picture is scaled to fit the "
+            "area under the bar; blur or letterbox fills only the leftover space. This is a SONG-ONLY edit: the hype song plays at full level "
             "from second 0 over beat-cut action/visuals. There is NO character voice, NO trailer audio, and NO "
             "lower-third dialogue subtitles (that is correct — do not reject for missing dialogue or captions). "
             "Nothing else is written on the footage. The first shot should be the strongest hook visual."
@@ -619,7 +620,8 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
     else:
         expected = (
             "Expected: a tight WHITE bar with black italic English hook text sitting directly ABOVE (never over) the full, uncropped "
-            "landscape movie frame, centered on black; only lower-third dialogue subtitles under the picture; nothing else on the footage. "
+            "landscape movie frame. The bar is a band at the top; the picture is scaled to fit underneath "
+            "(blur or letterbox only in the leftover space). Only lower-third dialogue subtitles under the picture; nothing else on the footage. "
             "Audio structure: ACT 1 (opening, about 30%, never more than ~38%) = only the characters talking, crystal clear, NO song; "
             "ACT 2 = the hype song at full level over beat-cut action, no dialogue. The song must start once and never pop in and out between lines."
         )

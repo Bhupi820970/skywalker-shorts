@@ -45,6 +45,8 @@ import hook_text
 import cv2
 import librosa
 import numpy as np
+import overlay_guard
+from layout import whitebar_layout
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageStat
 from scipy import ndimage
 
@@ -67,10 +69,9 @@ def _fonts_dir() -> Path:
 FONTS = _fonts_dir()
 W, H = 1080, 1920
 FPS = 30            # output / mux frame rate (auto_qc requires >= 30)
-# Caption-bar template: tight white hook bar directly above the
-# uncropped 1080-wide frame. Bar + frame are one block, centered
-# vertically on a black 1080x1920 canvas. The bar never covers the
-# picture. Never crop the source.
+# Caption-bar template: white hook bar is a band at the top of the
+# 1080x1920 master. The uncropped frame is scaled to fit underneath.
+# The bar never covers the picture. Never crop the source.
 BAR_PAD_Y = 30             # padding above and below the hook text
 SEP_H = 2                  # 2px hairline at the bottom of the bar (no gap)
 # BAR_H is computed from the text; this is only a fallback estimate
@@ -660,6 +661,15 @@ def score_scenes(mezz: Path, scenes: list[dict], trailer_dur: float | None = Non
         skin = float((((r > 80) & (r > g) & (g > b * 0.7) & (r - b > 15)).mean()))
         # classify every sample; HARD rule: logo / title / date / credit / empty dark out
         card_reason = _scene_card_reason(frames, s["start"], s["end"], float(trailer_dur or 0))
+        if not card_reason:
+            try:
+                why = overlay_guard.assess_frames(frames)
+            except Exception:
+                why = None
+            if why == "logo/watermark":
+                card_reason = "logo"
+            elif why:
+                card_reason = "text_overlay"
         reasons, st = classify_shot(mid)
         graphic = 1.0 if (card_reason or reasons) else 0.0
         contrast = float(mid.std())
@@ -1790,19 +1800,6 @@ def centered_block_y(block_h: int) -> int:
     if y + block_h > H:
         y = max(0, even(H - int(block_h)))
     return y
-
-
-def whitebar_layout(plate_h: int, bar_h: int) -> dict:
-    """Tight bar directly on top of the uncropped plate, as one centered block."""
-    block_h = int(bar_h) + int(plate_h)
-    y = centered_block_y(block_h)
-    return {
-        "bar_y": y,
-        "bar_h": int(bar_h),
-        "video_y": y + int(bar_h),
-        "plate_h": int(plate_h),
-        "block_h": block_h,
-    }
 
 
 def draw_caption_bar(dst: Path, lines: list[str] | None = None) -> Path:
@@ -3274,19 +3271,19 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         print("Muxing postcard chrome + uncropped landscape + dialogue/music…")
         run(cmd)
         return out
-    # whitebar: tight hook bar directly on the uncropped plate, one centered block
+    # whitebar: hook bar is its own band at the top. The plate is scaled to
+    # fit the area under it and is never cropped.
     bar = WORK / "caption_bar.png"
     if not bar.exists():
         draw_caption_bar(bar, hook_lines())
-    # silent is the uncropped 1080-wide plate; bar sits flush ABOVE it, rest black.
-    # The hook lives only in the bar, so xfades never fade or clip the type.
     pw, ph = _mezz_size(silent)
     bar_h = Image.open(bar).size[1]
-    lay = whitebar_layout(ph, bar_h)
+    lay = whitebar_layout(ph, bar_h, pw)
     layout = {
         "bar_y": lay["bar_y"], "bar_h": lay["bar_h"],
-        "plate_y": lay["video_y"], "video_y": lay["video_y"],
-        "plate_w": pw, "plate_h": ph, "block_h": lay["block_h"],
+        "plate_y": lay["plate_y"], "video_y": lay["video_y"],
+        "plate_x": lay["plate_x"], "plate_w": lay["plate_w"], "plate_h": lay["plate_h"],
+        "region_h": lay["region_h"], "block_h": lay["block_h"],
         "drop_t": DROP_T, "energy": ENERGY,
     }
     (WORK / "layout.json").write_text(json.dumps(layout))
@@ -3301,7 +3298,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     try:
         import captions as capmod
         import dialogue as dmod
-        plate_bottom = int(lay["video_y"]) + int(ph)
+        plate_bottom = int(lay["plate_y"]) + int(lay["plate_h"])
         cues = []
         speech_out = []
         tr = {}
@@ -3346,20 +3343,25 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         print(f"  lower-thirds {len(caps)} dialogue lines at Y={layout['caption_y']} (plate ends {plate_bottom})")
     except Exception as e:
         print(f"  lower-thirds skipped: {e}")
-    # Black canvas. The uncropped plate sits immediately below the white
-    # hook bar as one centered block. The bar is never composited over the
-    # picture (a blurred fill behind the bar looked like the bar covered
-    # the top of the frame).
+    # Stacked: [white bar] over [video area]. The bar is not drawn on the
+    # picture. The picture is contain-fit; blur fills only the leftover
+    # space under the bar.
+    region_h = int(lay["region_h"])
     vfilt = (
-        f"[0:v]setpts=PTS-STARTPTS,pad={W}:{H}:0:{lay['video_y']}:color=black,format=yuv420p[comp];"
-        f"[2:v]format=rgb24[bar];"
-        f"[comp][bar]overlay=0:{lay['bar_y']}:format=auto{fx},format=yuv420p{ass_extra}[v]"
+        f"[0:v]split=2[fg][bgraw];"
+        f"[bgraw]scale={W}:{region_h}:force_original_aspect_ratio=increase,"
+        f"crop={W}:{region_h},gblur=sigma=36:steps=3,"
+        f"eq=brightness=-0.14:saturation=0.80:contrast=0.95,setsar=1[bg];"
+        f"[fg]scale={lay['plate_w']}:{lay['plate_h']}:flags=lanczos,setsar=1[plate];"
+        f"[bg][plate]overlay={lay['plate_x']}:0:format=auto[vid];"
+        f"[2:v]format=rgb24,scale={W}:{lay['bar_h']}[bar];"
+        f"[bar][vid]vstack=inputs=2{fx},format=yuv420p{ass_extra}[v]"
     )
-    layout["blur_fill"] = False
+    layout["blur_fill"] = True
     (WORK / "layout.json").write_text(json.dumps(layout, default=str))
     print(
-        f"Muxing tight whitebar (bar {bar_h}px + plate {ph}px @{lay['bar_y']}) "
-        f"on black canvas + dialogue/music…"
+        f"Muxing stacked whitebar (bar {lay['bar_h']}px at y=0, "
+        f"plate {lay['plate_w']}x{lay['plate_h']} under it) + dialogue/music…"
     )
     cmd = [
         "ffmpeg", "-y",
@@ -3600,8 +3602,14 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
     sw, sh = [int(x) for x in subprocess.check_output(
         ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
          "-of", "csv=p=0", str(src)], text=True).strip().split(",")[:2]]
-    ar_src, ar_plate = mw / mh, lay["plate_w"] / lay["plate_h"]
-    geo_ok = (abs(ar_src - ar_plate) / ar_src < 0.01 and lay["plate_w"] == W)
+    ar_src, ar_plate = mw / mh, lay["plate_w"] / max(1, lay["plate_h"])
+    flush = int(lay.get("plate_y", lay.get("video_y", -1))) == int(lay["bar_y"]) + int(lay["bar_h"])
+    geo_ok = (
+        abs(ar_src - ar_plate) / ar_src < 0.01
+        and 2 <= int(lay["plate_w"]) <= W
+        and int(lay["bar_y"]) == 0
+        and flush
+    )
     # letterbox rows removed must be black on well-lit frames, not on one fade
     lb_ok = True
     crop_w, crop_h, crop_x, crop_y = [int(x) for x in crop]
@@ -3646,7 +3654,9 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
         m = _frame(mezz, t_src)
         if o is None or m is None:
             continue
-        plate = o[lay["plate_y"]:lay["plate_y"] + lay["plate_h"], :]
+        px = int(lay.get("plate_x") or 0)
+        pw_ = int(lay.get("plate_w") or o.shape[1])
+        plate = o[lay["plate_y"]:lay["plate_y"] + lay["plate_h"], px:px + pw_]
         if plate.size == 0:
             continue
         mm = np.array(Image.fromarray(m.astype(np.uint8)).resize((plate.shape[1], plate.shape[0])), dtype=np.float32)
@@ -3940,10 +3950,10 @@ def main():
             ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             foot = Image.open(tmp).convert("RGB")
             bar_im = Image.open(WORK / "caption_bar.png").convert("RGB")
-            lay = whitebar_layout(foot.size[1], bar_im.size[1])
+            lay = whitebar_layout(foot.size[1], bar_im.size[1], foot.size[0])
             canvas = Image.new("RGB", (W, H), (0, 0, 0))
-            canvas.paste(bar_im, (0, lay["bar_y"]))
-            canvas.paste(foot, (0, lay["video_y"]))
+            canvas.paste(bar_im.resize((W, lay["bar_h"])), (0, lay["bar_y"]))
+            canvas.paste(foot.resize((lay["plate_w"], lay["plate_h"])), (lay["plate_x"], lay["plate_y"]))
             dst.parent.mkdir(parents=True, exist_ok=True)
             canvas.save(dst)
             print("Whitebar check frame", dst)
