@@ -1793,7 +1793,8 @@
         "jjkgojovstoji_scene1_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "fallback_asset": "jjkgojovstoji_trailer_h264.mp4"
     }
   ]
 }
