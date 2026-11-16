@@ -171,8 +171,10 @@
   },
   "stock_id": "stock-venom3-01",
   "assigned_from_stock": true,
-  "buffer_post_id": "6afaa19bd7e5fee638a6566d",
-  "buffer_status": "scheduled",
-  "buffer_due_at": "2026-11-16T10:30:00.000Z",
-  "buffer_created_at": "2026-11-16 11:54 IST"
+  "buffer_post_id": "6afaede00c2af02527db6cb1",
+  "buffer_status": "error",
+  "buffer_due_at": "2026-11-16T11:49:52.603Z",
+  "buffer_created_at": "2026-11-16 17:19 IST",
+  "buffer_retry_count": 1,
+  "buffer_prev_post_id": "6afaa19bd7e5fee638a6566d"
 }
