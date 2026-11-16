@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-16 18:38 IST",
+  "at": "2026-11-16 18:46 IST",
   "slots_checked": 12,
   "ready": [
     {
@@ -14,13 +14,13 @@
     },
     {
       "slot": "2026-11-16T20:30:00+05:30",
-      "id": "20261116-2030-sololeveling",
-      "how": "queued+fallback"
+      "id": "backup-apothecarydiaries2",
+      "how": "backup_pool"
     },
     {
       "slot": "2026-11-16T22:30:00+05:30",
       "id": "20261116-2230-alluarjun",
-      "how": "queued+fallback"
+      "how": "done"
     },
     {
       "slot": "2026-11-17T06:30:00+05:30",
