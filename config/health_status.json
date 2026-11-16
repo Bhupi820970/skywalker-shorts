@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-16 12:01 IST",
+  "at": "2026-11-16 12:23 IST",
   "slots_checked": 11,
   "ready": [
     {
@@ -91,6 +91,7 @@
     "20261116-1330-superman",
     "20261116-1130-twisters",
     "stock-tronares-02",
+    "stock-twisters-03",
     "stock-mortalkombat2-02",
     "20261116-1830-nobody2",
     "stock-missionimpossible-01",
@@ -117,8 +118,8 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 15,
-  "stock_pending": 15,
+  "stock_ready": 16,
+  "stock_pending": 14,
   "stock_used": 19,
   "stock_target": 30,
   "stock_need_refill": false,
