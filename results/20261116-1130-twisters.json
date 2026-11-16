@@ -149,7 +149,9 @@
   "stock_id": "stock-twisters-02",
   "assigned_from_stock": true,
   "buffer_post_id": "6afa9962ff465c57dad6e16b",
-  "buffer_status": "scheduled",
+  "buffer_status": "sent",
   "buffer_due_at": "2026-11-16T06:00:00.000Z",
-  "buffer_created_at": "2026-11-16 11:19 IST"
+  "buffer_created_at": "2026-11-16 11:19 IST",
+  "youtube_url": "https://www.youtube.com/shorts/Yu4WM3oxj8Q",
+  "buffer_posted_at": "2026-11-16T06:00:06.479Z"
 }
