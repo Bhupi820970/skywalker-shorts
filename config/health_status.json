@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-17 00:55 IST",
+  "at": "2026-11-17 00:56 IST",
   "slots_checked": 10,
   "ready": [
     {
       "slot": "2026-11-17T06:30:00+05:30",
-      "id": "20261117-0630-arcane2",
-      "how": "queued+fallback"
+      "id": "backup-arcane2",
+      "how": "backup_pool"
     },
     {
       "slot": "2026-11-17T09:00:00+05:30",
