@@ -1,5 +1,4 @@
 {
-  "ids": [],
-  "no_publish": false,
-  "note": "no_publish only applies when ids is non-empty. Keep false."
+  "ids": ["demo-clips-jjkgojovstoji-v3"],
+  "no_publish": true
 }
