@@ -62,10 +62,10 @@ def topic_assets(topic: dict, have: set[str] | None) -> list[str]:
     """Official scene clips only (never trailers/teasers); only assets that exist."""
     names: list[str] = []
     for n in list(topic.get("scene_assets") or []):
-        if n and not sourcing.is_trailer_source(n) and n not in names:
+        if n and not sourcing.is_trailer_source(n) and not sourcing.is_unusable_source(n, topic) and n not in names:
             names.append(n)
     fa = topic.get("fallback_asset") or ""
-    if fa and not sourcing.is_trailer_source(fa) and "_scene" in fa.lower() and fa not in names:
+    if fa and not sourcing.is_trailer_source(fa) and not sourcing.is_unusable_source(fa, topic) and "_scene" in fa.lower() and fa not in names:
         names.append(fa)
     if have is None:
         return names

@@ -1818,7 +1818,13 @@
         "vinlandsagathorfinn_scene1_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "unusable_assets": {
+        "vinlandsagathorfinn_scene1_h264.mp4": "burned-in Crunchyroll watermark and subtitles"
+      },
+      "unusable_urls": [
+        "https://www.youtube.com/watch?v=yWBA876qftM"
+      ]
     },
     {
       "slug": "mobpsycho100per",
@@ -1864,7 +1870,13 @@
         "bluelockisagi_scene1_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "unusable_assets": {
+        "bluelockisagi_scene1_h264.mp4": "burned-in Crunchyroll watermark and Goal! subtitle"
+      },
+      "unusable_urls": [
+        "https://www.youtube.com/watch?v=ckEUVyKanhw"
+      ]
     }
   ]
 }

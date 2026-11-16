@@ -204,7 +204,7 @@ def download_fallback(src, skip=None):
     used = None
     skip = set(skip or [])
     for u in item.get("fallback_mp4", []) or []:
-        if sourcing.is_trailer_source(u):
+        if sourcing.is_trailer_source(u) or sourcing.is_unusable_source(u, item):
             continue
         if _is_skipped(u, skip) or _is_skipped(f"gh:{u}", skip):
             continue
@@ -212,7 +212,7 @@ def download_fallback(src, skip=None):
         if ok:
             return info, []
         errors.append(info)
-    if item.get("fallback_release") and item.get("fallback_asset") and not sourcing.is_trailer_source(item.get("fallback_asset") or ""):
+    if item.get("fallback_release") and item.get("fallback_asset") and not sourcing.is_trailer_source(item.get("fallback_asset") or "") and not sourcing.is_unusable_source(item.get("fallback_asset") or "", item):
         tag, asset = item["fallback_release"], item["fallback_asset"]
         repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
         r = subprocess.run(["gh", "release", "download", tag, "-p", asset, "-R", repo, "-D", str(OUT), "--clobber"],
@@ -226,10 +226,10 @@ def download_fallback(src, skip=None):
     # last resort: sources release, guess asset from fallback_mp4 names or id
     repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
     guesses = []
-    if item.get("fallback_asset") and not sourcing.is_trailer_source(item.get("fallback_asset") or ""):
+    if item.get("fallback_asset") and not sourcing.is_trailer_source(item.get("fallback_asset") or "") and not sourcing.is_unusable_source(item.get("fallback_asset") or "", item):
         guesses.append(item["fallback_asset"])
     for u in item.get("fallback_mp4") or []:
-        if not sourcing.is_trailer_source(u):
+        if not sourcing.is_trailer_source(u) and not sourcing.is_unusable_source(u, item):
             guesses.append(u.rstrip("/").split("/")[-1])
     for g in guesses:
         if sourcing.is_trailer_source(g):
@@ -276,7 +276,7 @@ def list_source_siblings():
     for name in assets:
         if name in already or not str(name).lower().endswith(".mp4"):
             continue
-        if sourcing.is_trailer_source(name):
+        if sourcing.is_trailer_source(name) or sourcing.is_unusable_source(name, item):
             continue
         if sourcing.source_matches_topic(item, name):
             out.append(

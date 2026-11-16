@@ -68,7 +68,7 @@ def official_set(req: dict) -> set[str]:
             chans |= {norm(c) for c in lst}
     except Exception:
         pass
-    return {c for c in chans if len(c) >= 3}
+    return {c for c in chans if len(c) >= 3 and not sourcing.is_logo_burn_channel(c)}
 
 
 def is_official(entry: dict, chans: set[str]) -> bool:
@@ -103,15 +103,19 @@ def search(req: dict, youtube: bool) -> list[dict]:
                     continue
                 if TRAILER.search(title) or sourcing.is_trailer_source(title):
                     continue  # never download trailers/teasers
-                if dur and not (20 <= dur <= 900):
+                if dur and not (20 <= dur <= 480):
                     continue
                 if not is_official(e, chans):
                     continue
+                ch = e.get("channel") or e.get("uploader") or ""
+                if sourcing.is_logo_burn_channel(ch):
+                    continue  # Crunchyroll / Muse / Ani-One burn a logo or subs
                 url = e.get("webpage_url") or e.get("url") or ""
                 if pfx.startswith("yt") and not url.startswith("http"):
                     url = f"https://www.youtube.com/watch?v={vid}"
                 found.append({"id": f"{pfx[:2]}:{vid}", "url": url, "title": title, "kind": "scene",
-                              "channel": e.get("channel") or e.get("uploader")})
+                              "channel": ch})
+    found.sort(key=lambda c: sourcing.channel_preference(c.get("channel") or ""))
     return found
 
 
@@ -225,6 +229,7 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=0, help="max requests (0 = all)")
     ap.add_argument("--per-title", type=int, default=0)
     ap.add_argument("--no-push", action="store_true")
+    ap.add_argument("--slugs", default="", help="comma-separated slugs to fetch (default: all requests)")
     a = ap.parse_args()
     who = "github" if a.no_youtube else "box"
     if not REQ.exists():
@@ -232,6 +237,9 @@ def main() -> int:
         return 0
     doc = json.loads(REQ.read_text())
     reqs = doc.get("requests") or []
+    if a.slugs:
+        want = {norm(s) for s in a.slugs.split(",") if s.strip()}
+        reqs = [r for r in reqs if norm(r.get("slug") or "") in want]
     if a.limit:
         reqs = reqs[: a.limit]
     per = a.per_title or int(doc.get("max_clips_per_title") or 4)

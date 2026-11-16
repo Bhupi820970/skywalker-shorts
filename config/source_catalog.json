@@ -51,9 +51,6 @@
     "apple": [
       "Apple TV"
     ],
-    "crunchyroll": [
-      "Crunchyroll"
-    ],
     "toho": [
       "TOHO"
     ],
@@ -1103,5 +1100,15 @@
         "Crunchyroll"
       ]
     }
+  },
+  "logo_burn_channels": {
+    "note": "YouTube uploads from these channels burn a logo and/or subtitles into the picture. Never fetch or render them. Prefer Netflix, Toho, and studio channels.",
+    "channels": [
+      "Crunchyroll",
+      "Muse Asia",
+      "Muse India",
+      "Ani-One Asia",
+      "Ani-One"
+    ]
   }
 }

@@ -75,7 +75,7 @@ NEVER pick trailer-only titles. NEVER ask for trailers, teasers, or TV spots, ev
 Each item: {{"slug": short lowercase a-z0-9 id, "pillar": one of {list(PILLARS)}, "words": display title in caps,
 "characters": [main characters], "scene_types": subset of ["fight","romance","emotional","aura","comedy","entrance"],
 "search_queries": [3-5 YouTube search strings for official scene clips only (no trailer/teaser words), e.g. "<title> <character> fight scene official clip"],
-"official_channels": [exact official channel names that upload these clips, e.g. Crunchyroll, Netflix, Movieclips, YRF, Sony Pictures Entertainment],
+"official_channels": [exact official channel names that upload CLEAN clips (no burned-in logo or subtitles), e.g. Netflix, Netflix Anime, TOHO, TOHO animation, studio/distributor channels, Movieclips, YRF, Sony Pictures Entertainment. NEVER list Crunchyroll, Muse, or Ani-One — their YouTube uploads burn in a logo/subtitles],
 "hook": 3-7 word English character-specific curiosity hook (like "Why Jinshi cannot stop watching her"),
 "title": "<hook> | <scene> | #edit", "tags": [6-8 lowercase tags], "market": "US/UK" or "IN"}}"""
     data = gemini.generate_json(prompt, purpose="clip-requests", temperature=0.7, timeout=120)

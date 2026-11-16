@@ -79,6 +79,43 @@ _WATERMARK_HINT = re.compile(
     re.I,
 )
 
+# Official YouTube uploads that burn a channel logo and/or subtitles into the
+# picture (Crunchyroll, Muse, Ani-One). Never fetch or render these. Prefer
+# clean studio / Netflix / Toho sources instead.
+LOGO_BURN_CHANNELS = (
+    "crunchyroll", "museasia", "museindia", "museanime", "musemalaysia",
+    "anione", "anioneasia", "anioneindonesia", "anioneofficial",
+)
+PREFERRED_CHANNELS = (
+    "netflix", "netflixanime", "netflixindia", "toho", "tohoanimation",
+)
+
+
+def _norm_chan(name: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", (name or "").lower())
+
+
+def is_logo_burn_channel(name: str) -> bool:
+    """True for channels that stamp a logo/subs onto official YouTube uploads."""
+    n = _norm_chan(name)
+    if not n:
+        return False
+    for c in LOGO_BURN_CHANNELS:
+        if n == c or n.startswith(c) or c in n:
+            return True
+    return False
+
+
+def channel_preference(name: str) -> int:
+    """Lower is better. Logo-burn last; Netflix/Toho first; other official next."""
+    if is_logo_burn_channel(name):
+        return 90
+    n = _norm_chan(name)
+    for c in PREFERRED_CHANNELS:
+        if n == c or n.startswith(c) or c in n:
+            return 0
+    return 10
+
 
 def _host(url: str) -> str:
     m = re.search(r"https?://(?:www\.)?([^/]+)", url or "", re.I)
@@ -168,10 +205,10 @@ def item_scene_urls(item: dict) -> list[str]:
     for u in list(item.get("fallback_mp4") or []) + list(item.get("sources") or []) + list(
         item.get("alt_source_urls") or []
     ) + list(item.get("scene_assets") or []):
-        if u and not is_trailer_source(u) and u not in urls:
+        if u and not is_trailer_source(u) and not is_unusable_source(u, item) and u not in urls:
             urls.append(u)
     fa = item.get("fallback_asset") or ""
-    if fa and not is_trailer_source(fa) and fa not in urls:
+    if fa and not is_trailer_source(fa) and not is_unusable_source(fa, item) and fa not in urls:
         urls.append(fa)
     return urls
 
@@ -223,6 +260,98 @@ def item_topic_slugs(item: dict) -> set[str]:
         add(iid[len("demo-"):])
     add(item.get("words") or "")
     return slugs
+
+
+def unusable_asset_names(item: dict | None = None) -> set[str]:
+    """Asset filenames marked unusable on the item or its topic_catalog row."""
+    names: set[str] = set()
+
+    def add(obj):
+        if not isinstance(obj, dict):
+            return
+        u = obj.get("unusable_assets")
+        if isinstance(u, dict):
+            for k in u:
+                n = source_filename(k)
+                if n:
+                    names.add(n)
+        elif isinstance(u, list):
+            for k in u:
+                n = source_filename(str(k))
+                if n:
+                    names.add(n)
+
+    add(item)
+    try:
+        slugs = set()
+        if item:
+            slugs.add(re.sub(r"[^a-z0-9]+", "", (item.get("slug") or "").lower()))
+            slugs |= item_topic_slugs(item)
+        slugs.discard("")
+        cat = json.loads((REPO / "config" / "topic_catalog.json").read_text())
+        for row in cat.get("items") or []:
+            rs = re.sub(r"[^a-z0-9]+", "", (row.get("slug") or "").lower())
+            if not rs or not slugs:
+                continue
+            if rs in slugs or any(len(s) >= 5 and (rs.startswith(s) or s.startswith(rs)) for s in slugs):
+                add(row)
+    except Exception:
+        pass
+    return names
+
+
+def _yt_id(url: str) -> str:
+    m = re.search(r"(?:v=|/youtu\.be/|/shorts/)([A-Za-z0-9_-]{6,})", url or "")
+    return m.group(1) if m else ""
+
+
+def unusable_urls(item: dict | None = None) -> set[str]:
+    """Explicit unusable URLs (e.g. a Crunchyroll YouTube link) from item or catalog."""
+    urls: set[str] = set()
+
+    def add(obj):
+        if not isinstance(obj, dict):
+            return
+        for u in obj.get("unusable_urls") or []:
+            if u:
+                urls.add(str(u).strip())
+        ua = obj.get("unusable_assets") or {}
+        if isinstance(ua, dict):
+            for k in ua:
+                if str(k).startswith("http"):
+                    urls.add(str(k).strip())
+
+    add(item)
+    try:
+        slugs = set()
+        if item:
+            slugs.add(re.sub(r"[^a-z0-9]+", "", (item.get("slug") or "").lower()))
+            slugs |= item_topic_slugs(item)
+        slugs.discard("")
+        cat = json.loads((REPO / "config" / "topic_catalog.json").read_text())
+        for row in cat.get("items") or []:
+            rs = re.sub(r"[^a-z0-9]+", "", (row.get("slug") or "").lower())
+            if not rs or not slugs:
+                continue
+            if rs in slugs or any(len(s) >= 5 and (rs.startswith(s) or s.startswith(rs)) for s in slugs):
+                add(row)
+    except Exception:
+        pass
+    return urls
+
+
+def is_unusable_source(url_or_name: str, item: dict | None = None) -> bool:
+    u = (url_or_name or "").strip()
+    if not u:
+        return False
+    name = source_filename(u)
+    if name and name not in ("watch", "shorts") and name in unusable_asset_names(item):
+        return True
+    yid = _yt_id(u)
+    for bad in unusable_urls(item):
+        if u == bad or (yid and yid == _yt_id(bad)):
+            return True
+    return False
 
 
 def source_matches_topic(item: dict, url_or_name: str) -> bool:
@@ -322,7 +451,7 @@ def build_candidate_urls(item: dict, *, include_youtube: bool = True) -> list[st
 
     def add(u: str | None):
         u = (u or "").strip()
-        if not u or u in urls:
+        if not u or u in urls or is_unusable_source(u, item):
             return
         urls.append(u)
 
@@ -476,6 +605,9 @@ def download_source(
             continue
         if is_trailer_source(u):
             errors.append(f"skip trailer: {u}")
+            continue
+        if is_unusable_source(u, item):
+            errors.append(f"skip unusable: {u}")
             continue
         if on_try:
             on_try(u)
