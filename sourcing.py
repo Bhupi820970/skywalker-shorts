@@ -85,6 +85,7 @@ _WATERMARK_HINT = re.compile(
 LOGO_BURN_CHANNELS = (
     "crunchyroll", "museasia", "museindia", "museanime", "musemalaysia",
     "anione", "anioneasia", "anioneindonesia", "anioneofficial",
+    "funimation", "hidive",
 )
 PREFERRED_CHANNELS = (
     "netflix", "netflixanime", "netflixindia", "toho", "tohoanimation",
@@ -280,6 +281,15 @@ def unusable_asset_names(item: dict | None = None) -> set[str]:
                 n = source_filename(str(k))
                 if n:
                     names.add(n)
+        if obj.get("usable") is False:
+            for key in ("scene_assets", "fallback_mp4", "sources", "alt_source_urls"):
+                for k in obj.get(key) or []:
+                    n = source_filename(str(k))
+                    if n and not is_trailer_source(n):
+                        names.add(n)
+            fa = obj.get("fallback_asset") or ""
+            if fa and not is_trailer_source(fa):
+                names.add(source_filename(fa))
 
     add(item)
     try:

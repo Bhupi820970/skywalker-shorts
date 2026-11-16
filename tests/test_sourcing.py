@@ -49,6 +49,14 @@ def test_content_kinds_include_scenes_not_only_trailers():
     assert any("fight" in q.lower() or "official clip" in q.lower() for q in qs)
 
 
+def test_usable_false_blocks_the_catalog_asset():
+    import sourcing
+    names = sourcing.unusable_asset_names({"id": "demo-clips-bluelockisagi", "slug": "bluelockisagi"})
+    assert "bluelockisagi_scene1_h264.mp4" in names
+    assert sourcing.is_unusable_source("bluelockisagi_scene1_h264.mp4", {"id": "demo-clips-bluelockisagi", "slug": "bluelockisagi"})
+    assert not sourcing.is_unusable_source("jjkgojovstoji_scene1_h264.mp4", {"id": "demo-clips-jjkgojovstoji-v3", "slug": "jjkgojovstoji"})
+
+
 def test_topic_key_from_queue_id():
     assert sourcing.topic_key({"id": "20261114-0900-runningman"}) == "runningman"
     assert sourcing.topic_key({"id": "backup-superman"}) == "superman"

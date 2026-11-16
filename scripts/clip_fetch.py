@@ -16,6 +16,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
+import overlay_guard  # noqa: E402
 import sourcing  # noqa: E402
 
 GH_REPO = "chatgpt820970/skywalker-shorts"
@@ -281,6 +282,11 @@ def main() -> int:
                 bad = quality_ok(m)
                 if bad:
                     log(f"{slug}: reject {c['id']} ({bad})")
+                    done_ids.add(c["id"])
+                    continue
+                why = overlay_guard.clip_reason(dest)
+                if why:
+                    log(f"{slug}: reject {c['id']} ({why}); skip, do not crop")
                     done_ids.add(c["id"])
                     continue
                 if not retry(lambda: upload(dest), 3, 10):

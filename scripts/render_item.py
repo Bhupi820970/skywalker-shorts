@@ -78,6 +78,7 @@ if _hook_errs:
 import gate
 import gemini
 import sky_ai
+import overlay_guard
 import sourcing
 
 os.environ.setdefault("SKY_GEMINI_BUDGET_FILE", str(OUT / f"gemini_budget_{iid}.json"))
@@ -380,6 +381,11 @@ def download_scene_bundle(src, skip=None):
                 errors.append(f"skip different-topic source: {info}")
                 part.unlink(missing_ok=True)
                 continue
+        why = overlay_guard.clip_reason(part)
+        if why:
+            errors.append(f"reject {why}: {info or u}")
+            part.unlink(missing_ok=True)
+            continue
         print(f"  scene clip {len(paths)+1}: {info}", flush=True)
         paths.append(part)
         useds.append(info)
