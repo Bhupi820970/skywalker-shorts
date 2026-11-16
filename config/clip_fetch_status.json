@@ -1,11 +1,12 @@
 {
  "box": {
-  "last_run_at": "2026-11-16T07:00:37Z",
-  "last_upload_at": "2026-11-16T07:00:37Z"
+  "last_run_at": "2026-11-16T07:02:44Z",
+  "last_upload_at": "2026-11-16T07:02:44Z"
  },
  "done_ids": [
   "yt:7LzDcr20SHc",
-  "yt:HGCsAcFzaFw"
+  "yt:HGCsAcFzaFw",
+  "yt:yWBA876qftM"
  ],
  "clips": [
   {
@@ -29,6 +30,17 @@
    "kbps": 2132,
    "by": "box",
    "at": "2026-11-16T07:00:37Z"
+  },
+  {
+   "asset": "vinlandsagathorfinn_scene1_h264.mp4",
+   "id": "yt:yWBA876qftM",
+   "title": "Thorfinn Survives 100 Punches | VINLAND SAGA SEASON 2",
+   "channel": "Crunchyroll",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1358,
+   "by": "box",
+   "at": "2026-11-16T07:02:44Z"
   }
  ]
 }

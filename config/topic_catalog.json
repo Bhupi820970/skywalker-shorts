@@ -1795,6 +1795,30 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "fallback_asset": "jjkgojovstoji_trailer_h264.mp4"
+    },
+    {
+      "slug": "vinlandsagathorfinn",
+      "pillar": "anime",
+      "words": "VINLAND SAGA",
+      "hook": "Why Thorfinn dropped his daggers forever",
+      "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+      "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+      "tags": [
+        "vinlandsaga",
+        "thorfinn",
+        "askeladd",
+        "animeedit",
+        "vinland",
+        "anime",
+        "ihavenoenemies"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=yWBA876qftM",
+      "scene_assets": [
+        "vinlandsagathorfinn_scene1_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
