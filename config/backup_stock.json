@@ -221,7 +221,8 @@
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
       "status": "pending",
-      "queued_at": "2026-11-16 05:58 IST"
+      "queued_at": "2026-11-16 05:58 IST",
+      "result_id": "stock-civilwar-07"
     },
     {
       "id": "stock-deadpool3-01",
@@ -697,10 +698,13 @@
       "id": "stock-tronares-02",
       "topic_id": "backup-tronares",
       "slug": "tronares",
-      "status": "ready",
+      "status": "used",
       "queued_at": "2026-11-15 06:35 IST",
       "result_id": "stock-tronares-02",
-      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-tronares-02.mp4"
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-tronares-02.mp4",
+      "assigned_slot": "2026-11-16T09:00:00+05:30",
+      "assigned_result": "20261116-0900-tronares",
+      "used_at": "2026-11-16 06:29 IST"
     },
     {
       "id": "stock-twisters-01",

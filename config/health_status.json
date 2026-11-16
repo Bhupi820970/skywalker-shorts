@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-16 05:59 IST",
+  "at": "2026-11-16 06:29 IST",
   "slots_checked": 10,
   "ready": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "slot": "2026-11-16T09:00:00+05:30",
-      "id": "20261116-0900-wakeupdeadman",
-      "how": "queued+fallback"
+      "id": "20261116-0900-tronares",
+      "how": "backup_stock"
     },
     {
       "slot": "2026-11-16T12:30:00+05:30",
@@ -53,6 +53,7 @@
     "stock-nobody2-03",
     "20261114-0900-deadpool3",
     "stock-avatarfireandash-04",
+    "20261116-0900-tronares",
     "stock-furiosa-01",
     "20261114-1130-despicableme4",
     "stock-kalki2898ad-02",
@@ -102,11 +103,13 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 18,
+  "stock_ready": 17,
   "stock_pending": 12,
-  "stock_used": 16,
+  "stock_used": 17,
   "stock_target": 30,
-  "stock_need_refill": false,
-  "stock_assigned": [],
+  "stock_need_refill": true,
+  "stock_assigned": [
+    "20261116-0900-tronares"
+  ],
   "ok": false
 }

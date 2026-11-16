@@ -187,5 +187,9 @@
       "low": [],
       "watched_video": true
     }
-  }
+  },
+  "stock_used": true,
+  "assigned_slot": "2026-11-16T09:00:00+05:30",
+  "assigned_result": "20261116-0900-tronares",
+  "used_at": "2026-11-16 06:29 IST"
 }
