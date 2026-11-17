@@ -92,7 +92,7 @@
       "id": "stock-aotfinal-02",
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-17 17:41 IST",
       "result_id": "stock-aotfinal-02"
     },
@@ -148,8 +148,9 @@
       "id": "stock-apothecarydiaries2-07",
       "topic_id": "backup-apothecarydiaries2",
       "slug": "apothecarydiaries2",
-      "status": "pending",
-      "queued_at": "2026-11-17 19:17 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 19:17 IST",
+      "result_id": "stock-apothecarydiaries2-07"
     },
     {
       "id": "stock-arcane2-01",
@@ -252,8 +253,9 @@
       "id": "stock-bleachtybw-07",
       "topic_id": "backup-bleachtybw",
       "slug": "bleachtybw",
-      "status": "pending",
-      "queued_at": "2026-11-17 19:17 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 19:17 IST",
+      "result_id": "stock-bleachtybw-07"
     },
     {
       "id": "stock-bluegiant-01",
@@ -619,14 +621,16 @@
       "topic_id": "backup-dragonballdaima",
       "slug": "dragonballdaima",
       "status": "pending",
-      "queued_at": "2026-11-17 18:19 IST"
+      "queued_at": "2026-11-17 18:19 IST",
+      "result_id": "stock-dragonballdaima-02"
     },
     {
       "id": "stock-drstone-01",
       "topic_id": "backup-drstone",
       "slug": "drstone",
-      "status": "pending",
-      "queued_at": "2026-11-17 18:19 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 18:19 IST",
+      "result_id": "stock-drstone-01"
     },
     {
       "id": "stock-dune2-01",
