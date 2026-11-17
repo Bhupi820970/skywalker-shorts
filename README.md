@@ -55,3 +55,10 @@ Eight IST slots/day (`config/slots.json`). `scripts/fill_queue.py` (from `trends
 2. Or run the `link` workflow (`workflow_dispatch` with `link_url`, optional `title` / `hook` / `slot` / `no_publish`), or add a row to `links/requests.json` and run `python3 scripts/submit_link.py --pending`. Trailers and teasers are rejected. If GitHub cannot download the file, run the box script in step 1.
 
 A song is not reused within 3 days. Backup stock and the backup pool skip trailer sources (already-posted videos are never deleted). Official titles should have 3–5 scene clips so a render can merge unique shots before it gives up.
+
+
+## Auto-discover official scene clips
+A daily `discover` workflow (around 10:07 IST, or run it by hand) asks Gemini for trending titles, searches YouTube (`ytsearch`) and official X accounts, and keeps only studio/distributor channels (Netflix, TOHO, Aniplex, Warner, Marvel, Sony, Prime Video, and the same list in `config/source_catalog.json`). Trailers are skipped. Each candidate is sampled and run through the existing logo/watermark detector. If a corner logo or a persistent bug is found, that clip is skipped and another *official* clip of the same title is tried. Fan re-uploads are never used to dodge a logo, and logos are never blurred, cropped, or covered. Up to two accepted links are written into the queue and `links/requests.json` so the normal link mode renders and schedules them into the next free official IST slots.
+
+If GitHub cannot download a YouTube sample ("sign in to confirm you are not a bot"), the job leaves those official URLs in `config/discover_status.json`. On the box, run `python3 scripts/discover_links.py --retry-samples` (short sample only, no render, no cookies).
+

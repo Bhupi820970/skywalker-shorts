@@ -1,0 +1,74 @@
+name: discover
+
+# Daily: Gemini + yt-dlp search (YouTube + official X accounts) for official
+# best-scene clips. Logo/watermark check uses a short sample only. Logo'd
+# official clips are skipped; unofficial re-uploads are never used. Accepted
+# links are queued for the normal link/render/Buffer path (max 2 per day).
+on:
+  schedule:
+    - cron: "37 4 * * *"   # ~10:07 IST, after the clips request job
+  workflow_dispatch:
+    inputs:
+      max_accept:
+        description: "Max official links to queue (1-2 recommended)"
+        required: false
+        default: "2"
+      dry_run:
+        description: "Search and logo-check only; do not write the queue"
+        type: boolean
+        default: false
+      retry_samples:
+        description: "Box/manual: retry official URLs that GitHub could not sample"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: discover
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ffmpeg + yt-dlp
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q "yt-dlp[default]" curl_cffi numpy
+      - name: Discover official scene links
+        timeout-minutes: 20
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+          GEMINI_API_KEY_6: ${{ secrets.GEMINI_API_KEY_6 }}
+          GEMINI_MAX_CALLS: "1"
+          MAX_ACCEPT: ${{ github.event.inputs.max_accept || '2' }}
+          DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+          RETRY: ${{ github.event.inputs.retry_samples == 'true' && '1' || '0' }}
+        run: |
+          set -euo pipefail
+          ARGS=(--max-accept "$MAX_ACCEPT")
+          [ "$DRY_RUN" = "1" ] && ARGS+=(--dry-run)
+          [ "$RETRY" = "1" ] && ARGS+=(--retry-samples)
+          python3 scripts/discover_links.py "${ARGS[@]}"
+      - name: Commit accepted links and queue
+        run: |
+          git config user.name "skywalker-discover"
+          git config user.email "actions@users.noreply.github.com"
+          git add links/requests.json queue/*.json config/discover_status.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "discover: official scene links $(date -u +%F)"
+          for i in 1 2 3 4; do git pull --rebase -q && git push && break; sleep 7; done
