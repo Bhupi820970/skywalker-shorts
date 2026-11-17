@@ -853,6 +853,13 @@
       "queued_at": "2026-11-17 21:37 IST"
     },
     {
+      "id": "stock-frieren2-01",
+      "topic_id": "backup-frieren2",
+      "slug": "frieren2",
+      "status": "pending",
+      "queued_at": "2026-11-17 21:43 IST"
+    },
+    {
       "id": "stock-furiosa-01",
       "topic_id": "backup-furiosa",
       "slug": "furiosa",
@@ -872,6 +879,13 @@
       "queued_at": "2026-11-14 22:32 IST",
       "result_id": "stock-furiosa-02",
       "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-furiosa-02.mp4"
+    },
+    {
+      "id": "stock-gachiakuta-01",
+      "topic_id": "backup-gachiakuta",
+      "slug": "gachiakuta",
+      "status": "pending",
+      "queued_at": "2026-11-17 21:43 IST"
     },
     {
       "id": "stock-gladiator2-01",
