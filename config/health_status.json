@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-17 23:28 IST",
+  "at": "2026-11-17 23:53 IST",
   "slots_checked": 11,
   "ready": [
     {
@@ -93,6 +93,7 @@
     "20261117-1330-wickedforgood",
     "stock-avatarfireandash-03",
     "stock-kalki2898ad-02",
+    "stock-jujutsukaisencullinggame-01",
     "20261115-1330-avatarfireandash",
     "20261114-0900-deadpool3",
     "20261115-1130-runningman",
@@ -116,7 +117,9 @@
     "stock-avatarfireandash-02",
     "stock-furiosa-02",
     "20261114-1830-predatorbadlands",
+    "stock-hellsparadise-01",
     "20261115-1330-mortalkombat2",
+    "stock-gachiakuta-02",
     "20261115-1730-alienromulus",
     "stock-predatorbadlands-01",
     "stock-tronares-02",
@@ -124,11 +127,11 @@
     "20261114-1330-dune2"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 4,
-  "stock_pending": 26,
+  "stock_ready": 7,
+  "stock_pending": 21,
   "stock_used": 21,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": false
 }

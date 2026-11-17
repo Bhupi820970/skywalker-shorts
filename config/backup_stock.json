@@ -100,7 +100,7 @@
       "id": "stock-aotfinal-03",
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-17 19:51 IST",
       "result_id": "stock-aotfinal-03"
     },
@@ -569,7 +569,7 @@
       "id": "stock-dandadan-02",
       "topic_id": "backup-dandadan",
       "slug": "dandadan",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-17 19:18 IST",
       "result_id": "stock-dandadan-02"
     },
@@ -914,8 +914,10 @@
       "id": "stock-gachiakuta-02",
       "topic_id": "backup-gachiakuta",
       "slug": "gachiakuta",
-      "status": "pending",
-      "queued_at": "2026-11-17 22:50 IST"
+      "status": "ready",
+      "queued_at": "2026-11-17 22:50 IST",
+      "result_id": "stock-gachiakuta-02",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-gachiakuta-02.mp4"
     },
     {
       "id": "stock-gladiator2-01",
@@ -970,28 +972,34 @@
       "topic_id": "backup-haikyuudumpster",
       "slug": "haikyuudumpster",
       "status": "pending",
-      "queued_at": "2026-11-17 22:01 IST"
+      "queued_at": "2026-11-17 22:01 IST",
+      "result_id": "stock-haikyuudumpster-01"
     },
     {
       "id": "stock-hellsparadise-01",
       "topic_id": "backup-hellsparadise",
       "slug": "hellsparadise",
-      "status": "pending",
-      "queued_at": "2026-11-17 22:01 IST"
+      "status": "ready",
+      "queued_at": "2026-11-17 22:01 IST",
+      "result_id": "stock-hellsparadise-01",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-hellsparadise-01.mp4"
     },
     {
       "id": "stock-jjk0-01",
       "topic_id": "backup-jjk0",
       "slug": "jjk0",
       "status": "pending",
-      "queued_at": "2026-11-17 22:30 IST"
+      "queued_at": "2026-11-17 22:30 IST",
+      "result_id": "stock-jjk0-01"
     },
     {
       "id": "stock-jujutsukaisencullinggame-01",
       "topic_id": "backup-jujutsukaisencullinggame",
       "slug": "jujutsukaisencullinggame",
-      "status": "pending",
-      "queued_at": "2026-11-17 22:50 IST"
+      "status": "ready",
+      "queued_at": "2026-11-17 22:50 IST",
+      "result_id": "stock-jujutsukaisencullinggame-01",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-jujutsukaisencullinggame-01.mp4"
     },
     {
       "id": "stock-jurassicworldrebirth-01",
