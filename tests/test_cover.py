@@ -113,15 +113,16 @@ def test_prepend_cover_makes_first_frame_the_poster(tmp_path):
         if False else sharp,
         tmp_path / "poster.jpg",
     )
-    out = cover.prepend_cover(vid, cover_path, tmp_path / "out.mp4", hold_s=0.20, max_total=32.6)
+    out = cover.prepend_cover(vid, cover_path, tmp_path / "out.mp4", hold_s=cover.HOLD_S, max_total=32.6)
     assert out.exists() and out.stat().st_size > 1000
     first = cover._ffmpeg_frame(out, 0.0)
     assert first is not None
     # First frame should not be near-black like the source.
     assert float(first.mean()) > 30
-    # Duration grew by about the hold (source is 0.6s + 0.2s).
+    # Duration grew by the short flash only (~67ms), not a 0.2s hold.
     dur = cover._probe_dur(out)
-    assert dur >= 0.7
+    assert 0.62 <= dur <= 0.85
+    assert cover.HOLD_S <= 0.08 and cover.HOLD_S >= 0.05
 
 
 def test_candidate_times_use_edl_mids_and_skip_end_card():
@@ -133,3 +134,39 @@ def test_candidate_times_use_edl_mids_and_skip_end_card():
     assert any(abs(t - 1.5) < 0.2 for t in times)
     assert any(abs(t - 5.5) < 0.3 for t in times)
     assert all(t < 19.0 for t in times)
+
+
+def test_hold_is_a_short_flash_not_a_fifth_second():
+    assert 0.05 <= cover.HOLD_S <= 0.08
+    assert round(cover.HOLD_S * cover.FPS) in (2, 3)
+
+
+def test_youtube_id_and_maxres_url():
+    url = "https://www.youtube.com/watch?v=Ja1q9DnLI6M"
+    assert cover.youtube_id(url) == "Ja1q9DnLI6M"
+    assert cover.youtube_id("https://youtu.be/Ja1q9DnLI6M") == "Ja1q9DnLI6M"
+    urls = cover.official_thumb_urls(url)
+    assert urls[0].endswith("/maxresdefault.jpg")
+    assert "Ja1q9DnLI6M" in urls[0]
+
+
+def test_official_thumb_beats_dark_frame(tmp_path):
+    dark = _solid((2, 2, 2))
+    sharp = _checker()
+    vid = _write_color_video(tmp_path / "dark.mp4", [dark, dark, dark, dark], fps=10)
+    thumb = cover.write_cover(sharp, tmp_path / "yt.jpg")
+    picked = cover.pick_best_cover(vid, times=[0.1, 0.2], source_url="", work=tmp_path, thumb_path=thumb)
+    assert picked is not None
+    src, t, fr = picked
+    assert src == "thumbnail"
+    assert not cover.is_sexual_frame(fr)
+    assert cover.score_frame(fr) > cover.score_frame(dark)
+
+
+def test_sexual_skin_frame_is_rejected():
+    # Near-full-frame skin tone, no face structure — must not become the poster.
+    bare = _solid((210, 150, 120))
+    assert cover.is_sexual_frame(bare)
+    assert cover.score_frame(bare) < 0
+    sharp = _checker()
+    assert not cover.is_sexual_frame(sharp)

@@ -2,20 +2,22 @@
 
 YouTube Shorts (and Buffer's YouTube path) use the first frame as the cover;
 Buffer rejects a custom thumbnailUrl on video assets. So the poster has to
-live in the video itself. The plate stays centered and is never cropped.
+live in the video itself as a 2-3 frame flash (~50-80ms), then the edit plays unchanged. Official YouTube maxres thumbs are also scored. The plate stays centered and is never cropped.
 """
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 from pathlib import Path
+from urllib.request import Request, urlopen
 
 import numpy as np
 
 W, H = 1080, 1920
-HOLD_S = 0.20
-MAX_TOTAL_S = 32.6
 FPS = 30
+HOLD_S = 2 / FPS  # ~67ms: 2 frames at 30fps (stay in the 50-80ms flash)
+MAX_TOTAL_S = 32.6
 
 
 def _luma(frame: np.ndarray) -> np.ndarray:
@@ -83,7 +85,7 @@ def score_frame(frame: np.ndarray) -> float:
     """Higher is a better poster: sharp, contrasty, not dark, prefers a face."""
     if frame is None or getattr(frame, "size", 0) == 0:
         return -1e9
-    if is_unusable_frame(frame):
+    if is_unusable_frame(frame) or is_sexual_frame(frame):
         return -1.0
     sharp = sharpness(frame)
     con = contrast(frame)
@@ -91,6 +93,129 @@ def score_frame(frame: np.ndarray) -> float:
     face = face_bonus(frame)
     # Sharpness dominates so a soft pretty frame loses to a crisp close-up.
     return 0.40 * min(sharp / 400.0, 1.5) + 0.25 * min(con / 60.0, 1.5) + 0.20 * bright + 0.15 * min(face, 1.5)
+
+
+
+# Skin-heavy frames can look sexual even when they score as "sharp close-ups".
+_SEXUAL_SKIN = 0.48
+_SEXUAL_SKIN_HARD = 0.62
+
+# Official YouTube thumbs, best first. Missing maxres often returns a 120x90 stub.
+_YT_THUMBS = ("maxresdefault.jpg", "sddefault.jpg", "hqdefault.jpg")
+_YT_ID_RE = re.compile(
+    r"(?:youtu\.be/|youtube\.com/(?:watch\?v=|embed/|shorts/|live/))([A-Za-z0-9_-]{11})"
+)
+
+
+def is_sexual_frame(frame: np.ndarray) -> bool:
+    """True when a frame is mostly bare skin / too revealing for a Short poster."""
+    if frame is None or getattr(frame, "ndim", 0) != 3 or frame.shape[2] < 3:
+        return False
+    a = frame
+    r, g, b = a[:, :, 0].astype(int), a[:, :, 1].astype(int), a[:, :, 2].astype(int)
+    skin = float(((r > 80) & (r > g) & (g > b * 0.7) & ((r - b) > 15)).mean())
+    if skin >= _SEXUAL_SKIN_HARD:
+        return True
+    if skin >= _SEXUAL_SKIN and face_bonus(frame) < 0.35:
+        return True
+    return False
+
+
+def youtube_id(url: str) -> str | None:
+    if not url:
+        return None
+    m = _YT_ID_RE.search(url)
+    if m:
+        return m.group(1)
+    m = re.search(r"[?&]v=([A-Za-z0-9_-]{11})", url)
+    return m.group(1) if m else None
+
+
+def official_thumb_urls(url: str) -> list[str]:
+    vid = youtube_id(url)
+    if not vid:
+        return []
+    return [f"https://i.ytimg.com/vi/{vid}/{name}" for name in _YT_THUMBS]
+
+
+def download_official_thumbnail(url: str, dest: Path, *, timeout: float = 15.0) -> Path | None:
+    """Fetch the official YouTube maxres (then sd/hq) thumb for the same official source.
+
+    Rejects the 120x90 'missing maxres' stub. Never crops; callers contain-fit later.
+    """
+    dest = Path(dest)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    ua = "Mozilla/5.0 (compatible; SkywalkerShorts/1.0; +https://github.com/chatgpt820970/skywalker-shorts)"
+    for thumb in official_thumb_urls(url):
+        try:
+            req = Request(thumb, headers={"User-Agent": ua})
+            with urlopen(req, timeout=timeout) as r:
+                data = r.read()
+        except Exception:
+            continue
+        if not data or len(data) < 8000:
+            continue
+        dest.write_bytes(data)
+        fr = load_image_frame(dest, fit=False)
+        if fr is None:
+            dest.unlink(missing_ok=True)
+            continue
+        h, w = fr.shape[:2]
+        if min(w, h) < 240 or max(w, h) < 480:
+            dest.unlink(missing_ok=True)
+            continue
+        return dest
+    dest.unlink(missing_ok=True)
+    return None
+
+
+def load_image_frame(path: Path, *, fit: bool = True) -> np.ndarray | None:
+    """Load a still and optionally contain-fit it onto the 9:16 canvas (never crop)."""
+    path = Path(path)
+    if not path.exists() or path.stat().st_size < 32:
+        return None
+    try:
+        from PIL import Image
+        img = Image.open(path).convert("RGB")
+    except Exception:
+        return None
+    arr = np.array(img, dtype=np.uint8)
+    if not fit:
+        return arr
+    # Reuse write_cover's contain-fit by writing through a copy path in memory.
+    iw, ih = img.size
+    if (iw, ih) == (W, H):
+        return arr
+    scale = min(W / max(1, iw), H / max(1, ih))
+    nw, nh = max(2, int(iw * scale) // 2 * 2), max(2, int(ih * scale) // 2 * 2)
+    img = img.resize((nw, nh), Image.Resampling.LANCZOS)
+    canvas = Image.new("RGB", (W, H), (0, 0, 0))
+    canvas.paste(img, ((W - nw) // 2, (H - nh) // 2))
+    return np.array(canvas, dtype=np.uint8)
+
+
+def stamp_hook_bar(poster: np.ndarray, composed: np.ndarray | None) -> np.ndarray:
+    """Copy the white hook bar off a muxed frame onto an official thumb (contain-fit canvas)."""
+    if poster is None or composed is None:
+        return poster
+    if poster.shape != composed.shape:
+        return poster
+    # White hook bar lives at the top of the 9:16 canvas. Take rows that stay very bright.
+    y = _luma(composed[:400])
+    row = y.mean(axis=1)
+    bar_h = 0
+    for i, v in enumerate(row):
+        if v >= 200:
+            bar_h = i + 1
+        elif bar_h >= 40:
+            break
+        else:
+            bar_h = 0
+    if bar_h < 40:
+        return poster
+    out = poster.copy()
+    out[:bar_h] = composed[:bar_h]
+    return out
 
 
 def candidate_times(duration_s: float, edl: list[dict] | None = None, *,
@@ -280,23 +405,58 @@ def prepend_cover(video: Path, cover: Path, dest: Path | None = None,
     return dest
 
 
-def apply_opening_cover(video: Path, *, edl: list[dict] | None = None,
-                        hook: str = "", work: Path | None = None,
-                        hold_s: float = HOLD_S) -> Path | None:
-    """Pick the best frame, write cover.jpg, and make it the opening frame."""
+def pick_best_cover(video: Path, *, times: list[float] | None = None,
+                    edl: list[dict] | None = None,
+                    source_url: str = "", work: Path | None = None,
+                    thumb_path: Path | None = None) -> tuple[str, float, np.ndarray] | None:
+    """Best of official YouTube maxres thumb vs sharp mid-shot frames. Never sexual."""
     video = Path(video)
     work = Path(work) if work else video.parent
     work.mkdir(parents=True, exist_ok=True)
-    picked = pick_best_frame(video, edl=edl)
+    cands: list[tuple[str, float, np.ndarray, float]] = []
+    picked = pick_best_frame(video, times=times, edl=edl)
+    composed = None
+    if picked:
+        t, fr = picked
+        composed = fr
+        if not is_sexual_frame(fr):
+            cands.append(("frame", float(t), fr, score_frame(fr)))
+    thumb = Path(thumb_path) if thumb_path else None
+    if (thumb is None or not thumb.exists()) and source_url:
+        thumb = download_official_thumbnail(source_url, work / "yt_thumb.jpg")
+    if thumb is not None and Path(thumb).exists():
+        raw = load_image_frame(thumb, fit=True)
+        if raw is not None and not is_sexual_frame(raw):
+            framed = stamp_hook_bar(raw, composed if composed is not None else _ffmpeg_frame(video, 0.4))
+            cands.append(("thumbnail", -1.0, framed, score_frame(framed)))
+    usable = [c for c in cands if c[3] >= 0]
+    pool = usable or cands
+    if not pool:
+        return None
+    src, t, fr, sc = max(pool, key=lambda c: c[3])
+    return src, t, fr
+
+
+def apply_opening_cover(video: Path, *, edl: list[dict] | None = None,
+                        hook: str = "", work: Path | None = None,
+                        hold_s: float = HOLD_S, source_url: str = "",
+                        thumb_path: Path | None = None) -> Path | None:
+    """Pick the best poster, write cover.jpg, and flash it for ~2 frames at the start."""
+    video = Path(video)
+    work = Path(work) if work else video.parent
+    work.mkdir(parents=True, exist_ok=True)
+    picked = pick_best_cover(video, edl=edl, source_url=source_url, work=work, thumb_path=thumb_path)
     if not picked:
         print("  cover: no usable dramatic frame; leaving first frame as-is")
         return None
-    t, frame = picked
+    src, t, frame = picked
     cover_path = work / "cover.jpg"
     write_cover(frame, cover_path)
     meta = {"t": round(float(t), 3), "score": round(float(score_frame(frame)), 3),
-            "hook": hook or "", "file": str(cover_path)}
+            "source": src, "hook": hook or "", "file": str(cover_path),
+            "hold_s": round(float(hold_s), 4)}
     (work / "cover.json").write_text(json.dumps(meta, indent=2))
     prepend_cover(video, cover_path, video, hold_s=hold_s)
-    print(f"  cover: opening poster from t={t:.2f}s -> {cover_path.name}")
+    where = f"official thumb" if src == "thumbnail" else f"t={t:.2f}s"
+    print(f"  cover: {float(hold_s)*1000:.0f}ms opening flash from {where} -> {cover_path.name}")
     return cover_path
