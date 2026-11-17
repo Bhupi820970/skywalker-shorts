@@ -116,7 +116,7 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 1,
-  "stock_pending": 21,
+  "stock_pending": 23,
   "stock_used": 20,
   "stock_target": 30,
   "stock_need_refill": true,
