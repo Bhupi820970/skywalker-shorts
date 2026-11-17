@@ -1,16 +1,20 @@
 {
  "box": {
-  "last_run_at": "2026-11-17T10:20:04Z",
-  "last_upload_at": "2026-11-17T10:20:04Z"
+  "last_run_at": "2026-11-17T10:32:10Z",
+  "last_upload_at": "2026-11-17T10:32:10Z"
  },
  "done_ids": [
   "yt:7LzDcr20SHc",
   "yt:B0pIISs-o8w",
   "yt:HGCsAcFzaFw",
   "yt:MeIk9ap1u_E",
+  "yt:UPBRjoTmYaw",
+  "yt:VAikfIsQyRM",
   "yt:VwwZU7YgC6A",
+  "yt:Y9XqnjKXgTs",
   "yt:ckEUVyKanhw",
   "yt:golG9lmaR_U",
+  "yt:jeQYEIQ6eHw",
   "yt:yWBA876qftM"
  ],
  "clips": [
@@ -101,6 +105,50 @@
    "kbps": 1341,
    "by": "box",
    "at": "2026-11-17T10:20:04Z"
+  },
+  {
+   "asset": "animal_scene1_h264.mp4",
+   "id": "yt:Y9XqnjKXgTs",
+   "title": "ANIMAL Movie Scene: Ranbir Kapoor Iconic Entry🔥 | Killing Jeeja | Ranbir K,Anil K,Sandeep,Bhushan K",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 11122,
+   "by": "box",
+   "at": "2026-11-17T10:32:10Z"
+  },
+  {
+   "asset": "animal_scene2_h264.mp4",
+   "id": "yt:jeQYEIQ6eHw",
+   "title": "ANIMAL:Ranvijay’s Entry Medley(Full Video) Ranbir Kapoor|A.R. Rahman,Threeory Band|Sandeep|Bhushan K",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 13008,
+   "by": "box",
+   "at": "2026-11-17T10:32:10Z"
+  },
+  {
+   "asset": "animal_scene3_h264.mp4",
+   "id": "yt:VAikfIsQyRM",
+   "title": "ANIMAL Movie Scene: The Nude Walk | Ranbir Gets The Donor | Ranbir K, Tripti D, Sandeep V, Bhushan K",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 9757,
+   "by": "box",
+   "at": "2026-11-17T10:32:10Z"
+  },
+  {
+   "asset": "animal_scene4_h264.mp4",
+   "id": "yt:UPBRjoTmYaw",
+   "title": "ANIMAL Movie Scene: The School Song😍 | Ranbir Meets Rashmika | Ranbir, Rashmika, Sandeep,  Bhushan K",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 7765,
+   "by": "box",
+   "at": "2026-11-17T10:32:10Z"
   }
  ],
  "github": {

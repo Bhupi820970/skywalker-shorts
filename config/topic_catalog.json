@@ -1911,6 +1911,33 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "animal",
+      "pillar": "bollywood",
+      "words": "ANIMAL",
+      "hook": "Why he is the villain",
+      "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+      "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+      "tags": [
+        "animal",
+        "ranbirkapoor",
+        "bollywood",
+        "edit",
+        "phonk",
+        "aura",
+        "action"
+      ],
+      "market": "IN",
+      "source_url": "https://www.youtube.com/watch?v=Y9XqnjKXgTs",
+      "scene_assets": [
+        "animal_scene1_h264.mp4",
+        "animal_scene2_h264.mp4",
+        "animal_scene3_h264.mp4",
+        "animal_scene4_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
