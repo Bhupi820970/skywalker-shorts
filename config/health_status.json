@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-17 17:10 IST",
-  "slots_checked": 11,
+  "at": "2026-11-17 17:41 IST",
+  "slots_checked": 12,
   "ready": [
     {
       "slot": "2026-11-17T16:00:00+05:30",
@@ -45,6 +45,11 @@
     {
       "slot": "2026-11-18T16:00:00+05:30",
       "id": "20261118-1600-mhayourenext",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-18T17:30:00+05:30",
+      "id": "20261118-1730-princessmononoke",
       "how": "queued+fallback"
     }
   ],
@@ -96,6 +101,7 @@
     "20261115-1730-alienromulus",
     "stock-twisters-02",
     "stock-runningman-01",
+    "stock-cyberpunkedgerunners-01",
     "stock-avatarfireandash-01",
     "stock-dune2-02",
     "stock-bluegiant-01",
@@ -108,6 +114,7 @@
     "20261114-1730-kalki2898ad",
     "stock-venom3-01",
     "stock-avatarfireandash-03",
+    "stock-boyandheron-01",
     "stock-kalki2898ad-01",
     "20261114-1330-dune2",
     "20261116-1600-venom3",
@@ -115,8 +122,8 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 1,
-  "stock_pending": 23,
+  "stock_ready": 3,
+  "stock_pending": 18,
   "stock_used": 20,
   "stock_target": 30,
   "stock_need_refill": true,

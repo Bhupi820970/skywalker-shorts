@@ -84,7 +84,7 @@
       "id": "stock-aotfinal-01",
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-17 16:10 IST",
       "result_id": "stock-aotfinal-01"
     },
@@ -100,8 +100,9 @@
       "id": "stock-apothecarydiaries2-02",
       "topic_id": "backup-apothecarydiaries2",
       "slug": "apothecarydiaries2",
-      "status": "pending",
-      "queued_at": "2026-11-17 17:09 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 17:09 IST",
+      "result_id": "stock-apothecarydiaries2-02"
     },
     {
       "id": "stock-arcane2-01",
@@ -164,8 +165,9 @@
       "id": "stock-bleachtybw-02",
       "topic_id": "backup-bleachtybw",
       "slug": "bleachtybw",
-      "status": "pending",
-      "queued_at": "2026-11-17 17:09 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 17:09 IST",
+      "result_id": "stock-bleachtybw-02"
     },
     {
       "id": "stock-bluegiant-01",
@@ -195,8 +197,10 @@
       "id": "stock-boyandheron-01",
       "topic_id": "backup-boyandheron",
       "slug": "boyandheron",
-      "status": "pending",
-      "queued_at": "2026-11-17 16:32 IST"
+      "status": "ready",
+      "queued_at": "2026-11-17 16:32 IST",
+      "result_id": "stock-boyandheron-01",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-boyandheron-01.mp4"
     },
     {
       "id": "stock-chainsawman-01",
@@ -353,8 +357,10 @@
       "id": "stock-cyberpunkedgerunners-01",
       "topic_id": "backup-cyberpunkedgerunners",
       "slug": "cyberpunkedgerunners",
-      "status": "pending",
-      "queued_at": "2026-11-17 16:32 IST"
+      "status": "ready",
+      "queued_at": "2026-11-17 16:32 IST",
+      "result_id": "stock-cyberpunkedgerunners-01",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-01.mp4"
     },
     {
       "id": "stock-dandadan-01",
@@ -381,8 +387,9 @@
       "id": "stock-dbsuperhero-01",
       "topic_id": "backup-dbsuperhero",
       "slug": "dbsuperhero",
-      "status": "pending",
-      "queued_at": "2026-11-17 17:11 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 17:11 IST",
+      "result_id": "stock-dbsuperhero-01"
     },
     {
       "id": "stock-deadpool3-01",
@@ -458,8 +465,9 @@
       "id": "stock-dragonballdaima-01",
       "topic_id": "backup-dragonballdaima",
       "slug": "dragonballdaima",
-      "status": "pending",
-      "queued_at": "2026-11-17 17:11 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 17:11 IST",
+      "result_id": "stock-dragonballdaima-01"
     },
     {
       "id": "stock-dune2-01",
