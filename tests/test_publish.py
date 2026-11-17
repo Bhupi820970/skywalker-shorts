@@ -137,7 +137,7 @@ def test_own_performance_joins_render_facts():
     assert maat["energy"] is False
     assert maat["drop_t"] is None
     assert maat["slot"] == "22:30"
-    lucy = next(r for r in rows if "Lucy" in (r.get("title") or ""))
+    lucy = next(r for r in rows if "matchmaker" in (r.get("title") or ""))
     assert lucy["energy"] is False and lucy["slot"] == "17:30"
 
 
