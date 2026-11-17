@@ -1,9 +1,9 @@
 {
   "id": "stock-aotfinal-02",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 6.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-17 18:09 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44080786182",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): only 6.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-17 19:44 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44096164880",
   "slot": null,
   "title": "Mikasa never stopped protecting him | Attack on Titan | #edit",
   "hook": "Mikasa never stopped protecting him",
@@ -27,13 +27,7 @@
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "TimeoutError"
+      "err": "HTTP 429"
     },
     {
       "purpose": "scenes",
@@ -51,14 +45,14 @@
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 1.8,
+      "s": 3.3,
       "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 2.9,
+      "s": 13.3,
       "ok": true
     }
   ],
@@ -66,33 +60,33 @@
   "stock": true,
   "stock_topic": "backup-aotfinal",
   "spare": true,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 10.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 9.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/aotfinal_scene1_h264.mp4",
-      "music": "sw_phnk2.mp3",
+      "music": "sw_phonkmemphisrap2.mp3",
       "qc_status": null
     },
     {
       "attempt": 2,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 10.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 9.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/aotfinal_scene1_h264.mp4",
-      "music": "sw_phnk2.mp3",
+      "music": "sw_phonkmemphisrap2.mp3",
       "qc_status": null
     },
     {
       "attempt": 3,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 6.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 6.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/aotfinal_scene1_h264.mp4",
-      "music": "sw_funkcriminalslowed.mp3",
+      "music": "sw_perdidoslowed.mp3",
       "qc_status": null
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 6.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": "pipeline/QA failed (exit 1): only 6.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
 }
