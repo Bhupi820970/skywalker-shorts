@@ -1,0 +1,4 @@
+{
+  "note": "Official YouTube or X scene-clip links only. Never trailers. Add a request and run scripts/submit_link.py --pending, or use scripts/fetch_link_to_release.sh <url> <name> on the box when GitHub cannot download YouTube.",
+  "requests": []
+}

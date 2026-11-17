@@ -49,3 +49,9 @@ Eight IST slots/day (`config/slots.json`). `scripts/fill_queue.py` (from `trends
 
 ## Dry-run / test render
 `workflow_dispatch` on `render.yml` with `no_publish=true` renders to the `test-renders` GitHub release and is skipped by Buffer publish.
+
+## Submit an official YouTube or X clip
+1. Prefer the box script when the link is on YouTube (GitHub runners often get a "sign in to confirm you are not a bot" block). From the repo: `scripts/fetch_link_to_release.sh <url> <name>` — it downloads the official scene clip only (no render, no cookies), uploads `<name>_scene1_h264.mp4` to the `sources` release, queues the next free official IST slot, and triggers the usual edit / QC / Buffer path.
+2. Or run the `link` workflow (`workflow_dispatch` with `link_url`, optional `title` / `hook` / `slot` / `no_publish`), or add a row to `links/requests.json` and run `python3 scripts/submit_link.py --pending`. Trailers and teasers are rejected. If GitHub cannot download the file, run the box script in step 1.
+
+A song is not reused within 3 days. Backup stock and the backup pool skip trailer sources (already-posted videos are never deleted). Official titles should have 3–5 scene clips so a render can merge unique shots before it gives up.

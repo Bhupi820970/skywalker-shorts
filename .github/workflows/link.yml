@@ -1,0 +1,162 @@
+name: link
+
+# Turn an official YouTube or X scene-clip URL into a queued Short, then
+# dispatch render.yml. GitHub runners often hit YouTube bot-check; if
+# download fails, the result tells BiBi to run scripts/fetch_link_to_release.sh
+# on the box (download only, no render).
+on:
+  workflow_dispatch:
+    inputs:
+      link_url:
+        description: "Official YouTube or X scene-clip URL (never a trailer)"
+        required: true
+        default: ""
+      title:
+        description: "Optional title / film name"
+        required: false
+        default: ""
+      hook:
+        description: "Optional English hook (3-8 words)"
+        required: false
+        default: ""
+      name:
+        description: "Short slug for the sources asset, e.g. dandadanfight"
+        required: false
+        default: ""
+      slot:
+        description: "Optional IST slot (HH:MM or ISO). Empty = next free official slot."
+        required: false
+        default: ""
+      no_publish:
+        description: "Dry-run: render only, never Buffer/YouTube"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["links/requests.json"]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: link
+  cancel-in-progress: false
+
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      ids: ${{ steps.go.outputs.ids }}
+      no_publish: ${{ steps.go.outputs.no_publish }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Queue the official link
+        id: go
+        env:
+          LINK_URL: ${{ github.event.inputs.link_url }}
+          TITLE: ${{ github.event.inputs.title }}
+          HOOK: ${{ github.event.inputs.hook }}
+          NAME: ${{ github.event.inputs.name }}
+          SLOT: ${{ github.event.inputs.slot }}
+          NO_PUBLISH: ${{ github.event.inputs.no_publish == 'true' && '1' || '0' }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            if [ -z "${LINK_URL:-}" ]; then
+              echo "link_url is required" >&2
+              exit 1
+            fi
+            ARGS=(--url "$LINK_URL")
+            [ -n "${TITLE:-}" ] && ARGS+=(--title "$TITLE")
+            [ -n "${HOOK:-}" ] && ARGS+=(--hook "$HOOK")
+            [ -n "${NAME:-}" ] && ARGS+=(--name "$NAME")
+            [ -n "${SLOT:-}" ] && ARGS+=(--slot "$SLOT")
+            [ "$NO_PUBLISH" = 1 ] && ARGS+=(--no-publish)
+            python3 scripts/submit_link.py "${ARGS[@]}" | tee /tmp/link.out
+          else
+            python3 scripts/submit_link.py --pending | tee /tmp/link.out
+          fi
+          IDS="$(awk -F= '/^ids=/{print $2}' /tmp/link.out | tail -n1)"
+          echo "ids=$IDS" >> "$GITHUB_OUTPUT"
+          echo "no_publish=$NO_PUBLISH" >> "$GITHUB_OUTPUT"
+          if [ -z "$IDS" ]; then
+            echo "no items queued (nothing pending, or no URL)"
+            echo "ids=" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Commit queue item
+        if: steps.go.outputs.ids != ''
+        run: |
+          git config user.name "skywalker-render"
+          git config user.email "actions@users.noreply.github.com"
+          git add queue/*.json links/requests.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "queue: official link ${{ steps.go.outputs.ids }}"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
+      - name: Try download on GitHub (often blocked) and note the box fallback
+        if: steps.go.outputs.ids != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LINK_URL: ${{ github.event.inputs.link_url }}
+        run: |
+          set +e
+          pip install -q "yt-dlp[default]"
+          # Do not fail the job if YouTube blocks the runner; tell BiBi to use the box script.
+          python3 - <<'PY'
+          import os, json, glob, subprocess, sys
+          from pathlib import Path
+          ids = (os.environ.get("IDS") or "${{ steps.go.outputs.ids }}").split(",")
+          ids = [i.strip() for i in ids if i.strip()]
+          item = None
+          for f in glob.glob("queue/*.json"):
+              for it in json.loads(open(f).read()):
+                  if it.get("id") in ids:
+                      item = it
+                      break
+          if not item:
+              print("queue item not found; render can still try sources later")
+              raise SystemExit(0)
+          url = item.get("source_url") or os.environ.get("LINK_URL") or ""
+          asset = item.get("fallback_asset") or ""
+          if not url or not asset:
+              raise SystemExit(0)
+          dest = Path("/tmp") / asset
+          r = subprocess.run(
+              ["yt-dlp", "--no-progress", "--no-playlist", "-f",
+               "bv*[height>=1080][height<=2160][ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b",
+               "--merge-output-format", "mp4", "-o", str(dest), url],
+              capture_output=True, text=True,
+          )
+          err = (r.stderr or r.stdout or "")[-800:]
+          print(err)
+          if r.returncode == 0 and dest.exists() and dest.stat().st_size > 500_000:
+              repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+              up = subprocess.run(["gh", "release", "upload", "sources", str(dest), "-R", repo, "--clobber"],
+                                  capture_output=True, text=True)
+              print(up.stdout, up.stderr)
+              print("uploaded", asset)
+          else:
+              if "sign in to confirm" in err.lower() or "not a bot" in err.lower():
+                  print("::warning::YouTube blocked the GitHub runner. Run this on the box (download only, no render):")
+                  print(f"  scripts/fetch_link_to_release.sh {url} {asset.split('_scene')[0]}")
+              else:
+                  print("::warning::download failed; render will try the sources release / catalog next")
+          PY
+      - name: Trigger render
+        if: steps.go.outputs.ids != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          IDS: ${{ steps.go.outputs.ids }}
+          NO_PUBLISH: ${{ steps.go.outputs.no_publish }}
+        run: |
+          FLAGS=( -f "ids=$IDS" -f "max=1" )
+          if [ "$NO_PUBLISH" = 1 ]; then FLAGS+=( -f "no_publish=true" ); fi
+          gh workflow run render.yml "${FLAGS[@]}"
+          echo "dispatched render.yml for $IDS (no_publish=$NO_PUBLISH)"
