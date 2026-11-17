@@ -1,0 +1,242 @@
+{
+  "id": "demo-edit-improvements",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok [no-publish]",
+  "at": "2026-11-17 16:30 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44066349530",
+  "slot": "2026-12-15T13:00:00+05:30",
+  "title": "Thorfinn decides to end it all #vinlandsaga #thorfinn #anime",
+  "hook": "Thorfinn decided to end it all",
+  "description": "Thorfinn decided to end it all. Thorfinn seizes a desperate opportunity to strike back against an overwhelming archer force. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=B0pIISs-o8w). All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #anime #shorts #edit",
+  "tags": [
+    "vinlandsaga",
+    "thorfinn",
+    "anime",
+    "askeladd",
+    "animeedit",
+    "vinland"
+  ],
+  "queue_meta": {
+    "hook": "Why Thorfinn walked away from revenge",
+    "title": "Why Thorfinn walked away from revenge | Vinland Saga | #edit",
+    "description": "Why Thorfinn walked away from revenge. From official Vinland Saga scene clips. Edit by Skywalker.",
+    "tags": [
+      "vinlandsaga",
+      "thorfinn",
+      "askeladd",
+      "animeedit",
+      "vinland",
+      "anime"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Thorfinn decides to end it all",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody expected Thorfinn to strike back",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch Thorfinn turn the tide",
+      "click_score": 85.0
+    },
+    {
+      "title": "Askeladd did not expect this from Thorfinn",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment Thorfinn stopped holding back",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.9,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+      "music": "sw_phonkcoreizdead2.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/test-renders",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-edit-improvements.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+  "music": "sw_phonkcoreizdead2.mp3",
+  "music_credit": "Song: Memphis Terrorist - PHONKCORE IZ DEAD (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "description_final": "Thorfinn decided to end it all. Thorfinn seizes a desperate opportunity to strike back against an overwhelming archer force. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=B0pIISs-o8w). All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #anime #shorts #edit\n\nMusic:\nSong: Memphis Terrorist - PHONKCORE IZ DEAD (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "no_publish": true,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.4,
+      "audio": true
+    },
+    "lufs": -15.7,
+    "audio_check": {
+      "mode": "two_act",
+      "isolated": true,
+      "act1_end": 7.6,
+      "act1_frac": 0.312,
+      "song_in_act1_dbfs": -180.0,
+      "voice_in_act2_dbfs": -180.0,
+      "act1_voice_dbfs": -17.3,
+      "act2_song_dbfs": -20.4,
+      "song_switches": 1,
+      "speech_segments": 2
+    },
+    "subtitle_cues": 3,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all technical and creative requirements.",
+        "The layout is correct with the white hook bar at the top and the uncropped footage centered.",
+        "Audio transitions are clean and follow the two-act structure perfectly.",
+        "The hook is engaging and the subtitles are accurate."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 10,
+      "src_start": 22.97,
+      "dur": 3.44,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 13,
+      "src_start": 36.31,
+      "dur": 2.68,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 23,
+      "src_start": 63.66,
+      "dur": 1.5,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 16,
+      "src_start": 43.926,
+      "dur": 1.881,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 45,
+      "src_start": 125.786,
+      "dur": 3.762
+    },
+    {
+      "id": 6,
+      "src_start": 14.905,
+      "dur": 3.622,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 57,
+      "src_start": 151.157,
+      "dur": 1.718,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 29,
+      "src_start": 84.96,
+      "dur": 1.881,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 2,
+      "src_start": 1.892,
+      "dur": 1.616,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    }
+  ],
+  "qc_status": "pass"
+}
