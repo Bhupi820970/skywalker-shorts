@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-17 16:11 IST",
+  "at": "2026-11-17 16:32 IST",
   "slots_checked": 11,
   "ready": [
     {
@@ -14,8 +14,8 @@
     },
     {
       "slot": "2026-11-17T20:30:00+05:30",
-      "id": "20261117-2030-onepieceegghead",
-      "how": "queued+fallback"
+      "id": "backup-dandadan2",
+      "how": "backup_pool"
     },
     {
       "slot": "2026-11-17T22:30:00+05:30",
@@ -115,7 +115,7 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 0,
-  "stock_pending": 17,
+  "stock_pending": 19,
   "stock_used": 20,
   "stock_target": 30,
   "stock_need_refill": true,
