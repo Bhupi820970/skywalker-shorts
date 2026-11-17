@@ -141,10 +141,15 @@ def test_more_official_keeps_studio_skips_unofficial_and_trailers():
         {"url": "https://www.youtube.com/watch?v=trailer12", "title": "Frieren Official Trailer",
          "channel": "TOHO animation", "handle": "", "duration": 90},
         {"url": "https://www.youtube.com/watch?v=shortclip", "title": "Frieren official scene",
-         "channel": "TOHO animation", "handle": "", "duration": 8},
+         "channel": "TOHO animation", "handle": "", "duration": 5},
+        {"url": "https://www.youtube.com/watch?v=twelveclip", "title": "Frieren official scene",
+         "channel": "TOHO animation", "handle": "", "duration": 12},
     ]
     urls = sourcing.more_official_scene_urls(item, already=[], entries=entries)
-    assert urls == ["https://www.youtube.com/watch?v=officialok1"]
+    assert urls == [
+        "https://www.youtube.com/watch?v=officialok1",
+        "https://www.youtube.com/watch?v=twelveclip",
+    ]
 
 
 def test_more_official_skips_already_used_and_needs_more_when_short():
@@ -163,9 +168,9 @@ def test_more_official_skips_already_used_and_needs_more_when_short():
 
 def test_max_source_seconds_default_and_env(monkeypatch):
     monkeypatch.delenv("SKY_MAX_SOURCE_S", raising=False)
-    assert sourcing.max_source_seconds() == 360.0
-    monkeypatch.setenv("SKY_MAX_SOURCE_S", "180")
     assert sourcing.max_source_seconds() == 180.0
+    monkeypatch.setenv("SKY_MAX_SOURCE_S", "120")
+    assert sourcing.max_source_seconds() == 120.0
 
 
 def test_is_below_1080_uses_short_side():
@@ -185,3 +190,43 @@ def test_formats_meet_1080_unknown_allowed_known_720_rejected():
     assert sourcing.formats_meet_1080(
         [{"width": 1280, "height": 720}, {"width": 1920, "height": 1080}], 0, 0
     ) is True
+
+
+def test_more_official_accepts_gkids_and_comix_wave():
+    item = {"words": "YOUR NAME", "pillar": "romance",
+            "official_channels": ["GKIDS Films", "CoMix Wave Films"]}
+    entries = [
+        {"url": "https://www.youtube.com/watch?v=gkidsclip01", "title": "Your Name official scene",
+         "channel": "GKIDS Films", "duration": 28},
+        {"url": "https://www.youtube.com/watch?v=fanedit999", "title": "Your Name official scene",
+         "channel": "Anime Recaps", "duration": 40},
+        {"url": "https://www.youtube.com/watch?v=comixclip01", "title": "Kimi no Na wa official clip",
+         "channel": "CoMix Wave Films", "duration": 35},
+    ]
+    urls = sourcing.more_official_scene_urls(item, already=[], entries=entries)
+    assert urls == [
+        "https://www.youtube.com/watch?v=gkidsclip01",
+        "https://www.youtube.com/watch?v=comixclip01",
+    ]
+
+
+def test_more_official_seeds_catalog_urls_when_search_is_empty(monkeypatch):
+    import subprocess
+    class _R:
+        returncode = 1
+        stdout = ""
+        stderr = "no"
+    monkeypatch.setattr(sourcing.subprocess, "run", lambda *a, **k: _R())
+    item = {"words": "YOUR NAME", "pillar": "romance"}
+    already = ["https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"]
+    urls = sourcing.more_official_scene_urls(item, already=already, entries=None)
+    assert any("Ja1q9DnLI6M" in u or "RuyHIkXdYf8" in u for u in urls)
+    assert not any(sourcing.is_trailer_source(u) for u in urls)
+
+
+def test_ytdlp_output_template_is_not_a_fixed_name():
+    from pathlib import Path
+    tmpl = sourcing.ytdlp_output_template(Path("/tmp/work/src.mp4"))
+    assert tmpl.endswith(".%(ext)s")
+    assert "src.%(ext)s" in tmpl
+    assert tmpl != "/tmp/work/src.mp4"

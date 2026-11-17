@@ -23,7 +23,7 @@ CATALOG = REPO / "config" / "source_catalog.json"
 
 # Prefer the highest 1080p+ format; reject anything whose shorter side is under 1080.
 MIN_SHORT_SIDE = 1080
-YTDLP_FORMAT = "bv*[height>=1080]+ba/b[height>=1080]/bv*[height>=1080]+ba/b"
+YTDLP_FORMAT = ("b[height>=1080][ext=mp4]/bv*[height>=1080][ext=mp4]+ba[ext=m4a]/b[height>=1080]/bv*[height>=1080]+ba/b[ext=mp4]/b")
 YTDLP_SORT = "res:4320,res,codec:h264,ext:mp4:m4a"
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -612,7 +612,7 @@ def _cookies_args() -> list[str]:
 
 # Cap each official source so long Arcane-style clips cannot blow the job timeout.
 # A 20-32s Short only needs a few minutes of clean scenes, not a full episode.
-DEFAULT_MAX_SOURCE_S = 360.0
+DEFAULT_MAX_SOURCE_S = 180.0
 
 
 def max_source_seconds() -> float:
@@ -681,6 +681,10 @@ def official_name_set() -> set[str]:
         "marvelentertainment", "sonypicturesentertainment", "primevideo",
         "waltdisneystudios", "universalpictures", "paramountpictures",
         "lionsgatemovies", "a24", "appletv",
+        "gkids", "gkidsfilms", "comixwave", "comixwavefilms",
+        "crunchyroll", "crunchyrollindia", "crunchyrollcollectibles",
+        "adultswim", "adultswimeurope", "mappa", "mappachannel",
+        "stillwatchingnetflix",
     ):
         names.add(extra)
     return names
@@ -722,10 +726,19 @@ def more_official_scene_urls(
     """
     already_l = {str(u).rstrip("/").lower() for u in (already or []) if u}
     official = official_name_set()
-    # Include any official_channels named on the item if they match known studios.
-    for c in item.get("official_channels") or []:
-        if is_official_channel_name(c, official=official):
-            official.add(re.sub(r"[^a-z0-9]", "", str(c).lower()))
+    # Always include official_channels named on the item and in the catalog topic
+    # (e.g. GKIDS Films, CoMix Wave), not only names already in the global set.
+    extra_ch = list(item.get("official_channels") or [])
+    try:
+        key = topic_key(item)
+        row = (load_catalog().get("topics") or {}).get(key) or {}
+        extra_ch += list(row.get("official_channels") or [])
+    except Exception:
+        row = {}
+    for c in extra_ch:
+        n = re.sub(r"[^a-z0-9]", "", str(c).lower())
+        if n:
+            official.add(n)
     rows = list(entries or [])
     out: list[str] = []
 
@@ -743,9 +756,20 @@ def more_official_scene_urls(
             d = float(dur or 0)
         except Exception:
             d = 0
-        if d and d < 18:
+        if d and d < 8:
             return False
         return True
+
+    # Live path: already-known official catalog/item scene URLs first (no network).
+    if entries is None:
+        for u in list(catalog_urls_for(item)) + list(item_scene_urls(item)):
+            if u and not is_trailer_source(u):
+                key = u.rstrip("/").lower()
+                if key not in already_l and u not in out:
+                    out.append(u)
+                    already_l.add(key)
+            if len(out) >= limit:
+                return out
 
     for e in rows:
         if not isinstance(e, dict):
@@ -791,39 +815,91 @@ def more_official_scene_urls(
     return out
 
 
+
+def ytdlp_output_template(dest: Path) -> str:
+    """Use stem.%(ext)s so a video+audio merge is not a fixed-name clash."""
+    dest = Path(dest)
+    return str(dest.with_name(dest.stem + ".%(ext)s"))
+
+
+def _gather_ytdlp_dest(dest: Path) -> bool:
+    """Move a merged/single yt-dlp output onto dest.mp4."""
+    dest = Path(dest)
+    if _ok_src(dest):
+        return True
+    stem = dest.with_suffix("")
+    cands = list(dest.parent.glob(stem.name + ".*"))
+    # Prefer an mp4, then the largest leftover media file.
+    cands.sort(key=lambda p: (0 if p.suffix.lower() in {".mp4", ".m4v", ".mkv"} else 1, -p.stat().st_size if p.exists() else 0))
+    for p in cands:
+        if p.name == dest.name or p.suffix.lower() in {".part", ".ytdl", ".json", ".vtt", ".srt", ".jpg", ".webp"}:
+            continue
+        if not p.exists() or p.stat().st_size < 500_000:
+            continue
+        if p.suffix.lower() == ".mp4":
+            p.replace(dest)
+            return _ok_src(dest)
+        # remux containers we do not want to publish as-is
+        r = subprocess.run(
+            ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
+             "-i", str(p), "-c", "copy", "-movflags", "+faststart", str(dest)],
+            capture_output=True, text=True,
+        )
+        if r.returncode == 0 and _ok_src(dest):
+            p.unlink(missing_ok=True)
+            return True
+    return _ok_src(dest)
+
+
+def _run_ytdlp(url: str, dest: Path, *, max_s: float, allow_youtube: bool,
+               fmt: str, sections: bool) -> tuple[subprocess.CompletedProcess | None, str]:
+    dest = Path(dest)
+    dest.unlink(missing_ok=True)
+    tmpl = ytdlp_output_template(dest)
+    cmd = [
+        "yt-dlp", "--no-playlist", "--remote-components", "ejs:github",
+        "-4", "--user-agent", UA,
+        "-f", fmt,
+        "-S", YTDLP_SORT,
+        "--merge-output-format", "mp4",
+        "--ffmpeg-location", "ffmpeg",
+        "-o", tmpl, "--force-overwrites",
+        "--no-warnings",
+    ]
+    if sections:
+        cmd += ["--download-sections", f"*0-{int(max_s)}", "--force-keyframes-at-cuts"]
+    cmd += _cookies_args() + [url]
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+    except Exception as e:
+        return None, str(e)
+    _gather_ytdlp_dest(dest)
+    err = (r.stderr.strip().splitlines() or r.stdout.strip().splitlines() or [""])[-1]
+    return r, err
+
+
 def download_ytdlp(url: str, dest: Path, *, allow_youtube: bool = True) -> tuple[bool, str]:
     if not allow_youtube and any(h in _host(url) for h in ("youtube.com", "youtu.be")):
         return False, "youtube skipped (blocked / no cookies)"
     dest.unlink(missing_ok=True)
     max_s = max_source_seconds()
-    cmd = [
-        "yt-dlp", "--no-playlist", "--remote-components", "ejs:github",
-        "-4", "--user-agent", UA,
-        "-f", YTDLP_FORMAT,
-        "-S", YTDLP_SORT,
-        "--download-sections", f"*0-{int(max_s)}",
-        "--force-keyframes-at-cuts",
-        "--merge-output-format", "mp4",
-        "-o", str(dest), "--force-overwrites",
-        "--no-warnings",
-    ] + _cookies_args() + [url]
-    r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-    if r.returncode != 0 or not _ok_src(dest):
-        # Some extractors reject --download-sections; retry once without it, then trim.
-        cmd = [c for c in cmd if c != "--force-keyframes-at-cuts" and not str(c).startswith("*0-")]
-        if "--download-sections" in cmd:
-            i = cmd.index("--download-sections")
-            cmd.pop(i); cmd.pop(i)
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-    if r.returncode == 0 and _ok_src(dest):
+    r, err = _run_ytdlp(url, dest, max_s=max_s, allow_youtube=allow_youtube,
+                        fmt=YTDLP_FORMAT, sections=True)
+    if (r is None or r.returncode != 0 or not _ok_src(dest)) and "Fixed output name" in (err or ""):
+        r, err = _run_ytdlp(url, dest, max_s=max_s, allow_youtube=allow_youtube,
+                            fmt="b[height>=1080][ext=mp4]/b[ext=mp4]/b", sections=False)
+    if r is None or r.returncode != 0 or not _ok_src(dest):
+        # Some extractors reject --download-sections; retry once without them, then trim.
+        r, err = _run_ytdlp(url, dest, max_s=max_s, allow_youtube=allow_youtube,
+                            fmt=YTDLP_FORMAT, sections=False)
+    if r is not None and r.returncode == 0 and _ok_src(dest):
         ok_res, why = resolution_ok(dest)
         if not ok_res:
             dest.unlink(missing_ok=True)
             return False, f"yt-dlp:{url}: {why}"
         trim_source_length(dest, max_s)
         return True, url
-    err = (r.stderr.strip().splitlines() or r.stdout.strip().splitlines() or ["?"])[-1][:280]
-    return False, f"yt-dlp:{err}"
+    return False, f"yt-dlp:{(err or '?')[:280]}"
 
 
 def download_source(

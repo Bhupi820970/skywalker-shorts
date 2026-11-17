@@ -400,6 +400,12 @@ def download_scene_bundle(src, skip=None):
         print(f"  scene clip {len(paths)+1}: {info}", flush=True)
         paths.append(part)
         useds.append(info)
+        total_s = sum(sourcing._probe_duration(x) for x in paths)
+        if total_s >= 210:
+            print(f"  scene bundle cap reached ({total_s:.0f}s >= 210s); not adding more clips", flush=True)
+            break
+    if errors:
+        print("  scene clip skips: " + " | ".join(str(e) for e in errors[:8])[:800], flush=True)
     if not paths:
         return None, errors or ["no official scene clips for this topic"]
     if not _concat_scene_files(paths, src):
