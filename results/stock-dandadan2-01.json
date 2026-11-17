@@ -1,0 +1,150 @@
+{
+  "id": "stock-dandadan2-01",
+  "status": "failed",
+  "detail": "gemini QC rejected 2 re-renders; backup item takes the slot: gemini QC reject: The footage contains a Netflix 'SUBSCRIBE' watermark/logo card at 0:17, which violates the clean footage requirement.",
+  "at": "2026-11-17 18:42 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44070415595",
+  "slot": null,
+  "title": "Momo never lets him go | Dandadan | #edit",
+  "hook": "Momo never lets him go",
+  "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+  "tags": [
+    "dandadan2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "momo"
+  ],
+  "queue_meta": {
+    "hook": "Momo never lets him go",
+    "title": "Momo never lets him go | Dandadan | #edit",
+    "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+    "tags": [
+      "dandadan2",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "momo"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.8,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 27.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 4.4,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 5.2,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 10.2,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 5.1,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-dandadan2",
+  "stock": true,
+  "stock_topic": "backup-dandadan2",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC reject: The video contains a 'DAN DA DAN SEASON 2' watermark/text overlay in the corner of the footage, which violates the clean footage requirement.; There is a 'Do it!' subtitle visible in one of the frames, which violates the requirement for no burned-in subtitles.",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "music": "sw_phnk2.mp3",
+      "qc_status": "fail"
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "error": "gemini QC reject: The footage contains a Netflix 'SUBSCRIBE' watermark/logo card at 0:17, which violates the clean footage requirement.",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "music": "sw_phnk2.mp3",
+      "qc_status": "fail"
+    }
+  ],
+  "last_error": "gemini QC reject: The footage contains a Netflix 'SUBSCRIBE' watermark/logo card at 0:17, which violates the clean footage requirement.",
+  "qc_rejected": true
+}
