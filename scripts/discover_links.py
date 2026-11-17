@@ -55,6 +55,7 @@ EXTRA_OFFICIAL = (
     "Lionsgate Movies", "A24", "Apple TV", "T-Series", "YRF",
     "Dharma Productions", "Hombale Films", "MAPPA", "WIT STUDIO",
     "Crunchyroll", "Funimation", "HIDIVE",
+    "Rockstar Games",
 )
 # Handle (no @) -> display name. Used for X profile media search only.
 OFFICIAL_X_HANDLES = {
@@ -72,6 +73,7 @@ OFFICIAL_X_HANDLES = {
     "universalpics": "Universal Pictures",
     "paramountpics": "Paramount Pictures",
     "a24": "A24",
+    "rockstargames": "Rockstar Games",
 }
 KNOWN_SUFFIXES = (
     "official", "animation", "pictures", "entertainment", "india", "anime",
@@ -283,9 +285,23 @@ def gemini_topics(root: Path, used: set[str]) -> list[dict]:
     except Exception:
         return []
     official = sorted(official_names(root))[:80]
-    prompt = f"""Today is {datetime.now(IST):%d %B %Y}. Pick {MAX_TITLES} trending or evergreen
-anime/movie titles for a YouTube Shorts edit channel. We need OFFICIAL best-SCENE clips only
-(never trailers, teasers, TV spots, or fan edits).
+    gta_note = ""
+    try:
+        import edit_format
+        if edit_format.gta6_has_launched():
+            gta_note = (
+                " GTA 6 HAS LAUNCHED: include 2 official Rockstar Games GAMEPLAY clips "
+                "(never trailers or teasers; official Rockstar watermark is ok)."
+            )
+        else:
+            gta_note = " Do NOT pick GTA 6 / Grand Theft Auto VI until the official launch."
+        gta_note += " Also include 1-2 official ROMANCE/love titles (Netflix, TOHO, Lionsgate, Sony, Prime, Warner) for a slower love-edit format."
+    except Exception:
+        gta_note = " Prefer currently trending official titles. Include 1-2 official romance titles."
+    prompt = f"""Today is {datetime.now(IST):%d %B %Y}. Pick {MAX_TITLES} titles for a YouTube Shorts edit channel.
+Prioritize titles that are currently trending this week (new episodes, just-released films, viral official clips),
+plus 1-2 official romance/love titles.{gta_note}
+We need OFFICIAL best-SCENE clips only (never trailers, teasers, TV spots, or fan edits).
 Do not pick: {json.dumps(sorted(used)[:80])[:2000]}
 Known official studio/distributor names: {json.dumps(official)[:2000]}
 Return JSON {{"requests": [...]}} each item:
@@ -342,14 +358,105 @@ NEVER suggest unofficial or fan channels."""
     return out
 
 
+def _format_seed_topics(root: Path, used: set[str]) -> list[dict]:
+    """Love seeds always; GTA 6 official gameplay only after launch. Never before."""
+    out = []
+    try:
+        import edit_format
+    except Exception:
+        return out
+    used_l = {norm(u) for u in used}
+    love = edit_format.love_cfg(root)
+    for r in love.get("titles") or []:
+        if not isinstance(r, dict):
+            continue
+        words = str(r.get("words") or r.get("title") or r.get("slug") or "").strip()
+        slug = norm(r.get("slug") or words)[:24]
+        if not words or not slug or slug in used_l or words.lower() in used:
+            continue
+        out.append({
+            "slug": slug,
+            "words": words,
+            "hook": r.get("hook") or "",
+            "title": r.get("title") or words,
+            "official_channels": list(r.get("official_channels") or []),
+            "search_queries": [q for q in (r.get("search_queries") or []) if q and not TRAILER.search(q)],
+            "x_handles": [h.lstrip("@") for h in (r.get("x_handles") or []) if h],
+            "x_urls": [],
+            "pillar": "romance",
+            "edit_format": "love",
+        })
+    if edit_format.gta6_has_launched():
+        g = edit_format.gta6_cfg(root)
+        words = str(g.get("title_words") or g.get("words") or "GTA 6")
+        slug = norm(g.get("slug") or "gta6")[:24]
+        if slug not in used_l and words.lower() not in used:
+            qs = [q for q in (g.get("search_queries") or []) if q and not TRAILER.search(q)]
+            out.append({
+                "slug": slug,
+                "words": words,
+                "hook": "The map just opened",
+                "title": words,
+                "official_channels": list(g.get("official_channels") or ["Rockstar Games"]),
+                "search_queries": qs or ["GTA 6 official gameplay", "Grand Theft Auto VI official gameplay"],
+                "x_handles": [h.lstrip("@") for h in (g.get("x_handles") or []) if h],
+                "x_urls": [],
+                "pillar": "movie",
+                "edit_format": "gta6",
+                "content_kind": "gameplay",
+            })
+    return out
+
+
+def _drop_unlaunched_gta(topics: list[dict], root: Path | None = None) -> list[dict]:
+    try:
+        import edit_format
+        if edit_format.gta6_has_launched():
+            return topics
+    except Exception:
+        return topics
+    kept = []
+    for t in topics:
+        blob = " ".join([t.get("slug") or "", t.get("words") or "", t.get("title") or ""])
+        if edit_format.is_gta6_item(t, blob):
+            log(f"skip {t.get('words') or t.get('slug')}: GTA 6 has not launched yet")
+            continue
+        kept.append(t)
+    return kept
+
+
+def _boost_trending(topics: list[dict], root: Path) -> list[dict]:
+    try:
+        import edit_format
+        names = edit_format.load_trending_titles(root)
+        def key(t):
+            blob = " ".join([t.get("words") or "", t.get("title") or "", t.get("slug") or ""])
+            love = 3.0 if (t.get("edit_format") == "love" or t.get("pillar") == "romance") else 0.0
+            gta = 4.0 if t.get("edit_format") == "gta6" else 0.0
+            return -(gta + love + edit_format.trending_score(blob, titles=names))
+        return sorted(topics, key=key)
+    except Exception:
+        return topics
+
+
 def topics_for_run(root: Path) -> list[dict]:
     used = recent_titles(root)
     found = gemini_topics(root, used)
     if found:
         log(f"gemini proposed {len(found)} title(s)")
-        return found
-    log("gemini unavailable; using clip_requests/trends seeds")
-    return fallback_topics(root, used)
+    else:
+        log("gemini unavailable; using clip_requests/trends seeds")
+        found = fallback_topics(root, used)
+    # Merge official love seeds (and GTA 6 after launch) without dropping Gemini picks.
+    seen = {norm(t.get("slug") or t.get("words") or "") for t in found}
+    for seed in _format_seed_topics(root, used):
+        k = norm(seed.get("slug") or seed.get("words") or "")
+        if k and k not in seen:
+            found.append(seed)
+            seen.add(k)
+    found = _drop_unlaunched_gta(found, root)
+    found = _boost_trending(found, root)
+    return found[: max(MAX_TITLES, 8)]
 
 
 def _run(cmd: list[str], timeout: int = 90) -> subprocess.CompletedProcess:

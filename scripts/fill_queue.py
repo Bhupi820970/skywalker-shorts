@@ -109,8 +109,24 @@ def _make_item(day: str, hhmm: str, topic: dict, have: set[str] | None = None) -
         "target_dur": max(24, min(29, int(topic.get("target_dur") or 26))),
         "status": "queued",
         "market": topic.get("market") or "US/UK",
-        "content_kind": "best scene",
+        "content_kind": topic.get("content_kind") or "best scene",
     }
+    try:
+        import edit_format
+        fmt = edit_format.infer_format(
+            topic, pillar=item["pillar"],
+            text=" ".join([item.get("hook") or "", item.get("words") or "", item.get("title") or ""]),
+        )
+        if fmt == "love":
+            item["pillar"] = "romance"
+            item["edit_format"] = "love"
+            item["content_kind"] = topic.get("content_kind") or "romance scene"
+            item["target_dur"] = max(20, min(32, int(item.get("target_dur") or 26)))
+        elif fmt == "gta6":
+            item["edit_format"] = "gta6"
+            item["content_kind"] = "gameplay"
+    except Exception:
+        pass
     if asset:
         item["fallback_mp4"] = [f"{GH}/{a}" for a in assets]
         item["sources"] = [f"{GH}/{a}" for a in assets]
@@ -157,33 +173,100 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
             base += 3.0
         elif n_scenes:
             base += 1.5
+        try:
+            import edit_format
+            blob = " ".join([t.get("words") or "", t.get("title") or "", t.get("slug") or "",
+                             t.get("pillar") or "", " ".join(t.get("tags") or [])])
+            base += edit_format.trending_score(blob, titles=edit_format.load_trending_titles(REPO))
+        except Exception:
+            pass
         # Exploration jitter so we do not lock onto one pillar forever.
         return base + rng.random() * 4.0
 
     pool = sorted(pool, key=topic_rank, reverse=True)
+    try:
+        import edit_format
+        quotas = edit_format.daily_quotas()
+    except Exception:
+        quotas = {"love_min": 0, "love_max": 0, "gta6_min": 0, "gta6_max": 0, "gta6_launched": False}
+
+    def _kind(t: dict) -> str:
+        try:
+            import edit_format
+            return edit_format.infer_format(t, pillar=str(t.get("pillar") or ""),
+                                            text=" ".join([t.get("words") or "", t.get("hook") or "",
+                                                           t.get("title") or "", t.get("slug") or ""]))
+        except Exception:
+            if (t.get("pillar") or "").lower() in ("romance", "love"):
+                return "love"
+            return "action"
+
+    # Drop GTA 6 topics until official launch.
+    if not quotas.get("gta6_launched"):
+        pool = [t for t in pool if _kind(t) != "gta6"]
+        if not pool:
+            return 0
+
+    def next_topic(love_n, gta_n, start_i, day_slugs):
+        # Fill love / GTA quotas first when matching topics remain.
+        want = None
+        if love_n < quotas.get("love_min", 0):
+            want = "love"
+        elif gta_n < quotas.get("gta6_min", 0):
+            want = "gta6"
+        elif love_n < quotas.get("love_max", 0):
+            want = "love"
+        elif gta_n < quotas.get("gta6_max", 0):
+            want = "gta6"
+        n = len(pool)
+        for k in range(n):
+            t = pool[(start_i + k) % n]
+            if t["slug"] in day_slugs:
+                continue
+            kind = _kind(t)
+            if want and kind != want:
+                continue
+            if not want and kind == "love" and love_n >= quotas.get("love_max", 0):
+                continue
+            if not want and kind == "gta6" and gta_n >= quotas.get("gta6_max", 0):
+                continue
+            return t, start_i + k + 1
+        # Fallback: any unused topic
+        for k in range(n):
+            t = pool[(start_i + k) % n]
+            if t["slug"] not in day_slugs:
+                return t, start_i + k + 1
+        return pool[start_i % n], start_i + 1
+
     pi = 0
+    love_n = sum(1 for it in items if (it.get("pillar") or "").lower() in ("romance", "love")
+                 or it.get("edit_format") == "love")
+    gta_n = sum(1 for it in items if "gta6" in (it.get("id") or "").lower()
+                or it.get("edit_format") == "gta6")
     for iso in need:
         hhmm = iso[11:16]
-        topic = pool[pi % len(pool)]
-        pi += 1
         # avoid same slug twice same day, and skip banned hook/title templates
         day_slugs = {"-".join(it["id"].split("-")[2:]) for it in items if it.get("id")}
         item = None
         tries = 0
+        topic, pi = next_topic(love_n, gta_n, pi, day_slugs)
         while tries < len(pool):
             cand = _make_item(day, hhmm, topic, have)
             bad = topic["slug"] in day_slugs or hook_text.check_item_hook_fields(cand)
             if not bad:
                 item = cand
                 break
-            topic = pool[pi % len(pool)]
-            pi += 1
+            topic, pi = next_topic(love_n, gta_n, pi, day_slugs | {topic["slug"]})
             tries += 1
         if item is None:
             continue
         items.append(item)
         used.add(topic["slug"])
         added += 1
+        if item.get("edit_format") == "love" or (item.get("pillar") or "").lower() in ("romance", "love"):
+            love_n += 1
+        if item.get("edit_format") == "gta6":
+            gta_n += 1
     items.sort(key=lambda it: it.get("slot") or "")
     _day_file(day).write_text(json.dumps(items, indent=1, ensure_ascii=False) + "\n")
     return added

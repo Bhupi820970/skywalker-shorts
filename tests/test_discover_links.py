@@ -199,3 +199,32 @@ def test_max_accept_and_dry_run(tmp_path, monkeypatch):
     assert len(out["accepted"]) == 1
     assert out["queued_ids"] == []
     assert list((tmp_path / "queue").glob("*.json")) == []
+
+
+def test_rockstar_is_official():
+    official = d.official_names(ROOT)
+    assert d.is_known_official("Rockstar Games", official=official)
+    assert d.is_known_official("Rockstar Games", "rockstargames", official=official)
+
+
+def test_gta6_seeds_only_after_launch(monkeypatch):
+    from datetime import datetime, timezone
+    import edit_format
+    used = set()
+    monkeypatch.setattr(edit_format, "gta6_has_launched", lambda now=None, root=None: False)
+    seeds = d._format_seed_topics(ROOT, used)
+    assert any(t.get("edit_format") == "love" or t.get("pillar") == "romance" for t in seeds)
+    assert not any(t.get("edit_format") == "gta6" for t in seeds)
+    dropped = d._drop_unlaunched_gta(
+        seeds + [{"slug": "gta6", "words": "GTA 6", "edit_format": "gta6"}],
+        ROOT,
+    )
+    assert all("gta" not in (t.get("slug") or "") for t in dropped)
+
+    monkeypatch.setattr(edit_format, "gta6_has_launched", lambda now=None, root=None: True)
+    seeds2 = d._format_seed_topics(ROOT, set())
+    assert any(t.get("edit_format") == "gta6" for t in seeds2)
+    gta = next(t for t in seeds2 if t.get("edit_format") == "gta6")
+    assert "Rockstar Games" in gta["official_channels"]
+    assert any("gameplay" in q.lower() for q in gta["search_queries"])
+    assert all("trailer" not in q.lower() for q in gta["search_queries"])
