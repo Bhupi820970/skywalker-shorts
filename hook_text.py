@@ -100,6 +100,12 @@ def check_item_hook_fields(item: dict) -> list[str]:
         text = item.get(key) or ""
         errors.extend(hook_language_errors(text, label=key))
         errors.extend(template_errors(text, label=key))
+        try:
+            import edit_format
+            if edit_format.hook_uses_banned_phrase(text):
+                errors.append(f"{key} copies a banned reference-Shorts phrase; write a new line")
+        except Exception:
+            pass
     errors.extend(duplicate_title_errors(item))
     return errors
 

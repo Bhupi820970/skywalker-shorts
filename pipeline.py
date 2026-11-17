@@ -87,6 +87,7 @@ SEP_H = 2                  # 2px hairline at the bottom of the bar (no gap)
 # (~195px for a 2-line hook, matching the approved layout).
 BAR_H = 196
 ENERGY = False             # anime/movie: beat cuts, ramp into drop, flash + punch-in
+EDIT_FORMAT = "action"     # action (phonk) or love (romance template)
 MUSIC_DROP_HINT = None     # library drop timestamp (seconds into the song)
 TWO_ACT = os.environ.get("SKY_TWO_ACT", "1") == "1"   # act 1 dialogue only, act 2 song only
 ACT1_FRAC, ACT1_MAX_FRAC, ACT1_MIN_S = 0.30, 0.38, 3.0  # owner: short dialogue, long action
@@ -879,14 +880,17 @@ def score_scenes(mezz: Path, scenes: list[dict], trailer_dur: float | None = Non
 # 3. Music analysis
 # ---------------------------------------------------------------------------
 def _pick_library(pillar: str, seed: str = "", exclude: list[str] | None = None, salt: str = "",
-                 prefer: str | None = None, prefer_alts: list[str] | None = None) -> dict | None:
+                 prefer: str | None = None, prefer_alts: list[str] | None = None,
+                 text: str = "") -> dict | None:
     """Trending edit songs (music/library.json + 'music' release); see music_lib.pick."""
     import music_lib
-    return music_lib.pick(AE, pillar, seed, exclude, salt, prefer=prefer, prefer_alts=prefer_alts)
+    return music_lib.pick(AE, pillar, seed, exclude, salt, prefer=prefer, prefer_alts=prefer_alts,
+                          text=text)
 
 
 def pick_music(pillar: str, seed: str = "", exclude: list[str] | None = None, salt: str = "",
-               prefer: str | None = None, prefer_alts: list[str] | None = None) -> dict:
+               prefer: str | None = None, prefer_alts: list[str] | None = None,
+               text: str = "") -> dict:
     """Pick a credited, copyright-safe track for a pillar from music/credits.json.
 
     anime/celeb -> phonk/hype, movie -> epic, romance -> emotional, funny -> upbeat.
@@ -894,16 +898,25 @@ def pick_music(pillar: str, seed: str = "", exclude: list[str] | None = None, sa
     `exclude` + `salt` are used on retry-tier 3 to pick a different credited track.
     """
     import hashlib
-    lib_pick = _pick_library(pillar, seed, exclude, salt, prefer=prefer, prefer_alts=prefer_alts)
+    hookish = " ".join([
+        text or "", pillar or "", seed or "",
+        str(globals().get("HOOK_TEXT") or ""),
+        str(globals().get("DEPTH_WORDS") or ""),
+    ])
+    lib_pick = _pick_library(pillar, seed, exclude, salt, prefer=prefer, prefer_alts=prefer_alts,
+                             text=hookish)
     if lib_pick:
         return lib_pick
     import music_lib
     cj = json.loads((AE / "music" / "credits.json").read_text())
     mood = PILLAR_MOOD.get((pillar or "movie").lower(), "movie")
-    blob = " ".join([
-        pillar or "", seed or "",
-        str(globals().get("HOOK_TEXT") or ""),
-    ]).lower()
+    blob = hookish.lower()
+    try:
+        import edit_format
+        if edit_format.infer_format(pillar=pillar, text=hookish) == "love":
+            mood = "romance"
+    except Exception:
+        pass
     # Thriller / horror (Fool Night etc.) -> dark / phonk / cinematic, never light pop
     if any(k in blob for k in ("fool night", "foolnight", "horror", "thriller", "scary", "werwulf")):
         mood = "anime" if mood in ("anime", "funny") else "movie"
@@ -970,8 +983,41 @@ def find_drop(y: np.ndarray, sr: int, pulse: np.ndarray, lo: float, hi: float) -
     return best_t
 
 
+def analyze_music_fallback(path: Path, target: float = TARGET_DUR) -> dict:
+    """Beat grid when librosa is missing or fails. Cuts still snap to a pulse."""
+    import beat_sync
+    info = beat_sync.detect_beats(path)
+    tempo = float(info.get("tempo") or 100.0)
+    pulse = np.array(info.get("beats") or [], dtype=float)
+    dur = float(info.get("duration_s") or 0.0)
+    win = float(target)
+    start = 0.0
+    rel = pulse[(pulse >= start - 0.02) & (pulse <= start + win + 0.5)] - start if pulse.size else np.array([0.0])
+    rel = np.unique(np.round(np.clip(rel, 0, None), 4))
+    if rel.size == 0 or rel[0] > 0.15:
+        rel = np.insert(rel, 0, 0.0) if rel.size else np.array([0.0])
+    else:
+        rel[0] = 0.0
+    print(f"  beat_sync fallback ({info.get('method')}): tempo={tempo:.1f} beats={len(pulse)}")
+    return {
+        "path": str(path),
+        "tempo": tempo,
+        "start": start,
+        "drop_rel": None,
+        "window": win,
+        "pulses": rel.tolist(),
+        "abs_beats": pulse.tolist(),
+        "drop_abs": float(start),
+        "method": info.get("method") or "grid",
+    }
+
+
 def analyze_music(path: Path, target: float = TARGET_DUR) -> dict:
-    y, sr = librosa.load(str(path), sr=22050, mono=True)
+    try:
+        y, sr = librosa.load(str(path), sr=22050, mono=True)
+    except Exception as e:
+        print(f"  librosa load failed ({type(e).__name__}); using beat_sync fallback")
+        return analyze_music_fallback(path, target)
     tempo, beats = librosa.beat.beat_track(y=y, sr=sr, units="time")
     tempo = float(tempo[0] if hasattr(tempo, "__len__") else tempo)
     # If librosa doubled the tempo (~160+), use every 2nd beat as the pulse.
@@ -3381,9 +3427,28 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         caps = capmod.generate_lines(HOOK_TEXT, globals().get("DEPTH_WORDS") or "", float(dur),
                                      dialogue=cues)
         ass_lt = WORK / "lowerthirds.ass"
+        cap_style = "lower_third"
+        cap_font = "Poppins"
+        cap_kw = True
+        cap_sp = 1.0
+        try:
+            import edit_format
+            st = edit_format.caption_style(globals().get("EDIT_FORMAT") or "action")
+            cap_style = st.get("style") or cap_style
+            cap_font = st.get("font_name") or cap_font
+            cap_kw = bool(st.get("keyword_highlight", cap_kw))
+            cap_sp = float(st.get("letter_spacing") or cap_sp)
+        except Exception:
+            pass
         if caps:
-            capmod.write_ass(ass_lt, caps, plate_bottom=plate_bottom, font="Poppins")
-        layout["caption_y"] = capmod.caption_y(plate_bottom)
+            capmod.write_ass(
+                ass_lt, caps, plate_bottom=plate_bottom, font=cap_font,
+                style=cap_style, plate_y=int(lay["plate_y"]), plate_h=int(lay["plate_h"]),
+                letter_spacing=cap_sp, keyword_highlight=cap_kw,
+            )
+        layout["caption_y"] = capmod.caption_y(
+            plate_bottom, style=cap_style, plate_y=int(lay["plate_y"]), plate_h=int(lay["plate_h"]),
+        )
         layout["captions"] = caps
         if speech_out and not cues:
             # Speech exists only as fragments the cuts slice mid-word: nothing can be
@@ -3837,7 +3902,8 @@ def apply_auto_music(args, *, prefer: str | None = None, prefer_alts: list[str] 
     global MUSIC_DROP_HINT
     excl = [x.strip() for x in (args.exclude_music or "").split(",") if x.strip()]
     tr = pick_music(args.pillar, args.item_id, exclude=excl, salt=args.music_salt or "",
-                    prefer=prefer, prefer_alts=prefer_alts)
+                    prefer=prefer, prefer_alts=prefer_alts,
+                    text=" ".join([getattr(args, "hook", "") or "", str(globals().get("HOOK_TEXT") or "")]))
     args.music = tr["path"]
     WORK.mkdir(parents=True, exist_ok=True)
     try:
@@ -3924,8 +3990,37 @@ def main():
                     help="Output long-edge (1080 or 2160). Default 2160 (4K upscale in render_item).")
     args = ap.parse_args()
     global END_STILL, ENERGY, RELAX, ALT_SCENES, MEZZ_FOR_SHAKE, TRAILER_OPEN_SKIP, TRAILER_END_SKIP, OUT_RES
-    global EDIT_MODE, FORCED_EDIT_MODE
+    global EDIT_MODE, FORCED_EDIT_MODE, EDIT_FORMAT
+    global MIN_SHOT_LEN, HERO_SHOT_MIN, HERO_SHOT_MAX, MAX_FLASH_SHOTS, MAX_HERO_SHOTS
     ENERGY = bool(args.energy or (args.pillar or "").lower() in ("anime", "movie"))
+    EDIT_FORMAT = "action"
+    try:
+        import edit_format
+        hookish = " ".join([
+            args.pillar or "", getattr(args, "hook", "") or "",
+            args.item_id or "", str(globals().get("HOOK_TEXT") or ""),
+        ])
+        item_blob = {}
+        ip = os.environ.get("SKY_ITEM_JSON")
+        if ip and Path(ip).exists():
+            try:
+                item_blob = (json.loads(Path(ip).read_text()).get("item") or {})
+            except Exception:
+                item_blob = {}
+        EDIT_FORMAT = edit_format.infer_format(item_blob, pillar=args.pillar or "", text=hookish)
+        if EDIT_FORMAT == "love":
+            pac = edit_format.pacing_for("love")
+            MIN_SHOT_LEN = pac["min_shot_len"]
+            HERO_SHOT_MIN = pac["hero_shot_min"]
+            HERO_SHOT_MAX = pac["hero_shot_max"]
+            MAX_FLASH_SHOTS = pac["max_flash_shots"]
+            MAX_HERO_SHOTS = pac["max_hero_shots"]
+            ENERGY = False
+            print(f"  edit format: love (slow romantic cuts, no phonk energy)")
+        else:
+            print(f"  edit format: {EDIT_FORMAT}")
+    except Exception as e:
+        print(f"  edit format skipped: {type(e).__name__}: {e}")
     ov = (args.edit_mode or os.environ.get("SKY_EDIT_MODE") or "").strip().lower()
     FORCED_EDIT_MODE = ov in ("music_only", "two_act")
     EDIT_MODE = choose_edit_mode(args.item_id, ov or None)

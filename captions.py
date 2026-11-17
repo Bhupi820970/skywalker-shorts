@@ -114,13 +114,18 @@ def _keyword_ass(text: str) -> str:
     return kw
 
 
-def caption_y(plate_bottom: int | None = None) -> int:
-    """Lower-third Y inside the Shorts safe zone (above bottom UI).
+def caption_y(plate_bottom: int | None = None, *, style: str | None = None,
+             plate_y: int | None = None, plate_h: int | None = None) -> int:
+    """Caption Y inside the Shorts safe zone (above bottom UI).
 
-    Prefer DEFAULT_Y (~1590). If the uncropped plate extends that low, sit
-    just under the plate but never below H - SAFE_BOTTOM_PAD.
+    Default: lower-third (~1590). Love/cinematic_center: lower-center of the
+    video plate so the line sits next to the picture, not under the phone bar.
     """
     floor = H - SAFE_BOTTOM_PAD
+    if (style or "") in ("cinematic_center", "love", "plate_lower_center") and plate_y is not None and plate_h:
+        # About 68% down the plate, clamped above the Shorts UI.
+        y = int(plate_y) + int(float(plate_h) * 0.68)
+        return int(max(int(plate_y) + 80, min(y, floor - 40)))
     y = DEFAULT_Y
     if plate_bottom is not None and plate_bottom > 0:
         # Prefer just under the plate when the plate is high (letterbox 16:9).
@@ -133,8 +138,16 @@ def caption_y(plate_bottom: int | None = None) -> int:
     return int(max(1200, min(y, floor - 40)))
 
 
-def write_ass(path: Path, caps: list[dict], plate_bottom: int | None = None, font: str = "Poppins") -> Path:
-    y = caption_y(plate_bottom)
+def write_ass(path: Path, caps: list[dict], plate_bottom: int | None = None, font: str = "Poppins",
+              *, style: str | None = None, plate_y: int | None = None, plate_h: int | None = None,
+              letter_spacing: float | None = None, keyword_highlight: bool | None = None) -> Path:
+    y = caption_y(plate_bottom, style=style, plate_y=plate_y, plate_h=plate_h)
+    spacing = 2.5 if (style or "") in ("cinematic_center", "love", "plate_lower_center") else 0
+    if letter_spacing is not None:
+        spacing = float(letter_spacing)
+    highlight = True if keyword_highlight is None else bool(keyword_highlight)
+    if (style or "") in ("cinematic_center", "love", "plate_lower_center") and keyword_highlight is None:
+        highlight = False
     # Bold (-1), thick outline, soft shadow. Alignment 8 = top-center; MarginV from top.
     header = f"""[Script Info]
 ScriptType: v4.00+
@@ -145,7 +158,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Lower,{font},{FONT_SIZE},&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,{OUTLINE},{SHADOW},8,36,36,{y},1
+Style: Lower,{font},{FONT_SIZE},&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,{spacing},0,1,{OUTLINE},{SHADOW},8,36,36,{y},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -161,7 +174,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     events = []
     for c in caps:
         # Force bold + outline per-event in case a player ignores the style.
-        body = r"{\b1\bord%d\shad%d\fsp1}" % (OUTLINE, SHADOW) + _keyword_ass(c["text"])
+        body = r"{\b1\bord%d\shad%d\fsp%s}" % (OUTLINE, SHADOW, ("%g" % spacing))
+        body += _keyword_ass(c["text"]) if highlight else c["text"]
         events.append(f"Dialogue: 0,{ts(c['t0'])},{ts(c['t1'])},Lower,,0,0,0,,{body}")
     path = Path(path)
     path.write_text(header + "\n".join(events) + "\n", encoding="utf-8")

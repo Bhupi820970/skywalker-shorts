@@ -245,6 +245,15 @@ def clip_hook_meta(mezz: Path, edl: list, transcript: dict, work: Path, iid: str
     film = film_name(item)
     out = None
     if sheet:
+        format_note = ""
+        try:
+            import edit_format
+            fmt = edit_format.infer_format(item, pillar=str(item.get("pillar") or ""), text=" ".join([
+                item.get("hook") or "", item.get("title") or "", item.get("words") or "",
+            ]))
+            format_note = edit_format.hook_prompt_addon(fmt)
+        except Exception:
+            format_note = ""
         prompt = f"""You write the on-screen hook for a viral YouTube Short edit of the official "{film}" trailer.
 The contact sheet shows the shots that ARE in this edit, in order (yellow numbers). Spoken dialogue in the edit, in order:
 {json.dumps(dialogue, ensure_ascii=False)[:1500]}
@@ -263,6 +272,7 @@ Bar text is read in under 1 second: short, concrete words. Do not write generic 
 FORBIDDEN: "The reason why...", "<Name>'s aura in this scene is ...", repeating the same hook twice in the title,
 generic templates, emoji, hashtags, Hindi/Hinglish words.
 Do NOT start with any of these openers (used recently): {avoid}.
+{format_note}
 Then write 5 DIFFERENT title candidates for this Short and rank them by click potential like the top movie/anime
 edit channels (character-focused, emotional, curiosity): styles like "Why <character> cannot stop watching her",
 "<Character> entering the scene is peak ...", "Watch the last two seconds", "Nobody suspected <character> was this dangerous",
