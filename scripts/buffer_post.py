@@ -62,25 +62,39 @@ def norm(t):
     return " ".join((t or "").lower().split())
 
 
-def create(r, due, share_now):
-    title = r["title"][:100]
+def video_asset(r):
+    """Buffer video asset. Do not set thumbnailUrl — the API rejects it, and
+    YouTube Shorts have no custom thumbnail via Buffer. The Short's cover is
+    the video's first frame (a dramatic poster written by cover.py).
+    """
+    asset = {"video": {"url": r["asset_url"]}}
+    return asset
+
+
+def post_input(r, due=None, share_now=False):
+    title = (r.get("title") or "")[:100]
     text = r.get("description_final") or r.get("description") or title
-    m = """mutation C($input: CreatePostInput!) { createPost(input: $input) {
-      ... on PostActionSuccess { post { id status dueAt } }
-      ... on MutationError { message } } }"""
     inp = {
         "text": text[:4900],
         "channelId": CH,
         "schedulingType": "automatic",
         "mode": "shareNow" if share_now else "customScheduled",
-        "assets": [{"video": {"url": r["asset_url"]}}],
+        "assets": [video_asset(r)],
         "metadata": {"youtube": {"title": title, "privacy": "public", "madeForKids": False,
                                  "categoryId": str(CFG.get("youtube_category_id") or "24"),
                                  "notifySubscribers": True, "embeddable": True}},
         "source": "skywalker-shorts",
     }
-    if not share_now:
+    if not share_now and due is not None:
         inp["dueAt"] = due.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    return inp
+
+
+def create(r, due, share_now):
+    m = """mutation C($input: CreatePostInput!) { createPost(input: $input) {
+      ... on PostActionSuccess { post { id status dueAt } }
+      ... on MutationError { message } } }"""
+    inp = post_input(r, due, share_now)
     d = gql(m, {"input": inp})["createPost"]
     if not d.get("post"):
         raise RuntimeError("createPost: " + str(d.get("message")))
@@ -92,7 +106,7 @@ def edit(r, post_id, due_at):
       ... on PostActionSuccess { post { id status dueAt } }
       ... on MutationError { message } } }"""
     inp = {"id": post_id, "text": (r.get("description_final") or r.get("description") or r["title"])[:4900],
-           "assets": [{"video": {"url": r["asset_url"]}}],
+           "assets": [video_asset(r)],
            "metadata": {"youtube": {"title": r["title"][:100], "privacy": "public", "madeForKids": False,
                                     "categoryId": str(CFG.get("youtube_category_id") or "24"),
                                     "notifySubscribers": True, "embeddable": True}}}

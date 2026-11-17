@@ -290,3 +290,16 @@ def test_ingest_meta_text_normalizes_lists():
     }
     # NC license returns before any download; list fields must not raise.
     assert ingest_music.process_candidate(item, {"name": "a.mp3"}, {}, {}, set()) is None
+
+
+def test_buffer_video_asset_has_no_thumbnail_url():
+    import buffer_post
+    r = {"asset_url": "https://example.com/x.mp4", "title": "A hook | Film | #edit",
+         "description": "desc", "cover_url": "https://example.com/x-cover.jpg"}
+    asset = buffer_post.video_asset(r)
+    assert "thumbnailUrl" not in asset.get("video", {})
+    assert asset["video"]["url"] == r["asset_url"]
+    inp = buffer_post.post_input(r, share_now=True)
+    blob = json.dumps(inp)
+    assert "thumbnailUrl" not in blob
+    assert r["cover_url"] not in blob  # Buffer rejects custom YT Short thumbs

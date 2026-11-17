@@ -492,7 +492,20 @@ def publish(final, fw, fh, up, used, qa, credit, qa_obj):
     else:
         subprocess.check_call(["gh", "release", "upload", tag, str(final), "--clobber"])
     repo = os.environ.get("GITHUB_REPOSITORY", "")
-    return dict(
+    cover_url = None
+    cover = None
+    for cand in list(OUT.glob(f"work_{iid}*/cover.jpg")) + [Path(final).with_name("cover.jpg")]:
+        if cand.exists() and cand.stat().st_size > 1000:
+            cover = cand
+            break
+    if cover is not None:
+        cover_name = Path(asset_name).stem + "-cover.jpg"
+        uploaded = cover.with_name(cover_name)
+        if uploaded.resolve() != cover.resolve():
+            uploaded.write_bytes(cover.read_bytes())
+        subprocess.run(["gh", "release", "upload", tag, str(uploaded), "--clobber"], check=False)
+        cover_url = f"https://github.com/{repo}/releases/download/{tag}/{cover_name}"
+    out = dict(
         release_url=f"https://github.com/{repo}/releases/tag/{tag}",
         asset_url=f"https://github.com/{repo}/releases/download/{tag}/{asset_name}",
         qa=qa, drop_t=qa_obj.get("drop_t"), energy=qa_obj.get("energy"), source=used,
@@ -500,6 +513,9 @@ def publish(final, fw, fh, up, used, qa, credit, qa_obj):
         detail=f"rendered {fw}x{fh} ({up}), QA ok" + (" [no-publish]" if no_publish else ""),
         no_publish=no_publish,
     )
+    if cover_url:
+        out["cover_url"] = cover_url
+    return out
 
 def run_pipeline(src, out, qa_json, work, *, relax=False, alt_scenes=False, exclude_music=None, music_salt=""):
     cmd = [sys.executable, str(REPO / "pipeline.py"), "--src", str(src), "--out", str(out),
@@ -658,7 +674,7 @@ def _qc_only_retry(prev, auto_retries):
     verdict = qc_verdict(gem_qc)
     print(f"gemini QC (retry): {verdict}", json.dumps(gem_qc, ensure_ascii=False) if gem_qc else "")
     extra = {k: prev.get(k) for k in (
-        "release_url", "asset_url", "qa", "drop_t", "energy", "source",
+        "release_url", "asset_url", "cover_url", "qa", "drop_t", "energy", "source",
         "music", "music_credit", "description_final", "gate", "no_publish",
         "scenes_picked",
     ) if prev.get(k) is not None}
@@ -824,7 +840,7 @@ def _budget_left_for(next_est_s: float) -> bool:
 
 
 RESULT_KEYS = (
-    "release_url", "asset_url", "qa", "drop_t", "energy", "source",
+    "release_url", "asset_url", "cover_url", "qa", "drop_t", "energy", "source",
     "music", "music_credit", "description_final", "gate", "no_publish",
     "scenes_picked", "qc_status",
 )

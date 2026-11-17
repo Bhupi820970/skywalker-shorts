@@ -3498,6 +3498,11 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     ]
     run(cmd)
     apply_seamless_loop(out, loop_s=0.5)
+    try:
+        import cover as covermod
+        covermod.apply_opening_cover(out, edl=edl, hook=HOOK_TEXT, work=WORK)
+    except Exception as e:
+        print(f"  cover open skipped: {type(e).__name__}: {e}")
     return out
 
 
