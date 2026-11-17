@@ -1,0 +1,253 @@
+{
+  "id": "stock-dandadanevil-01",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-17 18:05 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44076109356",
+  "slot": null,
+  "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+  "hook": "Evil Eye was a lonely kid",
+  "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+  "tags": [
+    "dandadanevil",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
+  ],
+  "queue_meta": {
+    "hook": "Evil Eye was a lonely kid",
+    "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+    "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+    "tags": [
+      "dandadanevil",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "okarun"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.5,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 29.6,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 21.1,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-dandadanevil",
+  "stock": true,
+  "stock_topic": "backup-dandadanevil",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+      "music": "sw_phnk2.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-dandadanevil-01.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 3.065,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+  "music": "sw_phnk2.mp3",
+  "music_credit": "Song: M0ky - Phönk (https://creativecommons.org/licenses/by/4.0/)",
+  "description_final": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil\n\nMusic:\nSong: M0ky - Phönk (https://creativecommons.org/licenses/by/4.0/)",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.4,
+      "audio": true
+    },
+    "lufs": -14.4,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.4,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all technical and aesthetic requirements.",
+        "The layout is correct with the white bar at the top and the footage uncropped.",
+        "The audio is clean and music-only as requested.",
+        "The hook is clear and engaging."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 42,
+      "src_start": 137.763,
+      "dur": 1.5,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 23001,
+      "src_start": 82.8,
+      "dur": 1.565,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 163,
+      "src_start": 451.952,
+      "dur": 1.462,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 67,
+      "src_start": 200.075,
+      "dur": 1.533,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 27,
+      "src_start": 96.925,
+      "dur": 1.997,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 2,
+      "src_start": 8.967,
+      "dur": 1.92,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 21,
+      "src_start": 68.193,
+      "dur": 2.074,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 141101,
+      "src_start": 393.21,
+      "dur": 1.5,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 82,
+      "src_start": 237.279,
+      "dur": 2.087,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 158,
+      "src_start": 441.524,
+      "dur": 2.212
+    },
+    {
+      "id": 6,
+      "src_start": 22.898,
+      "dur": 1.5,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 172001,
+      "src_start": 466.306,
+      "dur": 1.5,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 126,
+      "src_start": 333.5,
+      "dur": 1.25,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    }
+  ],
+  "qc_status": "pass"
+}
