@@ -129,6 +129,13 @@
       "result_id": "stock-apothecarydiaries2-04"
     },
     {
+      "id": "stock-apothecarydiaries2-05",
+      "topic_id": "backup-apothecarydiaries2",
+      "slug": "apothecarydiaries2",
+      "status": "pending",
+      "queued_at": "2026-11-17 18:29 IST"
+    },
+    {
       "id": "stock-arcane2-01",
       "topic_id": "backup-arcane2",
       "slug": "arcane2",
@@ -208,6 +215,13 @@
       "status": "failed",
       "queued_at": "2026-11-17 18:18 IST",
       "result_id": "stock-bleachtybw-04"
+    },
+    {
+      "id": "stock-bleachtybw-05",
+      "topic_id": "backup-bleachtybw",
+      "slug": "bleachtybw",
+      "status": "pending",
+      "queued_at": "2026-11-17 18:29 IST"
     },
     {
       "id": "stock-bluegiant-01",
