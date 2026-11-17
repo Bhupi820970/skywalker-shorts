@@ -1,0 +1,45 @@
+{
+  "id": "stock-apothecarydiaries2-11",
+  "status": "failed",
+  "detail": "no usable official source left; next backup takes the slot: download failed: yt-dlp:ERROR: [generic] apothecarydiaries2_scene1_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries2_scene2_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries2_scene3_h264.mp4 | yt-dlp:ERROR: [youtube] cWu6Q72jfuM: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-d",
+  "at": "2026-11-17 21:02 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44115187924",
+  "slot": null,
+  "title": "Why Jinshi only looks at her | The Apothecary Diaries | #edit",
+  "hook": "Why Jinshi only looks at her",
+  "description": "Why Jinshi only looks at her. From official The Apothecary Diaries clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #apothecarydiaries2",
+  "tags": [
+    "apothecarydiaries2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "maomao",
+    "jinshi"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [],
+  "backup_item": "backup-apothecarydiaries2",
+  "stock": true,
+  "stock_topic": "backup-apothecarydiaries2",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: yt-dlp:ERROR: [generic] apothecarydiaries2_scene1_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries2_scene2_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries2_scene3_h264.mp4 | yt-dlp:ERROR: [youtube] cWu6Q72jfuM: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Y3pmO6q8jSU: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Gk30NUs9oRI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] yo8rklUv1EY: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] XYNGkSvFT8c: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] 9A3Itqpl26M: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    }
+  ],
+  "last_error": "download failed: yt-dlp:ERROR: [generic] apothecarydiaries2_scene1_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries2_scene2_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries2_scene3_h264.mp4 | yt-dlp:ERROR: [youtube] cWu6Q72jfuM: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Y3pmO6q8jSU: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Gk30NUs9oRI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] yo8rklUv1EY: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] XYNGkSvFT8c: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] 9A3Itqpl26M: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A",
+  "source_unrecoverable": true
+}
