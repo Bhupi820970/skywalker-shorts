@@ -1,15 +1,29 @@
 {
-  "note": "Grow the edit-song library from legit, redistributable sources only. Prefer phonk, drift phonk, Brazilian phonk, slowed+reverb, and fast-edit beat-drop tracks (no boring NCS-style bed instrumentals, no podcasts, no OST dumps). Sources: Internet Archive CC0/CC-BY/CC-BY-SA, Pixabay Music (free commercial), YouTube Audio Library, Free Music Archive (CC BY/CC0), and phonk artists that allow free commercial use. Each track gets license, credit, and safety=safe|claim_risk. Ingest runs on GitHub Actions (music-ingest.yml).",
-  "target_count": 280,
+  "note": "Grow the edit-song library from legit, redistributable sources only. Action edits: phonk, drift phonk, Brazilian phonk, slowed+reverb, and fast-edit beat-drop tracks. Love/romance edits: mid-tempo emotional, sad, and romantic beds (CC0 / CC-BY / CC-BY-SA or public domain). No boring NCS-style beds for action, no podcasts, no OST dumps. Sources: Internet Archive CC0/CC-BY/CC-BY-SA, Pixabay Music (free commercial), YouTube Audio Library, Free Music Archive (CC BY/CC0). Each track gets license, credit, and safety=safe|claim_risk. Ingest runs on GitHub Actions (music-ingest.yml).",
+  "target_count": 320,
   "max_new_per_run": 120,
   "min_duration_s": 25,
   "max_keep_s": 80,
   "pre_drop_s": 12,
   "no_repeat_window": 8,
-  "prefer_genres": ["phonk", "drift phonk", "brazilian phonk", "slowed", "funk", "fast edit"],
+  "prefer_genres": [
+    "phonk",
+    "drift phonk",
+    "brazilian phonk",
+    "slowed",
+    "funk",
+    "fast edit"
+  ],
   "reject_title_substrings": [
-    "podcast", "instrumentals volume", "album collection", "ost extended",
-    "soundtrack collection", "audiobook", "interview", "asmr", "white noise"
+    "podcast",
+    "instrumentals volume",
+    "album collection",
+    "ost extended",
+    "soundtrack collection",
+    "audiobook",
+    "interview",
+    "asmr",
+    "white noise"
   ],
   "queries": [
     "phonk AND mediatype:(audio) AND (licenseurl:*creativecommons* OR licenseurl:*publicdomain*)",
@@ -31,8 +45,30 @@
     "dubstep AND mediatype:(audio) AND licenseurl:*creativecommons*",
     "breakbeat AND mediatype:(audio) AND licenseurl:*creativecommons*",
     "\"high energy\" AND electronic AND mediatype:(audio) AND licenseurl:*creativecommons*",
-    "techno AND dark AND mediatype:(audio) AND licenseurl:*creativecommons*"
+    "techno AND dark AND mediatype:(audio) AND licenseurl:*creativecommons*",
+    "romantic AND (piano OR strings OR cinematic) AND mediatype:(audio) AND (licenseurl:*creativecommons* OR licenseurl:*publicdomain*)",
+    "\"love song\" AND instrumental AND mediatype:(audio) AND licenseurl:*creativecommons*",
+    "romance AND mediatype:(audio) AND licenseurl:*creativecommons*",
+    "\"sad piano\" AND mediatype:(audio) AND (licenseurl:*creativecommons* OR licenseurl:*publicdomain*)",
+    "emotional AND cinematic AND mediatype:(audio) AND licenseurl:*creativecommons*",
+    "\"slowed reverb\" AND (love OR sad OR emotional) AND mediatype:(audio) AND licenseurl:*creativecommons*"
   ],
-  "pixabay_queries": ["phonk", "drift phonk", "brazilian phonk", "slowed reverb", "baile funk"],
-  "fma_queries": ["phonk", "electronic beat", "synthwave"]
+  "pixabay_queries": [
+    "phonk",
+    "drift phonk",
+    "brazilian phonk",
+    "slowed reverb",
+    "baile funk",
+    "romantic piano",
+    "sad emotional",
+    "love cinematic"
+  ],
+  "fma_queries": [
+    "phonk",
+    "electronic beat",
+    "synthwave",
+    "romance",
+    "sad piano",
+    "cinematic emotional"
+  ]
 }

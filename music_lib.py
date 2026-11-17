@@ -73,9 +73,11 @@ LIB_PILLAR_GENRE = {
 }
 
 CURATED_MARKERS = ("phonk", "funk", "slowed", "drift", "brazilian", "reverb", "sped")
+LOVE_MARKERS = ("romance", "romantic", "love", "emotional", "sad")
 _GENERIC_BEAT_NAMES = (
     "hip-hop beat", "hip hop beat", "type beat", "phonk hip-hop beat", "phonk beat",
 )
+_ACTION_MUSIC = ("phonk", "hardstyle", "dubstep", "hype")
 
 
 def is_generic_cc_beat(t: dict) -> bool:
@@ -94,20 +96,46 @@ def is_generic_cc_beat(t: dict) -> bool:
     return False
 
 
-def is_curated_edit_song(t: dict) -> bool:
-    """Claim-safe trending phonk, drift phonk, slowed/sped-up edit songs."""
-    if is_generic_cc_beat(t):
-        return False
-    blob = " ".join([
+def _track_blob(t: dict) -> str:
+    return " ".join([
         t.get("genre") or "", t.get("mood") or "",
         " ".join(t.get("tags") or []), t.get("title") or "",
+        " ".join(t.get("pillars") or []),
     ]).lower()
+
+
+def is_love_track(t: dict) -> bool:
+    """Romantic / sad / emotional beds — not phonk action tracks that happen to say 'love'."""
+    blob = _track_blob(t)
+    if any(w in blob for w in _ACTION_MUSIC):
+        return False
+    return any(w in blob for w in LOVE_MARKERS)
+
+
+def is_curated_edit_song(t: dict, *, mood: str | None = None) -> bool:
+    """Claim-safe trending phonk, drift phonk, slowed/sped-up edit songs.
+
+    When mood is love/romance, emotional/romance tracks also count as curated
+    so they are not dropped in favour of phonk.
+    """
+    if is_generic_cc_beat(t):
+        return False
+    blob = _track_blob(t)
+    if (mood or "") in ("love", "romance") and is_love_track(t):
+        return True
     return any(w in blob for w in CURATED_MARKERS)
 
 
-def curated_tracks(tracks: list[dict]) -> list[dict]:
-    """Prefer the curated phonk/edit library; only if it is empty, allow the rest (incl. CC beats)."""
-    curated = [t for t in tracks if is_curated_edit_song(t)]
+def curated_tracks(tracks: list[dict], *, mood: str | None = None) -> list[dict]:
+    """Prefer the curated phonk/edit library; only if it is empty, allow the rest (incl. CC beats).
+
+    Love mood prefers romance/emotional tracks first.
+    """
+    if (mood or "") in ("love", "romance"):
+        love = [t for t in tracks if is_love_track(t) and not is_generic_cc_beat(t)]
+        if love:
+            return love
+    curated = [t for t in tracks if is_curated_edit_song(t, mood=mood)]
     return curated if curated else list(tracks)
 
 
@@ -135,7 +163,8 @@ def catalog(AE: Path, exclude: list[str] | None = None) -> list[dict]:
 
 
 def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None, salt: str = "",
-         prefer: str | None = None, prefer_alts: list[str] | None = None) -> dict | None:
+         prefer: str | None = None, prefer_alts: list[str] | None = None,
+         text: str = "") -> dict | None:
     """Trending edit songs from music/library.json (mp3s fetched from the 'music' release into music/lib).
 
     If Gemini named a file (`prefer`, then `prefer_alts`) and it is in the library and not in
@@ -158,10 +187,19 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
     if not tracks:
         print("  music library: no mp3s present locally; falling back to credits.json")
         return None
-    curated = [t for t in tracks if is_curated_edit_song(t)]
-    if curated:
+    mood = "action"
+    try:
+        import edit_format
+        mood = edit_format.infer_format(pillar=pillar, text=text)
+        if mood == "gta6":
+            mood = "action"
+    except Exception:
+        if (pillar or "").lower() in ("romance", "love"):
+            mood = "love"
+    curated = curated_tracks(tracks, mood=mood)
+    if curated and curated != tracks:
         tracks = curated
-    else:
+    elif not any(is_curated_edit_song(t, mood=mood) for t in tracks):
         print("  music library: curated phonk/edit tracks missing; allowing generic CC fallback")
     p = (pillar or "movie").lower()
     market = (os.environ.get("SKY_MARKET") or "").upper()
@@ -187,8 +225,21 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
         if any(w in g for w in LIB_PILLAR_GENRE.get(p, ())):
             sc += 10
         # Prefer phonk / drift / brazilian / slowed+reverb beat-drop tracks
-        if any(w in g for w in ("phonk", "funk", "slowed", "drift", "brazilian")):
+        # (love/romance titles prefer mid-tempo emotional tracks instead).
+        if mood == "love":
+            if is_love_track(t):
+                sc += 40
+            if any(w in g or w in (t.get("mood") or "").lower() for w in _ACTION_MUSIC) and not is_love_track(t):
+                sc -= 25
+            bpm = float(t.get("bpm") or 0)
+            if 70 <= bpm <= 130:
+                sc += 10
+            elif bpm > 150:
+                sc -= 15
+        elif any(w in g for w in ("phonk", "funk", "slowed", "drift", "brazilian")):
             sc += 14
+            if is_love_track(t):
+                sc -= 8
         # Prefer copyright-safer tracks; claim_risk only when nothing else fits
         safety = (t.get("safety") or "").lower()
         if safety == "safe":

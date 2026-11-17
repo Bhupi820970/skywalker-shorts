@@ -355,13 +355,21 @@ def process_candidate(item: dict, fileinfo: dict, lib: dict, cfg: dict, taken: s
     if not meta or meta["duration_s"] < float(cfg.get("min_duration_s") or 25):
         out.unlink(missing_ok=True)
         return None
+    genre, mood, pillars, tags = tags_from_text(title, artist, ident)
+    blob = f"{title} {artist} {ident}".lower()
+    is_love = (
+        genre == "romance"
+        or mood in ("emotional", "romantic", "love")
+        or "romance" in (pillars or [])
+        or any(w in blob for w in ("romance", "romantic", "love song", "sad piano", "emotional"))
+    )
     # Keep only tracks with a real drop (onset/loudness jump), not a flat bed.
-    if float(meta.get("drop_jump") or 0) < 0.10:
+    # Love/emotional beds are allowed a softer jump so mid-tempo romance tracks survive.
+    min_jump = 0.04 if is_love else 0.10
+    if float(meta.get("drop_jump") or 0) < min_jump:
         print(f"    reject weak drop jump={meta.get('drop_jump')} {fname}")
         out.unlink(missing_ok=True)
         return None
-    genre, mood, pillars, tags = tags_from_text(title, artist, ident)
-    blob = f"{title} {artist} {ident}".lower()
     # Reject podcasts / OST dumps / boring instrumental collections
     reject = tuple(str(x).lower() for x in (cfg.get("reject_title_substrings") or [
         "podcast", "instrumentals volume", "album collection", "ost extended",
@@ -370,9 +378,12 @@ def process_candidate(item: dict, fileinfo: dict, lib: dict, cfg: dict, taken: s
     if any(r in blob for r in reject):
         out.unlink(missing_ok=True)
         return None
-    # Prefer phonk / drift / brazilian / slowed for the edit library
+    # Prefer phonk / drift / brazilian / slowed for the edit library.
+    # Love/romance tracks are a separate mood bucket and are kept without that filter.
     prefer = [str(x).lower() for x in (cfg.get("prefer_genres") or [])]
-    if prefer and not any(p in genre.lower() or p in blob for p in prefer):
+    if is_love:
+        genre, mood, pillars, tags = "romance", "emotional", ["romance"], ["romance", "love", "edit"]
+    elif prefer and not any(p in genre.lower() or p in blob for p in prefer):
         # Still allow high-energy electronic cousins; skip obvious soft beds
         if genre.lower() in ("electronic",) and meta.get("energy", 0) < 0.35:
             out.unlink(missing_ok=True)

@@ -1,6 +1,6 @@
 {
-  "max_new": 120,
-  "target": 280,
-  "enabled": false,
-  "note": "Set enabled true or bump this file to re-trigger music-ingest on push."
+  "max_new": 80,
+  "target": 320,
+  "enabled": true,
+  "note": "Enabled to ingest additional CC phonk + love/romance tracks on the next push."
 }
