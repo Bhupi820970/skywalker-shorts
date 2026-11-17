@@ -105,6 +105,13 @@
       "result_id": "stock-aotfinal-03"
     },
     {
+      "id": "stock-aotfinal-04",
+      "topic_id": "backup-aotfinal",
+      "slug": "aotfinal",
+      "status": "pending",
+      "queued_at": "2026-11-17 23:53 IST"
+    },
+    {
       "id": "stock-apothecarydiaries2-01",
       "topic_id": "backup-apothecarydiaries2",
       "slug": "apothecarydiaries2",
@@ -1056,6 +1063,13 @@
       "status": "pending",
       "queued_at": "2026-11-16 14:16 IST",
       "result_id": "stock-jurassicworldrebirth-07"
+    },
+    {
+      "id": "stock-kaiju8-01",
+      "topic_id": "backup-kaiju8",
+      "slug": "kaiju8",
+      "status": "pending",
+      "queued_at": "2026-11-17 23:53 IST"
     },
     {
       "id": "stock-kalki2898ad-01",
