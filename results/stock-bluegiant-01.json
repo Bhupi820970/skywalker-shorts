@@ -244,5 +244,9 @@
       "reason": "gemini score 6.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "stock_used": true,
+  "assigned_slot": "2026-11-17T22:30:00+05:30",
+  "assigned_result": "20261117-2230-bluegiant",
+  "used_at": "2026-11-17 22:00 IST"
 }

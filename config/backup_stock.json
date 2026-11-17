@@ -333,10 +333,13 @@
       "id": "stock-bluegiant-01",
       "topic_id": "backup-bluegiant",
       "slug": "bluegiant",
-      "status": "ready",
+      "status": "used",
       "queued_at": "2026-11-17 16:11 IST",
       "result_id": "stock-bluegiant-01",
-      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-bluegiant-01.mp4"
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-bluegiant-01.mp4",
+      "assigned_slot": "2026-11-17T22:30:00+05:30",
+      "assigned_result": "20261117-2230-bluegiant",
+      "used_at": "2026-11-17 22:00 IST"
     },
     {
       "id": "stock-bluelock2-01",
@@ -727,7 +730,7 @@
       "id": "stock-dragonballdaima-02",
       "topic_id": "backup-dragonballdaima",
       "slug": "dragonballdaima",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-17 18:19 IST",
       "result_id": "stock-dragonballdaima-02"
     },
