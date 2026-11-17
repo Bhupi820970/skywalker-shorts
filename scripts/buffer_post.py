@@ -157,7 +157,7 @@ def occupied_times(all_r, posts, now):
     """IST datetimes already taken by a scheduled/sent post, a ready result, or a queued item."""
     taken = []
     for r in all_r:
-        if r.get("no_publish") or r.get("demo") or is_publish_dead(r):
+        if backup_stock.must_not_publish(r) or is_publish_dead(r):
             continue
         if backup_stock.is_title_match_miss(r):
             continue
@@ -269,9 +269,7 @@ def main():
             continue
         # Never post demo / dry-run / no_publish renders (test-renders release).
         # Unassigned stock has no slot and is skipped by the check above.
-        if r.get("no_publish") or r.get("demo") or (r.get("asset_url") or "").find("/test-renders/") >= 0:
-            continue
-        if (r.get("id") or "").startswith("demo-") or (r.get("id") or "").startswith("test-"):
+        if backup_stock.must_not_publish(r):
             continue
         if (r.get("id") or "").startswith("stock-") and not r.get("assigned_from_stock"):
             continue

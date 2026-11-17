@@ -40,6 +40,8 @@ jobs:
           python3 scripts/fill_queue.py || true
           set +e
           python3 scripts/health_check.py
+          set +e
+          python3 scripts/slot_guardian.py
           set -e
           short=$(python3 -c "import json; print(','.join(json.load(open('config/health_status.json')).get('short') or []))")
           pre=$(python3 -c "import json; print(int(json.load(open('config/health_status.json')).get('backup_pool_preuploaded') or 0))")
@@ -48,6 +50,11 @@ jobs:
           echo "short=$short" >> "$GITHUB_OUTPUT"
           echo "need_stock=$need_stock" >> "$GITHUB_OUTPUT"
           echo "assigned=$assigned" >> "$GITHUB_OUTPUT"
+          gpub=0
+          if [ -f config/slot_guardian.json ]; then
+            gpub=$(python3 -c "import json; print('1' if json.load(open('config/slot_guardian.json')).get('need_publish') else '0')")
+          fi
+          echo "need_publish=$gpub" >> "$GITHUB_OUTPUT"
           if [ -n "$short" ] || [ "$pre" -lt 20 ]; then echo "need_backup=1" >> "$GITHUB_OUTPUT"; else echo "need_backup=0" >> "$GITHUB_OUTPUT"; fi
           git config user.name "skywalker-health"
           git config user.email "actions@users.noreply.github.com"
@@ -83,7 +90,7 @@ jobs:
           echo "dispatching stock refill: $ids"
           gh workflow run render.yml -f "ids=$ids" -f "max=$n"
       - name: Publish assigned stock immediately
-        if: steps.h.outputs.assigned != ''
+        if: steps.h.outputs.assigned != '' || steps.h.outputs.need_publish == '1'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

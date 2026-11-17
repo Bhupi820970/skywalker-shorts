@@ -30,6 +30,8 @@ STOCK_RE = re.compile(r"^stock-(.+)-(\d{2})$")
 TARGET = 30
 REFILL_AT = 5
 MAX_REFILL = 2
+MIN_READY = 4
+RETIRE_AFTER = 2
 RELEASE = "backup-stock"
 LEAD_MIN = 60
 PENDING_HOURS = 3
@@ -113,6 +115,126 @@ def has_preuploaded(it: dict) -> bool:
         if not (it.get("fallback_asset") or it.get("fallback_mp4")):
             return False
         return "trailer" not in fa.lower() and "teaser" not in fa.lower()
+
+
+def must_not_publish(r: dict | None) -> bool:
+    """True for demo / no_publish / test-renders results that must never go to Buffer."""
+    if not r:
+        return True
+    if r.get("no_publish") or r.get("demo") or r.get("dry_run"):
+        return True
+    if "/test-renders/" in str(r.get("asset_url") or ""):
+        return True
+    iid = str(r.get("id") or "")
+    if iid.startswith("demo-") or iid.startswith("test-"):
+        return True
+    return False
+
+
+def is_retire_worthy_error(err: str | None, r: dict | None = None) -> bool:
+    """True when this failure means the topic's official footage is unusable.
+
+    Logo / burned-in / 404 / YouTube bot-check counts. Tooling-only errors
+    (yt-dlp fixed-output-name, ffmpeg install) and timeouts do not.
+    """
+    e = (err or "").lower()
+    if r:
+        e = (e + " " + str(r.get("detail") or "")).lower()
+    source_markers = (
+        "reject logo", "reject logo/watermark", "reject burned-in",
+        "http error 404", "404: not found", "error 404",
+        "sign in to confirm",
+        "no official scene clips", "no unused official source",
+    )
+    has_source = any(m in e for m in source_markers)
+    tooling_only = (
+        ("fixed output name" in e or "install ffmpeg" in e or "xz -t" in e)
+        and not has_source
+    )
+    if tooling_only:
+        return False
+    if any(w in e for w in ("timed out", "timeout", "job cancelled", "no result json")) and not has_source:
+        if not (r or {}).get("qc_rejected"):
+            return False
+    if has_source:
+        return True
+    if (r or {}).get("qc_rejected"):
+        qc_markers = ("watermark", "logo", "burn-in", "burned-in", "subscribe")
+        if any(m in e for m in qc_markers):
+            return True
+    return False
+
+
+def retire_worthy_failures(root: Path | None = None) -> dict[str, list[dict]]:
+    """Map topic slug -> stock/live results that failed on logo/404/bot-check."""
+    root = root or _repo()
+    by: dict[str, list[dict]] = {}
+    for r in iter_results(root):
+        if (r.get("status") or "") not in ("failed",):
+            continue
+        parsed = parse_stock_id(r.get("id") or "")
+        slug = parsed[0] if parsed else _slug_of(r)
+        if not slug:
+            continue
+        if not is_retire_worthy_error(r.get("last_error") or r.get("detail"), r):
+            continue
+        by.setdefault(slug, []).append({
+            "id": r.get("id"),
+            "reason": (r.get("last_error") or r.get("detail") or "source unusable")[:240],
+        })
+    return by
+
+
+def retired_slugs(root: Path | None = None, man: dict | None = None) -> set[str]:
+    man = man if man is not None else load_manifest(root)
+    out: set[str] = set()
+    for row in man.get("retired_topics") or []:
+        if isinstance(row, str) and row.strip():
+            out.add(row.strip().lower())
+        elif isinstance(row, dict) and row.get("slug"):
+            out.add(str(row["slug"]).strip().lower())
+    return out
+
+
+def blocked_slugs(root: Path | None = None, man: dict | None = None) -> set[str]:
+    """Topics that must not be refilled or newly queued (retired or already broken)."""
+    man = man if man is not None else load_manifest(root)
+    return retired_slugs(root, man) | set(retire_worthy_failures(root))
+
+
+def _apply_retirements(man: dict, root: Path, now: datetime) -> list[dict]:
+    """Stamp repeated logo/404 failures as retired topics. Never deletes videos."""
+    already = retired_slugs(man=man)
+    rows = list(man.get("retired_topics") or [])
+    newly = []
+    for slug, fails in retire_worthy_failures(root).items():
+        if slug in already or len(fails) < RETIRE_AFTER:
+            continue
+        row = {
+            "slug": slug,
+            "reason": fails[-1].get("reason") or "repeated logo/404 source failures",
+            "fail_count": len(fails),
+            "failed_ids": [f["id"] for f in fails if f.get("id")][:20],
+            "retired_at": now.strftime("%Y-%m-%d %H:%M IST"),
+        }
+        rows.append(row)
+        newly.append(row)
+        already.add(slug)
+        print(f"retired topic {slug} after {len(fails)} unrecoverable source failures (videos kept)",
+              file=sys.stderr)
+    if newly:
+        man["retired_topics"] = rows
+    return newly
+
+
+def retire_broken_topics(root: Path | None = None, now: datetime | None = None) -> list[dict]:
+    root = root or _repo()
+    now = now or now_ist()
+    man = load_manifest(root)
+    newly = _apply_retirements(man, root, now)
+    if newly:
+        save_manifest(man, root)
+    return newly
 
 
 def parse_stock_id(iid: str) -> tuple[str, int] | None:
@@ -236,9 +358,7 @@ def is_ready_result(r: dict | None) -> bool:
         return False
     if r.get("status") != "done" or not r.get("asset_url"):
         return False
-    if r.get("no_publish") or r.get("demo"):
-        return False
-    if "/test-renders/" in str(r.get("asset_url") or ""):
+    if must_not_publish(r):
         return False
     if r.get("stock_ready") is False:
         return False
@@ -488,6 +608,7 @@ def sync(root: Path | None = None, now: datetime | None = None) -> dict:
     for ent in by_id.values():
         ent["status"] = _entry_status(ent, root, now)
     man["items"] = sorted(by_id.values(), key=lambda e: e.get("id") or "")
+    _apply_retirements(man, root, now)
     save_manifest(man, root)
     return man
 
@@ -750,9 +871,12 @@ def next_refill_ids(root: Path | None = None, limit: int | None = None,
         slug, n = parsed
         max_n[slug] = max(max_n.get(slug, 0), n)
         existing_ids.add(r["id"])
+    blocked = blocked_slugs(root, man)
     picks = []
     # Rotate topics with the fewest in-stock copies first for variety.
-    order = sorted(pool, key=lambda b: (counts.get(pool_slug(b), 0), pool_slug(b)))
+    # Skip retired / repeatedly-broken slugs so they stop burning render slots.
+    order = [b for b in sorted(pool, key=lambda b: (counts.get(pool_slug(b), 0), pool_slug(b)))
+             if pool_slug(b) not in blocked]
     if not order:
         return []
     i = 0
@@ -762,6 +886,8 @@ def next_refill_ids(root: Path | None = None, limit: int | None = None,
         b = order[i % len(order)]
         i += 1
         slug = pool_slug(b)
+        if slug in blocked:
+            continue
         n = max_n.get(slug, 0) + 1
         iid = f"stock-{slug}-{n:02d}"
         if iid in existing_ids:
@@ -861,15 +987,20 @@ def status_summary(root: Path | None = None, now: datetime | None = None) -> dic
     ready = ready_entries(man)
     pending = pending_entries(man)
     used = [e for e in man.get("items") or [] if e.get("status") == "used"]
+    retired = sorted(retired_slugs(root, man))
+    below = len(ready) < MIN_READY
     return {
         "ready": len(ready),
         "pending": len(pending),
         "used": len(used),
         "target": int(man.get("target") or TARGET),
+        "min_ready": MIN_READY,
+        "below_ready_floor": below,
         "refill_at": int(man.get("refill_at") or REFILL_AT),
-        "need_refill": (len(ready) + len(pending)) < int(man.get("target") or TARGET),
+        "need_refill": below or (len(ready) + len(pending)) < int(man.get("target") or TARGET),
         "ready_ids": [e["id"] for e in ready],
         "pending_ids": [e["id"] for e in pending],
+        "retired": retired,
     }
 
 
@@ -881,6 +1012,11 @@ def main(argv: list[str] | None = None) -> int:
     if cmd == "assign":
         got = assign_needed(root, now)
         print(json.dumps({"assigned": [g["id"] for g in got], "n": len(got)}))
+        return 0
+    if cmd == "retire":
+        got = retire_broken_topics(root, now)
+        print(json.dumps({"retired": [g["slug"] for g in got], "n": len(got),
+                          "all": sorted(retired_slugs(root))}))
         return 0
     if cmd in ("refill-ids", "refill_ids"):
         cap = int(argv[1]) if len(argv) > 1 else MAX_REFILL

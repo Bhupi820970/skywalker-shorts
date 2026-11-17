@@ -14,10 +14,12 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
+sys.path.insert(0, str(REPO / "scripts"))
 import hook_text  # noqa: E402
 import sourcing  # noqa: E402
 import perf  # noqa: E402
 import slot_times  # noqa: E402
+import backup_stock  # noqa: E402
 
 IST = timezone(timedelta(hours=5, minutes=30))
 GH = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources"
@@ -147,6 +149,12 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
     # rotate catalog: prefer unused slugs, weighted by stats performance
     # never queue a topic that has no official scene clips (trailers are not used)
     catalog = [t for t in catalog if topic_assets(t, have)]
+    try:
+        blocked = backup_stock.blocked_slugs(REPO)
+    except Exception:
+        blocked = set()
+    if blocked:
+        catalog = [t for t in catalog if (t.get("slug") or "").lower() not in blocked]
     if not catalog:
         return 0
     pool = [t for t in catalog if t["slug"] not in used]

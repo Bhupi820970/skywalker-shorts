@@ -1,0 +1,82 @@
+name: slot-guardian
+
+# Before each official IST slot, confirm Buffer already has a post for that
+# minute. If not, assign a ready pre-rendered stock video (pool floor: 4,
+# auto-refilled) or a never-posted evergreen backup, then dispatch publish.
+# Demo / no_publish / test-renders items are never posted. Videos are never deleted.
+# GitHub cron is best-effort, so this also runs every 15 minutes and from health.yml.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+    # T-25 for the eight official IST slots (UTC = IST − 5:30)
+    - cron: "35 0 * * *"   # 06:30 IST
+    - cron: "5 3 * * *"    # 09:00 IST
+    - cron: "35 5 * * *"   # 11:30 IST
+    - cron: "35 7 * * *"   # 13:30 IST
+    - cron: "5 10 * * *"   # 16:00 IST
+    - cron: "5 13 * * *"   # 18:30 IST
+    - cron: "5 15 * * *"   # 20:30 IST
+    - cron: "5 17 * * *"   # 22:30 IST
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: slot-guardian
+  cancel-in-progress: false
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Guard imminent IST slots
+        id: g
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/slot_guardian.py || true
+      - name: Commit assignments
+        if: always()
+        run: |
+          git config user.name "skywalker-guardian"
+          git config user.email "actions@users.noreply.github.com"
+          git add config/backup_stock.json queue/ results/*.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "guardian: cover slots $(date -u +%F-%H%M)"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
+      - name: Publish if a slot was uncovered
+        if: steps.g.outputs.need_publish == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml || true
+      - name: Refill ready pool when below the floor of 4
+        if: steps.g.outputs.need_refill == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ids=$(python3 scripts/backup_stock.py refill-ids 2 | awk -F= '/^ids_csv=/{print $2}')
+          if [ -z "$ids" ]; then
+            echo "no stock ids to refill"
+            exit 0
+          fi
+          git add config/backup_stock.json || true
+          git config user.name "skywalker-guardian"
+          git config user.email "actions@users.noreply.github.com"
+          git diff --cached --quiet || {
+            git commit -m "stock: queue refill $ids"
+            for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
+          }
+          n=$(python3 -c "print(len('$ids'.split(',')))")
+          echo "dispatching stock refill: $ids"
+          gh workflow run render.yml -f "ids=$ids" -f "max=$n"

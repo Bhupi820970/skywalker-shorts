@@ -66,6 +66,8 @@ def has_preuploaded(it: dict) -> bool:
 
 def main() -> int:
     now = datetime.now(IST)
+    # Auto-retire (never delete) topics that keep failing on logo/404/bot-check.
+    backup_stock.retire_broken_topics(REPO, now)
     horizon = now + timedelta(hours=24)
     items = queue_items()
     pool = load_pool()

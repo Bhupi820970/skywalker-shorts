@@ -480,3 +480,52 @@ def test_source_quality_reason_below_1080():
     assert b.source_quality_reason({"source_w": 1280, "source_h": 720}) == "1280x720 below 1080p"
     assert b.source_quality_reason({"width": 1920, "height": 1080}) is None
     assert b.source_quality_reason({}) is None  # unknown size is not a silent reject
+
+
+def test_must_not_publish_blocks_demo_and_test_renders():
+    assert backup_stock.must_not_publish({"id": "demo-v5-romance", "status": "done",
+        "asset_url": "https://example/x.mp4", "no_publish": True})
+    assert backup_stock.must_not_publish({"id": "demo-v5-romance", "demo": True,
+        "asset_url": "https://example/x.mp4", "status": "done"})
+    assert backup_stock.must_not_publish({"id": "stock-x-01", "status": "done",
+        "asset_url": "https://github.com/o/r/releases/download/test-renders/test-demo.mp4"})
+    assert backup_stock.must_not_publish({"id": "test-foo", "status": "done",
+        "asset_url": "https://example/x.mp4"})
+    assert not backup_stock.must_not_publish(_ready_result("stock-zootopia2-01"))
+
+
+def test_retire_and_skip_broken_topics_after_repeated_logo_or_404(tmp_path, monkeypatch):
+    root = _root(tmp_path, monkeypatch, pool=[
+        {"id": "backup-bleachtybw", "fallback_asset": "bleachtybw_scene1_h264.mp4"},
+        {"id": "backup-zootopia2", "fallback_asset": "zootopia2_scene1_h264.mp4"},
+    ])
+    for n in (1, 2):
+        iid = f"stock-bleachtybw-{n:02d}"
+        _write(root / "results" / f"{iid}.json", {
+            "id": iid, "status": "failed", "source_unrecoverable": True,
+            "last_error": "reject logo/watermark: gh:sources/bleachtybw_scene1_h264.mp4",
+        })
+    # tooling-only fail must not retire a different topic
+    _write(root / "results" / "stock-zootopia2-01.json", {
+        "id": "stock-zootopia2-01", "status": "failed",
+        "last_error": "yt-dlp:ERROR: Fixed output name but more than one file to download",
+    })
+    newly = backup_stock.retire_broken_topics(root)
+    slugs = {r["slug"] for r in newly}
+    assert "bleachtybw" in slugs
+    assert "zootopia2" not in slugs
+    assert "bleachtybw" in backup_stock.retired_slugs(root)
+    ids = backup_stock.next_refill_ids(root, limit=2)
+    assert ids
+    assert all(not i.startswith("stock-bleachtybw-") for i in ids)
+    assert any(i.startswith("stock-zootopia2-") for i in ids)
+
+
+def test_fixed_output_name_alone_is_not_retire_worthy():
+    assert not backup_stock.is_retire_worthy_error(
+        "yt-dlp:ERROR: Fixed output name but more than one file to download: out.mp4")
+    assert backup_stock.is_retire_worthy_error(
+        "Fixed output name but more than one file | reject logo/watermark: gh:x.mp4")
+    assert backup_stock.is_retire_worthy_error("HTTP Error 404: Not Found")
+    assert backup_stock.is_retire_worthy_error("Sign in to confirm you're not a bot")
+    assert not backup_stock.is_retire_worthy_error("no result JSON; job cancelled or timed out")
