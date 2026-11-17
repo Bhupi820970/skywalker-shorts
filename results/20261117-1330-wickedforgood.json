@@ -172,7 +172,9 @@
   "stock_id": "stock-wickedforgood-01",
   "assigned_from_stock": true,
   "buffer_post_id": "6afabf26d7e5fee638b094df",
-  "buffer_status": "scheduled",
+  "buffer_status": "sent",
   "buffer_due_at": "2026-11-17T08:00:00.000Z",
-  "buffer_created_at": "2026-11-16 14:00 IST"
+  "buffer_created_at": "2026-11-16 14:00 IST",
+  "youtube_url": "https://www.youtube.com/shorts/2FfOgsno8hY",
+  "buffer_posted_at": "2026-11-17T08:00:51.661Z"
 }
