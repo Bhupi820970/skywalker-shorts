@@ -1,12 +1,7 @@
 {
-  "at": "2026-11-18 00:19 IST",
-  "slots_checked": 11,
+  "at": "2026-11-18 00:46 IST",
+  "slots_checked": 10,
   "ready": [
-    {
-      "slot": "2026-11-17T22:30:00+05:30",
-      "id": "stock",
-      "how": "backup_stock"
-    },
     {
       "slot": "2026-11-18T06:30:00+05:30",
       "id": "20261118-0630-spyxfamily3",
@@ -101,6 +96,8 @@
     "20261115-1730-alienromulus",
     "stock-twisters-02",
     "stock-runningman-01",
+    "stock-aotfinal-04",
+    "stock-kaiju8-01",
     "stock-cyberpunkedgerunners-01",
     "stock-avatarfireandash-01",
     "stock-hellsparadise-01",
@@ -127,8 +124,8 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 7,
-  "stock_pending": 23,
+  "stock_ready": 9,
+  "stock_pending": 21,
   "stock_used": 21,
   "stock_target": 30,
   "stock_need_refill": false,
