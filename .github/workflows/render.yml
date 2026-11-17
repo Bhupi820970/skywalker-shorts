@@ -113,13 +113,39 @@ jobs:
         timeout-minutes: 20
         run: |
           # Static GPL build first (has vidstab, no apt mirrors needed); apt only as fallback.
-          if curl -fsSL --retry 5 --retry-delay 10 --max-time 300 -o /tmp/ffmpeg.txz "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"; then
-            mkdir -p /tmp/ff && tar -xJf /tmp/ffmpeg.txz -C /tmp/ff --strip-components=1
-            sudo install -m 0755 /tmp/ff/ffmpeg /tmp/ff/ffprobe /usr/local/bin/
-            hash -r
-          fi
+          # Retry the tarball, verify it is a real xz, then fall back to apt.
+          install_static_ffmpeg() {
+            local url="https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"
+            local txz=/tmp/ffmpeg.txz
+            for i in 1 2 3; do
+              rm -f "$txz"
+              echo "static ffmpeg download attempt $i"
+              if ! curl -fsSL --retry 3 --retry-delay 8 --max-time 180 -o "$txz" "$url"; then
+                echo "curl failed"; sleep 8; continue
+              fi
+              if [ "$(wc -c < "$txz")" -lt 1000000 ]; then
+                echo "tarball too small ($(wc -c < "$txz") bytes)"; sleep 8; continue
+              fi
+              if ! xz -t "$txz"; then
+                echo "xz -t failed (corrupt or not xz)"; sleep 8; continue
+              fi
+              rm -rf /tmp/ff && mkdir -p /tmp/ff
+              if ! tar -xJf "$txz" -C /tmp/ff --strip-components=1; then
+                echo "tar extract failed"; sleep 8; continue
+              fi
+              if /tmp/ff/ffmpeg -hide_banner -filters 2>/dev/null | grep -q vidstabdetect; then
+                sudo install -m 0755 /tmp/ff/ffmpeg /tmp/ff/ffprobe /usr/local/bin/
+                hash -r
+                return 0
+              fi
+              echo "static binary missing vidstab"
+              sleep 8
+            done
+            return 1
+          }
+          install_static_ffmpeg || echo "static ffmpeg unavailable after retries"
           if ! ffmpeg -hide_banner -filters 2>/dev/null | grep -q vidstabdetect; then
-            echo "static ffmpeg unavailable; trying apt"
+            echo "falling back to apt ffmpeg"
             for i in 1 2 3; do
               if timeout 300 sudo apt-get update -qq && timeout 300 sudo apt-get install -y -qq -o Acquire::Retries=3 ffmpeg; then break; fi
               echo "apt attempt $i failed; retrying in 20s"; sleep 20
@@ -146,6 +172,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           SKY_WHISPER_MODEL: small
+          SKY_MAX_SOURCE_S: "180"
           SKY_NO_PUBLISH: ${{ needs.plan.outputs.no_publish == '1' && '1' || '0' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
@@ -155,7 +182,7 @@ jobs:
           GEMINI_API_KEY_6: ${{ secrets.GEMINI_API_KEY_6 }}
         run: python3 scripts/render_item.py "${{ matrix.id }}"
       - name: Write result if render left none
-        if: always()
+        if: ${{ always() }}
         env:
           ITEM_ID: ${{ matrix.id }}
         run: |
