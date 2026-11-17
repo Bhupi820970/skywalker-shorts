@@ -8,7 +8,14 @@ Automatic retry ladder (self-heal, no bot required):
      selection + relaxed NON-hard-rule thresholds
      (never relaxes no-crop, layout, or no-logo/title)
 
-If all three attempts in this job fail and results/<id>.json has not yet used
+If all three attempts for the current title fail (short clean footage, QC
+reject, logo, 404, bot-check, or no official scene clip), the job swaps to
+the next eligible official title of the same format (romance → next romance,
+action → next action) and retries in this same run. Demo and forced-id items
+swap the same way; the original id / no_publish flag is kept. A mid-render
+runner shutdown stays on the same title so the chunked path can retry it.
+
+If every same-format title also fails and results/<id>.json has not yet used
 its outer auto-retry, we write status=retry_queued and exit 0. A companion
 workflow re-dispatches the item once more later. Only after that last attempt
 fails do we write status=failed and exit 1 (that is what wakes BIBI).
@@ -81,6 +88,8 @@ import sky_ai
 import overlay_guard
 import chunked
 import sourcing
+import title_swap
+import edit_format
 
 os.environ.setdefault("SKY_GEMINI_BUDGET_FILE", str(OUT / f"gemini_budget_{iid}.json"))
 QUEUE_META = {k: item.get(k) for k in ("hook", "title", "description", "tags")}
@@ -143,7 +152,10 @@ def write(status, detail, **extra):
          "queue_meta": QUEUE_META if GEMINI_META else None, "gemini_meta": bool(GEMINI_META),
          "hook_source": (GEMINI_META or {}).get("source"), "hook_style": (GEMINI_META or {}).get("style"), "title_candidates": (GEMINI_META or {}).get("title_candidates"),
          "gemini_calls": gemini._budget().get("log", []), "backup_item": item.get("backup_item"),
-         "stock": item.get("stock"), "stock_topic": item.get("stock_topic"), "spare": item.get("spare"), **extra}
+         "stock": item.get("stock"), "stock_topic": item.get("stock_topic"), "spare": item.get("spare"),
+         "words": item.get("words"), "edit_format": item.get("edit_format"),
+         "title_swaps": item.get("title_swaps") or None,
+         "swapped_from": item.get("swapped_from"), "swapped_to": item.get("swapped_to"), **extra}
     prev = read_prev()
     for k in ("buffer_post_id", "buffer_status", "buffer_due_at", "buffer_posted_at", "youtube_url"):
         if prev.get(k) and k not in r:
@@ -555,13 +567,18 @@ def run_pipeline(src, out, qa_json, work, *, relax=False, alt_scenes=False, excl
     if music_salt:
         cmd += ["--music-salt", music_salt]
     mode = (item.get("edit_mode") or os.environ.get("SKY_EDIT_MODE") or "").strip().lower()
-    if mode in ("music_only", "two_act"):
+    if mode not in ("music_only", "two_act", "dialogue_bed"):
+        fmt = edit_format.infer_format(item, pillar=str(item.get("pillar") or ""))
+        mode = "dialogue_bed" if fmt == "love" else "music_only"
+        item["edit_mode"] = mode
+    if mode in ("music_only", "two_act", "dialogue_bed"):
         cmd += ["--edit-mode", mode]
     checkout = Path(__file__).resolve().parent.parent
     chunked.activate_for_source(src, item=item, repo=checkout)
     env = dict(os.environ, SKY_WORK=str(work), SKY_ROOT=str(OUT), SKY_MARKET=(item.get("market") or "").upper())
-    if mode in ("music_only", "two_act"):
+    if mode in ("music_only", "two_act", "dialogue_bed"):
         env["SKY_EDIT_MODE"] = mode
+    env["SKY_EDIT_FORMAT"] = item.get("edit_format") or edit_format.infer_format(item, pillar=str(item.get("pillar") or ""))
     if (item.get("market") or "").upper() == "IN" or item.get("dialogue_lang") in ("hi", "te", "ta"):
         # Hindi/South dubs: whisper-small output was garbled ("पेवरेट ग्रिकेट").
         # medium + forced language is far closer to the real lines (~3 min CPU).
@@ -604,6 +621,9 @@ def upscale(src, out_1080, final):
             fw, fh = probe_wh(final)
             return fw, fh, up
         except Exception as e:
+            if chunked.refuse_single_pass():
+                print(f"  chunked 4K upscale failed ({e}); not falling back to single-pass", flush=True)
+                raise
             print(f"  chunked 4K upscale failed ({e}); falling back to single-pass", flush=True)
             final.unlink(missing_ok=True)
     subprocess.check_call(["ffmpeg", "-y", *chunked.ffmpeg_thread_args(), "-i", str(out_1080),
@@ -895,6 +915,41 @@ def _write_qc_pending(info, attempts_log, auto_retries):
     return 0
 
 
+
+def _refresh_item_context():
+    """Rewrite SKY_ITEM_JSON and queue_meta after a same-run title swap."""
+    global QUEUE_META
+    QUEUE_META = {k: item.get(k) for k in ("hook", "title", "description", "tags")}
+    ctx = OUT / f"item_{iid}.json"
+    ctx.write_text(json.dumps({"item": item, "avoid_openers": AVOID_OPENERS,
+                               "trends": gemini.load_trends(REPO)}, ensure_ascii=False))
+    os.environ["SKY_ITEM_JSON"] = str(ctx)
+
+
+def _try_title_swap(reason, tried) -> bool:
+    """Replace the current topic with the next official same-format title."""
+    global item
+    if not title_swap.should_swap(reason):
+        return False
+    nxt = title_swap.next_eligible_title(item, exclude=tried, root=REPO)
+    if not nxt:
+        print(
+            f"  title auto-swap: no other official {title_swap.item_format(item)} title left",
+            flush=True,
+        )
+        return False
+    before = title_swap.title_slug(item)
+    title_swap.apply_title_swap(item, nxt, reason=str(reason or "")[:400])
+    tried |= title_swap.item_keys(item)
+    _refresh_item_context()
+    print(
+        f"  title auto-swap: {before} -> {title_swap.title_slug(item)} "
+        f"({item.get('words')}) format={title_swap.item_format(item)}",
+        flush=True,
+    )
+    return True
+
+
 def main():
     prev = read_prev()
     auto_retries = int(prev.get("auto_retries") or 0)
@@ -942,50 +997,72 @@ def main():
         return 1
 
     attempts_log = []
-    # Attempt 1: normal
-    t_a = time.monotonic()
-    ok, info = attempt(1, force_fallback=False)
-    est = time.monotonic() - t_a
-    _record_attempt(attempts_log, info)
-    if info.get("qc_pending"):
-        return _write_qc_pending(info, attempts_log, auto_retries)
-    if ok:
-        write("done", info["detail"], auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
-              attempts=attempts_log, last_error=None, **_result_extra(info))
-        return 0
+    tried = title_swap.item_keys(item)
+    swaps = 0
+    while True:
+        # Attempt 1: normal (all official clips of this title)
+        t_a = time.monotonic()
+        ok, info = attempt(1, force_fallback=False)
+        est = time.monotonic() - t_a
+        _record_attempt(attempts_log, info)
+        if info.get("qc_pending"):
+            return _write_qc_pending(info, attempts_log, auto_retries)
+        if ok:
+            detail = info["detail"]
+            if item.get("title_swaps"):
+                detail += f" (title auto-swap to {item.get('words') or title_swap.title_slug(item)})"
+            write("done", detail, auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
+                  attempts=attempts_log, last_error=None, **_result_extra(info))
+            return 0
 
-    # Attempt 2: sources-release fallback mp4
-    if (_qc_rejects(attempts_log) >= 2 or not _budget_left_for(est)
-            or sourcing.is_unrecoverable_source_error(info.get("error"))):
+        def _swap_or_give_up(current):
+            nonlocal swaps
+            err = (current or {}).get("error") or (attempts_log[-1].get("error") if attempts_log else "")
+            if swaps < title_swap.MAX_SWAPS and _try_title_swap(err, tried):
+                swaps += 1
+                return "swap"
+            return "give_up"
+
+        # Attempt 2: sources-release fallback mp4
+        if (_qc_rejects(attempts_log) >= 2 or not _budget_left_for(est)
+                or sourcing.is_unrecoverable_source_error(info.get("error"))
+                or title_swap.should_swap(info.get("error"))):
+            if _swap_or_give_up(info) == "swap":
+                continue
+            return _give_up(attempts_log, auto_retries, last_info=info)
+        t_a = time.monotonic()
+        ok, info = attempt(2, force_fallback=True)
+        est = max(est, time.monotonic() - t_a)
+        _record_attempt(attempts_log, info)
+        if info.get("qc_pending"):
+            return _write_qc_pending(info, attempts_log, auto_retries)
+        if ok:
+            write("done", info["detail"] + " (retry: sources fallback)", auto_retries=auto_retries,
+                  max_auto_retries=MAX_AUTO_RETRIES, attempts=attempts_log, last_error=None,
+                  **_result_extra(info))
+            return 0
+
+        # Attempt 3: fallback + different music + alt scenes + relaxed non-hard thresholds
+        if (_qc_rejects(attempts_log) >= 2 or not _budget_left_for(est)
+                or title_swap.should_swap(info.get("error"))):
+            if _swap_or_give_up(info) == "swap":
+                continue
+            return _give_up(attempts_log, auto_retries, last_info=info)
+        excl = list(dict.fromkeys([m for m in prior_music + [attempts_log[0].get("music"), attempts_log[-1].get("music")] if m]))
+        ok, info = attempt(3, force_fallback=True, relax=True, alt_scenes=True,
+                           exclude_music=excl, music_salt=f"retry3-{auto_retries}-{swaps}")
+        _record_attempt(attempts_log, info)
+        if info.get("qc_pending"):
+            return _write_qc_pending(info, attempts_log, auto_retries)
+        if ok:
+            write("done", info["detail"] + " (retry: alt music/scenes, non-hard relax)", auto_retries=auto_retries,
+                  max_auto_retries=MAX_AUTO_RETRIES, attempts=attempts_log, last_error=None,
+                  **_result_extra(info))
+            return 0
+
+        if _swap_or_give_up(info) == "swap":
+            continue
         return _give_up(attempts_log, auto_retries, last_info=info)
-    t_a = time.monotonic()
-    ok, info = attempt(2, force_fallback=True)
-    est = max(est, time.monotonic() - t_a)
-    _record_attempt(attempts_log, info)
-    if info.get("qc_pending"):
-        return _write_qc_pending(info, attempts_log, auto_retries)
-    if ok:
-        write("done", info["detail"] + " (retry: sources fallback)", auto_retries=auto_retries,
-              max_auto_retries=MAX_AUTO_RETRIES, attempts=attempts_log, last_error=None,
-              **_result_extra(info))
-        return 0
-
-    # Attempt 3: fallback + different music + alt scenes + relaxed non-hard thresholds
-    if _qc_rejects(attempts_log) >= 2 or not _budget_left_for(est):
-        return _give_up(attempts_log, auto_retries, last_info=info)
-    excl = list(dict.fromkeys([m for m in prior_music + [attempts_log[0].get("music"), attempts_log[1].get("music")] if m]))
-    ok, info = attempt(3, force_fallback=True, relax=True, alt_scenes=True,
-                       exclude_music=excl, music_salt=f"retry3-{auto_retries}")
-    _record_attempt(attempts_log, info)
-    if info.get("qc_pending"):
-        return _write_qc_pending(info, attempts_log, auto_retries)
-    if ok:
-        write("done", info["detail"] + " (retry: alt music/scenes, non-hard relax)", auto_retries=auto_retries,
-              max_auto_retries=MAX_AUTO_RETRIES, attempts=attempts_log, last_error=None,
-              **_result_extra(info))
-        return 0
-
-    return _give_up(attempts_log, auto_retries, last_info=info)
 
 
 def _qc_rejects(attempts_log) -> int:
