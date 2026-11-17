@@ -44,8 +44,29 @@ _OK_LICENSE = (
 _BAD_LICENSE = ("/by-nc", "/by-nd", "/by-nc-sa", "/by-nc-nd", "/by-nd", "nc-sa", "nc-nd")
 
 
-def license_ok(url: str | None) -> bool:
-    u = (url or "").strip().lower()
+def meta_text(value, fallback: str = "Unknown") -> str:
+    """IA metadata fields (creator, title, …) are sometimes a list.
+
+    Join lists with ', ', coerce to str, and use fallback when empty.
+    """
+    if isinstance(value, (list, tuple)):
+        parts = []
+        for v in value:
+            if v is None:
+                continue
+            s = str(v).strip()
+            if s:
+                parts.append(s)
+        text = ", ".join(parts)
+    elif value is None:
+        text = ""
+    else:
+        text = str(value).strip()
+    return text or fallback
+
+
+def license_ok(url) -> bool:
+    u = meta_text(url, "").lower()
     if not u:
         return False
     if any(b in u for b in _BAD_LICENSE):
@@ -318,12 +339,10 @@ def upload_release(files: list[Path], tag: str = "music") -> bool:
 
 
 def process_candidate(item: dict, fileinfo: dict, lib: dict, cfg: dict, taken: set[str]) -> dict | None:
-    ident = item.get("identifier") or ""
-    title = (item.get("title") or ident or "track").strip()
-    artist = (item.get("creator") or "Unknown").strip()
-    if isinstance(artist, list):
-        artist = ", ".join(str(a) for a in artist[:3])
-    license_url = item.get("licenseurl") or ""
+    ident = meta_text(item.get("identifier"), "")
+    title = meta_text(item.get("title") or ident or "track", "track")
+    artist = meta_text(item.get("creator"), "Unknown")
+    license_url = meta_text(item.get("licenseurl"), "")
     if not license_ok(license_url):
         return None
     if music_lib.is_denied_track({"title": title, "artist": artist, "source_id": ident,
@@ -465,7 +484,11 @@ def main() -> int:
             print(f"  try {ident} / {fi['name']}")
             if args.dry_run:
                 continue
-            tr = process_candidate(d, fi, lib, cfg, taken)
+            try:
+                tr = process_candidate(d, fi, lib, cfg, taken)
+            except Exception as e:
+                print(f"  skip {ident} / {fi.get('name')}: {type(e).__name__}: {e}")
+                continue
             time.sleep(0.6)
             if not tr:
                 continue

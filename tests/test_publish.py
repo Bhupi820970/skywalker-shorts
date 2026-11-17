@@ -272,3 +272,21 @@ def test_ingest_license_and_slug():
     assert ingest_music.slugify("ELA PEIDA FUNK", "x") == "sw_elapeidafunk.mp3"
     g, m, p, tags = ingest_music.tags_from_text("dark phonk drift")
     assert g == "phonk" and "anime" in p
+
+
+def test_ingest_meta_text_normalizes_lists():
+    import ingest_music
+    assert ingest_music.meta_text(["Artist One", "Artist Two"]) == "Artist One, Artist Two"
+    assert ingest_music.meta_text(["  Dark Phonk  ", "", None]) == "Dark Phonk"
+    assert ingest_music.meta_text(None) == "Unknown"
+    assert ingest_music.meta_text("  ") == "Unknown"
+    assert ingest_music.meta_text(42, "track") == "42"
+    assert ingest_music.meta_text([], "") == ""
+    item = {
+        "identifier": "foo",
+        "title": ["Dark Phonk", "Edit"],
+        "creator": ["Artist One", "Artist Two"],
+        "licenseurl": ["https://creativecommons.org/licenses/by-nc/4.0/"],
+    }
+    # NC license returns before any download; list fields must not raise.
+    assert ingest_music.process_candidate(item, {"name": "a.mp3"}, {}, {}, set()) is None
