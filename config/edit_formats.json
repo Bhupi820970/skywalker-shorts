@@ -1,0 +1,202 @@
+{
+  "note": "Edit-format templates (style only). Love format was learned from public Shorts metadata, duration, tags, and thumbnails. Never reuse those videos' footage or exact wording. Video stays centered and uncropped.",
+  "love": {
+    "id": "love",
+    "pillar": "romance",
+    "music_mood": "love",
+    "music_genres": [
+      "romance",
+      "emotional",
+      "sad",
+      "slowed",
+      "love"
+    ],
+    "bpm_min": 70,
+    "bpm_max": 130,
+    "avoid_music": [
+      "phonk",
+      "hype",
+      "hardstyle",
+      "dubstep"
+    ],
+    "pacing": {
+      "min_shot_len": 2.5,
+      "hero_shot_min": 3.0,
+      "hero_shot_max": 5.0,
+      "max_flash_shots": 0,
+      "max_hero_shots": 4,
+      "target_dur_min": 20,
+      "target_dur_max": 32
+    },
+    "captions": {
+      "style": "cinematic_center",
+      "font_name": "Liberation Serif",
+      "font_file": "LiberationSerif-Bold.ttf",
+      "case": "sentence",
+      "position": "plate_lower_center",
+      "color": "white",
+      "outline": true,
+      "letter_spacing": 2.5,
+      "keyword_highlight": false,
+      "note": "Short white serif lines over the lower-center of the plate, not under the phone UI and not covering faces when possible."
+    },
+    "hook": {
+      "pattern": "3-7 word English emotional observation about the moment (often past tense or a quiet feeling). Character-specific, no fight/aura hooks, no emoji, no hashtags.",
+      "style_examples": [
+        "She already knew",
+        "They almost said it",
+        "One look was enough",
+        "He could not look away",
+        "This was the almost-kiss"
+      ],
+      "never_use": [
+        "it was love at first sight",
+        "love, i would kill",
+        "love is passion, obsession",
+        "fall head over heels",
+        "someone you can't live without"
+      ]
+    },
+    "schedule": {
+      "min_per_day": 1,
+      "max_per_day": 2
+    },
+    "content_kinds": [
+      "romance scene",
+      "love scene",
+      "emotional scene"
+    ],
+    "titles": [
+      {
+        "slug": "bridgerton",
+        "words": "BRIDGERTON",
+        "official_channels": [
+          "Netflix"
+        ],
+        "x_handles": [
+          "Netflix"
+        ],
+        "hook": "She already knew",
+        "search_queries": [
+          "Bridgerton official scene clip",
+          "Bridgerton official romance scene Netflix"
+        ]
+      },
+      {
+        "slug": "lalaland",
+        "words": "LA LA LAND",
+        "official_channels": [
+          "Lionsgate Movies"
+        ],
+        "hook": "They almost said it",
+        "search_queries": [
+          "La La Land official scene clip",
+          "La La Land official clip Lionsgate"
+        ]
+      },
+      {
+        "slug": "anyonebutyou",
+        "words": "ANYONE BUT YOU",
+        "official_channels": [
+          "Sony Pictures Entertainment"
+        ],
+        "hook": "One look was enough",
+        "search_queries": [
+          "Anyone But You official scene clip",
+          "Anyone But You official clip Sony"
+        ]
+      },
+      {
+        "slug": "yourname",
+        "words": "YOUR NAME",
+        "official_channels": [
+          "TOHO animation",
+          "TOHO"
+        ],
+        "hook": "He could not look away",
+        "search_queries": [
+          "Your Name official scene clip",
+          "Kimi no Na wa official clip TOHO"
+        ]
+      },
+      {
+        "slug": "thesummeritp",
+        "words": "THE SUMMER I TURNED PRETTY",
+        "official_channels": [
+          "Prime Video"
+        ],
+        "x_handles": [
+          "PrimeVideo"
+        ],
+        "hook": "This was the almost-kiss",
+        "search_queries": [
+          "The Summer I Turned Pretty official scene clip",
+          "The Summer I Turned Pretty official clip Prime Video"
+        ]
+      },
+      {
+        "slug": "oneday",
+        "words": "ONE DAY",
+        "official_channels": [
+          "Netflix"
+        ],
+        "hook": "They kept missing it",
+        "search_queries": [
+          "One Day official scene clip Netflix",
+          "One Day official romance scene"
+        ]
+      },
+      {
+        "slug": "purplehearts",
+        "words": "PURPLE HEARTS",
+        "official_channels": [
+          "Netflix"
+        ],
+        "hook": "She did not plan this",
+        "search_queries": [
+          "Purple Hearts official scene clip Netflix",
+          "Purple Hearts official clip"
+        ]
+      },
+      {
+        "slug": "crazyrichasians",
+        "words": "CRAZY RICH ASIANS",
+        "official_channels": [
+          "Warner Bros. Pictures"
+        ],
+        "hook": "The room went quiet",
+        "search_queries": [
+          "Crazy Rich Asians official scene clip",
+          "Crazy Rich Asians official clip Warner"
+        ]
+      }
+    ]
+  },
+  "gta6": {
+    "id": "gta6",
+    "slug": "gta6",
+    "words": "GTA 6",
+    "title_words": "GRAND THEFT AUTO VI",
+    "pillar": "movie",
+    "launch_at": "2026-11-19T00:00:00+00:00",
+    "official_channels": [
+      "Rockstar Games"
+    ],
+    "x_handles": [
+      "RockstarGames"
+    ],
+    "content_kind": "gameplay",
+    "search_queries": [
+      "GTA 6 official gameplay",
+      "Grand Theft Auto VI official gameplay",
+      "GTA VI official gameplay Rockstar Games"
+    ],
+    "allow_official_watermark": true,
+    "block_trailers": true,
+    "schedule": {
+      "min_per_day_after_launch": 2,
+      "max_per_day_after_launch": 3
+    },
+    "before_launch": "never queue or post GTA 6"
+  }
+}
