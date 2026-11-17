@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-17 16:32 IST",
+  "at": "2026-11-17 17:09 IST",
   "slots_checked": 11,
   "ready": [
     {
@@ -57,6 +57,7 @@
   "spare_done": [
     "stock-runningman-01",
     "stock-mortalkombat2-01",
+    "stock-bluegiant-01",
     "stock-deadpool3-02",
     "stock-avatarfireandash-01",
     "20261115-1830-deadpool3",
@@ -114,8 +115,8 @@
     "20261114-1330-dune2"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 0,
-  "stock_pending": 21,
+  "stock_ready": 1,
+  "stock_pending": 19,
   "stock_used": 20,
   "stock_target": 30,
   "stock_need_refill": true,
