@@ -219,19 +219,24 @@ def analyze(path: Path) -> dict | None:
     hop = 512
     rms = librosa.feature.rms(y=y, hop_length=hop)[0]
     energy = float(np.clip(np.mean(rms) / (np.percentile(rms, 90) + 1e-9), 0, 1))
-    drop_t = _find_drop(y, sr, pulse) if len(pulse) else None
+    drop_t, drop_jump = (None, 0.0)
+    if len(pulse):
+        drop_t, drop_jump = _find_drop(y, sr, pulse)
     if drop_t is None:
         # loudest 2s window
         tt = librosa.frames_to_time(np.arange(len(rms)), sr=sr, hop_length=hop)
         best, best_t = -1.0, 0.0
+        med = float(np.median(rms) + 1e-9)
         for t0 in tt[::4]:
             m = float(rms[(tt >= t0) & (tt < t0 + 2)].mean()) if np.any((tt >= t0) & (tt < t0 + 2)) else 0
             if m > best:
                 best, best_t = m, float(t0)
         drop_t = best_t
+        drop_jump = (best / med - 1.0) if med else 0.0
     return {
         "bpm": round(float(tempo), 1),
         "drop_t": round(float(drop_t or 0.0), 2),
+        "drop_jump": round(float(drop_jump or 0.0), 3),
         "duration_s": round(dur, 1),
         "energy": round(float(energy), 3),
     }
@@ -258,7 +263,9 @@ def _find_drop(y, sr, pulse):
         jump = float(e[i:i + k].mean() - e[i - k:i].mean())
         if jump > best:
             best, best_t = jump, float(b)
-    return best_t
+    if best_t is None:
+        return None, 0.0
+    return best_t, float(best)
 
 
 def load_lib() -> dict:
@@ -346,6 +353,11 @@ def process_candidate(item: dict, fileinfo: dict, lib: dict, cfg: dict, taken: s
         return None
     meta = analyze(out)
     if not meta or meta["duration_s"] < float(cfg.get("min_duration_s") or 25):
+        out.unlink(missing_ok=True)
+        return None
+    # Keep only tracks with a real drop (onset/loudness jump), not a flat bed.
+    if float(meta.get("drop_jump") or 0) < 0.10:
+        print(f"    reject weak drop jump={meta.get('drop_jump')} {fname}")
         out.unlink(missing_ok=True)
         return None
     genre, mood, pillars, tags = tags_from_text(title, artist, ident)

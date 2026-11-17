@@ -46,8 +46,11 @@ def whitebar_layout(plate_h: int, bar_h: int, plate_w: int | None = None) -> dic
         plate_y = min_y
     if plate_y > max_y:
         plate_y = max_y
+    # Hook bar sits directly on top of the centered plate (not stuck under the
+    # phone's top UI). It never overlaps the picture.
+    bar_y = even(max(0, plate_y - bar_h))
     return {
-        "bar_y": 0,
+        "bar_y": bar_y,
         "bar_h": bar_h,
         "video_y": plate_y,
         "plate_y": plate_y,

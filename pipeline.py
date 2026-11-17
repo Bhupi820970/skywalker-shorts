@@ -897,6 +897,7 @@ def pick_music(pillar: str, seed: str = "", exclude: list[str] | None = None, sa
     lib_pick = _pick_library(pillar, seed, exclude, salt, prefer=prefer, prefer_alts=prefer_alts)
     if lib_pick:
         return lib_pick
+    import music_lib
     cj = json.loads((AE / "music" / "credits.json").read_text())
     mood = PILLAR_MOOD.get((pillar or "movie").lower(), "movie")
     blob = " ".join([
@@ -906,9 +907,10 @@ def pick_music(pillar: str, seed: str = "", exclude: list[str] | None = None, sa
     # Thriller / horror (Fool Night etc.) -> dark / phonk / cinematic, never light pop
     if any(k in blob for k in ("fool night", "foolnight", "horror", "thriller", "scary", "werwulf")):
         mood = "anime" if mood in ("anime", "funny") else "movie"
-    pool = [t for t in cj["tracks"] if t["pillar"] == mood and (AE / "music" / t["file"]).exists()]
+    creditable = [t for t in cj["tracks"] if not music_lib.is_denied_track(t, AE)]
+    pool = [t for t in creditable if t["pillar"] == mood and (AE / "music" / t["file"]).exists()]
     if not pool:
-        pool = [t for t in cj["tracks"] if (AE / "music" / t["file"]).exists()]
+        pool = [t for t in creditable if (AE / "music" / t["file"]).exists()]
     excl = {x for x in (exclude or []) if x}
     alt = [t for t in pool if t["file"] not in excl]
     if alt:
@@ -3404,18 +3406,15 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     # picture. The picture is contain-fit and vertically centered in the
     # full frame; blur fills leftover space above and below the plate.
     region_h = int(lay["region_h"])
-    plate_oy = int(lay["plate_y"]) - int(lay["bar_h"])
-    if plate_oy < 0:
-        plate_oy = 0
     vfilt = (
         f"[0:v]split=2[fg][bgraw];"
-        f"[bgraw]scale={W}:{region_h}:force_original_aspect_ratio=increase,"
-        f"crop={W}:{region_h},gblur=sigma=36:steps=3,"
+        f"[bgraw]scale={W}:{H}:force_original_aspect_ratio=increase,"
+        f"crop={W}:{H},gblur=sigma=36:steps=3,"
         f"eq=brightness=-0.14:saturation=0.80:contrast=0.95,setsar=1[bg];"
         f"[fg]scale={lay['plate_w']}:{lay['plate_h']}:flags=lanczos,setsar=1[plate];"
-        f"[bg][plate]overlay={lay['plate_x']}:{plate_oy}:format=auto[vid];"
+        f"[bg][plate]overlay={lay['plate_x']}:{lay['plate_y']}:format=auto[vid];"
         f"[2:v]format=rgb24,scale={W}:{lay['bar_h']}[bar];"
-        f"[bar][vid]vstack=inputs=2{fx},format=yuv420p{ass_extra}[v]"
+        f"[vid][bar]overlay=0:{lay['bar_y']}:format=auto{fx},format=yuv420p{ass_extra}[v]"
     )
     layout["blur_fill"] = True
     (WORK / "layout.json").write_text(json.dumps(layout, default=str))
@@ -3674,7 +3673,7 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
     geo_ok = (
         abs(ar_src - ar_plate) / ar_src < 0.01
         and 2 <= int(lay["plate_w"]) <= W
-        and int(lay["bar_y"]) == 0
+        and int(lay["bar_y"]) + int(lay["bar_h"]) <= plate_y
         and no_overlap and fits and centered
     )
     # letterbox rows removed must be black on well-lit frames, not on one fade

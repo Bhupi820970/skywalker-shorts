@@ -1,4 +1,4 @@
-"""Hook bar stays at the top; uncropped plate is vertically centered."""
+"""Hook bar sits directly above the vertically centered, uncropped plate."""
 from __future__ import annotations
 
 import sys
@@ -12,9 +12,8 @@ import layout
 
 def test_bar_at_top_and_landscape_plate_is_vertically_centered():
     lay = layout.whitebar_layout(608, 180, 1080)
-    assert lay["bar_y"] == 0
-    assert lay["plate_y"] >= lay["bar_h"]
-    assert lay["plate_y"] > lay["bar_h"]  # blur gap between bar and picture
+    assert lay["bar_y"] + lay["bar_h"] == lay["plate_y"]  # hook sits right on top of the video
+    assert lay["bar_y"] > 0
     assert lay["plate_y"] + lay["plate_h"] <= layout.H
     assert lay["plate_w"] == layout.W
     assert lay["plate_h"] == 608

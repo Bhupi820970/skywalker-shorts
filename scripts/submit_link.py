@@ -55,6 +55,17 @@ def is_supported_link(url: str) -> bool:
     return False
 
 
+def is_official_scene_asset(url: str) -> bool:
+    """True for a sources-release official scene mp4 (never a trailer)."""
+    u = normalize_url(url)
+    if "github.com" not in u or "/releases/download/sources/" not in u:
+        return False
+    name = u.rstrip("/").split("/")[-1].split("?")[0]
+    if not name.lower().endswith(".mp4"):
+        return False
+    return "_scene" in name.lower() and not sourcing.is_trailer_source(name)
+
+
 def link_is_trailer(url: str, title: str = "") -> bool:
     if sourcing.is_trailer_source(url) or sourcing.is_trailer_source(title):
         return True
@@ -186,12 +197,22 @@ def next_free_slot(root: Path | None = None, now: datetime | None = None,
 
 
 def build_item(url: str, *, title: str = "", hook: str = "", name: str = "",
-               slot_iso: str = "", words: str = "") -> dict:
-    url = normalize_url(url)
-    if not is_supported_link(url):
-        raise SystemExit("only official YouTube or X (Twitter) links are accepted")
-    if link_is_trailer(url, title):
-        raise SystemExit("trailers and teasers are not used; give an official scene clip")
+               slot_iso: str = "", words: str = "", extra_urls: list[str] | None = None,
+               scene_assets: list[str] | None = None) -> dict:
+    raw_urls = [url] + list(extra_urls or [])
+    urls: list[str] = []
+    for raw in raw_urls:
+        u = normalize_url(raw)
+        if not u or u in urls:
+            continue
+        if not (is_supported_link(u) or is_official_scene_asset(u)):
+            raise SystemExit("only official YouTube, X, or sources-release scene clips are accepted")
+        if link_is_trailer(u, title):
+            raise SystemExit("trailers and teasers are not used; give an official scene clip")
+        urls.append(u)
+    if not urls:
+        raise SystemExit("need at least one official scene clip")
+    url = urls[0]
     slug = default_slug(url, title, name)
     if not slug:
         raise SystemExit("could not make a slug from the name or title")
@@ -211,17 +232,31 @@ def build_item(url: str, *, title: str = "", hook: str = "", name: str = "",
         yt_title = default_title(hook, words)
     dt = datetime.fromisoformat(slot_iso)
     code = dt.strftime("%Y%m%d-%H%M")
-    asset = f"{slug}_scene1_h264.mp4"
+    assets: list[str] = []
+    for a in scene_assets or []:
+        name = str(a).rstrip("/").split("/")[-1].split("?")[0]
+        if name and not sourcing.is_trailer_source(name) and name not in assets:
+            assets.append(name)
+    for u in urls:
+        if "/releases/download/sources/" in u:
+            name = u.rstrip("/").split("/")[-1].split("?")[0]
+            if name.endswith(".mp4") and not sourcing.is_trailer_source(name) and name not in assets:
+                assets.append(name)
+    if not assets:
+        assets = [f"{slug}_scene1_h264.mp4"]
+    asset = assets[0]
+    release_urls = [f"{GH}/{a}" for a in assets]
     item = {
         "id": f"{code}-{slug}",
         "slot": slot_iso,
         "pillar": "movie",
         "source_url": url,
-        "alt_source_urls": [url],
+        "alt_source_urls": urls,
+        "scene_assets": assets,
         "fallback_release": "sources",
         "fallback_asset": asset,
-        "fallback_mp4": [f"{GH}/{asset}"],
-        "sources": [f"{GH}/{asset}"],
+        "fallback_mp4": release_urls,
+        "sources": list(release_urls),
         "template": "whitebar",
         "hook": hook,
         "words": words if words.isupper() or " " in words else words.upper(),
