@@ -1,0 +1,275 @@
+{
+  "id": "stock-cyberpunkedgerunners-01",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-17 17:35 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44070315205",
+  "slot": null,
+  "title": "David losing his mind in traffic #cyberpunkedgerunners #davidmartinez #anime",
+  "hook": "David is losing his patience",
+  "description": "David is losing his patience. David Martinez reaches his limit while stuck in heavy Night City traffic. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #davidmartinez #anime #shorts #edit",
+  "tags": [
+    "cyberpunkedgerunners",
+    "davidmartinez",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david"
+  ],
+  "queue_meta": {
+    "hook": "David wanted to be a legend",
+    "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+    "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
+    "tags": [
+      "cyberpunkedgerunners",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "david"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "David losing his mind in traffic",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody expected David to snap this fast",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch what happens when David loses it",
+      "click_score": 85.0
+    },
+    {
+      "title": "David finally reached his breaking point",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment David decided to stop caring",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 41.8,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 5.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 22.5,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-cyberpunkedgerunners",
+  "stock": true,
+  "stock_topic": "backup-cyberpunkedgerunners",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "music": "sw_phonk2.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-01.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 3.599,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+  "music": "sw_phonk2.mp3",
+  "music_credit": "Song: All - Phonk (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "description_final": "David is losing his patience. David Martinez reaches his limit while stuck in heavy Night City traffic. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #davidmartinez #anime #shorts #edit\n\nMusic:\nSong: All - Phonk (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.733333,
+      "audio": true
+    },
+    "lufs": -13.8,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.6,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards: correct layout, clean audio, no dialogue subtitles, and engaging content."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 120,
+      "src_start": 313.522,
+      "dur": 1.5
+    },
+    {
+      "id": 131,
+      "src_start": 337.629,
+      "dur": 2.099,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 109,
+      "src_start": 280.864,
+      "dur": 1.811,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 88,
+      "src_start": 242.075,
+      "dur": 1.462
+    },
+    {
+      "id": 78,
+      "src_start": 221.972,
+      "dur": 1.879,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 193,
+      "src_start": 517.642,
+      "dur": 2.296
+    },
+    {
+      "id": 52,
+      "src_start": 148.899,
+      "dur": 2.142,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 176001,
+      "src_start": 462.566,
+      "dur": 1.811,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 167,
+      "src_start": 434.225,
+      "dur": 2.995
+    },
+    {
+      "id": 62,
+      "src_start": 173.09,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 183,
+      "src_start": 483.9,
+      "dur": 1.5
+    },
+    {
+      "id": 112,
+      "src_start": 285.076,
+      "dur": 1.105,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    }
+  ],
+  "qc_status": "pass"
+}
