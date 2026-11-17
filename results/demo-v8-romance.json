@@ -1,0 +1,244 @@
+{
+  "id": "demo-v8-romance",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok [no-publish]",
+  "at": "2026-11-18 01:41 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44160779514",
+  "slot": null,
+  "title": "Watch the last two seconds #weatheringwithyou #hodaka #romance",
+  "hook": "He tried to fix everything",
+  "description": "He tried to fix everything. A desperate moment where Hodaka realizes the emotional weight of his choice to bring Hina back. From the official Weathering With You trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#weatheringwithyou #hodaka #romance #shorts #edit",
+  "tags": [
+    "weatheringwithyou",
+    "hodaka",
+    "romance",
+    "anime",
+    "edit",
+    "shorts"
+  ],
+  "queue_meta": {
+    "hook": "The sky followed them",
+    "title": "The sky followed them | Weathering With You | #edit",
+    "description": "The sky followed them. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou #romance",
+    "tags": [
+      "weatheringwithyou",
+      "anime",
+      "romance",
+      "edit",
+      "shorts"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "emotional observation",
+  "title_candidates": [
+    {
+      "title": "Watch the last two seconds",
+      "click_score": 90.0
+    },
+    {
+      "title": "Hodaka realization hits too hard",
+      "click_score": 88.0
+    },
+    {
+      "title": "Hodaka could not save her",
+      "click_score": 85.0
+    },
+    {
+      "title": "When Hina finally stops the rain",
+      "click_score": 82.0
+    },
+    {
+      "title": "Hina did not expect this from him",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.5,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 58.6,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "WEATHERING WITH YOU",
+  "edit_format": "love",
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "music": "sw_powerglovetrialsoftheblo.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/test-renders",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-v8-romance.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+  "music": "sw_powerglovetrialsoftheblo.mp3",
+  "music_credit": "Song: Power Glove - Power Glove - Trials Of The Blood Dragon Official Game Soundtrack vinyl rip (http://creativecommons.org/publicdomain/zero/1.0/)",
+  "description_final": "He tried to fix everything. A desperate moment where Hodaka realizes the emotional weight of his choice to bring Hina back. From the official Weathering With You trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#weatheringwithyou #hodaka #romance #shorts #edit\n\nMusic:\nSong: Power Glove - Power Glove - Trials Of The Blood Dragon Official Game Soundtrack vinyl rip (http://creativecommons.org/publicdomain/zero/1.0/)",
+  "no_publish": true,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-v8-romance-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 26.005,
+      "audio": true
+    },
+    "lufs": -15.1,
+    "audio_check": {
+      "isolated": true,
+      "speech_segments": 5,
+      "smr_db": 15.7,
+      "smr_min_db": 13.1,
+      "vocal_vs_mix_db": -0.13,
+      "duck_db": -20.0,
+      "music_between_lines_dbfs": -20.7,
+      "min_smr_db": 12.0
+    },
+    "subtitle_cues": 3,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards, including correct layout, clear audio, and engaging content."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 23,
+      "src_start": 90.542,
+      "dur": 2.5,
+      "gemini_score": 10.0,
+      "reason": "gemini score 10.0"
+    },
+    {
+      "id": 21,
+      "src_start": 82.042,
+      "dur": 2.5,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 35,
+      "src_start": 132.375,
+      "dur": 2.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 43002,
+      "src_start": 171.312,
+      "dur": 2.5,
+      "gemini_score": 10.0,
+      "reason": "gemini score 10.0"
+    },
+    {
+      "id": 13,
+      "src_start": 44.042,
+      "dur": 3.0,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 41,
+      "src_start": 154.65,
+      "dur": 2.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 42,
+      "src_start": 163.812,
+      "dur": 3.0,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 39,
+      "src_start": 148.875,
+      "dur": 3.0,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 14,
+      "src_start": 53.845,
+      "dur": 2.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    }
+  ],
+  "qc_status": "pass"
+}
