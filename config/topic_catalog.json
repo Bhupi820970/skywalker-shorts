@@ -1887,6 +1887,30 @@
       ],
       "usable": false,
       "reason": "logo/watermark"
+    },
+    {
+      "slug": "oppenheimer",
+      "pillar": "hollywood",
+      "words": "OPPENHEIMER",
+      "hook": "Why he regrets his creation",
+      "title": "Why he regrets his creation 💀 | The Trinity Test | #edit",
+      "description": "Why he regrets his creation. From official Oppenheimer clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #oppenheimer #nolan #hollywood",
+      "tags": [
+        "oppenheimer",
+        "nolan",
+        "hollywood",
+        "cillianmurphy",
+        "edit",
+        "phonk",
+        "aura"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=MeIk9ap1u_E",
+      "scene_assets": [
+        "oppenheimer_scene1_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }

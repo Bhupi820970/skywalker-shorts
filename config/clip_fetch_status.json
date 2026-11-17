@@ -1,12 +1,13 @@
 {
  "box": {
-  "last_run_at": "2026-11-16T13:45:43Z",
-  "last_upload_at": "2026-11-16T13:45:43Z"
+  "last_run_at": "2026-11-17T10:20:04Z",
+  "last_upload_at": "2026-11-17T10:20:04Z"
  },
  "done_ids": [
   "yt:7LzDcr20SHc",
   "yt:B0pIISs-o8w",
   "yt:HGCsAcFzaFw",
+  "yt:MeIk9ap1u_E",
   "yt:VwwZU7YgC6A",
   "yt:ckEUVyKanhw",
   "yt:golG9lmaR_U",
@@ -89,6 +90,17 @@
    "kbps": 2651,
    "by": "box",
    "at": "2026-11-16T13:45:43Z"
+  },
+  {
+   "asset": "oppenheimer_scene1_h264.mp4",
+   "id": "yt:MeIk9ap1u_E",
+   "title": "Oppenheimer | Trinity Test",
+   "channel": "Universal Pictures UK",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1341,
+   "by": "box",
+   "at": "2026-11-17T10:20:04Z"
   }
  ],
  "github": {
