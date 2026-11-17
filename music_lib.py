@@ -104,6 +104,32 @@ def _track_blob(t: dict) -> str:
     ]).lower()
 
 
+
+DATED_LOVE_MARKERS = (
+    "classical", "symphony", "sonata", "concerto", "opera", "quartet",
+    "schumann", "brahms", "beethoven", "mozart", "chopin", "wagner",
+    "bach", "vivaldi", "debussy", "liszt", "tchaikovsky", "schubert",
+    "string quartet", "piano sonata", "violin and piano", "tone poet",
+    "four romantic pieces", "siegmund", "paul whiteman", "ragtime",
+    "dixieland", "big band", "op. ", " gypsy love", "venetian love",
+    "arab love song", "isn\'t it romantic", "isnt it romantic",
+    "loc-jukebox", "jukebox-", "publicdomain/mark",
+)
+
+
+def is_dated_love_track(t: dict) -> bool:
+    """Classical / vintage jazz 'love' rips: legal, but low priority for modern romance edits."""
+    if (t.get("priority") or "").lower() == "low":
+        return True
+    blob = " ".join([
+        _track_blob(t),
+        t.get("artist") or "",
+        t.get("credit") or "",
+        t.get("file") or "",
+    ]).lower()
+    return any(m in blob for m in DATED_LOVE_MARKERS)
+
+
 def is_love_track(t: dict) -> bool:
     """Romantic / sad / emotional beds — not phonk action tracks that happen to say 'love'."""
     blob = _track_blob(t)
@@ -133,6 +159,9 @@ def curated_tracks(tracks: list[dict], *, mood: str | None = None) -> list[dict]
     """
     if (mood or "") in ("love", "romance"):
         love = [t for t in tracks if is_love_track(t) and not is_generic_cc_beat(t)]
+        modern = [t for t in love if not is_dated_love_track(t)]
+        if modern:
+            return modern
         if love:
             return love
     curated = [t for t in tracks if is_curated_edit_song(t, mood=mood)]
@@ -229,6 +258,8 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
         if mood == "love":
             if is_love_track(t):
                 sc += 40
+            if is_dated_love_track(t):
+                sc -= 35
             if any(w in g or w in (t.get("mood") or "").lower() for w in _ACTION_MUSIC) and not is_love_track(t):
                 sc -= 25
             bpm = float(t.get("bpm") or 0)

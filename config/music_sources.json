@@ -23,7 +23,17 @@
     "audiobook",
     "interview",
     "asmr",
-    "white noise"
+    "white noise",
+    "schumann",
+    "brahms",
+    "beethoven",
+    "mozart",
+    "chopin",
+    "wagner",
+    "symphony no",
+    "piano sonata",
+    "string quartet",
+    "paul whiteman"
   ],
   "queries": [
     "phonk AND mediatype:(audio) AND (licenseurl:*creativecommons* OR licenseurl:*publicdomain*)",
@@ -51,7 +61,12 @@
     "romance AND mediatype:(audio) AND licenseurl:*creativecommons*",
     "\"sad piano\" AND mediatype:(audio) AND (licenseurl:*creativecommons* OR licenseurl:*publicdomain*)",
     "emotional AND cinematic AND mediatype:(audio) AND licenseurl:*creativecommons*",
-    "\"slowed reverb\" AND (love OR sad OR emotional) AND mediatype:(audio) AND licenseurl:*creativecommons*"
+    "\"slowed reverb\" AND (love OR sad OR emotional) AND mediatype:(audio) AND licenseurl:*creativecommons*",
+    "lofi AND (romance OR love OR chill) AND instrumental AND mediatype:(audio) AND licenseurl:*creativecommons*",
+    "\"cinematic romance\" AND instrumental AND mediatype:(audio) AND licenseurl:*creativecommons*",
+    "\"mid tempo\" AND (emotional OR romantic) AND instrumental AND mediatype:(audio) AND licenseurl:*creativecommons*",
+    "\"sad lofi\" AND mediatype:(audio) AND licenseurl:*creativecommons*",
+    "\"ambient pop\" AND (love OR emotional) AND instrumental AND mediatype:(audio) AND licenseurl:*creativecommons*"
   ],
   "pixabay_queries": [
     "phonk",
@@ -61,7 +76,10 @@
     "baile funk",
     "romantic piano",
     "sad emotional",
-    "love cinematic"
+    "love cinematic",
+    "lofi romance",
+    "mid tempo romantic instrumental",
+    "sad lofi"
   ],
   "fma_queries": [
     "phonk",
@@ -69,6 +87,9 @@
     "synthwave",
     "romance",
     "sad piano",
-    "cinematic emotional"
+    "cinematic emotional",
+    "lofi romance",
+    "mid tempo romantic instrumental",
+    "sad lofi"
   ]
 }

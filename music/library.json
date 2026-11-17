@@ -6719,7 +6719,8 @@
       "source": "archive.org",
       "source_id": "DanWielunskiIsn_tItRomantic_",
       "source_file": "038IsntItRomantic.MP3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_isntitromantic2.mp3",
@@ -6744,7 +6745,8 @@
       "source": "archive.org",
       "source_id": "DanWielunskiIsn_tItRomantic_",
       "source_file": "038IsntItRomantic.ogg",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_theartofmusicvolume03mod.mp3",
@@ -6944,7 +6946,8 @@
       "source": "archive.org",
       "source_id": "LondonHouse",
       "source_file": "3Piano_low.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_fourromanticpiecesforvio2.mp3",
@@ -6969,7 +6972,8 @@
       "source": "archive.org",
       "source_id": "LondonHouse",
       "source_file": "3Piano_high.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_benselvincolumbiabudgetl.mp3",
@@ -7544,7 +7548,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-135246-siegmund-s-love-song",
       "source_file": "jukebox-135246_siegmund-s-love-song.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_venetianlovesongcancinde.mp3",
@@ -7569,7 +7574,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-127002-venetian-love-song-canci-n-de-amor-veneciana",
       "source_file": "jukebox-127002_venetian-love-song-canci-n-de-amor-veneciana.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_alovesong.mp3",
@@ -7594,7 +7600,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-68295-a-love-song",
       "source_file": "jukebox-68295_a-love-song.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_lovesong.mp3",
@@ -7619,7 +7626,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-70812-love-song",
       "source_file": "jukebox-70812_love-song.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_venetianlovesong.mp3",
@@ -7644,7 +7652,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-649950-venetian-love-song",
       "source_file": "jukebox-649950_venetian-love-song.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_justalittlelovesong.mp3",
@@ -7669,7 +7678,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-189033-just-a-little-love-song",
       "source_file": "jukebox-189033_just-a-little-love-song.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_venetianlovesong2.mp3",
@@ -7694,7 +7704,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-12855-venetian-love-song",
       "source_file": "jukebox-12855_venetian-love-song.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_justalittlelovesong2.mp3",
@@ -7719,7 +7730,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-667269-just-a-little-love-song",
       "source_file": "jukebox-667269_just-a-little-love-song.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_0602dougstoothoffbemorew.mp3",
@@ -7769,7 +7781,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-761395-arab-love-song-medley",
       "source_file": "jukebox-761395_arab-love-song-medley.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_gypsylovesong.mp3",
@@ -7794,7 +7807,8 @@
       "source": "archive.org",
       "source_id": "loc-jukebox-668174-gypsy-love-song",
       "source_file": "jukebox-668174_gypsy-love-song.mp3",
-      "safety": "safe"
+      "safety": "safe",
+      "priority": "low"
     },
     {
       "file": "sw_1891collection.mp3",

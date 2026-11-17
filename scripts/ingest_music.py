@@ -338,6 +338,20 @@ def upload_release(files: list[Path], tag: str = "music") -> bool:
     return True
 
 
+
+def _dated_love(title, artist, genre, mood, pillars, tags, ident="") -> bool:
+    try:
+        import music_lib
+        return music_lib.is_dated_love_track({
+            "title": title, "artist": artist, "genre": genre, "mood": mood,
+            "pillars": pillars or [], "tags": tags or [], "file": ident or "",
+            "credit": f"{artist} {title}",
+        })
+    except Exception:
+        return False
+
+
+
 def process_candidate(item: dict, fileinfo: dict, lib: dict, cfg: dict, taken: set[str]) -> dict | None:
     ident = meta_text(item.get("identifier"), "")
     title = meta_text(item.get("title") or ident or "track", "track")
@@ -407,12 +421,14 @@ def process_candidate(item: dict, fileinfo: dict, lib: dict, cfg: dict, taken: s
         if genre.lower() in ("electronic",) and meta.get("energy", 0) < 0.35:
             out.unlink(missing_ok=True)
             return None
+
     track = {
         "file": fname,
         "title": title[:120],
         "artist": str(artist)[:80],
         "genre": genre,
         "mood": mood,
+        "priority": "low" if _dated_love(title, artist, genre, mood, pillars, tags, ident) else "normal",
         "pillars": pillars,
         "bpm": meta["bpm"],
         "drop_t": meta["drop_t"],

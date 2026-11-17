@@ -67,3 +67,18 @@ def test_infer_love_format_from_hook():
     assert edit_format.infer_format({"pillar": "romance"}) == "love"
     assert edit_format.infer_format({"hook": "They almost said it", "words": "BRIDGERTON"}) == "love"
     assert edit_format.infer_format({"pillar": "anime", "hook": "When Okarun goes all out"}) == "action"
+
+
+def test_dated_classical_love_is_low_priority(tmp_path):
+    tracks = _tracks() + [
+        {"file": "sw_schumann.mp3", "title": "Four Romantic Pieces for Violin and Piano, Op. 75",
+         "artist": "Robert Schumann", "genre": "romance", "mood": "emotional",
+         "tags": ["romance", "love", "edit"], "pillars": ["romance"], "bpm": 80,
+         "safety": "safe", "priority": "low"},
+    ]
+    _lib(tmp_path, tracks)
+    assert music_lib.is_dated_love_track(tracks[-1])
+    assert not music_lib.is_dated_love_track(tracks[1])
+    picked = music_lib.pick(tmp_path, "romance", seed="demo-love-modern")
+    assert picked["file"] in ("sw_heartline.mp3", "sw_sadpiano.mp3")
+    assert picked["file"] != "sw_schumann.mp3"
