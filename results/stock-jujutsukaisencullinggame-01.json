@@ -1,0 +1,315 @@
+{
+  "id": "stock-jujutsukaisencullinggame-01",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
+  "at": "2026-11-17 23:37 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44135932740",
+  "slot": null,
+  "title": "Nobody expected Ranvijay to show up like this #animal #ranbirkapoor #action",
+  "hook": "Ranvijay just crashed the meeting",
+  "description": "Ranvijay just crashed the meeting. Ranvijay coolly walks into the high-stakes meeting, leaving his enemies speechless and intimidated by his sudden presence. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #action #shorts #edit",
+  "tags": [
+    "animal",
+    "ranbirkapoor",
+    "action",
+    "bollywood",
+    "edit",
+    "phonk",
+    "aura"
+  ],
+  "queue_meta": {
+    "hook": "Why he is the villain",
+    "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+    "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+    "tags": [
+      "animal",
+      "ranbirkapoor",
+      "bollywood",
+      "edit",
+      "phonk",
+      "aura",
+      "action"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Nobody expected Ranvijay to show up like this",
+      "click_score": 92.0
+    },
+    {
+      "title": "Ranvijay walking into the room changed everything",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch the moment Ranvijay takes control",
+      "click_score": 85.0
+    },
+    {
+      "title": "They were not ready for Ranvijay's entrance",
+      "click_score": 82.0
+    },
+    {
+      "title": "The most dangerous man in the room enters",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.7,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.1,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 1.3,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-jujutsukaisencullinggame",
+  "stock": true,
+  "stock_topic": "backup-jujutsukaisencullinggame",
+  "spare": true,
+  "words": "ANIMAL",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "jujutsukaisen",
+      "from_words": "JUJUTSU KAISEN",
+      "to": "animal",
+      "to_words": "ANIMAL",
+      "reason": "pipeline/QA failed (exit 1): only 11.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "jujutsukaisen",
+  "swapped_to": "animal",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 11.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene2_h264.mp4",
+      "music": "sw_jujalarimfunkoverslowed.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+      "music": "sw_phonkmemphisrap2.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-jujutsukaisencullinggame-01.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+  "music": "sw_phonkmemphisrap2.mp3",
+  "music_credit": "Song: Wittty-T33th - Phonk\\Memphis Rap (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "Ranvijay just crashed the meeting. Ranvijay coolly walks into the high-stakes meeting, leaving his enemies speechless and intimidated by his sudden presence. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #action #shorts #edit\n\nMusic:\nSong: Wittty-T33th - Phonk\\Memphis Rap (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-jujutsukaisencullinggame-01-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.7,
+      "audio": true
+    },
+    "lufs": -14.5,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -17.3,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 4,
+      "src_start": 7.417,
+      "dur": 1.46,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 42,
+      "src_start": 77.417,
+      "dur": 1.582,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 22,
+      "src_start": 36.417,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 72,
+      "src_start": 121.125,
+      "dur": 1.565,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 6,
+      "src_start": 11.0,
+      "dur": 1.742,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 63,
+      "src_start": 109.75,
+      "dur": 1.918,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 28,
+      "src_start": 57.75,
+      "dur": 1.502,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 25,
+      "src_start": 50.487,
+      "dur": 2.0,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 57,
+      "src_start": 101.625,
+      "dur": 1.543
+    },
+    {
+      "id": 17,
+      "src_start": 27.833,
+      "dur": 2.209
+    },
+    {
+      "id": 69,
+      "src_start": 116.042,
+      "dur": 1.5
+    },
+    {
+      "id": 93,
+      "src_start": 165.292,
+      "dur": 1.46
+    },
+    {
+      "id": 51,
+      "src_start": 91.292,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 76,
+      "src_start": 129.0,
+      "dur": 0.62
+    }
+  ],
+  "qc_status": "pass"
+}

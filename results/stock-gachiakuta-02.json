@@ -1,0 +1,283 @@
+{
+  "id": "stock-gachiakuta-02",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
+  "at": "2026-11-17 23:20 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44135932740",
+  "slot": null,
+  "title": "Ranbir Kapoor enters the room and changes everything #animal #ranbirkapoor #action",
+  "hook": "He came to silence everyone",
+  "description": "He came to silence everyone. Ranbir Kapoor makes a lethal entrance and dominates the boardroom meeting with his presence. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #action #shorts #edit",
+  "tags": [
+    "animal",
+    "ranbirkapoor",
+    "action",
+    "bollywood",
+    "edit",
+    "phonk",
+    "aura"
+  ],
+  "queue_meta": {
+    "hook": "Why he is the villain",
+    "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+    "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+    "tags": [
+      "animal",
+      "ranbirkapoor",
+      "bollywood",
+      "edit",
+      "phonk",
+      "aura",
+      "action"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Ranbir Kapoor enters the room and changes everything",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody expected him to be this dangerous",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch how he handles the boardroom meeting",
+      "click_score": 85.0
+    },
+    {
+      "title": "Ranbir Kapoor shuts down the entire room",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment he decided to take control",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.4,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 9.6,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.5,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-gachiakuta",
+  "stock": true,
+  "stock_topic": "backup-gachiakuta",
+  "spare": true,
+  "words": "ANIMAL",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "gachiakuta",
+      "from_words": "GACHIAKUTA",
+      "to": "animal",
+      "to_words": "ANIMAL",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] 3J0KJCJdWU4: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Dl1hSMXlCFk: Sign in to confirm you’re not a bot. This helps protect "
+    }
+  ],
+  "swapped_from": "gachiakuta",
+  "swapped_to": "animal",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: yt-dlp:ERROR: [youtube] 3J0KJCJdWU4: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Dl1hSMXlCFk: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] -cKs3ZAaaZ4: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] ylpE6QkgMKI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] yeRvDchyo44: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] zHQzXiMQoRE: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4 | yt-dlp:ERROR: [generic] gachiakuta_scene2_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+      "music": "sw_phonkmemphisrap2.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-gachiakuta-02.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+  "music": "sw_phonkmemphisrap2.mp3",
+  "music_credit": "Song: Wittty-T33th - Phonk\\Memphis Rap (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "He came to silence everyone. Ranbir Kapoor makes a lethal entrance and dominates the boardroom meeting with his presence. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #action #shorts #edit\n\nMusic:\nSong: Wittty-T33th - Phonk\\Memphis Rap (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-gachiakuta-02-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 23.872,
+      "audio": true
+    },
+    "lufs": -14.5,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -17.3,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards: it is a clean, song-only edit with a perfect layout, clear hook, and professional presentation."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 22,
+      "src_start": 36.417,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 42,
+      "src_start": 77.417,
+      "dur": 1.542,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 25,
+      "src_start": 50.487,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 78,
+      "src_start": 133.417,
+      "dur": 1.565,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 6,
+      "src_start": 11.0,
+      "dur": 1.742,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 70,
+      "src_start": 117.667,
+      "dur": 1.71,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 28,
+      "src_start": 57.75,
+      "dur": 1.502,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 57,
+      "src_start": 101.625,
+      "dur": 1.543
+    },
+    {
+      "id": 4,
+      "src_start": 7.417,
+      "dur": 1.46,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 51,
+      "src_start": 91.292,
+      "dur": 2.293,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 17,
+      "src_start": 27.833,
+      "dur": 2.418
+    },
+    {
+      "id": 63,
+      "src_start": 109.75,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 93,
+      "src_start": 165.292,
+      "dur": 1.46
+    }
+  ],
+  "qc_status": "pass"
+}
