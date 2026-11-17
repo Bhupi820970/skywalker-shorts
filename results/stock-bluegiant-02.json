@@ -1,0 +1,92 @@
+{
+  "id": "stock-bluegiant-02",
+  "status": "retry_queued",
+  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 15.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-17 23:31 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44126567455",
+  "slot": null,
+  "title": "His saxophone hits like thunder | Blue Giant | #edit",
+  "hook": "His saxophone hits like thunder",
+  "description": "His saxophone hits like thunder. From official Blue Giant clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bluegiant",
+  "tags": [
+    "bluegiant",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "dai"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 28.7,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.4,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-bluegiant",
+  "stock": true,
+  "stock_topic": "backup-bluegiant",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 17.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4",
+      "music": "sw_phonkmemphisrap2.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 17.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4",
+      "music": "sw_phonkmemphisrap2.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 3,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 15.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4",
+      "music": "sw_guacamolephonk6ix6.mp3",
+      "qc_status": null
+    }
+  ],
+  "last_error": "pipeline/QA failed (exit 1): only 15.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+}

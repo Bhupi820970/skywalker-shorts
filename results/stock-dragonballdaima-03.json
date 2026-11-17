@@ -1,0 +1,113 @@
+{
+  "id": "stock-dragonballdaima-03",
+  "status": "retry_queued",
+  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-17 23:53 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44126567455",
+  "slot": null,
+  "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+  "hook": "Goku got small, not weak",
+  "description": "Goku got small, not weak. From official Dragon Ball Daima clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dragonballdaima",
+  "tags": [
+    "dragonballdaima",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "goku"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.2,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.4,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.3,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.7,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-dragonballdaima",
+  "stock": true,
+  "stock_topic": "backup-dragonballdaima",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 12.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4",
+      "music": "sw_stoppostingaboutballer.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 11.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4",
+      "music": "sw_stoppostingaboutballer.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 3,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4",
+      "music": "sw_jujalarimfunkoverslowed.mp3",
+      "qc_status": null
+    }
+  ],
+  "last_error": "pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+}
