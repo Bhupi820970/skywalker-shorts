@@ -3618,6 +3618,10 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
             _ch.free_paths(video_only)
             used_chunks = True
     except Exception as e:
+        import chunked as _chfail
+        if _chfail.refuse_single_pass():
+            print(f"  chunked mux failed ({type(e).__name__}: {e}); not falling back to single-pass 4K", flush=True)
+            raise
         print(f"  chunked mux failed ({type(e).__name__}: {e}); falling back to single-pass", flush=True)
         used_chunks = False
         try:
@@ -4170,7 +4174,7 @@ def main():
     if EDIT_FORMAT == "love" and not FORCED_EDIT_MODE:
         EDIT_MODE = "dialogue_bed"
     os.environ["SKY_EDIT_FORMAT"] = EDIT_FORMAT
-    print(f"  edit mode: {EDIT_MODE}" + (" (forced)" if FORCED_EDIT_MODE else f" (hash of {args.item_id or 'item'})"))
+    print(f"  edit mode: {EDIT_MODE}" + (" (forced)" if FORCED_EDIT_MODE else f" (format={EDIT_FORMAT})"))
     RELAX = bool(args.relax)
     ALT_SCENES = bool(args.alt_scenes)
     # Time lock stays off regardless of leftover flag values.
@@ -4411,10 +4415,10 @@ def main():
             (WORK / "arrangement.json").write_text(json.dumps(arr, indent=2))
             print(f"  gemini arrangement: act1 lines {arr.get('act1')} | act2 shots {len(arr.get('act2') or [])}"
                   f" | iconic_hook={bool(arr.get('iconic_hook'))}")
-            if (not FORCED_EDIT_MODE and EDIT_MODE == "music_only" and arr.get("iconic_hook")
-                    and arr.get("act1_times")):
-                EDIT_MODE = "two_act"
-                print("  gemini: iconic dialogue hook — switching this item to two-act")
+            if (not FORCED_EDIT_MODE and EDIT_MODE == "music_only" and arr.get("iconic_hook")):
+                # Action Shorts stay song-only. Auto-upgrading to two-act left
+                # leftover trailer dialogue and captions on Lazarus QC.
+                print("  gemini: iconic hook noted; keeping music-only (no leftover dialogue)")
         if ranks:
             n = sky_ai.apply_scene_ranks(scenes, ranks)
             print(f"  gemini re-scored {n} scene(s)")

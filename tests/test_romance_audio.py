@@ -15,8 +15,9 @@ import dialogue
 def test_love_format_defaults_to_dialogue_bed():
     assert edit_mode.choose_edit_mode("any-id-would-be-music-only", fmt="love") == "dialogue_bed"
     assert edit_mode.choose_edit_mode("any-id-would-be-music-only", fmt="romance") == "dialogue_bed"
-    # action titles still use the 3/4 hash split
-    assert edit_mode.choose_edit_mode("z" * 8, fmt="action") in ("music_only", "two_act")
+    # action titles are always music-only (no leftover dialogue)
+    assert edit_mode.choose_edit_mode("z" * 8, fmt="action") == "music_only"
+    assert edit_mode.choose_edit_mode("z" * 8, fmt="action", iconic_hook=True) == "music_only"
     # explicit override still wins
     assert edit_mode.choose_edit_mode("x", override="music_only", fmt="love") == "music_only"
 
