@@ -280,5 +280,9 @@
       "dur": 1.46
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "buffer_post_id": "6afcb4a0ca5f4f8df9cfeb3b",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-18T03:30:00.000Z",
+  "buffer_created_at": "2026-11-18 01:40 IST"
 }
