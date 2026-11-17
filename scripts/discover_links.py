@@ -59,6 +59,32 @@ EXTRA_OFFICIAL = (
 )
 # Handle (no @) -> display name. Shared with sourcing (link-mode X-first path).
 OFFICIAL_X_HANDLES = dict(sourcing.OFFICIAL_X_HANDLES)
+# Official YouTube channels scanned daily for new episode/movie clips (last 24h).
+OFFICIAL_YT_CHANNELS = {
+    "Netflix": "https://www.youtube.com/@Netflix",
+    "Netflix Anime": "https://www.youtube.com/@NetflixAnime",
+    "Netflix India": "https://www.youtube.com/@NetflixIndia",
+    "Prime Video": "https://www.youtube.com/@PrimeVideo",
+    "Warner Bros. Pictures": "https://www.youtube.com/@WarnerBrosPictures",
+    "Marvel Entertainment": "https://www.youtube.com/@marvel",
+    "Sony Pictures Entertainment": "https://www.youtube.com/@sonypictures",
+    "TOHO animation": "https://www.youtube.com/@TOHOanimation",
+    "Aniplex USA": "https://www.youtube.com/@AniplexUS",
+    "Walt Disney Studios": "https://www.youtube.com/@DisneyStudios",
+    "Pixar": "https://www.youtube.com/@Pixar",
+    "Universal Pictures": "https://www.youtube.com/@UniversalPictures",
+    "Paramount Pictures": "https://www.youtube.com/@ParamountPictures",
+    "Lionsgate Movies": "https://www.youtube.com/@LionsgateMovies",
+    "A24": "https://www.youtube.com/@A24",
+    "Crunchyroll": "https://www.youtube.com/@Crunchyroll",
+    "Adult Swim": "https://www.youtube.com/@adultswim",
+    "Rockstar Games": "https://www.youtube.com/@RockstarGames",
+}
+NEW_RELEASE = re.compile(
+    r"\b(episode|ep\.?\s*\d|new episode|now streaming|now playing|"
+    r"in theaters|is out|premieres?|official clip|scene|watch now)\b",
+    re.I,
+)
 KNOWN_SUFFIXES = (
     "official", "animation", "pictures", "entertainment", "india", "anime",
     "uk", "plus", "studios", "films", "movies", "tv", "usa", "channel", "exe",
@@ -791,6 +817,8 @@ def queue_accepted(root: Path, cand: dict, req: dict, *, min_ahead: float = 3.0)
     )
     item["discovered"] = True
     item["discover_channel"] = cand.get("channel") or ""
+    if req.get("new_release") or cand.get("new_release"):
+        item["new_release"] = True
     path = submit_link.append_queue_item(item, root)
     submit_link.record_request(
         cand["url"], item, status="queued",
@@ -816,6 +844,131 @@ def load_status(root: Path) -> dict:
         return json.loads(p.read_text())
     except Exception:
         return {}
+
+
+def is_new_release_clip(title: str, url: str = "") -> bool:
+    """True for a fresh official episode/movie clip; trailers never pass."""
+    if is_trailer_text(url, title) or TRAILER.search(title or ""):
+        return False
+    return bool(NEW_RELEASE.search(title or ""))
+
+
+def entry_hours_ago(entry: dict, now: datetime) -> float | None:
+    ts = entry.get("timestamp") or entry.get("release_timestamp")
+    try:
+        if ts:
+            dt = datetime.fromtimestamp(int(ts), tz=timezone.utc).astimezone(IST)
+            return (now - dt).total_seconds() / 3600.0
+    except Exception:
+        pass
+    ud = str(entry.get("upload_date") or entry.get("release_date") or "")
+    if len(ud) == 8 and ud.isdigit():
+        try:
+            dt = datetime.strptime(ud, "%Y%m%d").replace(tzinfo=IST)
+            return (now - dt).total_seconds() / 3600.0
+        except Exception:
+            return None
+    return None
+
+
+def list_channel_uploads(url: str, n: int = 8) -> list[dict]:
+    """Recent uploads on an official YouTube channel (flat metadata, no download)."""
+    r = _run(["yt-dlp", "--flat-playlist", "-I", f"1:{n}", "-J", "--no-warnings",
+              "--no-cookies", url], timeout=90)
+    if r.returncode != 0:
+        return []
+    try:
+        data = json.loads(r.stdout or "{}")
+        rows = data.get("entries") or []
+    except Exception:
+        return []
+    out = []
+    for e in rows:
+        if not isinstance(e, dict):
+            continue
+        vid = e.get("id") or ""
+        href = e.get("webpage_url") or e.get("url") or ""
+        if not str(href).startswith("http") and vid:
+            href = f"https://www.youtube.com/watch?v={vid}"
+        if not href:
+            continue
+        out.append({
+            "id": f"yt:{vid}" if vid else href,
+            "url": href,
+            "title": e.get("title") or "",
+            "channel": e.get("channel") or e.get("uploader") or "",
+            "handle": e.get("channel_id") or e.get("uploader_id") or "",
+            "duration": e.get("duration") or 0,
+            "timestamp": e.get("timestamp") or e.get("release_timestamp") or 0,
+            "upload_date": e.get("upload_date") or "",
+            "width": e.get("width") or 0,
+            "height": e.get("height") or 0,
+            "formats": e.get("formats") or [],
+            "platform": "youtube",
+        })
+    return out
+
+
+def collect_new_releases(
+    root: Path,
+    now: datetime | None = None,
+    since_hours: float = 24.0,
+    *,
+    list_channel=list_channel_uploads,
+    x_profile=x_profile_entries,
+) -> list[dict]:
+    """Official channel posts from the last 24h that look like a new episode/movie clip."""
+    now = now or datetime.now(IST)
+    official = official_names(root)
+    found: list[dict] = []
+    for name, url in OFFICIAL_YT_CHANNELS.items():
+        try:
+            rows = list(list_channel(url) or [])
+        except Exception:
+            rows = []
+        for e in rows:
+            e = dict(e)
+            e["channel"] = e.get("channel") or name
+            e["platform"] = e.get("platform") or "youtube"
+            found.append(e)
+    for handle in list(OFFICIAL_X_HANDLES)[:12]:
+        try:
+            rows = list(x_profile(handle) or [])
+        except TypeError:
+            rows = []
+        except Exception:
+            rows = []
+        for e in rows:
+            e = dict(e)
+            e["platform"] = "x"
+            e["handle"] = e.get("handle") or handle
+            e["channel"] = e.get("channel") or OFFICIAL_X_HANDLES.get(handle, handle)
+            found.append(e)
+    kept = []
+    seen = set()
+    for e in found:
+        url = submit_link.normalize_url(e.get("url") or "")
+        title = e.get("title") or ""
+        if not url or url in seen:
+            continue
+        if is_trailer_text(url, title) or not is_new_release_clip(title, url):
+            continue
+        age = entry_hours_ago(e, now)
+        if age is None or age < 0 or age > since_hours:
+            continue
+        if not is_known_official(e.get("channel") or "", e.get("handle") or "", official):
+            continue
+        if already_have_url(root, url):
+            continue
+        seen.add(url)
+        item = dict(e)
+        item["url"] = url
+        item["age_hours"] = round(age, 2)
+        item["new_release"] = True
+        kept.append(item)
+    kept.sort(key=lambda c: (0 if c.get("platform") == "x" or sourcing.is_x_url(c.get("url") or "") else 1,
+                             c.get("age_hours") or 99))
+    return kept
 
 
 def run_discovery(
@@ -857,6 +1010,49 @@ def run_discovery(
             })
             rec["_cands"].append(row)
         reqs = list(by_title.values())
+
+    # Trending-first: official new episode/movie clips from the last 24 hours.
+    if not retry_samples and topics is None:
+        try:
+            fresh = collect_new_releases(root)
+        except Exception as e:
+            log(f"new-release scan failed: {type(e).__name__}: {e}")
+            fresh = []
+        log(f"new releases in last 24h: {len(fresh)} official clip(s)")
+        checker_nr = checker
+        for cand in fresh:
+            if len(accepted) >= max_accept:
+                break
+            pick, why = pick_clean_official(
+                [cand], check=checker_nr, already=lambda u: already_have_url(root, u),
+            )
+            for row in why:
+                skipped.append({"slug": "new-release", "url": row.get("url"), "channel": row.get("channel"),
+                                "title": row.get("title"), "skip": row.get("skip")})
+                if row.get("skip") == "youtube_bot_check":
+                    needs_box.append({**row, "official": True, "words": row.get("title") or ""})
+            if not pick:
+                continue
+            req = {
+                "slug": submit_link.default_slug(pick["url"], pick.get("title") or "", ""),
+                "words": pick.get("title") or "",
+                "hook": submit_link.default_hook(pick.get("title") or ""),
+                "title": pick.get("title") or "",
+            }
+            accepted.append({
+                "slug": req["slug"], "url": pick["url"], "channel": pick.get("channel"),
+                "title": pick.get("title"), "words": req["words"], "hook": req["hook"],
+                "new_release": True,
+            })
+            if dry_run:
+                log(f"new-release: would queue {pick['url']} ({pick.get('channel')})")
+                continue
+            try:
+                item = queue_accepted(root, pick, req, min_ahead=1.0)
+                item["new_release"] = True
+                queued.append(item["id"])
+            except SystemExit as e:
+                log(f"new-release: could not queue: {e}")
 
     for req in reqs:
         if len(accepted) >= max_accept:

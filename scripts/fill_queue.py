@@ -171,6 +171,7 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
         if perf_data:
             try:
                 base = float(perf.topic_bonus(perf_data, t.get("tags"), t.get("pillar")))
+                base += float(perf.title_bonus(perf_data, t.get("slug")))
             except Exception:
                 base = 0.0
         # Prefer titles with 3+ official scene clips so the render can merge shots.

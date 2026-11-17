@@ -29,11 +29,15 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
         run: python3 scripts/stats.py
+      - name: Weekly hits + series sequels
+        run: |
+          python3 scripts/weekly_hits.py
+          python3 scripts/series.py || true
       - name: Commit stats
         run: |
           git config user.name "skywalker-stats"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/ || true
+          git add stats/ queue/ || true
           git diff --cached --quiet && exit 0
           git commit -m "stats: $(date -u +%F)"
           for i in 1 2 3 4; do git pull --rebase -q && git push && break; sleep 7; done

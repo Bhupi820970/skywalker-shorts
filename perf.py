@@ -29,6 +29,7 @@ def load_perf(repo: Path | None = None) -> dict:
         "pillars": {},     # pillar -> weight
         "tags": {},        # tag -> weight
         "hook_openers": {},  # first 2-3 words -> weight
+        "titles": {},      # topic slug -> weight (weekly hits + all-time)
         "total_views": 0,
         "n": 0,
     }
@@ -81,7 +82,39 @@ def load_perf(repo: Path | None = None) -> dict:
         opener = " ".join((hook or "").split()[:3]).casefold()
         if opener:
             out["hook_openers"][opener] = out["hook_openers"].get(opener, 0.0) + w
+        slug = ""
+        qid = result.get("id") or row.get("queue_id") or ""
+        tags = [str(x).lower() for x in (result.get("tags") or []) if x not in ("edit", "shorts", "trending", "test")]
+        if tags:
+            slug = tags[0]
+        elif qid:
+            parts = str(qid).split("-")
+            if len(parts) >= 3 and parts[0].isdigit():
+                slug = "-".join(parts[2:])
+        if slug:
+            out["titles"][slug] = out["titles"].get(slug, 0.0) + w
+    _merge_weekly_hits(root, out)
     return out
+
+
+def _merge_weekly_hits(root: Path, out: dict) -> None:
+    """Fold stats/weekly_hits.json weights into the live perf table."""
+    try:
+        hits = json.loads((root / "stats" / "weekly_hits.json").read_text())
+    except Exception:
+        return
+    weights = hits.get("weights") or {}
+    for slug, w in (weights.get("titles") or {}).items():
+        if slug:
+            out["titles"][slug] = out["titles"].get(slug, 0.0) + float(w or 0)
+    for hook, w in (weights.get("hooks") or {}).items():
+        opener = " ".join((hook or "").split()[:3]).casefold()
+        if opener:
+            out["hook_openers"][opener] = out["hook_openers"].get(opener, 0.0) + float(w or 0)
+    for song, w in (weights.get("songs") or {}).items():
+        fname = str(song).rstrip("/").split("/")[-1]
+        if fname:
+            out["songs"][fname] = out["songs"].get(fname, 0.0) + float(w or 0)
 
 
 def _norm_bonus(weight: float, ceiling: float = 18.0) -> float:
@@ -115,6 +148,16 @@ def topic_bonus(perf: dict, tags: list[str] | None = None, pillar: str | None = 
         w += pillars.get(pillar.lower(), 0.0)
     for t in tags:
         w += 0.6 * tag_w.get(t, 0.0)
+    return _norm_bonus(w, ceiling=14.0) * (1.0 - exploration) + exploration * 1.5
+
+
+def title_bonus(perf: dict, slug: str | None, exploration: float = 0.30) -> float:
+    """Extra score for a catalog slug that appeared in this week's hit report."""
+    if not slug:
+        return 0.0
+    w = (perf.get("titles") or {}).get(str(slug).lower(), 0.0)
+    if not w:
+        return 0.0
     return _norm_bonus(w, ceiling=14.0) * (1.0 - exploration) + exploration * 1.5
 
 

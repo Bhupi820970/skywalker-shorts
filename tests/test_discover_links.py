@@ -327,3 +327,41 @@ def test_x_720p_does_not_pass_1080_floor_in_filter():
     assert [c["url"] for c in kept] == ["https://x.com/NetflixAnime/status/1080"]
     stats = d.sourcing.x_resolution_stats(entries) if False else __import__("sourcing").x_resolution_stats(entries)
     assert stats["x_below_1080"] == 1 and stats["x_pass_1080"] == 1
+
+
+def test_new_release_clip_rejects_trailers_keeps_episode():
+    assert d.is_new_release_clip("Episode 5 official clip")
+    assert d.is_new_release_clip("The film is out now — official scene")
+    assert not d.is_new_release_clip("Official Trailer")
+    assert not d.is_new_release_clip("Teaser starts now")
+
+
+def test_collect_new_releases_only_last_24h_official(tmp_path, monkeypatch):
+    monkeypatch.setattr(d, "REPO", tmp_path)
+    (tmp_path / "config").mkdir()
+    (tmp_path / "results").mkdir()
+    (tmp_path / "queue").mkdir()
+    now = datetime.now(d.IST)
+    fresh_ts = int((now - timedelta(hours=3)).timestamp())
+    old_ts = int((now - timedelta(hours=48)).timestamp())
+
+    def list_channel(url, n=8):
+        return [
+            {"id": "yt:new", "url": "https://www.youtube.com/watch?v=newscene1",
+             "title": "Suzume Episode 1 official clip", "channel": "Netflix Anime",
+             "handle": "", "duration": 40, "timestamp": fresh_ts, "width": 1920, "height": 1080},
+            {"id": "yt:old", "url": "https://www.youtube.com/watch?v=oldscene1",
+             "title": "Suzume official clip", "channel": "Netflix Anime",
+             "handle": "", "duration": 40, "timestamp": old_ts, "width": 1920, "height": 1080},
+            {"id": "yt:tr", "url": "https://www.youtube.com/watch?v=trailernow",
+             "title": "Official Trailer is out now", "channel": "Netflix Anime",
+             "handle": "", "duration": 120, "timestamp": fresh_ts, "width": 1920, "height": 1080},
+        ]
+
+    kept = d.collect_new_releases(
+        tmp_path, now=now, since_hours=24,
+        list_channel=list_channel, x_profile=lambda h, n=8: [],
+    )
+    urls = [c["url"] for c in kept]
+    assert urls == ["https://www.youtube.com/watch?v=newscene1"]
+    assert kept[0]["new_release"] is True
