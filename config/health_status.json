@@ -1,12 +1,7 @@
 {
-  "at": "2026-11-17 22:02 IST",
+  "at": "2026-11-17 22:30 IST",
   "slots_checked": 11,
   "ready": [
-    {
-      "slot": "2026-11-17T20:30:00+05:30",
-      "id": "stock",
-      "how": "backup_stock"
-    },
     {
       "slot": "2026-11-17T22:30:00+05:30",
       "id": "stock",
@@ -45,6 +40,11 @@
     {
       "slot": "2026-11-18T20:30:00+05:30",
       "id": "20261118-2030-bleachtybw",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-18T22:30:00+05:30",
+      "id": "20261118-2230-firstslamdunk",
       "how": "queued+fallback"
     }
   ],
@@ -121,10 +121,10 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 4,
-  "stock_pending": 26,
+  "stock_pending": 25,
   "stock_used": 21,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": false
 }
