@@ -1,0 +1,44 @@
+{
+  "id": "stock-dbsuperhero-01",
+  "status": "failed",
+  "detail": "no usable official source left; next backup takes the slot: download failed: reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene1_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene2_h264.mp4 | yt-dlp:ERROR: [youtube] fAfLl6_0h7Y: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] HQ0j_Vhsfx0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authenticatio",
+  "at": "2026-11-17 17:12 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44076223529",
+  "slot": null,
+  "title": "Gohan woke up the beast | Dragon Ball Super | #edit",
+  "hook": "Gohan woke up the beast",
+  "description": "Gohan woke up the beast. From official Dragon Ball Super clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dbsuperhero",
+  "tags": [
+    "dbsuperhero",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "gohan"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [],
+  "backup_item": "backup-dbsuperhero",
+  "stock": true,
+  "stock_topic": "backup-dbsuperhero",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene1_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene2_h264.mp4 | yt-dlp:ERROR: [youtube] fAfLl6_0h7Y: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] HQ0j_Vhsfx0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] t5CIs0jDqC8: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] W9JHZwtObqs: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] 5nY9eXbRzlg: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    }
+  ],
+  "last_error": "download failed: reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene1_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene2_h264.mp4 | yt-dlp:ERROR: [youtube] fAfLl6_0h7Y: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] HQ0j_Vhsfx0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] t5CIs0jDqC8: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] W9JHZwtObqs: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] 5nY9eXbRzlg: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A",
+  "source_unrecoverable": true
+}
