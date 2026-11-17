@@ -281,3 +281,24 @@ def test_emotional_action_hook_is_not_treated_as_romance(tmp_path):
     assert nxt is not None
     assert title_swap.title_slug(nxt) == "weatheringwithyou"
     assert title_swap.title_slug(nxt) != "frieren"
+
+
+def test_youtube_watch_alts_do_not_block_romance_title_swap():
+    """demo-v7-romance added Suzume YouTube URLs, which used to inject the
+    slug 'watch' and exclude every other love title that also had a YouTube
+    source (Your Name, Weathering With You)."""
+    rows = json.loads((ROOT / "queue" / "demo.json").read_text())
+    item = dict(next(i for i in rows if i.get("id") == "demo-v7-romance"))
+    item["alt_source_urls"] = [
+        "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
+        "https://www.youtube.com/watch?v=pEwoisyyvl0",
+        "https://www.youtube.com/watch?v=aFNXuHyizz0",
+    ]
+    keys = title_swap.item_keys(item)
+    assert "watch" not in keys
+    nxt = title_swap.next_eligible_title(item, root=ROOT)
+    assert nxt is not None, f"expected a love title, keys={keys}"
+    assert title_swap.title_slug(nxt) in {
+        "weatheringwithyou", "yourname", "apothecarydiaries", "apothecarydiaries2",
+    }
+    assert title_swap.item_format(nxt) == "love"

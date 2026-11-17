@@ -6,8 +6,9 @@ import numpy as np
 from layout import even
 
 # A row is picture if mean luma is above CONTENT. Compressed "black" often
-# sits near 16, so a stripped bar may be up to BAR_MAX_MEAN.
-LB_CONTENT_LUMA = 14
+# sits near 16, so CONTENT must sit above that (and above BAR_MAX_MEAN) or
+# letterbox_content_span will treat the bars as picture and skip the strip.
+LB_CONTENT_LUMA = 24
 LB_BAR_MAX_MEAN = 22
 LB_BAR_P90 = 28
 
@@ -74,3 +75,22 @@ def refine_letterbox_crop(sw: int, sh: int, spans: list[tuple[int, int]],
     if y1 <= 2 and y1 + h >= sh - 2:
         return sw, sh, 0, 0
     return sw, h, 0, y1
+
+def no_crop_alignment_ok(frame_corr, edge_corr, shift_px,
+                         *, corr_min: float = 0.75, edge_min: float = 0.6,
+                         shift_max: float = 3.0, high_corr: float = 0.93,
+                         shift_max_high_corr: float = 6.0) -> bool:
+    """True when the plate matches the source (no zoom/crop of picture).
+
+    A 3-6px phase-correlate shift with very high frame/edge correlation is
+    typical of vidstab / scaling, not of a cropped picture.
+    """
+    try:
+        c = float(frame_corr)
+        e = float(edge_corr)
+        s = float(shift_px)
+    except (TypeError, ValueError):
+        return False
+    if c > high_corr and e > 0.9:
+        return s < shift_max_high_corr
+    return c > corr_min and e > edge_min and s < shift_max

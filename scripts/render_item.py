@@ -8,17 +8,19 @@ Automatic retry ladder (self-heal, no bot required):
      selection + relaxed NON-hard-rule thresholds
      (never relaxes no-crop, layout, or no-logo/title)
 
-If all three attempts for the current title fail (short clean footage, QC
-reject, logo, 404, bot-check, or no official scene clip), the job swaps to
-the next eligible official title of the same format (romance → next romance,
-action → next action) and retries in this same run. Demo and forced-id items
-swap the same way; the original id / no_publish flag is kept. A mid-render
-runner shutdown stays on the same title so the chunked path can retry it.
+Any in-job failure (short clean footage, no_crop/letterbox, logo, sub-1080,
+white-bar/caption, leftover dialogue, download/bot-check/404, music/beat,
+QC, or publish gate) first advances to the next official clip of the same
+title, then to the next same-format official title (romance → romance,
+action → action), then to a backup-pool title. Demo and forced-id items
+follow the same ladder; the original id / no_publish flag is kept. A
+mid-render runner shutdown stays on the same title so the chunked path can
+retry it.
 
-If every same-format title also fails and results/<id>.json has not yet used
-its outer auto-retry, we write status=retry_queued and exit 0. A companion
-workflow re-dispatches the item once more later. Only after that last attempt
-fails do we write status=failed and exit 1 (that is what wakes BIBI).
+If every candidate also fails and results/<id>.json has not yet used its
+outer auto-retry, we write status=retry_queued and exit 0. A companion
+workflow re-dispatches the item once more later. Only after that last
+attempt fails do we write status=failed and exit 1 (that is what wakes BIBI).
 """
 import glob, json, os, subprocess, sys, time
 from datetime import datetime, timedelta, timezone
@@ -819,6 +821,12 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
                     continue
                 print(f"  source too short / under duration gate; no further official clips found; trying next official scene clip", flush=True)
                 continue
+            # Logo, no_crop/letterbox, sub-1080, auto_qc, download, and other
+            # QA failures must try the next official clip of this title — not
+            # abort the attempt on the first bad source.
+            if title_swap.should_try_next_source(reason):
+                print(f"  source failed; trying next official scene clip: {reason[:220]}", flush=True)
+                continue
             return False, last
         hm = work / "hook_meta.json"
         if hm.exists():
@@ -838,9 +846,11 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
         if gem_qc is not None:
             print("gemini QC:", json.dumps(gem_qc, ensure_ascii=False))
         if verdict == "fail":
-            return False, {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
-                           "qc_status": "fail",
-                           "error": "gemini QC reject: " + "; ".join(gem_qc.get("reasons") or gem_qc.get("low") or ["?"])[:600]}
+            last = {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
+                    "qc_status": "fail",
+                    "error": "gemini QC reject: " + "; ".join(gem_qc.get("reasons") or gem_qc.get("low") or ["?"])[:600]}
+            print(f"  gemini QC reject; trying next official scene clip: {last['error'][:220]}", flush=True)
+            continue
         try:
             final = OUT / f"render-{iid}.mp4"
             fw, fh, up = upscale(src, out, final)
@@ -858,9 +868,11 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
             g = gate.run_gate(final, qa_obj=qa, checks=checks, item=item, work=work, gemini_qc=gem_qc, out_res=OUT_RES)
             print("publish gate:", json.dumps(g, ensure_ascii=False, default=str))
             if not g["ok"]:
-                return False, {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
-                               "gate": g, "qc_status": verdict,
-                               "error": "publish gate failed: " + "; ".join(g["failures"])[:600]}
+                last = {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
+                        "gate": g, "qc_status": verdict,
+                        "error": "publish gate failed: " + "; ".join(g["failures"])[:600]}
+                print(f"  publish gate failed; trying next official scene clip: {last['error'][:220]}", flush=True)
+                continue
             extra = publish(final, fw, fh, up, used, checks, credit, qa)
             extra["gate"] = g
             extra["scenes_picked"] = scenes_picked(work)
@@ -950,6 +962,25 @@ def _try_title_swap(reason, tried) -> bool:
     return True
 
 
+def _try_backup(reason, tried) -> bool:
+    """Last rung: any remaining official backup/pool title."""
+    global item
+    nxt = title_swap.next_fallback_item(item, exclude=tried, root=REPO, same_format_only=False)
+    if not nxt:
+        print("  backup fallthrough: no official backup/pool title left", flush=True)
+        return False
+    before = title_swap.title_slug(item)
+    title_swap.apply_title_swap(item, nxt, reason=str(reason or "")[:400])
+    tried |= title_swap.item_keys(item)
+    _refresh_item_context()
+    print(
+        f"  backup fallthrough: {before} -> {title_swap.title_slug(item)} "
+        f"({item.get('words')}) format={title_swap.item_format(item)}",
+        flush=True,
+    )
+    return True
+
+
 def main():
     prev = read_prev()
     auto_retries = int(prev.get("auto_retries") or 0)
@@ -999,6 +1030,7 @@ def main():
     attempts_log = []
     tried = title_swap.item_keys(item)
     swaps = 0
+    backups = 0
     while True:
         # Attempt 1: normal (all official clips of this title)
         t_a = time.monotonic()
@@ -1016,10 +1048,21 @@ def main():
             return 0
 
         def _swap_or_give_up(current):
-            nonlocal swaps
+            nonlocal swaps, backups
             err = (current or {}).get("error") or (attempts_log[-1].get("error") if attempts_log else "")
-            if swaps < title_swap.MAX_SWAPS and _try_title_swap(err, tried):
+            # Do not start another long render if the job budget is already gone.
+            if not _budget_left_for(est):
+                return "give_up"
+            action = title_swap.recovery_action(
+                err, sources_left=False,
+                titles_left=swaps < title_swap.MAX_SWAPS,
+                backups_left=backups < title_swap.MAX_SWAPS,
+            )
+            if action == title_swap.NEXT_TITLE and _try_title_swap(err, tried):
                 swaps += 1
+                return "swap"
+            if action in (title_swap.NEXT_TITLE, title_swap.BACKUP) and _try_backup(err, tried):
+                backups += 1
                 return "swap"
             return "give_up"
 

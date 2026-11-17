@@ -35,16 +35,31 @@ _COPY = (
 
 _SWAP_MARKERS = (
     "unique clean shots", "need ≥18", "need >=18", "need ≥20", "need >=20",
-    "hard minimum", "only short unique", "under duration",
-    "gemini qc reject", "qc reject",
+    "hard minimum", "only short unique", "under duration", "not publishing a short cut",
+    "gemini qc reject", "qc reject", "leftover dialogue", "dialogue leftover",
     "reject logo", "reject burned-in", "logo/watermark", "logo flash",
-    "third-party logo", "burned-in subtitle",
+    "third-party logo", "burned-in subtitle", "logo/text", "empty-dark/logo",
+    "auto_qc", "failed empty-dark",
+    "qa no_crop", "no_crop failed", "letterbox",
+    "hook banner not visible", "white bar", "caption",
     "http error 404", "404: not found", "error 404",
     "sign in to confirm", "bot check", "not a bot", "confirm you’re not a bot",
-    "confirm you're not a bot",
+    "confirm you're not a bot", "yt-dlp", "download failed",
     "no unused official source", "no official scene clips", "no usable official source",
-    "under 1080", "below 1080", "resolution too low",
+    "no usable scenes",
+    "under 1080", "below 1080", "resolution too low", "short side",
     "skip trailer",
+    "no credited music", "music tracks found", "beat_sync", "publish gate failed",
+    "pipeline/qa failed",
+)
+
+_TRANSIENT_JOB_DEATH = (
+    "shutdown signal", "operation was canceled", "operation was cancelled",
+    "timed out or cancelled", "no result json", "runner has received a shutdown",
+)
+
+_NO_SWAP = _TRANSIENT_JOB_DEATH + (
+    "gemini qc skipped", "qc skipped", "qc still skipped",
 )
 
 
@@ -127,36 +142,99 @@ def asset_url(name: str) -> str:
     return f"{SOURCES_RELEASE}/{n.lstrip('/')}"
 
 
+def failure_blob(reason) -> str:
+    """Normalize an error string or result dict to a comparable lowercase blob."""
+    if reason is None:
+        return ""
+    if isinstance(reason, dict):
+        blob = " ".join(str(reason.get(k) or "") for k in ("error", "detail", "last_error"))
+        qa = reason.get("qa")
+        issues = reason.get("issues")
+        if issues is None and isinstance(qa, dict):
+            issues = qa.get("issues")
+        if issues:
+            blob += " " + " ".join(str(x) for x in (issues if isinstance(issues, list) else [issues]))
+    else:
+        blob = str(reason)
+    return blob.lower().replace("≥", ">=").replace("≤", "<=")
+
+
+def is_transient_job_death(reason) -> bool:
+    """Runner shutdown / mid-encode cancel: retry the same title, do not swap."""
+    e = failure_blob(reason)
+    if not e.strip():
+        return False
+    if any(m in e for m in _SWAP_MARKERS):
+        # A 404/bot-check in the same blob still counts as a source failure.
+        return False
+    return any(w in e for w in _TRANSIENT_JOB_DEATH)
+
+
+def should_try_next_source(reason) -> bool:
+    """True when this failure should advance to the next official clip of the same title.
+
+    Job-death / QC-skipped cases stay on the current source so an outer retry
+    or QC-only retry can finish it.
+    """
+    e = failure_blob(reason)
+    if not e.strip():
+        return False
+    if any(w in e for w in _NO_SWAP) and not any(m in e for m in _SWAP_MARKERS):
+        return False
+    return True
+
+
 def should_swap(reason) -> bool:
     """True for a title/clip failure that another same-format title can replace.
 
     Transient timeouts, runner shutdowns, and mid-encode cancels stay on the
     same title so the chunked path can retry it.
     """
-    if reason is None:
-        return False
-    if isinstance(reason, dict):
-        blob = " ".join(str(reason.get(k) or "") for k in ("error", "detail", "last_error"))
-        issues = reason.get("issues") or reason.get("qa", {}).get("issues") if isinstance(reason.get("qa"), dict) else reason.get("issues")
-        if issues:
-            blob += " " + " ".join(str(x) for x in (issues if isinstance(issues, list) else [issues]))
-    else:
-        blob = str(reason)
-    e = blob.lower().replace("≥", ">=").replace("≤", "<=")
+    e = failure_blob(reason)
     if not e.strip():
         return False
-    transient = (
-        "shutdown signal", "operation was canceled", "operation was cancelled",
-        "timed out or cancelled", "no result json", "runner has received a shutdown",
-        "temporarily", "connection reset", "connection aborted",
-        "network is unreachable",
-    )
-    # A 404/bot-check beats a generic "timeout" word in the same blob.
-    if any(w in e for w in transient) and not any(m in e for m in _SWAP_MARKERS):
+    if is_transient_job_death(reason):
+        return False
+    if any(w in e for w in _NO_SWAP) and not any(m in e for m in _SWAP_MARKERS):
         return False
     if sourcing.is_unrecoverable_source_error(e):
         return True
-    return any(m in e for m in _SWAP_MARKERS)
+    if any(m in e for m in _SWAP_MARKERS):
+        return True
+    # Any other real pipeline/QA/download failure also swaps once this title
+    # is out of official clips — do not hard-fail while candidates remain.
+    return should_try_next_source(reason)
+
+
+# recovery_action() return values
+NEXT_SOURCE = "next_source"
+NEXT_TITLE = "next_title"
+BACKUP = "backup"
+RETRY_SAME = "retry_same"
+GIVE_UP = "give_up"
+
+
+def recovery_action(reason, *, sources_left: bool, titles_left: bool,
+                    backups_left: bool) -> str:
+    """Fall-through policy: next clip → next same-format title → backup → stop.
+
+    Never returns give_up while a candidate remains, except for mid-job
+    runner death (retry_same) which must not start a different title.
+    """
+    if is_transient_job_death(reason):
+        return RETRY_SAME
+    e = failure_blob(reason)
+    if not e.strip():
+        return GIVE_UP
+    if any(w in e for w in _NO_SWAP) and not any(m in e for m in _SWAP_MARKERS):
+        return RETRY_SAME
+    if sources_left and should_try_next_source(reason):
+        return NEXT_SOURCE
+    if titles_left and should_swap(reason):
+        return NEXT_TITLE
+    if backups_left:
+        return BACKUP
+    return GIVE_UP
 
 
 def _collect_urls(raw: dict) -> list[str]:
@@ -211,7 +289,12 @@ def _normalize(raw: dict, slug: str = "", root: Path | None = None) -> dict | No
     it["sources"] = urls
     it["fallback_mp4"] = list(urls)
     if not it.get("fallback_asset"):
-        name = sourcing.source_filename(urls[0])
+        name = ""
+        for u in urls:
+            cand = sourcing.source_filename(u)
+            if cand and sourcing.source_topic_slug(cand or u):
+                name = cand
+                break
         if name:
             it["fallback_asset"] = name
             it.setdefault("fallback_release", "sources")
@@ -271,6 +354,12 @@ def _load_pool(root: Path | None = None) -> list[dict]:
     except Exception:
         pass
     try:
+        for raw in (edit_format.love_cfg(root).get("titles") or []):
+            if isinstance(raw, dict):
+                consider(dict(raw), slug=str(raw.get("slug") or ""))
+    except Exception:
+        pass
+    try:
         for raw in json.loads((root / "config" / "backup_pool.json").read_text()).get("items") or []:
             bid = str(raw.get("id") or "")
             slug = bid[len("backup-"):] if bid.startswith("backup-") else bid
@@ -322,6 +411,21 @@ def next_eligible_title(item: dict, *, exclude: set[str] | None = None,
                         root: Path | None = None) -> dict | None:
     cands = same_format_candidates(item, exclude=exclude, root=root)
     return cands[0] if cands else None
+
+
+def next_fallback_item(item: dict, *, exclude: set[str] | None = None,
+                       root: Path | None = None, same_format_only: bool = False) -> dict | None:
+    """Same-format title first, then any other official pool/backup title."""
+    nxt = next_eligible_title(item, exclude=exclude, root=root)
+    if nxt or same_format_only:
+        return nxt
+    blocked = set(exclude or []) | item_keys(item)
+    blocked |= {re.sub(r"[^a-z0-9]+", "", x) for x in blocked}
+    for cand in _load_pool(root):
+        if item_keys(cand) & blocked:
+            continue
+        return cand
+    return None
 
 
 def apply_title_swap(item: dict, candidate: dict, *, reason: str = "") -> dict:

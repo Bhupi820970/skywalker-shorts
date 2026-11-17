@@ -220,6 +220,11 @@ _GENERIC_SOURCE_TOKENS = {
     "scene", "scene1", "scene2", "scene3", "scene4", "scene5", "trailer", "teaser",
     "official", "clip", "clips", "src", "video", "h264", "demo", "stock", "backup",
     "test", "edit", "anime", "movie",
+    # URL path tails (youtube.com/watch?v=…, x.com/i/status/…) are not topic slugs.
+    # Treating "watch" as a slug blocked every other title that also had a YouTube source.
+    "watch", "youtu", "youtube", "youtubebe", "status", "share", "shorts", "playlist",
+    "channel", "embed", "http", "https", "www", "html", "php", "index", "intent",
+    "redirect", "url", "videoid", "clipid",
 }
 _ASSET_TOPIC_RE = re.compile(
     r"^(?P<slug>.+?)(?:_(?:scene\d*|trailer|teaser|official|clip\d*|src))?(?:_h264)?(?:\.[a-z0-9]+)?$",
@@ -270,13 +275,19 @@ def item_has_scene_source(item: dict) -> bool:
 
 def source_topic_slug(url_or_name: str) -> str:
     """Topic prefix of a sources-release asset, e.g. vinlandsagathorfinn_scene1_h264.mp4."""
-    name = source_filename(url_or_name).lower()
+    raw = (url_or_name or "").strip()
+    low = raw.lower()
+    # YouTube / X page URLs are not GitHub scene-asset names. Their path
+    # tails ("watch", tweet ids) must never become a topic key.
+    if any(h in low for h in ("youtube.com/", "youtu.be/", "x.com/", "twitter.com/")):
+        return ""
+    name = source_filename(raw).lower()
     if not name:
         return ""
     m = _ASSET_TOPIC_RE.match(name)
     slug = (m.group("slug") if m else name.rsplit(".", 1)[0]).lower()
     slug = re.sub(r"[^a-z0-9]+", "", slug)
-    if slug in _GENERIC_SOURCE_TOKENS or len(slug) < 4:
+    if slug in _GENERIC_SOURCE_TOKENS or len(slug) < 4 or slug.isdigit():
         return ""
     return slug
 

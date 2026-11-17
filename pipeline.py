@@ -49,7 +49,8 @@ import overlay_guard
 from layout import whitebar_layout
 from letterbox import (
     LB_BAR_MAX_MEAN, LB_BAR_P90, LB_CONTENT_LUMA,
-    letterbox_bars_are_black, letterbox_content_span, refine_letterbox_crop,
+    letterbox_bars_are_black, letterbox_content_span, no_crop_alignment_ok,
+    refine_letterbox_crop,
 )
 from edit_pace import (
     FLASH_SHOT_MAX, FLASH_SHOT_MIN, HERO_SHOT_MAX, HERO_SHOT_MIN,
@@ -3949,8 +3950,9 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
         shifts.append(float(np.hypot(sx, sy)))
         if len(corrs) >= 6:
             break
-    edge_ok = (bool(corrs) and float(np.median(corrs)) > 0.75 and float(np.median(edges)) > 0.6
-               and float(np.median(shifts)) < 3.0)
+    edge_ok = bool(corrs) and no_crop_alignment_ok(
+        float(np.median(corrs)), float(np.median(edges)), float(np.median(shifts)),
+    )
     checks["no_crop"] = {"ok": bool(geo_ok and lb_ok and edge_ok), "source": [sw, sh], "letterbox_free": [mw, mh],
                          "plate": [lay["plate_w"], lay["plate_h"]], "letterbox_rows_black": lb_ok,
                          "frame_corr_median": round(float(np.median(corrs)), 3) if corrs else None,
