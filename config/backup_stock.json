@@ -768,8 +768,9 @@
       "id": "stock-drstone-03",
       "topic_id": "backup-drstone",
       "slug": "drstone",
-      "status": "pending",
-      "queued_at": "2026-11-17 20:30 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 20:30 IST",
+      "result_id": "stock-drstone-03"
     },
     {
       "id": "stock-dune2-01",
@@ -797,7 +798,8 @@
       "topic_id": "backup-firforce3",
       "slug": "firforce3",
       "status": "pending",
-      "queued_at": "2026-11-17 20:30 IST"
+      "queued_at": "2026-11-17 20:30 IST",
+      "result_id": "stock-firforce3-01"
     },
     {
       "id": "stock-firstslamdunk-01",
@@ -876,7 +878,8 @@
       "topic_id": "backup-frieren2",
       "slug": "frieren2",
       "status": "pending",
-      "queued_at": "2026-11-17 21:43 IST"
+      "queued_at": "2026-11-17 21:43 IST",
+      "result_id": "stock-frieren2-01"
     },
     {
       "id": "stock-furiosa-01",
@@ -903,8 +906,9 @@
       "id": "stock-gachiakuta-01",
       "topic_id": "backup-gachiakuta",
       "slug": "gachiakuta",
-      "status": "pending",
-      "queued_at": "2026-11-17 21:43 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 21:43 IST",
+      "result_id": "stock-gachiakuta-01"
     },
     {
       "id": "stock-gladiator2-01",
