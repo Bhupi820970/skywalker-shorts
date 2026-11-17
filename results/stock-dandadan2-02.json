@@ -1,0 +1,250 @@
+{
+  "id": "stock-dandadan2-02",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-17 20:33 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44102345933",
+  "slot": null,
+  "title": "Okarun finally snapped at the worst time #dandadan #okarun #animeedit",
+  "hook": "He reached his limit to win",
+  "description": "He reached his limit to win. Okarun reaches his breaking point and taps into a terrifying hidden power to protect Momo. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #okarun #animeedit #shorts #edit",
+  "tags": [
+    "dandadan",
+    "okarun",
+    "animeedit",
+    "dandadan2",
+    "anime",
+    "edit",
+    "shorts",
+    "trending",
+    "momo"
+  ],
+  "queue_meta": {
+    "hook": "Momo never lets him go",
+    "title": "Momo never lets him go | Dandadan | #edit",
+    "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+    "tags": [
+      "dandadan2",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "momo"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Okarun finally snapped at the worst time",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody expected Okarun to get this dangerous",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch the last two seconds of this transformation",
+      "click_score": 85.0
+    },
+    {
+      "title": "Okarun revealing his true power to save them",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment Okarun decided to go all out",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 12.0,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 31.4,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 27.2,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-dandadan2",
+  "stock": true,
+  "stock_topic": "backup-dandadan2",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "music": "sw_funkcriminalslowed.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-dandadan2-02.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+  "music": "sw_funkcriminalslowed.mp3",
+  "music_credit": "Song: ICEDMANE, DYSMAN - FUNK CRIMINAL SLOWED (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "He reached his limit to win. Okarun reaches his breaking point and taps into a terrifying hidden power to protect Momo. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #okarun #animeedit #shorts #edit\n\nMusic:\nSong: ICEDMANE, DYSMAN - FUNK CRIMINAL SLOWED (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-dandadan2-02-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.466667,
+      "audio": true
+    },
+    "lufs": -16.5,
+    "audio_check": {
+      "mode": "two_act",
+      "isolated": true,
+      "act1_end": 8.67,
+      "act1_frac": 0.355,
+      "song_in_act1_dbfs": -180.0,
+      "voice_in_act2_dbfs": -180.0,
+      "act1_voice_dbfs": -16.3,
+      "act2_song_dbfs": -19.1,
+      "song_switches": 1,
+      "speech_segments": 4
+    },
+    "subtitle_cues": 9,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 9.0,
+        "title": 8.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 9.0,
+        "captions": 8.0,
+        "post_worthy": 9.0
+      },
+      "reasons": [
+        "The video adheres to all layout and audio requirements.",
+        "The hook is clear and effective.",
+        "The captions are accurate, though the formatting is slightly repetitive in the first act.",
+        "The footage is clean and well-framed."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 46,
+      "src_start": 124.65,
+      "dur": 2.56
+    },
+    {
+      "id": 118,
+      "src_start": 316.97,
+      "dur": 2.54
+    },
+    {
+      "id": 149,
+      "src_start": 416.28,
+      "dur": 2.52,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 159001,
+      "src_start": 432.99,
+      "dur": 1.1,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 27,
+      "src_start": 56.221,
+      "dur": 1.672,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 127,
+      "src_start": 356.644,
+      "dur": 3.344,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 36,
+      "src_start": 92.538,
+      "dur": 3.32
+    },
+    {
+      "id": 56,
+      "src_start": 169.775,
+      "dur": 1.672,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 70,
+      "src_start": 202.764,
+      "dur": 1.672,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 112,
+      "src_start": 299.513,
+      "dur": 1.7,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    }
+  ],
+  "qc_status": "pass"
+}
