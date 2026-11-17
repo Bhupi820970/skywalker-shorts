@@ -129,3 +129,40 @@ def test_trailer_result():
     assert not sourcing.is_trailer_result({
         "source": "gh:https://github.com/x/releases/download/sources/dandadan_scene1_h264.mp4"
     })
+
+
+def test_more_official_keeps_studio_skips_unofficial_and_trailers():
+    item = {"words": "FRIEREN", "pillar": "anime", "official_channels": ["TOHO animation"]}
+    entries = [
+        {"url": "https://www.youtube.com/watch?v=officialok1", "title": "Frieren official scene",
+         "channel": "TOHO animation", "handle": "", "duration": 40},
+        {"url": "https://www.youtube.com/watch?v=fanclip99", "title": "Frieren fight no logo",
+         "channel": "Anime Recaps", "handle": "", "duration": 45},
+        {"url": "https://www.youtube.com/watch?v=trailer12", "title": "Frieren Official Trailer",
+         "channel": "TOHO animation", "handle": "", "duration": 90},
+        {"url": "https://www.youtube.com/watch?v=shortclip", "title": "Frieren official scene",
+         "channel": "TOHO animation", "handle": "", "duration": 8},
+    ]
+    urls = sourcing.more_official_scene_urls(item, already=[], entries=entries)
+    assert urls == ["https://www.youtube.com/watch?v=officialok1"]
+
+
+def test_more_official_skips_already_used_and_needs_more_when_short():
+    item = {"words": "KAIJU NO. 8", "pillar": "anime"}
+    entries = [
+        {"url": "https://www.youtube.com/watch?v=usedclip1", "title": "Official scene 1",
+         "channel": "Netflix Anime", "duration": 50},
+        {"url": "https://www.youtube.com/watch?v=newclip2", "title": "Official scene 2",
+         "channel": "Netflix", "duration": 42},
+    ]
+    urls = sourcing.more_official_scene_urls(
+        item, already=["https://www.youtube.com/watch?v=usedclip1"], entries=entries,
+    )
+    assert urls == ["https://www.youtube.com/watch?v=newclip2"]
+
+
+def test_max_source_seconds_default_and_env(monkeypatch):
+    monkeypatch.delenv("SKY_MAX_SOURCE_S", raising=False)
+    assert sourcing.max_source_seconds() == 360.0
+    monkeypatch.setenv("SKY_MAX_SOURCE_S", "180")
+    assert sourcing.max_source_seconds() == 180.0

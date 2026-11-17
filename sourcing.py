@@ -551,24 +551,217 @@ def _cookies_args() -> list[str]:
     return []
 
 
+
+# Cap each official source so long Arcane-style clips cannot blow the job timeout.
+# A 20-32s Short only needs a few minutes of clean scenes, not a full episode.
+DEFAULT_MAX_SOURCE_S = 360.0
+
+
+def max_source_seconds() -> float:
+    try:
+        return max(90.0, float(os.environ.get("SKY_MAX_SOURCE_S") or DEFAULT_MAX_SOURCE_S))
+    except Exception:
+        return DEFAULT_MAX_SOURCE_S
+
+
+def _probe_duration(path: Path) -> float:
+    try:
+        o = subprocess.check_output(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "csv=p=0", str(path)],
+            text=True, timeout=30,
+        ).strip()
+        return float(o or 0)
+    except Exception:
+        return 0.0
+
+
+def trim_source_length(path: Path, max_s: float | None = None) -> bool:
+    """If a downloaded official clip is longer than max_s, keep the first window. Never crop the frame."""
+    max_s = float(max_s if max_s is not None else max_source_seconds())
+    dur = _probe_duration(path)
+    if dur <= max_s + 2:
+        return False
+    tmp = path.with_suffix(path.suffix + ".trim.mp4")
+    tmp.unlink(missing_ok=True)
+    r = subprocess.run(
+        ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
+         "-ss", "0", "-t", f"{max_s:.3f}", "-i", str(path),
+         "-c", "copy", "-movflags", "+faststart", str(tmp)],
+        capture_output=True, text=True,
+    )
+    if r.returncode != 0 or not _ok_src(tmp):
+        tmp.unlink(missing_ok=True)
+        r = subprocess.run(
+            ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
+             "-ss", "0", "-t", f"{max_s:.3f}", "-i", str(path),
+             "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+             "-c:a", "aac", "-movflags", "+faststart", str(tmp)],
+            capture_output=True, text=True,
+        )
+    if r.returncode == 0 and _ok_src(tmp):
+        tmp.replace(path)
+        return True
+    tmp.unlink(missing_ok=True)
+    return False
+
+
+def official_name_set() -> set[str]:
+    names = set()
+    try:
+        cat = load_catalog()
+        for lst in (cat.get("official_channels") or {}).values():
+            for c in lst or []:
+                n = re.sub(r"[^a-z0-9]", "", str(c).lower())
+                if n:
+                    names.add(n)
+    except Exception:
+        pass
+    for extra in (
+        "rockstargames", "netflix", "netflixanime", "netflixindia", "toho",
+        "tohoanimation", "aniplex", "aniplexusa", "warnerbrospictures",
+        "marvelentertainment", "sonypicturesentertainment", "primevideo",
+        "waltdisneystudios", "universalpictures", "paramountpictures",
+        "lionsgatemovies", "a24", "appletv",
+    ):
+        names.add(extra)
+    return names
+
+
+def is_official_channel_name(channel: str, handle: str = "", official: set[str] | None = None) -> bool:
+    official = official or official_name_set()
+    suffixes = (
+        "official", "animation", "pictures", "entertainment", "india", "anime",
+        "uk", "plus", "studios", "films", "movies", "tv", "usa", "channel", "games",
+    )
+    for raw in (channel, handle):
+        n = re.sub(r"[^a-z0-9]", "", (raw or "").lower())
+        if not n:
+            continue
+        if n in official:
+            return True
+        for c in official:
+            if len(c) < 4:
+                continue
+            if n.startswith(c):
+                rest = n[len(c):]
+                if not rest or any(rest == s or rest.startswith(s) for s in suffixes):
+                    return True
+    return False
+
+
+def more_official_scene_urls(
+    item: dict,
+    already: list[str] | None = None,
+    limit: int = 6,
+    *,
+    entries: list[dict] | None = None,
+) -> list[str]:
+    """Filter/search additional official same-title scene clips.
+
+    Unofficial re-uploads and trailers never pass. If `entries` is given
+    (unit tests or a pre-run search), no network is used.
+    """
+    already_l = {str(u).rstrip("/").lower() for u in (already or []) if u}
+    official = official_name_set()
+    # Include any official_channels named on the item if they match known studios.
+    for c in item.get("official_channels") or []:
+        if is_official_channel_name(c, official=official):
+            official.add(re.sub(r"[^a-z0-9]", "", str(c).lower()))
+    rows = list(entries or [])
+    out: list[str] = []
+
+    def keep(url: str, title: str, channel: str, handle: str, dur) -> bool:
+        if not url or is_trailer_source(url) or is_trailer_source(title):
+            return False
+        if re.search(r"\b(trailer|teaser|promo|tv\s*spot)\b", title or "", re.I):
+            return False
+        key = url.rstrip("/").lower()
+        if key in already_l or url in out:
+            return False
+        if not is_official_channel_name(channel, handle, official):
+            return False
+        try:
+            d = float(dur or 0)
+        except Exception:
+            d = 0
+        if d and d < 18:
+            return False
+        return True
+
+    for e in rows:
+        if not isinstance(e, dict):
+            continue
+        url = e.get("url") or e.get("webpage_url") or ""
+        if keep(url, e.get("title") or "", e.get("channel") or e.get("uploader") or "",
+                e.get("handle") or "", e.get("duration")):
+            out.append(url)
+            already_l.add(url.rstrip("/").lower())
+        if len(out) >= limit:
+            return out
+
+    if entries is not None:
+        return out
+
+    # Live search: flat yt-dlp metadata only (no media download).
+    for q in search_queries(item):
+        if not q.startswith(("ytsearch", "dmsearch", "bilibilisearch")):
+            q = f"ytsearch6:{q}"
+        try:
+            r = subprocess.run(
+                ["yt-dlp", "--flat-playlist", "-J", "--no-warnings", q],
+                capture_output=True, text=True, timeout=45,
+            )
+            if r.returncode != 0:
+                continue
+            for e in (json.loads(r.stdout or "{}").get("entries") or []):
+                vid = e.get("id") or ""
+                url = e.get("webpage_url") or e.get("url") or ""
+                if not str(url).startswith("http") and vid:
+                    url = f"https://www.youtube.com/watch?v={vid}"
+                title = e.get("title") or ""
+                if _BAD_TITLE.search(title) if "_BAD_TITLE" in globals() else False:
+                    continue
+                if keep(url, title, e.get("channel") or e.get("uploader") or "",
+                        e.get("channel_id") or e.get("uploader_id") or "", e.get("duration")):
+                    out.append(url)
+                    already_l.add(url.rstrip("/").lower())
+                if len(out) >= limit:
+                    return out
+        except Exception:
+            continue
+    return out
+
+
 def download_ytdlp(url: str, dest: Path, *, allow_youtube: bool = True) -> tuple[bool, str]:
     if not allow_youtube and any(h in _host(url) for h in ("youtube.com", "youtu.be")):
         return False, "youtube skipped (blocked / no cookies)"
     dest.unlink(missing_ok=True)
+    max_s = max_source_seconds()
     cmd = [
         "yt-dlp", "--no-playlist", "--remote-components", "ejs:github",
         "-4", "--user-agent", UA,
         "-f", YTDLP_FORMAT,
+        "--download-sections", f"*0-{int(max_s)}",
+        "--force-keyframes-at-cuts",
         "--merge-output-format", "mp4",
         "-o", str(dest), "--force-overwrites",
         "--no-warnings",
     ] + _cookies_args() + [url]
-    r = subprocess.run(cmd, capture_output=True, text=True, timeout=240)
+    r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+    if r.returncode != 0 or not _ok_src(dest):
+        # Some extractors reject --download-sections; retry once without it, then trim.
+        cmd = [c for c in cmd if c != "--force-keyframes-at-cuts" and not str(c).startswith("*0-")]
+        if "--download-sections" in cmd:
+            i = cmd.index("--download-sections")
+            cmd.pop(i); cmd.pop(i)
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
     if r.returncode == 0 and _ok_src(dest):
         h = _probe_height(dest)
         if h and h < 720:
             dest.unlink(missing_ok=True)
             return False, f"yt-dlp:{url}: height {h}<720"
+        trim_source_length(dest, max_s)
         return True, url
     err = (r.stderr.strip().splitlines() or r.stdout.strip().splitlines() or ["?"])[-1][:280]
     return False, f"yt-dlp:{err}"

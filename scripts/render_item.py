@@ -348,6 +348,13 @@ def download_scene_bundle(src, skip=None):
     for u in sourcing.build_candidate_urls(item, include_youtube=allow_yt):
         if u and not sourcing.is_trailer_source(u) and u not in urls:
             urls.append(u)
+    # When the known set is thin, search more official same-title clips
+    # (studio/distributor channels only; unofficial re-uploads never pass).
+    if len(urls) < MAX_SCENE_CLIPS:
+        extra = sourcing.more_official_scene_urls(item, already=urls, limit=MAX_SCENE_CLIPS)
+        for u in extra:
+            if u and u not in urls and not sourcing.is_trailer_source(u):
+                urls.append(u)
     urls = [u for u in urls if not _is_skipped(u, skip) and not _is_skipped(f"gh:{u}", skip)]
     paths, useds = [], []
     for u in urls:
@@ -384,6 +391,7 @@ def download_scene_bundle(src, skip=None):
             errors.append(f"reject {why}: {info or u}")
             part.unlink(missing_ok=True)
             continue
+        sourcing.trim_source_length(part)
         print(f"  scene clip {len(paths)+1}: {info}", flush=True)
         paths.append(part)
         useds.append(info)
@@ -686,6 +694,7 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
     tried = []
     last = None
     src_i = 0
+    expand_rounds = 0
     while True:
         used, errors = download_source(src, force_fallback=force_fallback, skip=tried)
         if not used:
@@ -728,7 +737,21 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
             last = {"attempt": n, "ok": False, "error": reason, "source": used,
                     "music": credit.get("file"), "qa": checks}
             if _is_short_failure(reason, qa):
-                print(f"  source too short / under duration gate; trying next official scene clip", flush=True)
+                already = list(tried) + list(item.get("alt_source_urls") or []) + list(item.get("fallback_mp4") or [])
+                extra = sourcing.more_official_scene_urls(item, already=already, limit=MAX_SCENE_CLIPS)
+                if extra and expand_rounds < 2:
+                    alts = list(item.get("alt_source_urls") or [])
+                    for u in extra:
+                        if u not in alts:
+                            alts.append(u)
+                    item["alt_source_urls"] = alts
+                    # Remake the merge with the new official clips; do not drop the footage we already have.
+                    if used in tried:
+                        tried.remove(used)
+                    expand_rounds += 1
+                    print(f"  only short unique clean shots; fetching {len(extra)} more official clip(s) of this title (round {expand_rounds})", flush=True)
+                    continue
+                print(f"  source too short / under duration gate; no further official clips found; trying next official scene clip", flush=True)
                 continue
             return False, last
         hm = work / "hook_meta.json"
@@ -786,7 +809,7 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
 RECENT_MUSIC = []
 AVOID_OPENERS = []
 JOB_T0 = time.monotonic()
-# render.yml job cap is 120 min; stop starting new attempts well before it so the
+# render.yml job cap is 180 min; stop starting new attempts well before it so the
 # result json is always written (no more silent cancel at the job timeout).
 JOB_BUDGET_S = float(os.environ.get("SKY_JOB_BUDGET_MIN", "140")) * 60.0
 
