@@ -144,7 +144,7 @@ def test_audit_marks_mismatch_and_qc_skipped_not_ready(tmp_path, monkeypatch):
         "id": "stock-dune2-02", "status": "done",
         "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-dune2-02.mp4",
         "title": "Paul Atreides enters the battlefield #dune",
-        "source": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4",
+        "source": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dune2_scene1_h264.mp4",
         "gate": {"ok": True, "gemini_qc": {"pass": True, "scores": {"hook": 8}}},
         "qc_status": "pass",
     }

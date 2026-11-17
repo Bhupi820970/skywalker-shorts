@@ -111,22 +111,16 @@ def fetch_music_library():
 
 
 def recent_music(window=None):
-    """Songs used by the last N renders (by slot), so a song never repeats within N videos."""
-    try:
-        window = window or int(json.loads((REPO / "music" / "library.json").read_text()).get("no_repeat_window") or 8)
-    except Exception:
-        window = window or 8
-    rows = []
-    for p in glob.glob(str(RES / "*.json")):
+    """Songs used in the last 3 days (plus same-title copies) so a track is not repeated."""
+    import music_lib
+    days = 3
+    if window:
+        # legacy arg: treat a small window as days if it looks like a day count
         try:
-            r = json.loads(Path(p).read_text())
+            days = int(window) if int(window) <= 14 else 3
         except Exception:
-            continue
-        if r.get("id") == iid or r.get("status") != "done" or not r.get("music"):
-            continue
-        rows.append((r.get("slot") or r.get("at") or "", r["music"]))
-    rows.sort()
-    return [m for _, m in rows[-window:]]
+            days = 3
+    return music_lib.recent_excludes(RES, REPO, days=days, exclude_id=iid)
 
 
 def now():
@@ -332,10 +326,14 @@ def _concat_scene_files(paths, dest):
     return r.returncode == 0 and _ok_src(dest)
 
 
+MAX_SCENE_CLIPS = 5
+
+
 def download_scene_bundle(src, skip=None):
-    """Download up to 3 official scene clips of this topic and merge them.
+    """Download up to 5 official scene clips of this topic and merge them.
 
     Trailers are never downloaded. Topics with no scene clips fail.
+    All same-title official scene clips are merged before giving up.
     """
     errors = []
     skip = set(skip or [])
@@ -353,7 +351,7 @@ def download_scene_bundle(src, skip=None):
     urls = [u for u in urls if not _is_skipped(u, skip) and not _is_skipped(f"gh:{u}", skip)]
     paths, useds = [], []
     for u in urls:
-        if len(paths) >= 3:
+        if len(paths) >= MAX_SCENE_CLIPS:
             break
         if not sourcing.source_matches_topic(item, u) and "youtube.com" not in u and "youtu.be" not in u:
             # github/release assets must match this title; search URLs are checked after download
@@ -398,7 +396,7 @@ def download_scene_bundle(src, skip=None):
 
 def download_source(src, force_fallback=False, skip=None):
     """Official scene clips only: GitHub sources release + catalog studio/clip
-    sites + DM/Vimeo/Archive/Bilibili. Merges up to 3 same-title scene clips.
+    sites + DM/Vimeo/Archive/Bilibili. Merges up to 5 same-title scene clips.
     Trailers/teasers are never used, even as a last fallback.
     """
     errors = []
@@ -790,7 +788,7 @@ AVOID_OPENERS = []
 JOB_T0 = time.monotonic()
 # render.yml job cap is 120 min; stop starting new attempts well before it so the
 # result json is always written (no more silent cancel at the job timeout).
-JOB_BUDGET_S = float(os.environ.get("SKY_JOB_BUDGET_MIN", "95")) * 60.0
+JOB_BUDGET_S = float(os.environ.get("SKY_JOB_BUDGET_MIN", "140")) * 60.0
 
 
 def _budget_left_for(next_est_s: float) -> bool:
@@ -844,7 +842,7 @@ def main():
     fetch_music_library()
     recent = recent_music()
     if recent:
-        print("music: skipping songs used in the last renders:", recent)
+        print("music: skipping songs used in the last 3 days:", recent)
     # Hook bar/title are written inside the pipeline from the chosen clip (sky_ai.clip_hook_meta).
     global AVOID_OPENERS
     AVOID_OPENERS = sky_ai.recent_openers(REPO, iid)
@@ -888,7 +886,8 @@ def main():
         return 0
 
     # Attempt 2: sources-release fallback mp4
-    if _qc_rejects(attempts_log) >= 2 or not _budget_left_for(est):
+    if (_qc_rejects(attempts_log) >= 2 or not _budget_left_for(est)
+            or sourcing.is_unrecoverable_source_error(info.get("error"))):
         return _give_up(attempts_log, auto_retries, last_info=info)
     t_a = time.monotonic()
     ok, info = attempt(2, force_fallback=True)
@@ -936,6 +935,14 @@ def _give_up(attempts_log, auto_retries, last_info=None):
               auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES, attempts=attempts_log, last_error=last,
               qc_rejected=True)
         print(f"::error::{iid}: Gemini QC rejected 2 renders; backup takes the slot")
+        return 1
+    # Missing/rejected sources will not appear on a retry of the same topic.
+    # Mark failed now so plan.py can assign the next backup instead of leaving the slot empty.
+    if sourcing.is_unrecoverable_source_error(last):
+        write("failed", ("no usable official source left; next backup takes the slot: " + last)[:800],
+              auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
+              attempts=attempts_log, last_error=last, source_unrecoverable=True)
+        print(f"::error::{iid}: unrecoverable source; backup takes the slot")
         return 1
     # All 3 in-job attempts failed. If we still have an outer auto-retry, queue it
     # and exit 0 so this run does not wake BIBI yet.

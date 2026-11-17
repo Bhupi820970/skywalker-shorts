@@ -17,6 +17,27 @@ import plan
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
+def _fill_other_official(items, keep_slot, now, ahead=6, past_h=6):
+    import slot_times
+    day0 = now.date()
+    for d in range(0, 2):
+        day = (day0 + timedelta(days=d)).isoformat()
+        for hhmm in slot_times.official_times():
+            iso = slot_times.slot_iso(day, hhmm)
+            try:
+                dt = datetime.fromisoformat(iso)
+            except Exception:
+                continue
+            if not (now - timedelta(hours=past_h) <= dt <= now + timedelta(hours=ahead)):
+                continue
+            if iso == keep_slot or any(it.get("slot") == iso for it in items.values()):
+                continue
+            iid = f"keep-{day}-{hhmm.replace(':', '')}"
+            items[iid] = {"id": iid, "slot": iso, "status": "queued"}
+    return items
+
+
+
 
 def test_duration_gates_allow_18_to_32_aim_20():
     assert pipeline.MIN_OUTPUT_DUR == 18.0
@@ -40,23 +61,31 @@ def test_duration_gates_allow_18_to_32_aim_20():
 
 def test_two_act_src_end_covers_the_visible_window():
     """A line that starts in a short scene must still play its full padded window."""
+    import numpy as np
+    import similarity as _sim
+
+    def _sc(i, start, dur, spectacle, motion, speech=0.0, gemini=8):
+        rng = np.random.default_rng(1000 + i)
+        fr = rng.integers(0, 255, (48, 48, 3), dtype=np.uint8)
+        fr[:, :, 0] = (i * 47) % 255
+        fp = _sim.fingerprint_frame(fr)
+        return {
+            "id": i, "start": start, "end": start + dur, "dur": dur, "skip": False,
+            "spectacle": spectacle, "gemini": gemini, "motion": motion, "speech": speech,
+            "skin": 0.03, "phash": fp["phash"], "hist": fp["hist"],
+        }
+
     scenes = [
-        {"id": 2, "start": 4.0, "end": 4.4, "dur": 0.4, "skip": False, "spectacle": 10,
-         "gemini": 8, "motion": 5, "speech": 0.8, "skin": 0.05, "phash": 1, "hist": [0]*8},
-        {"id": 3, "start": 4.4, "end": 7.0, "dur": 2.6, "skip": False, "spectacle": 12,
-         "gemini": 8, "motion": 4, "speech": 0.7, "skin": 0.05, "phash": 2, "hist": [1]*8},
-        {"id": 10, "start": 30.0, "end": 34.0, "dur": 4.0, "skip": False, "spectacle": 80,
-         "gemini": 8, "motion": 20, "speech": 0.0, "skin": 0.02, "phash": 3, "hist": [2]*8},
-        {"id": 11, "start": 40.0, "end": 44.0, "dur": 4.0, "skip": False, "spectacle": 70,
-         "gemini": 7, "motion": 18, "speech": 0.0, "skin": 0.02, "phash": 4, "hist": [3]*8},
-        {"id": 12, "start": 50.0, "end": 54.0, "dur": 4.0, "skip": False, "spectacle": 60,
-         "gemini": 7, "motion": 16, "speech": 0.0, "skin": 0.02, "phash": 5, "hist": [4]*8},
-        {"id": 13, "start": 60.0, "end": 64.0, "dur": 4.0, "skip": False, "spectacle": 55,
-         "gemini": 6, "motion": 14, "speech": 0.0, "skin": 0.02, "phash": 6, "hist": [5]*8},
-        {"id": 14, "start": 70.0, "end": 74.0, "dur": 4.0, "skip": False, "spectacle": 50,
-         "gemini": 6, "motion": 12, "speech": 0.0, "skin": 0.02, "phash": 7, "hist": [6]*8},
-        {"id": 15, "start": 80.0, "end": 84.0, "dur": 4.0, "skip": False, "spectacle": 45,
-         "gemini": 6, "motion": 10, "speech": 0.0, "skin": 0.02, "phash": 8, "hist": [7]*8},
+        _sc(2, 4.0, 0.4, 10, 5, speech=0.8),
+        _sc(3, 4.4, 2.6, 12, 4, speech=0.7),
+        _sc(10, 30.0, 4.0, 80, 20),
+        _sc(11, 40.0, 4.0, 70, 18, gemini=7),
+        _sc(12, 50.0, 4.0, 60, 16, gemini=7),
+        _sc(13, 60.0, 4.0, 55, 14, gemini=6),
+        _sc(14, 70.0, 4.0, 50, 12, gemini=6),
+        _sc(15, 80.0, 4.0, 45, 10, gemini=6),
+        _sc(16, 90.0, 4.0, 42, 10, gemini=6),
+        _sc(17, 100.0, 4.0, 40, 9, gemini=6),
     ]
     # One spoken line 4.2-6.2 that spans scenes 2 and 3 (the 961605e case).
     transcript = {"words": [
@@ -65,7 +94,7 @@ def test_two_act_src_end_covers_the_visible_window():
         {"word": "being", "start": 4.6, "end": 4.9, "prob": 0.9},
         {"word": "serious", "start": 4.9, "end": 5.5, "prob": 0.9},
         {"word": "right", "start": 5.5, "end": 5.8, "prob": 0.9},
-        {"word": "now?", "start": 5.8, "end": 6.2, "prob": 0.9},
+        {"word": "now?", "start": 5.8, "end": 7.4, "prob": 0.9},
     ], "segments": []}
     music = {"abs_beats": [20.0 + i * 0.5 for i in range(40)], "drop_abs": 20.0, "tempo": 120,
              "pulses": [i * 0.5 for i in range(40)], "start": 0.0}
@@ -111,15 +140,16 @@ def test_failed_backup_picks_next_topic(tmp_path, monkeypatch):
     slot = "2026-11-13T12:30:00+05:30"
     items = {"war2": {"id": "war2", "slot": slot, "status": "queued"}}
     results = {"war2": {"status": "failed"}}
+    _fill_other_official(items, slot, now)
     # First backup already failed for this slot
     code = "20261113-1230"
     (tmp_path / f"{code}-zootopia2.json").write_text(json.dumps({
         "status": "failed", "backup_item": "backup-zootopia2",
     }))
     pool = [
-        {"id": "backup-zootopia2"},
-        {"id": "backup-kalki2898ad"},
-        {"id": "backup-superman"},
+        {"id": "backup-zootopia2", "fallback_asset": "zootopia2_scene1_h264.mp4"},
+        {"id": "backup-kalki2898ad", "fallback_asset": "kalki2898ad_scene1_h264.mp4"},
+        {"id": "backup-superman", "fallback_asset": "superman_scene1_h264.mp4"},
     ]
     monkeypatch.chdir(tmp_path)
     (tmp_path / "results").mkdir()
@@ -138,12 +168,13 @@ def test_done_backup_does_not_pick_another(tmp_path, monkeypatch):
     slot = "2026-11-13T12:30:00+05:30"
     items = {"war2": {"id": "war2", "slot": slot, "status": "queued"}}
     results = {"war2": {"status": "failed"}}
+    _fill_other_official(items, slot, now)
     monkeypatch.chdir(tmp_path)
     (tmp_path / "results").mkdir()
     (tmp_path / "results" / "20261113-1230-zootopia2.json").write_text(
         json.dumps({"status": "done", "backup_item": "backup-zootopia2"})
     )
-    pool = [{"id": "backup-zootopia2"}, {"id": "backup-kalki2898ad"}]
+    pool = [{"id": "backup-zootopia2", "fallback_asset": "zootopia2_scene1_h264.mp4"}, {"id": "backup-kalki2898ad", "fallback_asset": "kalki2898ad_scene1_h264.mp4"}]
     picks, used = plan.select_slot_backups(
         items, lambda i: results.get(i), pool, set(), now, ahead=6, busy=set()
     )

@@ -47,6 +47,14 @@ import librosa
 import numpy as np
 import overlay_guard
 from layout import whitebar_layout
+from letterbox import (
+    LB_BAR_MAX_MEAN, LB_BAR_P90, LB_CONTENT_LUMA,
+    letterbox_bars_are_black, letterbox_content_span, refine_letterbox_crop,
+)
+from edit_pace import (
+    FLASH_SHOT_MAX, FLASH_SHOT_MIN, HERO_SHOT_MAX, HERO_SHOT_MIN,
+    MAX_FLASH_SHOTS, MAX_HERO_SHOTS, MIN_SHOT_LEN,
+)
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageStat
 from scipy import ndimage
 
@@ -162,7 +170,8 @@ def detect_letterbox(src: Path) -> tuple[int, int, int, int]:
     A row is letterbox only if it is black in every well-lit sample.
     Title cards, fades, and dark shots must not shrink the picture:
     we take the min top / max bottom content row, sampled across the
-    whole duration (not a median of a few early timestamps).
+    whole duration (including the QA timestamps), then widen the crop
+    if a proposed bar is not actually black.
     """
     probe = subprocess.check_output(
         ["ffprobe", "-v", "error", "-select_streams", "v:0",
@@ -177,11 +186,11 @@ def detect_letterbox(src: Path) -> tuple[int, int, int, int]:
         dur = 0.0
     times = [2, 8, 16, 28, 40, 52]
     if dur and dur > 8:
-        times += [max(0.5, dur * f) for f in (0.15, 0.3, 0.45, 0.6, 0.75, 0.9)]
+        times += [max(0.5, dur * f) for f in (0.15, 0.2, 0.3, 0.35, 0.45, 0.5, 0.6, 0.65, 0.75, 0.8, 0.9)]
     times = sorted({round(float(t), 2) for t in times if t < max(dur - 0.25, 3)})
     if not times:
         times = [2.0]
-    ys, ye = [], []
+    spans, lumas = [], []
     for t in times:
         tmp = WORK / f"_lb_{t}.png"
         subprocess.call(
@@ -197,24 +206,12 @@ def detect_letterbox(src: Path) -> tuple[int, int, int, int]:
         if float(lum.mean()) < 8:
             tmp.unlink(missing_ok=True)
             continue
-        rows = np.where(lum > 10)[0]
-        if len(rows) >= 20:
-            ys.append(int(rows[0]))
-            ye.append(int(rows[-1]))
+        span = letterbox_content_span(lum)
+        if span is not None:
+            spans.append(span)
+            lumas.append(lum)
         tmp.unlink(missing_ok=True)
-    if not ys:
-        return sw, sh, 0, 0
-    # Only bars present in ALL content samples are stripped.
-    y1 = even(min(ys))
-    y2 = int(max(ye))
-    h = even(y2 - y1 + 1)
-    # keep even-even for yuv420
-    if y1 + h > sh:
-        h = even(sh - y1)
-    # Pathological case (every sample was a mid-frame title card): keep full frame.
-    if h < sh * 0.5:
-        return sw, sh, 0, 0
-    return sw, h, 0, y1
+    return refine_letterbox_crop(sw, sh, spans, lumas)
 
 
 def make_mezzanine(src: Path, dst: Path, crop) -> Path:
@@ -1224,12 +1221,34 @@ def plan_two_act(scenes: list[dict], music: dict, target: float, transcript: dic
     slots = [(c["vis"], next(s for s in scenes if s["id"] == c["scene"]), c["a"], 1) for c in act1]
     body = float(target)
     t, k, prev = T, 0, None
+    flashes = heroes = 0
     while t < body - 0.45:
         nxt_i = min(len(grid) - 1, k + step)
         vis = float(grid[nxt_i] - t) if nxt_i > k else step * ibi
-        vis = max(0.9, min(vis, 3.2, body - t))
-        if body - t - vis < 0.6:
-            vis = body - t
+        remaining = body - t
+        long_ok = any(float(s["dur"]) >= MIN_SHOT_LEN + 0.04 and s["id"] not in used_ids
+                      and float(s.get("speech") or 0) <= 0.18 for s in usable)
+        hero_ok = any(float(s["dur"]) >= HERO_SHOT_MIN + 0.04 and s["id"] not in used_ids
+                      and float(s.get("speech") or 0) <= 0.18 for s in usable)
+        # 1-2 hero shots (2-4s) once a little act-2 footage is in, snapped to the grid.
+        want_hero = (heroes < MAX_HERO_SHOTS and hero_ok and t >= T + 0.12 * max(0.1, body - T))
+        if want_hero:
+            hero_beats = 6 if step <= 2 else 3
+            nxt_h = min(len(grid) - 1, k + max(step, hero_beats))
+            hvis = float(grid[nxt_h] - t) if nxt_h > k else max(HERO_SHOT_MIN, vis)
+            vis = max(HERO_SHOT_MIN, min(hvis, HERO_SHOT_MAX, remaining))
+        elif vis < MIN_SHOT_LEN and long_ok:
+            # Prefer a 1.5-2.5s beat-snapped cut over a sub-1.5s flash when footage allows.
+            need = max(2, int(round(MIN_SHOT_LEN / max(ibi, 0.25))))
+            nxt_up = min(len(grid) - 1, k + max(step, need, 3))
+            vis = max(MIN_SHOT_LEN, min(float(grid[nxt_up] - t) if nxt_up > k else MIN_SHOT_LEN,
+                                        HERO_SHOT_MAX, remaining))
+        elif FLASH_SHOT_MIN <= vis < MIN_SHOT_LEN and flashes < MAX_FLASH_SHOTS and not long_ok:
+            vis = max(FLASH_SHOT_MIN, min(vis, FLASH_SHOT_MAX, remaining))
+        else:
+            vis = max(MIN_SHOT_LEN, min(max(vis, MIN_SHOT_LEN), HERO_SHOT_MAX, remaining))
+        if remaining - vis < 0.6:
+            vis = remaining
         best, best_key = None, -1e9
         for s in usable:
             if s["id"] in used_ids or float(s["dur"]) < vis + 0.04:
@@ -1251,6 +1270,10 @@ def plan_two_act(scenes: list[dict], music: dict, target: float, transcript: dic
         if best is None:
             break
         slots.append((vis, best, best_a, 2))
+        if want_hero and vis >= HERO_SHOT_MIN:
+            heroes += 1
+        elif vis < MIN_SHOT_LEN:
+            flashes += 1
         used_ids.add(best["id"]); used_ranges.append((best_a, best_a + vis)); used_scenes.append(best)
         prev = best
         t += vis
@@ -1379,8 +1402,8 @@ def plan_edit(scenes: list[dict], music: dict, target: float = TARGET_DUR,
 
     # Fill the whole target with unique live shots (aim about 20–28s). An end-card still
     # is only added later if we still have a unique unused frame.
-    MIN_SHOT = 1.5
-    MAX_SHOT = 3.5
+    MIN_SHOT = MIN_SHOT_LEN
+    MAX_SHOT = HERO_SHOT_MAX
     MIN_UNIQUE = MIN_OUTPUT_DUR if RELAX else MIN_UNIQUE_DUR
     body = float(target)
 
@@ -1412,11 +1435,14 @@ def plan_edit(scenes: list[dict], music: dict, target: float = TARGET_DUR,
         used_ranges.append((float(a), float(b)))
         used_scenes.append(s)
 
-    MIN_SHOT_RECOVER = float(min_keep)
+    MIN_SHOT_RECOVER = MIN_SHOT_LEN
+    flashes_used = 0
+    heroes_used = 0
 
-    def shot_vis(s, desired, remaining, min_shot=None):
+    def shot_vis(s, desired, remaining, min_shot=None, max_shot=None):
         floor = MIN_SHOT if min_shot is None else float(min_shot)
-        cap = min(float(s["dur"]) - 0.04, remaining, MAX_SHOT)
+        cap_max = MAX_SHOT if max_shot is None else float(max_shot)
+        cap = min(float(s["dur"]) - 0.04, remaining, cap_max)
         if cap <= 0:
             return 0.0
         want = max(float(desired), floor)
@@ -1432,12 +1458,17 @@ def plan_edit(scenes: list[dict], music: dict, target: float = TARGET_DUR,
     def in_gem2(s):
         return f"{float(s['start']):.2f}-{float(s['end']):.2f}" in gem2
 
-    # Cold open (~1s): most action-heavy / bright / high-motion shot first.
-    # Avoid dark or slow openings — frame-diff motion + luma from score_scenes.
-    COLD_OPEN = 1.05
-    COLD_MIN = 0.85
+    # Cold open: prefer a 1.5s beat-synced hook. A shorter beat-hit flash is
+    # allowed only when the first beats are that tight.
+    COLD_OPEN = MIN_SHOT_LEN
+    COLD_MIN = MIN_SHOT_LEN
     t = 0.0
     hook_vis = max(COLD_MIN, min(COLD_OPEN, dur_for(t, 2), MAX_SHOT))
+    beat0 = dur_for(t, 1)
+    if FLASH_SHOT_MIN <= beat0 < MIN_SHOT_LEN:
+        hook_vis = max(FLASH_SHOT_MIN, min(beat0, FLASH_SHOT_MAX))
+        COLD_MIN = FLASH_SHOT_MIN
+        flashes_used += 1
 
     def cold_open_key(s):
         motion = float(s.get("motion") or 0)
@@ -1487,8 +1518,8 @@ def plan_edit(scenes: list[dict], music: dict, target: float = TARGET_DUR,
         if not cands:
             cands = [s for s in usable if s["id"] not in used_ids and s["dur"] >= min(vis, MIN_SHOT)
                      and not blocked(s, s["start"], s["start"] + min(vis, s["dur"]))]
-        if not cands:
-            cands = [s for s in usable if s["id"] not in used_ids and s["dur"] >= MIN_SHOT_RECOVER
+        if not cands and flashes_used < MAX_FLASH_SHOTS:
+            cands = [s for s in usable if s["id"] not in used_ids and s["dur"] >= FLASH_SHOT_MIN
                      and not blocked(s, s["start"], s["start"] + min(vis, s["dur"]))]
         if not cands:
             return None
@@ -1521,31 +1552,49 @@ def plan_edit(scenes: list[dict], music: dict, target: float = TARGET_DUR,
         cands.sort(key=key, reverse=True)
         return cands[0]
 
-    # Fill to body: 3 pulses normally, 2 in the climax, shrink if needed
+    # Fill to body: 3 pulses normally, 2 in the climax, 1-2 hero shots of 2-4s.
     while t < body - 0.35:
         remaining = body - t
         climax = t >= body * 0.62
+        mid = t >= body * 0.35
         prefer = 2 if climax else 3
         if remaining > 3.2 and not climax:
             prefer = 4 if (len(slots) % 4 == 0) else 3
+        want_hero = (heroes_used < MAX_HERO_SHOTS and remaining >= HERO_SHOT_MIN
+                     and (climax or (mid and heroes_used == 0)))
+        if want_hero:
+            prefer = 5 if climax else 4
         chosen = None
         vis = 0.0
         src_start = None
-        for n in (prefer, 4, 3, 2, 5):
+        pulse_ns = (prefer, 5, 4, 3, 2) if want_hero else (prefer, 4, 3, 2, 5)
+        for n in pulse_ns:
             vis = dur_for(t, n)
-            vis = max(MIN_SHOT, min(vis, remaining, MAX_SHOT))
-            if vis > remaining + 0.05 or vis < min(MIN_SHOT, remaining) - 0.05:
+            if want_hero:
+                vis = max(HERO_SHOT_MIN, min(vis, remaining, HERO_SHOT_MAX))
+            else:
+                vis = max(MIN_SHOT, min(vis, remaining, MAX_SHOT))
+            floor = HERO_SHOT_MIN if want_hero else MIN_SHOT
+            if vis > remaining + 0.05 or vis < min(floor, remaining) - 0.05:
                 continue
             sc = pick(t, vis, climax, slots[-1][1])
             if sc is not None:
-                vis = shot_vis(sc, vis, remaining, min_shot=min(MIN_SHOT, sc["dur"]))
-                if vis < min(MIN_SHOT_RECOVER, remaining, sc["dur"]) - 0.05:
+                floor = HERO_SHOT_MIN if want_hero else MIN_SHOT
+                if vis < MIN_SHOT_LEN and flashes_used < MAX_FLASH_SHOTS:
+                    floor = FLASH_SHOT_MIN
+                vis = shot_vis(sc, vis, remaining, min_shot=min(floor, sc["dur"]),
+                               max_shot=HERO_SHOT_MAX if want_hero else MAX_SHOT)
+                if vis < min(floor, remaining, sc["dur"]) - 0.05:
                     continue
                 src_start = float(sc["start"])
                 chosen = sc
                 break
         if chosen is None:
             break
+        if want_hero and vis >= HERO_SHOT_MIN:
+            heroes_used += 1
+        elif vis < MIN_SHOT_LEN:
+            flashes_used += 1
         slots.append((vis, chosen, src_start))
         mark_used(chosen, src_start, src_start + vis)
         t += vis
@@ -1553,17 +1602,24 @@ def plan_edit(scenes: list[dict], music: dict, target: float = TARGET_DUR,
     # If we still came up short, top up with leftover unique scenes that actually fit
     while t < body - 0.50:
         remaining = body - t
-        leftovers = [s for s in usable_by_spec if s["id"] not in used_ids and s["dur"] >= MIN_SHOT_RECOVER and not blocked(s)]
+        leftovers = [s for s in usable_by_spec if s["id"] not in used_ids and s["dur"] >= MIN_SHOT and not blocked(s)]
+        # Last resort: unique slices shorter than 1.5s still count toward the 18s floor.
+        # Default cuts stay 1.5s+; this path only runs when longer leftovers are gone.
+        if not leftovers:
+            leftovers = [s for s in usable_by_spec if s["id"] not in used_ids and s["dur"] >= float(min_keep) and not blocked(s)]
         if not leftovers:
             break
         placed = False
         for sc in leftovers:
-            vis = shot_vis(sc, max(MIN_SHOT_RECOVER, min(dur_for(t, 3), sc["dur"])), remaining,
-                           min_shot=MIN_SHOT_RECOVER)
-            if vis < min(MIN_SHOT_RECOVER, remaining, sc["dur"]) - 0.05:
+            floor = MIN_SHOT if sc["dur"] >= MIN_SHOT else min(FLASH_SHOT_MIN, float(sc["dur"]))
+            vis = shot_vis(sc, max(floor, min(dur_for(t, 3), sc["dur"])), remaining,
+                           min_shot=floor)
+            if vis < min(floor, remaining, sc["dur"]) - 0.05:
                 continue
             if blocked(sc, sc["start"], sc["start"] + vis):
                 continue
+            if vis < MIN_SHOT_LEN:
+                flashes_used += 1
             slots.append((vis, sc, float(sc["start"])))
             mark_used(sc, sc["start"], sc["start"] + vis)
             t += vis
@@ -3633,11 +3689,8 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
             if f0 is None or float(np.mean(f0)) < 8:
                 continue
             checked += 1
-            if crop_y > 0 and float(np.mean(f0[:crop_y])) >= 16:
-                lb_ok = False
-                break
-            bot_y = crop_y + crop_h
-            if bot_y < f0.shape[0] and float(np.mean(f0[bot_y:])) >= 16:
+            lum = f0.mean(axis=(1, 2)) if f0.ndim == 3 else f0.mean(axis=1)
+            if not letterbox_bars_are_black(lum, crop_y, crop_y + crop_h - 1):
                 lb_ok = False
                 break
         if checked == 0:

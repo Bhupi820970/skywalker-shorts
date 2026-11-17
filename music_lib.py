@@ -140,7 +140,7 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
 
     If Gemini named a file (`prefer`, then `prefer_alts`) and it is in the library and not in
     the last-N exclude list, that track is used. Otherwise a deterministic hash pick among
-    near-best scores (pillar/genre/market/trends). Same song never repeats within 8 videos.
+    near-best scores (pillar/genre/market/trends). Same song never repeats within a 3-day window (results history).
     Returns None to fall back to credits.json.
     """
     import hashlib
@@ -243,4 +243,101 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
     h = int(hashlib.sha1((f"{salt}|{seed or p}|perf").encode()).hexdigest(), 16)
     return finish(top[h % len(top)], "hash")
 
+
+MUSIC_COOLDOWN_DAYS = 3
+
+
+def _parse_result_when(r: dict):
+    """Best timestamp for a render result (slot first, then `at`)."""
+    from datetime import datetime, timedelta, timezone
+    ist = timezone(timedelta(hours=5, minutes=30))
+    slot = r.get("slot") or ""
+    if slot:
+        try:
+            dt = datetime.fromisoformat(str(slot).replace("Z", "+00:00"))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=ist)
+            return dt
+        except Exception:
+            pass
+    at = str(r.get("at") or "").replace(" IST", "").strip()
+    for fmt in ("%Y-%m-%d %H:%M", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%dT%H:%M:%S"):
+        try:
+            dt = datetime.strptime(at, fmt)
+            if fmt.endswith("Z"):
+                dt = dt.replace(tzinfo=timezone.utc)
+            elif dt.tzinfo is None:
+                dt = dt.replace(tzinfo=ist)
+            return dt
+        except Exception:
+            continue
+    return None
+
+
+def recent_music_files(results_dir, *, days: int = MUSIC_COOLDOWN_DAYS, now=None,
+                       exclude_id: str | None = None) -> list[str]:
+    """Music files used by done renders in the last `days` days (by slot/`at`)."""
+    from datetime import datetime, timedelta, timezone
+    ist = timezone(timedelta(hours=5, minutes=30))
+    now = now or datetime.now(ist)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=ist)
+    cut = now - timedelta(days=float(days))
+    files: list[str] = []
+    rd = Path(results_dir)
+    if not rd.exists():
+        return []
+    for pth in rd.glob("*.json"):
+        try:
+            r = json.loads(pth.read_text())
+        except Exception:
+            continue
+        if exclude_id and r.get("id") == exclude_id:
+            continue
+        if r.get("status") != "done" or not r.get("music"):
+            continue
+        dt = _parse_result_when(r)
+        if dt is None:
+            continue
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=ist)
+        if dt >= cut:
+            files.append(str(r["music"]))
+    return list(dict.fromkeys(files))
+
+
+def expand_same_song(AE: Path | None, files: list[str] | None) -> list[str]:
+    """Add other library tracks that share a normalized title with a used file."""
+    used = [f for f in (files or []) if f]
+    out = list(dict.fromkeys(used))
+    if not AE:
+        return out
+    lp = Path(AE) / "music" / "library.json"
+    if not lp.exists():
+        return out
+    try:
+        tracks = json.loads(lp.read_text()).get("tracks") or []
+    except Exception:
+        return out
+    titles = set()
+    for t in tracks:
+        fn = t.get("file") or ""
+        if fn in used:
+            titles.add(_norm_music(t.get("title") or ""))
+    titles.discard("")
+    if not titles:
+        return out
+    for t in tracks:
+        fn = t.get("file") or ""
+        title = _norm_music(t.get("title") or "")
+        if fn and title and title in titles and fn not in out:
+            out.append(fn)
+    return out
+
+
+def recent_excludes(results_dir, AE: Path | None = None, *, days: int = MUSIC_COOLDOWN_DAYS,
+                    now=None, exclude_id: str | None = None) -> list[str]:
+    """Files the picker must skip: used in the last `days` days, plus same-title copies."""
+    files = recent_music_files(results_dir, days=days, now=now, exclude_id=exclude_id)
+    return expand_same_song(AE, files)
 

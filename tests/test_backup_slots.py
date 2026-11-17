@@ -98,3 +98,26 @@ def test_no_backup_until_all_live_items_failed(tmp_path, monkeypatch):
         items, lambda i: results.get(i), pool, set(), now, ahead=6, busy=set()
     )
     assert picks == []
+
+def test_unrecoverable_retry_queued_picks_next_backup(tmp_path, monkeypatch):
+    now = datetime(2026, 11, 17, 7, 0, tzinfo=IST)
+    slot = "2026-11-17T06:30:00+05:30"
+    items = {"bluelock2": {"id": "bluelock2", "slot": slot, "status": "queued"}}
+    _fill_other_official(items, slot, now)
+    results = {"bluelock2": {
+        "status": "retry_queued",
+        "last_error": "download failed: HTTP Error 404: Not Found | reject logo/watermark",
+        "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: HTTP Error 404: Not Found",
+    }}
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("SKY_ROOT", str(tmp_path))
+    (tmp_path / "results").mkdir()
+    pool = [
+        {"id": "backup-bluelock2", "fallback_asset": "bluelock2_scene1_h264.mp4"},
+        {"id": "backup-dandadan", "fallback_asset": "dandadan_scene1_h264.mp4"},
+    ]
+    picks, used = plan.select_slot_backups(
+        items, lambda i: results.get(i), pool, set(), now, ahead=6, busy=set()
+    )
+    assert picks == ["backup-bluelock2@20261117-0630"] or picks == ["backup-dandadan@20261117-0630"], picks
+

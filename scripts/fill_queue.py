@@ -151,7 +151,9 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
                 base = 0.0
         # Prefer titles with 3+ official scene clips so the render can merge shots.
         n_scenes = len(topic_assets(t, have))
-        if n_scenes >= 3:
+        if n_scenes >= 5:
+            base += 4.5
+        elif n_scenes >= 3:
             base += 3.0
         elif n_scenes:
             base += 1.5

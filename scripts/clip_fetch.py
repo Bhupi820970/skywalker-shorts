@@ -280,8 +280,8 @@ def main() -> int:
         reqs = [r for r in reqs if norm(r.get("slug") or "") in want]
     if a.limit:
         reqs = reqs[: a.limit]
-    per = a.per_title or int(doc.get("max_clips_per_title") or 4)
-    per = max(per, 3)  # always grab 3+ scene clips per title when they exist
+    per = a.per_title or int(doc.get("max_clips_per_title") or 5)
+    per = max(per, 3)  # always grab 3-5 official scene clips per title when they exist
     st = json.loads(STATUS.read_text()) if STATUS.exists() else {}
     done_ids = set(st.get("done_ids") or [])
     have = retry(release_assets, 3, 5) or set()

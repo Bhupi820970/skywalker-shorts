@@ -19,6 +19,22 @@ import sourcing
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
+def _status_for_backup(r):
+    """retry_queued with an unrecoverable source error is treated as failed so the
+    next backup topic can fill the slot instead of leaving it empty."""
+    if not r:
+        return None
+    st = r.get("status")
+    if st != "retry_queued":
+        return st
+    err = " ".join(str(x or "") for x in (r.get("last_error"), r.get("detail")))
+    try:
+        if sourcing.is_unrecoverable_source_error(err):
+            return "failed"
+    except Exception:
+        pass
+    return st
+
 def select_slot_backups(items, result_fn, pool, used, now, ahead, busy, past_h=6):
     """If every live queue item for a due slot is 'failed' and nothing is done,
     pick the next unused backup-pool topic for that slot. A failed backup does
@@ -56,11 +72,11 @@ def select_slot_backups(items, result_fn, pool, used, now, ahead, busy, past_h=6
         root = Path(os.environ.get("SKY_ROOT") or ".")
         if backup_stock.slot_is_covered(root, slot_s):
             continue
-        st = [(result_fn(i) or {}).get("status") for i in ids]
+        st = [_status_for_backup(result_fn(i) or {}) for i in ids]
         live = [i for i in ids if items[i].get("status", "queued") == "queued"]
         if "done" in st:
             continue
-        if live and any((result_fn(i) or {}).get("status") != "failed" for i in live):
+        if live and any(_status_for_backup(result_fn(i) or {}) != "failed" for i in live):
             continue
         if not live:
             # Missing official slot: health assigns stock when any is ready.
@@ -77,7 +93,7 @@ def select_slot_backups(items, result_fn, pool, used, now, ahead, busy, past_h=6
                     br = json.load(open(rp))
                 except Exception:
                     br = {}
-                slot_status[b["id"]] = br.get("status")
+                slot_status[b["id"]] = _status_for_backup(br)
                 if br.get("backup_item"):
                     used.add(br["backup_item"])
                 elif br.get("status") in ("done", "failed", "retry_queued"):

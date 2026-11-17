@@ -104,7 +104,15 @@ def load_pool(root: Path | None = None) -> list[dict]:
 
 
 def has_preuploaded(it: dict) -> bool:
-    return bool(it.get("fallback_asset") or it.get("fallback_mp4"))
+    """True when the pool topic has at least one official scene clip (never a trailer)."""
+    try:
+        import sourcing
+        return sourcing.item_has_scene_source(it)
+    except Exception:
+        fa = (it.get("fallback_asset") or "") + " " + " ".join(it.get("fallback_mp4") or [])
+        if not (it.get("fallback_asset") or it.get("fallback_mp4")):
+            return False
+        return "trailer" not in fa.lower() and "teaser" not in fa.lower()
 
 
 def parse_stock_id(iid: str) -> tuple[str, int] | None:
@@ -215,6 +223,14 @@ def is_ready_result(r: dict | None) -> bool:
         return False
     if qc_was_skipped(r) or source_topic_mismatch(r):
         return False
+    try:
+        import sourcing
+        if sourcing.is_trailer_result(r) or sourcing.is_trailer_source(str(r.get("source") or "")):
+            return False
+    except Exception:
+        src = str(r.get("source") or "")
+        if "trailer" in src.lower() or "teaser" in src.lower():
+            return False
     return True
 
 
@@ -496,6 +512,23 @@ def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
         if (e.get("slug") or "") in used:
             return True
         src = read_result(root, e.get("id") or "") or {}
+        try:
+            import sourcing
+            if sourcing.is_trailer_result(src) or sourcing.is_trailer_source(str(src.get("source") or "")):
+                return True
+        except Exception:
+            if "trailer" in str(src.get("source") or "").lower():
+                return True
+        # Same song must not go out twice in 3 days, including pre-rendered stock.
+        try:
+            import music_lib
+            music = src.get("music") or ""
+            if music:
+                recent = set(music_lib.recent_excludes(root / "results", root, days=3, now=now))
+                if music in recent or any(music_lib._norm_music(music) == music_lib._norm_music(x) for x in recent):
+                    return True
+        except Exception:
+            pass
         title = norm_title(src.get("title") or e.get("title") or "")
         return bool(title and title in recent_titles)
 
@@ -769,6 +802,13 @@ def audit_ready_stock(root: Path | None = None, now: datetime | None = None) -> 
             reasons.append("qc_skipped")
         if source_topic_mismatch(r, ent):
             reasons.append("topic_mismatch")
+        try:
+            import sourcing
+            if sourcing.is_trailer_result(r) or sourcing.is_trailer_source(str(r.get("source") or "")):
+                reasons.append("trailer_source")
+        except Exception:
+            if "trailer" in str(r.get("source") or "").lower():
+                reasons.append("trailer_source")
         if not reasons:
             continue
         ent["status"] = "not_ready"

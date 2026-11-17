@@ -42,9 +42,9 @@ def _root(tmp_path: Path, monkeypatch, pool=None, manifest=None):
     (tmp_path / "queue").mkdir()
     _write(tmp_path / "config" / "backup_pool.json", {
         "items": pool or [
-            {"id": "backup-zootopia2", "fallback_asset": "zootopia2_trailer_h264.mp4"},
-            {"id": "backup-kalki2898ad", "fallback_asset": "kalki2898ad_trailer_h264.mp4"},
-            {"id": "backup-superman", "fallback_asset": "superman_trailer_h264.mp4"},
+            {"id": "backup-zootopia2", "fallback_asset": "zootopia2_scene1_h264.mp4"},
+            {"id": "backup-kalki2898ad", "fallback_asset": "kalki2898ad_scene1_h264.mp4"},
+            {"id": "backup-superman", "fallback_asset": "superman_scene1_h264.mp4"},
         ]
     })
     _write(tmp_path / "config" / "backup_stock.json", manifest or {
@@ -398,3 +398,78 @@ def test_same_slot_title_match_is_real_coverage():
           "slot": "2026-11-15T13:30:00+05:30",
           "buffer_due_at": "2026-11-14T07:12:45.371Z"}
     assert backup_stock.is_title_match_miss(r2) is True
+
+def test_trailer_stock_is_not_ready_and_not_assigned(tmp_path, monkeypatch):
+    root = _root(tmp_path, monkeypatch)
+    _write(root / "results" / "stock-wickedforgood-01.json", _ready_result(
+        "stock-wickedforgood-01",
+        stock_topic="backup-wickedforgood",
+        source="gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wickedforgood_trailer_h264.mp4",
+        title="The moment Elphaba chose her own path",
+    ))
+    r = json.loads((root / "results" / "stock-wickedforgood-01.json").read_text())
+    assert backup_stock.is_ready_result(r) is False
+    slot = "2026-11-17T13:30:00+05:30"
+    now = datetime(2026, 11, 17, 12, 0, tzinfo=IST)
+    got = backup_stock.assign_to_slot(root, slot, now)
+    assert got is None
+    # already-used/posted results are not touched
+    posted = _ready_result(
+        "20261117-1330-wickedforgood",
+        slot=slot, status="done",
+        source="gh:https://github.com/x/sources/wickedforgood_trailer_h264.mp4",
+        assigned_from_stock=True,
+    )
+    _write(root / "results" / "20261117-1330-wickedforgood.json", posted)
+    again = json.loads((root / "results" / "20261117-1330-wickedforgood.json").read_text())
+    assert again["status"] == "done"
+    assert again.get("assigned_from_stock") is True
+
+
+def test_pick_stock_skips_song_used_in_last_3_days(tmp_path, monkeypatch):
+    root = _root(tmp_path, monkeypatch)
+    now = datetime(2026, 11, 17, 16, 0, tzinfo=IST)
+    _write(root / "results" / "20261117-1130-cyberpunkedgerunners.json", {
+        "id": "20261117-1130-cyberpunkedgerunners",
+        "status": "done",
+        "slot": "2026-11-17T11:30:00+05:30",
+        "music": "sw_metamorphosis.mp3",
+        "title": "David did not expect this from Lucy",
+    })
+    _write(root / "results" / "stock-gladiator2-01.json", _ready_result(
+        "stock-gladiator2-01", stock_topic="backup-gladiator2",
+        music="sw_metamorphosis.mp3",
+        title="A unique gladiator hook",
+        source="gh:https://github.com/x/sources/gladiator2_scene1_h264.mp4",
+    ))
+    _write(root / "results" / "stock-superman-01.json", _ready_result(
+        "stock-superman-01", stock_topic="backup-superman",
+        music="sw_otherphonk.mp3",
+        title="A unique superman hook",
+        source="gh:https://github.com/x/sources/superman_scene1_h264.mp4",
+    ))
+    man = backup_stock.sync(root, now)
+    # force both ready
+    for e in man["items"]:
+        if e["id"].startswith("stock-"):
+            e["status"] = "ready"
+            e["asset_url"] = _ready_result(e["id"])["asset_url"]
+    backup_stock.save_manifest(man, root)
+    picked = backup_stock.pick_stock(man, root, "2026-11-17", now=now)
+    assert picked is not None
+    assert picked["id"] == "stock-superman-01"
+
+
+def test_trailer_only_pool_item_is_not_preuploaded():
+    assert backup_stock.has_preuploaded({
+        "id": "backup-wickedforgood",
+        "fallback_asset": "wickedforgood_trailer_h264.mp4",
+        "fallback_mp4": [
+            "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wickedforgood_trailer_h264.mp4"
+        ],
+    }) is False
+    assert backup_stock.has_preuploaded({
+        "id": "backup-dandadan",
+        "fallback_asset": "dandadan_scene1_h264.mp4",
+    }) is True
+

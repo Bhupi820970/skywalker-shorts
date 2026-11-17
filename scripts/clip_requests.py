@@ -96,7 +96,7 @@ Each item: {{"slug": short lowercase a-z0-9 id, "pillar": one of {list(PILLARS)}
         r["pillar"] = r.get("pillar") if r.get("pillar") in PILLARS else "hollywood"
         r["known_topic"] = slug in known
         out.append(r)
-    doc = {"generated_at": now.strftime("%Y-%m-%d %H:%M IST"), "max_clips_per_title": 4,
+    doc = {"generated_at": now.strftime("%Y-%m-%d %H:%M IST"), "max_clips_per_title": 5,
            "min_height": 1080, "requests": out}
     OUT.write_text(json.dumps(doc, indent=1, ensure_ascii=False) + "\n")
     print(f"clip_requests: {len(out)} -> " + ", ".join(f"{r['slug']}({r['pillar']})" for r in out))

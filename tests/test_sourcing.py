@@ -112,3 +112,20 @@ def test_fill_queue_topic_assets_skip_trailers():
     names = fill_queue.topic_assets(topic, None)
     assert names == topic["scene_assets"]
     assert fill_queue.topic_assets({"slug": "fnaf2", "fallback_asset": "fnaf2_trailer_h264.mp4"}, None) == []
+
+
+def test_unrecoverable_source_error():
+    assert sourcing.is_unrecoverable_source_error("download failed: HTTP Error 404: Not Found")
+    assert sourcing.is_unrecoverable_source_error("reject logo/watermark: gh:x/bluelock2_scene3_h264.mp4")
+    assert sourcing.is_unrecoverable_source_error("Sign in to confirm you’re not a bot")
+    assert not sourcing.is_unrecoverable_source_error("ffmpeg timed out mid-render")
+    assert not sourcing.is_unrecoverable_source_error("HTTP 503 temporarily unavailable")
+
+
+def test_trailer_result():
+    assert sourcing.is_trailer_result({
+        "source": "gh:https://github.com/x/releases/download/sources/wickedforgood_trailer_h264.mp4"
+    })
+    assert not sourcing.is_trailer_result({
+        "source": "gh:https://github.com/x/releases/download/sources/dandadan_scene1_h264.mp4"
+    })

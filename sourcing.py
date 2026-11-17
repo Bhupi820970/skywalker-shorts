@@ -685,3 +685,48 @@ def clip_search_urls(item: dict, limit: int = 6) -> list[str]:
 def apple_trailer_search_url(film: str) -> str:
     """Apple Trailers search page (yt-dlp can resolve some Apple trailer feeds)."""
     return f"https://trailers.apple.com/trailers/home/scripts/quickfind.php?q={quote_plus(film)}"
+
+
+def is_trailer_result(r: dict | None) -> bool:
+    """True when a render result (or stock entry) was built from a trailer/teaser source."""
+    if not r:
+        return False
+    for key in ("source", "fallback_asset", "asset", "used_source"):
+        val = r.get(key)
+        if val and is_trailer_source(str(val)):
+            return True
+    for key in ("fallback_mp4", "sources", "scene_assets", "alt_source_urls"):
+        for u in r.get(key) or []:
+            if u and is_trailer_source(str(u)):
+                # A mixed list is still usable if a scene clip exists; only flag
+                # when the *used* source is missing and every listed source is a trailer.
+                pass
+    # asset_url of the *output* is never a trailer (it's the Short). Ignore it.
+    return False
+
+
+def is_unrecoverable_source_error(err: str | None) -> bool:
+    """True when retrying the same topic cannot produce a source (404, rejected clips, YT bot-check).
+
+    Transient network/5xx/timeout errors are recoverable and must still be retried.
+    """
+    e = (err or "").lower()
+    if not e:
+        return False
+    transient = (
+        "timed out", "timeout", "503", "502", "500", "429",
+        "temporarily", "connection reset", "connection aborted",
+        "network is unreachable", "ssl", "eof",
+    )
+    if any(w in e for w in transient):
+        return False
+    markers = (
+        "http error 404", "404: not found", "error 404",
+        "no official scene clips",
+        "no unused official source",
+        "reject burned-in", "reject logo", "reject logo/watermark",
+        "sign in to confirm",
+        "skip trailer",
+    )
+    return any(w in e for w in markers)
+
