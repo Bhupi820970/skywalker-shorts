@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-17 22:00 IST",
+  "at": "2026-11-17 22:01 IST",
   "slots_checked": 11,
   "ready": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "slot": "2026-11-17T22:30:00+05:30",
-      "id": "backup-arcane2",
-      "how": "backup_pool"
+      "id": "stock",
+      "how": "backup_stock"
     },
     {
       "slot": "2026-11-18T06:30:00+05:30",
@@ -103,6 +103,7 @@
     "stock-bluegiant-01",
     "stock-alienromulus-03",
     "stock-mortalkombat2-01",
+    "20261117-2230-bluegiant",
     "stock-wickedforgood-01",
     "stock-furiosa-02",
     "stock-deadpool3-01",
@@ -119,9 +120,9 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 5,
-  "stock_pending": 22,
-  "stock_used": 20,
+  "stock_ready": 4,
+  "stock_pending": 24,
+  "stock_used": 21,
   "stock_target": 30,
   "stock_need_refill": true,
   "stock_assigned": [],
