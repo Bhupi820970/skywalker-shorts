@@ -567,6 +567,13 @@
       "result_id": "stock-dbsuperhero-04"
     },
     {
+      "id": "stock-dbsuperhero-05",
+      "topic_id": "backup-dbsuperhero",
+      "slug": "dbsuperhero",
+      "status": "pending",
+      "queued_at": "2026-11-17 19:53 IST"
+    },
+    {
       "id": "stock-deadpool3-01",
       "topic_id": "backup-deadpool3",
       "slug": "deadpool3",
@@ -659,6 +666,13 @@
       "status": "failed",
       "queued_at": "2026-11-17 18:19 IST",
       "result_id": "stock-drstone-01"
+    },
+    {
+      "id": "stock-drstone-02",
+      "topic_id": "backup-drstone",
+      "slug": "drstone",
+      "status": "pending",
+      "queued_at": "2026-11-17 19:53 IST"
     },
     {
       "id": "stock-dune2-01",
