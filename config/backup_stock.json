@@ -272,6 +272,13 @@
       "result_id": "stock-bleachtybw-07"
     },
     {
+      "id": "stock-bleachtybw-08",
+      "topic_id": "backup-bleachtybw",
+      "slug": "bleachtybw",
+      "status": "pending",
+      "queued_at": "2026-11-17 19:52 IST"
+    },
+    {
       "id": "stock-bluegiant-01",
       "topic_id": "backup-bluegiant",
       "slug": "bluegiant",
@@ -510,6 +517,13 @@
       "status": "failed",
       "queued_at": "2026-11-17 16:32 IST",
       "result_id": "stock-dandadan2-01"
+    },
+    {
+      "id": "stock-dandadan2-02",
+      "topic_id": "backup-dandadan2",
+      "slug": "dandadan2",
+      "status": "pending",
+      "queued_at": "2026-11-17 19:52 IST"
     },
     {
       "id": "stock-dandadanevil-01",
