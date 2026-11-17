@@ -132,8 +132,9 @@
       "id": "stock-apothecarydiaries2-05",
       "topic_id": "backup-apothecarydiaries2",
       "slug": "apothecarydiaries2",
-      "status": "pending",
-      "queued_at": "2026-11-17 18:29 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 18:29 IST",
+      "result_id": "stock-apothecarydiaries2-05"
     },
     {
       "id": "stock-arcane2-01",
@@ -220,8 +221,9 @@
       "id": "stock-bleachtybw-05",
       "topic_id": "backup-bleachtybw",
       "slug": "bleachtybw",
-      "status": "pending",
-      "queued_at": "2026-11-17 18:29 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 18:29 IST",
+      "result_id": "stock-bleachtybw-05"
     },
     {
       "id": "stock-bluegiant-01",
@@ -260,8 +262,9 @@
       "id": "stock-bluelock2-04",
       "topic_id": "backup-bluelock2",
       "slug": "bluelock2",
-      "status": "pending",
-      "queued_at": "2026-11-17 18:30 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 18:30 IST",
+      "result_id": "stock-bluelock2-04"
     },
     {
       "id": "stock-boyandheron-01",
@@ -436,15 +439,17 @@
       "id": "stock-dandadan-01",
       "topic_id": "backup-dandadan",
       "slug": "dandadan",
-      "status": "pending",
-      "queued_at": "2026-11-17 16:32 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 16:32 IST",
+      "result_id": "stock-dandadan-01"
     },
     {
       "id": "stock-dandadan2-01",
       "topic_id": "backup-dandadan2",
       "slug": "dandadan2",
-      "status": "pending",
-      "queued_at": "2026-11-17 16:32 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 16:32 IST",
+      "result_id": "stock-dandadan2-01"
     },
     {
       "id": "stock-dandadanevil-01",
@@ -483,8 +488,9 @@
       "id": "stock-dbsuperhero-04",
       "topic_id": "backup-dbsuperhero",
       "slug": "dbsuperhero",
-      "status": "pending",
-      "queued_at": "2026-11-17 18:30 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 18:30 IST",
+      "result_id": "stock-dbsuperhero-04"
     },
     {
       "id": "stock-deadpool3-01",
