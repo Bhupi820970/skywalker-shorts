@@ -93,7 +93,8 @@
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
       "status": "pending",
-      "queued_at": "2026-11-17 17:41 IST"
+      "queued_at": "2026-11-17 17:41 IST",
+      "result_id": "stock-aotfinal-02"
     },
     {
       "id": "stock-apothecarydiaries2-01",
@@ -115,8 +116,9 @@
       "id": "stock-apothecarydiaries2-03",
       "topic_id": "backup-apothecarydiaries2",
       "slug": "apothecarydiaries2",
-      "status": "pending",
-      "queued_at": "2026-11-17 17:41 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 17:41 IST",
+      "result_id": "stock-apothecarydiaries2-03"
     },
     {
       "id": "stock-arcane2-01",
@@ -187,8 +189,9 @@
       "id": "stock-bleachtybw-03",
       "topic_id": "backup-bleachtybw",
       "slug": "bleachtybw",
-      "status": "pending",
-      "queued_at": "2026-11-17 17:46 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 17:46 IST",
+      "result_id": "stock-bleachtybw-03"
     },
     {
       "id": "stock-bluegiant-01",
@@ -211,8 +214,9 @@
       "id": "stock-bluelock2-02",
       "topic_id": "backup-bluelock2",
       "slug": "bluelock2",
-      "status": "pending",
-      "queued_at": "2026-11-17 17:10 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 17:10 IST",
+      "result_id": "stock-bluelock2-02"
     },
     {
       "id": "stock-boyandheron-01",
@@ -401,8 +405,10 @@
       "id": "stock-dandadanevil-01",
       "topic_id": "backup-dandadanevil",
       "slug": "dandadanevil",
-      "status": "pending",
-      "queued_at": "2026-11-17 17:10 IST"
+      "status": "ready",
+      "queued_at": "2026-11-17 17:10 IST",
+      "result_id": "stock-dandadanevil-01",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-dandadanevil-01.mp4"
     },
     {
       "id": "stock-dbsuperhero-01",
@@ -416,8 +422,9 @@
       "id": "stock-dbsuperhero-02",
       "topic_id": "backup-dbsuperhero",
       "slug": "dbsuperhero",
-      "status": "pending",
-      "queued_at": "2026-11-17 17:46 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 17:46 IST",
+      "result_id": "stock-dbsuperhero-02"
     },
     {
       "id": "stock-deadpool3-01",
