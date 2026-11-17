@@ -1,0 +1,260 @@
+{
+  "id": "20261117-2030-dandadan2",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-17 18:04 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44076099921",
+  "slot": "2026-11-17T20:30:00+05:30",
+  "title": "Why Okarun cannot stop watching her #dandadan #okarun #anime",
+  "hook": "Why Okarun cannot stop watching her",
+  "description": "Why Okarun cannot stop watching her. Momo and Okarun share an awkward heart gesture at a maid cafe before jumping into high-stakes battle action. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #okarun #anime #shorts #edit",
+  "tags": [
+    "dandadan",
+    "okarun",
+    "anime",
+    "dandadan2",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "momo"
+  ],
+  "queue_meta": {
+    "hook": "Momo never lets him go",
+    "title": "Momo never lets him go | Dandadan | #edit",
+    "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+    "tags": [
+      "dandadan2",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "momo"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "character-obsession",
+  "title_candidates": [
+    {
+      "title": "Why Okarun cannot stop watching her",
+      "click_score": 95.0
+    },
+    {
+      "title": "Okarun did not expect this from Momo",
+      "click_score": 91.0
+    },
+    {
+      "title": "Nobody suspected Okarun was this dangerous",
+      "click_score": 86.0
+    },
+    {
+      "title": "Momo entering the scene is peak perfection",
+      "click_score": 84.0
+    },
+    {
+      "title": "Watch the last two seconds",
+      "click_score": 82.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 74.7,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 28.2,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.3,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-dandadan2",
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "music": "sw_phnk2.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261117-2030-dandadan2",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261117-2030-dandadan2/render-20261117-2030-dandadan2.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 2.976,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+  "music": "sw_phnk2.mp3",
+  "music_credit": "Song: M0ky - Phönk (https://creativecommons.org/licenses/by/4.0/)",
+  "description_final": "Why Okarun cannot stop watching her. Momo and Okarun share an awkward heart gesture at a maid cafe before jumping into high-stakes battle action. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #okarun #anime #shorts #edit\n\nMusic:\nSong: M0ky - Phönk (https://creativecommons.org/licenses/by/4.0/)",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.4,
+      "audio": true
+    },
+    "lufs": -14.4,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.4,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 9.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video follows all formatting guidelines perfectly.",
+        "The hook is engaging and the layout is correct.",
+        "The audio is clean and music-only as requested.",
+        "There is a very minor 'DAN DA DAN SEASON 2' watermark in one frame, but it is negligible and does not warrant a rejection."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 17,
+      "src_start": 38.997,
+      "dur": 1.462,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 49,
+      "src_start": 143.643,
+      "dur": 1.514
+    },
+    {
+      "id": 159001,
+      "src_start": 431.563,
+      "dur": 1.575,
+      "gemini_score": 9.5,
+      "reason": "gemini score 9.5"
+    },
+    {
+      "id": 27,
+      "src_start": 56.139,
+      "dur": 1.509,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 70,
+      "src_start": 202.536,
+      "dur": 1.997,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 145,
+      "src_start": 406.781,
+      "dur": 2.0
+    },
+    {
+      "id": 54,
+      "src_start": 160.994,
+      "dur": 1.994
+    },
+    {
+      "id": 40,
+      "src_start": 106.398,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 36,
+      "src_start": 91.758,
+      "dur": 2.494
+    },
+    {
+      "id": 31,
+      "src_start": 76.535,
+      "dur": 1.462
+    },
+    {
+      "id": 127,
+      "src_start": 355.897,
+      "dur": 2.555,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 45,
+      "src_start": 116.867,
+      "dur": 1.5
+    },
+    {
+      "id": 56,
+      "src_start": 169.994,
+      "dur": 0.538,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    }
+  ],
+  "qc_status": "pass"
+}
