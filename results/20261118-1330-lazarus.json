@@ -1,0 +1,48 @@
+{
+  "id": "20261118-1330-lazarus",
+  "status": "done",
+  "detail": "one-off: already-rendered v5 Lazarus test cut copied onto a normal release for the next free official IST slot (Lazarus already posted today at 16:00 IST).",
+  "at": "2026-11-17 22:33 IST",
+  "slot": "2026-11-18T13:30:00+05:30",
+  "title": "Axel has thirty days to run | Lazarus | #edit",
+  "hook": "Axel has thirty days to run",
+  "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+  "description_final": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+  "tags": [
+    "lazarus",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts"
+  ],
+  "queue_meta": {
+    "hook": "Axel has thirty days to run",
+    "title": "Axel has thirty days to run | Lazarus | #edit",
+    "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+    "tags": [
+      "lazarus",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts"
+    ]
+  },
+  "no_publish": false,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261118-1330-lazarus",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-1330-lazarus/render-20261118-1330-lazarus.mp4",
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+  "words": "LAZARUS",
+  "pillar": "anime",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.4,
+      "audio": true
+    }
+  },
+  "qc_status": "pass",
+  "one_off_from": "test-demo-v5-lazarus.mp4"
+}
