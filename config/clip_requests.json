@@ -1,238 +1,209 @@
 {
- "generated_at": "2026-11-16 12:30 IST",
+ "generated_at": "2026-11-17 15:47 IST",
  "max_clips_per_title": 4,
  "min_height": 1080,
  "requests": [
   {
-   "slug": "vinlandsaga",
+   "slug": "mobpsycho100",
    "pillar": "anime",
-   "words": "VINLAND SAGA",
+   "words": "MOB PSYCHO 100",
    "characters": [
-    "Thorfinn"
+    "Mob",
+    "Reigen"
+   ],
+   "scene_types": [
+    "aura",
+    "fight"
+   ],
+   "search_queries": [
+    "Mob Psycho 100 Mob awakening scene",
+    "Mob Psycho 100 Reigen fight scene",
+    "Mob Psycho 100 official clips"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "hook": "The reason why Mob is truly terrifying",
+   "title": "The reason why Mob is truly terrifying 💀 | Mob reaches 100 percent | #edit",
+   "tags": [
+    "mobpsycho100",
+    "mob",
+    "reigen",
+    "animeedit",
+    "phonk",
+    "shigeo",
+    "psychic"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "vinland",
+   "pillar": "anime",
+   "words": "VINLAND SAGA SEASON 2",
+   "characters": [
+    "Canute"
    ],
    "scene_types": [
     "aura",
     "emotional"
    ],
    "search_queries": [
-    "Vinland Saga Thorfinn I have no enemies scene",
-    "Thorfinn character development scene official",
-    "Vinland Saga best Thorfinn moments"
+    "Vinland Saga Season 2 Canute scene",
+    "Vinland Saga Canute speech official",
+    "Vinland Saga official clips"
    ],
    "official_channels": [
-    "Netflix"
+    "Netflix",
+    "Netflix Anime"
    ],
-   "hook": "Why Thorfinn has no enemies",
-   "title": "Why Thorfinn has no enemies 💀 | Thorfinn's transformation | #edit",
+   "hook": "Why Canute is the ultimate mastermind",
+   "title": "Why Canute is the ultimate mastermind 💀 | King Canute's transformation | #edit",
    "tags": [
     "vinlandsaga",
-    "thorfinn",
-    "anime",
-    "edit",
+    "canute",
+    "animeedit",
     "phonk",
-    "motivation",
-    "slowed"
+    "slowed",
+    "king",
+    "edit"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "jujutsukaisen",
+   "slug": "dororo",
    "pillar": "anime",
-   "words": "JUJUTSU KAISEN",
+   "words": "DORORO",
    "characters": [
-    "Gojo Satoru"
+    "Hyakkimaru"
    ],
    "scene_types": [
     "fight",
     "aura"
    ],
    "search_queries": [
-    "Gojo Satoru domain expansion official clip",
-    "Gojo vs Jogo scene",
-    "Gojo hollow purple scene official"
+    "Dororo Hyakkimaru fight scene",
+    "Dororo anime action scenes",
+    "Hyakkimaru vs demons official"
    ],
    "official_channels": [
     "Netflix",
-    "TOHO"
+    "Netflix Anime"
    ],
-   "hook": "Why Gojo is the strongest",
-   "title": "Why Gojo is the strongest 💀 | Domain Expansion | #edit",
+   "hook": "Why Hyakkimaru is a demon hunter",
+   "title": "Why Hyakkimaru is a demon hunter 💀 | Hyakkimaru enters the fight | #edit",
    "tags": [
-    "jujutsukaisen",
-    "gojo",
-    "jujutsukaisenedit",
-    "anime",
+    "dororo",
+    "hyakkimaru",
+    "animeedit",
     "phonk",
-    "gojosatoru",
-    "aura"
+    "slowed",
+    "demon",
+    "sword"
    ],
    "market": "US/UK",
-   "known_topic": true
+   "known_topic": false
   },
   {
-   "slug": "berserk",
+   "slug": "cyberpunk",
    "pillar": "anime",
-   "words": "BERSERK",
+   "words": "CYBERPUNK EDGERUNNERS",
    "characters": [
-    "Guts"
+    "David Martinez"
    ],
    "scene_types": [
     "fight",
     "aura"
    ],
    "search_queries": [
-    "Guts vs 100 men official clip",
-    "Guts iconic moments",
-    "Berserk 1997 fight scenes"
-   ],
-   "official_channels": [
-    "Netflix"
-   ],
-   "hook": "Why Guts never gives up",
-   "title": "Why Guts never gives up 💀 | The 100 man slayer | #edit",
-   "tags": [
-    "berserk",
-    "guts",
-    "anime",
-    "phonk",
-    "edit",
-    "darkfantasy",
-    "berserker"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "hunterxhunter",
-   "pillar": "anime",
-   "words": "HUNTER X HUNTER",
-   "characters": [
-    "Killua"
-   ],
-   "scene_types": [
-    "aura",
-    "fight"
-   ],
-   "search_queries": [
-    "Killua Zoldyck aura scene official",
-    "Killua vs Rammot scene",
-    "Hunter x Hunter best Killua moments"
+    "Cyberpunk Edgerunners David fight",
+    "Cyberpunk Edgerunners action scenes",
+    "David Martinez sandevistan scene"
    ],
    "official_channels": [
     "Netflix",
-    "TOHO"
+    "Netflix Anime"
    ],
-   "hook": "Why Killua is a genius",
-   "title": "Why Killua is a genius 💀 | The Zoldyck aura | #edit",
+   "hook": "The reason why David lost control",
+   "title": "The reason why David lost control 💀 | David uses the sandevistan | #edit",
    "tags": [
-    "hxh",
-    "killua",
-    "anime",
-    "edit",
+    "cyberpunk",
+    "edgerunners",
+    "davidmartinez",
+    "animeedit",
     "phonk",
-    "hunterxhunter",
-    "aura"
+    "slowed",
+    "cyberpunk2077"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "mobpsycho",
-   "pillar": "anime",
-   "words": "MOB PSYCHO 100",
-   "characters": [
-    "Mob"
-   ],
-   "scene_types": [
-    "aura",
-    "fight"
-   ],
-   "search_queries": [
-    "Mob Psycho 100 Mob 100 percent scene",
-    "Mob awakening official clip",
-    "Mob vs Koyama scene"
-   ],
-   "official_channels": [
-    "Netflix",
-    "TOHO"
-   ],
-   "hook": "Why you should fear Mob",
-   "title": "Why you should fear Mob 💀 | 100 percent explosion | #edit",
-   "tags": [
-    "mobpsycho100",
-    "mob",
-    "anime",
-    "phonk",
-    "edit",
-    "psychic",
-    "aura"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "johnwick",
+   "slug": "darkknight",
    "pillar": "hollywood",
-   "words": "JOHN WICK",
+   "words": "THE DARK KNIGHT",
    "characters": [
-    "John Wick"
+    "Joker",
+    "Batman"
    ],
    "scene_types": [
-    "fight",
-    "aura"
+    "aura",
+    "entrance"
    ],
    "search_queries": [
-    "John Wick club scene official",
-    "John Wick pencil kill scene",
-    "John Wick best fight moments"
+    "The Dark Knight Joker interrogation scene",
+    "The Dark Knight Batman entrance",
+    "Joker pencil scene official"
    ],
    "official_channels": [
-    "Lionsgate Movies",
+    "Warner Bros. Pictures",
     "Movieclips"
    ],
-   "hook": "Why they fear John Wick",
-   "title": "Why they fear John Wick 💀 | Baba Yaga returns | #edit",
+   "hook": "Why Joker terrifies the entire city",
+   "title": "Why Joker terrifies the entire city 💀 | Joker interrogation scene | #edit",
    "tags": [
-    "johnwick",
-    "keanureeves",
-    "hollywood",
-    "action",
+    "joker",
+    "thedarkknight",
+    "batman",
+    "heathledger",
     "phonk",
-    "edit",
-    "aura"
+    "slowed",
+    "movieedit"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "oppenheimer",
+   "slug": "inception",
    "pillar": "hollywood",
-   "words": "OPPENHEIMER",
+   "words": "INCEPTION",
    "characters": [
-    "Robert Oppenheimer"
+    "Cobb"
    ],
    "scene_types": [
-    "emotional",
-    "aura"
+    "aura",
+    "emotional"
    ],
    "search_queries": [
-    "Oppenheimer trinity test scene official",
-    "Oppenheimer speech scene",
-    "Cillian Murphy Oppenheimer iconic moments"
+    "Inception hallway fight scene",
+    "Inception dream scene official",
+    "Inception Cobb scenes"
    ],
    "official_channels": [
-    "Universal Pictures"
+    "Warner Bros. Pictures",
+    "Movieclips"
    ],
-   "hook": "Why he regrets his creation",
-   "title": "Why he regrets his creation 💀 | The Trinity Test | #edit",
+   "hook": "The reason why Cobb never wakes up",
+   "title": "The reason why Cobb never wakes up 💀 | Inception hallway fight | #edit",
    "tags": [
-    "oppenheimer",
-    "nolan",
-    "hollywood",
-    "cillianmurphy",
-    "edit",
+    "inception",
+    "cobb",
+    "leonardodicaprio",
     "phonk",
+    "slowed",
+    "movieedit",
     "aura"
    ],
    "market": "US/UK",
@@ -243,62 +214,66 @@
    "pillar": "hollywood",
    "words": "WHIPLASH",
    "characters": [
-    "Andrew Neiman"
+    "Fletcher",
+    "Andrew"
    ],
    "scene_types": [
-    "emotional",
-    "aura"
+    "aura",
+    "emotional"
    ],
    "search_queries": [
-    "Whiplash final drumming scene official",
-    "Whiplash Fletcher scene",
-    "Whiplash iconic moments"
+    "Whiplash Fletcher drum scene",
+    "Whiplash tempo scene official",
+    "Whiplash ending scene"
    ],
    "official_channels": [
-    "Sony Pictures Entertainment"
+    "Sony Pictures Entertainment",
+    "Movieclips"
    ],
-   "hook": "Why he became a legend",
-   "title": "Why he became a legend 💀 | Andrew's final solo | #edit",
+   "hook": "Why Fletcher is the scariest teacher",
+   "title": "Why Fletcher is the scariest teacher 💀 | Fletcher drums scene | #edit",
    "tags": [
     "whiplash",
-    "drumming",
-    "hollywood",
-    "edit",
+    "fletcher",
+    "drums",
     "phonk",
-    "aura",
-    "music"
+    "slowed",
+    "movieedit",
+    "aura"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "interstellar",
+   "slug": "matrix",
    "pillar": "hollywood",
-   "words": "INTERSTELLAR",
+   "words": "THE MATRIX",
    "characters": [
-    "Cooper"
+    "Neo",
+    "Agent Smith"
    ],
    "scene_types": [
-    "emotional",
+    "fight",
     "aura"
    ],
    "search_queries": [
-    "Interstellar docking scene official",
-    "Interstellar Cooper message scene",
-    "Interstellar best moments"
+    "The Matrix lobby shootout",
+    "The Matrix Neo fight official",
+    "Matrix bullet time scene"
    ],
    "official_channels": [
-    "Warner Bros. Pictures"
+    "Warner Bros. Pictures",
+    "Movieclips"
    ],
-   "hook": "Why he left his family",
-   "title": "Why he left his family 💀 | The docking scene | #edit",
+   "hook": "Why Neo is the chosen one",
+   "title": "Why Neo is the chosen one 💀 | Neo lobby fight | #edit",
    "tags": [
-    "interstellar",
-    "christophernolan",
-    "hollywood",
-    "edit",
+    "matrix",
+    "neo",
+    "keanureeves",
     "phonk",
-    "space",
+    "slowed",
+    "movieedit",
     "aura"
    ],
    "market": "US/UK",
@@ -309,102 +284,36 @@
    "pillar": "bollywood",
    "words": "ANIMAL",
    "characters": [
-    "Ranbir Kapoor"
+    "Ranvijay"
    ],
    "scene_types": [
     "fight",
     "aura"
    ],
    "search_queries": [
-    "Animal movie entry scene",
-    "Ranbir Kapoor Animal hallway fight",
+    "Animal movie Ranvijay entry",
+    "Animal Ranbir Kapoor fight",
     "Animal official movie clips"
    ],
    "official_channels": [
     "T-Series"
    ],
-   "hook": "Why he is the villain",
-   "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+   "hook": "Why Ranvijay is the ultimate protector",
+   "title": "Why Ranvijay is the ultimate protector 💀 | Ranvijay hallway fight | #edit",
    "tags": [
     "animal",
     "ranbirkapoor",
     "bollywood",
-    "edit",
     "phonk",
-    "aura",
-    "action"
-   ],
-   "market": "IN",
-   "known_topic": false
-  },
-  {
-   "slug": "kgf",
-   "pillar": "south",
-   "words": "KGF CHAPTER 2",
-   "characters": [
-    "Rocky Bhai"
-   ],
-   "scene_types": [
-    "entrance",
+    "slowed",
+    "movieedit",
     "aura"
    ],
-   "search_queries": [
-    "KGF 2 Rocky entry scene",
-    "Rocky Bhai gun scene",
-    "KGF best moments"
-   ],
-   "official_channels": [
-    "Hombale Films"
-   ],
-   "hook": "Why Rocky owns the city",
-   "title": "Why Rocky owns the city 💀 | The entry | #edit",
-   "tags": [
-    "kgf2",
-    "rockybhai",
-    "south",
-    "edit",
-    "phonk",
-    "aura",
-    "action"
-   ],
    "market": "IN",
    "known_topic": false
   },
   {
-   "slug": "vikram",
-   "pillar": "south",
-   "words": "VIKRAM",
-   "characters": [
-    "Vikram"
-   ],
-   "scene_types": [
-    "fight",
-    "aura"
-   ],
-   "search_queries": [
-    "Vikram movie climax fight",
-    "Kamal Haasan Vikram entry",
-    "Vikram official scenes"
-   ],
-   "official_channels": [
-    "Raj Kamal Films International"
-   ],
-   "hook": "Why he is the legend",
-   "title": "Why he is the legend 💀 | Vikram returns | #edit",
-   "tags": [
-    "vikram",
-    "kamalhaasan",
-    "south",
-    "edit",
-    "phonk",
-    "aura",
-    "action"
-   ],
-   "market": "IN",
-   "known_topic": false
-  },
-  {
-   "slug": "gangsofwasseypur",
+   "slug": "gangleader",
    "pillar": "bollywood",
    "words": "GANGS OF WASSEYPUR",
    "characters": [
@@ -415,55 +324,124 @@
     "entrance"
    ],
    "search_queries": [
-    "Faizal Khan entry scene",
-    "Gangs of Wasseypur best moments",
-    "Faizal Khan aura"
+    "Gangs of Wasseypur Faizal Khan entry",
+    "Faizal Khan scene official",
+    "Gangs of Wasseypur best moments"
    ],
    "official_channels": [
-    "Viacom18 Studios"
+    "T-Series"
    ],
-   "hook": "Why Faizal is a menace",
-   "title": "Why Faizal is a menace 💀 | The legend enters | #edit",
+   "hook": "Why Faizal Khan rules Wasseypur",
+   "title": "Why Faizal Khan rules Wasseypur 💀 | Faizal Khan entry | #edit",
    "tags": [
     "gangsofwasseypur",
     "faizalkhan",
     "bollywood",
-    "edit",
     "phonk",
-    "aura",
-    "classic"
+    "slowed",
+    "movieedit",
+    "aura"
    ],
    "market": "IN",
    "known_topic": false
   },
   {
-   "slug": "taarezameenpar",
+   "slug": "don",
    "pillar": "bollywood",
-   "words": "TAARE ZAMEEN PAR",
+   "words": "DON",
    "characters": [
-    "Ishaan"
+    "Don"
    ],
    "scene_types": [
-    "emotional"
+    "aura",
+    "entrance"
    ],
    "search_queries": [
-    "Taare Zameen Par painting scene",
-    "Ishaan emotional scene",
-    "Taare Zameen Par best moments"
+    "Don Shah Rukh Khan entry",
+    "Don movie scenes official",
+    "Don best dialogue scene"
    ],
    "official_channels": [
-    "UTV Motion Pictures"
+    "YRF",
+    "T-Series"
    ],
-   "hook": "Why he felt so alone",
-   "title": "Why he felt so alone 💀 | The painting scene | #edit",
+   "hook": "Why Don is impossible to catch",
+   "title": "Why Don is impossible to catch 💀 | Don entrance | #edit",
    "tags": [
-    "taarezameenpar",
-    "ishaan",
+    "don",
+    "shahrukhkhan",
     "bollywood",
-    "edit",
     "phonk",
-    "emotional",
+    "slowed",
+    "movieedit",
     "aura"
+   ],
+   "market": "IN",
+   "known_topic": false
+  },
+  {
+   "slug": "vikram",
+   "pillar": "south",
+   "words": "VIKRAM",
+   "characters": [
+    "Vikram",
+    "Rolex"
+   ],
+   "scene_types": [
+    "fight",
+    "aura"
+   ],
+   "search_queries": [
+    "Vikram Kamal Haasan entry",
+    "Vikram Rolex entry scene",
+    "Vikram movie action official"
+   ],
+   "official_channels": [
+    "Sun Pictures"
+   ],
+   "hook": "Why Rolex is the ultimate villain",
+   "title": "Why Rolex is the ultimate villain 💀 | Rolex entry scene | #edit",
+   "tags": [
+    "vikram",
+    "rolex",
+    "suriya",
+    "southmovie",
+    "phonk",
+    "slowed",
+    "movieedit"
+   ],
+   "market": "IN",
+   "known_topic": false
+  },
+  {
+   "slug": "kgf2",
+   "pillar": "south",
+   "words": "KGF CHAPTER 2",
+   "characters": [
+    "Rocky"
+   ],
+   "scene_types": [
+    "fight",
+    "aura"
+   ],
+   "search_queries": [
+    "KGF 2 Rocky Bhai entry",
+    "KGF 2 fight scene official",
+    "KGF 2 mass scene"
+   ],
+   "official_channels": [
+    "Hombale Films"
+   ],
+   "hook": "Why Rocky Bhai became a legend",
+   "title": "Why Rocky Bhai became a legend 💀 | Rocky Bhai entry | #edit",
+   "tags": [
+    "kgf2",
+    "rockybhai",
+    "yash",
+    "southmovie",
+    "phonk",
+    "slowed",
+    "movieedit"
    ],
    "market": "IN",
    "known_topic": false
