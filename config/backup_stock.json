@@ -172,8 +172,9 @@
       "id": "stock-apothecarydiaries2-09",
       "topic_id": "backup-apothecarydiaries2",
       "slug": "apothecarydiaries2",
-      "status": "pending",
-      "queued_at": "2026-11-17 20:23 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 20:23 IST",
+      "result_id": "stock-apothecarydiaries2-09"
     },
     {
       "id": "stock-arcane2-01",
@@ -587,8 +588,9 @@
       "id": "stock-dbsuperhero-06",
       "topic_id": "backup-dbsuperhero",
       "slug": "dbsuperhero",
-      "status": "pending",
-      "queued_at": "2026-11-17 20:23 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 20:23 IST",
+      "result_id": "stock-dbsuperhero-06"
     },
     {
       "id": "stock-deadpool3-01",
