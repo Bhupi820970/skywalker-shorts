@@ -783,6 +783,13 @@
       "queued_at": "2026-11-17 20:30 IST"
     },
     {
+      "id": "stock-firstslamdunk-01",
+      "topic_id": "backup-firstslamdunk",
+      "slug": "firstslamdunk",
+      "status": "pending",
+      "queued_at": "2026-11-17 21:37 IST"
+    },
+    {
       "id": "stock-fnaf2-01",
       "topic_id": "backup-fnaf2",
       "slug": "fnaf2",
@@ -837,6 +844,13 @@
       "status": "pending",
       "queued_at": "2026-11-16 14:09 IST",
       "result_id": "stock-fnaf2-07"
+    },
+    {
+      "id": "stock-frieren-01",
+      "topic_id": "backup-frieren",
+      "slug": "frieren",
+      "status": "pending",
+      "queued_at": "2026-11-17 21:37 IST"
     },
     {
       "id": "stock-furiosa-01",
