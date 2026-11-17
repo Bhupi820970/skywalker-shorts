@@ -330,6 +330,20 @@
       "queued_at": "2026-11-17 16:32 IST"
     },
     {
+      "id": "stock-dandadan-01",
+      "topic_id": "backup-dandadan",
+      "slug": "dandadan",
+      "status": "pending",
+      "queued_at": "2026-11-17 16:32 IST"
+    },
+    {
+      "id": "stock-dandadan2-01",
+      "topic_id": "backup-dandadan2",
+      "slug": "dandadan2",
+      "status": "pending",
+      "queued_at": "2026-11-17 16:32 IST"
+    },
+    {
       "id": "stock-deadpool3-01",
       "topic_id": "backup-deadpool3",
       "slug": "deadpool3",
