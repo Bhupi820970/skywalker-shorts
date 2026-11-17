@@ -124,8 +124,9 @@
       "id": "stock-apothecarydiaries2-04",
       "topic_id": "backup-apothecarydiaries2",
       "slug": "apothecarydiaries2",
-      "status": "pending",
-      "queued_at": "2026-11-17 18:18 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 18:18 IST",
+      "result_id": "stock-apothecarydiaries2-04"
     },
     {
       "id": "stock-arcane2-01",
@@ -204,8 +205,9 @@
       "id": "stock-bleachtybw-04",
       "topic_id": "backup-bleachtybw",
       "slug": "bleachtybw",
-      "status": "pending",
-      "queued_at": "2026-11-17 18:18 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 18:18 IST",
+      "result_id": "stock-bleachtybw-04"
     },
     {
       "id": "stock-bluegiant-01",
@@ -236,8 +238,9 @@
       "id": "stock-bluelock2-03",
       "topic_id": "backup-bluelock2",
       "slug": "bluelock2",
-      "status": "pending",
-      "queued_at": "2026-11-17 18:18 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 18:18 IST",
+      "result_id": "stock-bluelock2-03"
     },
     {
       "id": "stock-boyandheron-01",
@@ -451,8 +454,9 @@
       "id": "stock-dbsuperhero-03",
       "topic_id": "backup-dbsuperhero",
       "slug": "dbsuperhero",
-      "status": "pending",
-      "queued_at": "2026-11-17 18:18 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 18:18 IST",
+      "result_id": "stock-dbsuperhero-03"
     },
     {
       "id": "stock-deadpool3-01",
