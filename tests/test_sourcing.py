@@ -10,14 +10,18 @@ sys.path.insert(0, str(ROOT))
 import sourcing
 
 
-def test_rank_prefers_github_and_studio_over_youtube():
-    gh = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/x.mp4"
-    studio = "https://www.marvel.com/movies/foo"
+def test_rank_prefers_x_then_youtube_then_release():
+    x = "https://x.com/NetflixAnime/status/123"
     yt = "https://www.youtube.com/watch?v=abc"
-    assert sourcing._rank_url(gh) < sourcing._rank_url(studio) < sourcing._rank_url(yt)
+    studio = "https://www.marvel.com/movies/foo"
+    gh = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/x.mp4"
+    assert sourcing._rank_url(x) < sourcing._rank_url(yt) < sourcing._rank_url(studio) < sourcing._rank_url(gh)
+    assert sourcing.is_x_url(x) and sourcing.is_x_url("https://twitter.com/TOHO_official/status/9")
+    assert sourcing.is_youtube_url(yt)
+    assert sourcing.is_release_url(gh)
 
 
-def test_build_candidate_urls_orders_fallback_before_youtube():
+def test_build_candidate_urls_orders_x_and_youtube_before_release():
     item = {
         "id": "20261114-0900-runningman",
         "words": "RUNNING MAN",
@@ -26,17 +30,19 @@ def test_build_candidate_urls_orders_fallback_before_youtube():
         "fallback_mp4": [
             "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/runningman_scene1_h264.mp4"
         ],
+        "x_urls": ["https://x.com/Netflix/status/555"],
         "alt_source_urls": [
             "https://www.dailymotion.com/video/x9u83ec",
             "https://www.youtube.com/watch?v=other",
         ],
     }
     urls = sourcing.build_candidate_urls(item)
-    assert urls[0].endswith("runningman_scene1_h264.mp4")
+    assert urls[0].startswith("https://x.com/")
+    gh_idxs = [i for i, u in enumerate(urls) if "github.com" in u]
     yt_idxs = [i for i, u in enumerate(urls) if "youtube.com" in u or "youtu.be" in u]
-    non_yt = [i for i, u in enumerate(urls) if "youtube.com" not in u and "youtu.be" not in u]
-    assert non_yt and yt_idxs
-    assert max(non_yt) < min(yt_idxs) or urls.index(item["fallback_mp4"][0]) == 0
+    x_idxs = [i for i, u in enumerate(urls) if sourcing.is_x_url(u)]
+    assert x_idxs and yt_idxs and gh_idxs
+    assert max(x_idxs) < min(yt_idxs) < min(gh_idxs)
 
 
 def test_content_kinds_include_scenes_not_only_trailers():
@@ -230,3 +236,59 @@ def test_ytdlp_output_template_is_not_a_fixed_name():
     assert tmpl.endswith(".%(ext)s")
     assert "src.%(ext)s" in tmpl
     assert tmpl != "/tmp/work/src.mp4"
+
+
+def test_x_resolution_stats_counts_pass_fail_unknown():
+    entries = [
+        {"platform": "x", "url": "https://x.com/a/status/1", "width": 1920, "height": 1080},
+        {"platform": "x", "url": "https://x.com/a/status/2", "width": 1280, "height": 720},
+        {"platform": "x", "url": "https://x.com/a/status/3"},
+        {"platform": "youtube", "url": "https://www.youtube.com/watch?v=z", "width": 1920, "height": 1080},
+        {"url": "https://twitter.com/b/status/4", "formats": [{"width": 1920, "height": 1080}]},
+    ]
+    s = sourcing.x_resolution_stats(entries)
+    assert s == {"x_total": 4, "x_pass_1080": 2, "x_below_1080": 1, "x_unknown": 1}
+    assert sourcing.classify_resolution(1280, 720) == "fail"
+    assert sourcing.classify_resolution(1920, 1080) == "pass"
+    assert sourcing.classify_resolution(0, 0) == "unknown"
+    # 1080p floor is not relaxed for X: formats_meet_1080 still rejects 720p
+    assert sourcing.formats_meet_1080([], 1280, 720) is False
+
+
+def test_official_x_handles_map_from_channels():
+    hs = sourcing.official_x_handles_for({
+        "words": "SUZUME",
+        "official_channels": ["GKIDS Films", "TOHO animation", "Netflix Anime"],
+        "x_handles": ["@NetflixAnime"],
+    })
+    low = {h.lower() for h in hs}
+    assert "netflixanime" in low
+    assert "gkidsfilms" in low
+    assert "toho_animation" in low
+
+
+def test_x_post_matches_title():
+    assert sourcing.x_post_matches_title("Suzume official clip from the movie", "SUZUME")
+    assert sourcing.x_post_matches_title("Your Name scene", "YOUR NAME")
+    assert not sourcing.x_post_matches_title("unrelated sports clip", "SUZUME")
+
+
+def test_more_official_orders_x_entries_ahead_of_youtube():
+    item = {"id": "demo-v5-romance", "words": "SUZUME", "official_channels": ["GKIDS Films"]}
+    entries = [
+        {"url": "https://www.youtube.com/watch?v=aaaa1111", "title": "Suzume scene",
+         "channel": "GKIDS Films", "handle": "", "duration": 40},
+        {"url": "https://x.com/GKIDSfilms/status/99", "title": "Suzume scene",
+         "channel": "GKIDS Films", "handle": "GKIDSfilms", "duration": 30},
+    ]
+    urls = sourcing.more_official_scene_urls(item, already=[], limit=5, entries=entries)
+    assert urls[0].startswith("https://x.com/")
+    assert any("youtube.com" in u for u in urls)
+
+
+def test_x_search_url_is_from_account_and_title():
+    url = sourcing.x_search_url("NetflixAnime", "Suzume")
+    assert url.startswith("https://x.com/search?")
+    assert "from%3ANetflixAnime" in url or "from:NetflixAnime" in url
+    assert "Suzume" in url
+

@@ -1,11 +1,12 @@
 """Official video source chain for Skywalker Shorts.
 
 YouTube often blocks GitHub runners ("Sign in to confirm you're not a bot").
-download_source builds a long fallback chain: studio/press kits -> official
-scene-clip sites -> official channels on other platforms -> Indian free clip
-sites -> YouTube via yt-dlp last. Only free official SCENE clips (1080p+).
-No trailers or teasers, even as fallback. No DRM breaking, no paid OTT rips,
-no third-party channel watermarks.
+Link mode (Gemini/search-discovered official links) is the primary path:
+official X (Twitter) video posts first, then official YouTube, then the
+GitHub sources-release / backup pool as fallback. Only free official SCENE
+clips (1080p+). No trailers or teasers, even as fallback. No DRM breaking,
+no paid OTT rips, no third-party channel watermarks. X clips still must
+meet the 1080p floor; 720p X videos are skipped.
 """
 from __future__ import annotations
 
@@ -58,6 +59,36 @@ INDIAN_HOSTS = (
 )
 
 YOUTUBE_HOSTS = ("youtube.com", "youtu.be", "youtube-nocookie.com")
+X_HOSTS = ("x.com", "twitter.com")
+
+# Official studio / distributor / anime X accounts (handle, no @).
+# Only well-known official accounts; never fan pages.
+OFFICIAL_X_HANDLES = {
+    "netflix": "Netflix",
+    "netflixanime": "Netflix Anime",
+    "netflixindia": "Netflix India",
+    "primevideo": "Prime Video",
+    "warnerbros": "Warner Bros.",
+    "marvel": "Marvel Entertainment",
+    "sonypictures": "Sony Pictures Entertainment",
+    "toho_official": "TOHO",
+    "toho_animation": "TOHO animation",
+    "aniplexusa": "Aniplex USA",
+    "disneystudios": "Walt Disney Studios",
+    "disneyplus": "Disney+",
+    "pixar": "Pixar",
+    "universalpics": "Universal Pictures",
+    "paramountpics": "Paramount Pictures",
+    "lionsgate": "Lionsgate Movies",
+    "a24": "A24",
+    "appletv": "Apple TV",
+    "rockstargames": "Rockstar Games",
+    "crunchyroll": "Crunchyroll",
+    "adultswim": "Adult Swim",
+    "wit_studio": "WIT STUDIO",
+    "gkidsfilms": "GKIDS Films",
+    "mappa_info": "MAPPA",
+}
 
 # Queue / catalog request kinds. Trailers/teasers are never sourced.
 CONTENT_KINDS = (
@@ -125,23 +156,39 @@ def _host(url: str) -> str:
     return (m.group(1) or "").lower() if m else ""
 
 
-def _rank_url(url: str) -> int:
-    """Lower = try sooner."""
+def is_x_url(url: str) -> bool:
     h = _host(url)
-    if any(h == s or h.endswith("." + s) for s in STUDIO_HOSTS):
+    return any(h == s or h.endswith("." + s) or s in h for s in X_HOSTS)
+
+
+def is_youtube_url(url: str) -> bool:
+    h = _host(url)
+    return any(h == s or h.endswith("." + s) or s in h for s in YOUTUBE_HOSTS)
+
+
+def is_release_url(url: str) -> bool:
+    return "github.com" in (url or "") and "/releases/download/" in (url or "")
+
+
+def _rank_url(url: str) -> int:
+    """Lower = try sooner. Link mode first: official X, then YouTube, then release pool."""
+    h = _host(url)
+    if is_x_url(url):
+        return 0
+    if is_youtube_url(url):
         return 10
-    if any(h == s or h.endswith("." + s) for s in TRAILER_CLIP_HOSTS):
+    if any(h == s or h.endswith("." + s) for s in STUDIO_HOSTS):
         return 20
-    if "archive.org" in h:
+    if any(h == s or h.endswith("." + s) for s in TRAILER_CLIP_HOSTS):
         return 25
-    if any(h == s or h.endswith("." + s) for s in PLATFORM_HOSTS):
+    if "archive.org" in h:
         return 30
+    if any(h == s or h.endswith("." + s) for s in PLATFORM_HOSTS):
+        return 35
     if any(h == s or h.endswith("." + s) for s in INDIAN_HOSTS):
         return 40
-    if any(h == s or h.endswith("." + s) for s in YOUTUBE_HOSTS):
-        return 90
-    if "github.com" in h and "/releases/download/" in (url or ""):
-        return 5  # already-uploaded official fallback: highest priority after primary
+    if is_release_url(url):
+        return 80  # sources-release / backup pool: last-resort official fallback
     return 50
 
 
@@ -414,7 +461,7 @@ def catalog_urls_for(item: dict) -> list[str]:
     urls: list[str] = []
     for field in ("studio_urls", "press_kit_urls", "clip_urls", "scene_urls",
                   "platform_urls", "indian_urls", "archive_urls", "youtube_urls",
-                  "alt_source_urls", "urls"):
+                  "x_urls", "alt_source_urls", "urls"):
         for u in row.get(field) or []:
             if u and u not in urls and not is_trailer_source(u):
                 urls.append(u)
@@ -467,34 +514,27 @@ def build_candidate_urls(item: dict, *, include_youtube: bool = True) -> list[st
             return
         urls.append(u)
 
-    # 1) Already-hosted GitHub release fallbacks (never need YouTube)
-    for u in item.get("fallback_mp4") or []:
+    # Link-mode URLs (X, YouTube, other official pages) plus release fallbacks.
+    # Final order is decided by _rank_url (X -> YouTube -> studio -> release).
+    for u in item.get("x_urls") or []:
         add(u)
-    # 2) Explicit alt_source_urls on the item
     for u in item.get("alt_source_urls") or []:
         add(u)
-    # 3) Catalog (studio -> clips -> platforms -> indian -> youtube)
-    for u in catalog_urls_for(item):
-        add(u)
-    # 4) Primary source_url only when it is not a trailer/teaser
     su = item.get("source_url")
     kind = (item.get("content_kind") or "").lower()
     if su and not is_trailer_source(su) and kind not in ("trailer", "teaser"):
         add(su)
+    for u in catalog_urls_for(item):
+        add(u)
+    for u in item.get("fallback_mp4") or []:
+        add(u)
 
-    # Sort non-github by host rank, but keep github fallbacks first.
     # Trailers are never candidates, even as a last fallback.
     urls = scene_only(urls)
-    gh, rest = [], []
-    for u in urls:
-        if "github.com" in u and "/releases/download/" in u:
-            gh.append(u)
-        else:
-            rest.append(u)
-    rest.sort(key=_rank_url)
     if not include_youtube:
-        rest = [u for u in rest if _rank_url(u) < 90]
-    return gh + rest
+        urls = [u for u in urls if not is_youtube_url(u)]
+    urls.sort(key=_rank_url)
+    return urls
 
 
 def _ok_src(p: Path, min_bytes: int = 500_000) -> bool:
@@ -559,6 +599,164 @@ def formats_meet_1080(formats: list[dict] | None, width: int = 0, height: int = 
     if not best:
         return True
     return best >= MIN_SHORT_SIDE
+
+
+def classify_resolution(width: int = 0, height: int = 0, formats: list | None = None) -> str:
+    """'pass', 'fail', or 'unknown' against the 1080p short-side floor."""
+    best = short_side(int(width or 0), int(height or 0))
+    known = bool(best)
+    for f in formats or []:
+        if not isinstance(f, dict):
+            continue
+        s = short_side(int(f.get("width") or 0), int(f.get("height") or 0))
+        if not f.get("width") and f.get("height"):
+            s = max(s, int(f.get("height") or 0))
+        if s:
+            known = True
+            best = max(best, s)
+    if not known:
+        return "unknown"
+    return "pass" if best >= MIN_SHORT_SIDE else "fail"
+
+
+def x_resolution_stats(entries: list[dict] | None) -> dict:
+    """How many official X candidates meet / miss / lack a known 1080p size."""
+    stats = {"x_total": 0, "x_pass_1080": 0, "x_below_1080": 0, "x_unknown": 0}
+    for e in entries or []:
+        url = e.get("url") or e.get("webpage_url") or ""
+        if (e.get("platform") or "") != "x" and not is_x_url(url):
+            continue
+        stats["x_total"] += 1
+        kind = classify_resolution(e.get("width") or 0, e.get("height") or 0, e.get("formats"))
+        if kind == "pass":
+            stats["x_pass_1080"] += 1
+        elif kind == "fail":
+            stats["x_below_1080"] += 1
+        else:
+            stats["x_unknown"] += 1
+    return stats
+
+
+def official_x_handles_for(item: dict | None = None) -> list[str]:
+    """Official X handles to search for this title (item/catalog + mapped studios)."""
+    out: list[str] = []
+    seen: set[str] = set()
+
+    def add(h: str):
+        h = (h or "").lstrip("@").strip()
+        key = re.sub(r"[^a-z0-9_]", "", h.lower())
+        if not h or not key or key in seen:
+            return
+        seen.add(key)
+        out.append(h)
+
+    item = item or {}
+    for h in item.get("x_handles") or []:
+        add(h)
+    names = list(item.get("official_channels") or [])
+    try:
+        key = topic_key(item)
+        row = (load_catalog().get("topics") or {}).get(key) or {}
+        for h in row.get("x_handles") or []:
+            add(h)
+        names += list(row.get("official_channels") or [])
+    except Exception:
+        pass
+    for ch in names:
+        n = re.sub(r"[^a-z0-9]", "", str(ch).lower())
+        if not n or len(n) < 3:
+            continue
+        for handle, display in OFFICIAL_X_HANDLES.items():
+            hn = re.sub(r"[^a-z0-9]", "", handle.lower())
+            dn = re.sub(r"[^a-z0-9]", "", display.lower())
+            if n == hn or n == dn or n.startswith(hn) or hn.startswith(n) or n in dn or dn in n:
+                add(handle)
+    return out[:8]
+
+
+def x_post_matches_title(text: str, film: str) -> bool:
+    tokens = [t for t in re.split(r"[^a-z0-9]+", (film or "").lower()) if len(t) >= 3]
+    if not tokens:
+        return False
+    blob = (text or "").lower()
+    hits = sum(1 for tok in tokens if tok in blob)
+    return hits >= min(2, len(tokens)) or tokens[0] in blob
+
+
+def x_search_url(handle: str, film: str) -> str:
+    h = (handle or "").lstrip("@").strip()
+    q = f"from:{h} {film}".strip()
+    return f"https://x.com/search?q={quote_plus(q)}&src=typed_query&f=video"
+
+
+def _flat_x_entries(target: str, n: int = 8) -> list[dict]:
+    """yt-dlp flat metadata for an X profile or search URL (no download, no cookies)."""
+    try:
+        r = subprocess.run(
+            ["yt-dlp", "--flat-playlist", "-I", f"1:{n}", "-J", "--no-warnings",
+             "--no-cookies", target],
+            capture_output=True, text=True, timeout=60,
+        )
+    except Exception:
+        return []
+    if r.returncode != 0:
+        return []
+    try:
+        data = json.loads(r.stdout or "{}")
+        rows = data.get("entries") or []
+        if not rows and data.get("id"):
+            rows = [data]
+    except Exception:
+        return []
+    out = []
+    for e in rows:
+        if not isinstance(e, dict):
+            continue
+        vid = str(e.get("id") or e.get("display_id") or "")
+        url = e.get("webpage_url") or e.get("url") or ""
+        if not str(url).startswith("http"):
+            url = f"https://x.com/i/status/{vid}" if vid else ""
+        if not url:
+            continue
+        out.append({
+            "id": f"x:{vid or url}",
+            "url": url,
+            "title": e.get("title") or e.get("description") or "",
+            "channel": e.get("channel") or e.get("uploader") or "",
+            "handle": e.get("uploader_id") or e.get("channel_id") or "",
+            "duration": e.get("duration") or 0,
+            "width": e.get("width") or 0,
+            "height": e.get("height") or 0,
+            "formats": e.get("formats") or [],
+            "platform": "x",
+        })
+    return out
+
+
+def search_official_x_entries(item: dict, limit: int = 6) -> list[dict]:
+    """Official-account X posts for this title (metadata only, no cookies)."""
+    film = (item.get("words") or "").strip() or topic_key(item).replace("-", " ")
+    found: list[dict] = []
+    seen: set[str] = set()
+    for h in official_x_handles_for(item):
+        rows = _flat_x_entries(x_search_url(h, film), n=max(4, limit))
+        if not rows:
+            rows = [
+                e for e in _flat_x_entries(f"https://x.com/{h}", n=8)
+                if x_post_matches_title(e.get("title") or "", film)
+            ]
+        for e in rows:
+            e["handle"] = e.get("handle") or h
+            e["channel"] = e.get("channel") or h
+            url = e.get("url") or ""
+            key = url.rstrip("/").lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            found.append(e)
+            if len(found) >= limit:
+                return found
+    return found
 
 
 def download_direct(url: str, dest: Path) -> tuple[bool, str]:
@@ -687,6 +885,13 @@ def official_name_set() -> set[str]:
         "stillwatchingnetflix",
     ):
         names.add(extra)
+    for handle, display in OFFICIAL_X_HANDLES.items():
+        n = re.sub(r"[^a-z0-9]", "", handle.lower())
+        if n:
+            names.add(n)
+        n = re.sub(r"[^a-z0-9]", "", display.lower())
+        if n:
+            names.add(n)
     return names
 
 
@@ -760,16 +965,11 @@ def more_official_scene_urls(
             return False
         return True
 
-    # Live path: already-known official catalog/item scene URLs first (no network).
-    if entries is None:
-        for u in list(catalog_urls_for(item)) + list(item_scene_urls(item)):
-            if u and not is_trailer_source(u):
-                key = u.rstrip("/").lower()
-                if key not in already_l and u not in out:
-                    out.append(u)
-                    already_l.add(key)
-            if len(out) >= limit:
-                return out
+    def _add(url: str):
+        key = url.rstrip("/").lower()
+        if key not in already_l and url not in out:
+            out.append(url)
+            already_l.add(key)
 
     for e in rows:
         if not isinstance(e, dict):
@@ -777,15 +977,26 @@ def more_official_scene_urls(
         url = e.get("url") or e.get("webpage_url") or ""
         if keep(url, e.get("title") or "", e.get("channel") or e.get("uploader") or "",
                 e.get("handle") or "", e.get("duration")):
-            out.append(url)
-            already_l.add(url.rstrip("/").lower())
-        if len(out) >= limit:
-            return out
+            _add(url)
+        if len(out) >= limit and entries is not None:
+            break
 
     if entries is not None:
-        return out
+        out.sort(key=_rank_url)
+        return out[:limit]
 
-    # Live search: flat yt-dlp metadata only (no media download).
+    # Live search, link-mode first: official X, then official YouTube.
+    # Catalog / sources-release URLs fill any remaining slots (no early return
+    # that would skip X just because a GitHub clip is already known).
+    for e in search_official_x_entries(item, limit=limit):
+        url = e.get("url") or ""
+        if keep(url, e.get("title") or "", e.get("channel") or "",
+                e.get("handle") or "", e.get("duration")):
+            _add(url)
+        if len(out) >= limit:
+            out.sort(key=_rank_url)
+            return out[:limit]
+
     for q in search_queries(item):
         if not q.startswith(("ytsearch", "dmsearch", "bilibilisearch")):
             q = f"ytsearch6:{q}"
@@ -802,17 +1013,24 @@ def more_official_scene_urls(
                 if not str(url).startswith("http") and vid:
                     url = f"https://www.youtube.com/watch?v={vid}"
                 title = e.get("title") or ""
-                if _BAD_TITLE.search(title) if "_BAD_TITLE" in globals() else False:
+                if _BAD_TITLE.search(title):
                     continue
                 if keep(url, title, e.get("channel") or e.get("uploader") or "",
                         e.get("channel_id") or e.get("uploader_id") or "", e.get("duration")):
-                    out.append(url)
-                    already_l.add(url.rstrip("/").lower())
+                    _add(url)
                 if len(out) >= limit:
-                    return out
+                    out.sort(key=_rank_url)
+                    return out[:limit]
         except Exception:
             continue
-    return out
+
+    for u in list(catalog_urls_for(item)) + list(item_scene_urls(item)):
+        if u and not is_trailer_source(u):
+            _add(u)
+        if len(out) >= limit:
+            break
+    out.sort(key=_rank_url)
+    return out[:limit]
 
 
 
@@ -914,9 +1132,9 @@ def download_source(
 ) -> tuple[str | None, list[str]]:
     """Try every official candidate until one lands a 1080p+ mp4.
 
-    Order: GitHub sources release / fallback_mp4 -> catalog studio/press ->
-    trailer sites -> platforms (DM/Vimeo/Archive/...) -> Indian free clips ->
-    item alt URLs -> sibling release assets -> YouTube last.
+    Default order (link mode primary): official X -> official YouTube ->
+    other official pages -> GitHub sources-release / backup pool last.
+    force_fallback retries release assets first after live links failed.
     """
     errors: list[str] = []
     skip = set(skip or [])
@@ -933,9 +1151,9 @@ def download_source(
             candidates.append(u)
 
     if force_fallback:
-        # Prefer non-YouTube / release assets first
-        candidates = [u for u in candidates if _rank_url(u) < 90] + [
-            u for u in candidates if _rank_url(u) >= 90
+        # Retry: official release assets first, then remaining official links.
+        candidates = [u for u in candidates if is_release_url(u)] + [
+            u for u in candidates if not is_release_url(u)
         ]
 
     for u in candidates:

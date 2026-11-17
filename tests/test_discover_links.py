@@ -274,3 +274,56 @@ def test_filter_drops_explicit_official_clip():
     kept = d.filter_official_candidates(entries, official=official, deny=set(), seen=set())
     urls = [c["url"] for c in kept]
     assert urls == ["https://www.youtube.com/watch?v=officialcute"]
+
+
+def test_collect_candidates_tries_x_before_youtube():
+    official = {"netflixanime", "netflix"}
+    order = []
+
+    def x_search(handle, title, n=6):
+        order.append(("x", handle, title))
+        return [{
+            "id": "x:111", "url": "https://x.com/NetflixAnime/status/111",
+            "title": "Suzume official scene", "channel": "Netflix Anime",
+            "handle": "NetflixAnime", "duration": 40, "width": 1920, "height": 1080,
+            "platform": "x",
+        }]
+
+    def yt(query, n=6):
+        order.append(("yt", query))
+        return [{
+            "id": "yt:abc", "url": "https://www.youtube.com/watch?v=officialabc",
+            "title": "Suzume official scene", "channel": "Netflix Anime",
+            "handle": "", "duration": 45, "width": 1920, "height": 1080,
+            "platform": "youtube",
+        }]
+
+    req = {"words": "SUZUME", "slug": "suzume", "x_handles": ["NetflixAnime"],
+           "official_channels": ["Netflix Anime"],
+           "search_queries": ["SUZUME official scene clip"]}
+    kept = d.collect_candidates(
+        req, official, set(), yt=yt, x_profile=lambda h, n=8: [],
+        x_search=x_search, probe=lambda u: None,
+    )
+    assert order[0][0] == "x"
+    assert any(k[0] == "yt" for k in order)
+    assert kept[0]["url"].startswith("https://x.com/")
+    stats = d.collect_candidates.last_x_stats
+    assert stats["x_total"] >= 1
+    assert stats["x_pass_1080"] >= 1
+
+
+def test_x_720p_does_not_pass_1080_floor_in_filter():
+    official = {"netflixanime"}
+    entries = [
+        {"id": "x:720", "url": "https://x.com/NetflixAnime/status/720",
+         "title": "Suzume scene", "channel": "Netflix Anime", "handle": "NetflixAnime",
+         "duration": 40, "width": 1280, "height": 720, "platform": "x"},
+        {"id": "x:1080", "url": "https://x.com/NetflixAnime/status/1080",
+         "title": "Suzume scene 2", "channel": "Netflix Anime", "handle": "NetflixAnime",
+         "duration": 40, "width": 1920, "height": 1080, "platform": "x"},
+    ]
+    kept = d.filter_official_candidates(entries, official=official, deny=set(), seen=set())
+    assert [c["url"] for c in kept] == ["https://x.com/NetflixAnime/status/1080"]
+    stats = d.sourcing.x_resolution_stats(entries) if False else __import__("sourcing").x_resolution_stats(entries)
+    assert stats["x_below_1080"] == 1 and stats["x_pass_1080"] == 1

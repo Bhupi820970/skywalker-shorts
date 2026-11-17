@@ -356,11 +356,13 @@ def download_scene_bundle(src, skip=None):
             if u and u not in urls and not sourcing.is_trailer_source(u):
                 urls.append(u)
     urls = [u for u in urls if not _is_skipped(u, skip) and not _is_skipped(f"gh:{u}", skip)]
+    urls.sort(key=sourcing._rank_url)
     paths, useds = [], []
     for u in urls:
         if len(paths) >= MAX_SCENE_CLIPS:
             break
-        if not sourcing.source_matches_topic(item, u) and "youtube.com" not in u and "youtu.be" not in u:
+        link_page = sourcing.is_youtube_url(u) or sourcing.is_x_url(u)
+        if not sourcing.source_matches_topic(item, u) and not link_page:
             # github/release assets must match this title; search URLs are checked after download
             if "github.com" in (u or "") or (u or "").lower().endswith(".mp4"):
                 continue
@@ -414,9 +416,9 @@ def download_scene_bundle(src, skip=None):
 
 
 def download_source(src, force_fallback=False, skip=None):
-    """Official scene clips only: GitHub sources release + catalog studio/clip
-    sites + DM/Vimeo/Archive/Bilibili. Merges up to 5 same-title scene clips.
-    Trailers/teasers are never used, even as a last fallback.
+    """Official scene clips only. Link mode is primary: official X, then
+    official YouTube, then the sources-release / backup pool. Merges up to
+    5 same-title scene clips. Trailers/teasers are never used.
     """
     errors = []
     skip = set(skip or [])

@@ -57,24 +57,8 @@ EXTRA_OFFICIAL = (
     "Crunchyroll", "Funimation", "HIDIVE",
     "Rockstar Games",
 )
-# Handle (no @) -> display name. Used for X profile media search only.
-OFFICIAL_X_HANDLES = {
-    "netflix": "Netflix",
-    "netflixanime": "Netflix Anime",
-    "netflixindia": "Netflix India",
-    "primevideo": "Prime Video",
-    "warnerbros": "Warner Bros.",
-    "marvel": "Marvel Entertainment",
-    "sonypictures": "Sony Pictures Entertainment",
-    "toho_official": "TOHO",
-    "toho_animation": "TOHO animation",
-    "aniplexusa": "Aniplex USA",
-    "disneystudios": "Walt Disney Studios",
-    "universalpics": "Universal Pictures",
-    "paramountpics": "Paramount Pictures",
-    "a24": "A24",
-    "rockstargames": "Rockstar Games",
-}
+# Handle (no @) -> display name. Shared with sourcing (link-mode X-first path).
+OFFICIAL_X_HANDLES = dict(sourcing.OFFICIAL_X_HANDLES)
 KNOWN_SUFFIXES = (
     "official", "animation", "pictures", "entertainment", "india", "anime",
     "uk", "plus", "studios", "films", "movies", "tv", "usa", "channel", "exe",
@@ -527,6 +511,18 @@ def x_profile_entries(handle: str, n: int = 8) -> list[dict]:
     return out
 
 
+def x_search_entries(handle: str, title: str, n: int = 6) -> list[dict]:
+    """Title-scoped search of one official X account (yt-dlp, no cookies)."""
+    h = (handle or "").lstrip("@").strip()
+    if not h or not (title or "").strip():
+        return []
+    rows = sourcing._flat_x_entries(sourcing.x_search_url(h, title), n=n)
+    for e in rows:
+        e["handle"] = e.get("handle") or h
+        e["platform"] = "x"
+    return rows
+
+
 def probe_entry(url: str) -> dict | None:
     r = _run(["yt-dlp", "-J", "--no-download", "--no-warnings", "--no-playlist", url], timeout=90)
     if r.returncode != 0:
@@ -604,7 +600,7 @@ def filter_official_candidates(
 
 def collect_candidates(req: dict, official: set[str], deny: set[str],
                        *, yt=yt_search, x_profile=x_profile_entries,
-                       probe=probe_entry) -> list[dict]:
+                       x_search=x_search_entries, probe=probe_entry) -> list[dict]:
     words = req.get("words") or req.get("slug") or ""
     queries = [q for q in (req.get("search_queries") or []) if q and not TRAILER.search(q)]
     if not queries:
@@ -615,19 +611,39 @@ def collect_candidates(req: dict, official: set[str], deny: set[str],
     names = {n for n in names if n in official or is_known_official(n, official=official)}
     found: list[dict] = []
     seen: set[str] = set()
-    for q in queries[:3]:
-        try:
-            found.extend(yt(q, 6))
-        except TypeError:
-            found.extend(yt(q))
-    handles = []
+    # Link mode: official X (title search on official accounts) first, then YouTube.
+    handles = list(sourcing.official_x_handles_for(req))
     for h in list(req.get("x_handles") or []) + list(OFFICIAL_X_HANDLES):
         h = (h or "").lstrip("@")
         if h and norm(h) not in {norm(x) for x in handles}:
             if is_known_official(h, h, names):
                 handles.append(h)
-    for h in handles[:4]:
-        found.extend(x_profile(h))
+    film = words
+    x_raw: list[dict] = []
+    for h in handles[:8]:
+        rows = []
+        if film:
+            try:
+                rows = list(x_search(h, film) or [])
+            except TypeError:
+                rows = list(x_search(h, film, 6) or []) if False else []
+            except Exception:
+                rows = []
+        if not rows:
+            try:
+                rows = list(x_profile(h) or [])
+            except TypeError:
+                rows = []
+            except Exception:
+                rows = []
+            if film:
+                rows = [e for e in rows if sourcing.x_post_matches_title(e.get("title") or "", film)]
+        for e in rows:
+            e = dict(e)
+            e["platform"] = "x"
+            e["handle"] = e.get("handle") or h
+            x_raw.append(e)
+            found.append(e)
     for u in req.get("x_urls") or []:
         meta = probe(u)
         if not meta or meta.get("bot_check"):
@@ -635,8 +651,25 @@ def collect_candidates(req: dict, official: set[str], deny: set[str],
                 found.append({"id": u, "url": u, "title": "", "channel": "", "handle": "",
                               "duration": 0, "platform": "x", "bot_check": True})
             continue
+        meta["platform"] = "x"
+        x_raw.append(meta)
         found.append(meta)
-    return filter_official_candidates(found, official=names, deny=deny, seen=seen)
+    for q in queries[:3]:
+        try:
+            found.extend(yt(q, 6))
+        except TypeError:
+            found.extend(yt(q))
+    kept = filter_official_candidates(found, official=names, deny=deny, seen=seen)
+    kept.sort(key=lambda c: (
+        0 if (c.get("platform") == "x" or sourcing.is_x_url(c.get("url") or "")) else 1,
+        1 if c.get("stamped") else 0,
+        sourcing.channel_preference(c.get("channel") or ""),
+    ))
+    collect_candidates.last_x_stats = sourcing.x_resolution_stats(x_raw)
+    return kept
+
+
+collect_candidates.last_x_stats = {"x_total": 0, "x_pass_1080": 0, "x_below_1080": 0, "x_unknown": 0}
 
 
 class SampleResult:
@@ -801,6 +834,7 @@ def run_discovery(
     checker = check or (lambda url: sample_logo_check(url, work))
     collector = collect or (lambda req: collect_candidates(req, official, deny))
     accepted, skipped, needs_box, queued = [], [], [], []
+    x_stats = {"x_total": 0, "x_pass_1080": 0, "x_below_1080": 0, "x_unknown": 0}
     reqs = list(topics) if topics is not None else (
         (load_status(root).get("needs_box_sample_topics") or []) if retry_samples else topics_for_run(root)
     )
@@ -828,6 +862,13 @@ def run_discovery(
         if len(accepted) >= max_accept:
             break
         cands = req.get("_cands") or collector(req)
+        stats = getattr(collect_candidates, "last_x_stats", {}) or {}
+        for k in x_stats:
+            x_stats[k] += int(stats.get(k) or 0)
+        if req.get("_cands"):
+            extra = sourcing.x_resolution_stats(req.get("_cands"))
+            for k in x_stats:
+                x_stats[k] += int(extra.get(k) or 0)
         log(f"{req.get('slug')}: {len(cands)} official scene candidate(s)")
         pick, why = pick_clean_official(
             cands,
@@ -875,10 +916,12 @@ def run_discovery(
         "skipped": skipped[-80:],
         "needs_box_sample": needs_box,
         "dry_run": dry_run,
+        "x_resolution": x_stats,
     }
     if not dry_run:
         write_status(root, payload)
     log(f"done: accepted {len(accepted)}, queued {len(queued)}, skipped {len(skipped)}, needs_box {len(needs_box)}")
+    log("X 1080p floor: {x_pass_1080} pass / {x_below_1080} below / {x_unknown} unknown of {x_total}".format(**x_stats))
     if queued:
         print("ids=" + ",".join(queued))
     return payload
