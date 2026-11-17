@@ -1,0 +1,263 @@
+{
+  "id": "20261117-1600-lazarus",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-17 10:30 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44013718496",
+  "slot": "2026-11-17T16:00:00+05:30",
+  "title": "Nobody expected Axel to be this calm #lazarus #axel #anime",
+  "hook": "Asking to see the killer",
+  "description": "Asking to see the killer. Axel calmly baits his pursuer into a deadly close-quarters confrontation. From the official Lazarus trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#lazarus #axel #anime #shorts #edit",
+  "tags": [
+    "lazarus",
+    "axel",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Axel has thirty days to run",
+    "title": "Axel has thirty days to run | Lazarus | #edit",
+    "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+    "tags": [
+      "lazarus",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "axel"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "Curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Nobody expected Axel to be this calm",
+      "click_score": 92.0
+    },
+    {
+      "title": "Axel finally meets his match",
+      "click_score": 88.0
+    },
+    {
+      "title": "He walked straight into a trap",
+      "click_score": 85.0
+    },
+    {
+      "title": "Watching Axel bait the enemy",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment Axel turned the tables",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 28.6,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.1,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+      "music": "sw_memphisphonksynthbassmix.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261117-1600-lazarus",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261117-1600-lazarus/render-20261117-1600-lazarus.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 7.88,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+  "music": "sw_memphisphonksynthbassmix.mp3",
+  "music_credit": "Song: awdawda - MEMPHIS PHONK SYNTHBASS MIX Vol. IV (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "Asking to see the killer. Axel calmly baits his pursuer into a deadly close-quarters confrontation. From the official Lazarus trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#lazarus #axel #anime #shorts #edit\n\nMusic:\nSong: awdawda - MEMPHIS PHONK SYNTHBASS MIX Vol. IV (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.3,
+      "audio": true
+    },
+    "lufs": -15.8,
+    "audio_check": {
+      "mode": "two_act",
+      "isolated": true,
+      "act1_end": 7.83,
+      "act1_frac": 0.323,
+      "song_in_act1_dbfs": -180.0,
+      "voice_in_act2_dbfs": -180.0,
+      "act1_voice_dbfs": -19.0,
+      "act2_song_dbfs": -21.6,
+      "song_switches": 1,
+      "speech_segments": 1
+    },
+    "subtitle_cues": 7,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 9.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 8.0,
+        "captions": 10.0,
+        "post_worthy": 9.0
+      },
+      "reasons": [
+        "The video adheres to all formatting requirements, including the white hook bar and vertical centering.",
+        "Audio transition is clean and follows the two-act structure perfectly.",
+        "The footage is clean, though it retains the small 'adult swim' watermark from the source material, which is acceptable for this type of edit.",
+        "The hook and title are engaging and relevant."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 154,
+      "src_start": 343.44,
+      "dur": 4.66
+    },
+    {
+      "id": 156,
+      "src_start": 362.4,
+      "dur": 3.22
+    },
+    {
+      "id": 165,
+      "src_start": 383.773,
+      "dur": 1.347,
+      "gemini_score": 9.5,
+      "reason": "gemini score 9.5"
+    },
+    {
+      "id": 146,
+      "src_start": 324.096,
+      "dur": 1.416,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 98,
+      "src_start": 225.237,
+      "dur": 1.393,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 198,
+      "src_start": 475.835,
+      "dur": 1.393,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 175,
+      "src_start": 416.559,
+      "dur": 1.486,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 83,
+      "src_start": 195.338,
+      "dur": 1.3,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 136,
+      "src_start": 298.75,
+      "dur": 1.556,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 160,
+      "src_start": 375.649,
+      "dur": 1.37
+    },
+    {
+      "id": 106,
+      "src_start": 244.402,
+      "dur": 1.393
+    },
+    {
+      "id": 151,
+      "src_start": 337.285,
+      "dur": 1.565
+    }
+  ],
+  "qc_status": "pass"
+}
