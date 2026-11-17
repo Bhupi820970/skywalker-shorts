@@ -1,9 +1,9 @@
 {
   "id": "20261117-2230-shangrilafrontier",
-  "status": "retry_queued",
-  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): No usable scenes after filtering",
-  "at": "2026-11-17 17:10 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44064325188",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+  "at": "2026-11-17 21:44 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44102278689",
   "slot": "2026-11-17T22:30:00+05:30",
   "title": "He plays the hardest game alive | Shangri-La Frontier | #edit",
   "hook": "He plays the hardest game alive",
@@ -33,25 +33,74 @@
       "purpose": "scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
       "err": "HTTP 503"
     },
     {
       "purpose": "scenes",
       "model": "gemini-flash-latest",
       "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 2.1,
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 45.6,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.9,
       "ok": true
     }
   ],
@@ -59,7 +108,7 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -67,7 +116,7 @@
       "ok": false,
       "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene3_h264.mp4",
-      "music": "sw_worthnothingfeatolivertr.mp3",
+      "music": "sw_stoppostingaboutballer.mp3",
       "qc_status": null
     },
     {
@@ -75,7 +124,15 @@
       "ok": false,
       "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene3_h264.mp4",
-      "music": "sw_worthnothingfeatolivertr.mp3",
+      "music": "sw_stoppostingaboutballer.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 3,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/shangrilafrontier_scene3_h264.mp4",
+      "music": "sw_phonkmemphisrap.mp3",
       "qc_status": null
     }
   ],
