@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-17 06:29 IST",
-  "slots_checked": 10,
+  "at": "2026-11-17 06:37 IST",
+  "slots_checked": 11,
   "ready": [
     {
       "slot": "2026-11-17T06:30:00+05:30",
@@ -45,6 +45,11 @@
     {
       "slot": "2026-11-17T22:30:00+05:30",
       "id": "20261117-2230-shangrilafrontier",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-18T06:30:00+05:30",
+      "id": "20261118-0630-spyxfamily3",
       "how": "queued+fallback"
     }
   ],
