@@ -533,6 +533,20 @@
       "result_id": "stock-dragonballdaima-01"
     },
     {
+      "id": "stock-dragonballdaima-02",
+      "topic_id": "backup-dragonballdaima",
+      "slug": "dragonballdaima",
+      "status": "pending",
+      "queued_at": "2026-11-17 18:19 IST"
+    },
+    {
+      "id": "stock-drstone-01",
+      "topic_id": "backup-drstone",
+      "slug": "drstone",
+      "status": "pending",
+      "queued_at": "2026-11-17 18:19 IST"
+    },
+    {
       "id": "stock-dune2-01",
       "topic_id": "backup-dune2",
       "slug": "dune2",
