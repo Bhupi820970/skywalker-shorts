@@ -58,13 +58,15 @@
       ]
     },
     "schedule": {
-      "min_per_day": 1,
-      "max_per_day": 2
+      "min_per_day": 2,
+      "max_per_day": 3
     },
     "content_kinds": [
       "romance scene",
       "love scene",
-      "emotional scene"
+      "emotional scene",
+      "cute scene",
+      "romantic moment"
     ],
     "titles": [
       {
@@ -168,6 +170,34 @@
         "search_queries": [
           "Crazy Rich Asians official scene clip",
           "Crazy Rich Asians official clip Warner"
+        ]
+      },
+      {
+        "slug": "suzume",
+        "words": "SUZUME",
+        "official_channels": [
+          "GKIDS Films",
+          "TOHO animation",
+          "Crunchyroll India",
+          "Netflix Anime"
+        ],
+        "hook": "She kept walking back",
+        "search_queries": [
+          "Suzume official scene clip GKIDS",
+          "Suzume official romance scene TOHO"
+        ]
+      },
+      {
+        "slug": "weatheringwithyou",
+        "words": "WEATHERING WITH YOU",
+        "official_channels": [
+          "GKIDS Films",
+          "TOHO animation"
+        ],
+        "hook": "The sky followed them",
+        "search_queries": [
+          "Weathering With You official scene clip GKIDS",
+          "Tenki no Ko official clip TOHO"
         ]
       }
     ]

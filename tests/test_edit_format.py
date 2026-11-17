@@ -51,7 +51,7 @@ def test_gta6_not_launched_before_nov_19():
     assert edit_format.gta6_has_launched(after) is True
     q0 = edit_format.daily_quotas(before)
     assert q0["gta6_min"] == 0 and q0["gta6_max"] == 0
-    assert q0["love_min"] == 1 and q0["love_max"] == 2
+    assert q0["love_min"] == 2 and q0["love_max"] == 3
     q1 = edit_format.daily_quotas(after)
     assert q1["gta6_min"] == 2 and q1["gta6_max"] == 3
 
@@ -65,3 +65,13 @@ def test_is_gta6_item():
 def test_trending_score_boosts_matching_titles():
     assert edit_format.trending_score("BRIDGERTON official scene", titles=["Bridgerton", "Arcane"]) > 0
     assert edit_format.trending_score("Some Obscure Film", titles=["Bridgerton", "Arcane"]) == 0
+
+
+def test_explicit_text_blocks_sexual_not_cute_romance():
+    assert edit_format.is_explicit_text("Official uncensored sex scene")
+    assert edit_format.is_explicit_text("Ecchi fan service clip")
+    assert edit_format.is_explicit_item({"title": "Nude making love scene", "hook": "Too far"})
+    assert not edit_format.is_explicit_text("Your Name official romance scene")
+    assert not edit_format.is_explicit_text("A cute almost-kiss on the train")
+    assert not edit_format.is_explicit_item({"title": "She already knew | Bridgerton | #edit",
+                                            "content_kind": "romance scene"})

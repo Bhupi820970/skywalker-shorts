@@ -259,3 +259,18 @@ def test_pick_clean_skips_720_and_takes_next_official_1080():
     assert pick is not None
     assert "official1080" in pick["url"]
     assert any(s.get("skip", "").startswith("below 1080p") for s in skipped)
+
+
+def test_filter_drops_explicit_official_clip():
+    official = {"netflix"}
+    entries = [
+        {"id": "yt:sex", "url": "https://www.youtube.com/watch?v=explicit001",
+         "title": "Official uncensored sex scene", "channel": "Netflix", "handle": "",
+         "duration": 40, "width": 1920, "height": 1080},
+        {"id": "yt:cute", "url": "https://www.youtube.com/watch?v=officialcute",
+         "title": "Official romance scene almost-kiss", "channel": "Netflix", "handle": "",
+         "duration": 40, "width": 1920, "height": 1080},
+    ]
+    kept = d.filter_official_candidates(entries, official=official, deny=set(), seen=set())
+    urls = [c["url"] for c in kept]
+    assert urls == ["https://www.youtube.com/watch?v=officialcute"]

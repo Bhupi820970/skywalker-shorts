@@ -67,6 +67,38 @@ def _love_title_names(root: Path | None = None) -> list[str]:
     return names
 
 
+
+# Romantic/cute clips only. Titles matching these are never queued or discovered.
+_EXPLICIT_RE = re.compile(
+    r"\b("
+    r"sex(?:ual)?(?:\s+scene)?|nsfw|nude|naked|nudity|porn(?:o|ographic)?|xxx|"
+    r"hentai|ecchi|explicit|uncensored|18\+|r[\s-]?rated\s+sex|onlyfans|"
+    r"rule\s*34|r34|intercourse|orgasm|erotic|strip(?:ping|tease)?|"
+    r"making\s+love|make\s+love|sex\s*tape|fanservice|fan\s*service|"
+    r"lingerie\s+scene|bedroom\s+sex"
+    r")\b",
+    re.I,
+)
+
+
+def is_explicit_text(*parts: object) -> bool:
+    """True when title/hook/description looks sexual or explicit (not just romantic)."""
+    blob = " ".join(str(p or "") for p in parts)
+    if not blob.strip():
+        return False
+    return bool(_EXPLICIT_RE.search(blob))
+
+
+def is_explicit_item(item: dict | None = None, extra: str = "") -> bool:
+    item = item or {}
+    return is_explicit_text(
+        item.get("title"), item.get("hook"), item.get("words"),
+        item.get("content_kind"), item.get("description"), extra,
+        " ".join(item.get("search_queries") or []),
+        " ".join(item.get("tags") or []),
+    )
+
+
 def is_love_item(item: dict | None = None, *, pillar: str = "", text: str = "") -> bool:
     """True when a queue item or hook/title is a romance/love edit."""
     p = (pillar or (item or {}).get("pillar") or "").lower()
@@ -184,8 +216,8 @@ def daily_quotas(now: datetime | None = None, root: Path | None = None) -> dict:
     gta = gta6_cfg(root).get("schedule") or {}
     launched = gta6_has_launched(now, root)
     return {
-        "love_min": int(love.get("min_per_day") or 1),
-        "love_max": int(love.get("max_per_day") or 2),
+        "love_min": int(love.get("min_per_day") or 2),
+        "love_max": int(love.get("max_per_day") or 3),
         "gta6_min": int(gta.get("min_per_day_after_launch") or 2) if launched else 0,
         "gta6_max": int(gta.get("max_per_day_after_launch") or 3) if launched else 0,
         "gta6_launched": launched,

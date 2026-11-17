@@ -223,6 +223,12 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
             t = pool[(start_i + k) % n]
             if t["slug"] in day_slugs:
                 continue
+            try:
+                import edit_format as _ef
+                if _ef.is_explicit_item(t):
+                    continue
+            except Exception:
+                pass
             kind = _kind(t)
             if want and kind != want:
                 continue

@@ -295,12 +295,12 @@ def gemini_topics(root: Path, used: set[str]) -> list[dict]:
             )
         else:
             gta_note = " Do NOT pick GTA 6 / Grand Theft Auto VI until the official launch."
-        gta_note += " Also include 1-2 official ROMANCE/love titles (Netflix, TOHO, Lionsgate, Sony, Prime, Warner) for a slower love-edit format."
+        gta_note += " Also include 2-3 official ROMANCE/love anime or movie titles (Netflix, TOHO, Lionsgate, Sony, Prime, Warner, GKIDS) for a slower love-edit format. Only romantic or cute moments — never sexual, explicit, nude, ecchi, or hentai clips."
     except Exception:
-        gta_note = " Prefer currently trending official titles. Include 1-2 official romance titles."
+        gta_note = " Prefer currently trending official titles. Include 2-3 official romance titles (cute/romantic moments only, never sexual/explicit)."
     prompt = f"""Today is {datetime.now(IST):%d %B %Y}. Pick {MAX_TITLES} titles for a YouTube Shorts edit channel.
 Prioritize titles that are currently trending this week (new episodes, just-released films, viral official clips),
-plus 1-2 official romance/love titles.{gta_note}
+plus 2-3 official romance/love titles (romantic or cute moments only; never sexual or explicit).{gta_note}
 We need OFFICIAL best-SCENE clips only (never trailers, teasers, TV spots, or fan edits).
 Do not pick: {json.dumps(sorted(used)[:80])[:2000]}
 Known official studio/distributor names: {json.dumps(official)[:2000]}
@@ -571,6 +571,12 @@ def filter_official_candidates(
         title = e.get("title") or ""
         if is_trailer_text(url, title) or JUNK.search(title) or sourcing._BAD_TITLE.search(title):
             continue
+        try:
+            import edit_format
+            if edit_format.is_explicit_text(title, e.get("description") or "", e.get("channel") or ""):
+                continue
+        except Exception:
+            pass
         if not submit_link.is_supported_link(url):
             continue
         dur = e.get("duration") or 0
