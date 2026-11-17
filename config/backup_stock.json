@@ -233,6 +233,13 @@
       "result_id": "stock-bluelock2-02"
     },
     {
+      "id": "stock-bluelock2-03",
+      "topic_id": "backup-bluelock2",
+      "slug": "bluelock2",
+      "status": "pending",
+      "queued_at": "2026-11-17 18:18 IST"
+    },
+    {
       "id": "stock-boyandheron-01",
       "topic_id": "backup-boyandheron",
       "slug": "boyandheron",
@@ -439,6 +446,13 @@
       "status": "failed",
       "queued_at": "2026-11-17 17:46 IST",
       "result_id": "stock-dbsuperhero-02"
+    },
+    {
+      "id": "stock-dbsuperhero-03",
+      "topic_id": "backup-dbsuperhero",
+      "slug": "dbsuperhero",
+      "status": "pending",
+      "queued_at": "2026-11-17 18:18 IST"
     },
     {
       "id": "stock-deadpool3-01",
