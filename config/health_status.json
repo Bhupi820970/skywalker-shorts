@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-17 15:53 IST",
-  "slots_checked": 10,
+  "at": "2026-11-17 16:10 IST",
+  "slots_checked": 11,
   "ready": [
     {
       "slot": "2026-11-17T16:00:00+05:30",
@@ -9,8 +9,8 @@
     },
     {
       "slot": "2026-11-17T17:30:00+05:30",
-      "id": "20261117-1730-mononoke",
-      "how": "queued+fallback"
+      "id": "backup-arcane2",
+      "how": "backup_pool"
     },
     {
       "slot": "2026-11-17T20:30:00+05:30",
@@ -40,6 +40,11 @@
     {
       "slot": "2026-11-18T12:30:00+05:30",
       "id": "20261118-1230-jjk0",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-18T16:00:00+05:30",
+      "id": "20261118-1600-mhayourenext",
       "how": "queued+fallback"
     }
   ],
@@ -109,11 +114,11 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 17,
+  "stock_ready": 0,
   "stock_pending": 13,
   "stock_used": 20,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": false
 }
