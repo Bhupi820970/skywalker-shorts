@@ -196,8 +196,9 @@
       "id": "stock-apothecarydiaries2-12",
       "topic_id": "backup-apothecarydiaries2",
       "slug": "apothecarydiaries2",
-      "status": "pending",
-      "queued_at": "2026-11-17 21:06 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 21:06 IST",
+      "result_id": "stock-apothecarydiaries2-12"
     },
     {
       "id": "stock-arcane2-01",
@@ -324,8 +325,9 @@
       "id": "stock-bleachtybw-10",
       "topic_id": "backup-bleachtybw",
       "slug": "bleachtybw",
-      "status": "pending",
-      "queued_at": "2026-11-17 21:06 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 21:06 IST",
+      "result_id": "stock-bleachtybw-10"
     },
     {
       "id": "stock-bluegiant-01",
@@ -372,8 +374,9 @@
       "id": "stock-bluelock2-05",
       "topic_id": "backup-bluelock2",
       "slug": "bluelock2",
-      "status": "pending",
-      "queued_at": "2026-11-17 19:18 IST"
+      "status": "failed",
+      "queued_at": "2026-11-17 19:18 IST",
+      "result_id": "stock-bluelock2-05"
     },
     {
       "id": "stock-boyandheron-01",
@@ -557,7 +560,8 @@
       "topic_id": "backup-dandadan",
       "slug": "dandadan",
       "status": "pending",
-      "queued_at": "2026-11-17 19:18 IST"
+      "queued_at": "2026-11-17 19:18 IST",
+      "result_id": "stock-dandadan-02"
     },
     {
       "id": "stock-dandadan2-01",
@@ -1335,6 +1339,82 @@
       "queued_at": "2026-11-15 06:49 IST",
       "result_id": "stock-zootopia2-01",
       "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-zootopia2-01.mp4"
+    }
+  ],
+  "retired_topics": [
+    {
+      "slug": "bleachtybw",
+      "reason": "download failed: reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4 | yt-dlp:ERROR: [youtube] 4Gti6YqvMzE: Sign in to confirm you’re not a bot. This helps protect",
+      "fail_count": 10,
+      "failed_ids": [
+        "stock-bleachtybw-05",
+        "stock-bleachtybw-10",
+        "stock-bleachtybw-06",
+        "stock-bleachtybw-09",
+        "stock-bleachtybw-07",
+        "stock-bleachtybw-03",
+        "stock-bleachtybw-01",
+        "stock-bleachtybw-04",
+        "stock-bleachtybw-08",
+        "stock-bleachtybw-02"
+      ],
+      "retired_at": "2026-11-17 21:37 IST"
+    },
+    {
+      "slug": "dbsuperhero",
+      "reason": "download failed: reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dbsuperhero_scene1_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/downlo",
+      "fail_count": 6,
+      "failed_ids": [
+        "stock-dbsuperhero-02",
+        "stock-dbsuperhero-05",
+        "stock-dbsuperhero-07",
+        "stock-dbsuperhero-03",
+        "stock-dbsuperhero-06",
+        "stock-dbsuperhero-01"
+      ],
+      "retired_at": "2026-11-17 21:37 IST"
+    },
+    {
+      "slug": "apothecarydiaries2",
+      "reason": "download failed: yt-dlp:ERROR: Fixed output name but more than one file to download: /home/runner/work/skywalker-shorts/skywalker-shorts/out/stock-apothecarydiaries2-07_src_p1.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970",
+      "fail_count": 12,
+      "failed_ids": [
+        "stock-apothecarydiaries2-10",
+        "stock-apothecarydiaries2-05",
+        "stock-apothecarydiaries2-11",
+        "stock-apothecarydiaries2-03",
+        "stock-apothecarydiaries2-06",
+        "stock-apothecarydiaries2-04",
+        "stock-apothecarydiaries2-02",
+        "stock-apothecarydiaries2-09",
+        "stock-apothecarydiaries2-08",
+        "stock-apothecarydiaries2-01",
+        "stock-apothecarydiaries2-12",
+        "stock-apothecarydiaries2-07"
+      ],
+      "retired_at": "2026-11-17 21:37 IST"
+    },
+    {
+      "slug": "bluelock2",
+      "reason": "download failed: yt-dlp:ERROR: [generic] bluelock2_scene1_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | reject burned-in subtitles: gh:https://github.com/chatgpt820970/skywalker-shorts/",
+      "fail_count": 4,
+      "failed_ids": [
+        "stock-bluelock2-05",
+        "stock-bluelock2-03",
+        "stock-bluelock2-02",
+        "stock-bluelock2-01"
+      ],
+      "retired_at": "2026-11-17 21:37 IST"
+    },
+    {
+      "slug": "drstone",
+      "reason": "download failed: reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene1_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/s",
+      "fail_count": 2,
+      "failed_ids": [
+        "stock-drstone-02",
+        "stock-drstone-01"
+      ],
+      "retired_at": "2026-11-17 21:37 IST"
     }
   ]
 }
