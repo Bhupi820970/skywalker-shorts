@@ -1,0 +1,318 @@
+{
+  "id": "demo-v6-arcane",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok [no-publish]",
+  "at": "2026-11-17 22:49 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44123821889",
+  "slot": null,
+  "title": "Jinx realizing she is alone #arcane #jinx #animation",
+  "hook": "Jinx is losing her mind",
+  "description": "Jinx is losing her mind. A haunting glimpse into Jinx's mental collapse and isolation in the aftermath of her trauma. From the official Arcane trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#arcane #jinx #animation #shorts #edit",
+  "tags": [
+    "arcane",
+    "jinx",
+    "animation",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts"
+  ],
+  "queue_meta": {
+    "hook": "Jinx never wanted this war",
+    "title": "Jinx never wanted this war | Arcane | #edit",
+    "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane",
+    "tags": [
+      "arcane",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Jinx realizing she is alone",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody expected Jinx to break this hard",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch the transition at two seconds",
+      "click_score": 85.0
+    },
+    {
+      "title": "Jinx becoming her own worst enemy",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment Jinx lost everything",
+      "click_score": 80.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 22.2,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 8.6,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 56.6,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 15.3,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+      "music": "sw_guacamolephonk6ix6.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/test-renders",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-v6-arcane.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 7.545,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+  "music": "sw_guacamolephonk6ix6.mp3",
+  "music_credit": "Song: 6$ix6 - Guacamole phonk 6$ix6 (https://creativecommons.org/licenses/by-sa/4.0/)",
+  "description_final": "Jinx is losing her mind. A haunting glimpse into Jinx's mental collapse and isolation in the aftermath of her trauma. From the official Arcane trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#arcane #jinx #animation #shorts #edit\n\nMusic:\nSong: 6$ix6 - Guacamole phonk 6$ix6 (https://creativecommons.org/licenses/by-sa/4.0/)",
+  "no_publish": true,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-v6-arcane-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 26.218,
+      "audio": true
+    },
+    "lufs": -14.4,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.2,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 8.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 8.0,
+        "post_worthy": 9.0
+      },
+      "reasons": [
+        "The video is well-edited and follows the requested layout.",
+        "There is a very faint, single word of dialogue ('Jinx...') at 0:19 that was not fully removed, which slightly impacts the 'speech_clarity' and 'captions' scores, but it is not a hard failure as the mu",
+        "The hook is effective and the visual quality is high."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 79,
+      "src_start": 164.414,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 64,
+      "src_start": 133.05,
+      "dur": 2.136,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 56,
+      "src_start": 113.28,
+      "dur": 2.322,
+      "gemini_score": 10.0,
+      "reason": "gemini score 10.0"
+    },
+    {
+      "id": 58,
+      "src_start": 118.076,
+      "dur": 1.587
+    },
+    {
+      "id": 34,
+      "src_start": 61.144,
+      "dur": 1.837,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 60,
+      "src_start": 124.875,
+      "dur": 2.171,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 72,
+      "src_start": 148.315,
+      "dur": 1.837,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 28,
+      "src_start": 53.804,
+      "dur": 1.628,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 82,
+      "src_start": 169.836,
+      "dur": 1.753,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 49,
+      "src_start": 85.877,
+      "dur": 3.885
+    },
+    {
+      "id": 77,
+      "src_start": 159.993,
+      "dur": 1.579,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 86,
+      "src_start": 176.093,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    }
+  ],
+  "qc_status": "pass"
+}
