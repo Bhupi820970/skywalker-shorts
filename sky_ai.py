@@ -577,6 +577,18 @@ def subtitle_text(work: Path) -> str:
     return " / ".join(x for x in out if x)[:1500]
 
 
+def qc_audio_mode(ac_mode: str = "", layout_mode: str = "", edit_format: str = "") -> str:
+    """Which QC audio rule to apply. Song-only never applies to love / dialogue_bed."""
+    fmt = (edit_format or "").strip().lower()
+    lay = (layout_mode or "").strip().lower()
+    ac = (ac_mode or "").strip().lower()
+    if fmt in ("love", "romance") or lay in ("love", "romance", "dialogue_bed") or ac in ("love", "romance", "dialogue_bed"):
+        return "dialogue_bed"
+    if lay == "music_only" or ac == "music_only":
+        return "music_only"
+    return lay or ac or "two_act"
+
+
 QC_KEYS = ("hook", "title", "speech_clarity", "shake", "crop", "length", "layout", "clean_footage", "captions",
            "post_worthy")
 
@@ -610,7 +622,14 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
         ac = json.loads((work / "audio_check.json").read_text())
     except Exception:
         pass
-    mode = (ac.get("mode") or "")
+    lay_mode, fmt = "", ""
+    try:
+        lay = json.loads((work / "layout.json").read_text())
+        lay_mode = str(lay.get("edit_mode") or "")
+        fmt = str(lay.get("edit_format") or "")
+    except Exception:
+        pass
+    mode = qc_audio_mode(ac.get("mode") or "", lay_mode, fmt)
     if mode == "music_only":
         expected = (
             "Expected: a tight WHITE bar with black italic English hook text in its own band at the TOP of the frame, "
@@ -628,6 +647,19 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
         cap_crit = ("captions (10 if there are no dialogue subtitles — they are not used in song-only edits; "
                     "low only if leftover or garbled subs appear)")
         reject_bits = "logo/title card, cropped picture, leftover trailer voice under the song, non-English hook/title, a different film"
+    elif mode == "dialogue_bed":
+        expected = (
+            "Expected: a tight WHITE bar with black italic English hook text sitting directly ABOVE (never over) the full, uncropped "
+            "landscape movie frame. This is a ROMANCE / dialogue-bed edit: KEEP the original character dialogue. "
+            "A soft instrumental love bed should sit quietly under speech (about 18-22 dB under) and rise to its normal "
+            "level only when nobody is talking. Do NOT reject this for having dialogue, and do NOT apply the song-only rule."
+        )
+        speech_crit = (
+            "speech_clarity (spoken lines clear and still present; music ducked under speech and at normal level in the gaps; "
+            "low only if dialogue is missing, muted, or the bed buries the lines)"
+        )
+        cap_crit = "captions (subtitles real dialogue and in sync, or absent if the clip has no speech)"
+        reject_bits = "logo/title card, cropped picture, muddy/inaudible dialogue, non-English hook/title, a different film, sexual/explicit content"
     else:
         expected = (
             "Expected: a tight WHITE bar with black italic English hook text sitting directly ABOVE (never over) the full, uncropped "
@@ -680,6 +712,8 @@ Return JSON: {{"scores": {{"hook": n, "title": n, "speech_clarity": n, "shake": 
         # Missing dialogue/subtitles is the point of a song-only edit.
         hard.pop("speech_clarity", None)
         skip = {"captions"}
+    elif mode == "dialogue_bed":
+        skip = set()
     else:
         skip = set()
     low = [k for k, v in scores.items() if k not in skip and v < hard.get(k, 4)]

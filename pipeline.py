@@ -1359,7 +1359,16 @@ def is_two_act(edl: list[dict] | None) -> bool:
     return any(it.get("act") == 1 for it in (edl or []))
 
 
+def is_love_dialogue() -> bool:
+    """Romance/dialogue_bed keeps original speech; never a song-only cut."""
+    return (globals().get("EDIT_FORMAT") == "love") or (EDIT_MODE == "dialogue_bed")
+
+
 def is_music_only(edl: list[dict] | None = None) -> bool:
+    if is_love_dialogue():
+        return False
+    if any(it.get("mode") == "dialogue_bed" for it in (edl or [])):
+        return False
     if any(it.get("mode") == "music_only" for it in (edl or [])):
         return True
     if is_two_act(edl):
@@ -1759,7 +1768,11 @@ def plan_edit(scenes: list[dict], music: dict, target: float = TARGET_DUR,
             kept.append(it)
         edl = kept
     acc = float(edl[-1]["t1"]) if edl else 0.0
-    if TEMPLATE == "whitebar":
+    if TEMPLATE == "whitebar" and is_love_dialogue():
+        for it in edl:
+            it["mode"] = "dialogue_bed"
+        print(f"  DIALOGUE-BED: keep original speech, duck love music under lines, {len(edl)} shot(s)")
+    elif TEMPLATE == "whitebar":
         for it in edl:
             it["mode"] = "music_only"
         print(f"  MUSIC-ONLY: song from t=0 at full level, {len(edl)} beat-cut shot(s), no character voice")
@@ -1770,7 +1783,7 @@ def plan_edit(scenes: list[dict], music: dict, target: float = TARGET_DUR,
         "min_output": MIN_OUTPUT_DUR,
         "short_unique": bool(acc + 1e-6 < MIN_OUTPUT_DUR),
         "n_shots": len(edl),
-        "edit_mode": "music_only" if TEMPLATE == "whitebar" else EDIT_MODE,
+        "edit_mode": "dialogue_bed" if is_love_dialogue() else ("music_only" if TEMPLATE == "whitebar" else EDIT_MODE),
     }
     try:
         (WORK / "plan_meta.json").write_text(json.dumps(meta, indent=2))
@@ -3316,17 +3329,21 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     bed = WORK / "bed.wav"
     prepare_bed(music, dur, bed)
     audio = None
-    love_bed = (globals().get("EDIT_FORMAT") == "love") or (EDIT_MODE == "dialogue_bed")
-    if love_bed:
+    if is_love_dialogue():
         # Romance: keep original dialogue; duck the instrumental under speech.
         audio = _mix_source_and_music(bed, dur, src=src, edl=edl)
     elif is_music_only(edl):
         audio = _mix_music_only(music, dur, bed)
+        if audio is None:
+            # Never fall back to source/trailer audio on a song-only edit.
+            audio = bed
     elif is_two_act(edl):
         audio = _mix_two_act(music, dur, src, edl)
-    if audio is None:
+    if audio is None and not is_music_only(edl):
         # Last-resort fallback (non-whitebar / unexpected): never the default for whitebar Shorts.
         audio = _mix_source_and_music(bed, dur, src=src, edl=edl)
+    if audio is None:
+        audio = bed
     audio = _loudnorm_final(Path(audio), dur)
     enc = [
         "-c:v", "libx264", "-preset", "fast", "-crf", "17",
@@ -3462,6 +3479,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
             speech_out = []
         layout["speech_windows"] = speech_out
         layout["edit_mode"] = "music_only" if is_music_only(edl) else ("two_act" if is_two_act(edl) else EDIT_MODE)
+        layout["edit_format"] = globals().get("EDIT_FORMAT") or "action"
         (WORK / "layout.json").write_text(json.dumps(layout, default=str))
         (WORK / "subtitles.json").write_text(json.dumps(caps, indent=2, ensure_ascii=False))
         if caps:
@@ -3497,7 +3515,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         "-i", str(audio),
         "-i", str(bar),
         "-filter_complex", vfilt,
-        "-map", "[v]", "-map", "1:a",
+        "-map", "[v]", "-map", "1:a", "-map", "-0:a?",
         *enc, str(out),
     ]
     run(cmd)
