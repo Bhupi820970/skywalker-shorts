@@ -953,6 +953,20 @@
       "result_id": "stock-gladiator2-06"
     },
     {
+      "id": "stock-haikyuudumpster-01",
+      "topic_id": "backup-haikyuudumpster",
+      "slug": "haikyuudumpster",
+      "status": "pending",
+      "queued_at": "2026-11-17 22:01 IST"
+    },
+    {
+      "id": "stock-hellsparadise-01",
+      "topic_id": "backup-hellsparadise",
+      "slug": "hellsparadise",
+      "status": "pending",
+      "queued_at": "2026-11-17 22:01 IST"
+    },
+    {
       "id": "stock-jurassicworldrebirth-01",
       "topic_id": "backup-jurassicworldrebirth",
       "slug": "jurassicworldrebirth",
