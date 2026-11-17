@@ -24,11 +24,17 @@ def default_edit_mode(item_id: str) -> str:
 
 
 def choose_edit_mode(item_id: str, override: str | None = None, *,
-                     iconic_hook: bool = False) -> str:
-    """Pick music_only or two_act. An explicit override always wins."""
+                     iconic_hook: bool = False, fmt: str | None = None) -> str:
+    """Pick music_only, two_act, or dialogue_bed. An explicit override always wins.
+
+    Romance/love edits always keep the original dialogue and duck the
+    instrumental under speech (dialogue_bed), unless an override is set.
+    """
     ov = (override or os.environ.get("SKY_EDIT_MODE") or "").strip().lower()
-    if ov in ("music_only", "two_act"):
+    if ov in ("music_only", "two_act", "dialogue_bed"):
         return ov
+    if (fmt or "").strip().lower() in ("love", "romance"):
+        return "dialogue_bed"
     mode = default_edit_mode(item_id)
     if mode == "music_only" and iconic_hook:
         return "two_act"

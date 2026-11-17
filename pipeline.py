@@ -3316,7 +3316,11 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     bed = WORK / "bed.wav"
     prepare_bed(music, dur, bed)
     audio = None
-    if is_music_only(edl):
+    love_bed = (globals().get("EDIT_FORMAT") == "love") or (EDIT_MODE == "dialogue_bed")
+    if love_bed:
+        # Romance: keep original dialogue; duck the instrumental under speech.
+        audio = _mix_source_and_music(bed, dur, src=src, edl=edl)
+    elif is_music_only(edl):
         audio = _mix_music_only(music, dur, bed)
     elif is_two_act(edl):
         audio = _mix_two_act(music, dur, src, edl)
@@ -3500,7 +3504,16 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     apply_seamless_loop(out, loop_s=0.5)
     try:
         import cover as covermod
-        covermod.apply_opening_cover(out, edl=edl, hook=HOOK_TEXT, work=WORK)
+        src_url = ""
+        try:
+            ip = os.environ.get("SKY_ITEM_JSON")
+            if ip and Path(ip).exists():
+                it = (json.loads(Path(ip).read_text()).get("item") or {})
+                src_url = (it.get("source_url") or it.get("source")
+                           or (it.get("sources") or [None])[0] or "")
+        except Exception:
+            src_url = ""
+        covermod.apply_opening_cover(out, edl=edl, hook=HOOK_TEXT, work=WORK, source_url=str(src_url or ""))
     except Exception as e:
         print(f"  cover open skipped: {type(e).__name__}: {e}")
     return out
@@ -3973,8 +3986,8 @@ def main():
                     help="Optional Ken Burns zoom factor (off by default; e.g. 1.07)")
     ap.add_argument("--pillar", default=None, help="anime|movie|celeb|romance|funny (music + energy)")
     ap.add_argument("--item-id", default="", help="Queue item id (music picker seed)")
-    ap.add_argument("--edit-mode", default="", choices=["", "music_only", "two_act"],
-                    help="Force music_only (song from t=0, no voice) or two_act. Default: 3/4 hash split.")
+    ap.add_argument("--edit-mode", default="", choices=["", "music_only", "two_act", "dialogue_bed"],
+                    help="Force music_only, two_act, or dialogue_bed (keep voice, duck music). Love format defaults to dialogue_bed.")
     ap.add_argument("--energy", action="store_true", help="Force energy edit (auto for anime/movie)")
     ap.add_argument("--qa-json", default=None, help="Write the combined QA report here")
     ap.add_argument("--relax", action="store_true",
@@ -4027,8 +4040,11 @@ def main():
     except Exception as e:
         print(f"  edit format skipped: {type(e).__name__}: {e}")
     ov = (args.edit_mode or os.environ.get("SKY_EDIT_MODE") or "").strip().lower()
-    FORCED_EDIT_MODE = ov in ("music_only", "two_act")
-    EDIT_MODE = choose_edit_mode(args.item_id, ov or None)
+    FORCED_EDIT_MODE = ov in ("music_only", "two_act", "dialogue_bed")
+    EDIT_MODE = choose_edit_mode(args.item_id, ov or None, fmt=EDIT_FORMAT)
+    if EDIT_FORMAT == "love" and not FORCED_EDIT_MODE:
+        EDIT_MODE = "dialogue_bed"
+    os.environ["SKY_EDIT_FORMAT"] = EDIT_FORMAT
     print(f"  edit mode: {EDIT_MODE}" + (" (forced)" if FORCED_EDIT_MODE else f" (hash of {args.item_id or 'item'})"))
     RELAX = bool(args.relax)
     ALT_SCENES = bool(args.alt_scenes)

@@ -18,6 +18,19 @@ import numpy as np
 DIALOGUE_VOL = 1.3
 MUSIC_SPEECH_VOL = 0.22
 MUSIC_BED_VOL = 0.65
+
+def music_speech_vol(bed: float | None = None) -> float:
+    """Music linear gain under speech. Romance targets -18..-22 dB under the bed."""
+    bed = float(MUSIC_BED_VOL if bed is None else bed)
+    fmt = (__import__("os").environ.get("SKY_EDIT_FORMAT") or "").lower()
+    if fmt in ("love", "romance"):
+        try:
+            import vocal_mix
+            db = vocal_mix.current_duck_db(romance=True)
+        except Exception:
+            db = -20.0
+        return bed * (10 ** (db / 20))
+    return float(MUSIC_SPEECH_VOL)
 WHISPER_MODEL = os.environ.get("SKY_WHISPER_MODEL", "small")
 _MODEL = None
 
@@ -694,13 +707,14 @@ def mix_dialogue_and_music(dialogue: Path, music: Path, dst: Path, dur: float,
     """
     dialogue, music, dst = Path(dialogue), Path(music), Path(dst)
     enable = _speech_enable(speech_out or [])
+    speech_vol = music_speech_vol(MUSIC_BED_VOL)
     # Pre-duck the bed toward 0.22 during known speech, then let sidechain
     # handle the attack/release around the actual waveform.
     # 0.22/0.65 ≈ 0.338
     if enable != "0":
         music_vol = (
             f"volume={MUSIC_BED_VOL},"
-            f"volume=eval=frame:volume='if({enable},{MUSIC_SPEECH_VOL/MUSIC_BED_VOL:.4f},1)'"
+            f"volume=eval=frame:volume='if({enable},{speech_vol/MUSIC_BED_VOL:.4f},1)'"
         )
     else:
         music_vol = f"volume={MUSIC_BED_VOL}"

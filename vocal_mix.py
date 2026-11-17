@@ -19,6 +19,20 @@ import numpy as np
 SR = 44100
 DUCK_DB = float(os.environ.get("SKY_DUCK_DB", "-20"))       # song level under speech
 MUSIC_DB = float(os.environ.get("SKY_MUSIC_DB", "-3"))      # song level between lines
+LOVE_DUCK_MIN_DB, LOVE_DUCK_MAX_DB = -22.0, -18.0
+
+
+def current_duck_db(*, romance: bool | None = None) -> float:
+    """dB of the instrumental under speech. Romance stays in [-22, -18]."""
+    fmt = (os.environ.get("SKY_EDIT_FORMAT") or "").lower()
+    if romance is True or (romance is None and fmt in ("love", "romance")):
+        v = float(os.environ.get("SKY_LOVE_DUCK_DB", os.environ.get("SKY_DUCK_DB", "-20")))
+        return max(LOVE_DUCK_MIN_DB, min(LOVE_DUCK_MAX_DB, v))
+    return float(os.environ.get("SKY_DUCK_DB", DUCK_DB))
+
+
+def current_music_db() -> float:
+    return float(os.environ.get("SKY_MUSIC_DB", MUSIC_DB))
 VOICE_RMS_DB = float(os.environ.get("SKY_VOICE_RMS_DB", "-17"))  # dialogue RMS target while speaking
 ATTACK, RELEASE = 0.06, 0.18                                 # seconds
 PAD_PRE, PAD_POST = 0.10, 0.18                               # speech window padding
@@ -122,13 +136,14 @@ def mix(dialogue_bed: Path, song: Path, dst: Path, dur: float, speech_out, work:
         vrms = float(np.sqrt((voice[active] ** 2).mean()))
         voice *= min(8.0, 10 ** (VOICE_RMS_DB / 20) / max(vrms, 1e-6))
         venv = _env(voice)
-    music *= 10 ** (MUSIC_DB / 20)
+    music *= 10 ** (current_music_db() / 20)
     # Duck target: speech windows OR the actual vocal envelope (true sidechain), -20 dB under speech.
     talk = ((win > 0) | (venv > 10 ** (-38 / 20))).astype(np.float32)
     # Look-ahead: start ducking ~120 ms before a word so the attack is finished when the voice starts.
     k = int(0.12 * SR)
     talk = np.convolve(talk, np.ones(2 * k + 1, dtype=np.float32), mode="same") > 0
-    duck = np.where(talk, 10 ** (DUCK_DB / 20), 1.0).astype(np.float32)
+    duck_db = current_duck_db()
+    duck = np.where(talk, 10 ** (duck_db / 20), 1.0).astype(np.float32)
     g = _smooth_gain(duck)
     m_d = music * g[:, None]
     out = voice + m_d
@@ -156,7 +171,7 @@ def mix(dialogue_bed: Path, song: Path, dst: Path, dur: float, speech_out, work:
         "smr_db": round(float(np.median(smrs)), 1) if smrs else None,
         "smr_min_db": round(float(np.percentile(smrs, 10)), 1) if smrs else None,
         "vocal_vs_mix_db": round(float(np.median(vms)), 2) if vms else None,
-        "duck_db": DUCK_DB,
+        "duck_db": current_duck_db(),
         "music_between_lines_dbfs": round(db(float(np.sqrt((m_d[between] ** 2).mean()))) if between.any() else -99, 1),
         "min_smr_db": MIN_SMR_DB,
     }
