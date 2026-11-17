@@ -60,6 +60,16 @@ def chunked_active() -> bool:
     return os.environ.get("SKY_CHUNKED_ACTIVE") == "1"
 
 
+def refuse_single_pass() -> bool:
+    """True when a single-pass 4K/full-timeline encode would risk a runner shutdown.
+
+    Heavy items (long official clips, prior cancel, explicit chunked flag)
+    must stay on the segment path. Falling back to the old single encode is
+    what cancelled demo-v5-arcane at ~27 minutes.
+    """
+    return chunked_active()
+
+
 def is_heavy(*, duration_s: float = 0, width: int = 0, height: int = 0,
              bitrate: float = 0, last_error: str = "", item: dict | None = None) -> bool:
     if item and (item.get("chunked") or item.get("chunk_render")):

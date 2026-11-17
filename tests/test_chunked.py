@@ -205,3 +205,24 @@ def test_mux_music_cmd_copies_video(tmp_path, monkeypatch):
 
 def test_bundle_cap_constant_matches_render():
     assert chunked.BUNDLE_CAP_S == 210.0
+
+
+def test_refuse_single_pass_when_chunked_is_active():
+    old = {k: os.environ.get(k) for k in ("SKY_CHUNKED", "SKY_CHUNKED_ACTIVE")}
+    try:
+        os.environ["SKY_CHUNKED"] = "off"
+        os.environ["SKY_CHUNKED_ACTIVE"] = "0"
+        assert chunked.refuse_single_pass() is False
+        os.environ["SKY_CHUNKED"] = "auto"
+        os.environ["SKY_CHUNKED_ACTIVE"] = "1"
+        assert chunked.refuse_single_pass() is True
+        os.environ["SKY_CHUNKED"] = "on"
+        os.environ.pop("SKY_CHUNKED_ACTIVE", None)
+        assert chunked.chunked_active() is True
+        assert chunked.refuse_single_pass() is True
+    finally:
+        for k, v in old.items():
+            if v is None:
+                os.environ.pop(k, None)
+            else:
+                os.environ[k] = v
