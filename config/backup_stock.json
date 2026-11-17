@@ -165,6 +165,13 @@
       "queued_at": "2026-11-17 16:11 IST"
     },
     {
+      "id": "stock-boyandheron-01",
+      "topic_id": "backup-boyandheron",
+      "slug": "boyandheron",
+      "status": "pending",
+      "queued_at": "2026-11-17 16:32 IST"
+    },
+    {
       "id": "stock-chainsawman-01",
       "topic_id": "backup-chainsawman",
       "slug": "chainsawman",
@@ -314,6 +321,13 @@
       "status": "pending",
       "queued_at": "2026-11-16 17:20 IST",
       "result_id": "stock-civilwar-10"
+    },
+    {
+      "id": "stock-cyberpunkedgerunners-01",
+      "topic_id": "backup-cyberpunkedgerunners",
+      "slug": "cyberpunkedgerunners",
+      "status": "pending",
+      "queued_at": "2026-11-17 16:32 IST"
     },
     {
       "id": "stock-deadpool3-01",
