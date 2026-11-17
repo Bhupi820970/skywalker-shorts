@@ -173,6 +173,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           SKY_WHISPER_MODEL: small
           SKY_MAX_SOURCE_S: "180"
+          SKY_CHUNKED: "auto"
+          SKY_FFMPEG_THREADS: "2"
           SKY_NO_PUBLISH: ${{ needs.plan.outputs.no_publish == '1' && '1' || '0' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}

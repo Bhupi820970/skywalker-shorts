@@ -234,8 +234,21 @@ def make_mezzanine(src: Path, dst: Path, crop) -> Path:
         "scale=w='min(1920,iw)':h='min(1080,ih)':force_original_aspect_ratio=decrease:flags=lanczos,"
         "scale=trunc(iw/2)*2:trunc(ih/2)*2,format=yuv420p"
     )
+    cap_s = 180.0
+    try:
+        import sourcing as _srcmod
+        cap_s = float(_srcmod.max_source_seconds())
+    except Exception:
+        cap_s = 180.0
+    threads = ["-threads", "2", "-filter_threads", "2"]
+    try:
+        import chunked as _ch
+        threads = _ch.ffmpeg_thread_args()
+    except Exception:
+        pass
+    # Hard cap even if the downloaded file was not trimmed (probe-fail / concat).
     run([
-        "ffmpeg", "-y", "-i", str(src), "-vf", vf,
+        "ffmpeg", "-y", *threads, "-i", str(src), "-t", f"{cap_s:.3f}", "-vf", vf,
         "-c:v", "libx264", "-preset", "fast", "-crf", "16", "-an", str(dst),
     ])
     return dst
@@ -259,25 +272,88 @@ def stabilize(src: Path, dst: Path, trf: Path) -> Path:
         if src.resolve() != dst.resolve():
             dst.write_bytes(src.read_bytes())
         return dst
-    detect = (
-        f"vidstabdetect=shakiness=5:accuracy=15:stepsize=6:"
-        f"mincontrast=0.3:result={trf}"
+    import chunked as _ch
+    try:
+        dur = ffprobe_dur(src)
+    except Exception:
+        dur = 0.0
+    threads = _ch.ffmpeg_thread_args()
+    detect_tpl = (
+        "vidstabdetect=shakiness=5:accuracy=15:stepsize=6:"
+        "mincontrast=0.3:result={trf}"
     )
+    transform_tpl = (
+        "vidstabtransform=input={trf}:smoothing=12:optzoom=0:zoom=0:"
+        "interpol=bilinear:crop=keep,"
+        "unsharp=5:5:0.8:3:3:0.4,format=yuv420p"
+    )
+    if _ch.should_chunk_stabilize(dur):
+        windows = _ch.stab_windows(dur)
+        print(f"  chunked stabilize: {dur:.0f}s in {len(windows)} windows", flush=True)
+        parts = []
+        work = dst.parent
+        for i, (t0, t1) in enumerate(windows):
+            part_in = work / f"stab_in_{i:02d}.mp4"
+            part_out = work / f"stab_out_{i:02d}.mp4"
+            part_trf = work / f"transforms_{i:02d}.trf"
+            for stale in (part_in, part_out, part_trf):
+                stale.unlink(missing_ok=True)
+            run([
+                "ffmpeg", "-y", *threads,
+                "-ss", f"{t0:.3f}", "-t", f"{t1 - t0:.3f}", "-i", str(src),
+                "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-an",
+                str(part_in),
+            ])
+            try:
+                run([
+                    "ffmpeg", "-y", *threads, "-i", str(part_in),
+                    "-vf", detect_tpl.format(trf=part_trf), "-f", "null", "-",
+                ])
+                run([
+                    "ffmpeg", "-y", *threads, "-i", str(part_in),
+                    "-vf", transform_tpl.format(trf=part_trf),
+                    "-c:v", "libx264", "-preset", "fast", "-crf", "16", "-an",
+                    str(part_out),
+                ])
+                if part_out.exists() and part_out.stat().st_size >= 1000:
+                    parts.append(part_out)
+                    part_in.unlink(missing_ok=True)
+                else:
+                    parts.append(part_in)
+            except Exception as e:
+                print(f"  stab window {i} failed ({e}); using unstabilized slice", flush=True)
+                parts.append(part_in)
+        _ch.concat_demuxer(parts, dst)
+        for i, (t0, t1) in enumerate(windows):
+            _ch.free_paths(
+                work / f"stab_in_{i:02d}.mp4",
+                work / f"stab_out_{i:02d}.mp4",
+                work / f"transforms_{i:02d}.trf",
+            )
+        # Original unstabilized mezzanine is no longer needed.
+        if src.resolve() != dst.resolve():
+            try:
+                if src.name == "mezzanine.mp4":
+                    src.unlink(missing_ok=True)
+            except Exception:
+                pass
+        if not dst.exists() or dst.stat().st_size < 1_000_000:
+            raise RuntimeError(f"stabilize failed: {dst}")
+        return dst
+    detect = detect_tpl.format(trf=trf)
     run([
-        "ffmpeg", "-y", "-i", str(src),
+        "ffmpeg", "-y", *threads, "-i", str(src),
         "-vf", detect, "-f", "null", "-",
     ])
-    transform = (
-        f"vidstabtransform=input={trf}:smoothing=12:optzoom=0:zoom=0:"
-        f"interpol=bilinear:crop=keep,"
-        f"unsharp=5:5:0.8:3:3:0.4,format=yuv420p"
-    )
+    transform = transform_tpl.format(trf=trf)
     run([
-        "ffmpeg", "-y", "-i", str(src),
+        "ffmpeg", "-y", *threads, "-i", str(src),
         "-vf", transform,
         "-c:v", "libx264", "-preset", "fast", "-crf", "16", "-an",
         str(dst),
     ])
+    if src.resolve() != dst.resolve() and src.name == "mezzanine.mp4":
+        src.unlink(missing_ok=True)
     if not dst.exists() or dst.stat().st_size < 1_000_000:
         raise RuntimeError(f"stabilize failed: {dst}")
     return dst
@@ -3518,7 +3594,38 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         "-map", "[v]", "-map", "1:a", "-map", "-0:a?",
         *enc, str(out),
     ]
-    run(cmd)
+    used_chunks = False
+    try:
+        import chunked as _ch
+        ass_for_chunks = None
+        if "ass=" in (vfilt or ""):
+            # Prefer the lower-thirds file we just wrote.
+            cand = WORK / "lowerthirds.ass"
+            if cand.exists():
+                ass_for_chunks = cand
+        if _ch.chunked_active():
+            print(f"  chunked mux: {dur:.1f}s in {_ch.segment_count(dur)} x 1080x1920 segments, then music once", flush=True)
+            workc = WORK / "chunks"
+            video_only = WORK / "chunked_video.mp4"
+            _ch.free_tree(workc)
+            _ch.render_overlay_segments(
+                silent=silent, audio=audio, bar=bar, vfilt=vfilt,
+                dur=float(dur), dest=video_only, fps=FPS, work=workc,
+                ass_path=ass_for_chunks,
+            )
+            _ch.mux_music(video_only, audio, out, duration=float(dur))
+            _ch.free_tree(workc)
+            _ch.free_paths(video_only)
+            used_chunks = True
+    except Exception as e:
+        print(f"  chunked mux failed ({type(e).__name__}: {e}); falling back to single-pass", flush=True)
+        used_chunks = False
+        try:
+            Path(out).unlink(missing_ok=True)
+        except Exception:
+            pass
+    if not used_chunks:
+        run(cmd)
     apply_seamless_loop(out, loop_s=0.5)
     try:
         import cover as covermod

@@ -79,6 +79,7 @@ import gate
 import gemini
 import sky_ai
 import overlay_guard
+import chunked
 import sourcing
 
 os.environ.setdefault("SKY_GEMINI_BUDGET_FILE", str(OUT / f"gemini_budget_{iid}.json"))
@@ -412,6 +413,10 @@ def download_scene_bundle(src, skip=None):
         return None, errors or ["no official scene clips for this topic"]
     if not _concat_scene_files(paths, src):
         return None, errors + ["failed to merge official scene clips"]
+    # Per-clip trim is 180s, but two clips can still exceed the 210s bundle
+    # cap (the cap only stops adding a third file). Hard-trim the merge.
+    if sourcing.trim_source_length(src, 210.0):
+        print(f"  trimmed merged scene bundle to 210s", flush=True)
     return useds[0], errors
 
 
@@ -552,6 +557,8 @@ def run_pipeline(src, out, qa_json, work, *, relax=False, alt_scenes=False, excl
     mode = (item.get("edit_mode") or os.environ.get("SKY_EDIT_MODE") or "").strip().lower()
     if mode in ("music_only", "two_act"):
         cmd += ["--edit-mode", mode]
+    checkout = Path(__file__).resolve().parent.parent
+    chunked.activate_for_source(src, item=item, repo=checkout)
     env = dict(os.environ, SKY_WORK=str(work), SKY_ROOT=str(OUT), SKY_MARKET=(item.get("market") or "").upper())
     if mode in ("music_only", "two_act"):
         env["SKY_EDIT_MODE"] = mode
@@ -590,7 +597,17 @@ def upscale(src, out_1080, final):
         shutil.copy2(out_1080, final)
         fw, fh = probe_wh(final)
         return fw, fh, "1080x1920 (no upscale)"
-    subprocess.check_call(["ffmpeg", "-y", "-i", str(out_1080), "-vf", "scale=2160:3840:flags=lanczos",
+    if chunked.chunked_active():
+        try:
+            chunked.upscale_4k_chunked(out_1080, final)
+            up = f"chunked lanczos {sw}x{sh} source -> 2160x3840" if min(sw, sh) < 2160 else "4K source, scaled to 2160x3840 (chunked)"
+            fw, fh = probe_wh(final)
+            return fw, fh, up
+        except Exception as e:
+            print(f"  chunked 4K upscale failed ({e}); falling back to single-pass", flush=True)
+            final.unlink(missing_ok=True)
+    subprocess.check_call(["ffmpeg", "-y", *chunked.ffmpeg_thread_args(), "-i", str(out_1080),
+                           "-vf", "scale=2160:3840:flags=lanczos",
                            "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
                            "-c:a", "copy", "-movflags", "+faststart", str(final)])
     up = f"lanczos {sw}x{sh} source -> 2160x3840" if min(sw, sh) < 2160 else "4K source, scaled to 2160x3840"

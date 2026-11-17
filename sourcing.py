@@ -836,7 +836,16 @@ def trim_source_length(path: Path, max_s: float | None = None) -> bool:
     """If a downloaded official clip is longer than max_s, keep the first window. Never crop the frame."""
     max_s = float(max_s if max_s is not None else max_source_seconds())
     dur = _probe_duration(path)
-    if dur <= max_s + 2:
+    if dur <= 0:
+        try:
+            size = path.stat().st_size
+        except Exception:
+            size = 0
+        # A failed probe on a large official clip must not skip the cap:
+        # demo-v5-arcane built an 8:20 mezzanine and the runner was evicted.
+        if size < 8_000_000:
+            return False
+    elif dur <= max_s + 2:
         return False
     tmp = path.with_suffix(path.suffix + ".trim.mp4")
     tmp.unlink(missing_ok=True)
