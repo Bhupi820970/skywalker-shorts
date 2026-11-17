@@ -353,7 +353,8 @@
       "topic_id": "backup-bluegiant",
       "slug": "bluegiant",
       "status": "pending",
-      "queued_at": "2026-11-17 22:00 IST"
+      "queued_at": "2026-11-17 22:00 IST",
+      "result_id": "stock-bluegiant-02"
     },
     {
       "id": "stock-bluelock2-01",
@@ -753,7 +754,8 @@
       "topic_id": "backup-dragonballdaima",
       "slug": "dragonballdaima",
       "status": "pending",
-      "queued_at": "2026-11-17 22:00 IST"
+      "queued_at": "2026-11-17 22:00 IST",
+      "result_id": "stock-dragonballdaima-03"
     },
     {
       "id": "stock-drstone-01",
