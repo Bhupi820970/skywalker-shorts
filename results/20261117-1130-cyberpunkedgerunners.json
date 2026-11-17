@@ -1,0 +1,252 @@
+{
+  "id": "20261117-1130-cyberpunkedgerunners",
+  "status": "done",
+  "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-17 08:19 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44000441865",
+  "slot": "2026-11-17T11:30:00+05:30",
+  "title": "David did not expect this from Lucy #cyberpunkedgerunners #davidmartinez #animeedit",
+  "hook": "David finally reached his limit",
+  "description": "David finally reached his limit. David takes control of the situation during a high-stakes escape as Lucy watches on in disbelief. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #davidmartinez #animeedit #shorts #edit",
+  "tags": [
+    "cyberpunkedgerunners",
+    "davidmartinez",
+    "animeedit",
+    "anime",
+    "edit",
+    "shorts",
+    "trending",
+    "david"
+  ],
+  "queue_meta": {
+    "hook": "David wanted to be a legend",
+    "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+    "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
+    "tags": [
+      "cyberpunkedgerunners",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "david"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "David did not expect this from Lucy",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody suspected David was this dangerous",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch the moment David snaps",
+      "click_score": 85.0
+    },
+    {
+      "title": "Lucy did not see that coming",
+      "click_score": 82.0
+    },
+    {
+      "title": "David entering the scene is pure chaos",
+      "click_score": 78.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.2,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.8,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.7,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-cyberpunkedgerunners",
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "music": "sw_metamorphosis.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261117-1130-cyberpunkedgerunners",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261117-1130-cyberpunkedgerunners/render-20261117-1130-cyberpunkedgerunners.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 3.413,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+  "music": "sw_metamorphosis.mp3",
+  "music_credit": "Song: INTERWORLD - METAMORPHOSIS",
+  "description_final": "David finally reached his limit. David takes control of the situation during a high-stakes escape as Lucy watches on in disbelief. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #davidmartinez #animeedit #shorts #edit\n\nMusic:\nSong: INTERWORLD - METAMORPHOSIS",
+  "no_publish": false,
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.8,
+      "audio": true
+    },
+    "lufs": -15.6,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.9,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all technical and creative requirements.",
+        "The layout is correct with the white bar at the top and the footage uncropped.",
+        "The audio is clean and music-only as requested.",
+        "The hook is engaging and the pacing is excellent."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 140,
+      "src_start": 357.566,
+      "dur": 0.961
+    },
+    {
+      "id": 146,
+      "src_start": 369.971,
+      "dur": 2.452
+    },
+    {
+      "id": 52,
+      "src_start": 148.899,
+      "dur": 2.043,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 78,
+      "src_start": 221.972,
+      "dur": 2.067,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 88,
+      "src_start": 242.075,
+      "dur": 1.462
+    },
+    {
+      "id": 109,
+      "src_start": 280.864,
+      "dur": 1.879,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 193,
+      "src_start": 517.642,
+      "dur": 2.162
+    },
+    {
+      "id": 176001,
+      "src_start": 462.566,
+      "dur": 2.043,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 167,
+      "src_start": 434.225,
+      "dur": 1.5
+    },
+    {
+      "id": 62,
+      "src_start": 173.09,
+      "dur": 1.936,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 183,
+      "src_start": 483.9,
+      "dur": 1.5
+    },
+    {
+      "id": 131,
+      "src_start": 337.629,
+      "dur": 1.913,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    }
+  ],
+  "qc_status": "pass"
+}
