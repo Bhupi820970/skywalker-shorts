@@ -486,6 +486,9 @@ def yt_search(query: str, n: int = 6) -> list[dict]:
             "channel": e.get("channel") or e.get("uploader") or "",
             "handle": (e.get("channel_id") or e.get("uploader_id") or ""),
             "duration": e.get("duration") or 0,
+            "width": e.get("width") or 0,
+            "height": e.get("height") or 0,
+            "formats": e.get("formats") or [],
             "platform": "youtube",
         })
     return out
@@ -576,6 +579,8 @@ def filter_official_candidates(
         except Exception:
             dur = 0
         if dur and not (20 <= dur <= 480):
+            continue
+        if not sourcing.formats_meet_1080(e.get("formats"), e.get("width") or 0, e.get("height") or 0):
             continue
         ch = e.get("channel") or e.get("uploader") or ""
         handle = e.get("handle") or ""
@@ -713,6 +718,9 @@ def pick_clean_official(
             continue
         if c.get("stamped") or is_stamped_channel(ch) or is_stamped_channel(handle):
             skipped.append({**c, "skip": "known logo-burn official channel; looking for another official clip"})
+            continue
+        if not sourcing.formats_meet_1080(c.get("formats"), c.get("width") or 0, c.get("height") or 0):
+            skipped.append({**c, "skip": "below 1080p; looking for another official clip"})
             continue
         if samples >= max_samples:
             skipped.append({**c, "skip": "sample budget"})

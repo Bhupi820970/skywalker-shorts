@@ -228,3 +228,34 @@ def test_gta6_seeds_only_after_launch(monkeypatch):
     assert "Rockstar Games" in gta["official_channels"]
     assert any("gameplay" in q.lower() for q in gta["search_queries"])
     assert all("trailer" not in q.lower() for q in gta["search_queries"])
+
+
+def test_filter_drops_sub_1080_keeps_next_official():
+    official = {"netflix", "tohoanimation"}
+    entries = [
+        {"id": "yt:low", "url": "https://www.youtube.com/watch?v=lowres7201",
+         "title": "Official scene 720p", "channel": "Netflix", "handle": "",
+         "duration": 40, "width": 1280, "height": 720},
+        {"id": "yt:ok", "url": "https://www.youtube.com/watch?v=official1080",
+         "title": "Official fight scene", "channel": "TOHO animation", "handle": "",
+         "duration": 45, "width": 1920, "height": 1080},
+        {"id": "yt:fan", "url": "https://www.youtube.com/watch?v=fan1080xx",
+         "title": "Fight scene 4k", "channel": "Anime Recaps", "handle": "",
+         "duration": 40, "width": 3840, "height": 2160},
+    ]
+    kept = d.filter_official_candidates(entries, official=official, deny=set(), seen=set())
+    urls = [c["url"] for c in kept]
+    assert urls == ["https://www.youtube.com/watch?v=official1080"]
+
+
+def test_pick_clean_skips_720_and_takes_next_official_1080():
+    cands = [
+        {"url": "https://www.youtube.com/watch?v=lowres7201", "channel": "Netflix",
+         "title": "Scene 1", "id": "yt:low", "stamped": False, "width": 1280, "height": 720},
+        {"url": "https://www.youtube.com/watch?v=official1080", "channel": "TOHO animation",
+         "title": "Scene 2", "id": "yt:ok", "stamped": False, "width": 1920, "height": 1080},
+    ]
+    pick, skipped = d.pick_clean_official(cands, check=lambda url: d.SampleResult(True))
+    assert pick is not None
+    assert "official1080" in pick["url"]
+    assert any(s.get("skip", "").startswith("below 1080p") for s in skipped)

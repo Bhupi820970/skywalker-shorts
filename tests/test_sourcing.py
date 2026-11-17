@@ -166,3 +166,22 @@ def test_max_source_seconds_default_and_env(monkeypatch):
     assert sourcing.max_source_seconds() == 360.0
     monkeypatch.setenv("SKY_MAX_SOURCE_S", "180")
     assert sourcing.max_source_seconds() == 180.0
+
+
+def test_is_below_1080_uses_short_side():
+    assert sourcing.is_below_1080(1280, 720) is True
+    assert sourcing.is_below_1080(1920, 1080) is False
+    assert sourcing.is_below_1080(1080, 1920) is False
+    assert sourcing.is_below_1080(3840, 2160) is False
+    assert sourcing.is_below_1080(0, 0) is False  # unknown is not a reject
+
+
+def test_formats_meet_1080_unknown_allowed_known_720_rejected():
+    assert sourcing.formats_meet_1080([], 0, 0) is True
+    assert sourcing.formats_meet_1080([], 1280, 720) is False
+    assert sourcing.formats_meet_1080([{"width": 1920, "height": 1080}], 0, 0) is True
+    assert sourcing.formats_meet_1080([{"height": 720}], 0, 0) is False
+    # prefer the best listed format
+    assert sourcing.formats_meet_1080(
+        [{"width": 1280, "height": 720}, {"width": 1920, "height": 1080}], 0, 0
+    ) is True

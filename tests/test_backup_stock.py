@@ -473,3 +473,10 @@ def test_trailer_only_pool_item_is_not_preuploaded():
         "fallback_asset": "dandadan_scene1_h264.mp4",
     }) is True
 
+
+
+def test_source_quality_reason_below_1080():
+    import backup_stock as b
+    assert b.source_quality_reason({"source_w": 1280, "source_h": 720}) == "1280x720 below 1080p"
+    assert b.source_quality_reason({"width": 1920, "height": 1080}) is None
+    assert b.source_quality_reason({}) is None  # unknown size is not a silent reject

@@ -391,6 +391,11 @@ def download_scene_bundle(src, skip=None):
             errors.append(f"reject {why}: {info or u}")
             part.unlink(missing_ok=True)
             continue
+        ok_res, why_res = sourcing.resolution_ok(part)
+        if not ok_res:
+            errors.append(f"reject {why_res}: {info or u}")
+            part.unlink(missing_ok=True)
+            continue
         sourcing.trim_source_length(part)
         print(f"  scene clip {len(paths)+1}: {info}", flush=True)
         paths.append(part)

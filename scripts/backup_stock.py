@@ -172,6 +172,27 @@ def qc_was_skipped(r: dict | None) -> bool:
     return False
 
 
+
+def source_quality_reason(r: dict | None = None, path=None) -> str | None:
+    """Why a stock source is below the 1080p floor, or None if ok/unknown.
+
+    Never deletes the video; callers mark the entry not-ready and move on.
+    """
+    import sourcing
+    if path:
+        from pathlib import Path as _P
+        fp = _P(path)
+        if fp.exists():
+            ok, why = sourcing.resolution_ok(fp)
+            if not ok:
+                return why
+    if r:
+        w, h = int(r.get("source_w") or r.get("width") or 0), int(r.get("source_h") or r.get("height") or 0)
+        if sourcing.is_below_1080(w, h):
+            return f"{w}x{h} below 1080p"
+    return None
+
+
 def source_topic_mismatch(r: dict | None, ent: dict | None = None) -> bool:
     """True when the footage topic does not match the title/slug (e.g. Blue Lock under a Vinland title)."""
     if not r:
@@ -809,6 +830,9 @@ def audit_ready_stock(root: Path | None = None, now: datetime | None = None) -> 
         except Exception:
             if "trailer" in str(r.get("source") or "").lower():
                 reasons.append("trailer_source")
+        qreason = source_quality_reason(r)
+        if qreason:
+            reasons.append("below_1080p")
         if not reasons:
             continue
         ent["status"] = "not_ready"

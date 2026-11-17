@@ -3,7 +3,7 @@
 YouTube often blocks GitHub runners ("Sign in to confirm you're not a bot").
 download_source builds a long fallback chain: studio/press kits -> official
 scene-clip sites -> official channels on other platforms -> Indian free clip
-sites -> YouTube via yt-dlp last. Only free official SCENE clips (720p+).
+sites -> YouTube via yt-dlp last. Only free official SCENE clips (1080p+).
 No trailers or teasers, even as fallback. No DRM breaking, no paid OTT rips,
 no third-party channel watermarks.
 """
@@ -21,8 +21,10 @@ from urllib.parse import quote_plus
 REPO = Path(__file__).resolve().parent
 CATALOG = REPO / "config" / "source_catalog.json"
 
-# Prefer 720p+; avoid tiny/mobile encodes.
-YTDLP_FORMAT = "bv*[height>=720][height<=1080][ext=mp4]+ba[ext=m4a]/b[ext=mp4][height>=720]/bv*[height>=720]+ba/b"
+# Prefer the highest 1080p+ format; reject anything whose shorter side is under 1080.
+MIN_SHORT_SIDE = 1080
+YTDLP_FORMAT = "bv*[height>=1080]+ba/b[height>=1080]/bv*[height>=1080]+ba/b"
+YTDLP_SORT = "res:4320,res,codec:h264,ext:mp4:m4a"
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
@@ -500,15 +502,63 @@ def _ok_src(p: Path, min_bytes: int = 500_000) -> bool:
 
 
 def _probe_height(path: Path) -> int:
+    return probe_wh(path)[1]
+
+
+def probe_wh(path: Path) -> tuple[int, int]:
     try:
         o = subprocess.check_output(
             ["ffprobe", "-v", "error", "-select_streams", "v:0",
-             "-show_entries", "stream=height", "-of", "csv=p=0", str(path)],
+             "-show_entries", "stream=width,height", "-of", "csv=p=0", str(path)],
             text=True, timeout=30,
         ).strip()
-        return int(o.split(",")[0] or 0)
+        parts = [x for x in o.replace("x", ",").split(",") if x.strip()]
+        w, h = int(parts[0] or 0), int(parts[1] or 0)
+        return w, h
     except Exception:
-        return 0
+        return 0, 0
+
+
+def short_side(w: int, h: int) -> int:
+    w, h = int(w or 0), int(h or 0)
+    if w and h:
+        return min(w, h)
+    return w or h or 0
+
+
+def is_below_1080(w: int, h: int) -> bool:
+    """True when the shorter side is under 1080p (height < 1080 for 16:9)."""
+    s = short_side(w, h)
+    return bool(s) and s < MIN_SHORT_SIDE
+
+
+def resolution_ok(path: Path) -> tuple[bool, str]:
+    """Accept if probe fails (unknown) or short side >= 1080. Reject known sub-1080."""
+    w, h = probe_wh(path)
+    if not w and not h:
+        return True, "unknown"
+    if is_below_1080(w, h):
+        return False, f"{w}x{h} below 1080p (short side {short_side(w, h)})"
+    return True, f"{w}x{h}"
+
+
+def formats_meet_1080(formats: list[dict] | None, width: int = 0, height: int = 0) -> bool:
+    """True if any listed format (or the entry's width/height) is 1080p+.
+
+    Unknown (no sizes at all) is allowed so we still try the official source
+    and reject after download if it is actually sub-1080.
+    """
+    best = short_side(width, height)
+    for f in formats or []:
+        if not isinstance(f, dict):
+            continue
+        best = max(best, short_side(int(f.get("width") or 0), int(f.get("height") or 0)))
+        # some listings only have height
+        if not f.get("width") and f.get("height"):
+            best = max(best, int(f.get("height") or 0))
+    if not best:
+        return True
+    return best >= MIN_SHORT_SIDE
 
 
 def download_direct(url: str, dest: Path) -> tuple[bool, str]:
@@ -527,6 +577,10 @@ def download_direct(url: str, dest: Path) -> tuple[bool, str]:
         if r.returncode == 0 and _ok_src(cand):
             if cand.resolve() != dest.resolve():
                 dest.write_bytes(cand.read_bytes())
+            ok_res, why = resolution_ok(dest)
+            if not ok_res:
+                dest.unlink(missing_ok=True)
+                return False, f"gh:{url}: {why}"
             return True, f"gh:{url}"
         return False, f"gh:{asset}:{(r.stderr or '')[-160:]}"
     r = subprocess.run(
@@ -534,6 +588,10 @@ def download_direct(url: str, dest: Path) -> tuple[bool, str]:
         capture_output=True, text=True,
     )
     if r.returncode == 0 and _ok_src(dest):
+        ok_res, why = resolution_ok(dest)
+        if not ok_res:
+            dest.unlink(missing_ok=True)
+            return False, f"curl:{url}: {why}"
         return True, url
     return False, f"curl:{url}:{(r.stderr or '')[-160:]}"
 
@@ -742,6 +800,7 @@ def download_ytdlp(url: str, dest: Path, *, allow_youtube: bool = True) -> tuple
         "yt-dlp", "--no-playlist", "--remote-components", "ejs:github",
         "-4", "--user-agent", UA,
         "-f", YTDLP_FORMAT,
+        "-S", YTDLP_SORT,
         "--download-sections", f"*0-{int(max_s)}",
         "--force-keyframes-at-cuts",
         "--merge-output-format", "mp4",
@@ -757,10 +816,10 @@ def download_ytdlp(url: str, dest: Path, *, allow_youtube: bool = True) -> tuple
             cmd.pop(i); cmd.pop(i)
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
     if r.returncode == 0 and _ok_src(dest):
-        h = _probe_height(dest)
-        if h and h < 720:
+        ok_res, why = resolution_ok(dest)
+        if not ok_res:
             dest.unlink(missing_ok=True)
-            return False, f"yt-dlp:{url}: height {h}<720"
+            return False, f"yt-dlp:{url}: {why}"
         trim_source_length(dest, max_s)
         return True, url
     err = (r.stderr.strip().splitlines() or r.stdout.strip().splitlines() or ["?"])[-1][:280]
@@ -777,7 +836,7 @@ def download_source(
     allow_youtube: bool = True,
     on_try: Callable[[str], None] | None = None,
 ) -> tuple[str | None, list[str]]:
-    """Try every official candidate until one lands a 720p+ mp4.
+    """Try every official candidate until one lands a 1080p+ mp4.
 
     Order: GitHub sources release / fallback_mp4 -> catalog studio/press ->
     trailer sites -> platforms (DM/Vimeo/Archive/...) -> Indian free clips ->
