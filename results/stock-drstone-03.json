@@ -1,0 +1,44 @@
+{
+  "id": "stock-drstone-03",
+  "status": "failed",
+  "detail": "no usable official source left; next backup takes the slot: download failed: reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene1_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene2_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene3_h264.mp4 | yt-dlp:ERROR: [youtube] j8YijNavM7Y: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] SCspnoheYus: Sign in to c",
+  "at": "2026-11-17 20:32 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44109396388",
+  "slot": null,
+  "title": "Senku rebuilt the world with science | Dr. Stone | #edit",
+  "hook": "Senku rebuilt the world with science",
+  "description": "Senku rebuilt the world with science. From official Dr. Stone clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #drstone",
+  "tags": [
+    "drstone",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "senku"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [],
+  "backup_item": "backup-drstone",
+  "stock": true,
+  "stock_topic": "backup-drstone",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene1_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene2_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene3_h264.mp4 | yt-dlp:ERROR: [youtube] j8YijNavM7Y: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] SCspnoheYus: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Q_Nz2riyUy0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] JxaJXnWDAN8: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] FVNQnGIeRmc: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] pkMgTN4Joi4: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    }
+  ],
+  "last_error": "download failed: reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene1_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene2_h264.mp4 | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/drstone_scene3_h264.mp4 | yt-dlp:ERROR: [youtube] j8YijNavM7Y: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] SCspnoheYus: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Q_Nz2riyUy0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] JxaJXnWDAN8: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] FVNQnGIeRmc: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] pkMgTN4Joi4: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A",
+  "source_unrecoverable": true
+}

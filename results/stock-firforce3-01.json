@@ -1,0 +1,166 @@
+{
+  "id": "stock-firforce3-01",
+  "status": "retry_queued",
+  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: gemini QC reject: The video contains a persistent 'Crunchyroll' watermark in the top-left corner of the footage, which violates the requirement for clean footage.; The layout requirement was not met: the white bar is placed over the top of the footage rather than being a separate band above the uncropped frame.",
+  "at": "2026-11-17 22:41 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44109396388",
+  "slot": null,
+  "title": "Karim did not expect this level of power #fireforce #karim #anime",
+  "hook": "Karim vs Charon intensity peak",
+  "description": "Karim vs Charon intensity peak. Karim faces off against the overwhelming power of Charon as the threat of the Great Cataclysm looms. From the official Fire Force trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#fireforce #karim #anime #shorts #edit",
+  "tags": [
+    "fireforce",
+    "karim",
+    "anime",
+    "firforce3",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "shinra"
+  ],
+  "queue_meta": {
+    "hook": "Shinra moves faster than fire",
+    "title": "Shinra moves faster than fire | Fire Force | #edit",
+    "description": "Shinra moves faster than fire. From official Fire Force clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #firforce3",
+    "tags": [
+      "firforce3",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "shinra"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Karim did not expect this level of power",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody suspected Charon was this dangerous",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch how Karim counters this massive threat",
+      "click_score": 85.0
+    },
+    {
+      "title": "Karim challenging Charon is pure insanity",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment Karim realized the danger",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.6,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 1.6,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 127.4,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-firforce3",
+  "stock": true,
+  "stock_topic": "backup-firforce3",
+  "spare": true,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firforce3_scene2_h264.mp4",
+      "music": "sw_phonkmemphisrap2.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firforce3_scene2_h264.mp4",
+      "music": "sw_phonkmemphisrap2.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 3,
+      "ok": false,
+      "error": "gemini QC reject: The video contains a persistent 'Crunchyroll' watermark in the top-left corner of the footage, which violates the requirement for clean footage.; The layout requirement was not met: the white bar is placed over the top of the footage rather than being a separate band above the uncropped frame.",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firforce3_scene2_h264.mp4",
+      "music": "sw_funkcriminalslowed.mp3",
+      "qc_status": "fail"
+    }
+  ],
+  "last_error": "gemini QC reject: The video contains a persistent 'Crunchyroll' watermark in the top-left corner of the footage, which violates the requirement for clean footage.; The layout requirement was not met: the white bar is placed over the top of the footage rather than being a separate band above the uncropped frame."
+}
