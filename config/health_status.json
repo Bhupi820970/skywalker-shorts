@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-18 23:43 IST",
+  "at": "2026-11-19 00:10 IST",
   "slots_checked": 11,
   "ready": [
     {
@@ -118,6 +118,7 @@
     "stock-bluegiant-01",
     "stock-alienromulus-03",
     "stock-mortalkombat2-01",
+    "stock-aotfinal-07",
     "20261118-1830-aotfinal",
     "20261117-2230-bluegiant",
     "stock-wickedforgood-01",
@@ -141,8 +142,8 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 14,
-  "stock_pending": 16,
+  "stock_ready": 15,
+  "stock_pending": 15,
   "stock_used": 22,
   "stock_target": 30,
   "stock_need_refill": false,
