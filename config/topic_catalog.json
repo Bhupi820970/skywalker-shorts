@@ -2087,6 +2087,30 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "topgunmaverick",
+      "pillar": "hollywood",
+      "words": "TOP GUN MAVERICK",
+      "hook": "Why Maverick is the greatest pilot",
+      "title": "Why Maverick is the greatest pilot | The final training run | #edit",
+      "description": "Why Maverick is the greatest pilot. From official Top Gun Maverick clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #topgun #maverick #tomcruise",
+      "tags": [
+        "topgun",
+        "maverick",
+        "tomcruise",
+        "movieedit",
+        "phonk",
+        "aviation",
+        "action"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=IXbnzEHZDPg",
+      "scene_assets": [
+        "topgunmaverick_scene1_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
