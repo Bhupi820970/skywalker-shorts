@@ -1,17 +1,14 @@
 {
   "id": "20261118-1230-jjk0",
-  "status": "retry_queued",
-  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
-  "at": "2026-11-18 08:00 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44212588595",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
+  "at": "2026-11-18 11:44 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44242762689",
   "slot": "2026-11-18T12:30:00+05:30",
-  "title": "Nanami entering the scene is peak Jujutsu Kaisen #jujutsukaisen #nanami #anime",
-  "hook": "Nanami arrives to handle this",
-  "description": "Nanami arrives to handle this. Nanami Kento steps into the fray to single-handedly dismantle the cursed spirits threatening the city. From the official Jujutsu Kaisen 0 trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#jujutsukaisen #nanami #anime #shorts #edit",
+  "title": "Ranbir makes them regret everything #animal #ranbirkapoor #bollywood",
+  "hook": "Ranbir faces his father's enemies",
+  "description": "Ranbir faces his father's enemies. Ranbir Kapoor delivers a chilling performance as he intimidates his father's dangerous adversaries in a high-stakes confrontation. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit",
   "tags": [
-    "jujutsukaisen",
-    "nanami",
-    "anime",
     "animal",
     "ranbirkapoor",
     "bollywood",
@@ -36,26 +33,26 @@
   },
   "gemini_meta": true,
   "hook_source": "gemini",
-  "hook_style": "character-focused",
+  "hook_style": "curiosity gap",
   "title_candidates": [
     {
-      "title": "Nanami entering the scene is peak Jujutsu Kaisen",
+      "title": "Ranbir makes them regret everything",
       "click_score": 92.0
     },
     {
-      "title": "Nobody suspected Nanami was this dangerous",
+      "title": "Nobody expected this level of coldness",
       "click_score": 88.0
     },
     {
-      "title": "Watch Nanami end the fight in seconds",
+      "title": "Ranbir enters the room and changes everything",
       "click_score": 85.0
     },
     {
-      "title": "Nanami did not expect this from the curse",
+      "title": "The moment he finally confronts his past",
       "click_score": 82.0
     },
     {
-      "title": "The moment Nanami took control of the situation",
+      "title": "Watch the tension in his eyes",
       "click_score": 79.0
     }
   ],
@@ -64,13 +61,20 @@
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 503"
+      "s": 22.7,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "scenes",
@@ -88,49 +92,21 @@
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 19.6,
+      "s": 6.8,
       "ok": true
     },
     {
       "purpose": "hook",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 52.1,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 7.8,
+      "s": 4.5,
       "ok": true
     },
     {
       "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 51.0,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 8.8,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "s": 15.9,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 4.4,
+      "s": 3.7,
       "ok": true
     }
   ],
@@ -146,30 +122,171 @@
       "from_words": "JUJUTSU KAISEN 0",
       "to": "animal",
       "to_words": "ANIMAL",
-      "reason": "pipeline/QA failed (exit 1): only 15.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+      "reason": "pipeline/QA failed (exit 1): only 15.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
     }
   ],
   "swapped_from": "jjk0",
   "swapped_to": "animal",
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 15.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 15.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4",
-      "music": "sw_perdidoslowed.mp3",
+      "music": "sw_spotimateiolabubufunksxl.mp3",
       "qc_status": null
     },
     {
       "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene4_h264.mp4",
-      "music": "sw_funkveneno.mp3",
-      "qc_status": null
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+      "music": "sw_sentemaisoverslowed.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output"
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261118-1230-jjk0",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-1230-jjk0/render-20261118-1230-jjk0.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+  "music": "sw_sentemaisoverslowed.mp3",
+  "music_credit": "Song: Eternxlkz - SENTE MAIS OVER SLOWED (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "Ranbir faces his father's enemies. Ranbir Kapoor delivers a chilling performance as he intimidates his father's dangerous adversaries in a high-stakes confrontation. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit\n\nMusic:\nSong: Eternxlkz - SENTE MAIS OVER SLOWED (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-1230-jjk0/render-20261118-1230-jjk0-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.789,
+      "audio": true
+    },
+    "lufs": -14.5,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -14.7,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards: correct layout with white bar, no cropping, clean music-only audio, and engaging hook/title."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 6,
+      "src_start": 11.0,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 42,
+      "src_start": 77.417,
+      "dur": 1.96,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 22,
+      "src_start": 36.417,
+      "dur": 1.668,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 72,
+      "src_start": 121.125,
+      "dur": 1.513,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 59,
+      "src_start": 109.125,
+      "dur": 2.043
+    },
+    {
+      "id": 69,
+      "src_start": 116.042,
+      "dur": 1.585
+    },
+    {
+      "id": 25,
+      "src_start": 50.487,
+      "dur": 2.598,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 57,
+      "src_start": 101.625,
+      "dur": 1.543
+    },
+    {
+      "id": 28,
+      "src_start": 57.75,
+      "dur": 1.502,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 4,
+      "src_start": 7.417,
+      "dur": 1.46,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 51,
+      "src_start": 91.292,
+      "dur": 2.293,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 17,
+      "src_start": 27.833,
+      "dur": 1.5
+    },
+    {
+      "id": 76,
+      "src_start": 129.0,
+      "dur": 0.935
+    }
+  ],
+  "qc_status": "pass"
 }

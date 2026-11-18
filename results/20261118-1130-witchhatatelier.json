@@ -1,13 +1,13 @@
 {
   "id": "20261118-1130-witchhatatelier",
-  "status": "retry_queued",
-  "detail": "all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 15.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-18 08:02 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44212588595",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): only 15.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-18 12:15 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44242762689",
   "slot": "2026-11-18T11:30:00+05:30",
-  "title": "Coco just discovered forbidden magic #witchhatatelier #coco #anime",
-  "hook": "Coco just discovered forbidden magic",
-  "description": "Coco just discovered forbidden magic. A young girl named Coco inadvertently casts a forbidden spell that creates a dragon and changes her life forever. From the official Witch Hat Atelier trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#witchhatatelier #coco #anime #shorts #edit",
+  "title": "The moment Coco realized what she unleashed #witchhatatelier #coco #anime",
+  "hook": "She unleashed something she cannot control",
+  "description": "She unleashed something she cannot control. Desperate to fix her mistake, Coco questions what to do as forbidden magic erupts around her. From the official Witch Hat Atelier trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#witchhatatelier #coco #anime #shorts #edit",
   "tags": [
     "witchhatatelier",
     "coco",
@@ -36,24 +36,24 @@
   "hook_style": "curiosity gap",
   "title_candidates": [
     {
-      "title": "Coco just discovered forbidden magic",
-      "click_score": 95.0
+      "title": "The moment Coco realized what she unleashed",
+      "click_score": 93.0
     },
     {
-      "title": "Nobody warned Coco about the dragon",
+      "title": "Nobody warned Coco about forbidden magic",
       "click_score": 88.0
     },
     {
-      "title": "The moment Coco realized magic is real",
+      "title": "Coco never expected magic to be this dangerous",
       "click_score": 85.0
     },
     {
-      "title": "Coco accidentally summoned a disaster",
+      "title": "Watch what happens when Coco starts drawing",
       "click_score": 82.0
     },
     {
-      "title": "Watch Coco lose control of her spell",
-      "click_score": 78.0
+      "title": "Master Qifrey knew this day would come",
+      "click_score": 79.0
     }
   ],
   "gemini_calls": [
@@ -61,59 +61,59 @@
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 3.0,
+      "s": 25.2,
       "ok": true
     },
     {
       "purpose": "hook",
-      "model": "gemini-3.1-flash-lite",
+      "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 2.5,
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "s": 15.6,
       "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
     },
     {
       "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 3.5,
+      "s": 1.8,
       "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 3.8,
+      "s": 3.7,
       "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 3.0,
+      "s": 3.4,
       "ok": true
     }
   ],
@@ -126,7 +126,7 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -134,7 +134,7 @@
       "ok": false,
       "error": "pipeline/QA failed (exit 1): only 15.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene3_h264.mp4",
-      "music": "sw_perdidoslowed.mp3",
+      "music": "sw_sentemaisoverslowed.mp3",
       "qc_status": null
     }
   ],
