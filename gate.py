@@ -52,7 +52,7 @@ def qc_verdict(gem_qc) -> str:
 
 
 def run_gate(final: Path, *, qa_obj: dict, checks: dict, item: dict, work: Path | None,
-             gemini_qc: dict | None, out_res: int = 2160) -> dict:
+             gemini_qc: dict | None, out_res: int = 2160, logo_scan=None) -> dict:
     fails, info = [], {}
     pr = probe(final)
     info["probe"] = pr
@@ -116,6 +116,16 @@ def run_gate(final: Path, *, qa_obj: dict, checks: dict, item: dict, work: Path 
     b = sky_ai.banned_hits(hook, title, desc)
     if b:
         fails.append("banned words: " + ", ".join(b))
+    # HARD: whole final video at 2 fps, Gemini logo/watermark scan. No verdict = blocked.
+    try:
+        import logo_guard
+        lg = logo_scan(final) if logo_scan else logo_guard.scan_video(final, Path(work or final.parent))
+    except Exception as e:
+        lg = {"ok": None, "error": str(e)}
+    info["logo_scan"] = lg
+    if lg.get("ok") is not True:
+        fails.append("logo scan: " + (json.dumps(lg.get("hits"))[:300] if lg.get("hits")
+                                      else str(lg.get("error") or "no verdict")))
     if gemini_qc is None:
         info["gemini_qc"] = "skipped (unavailable/budget) - heuristic gate only"
     else:

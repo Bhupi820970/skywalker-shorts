@@ -71,12 +71,12 @@ def test_gemini_key_rotation(monkeypatch, tmp_path):
     assert not gemini._quota_error(400)
 
 
-def test_scene_ranks_keep_enough_footage():
+def test_scene_ranks_never_keep_cards_to_pad_footage():
+    # Logo/title cards are a hard rule: short footage falls through to the next clip instead.
     scenes = [{"start": i * 3.0, "end": i * 3.0 + 3.0, "score": 1.0} for i in range(14)]
     ranks = {f"{s['start']:.2f}-{s['end']:.2f}": {"score": 9, "card": True} for s in scenes}
     sky_ai.apply_scene_ranks(scenes, ranks, min_keep_s=34.0)
-    kept = sum(s["end"] - s["start"] for s in scenes if not s.get("skip"))
-    assert kept >= 34.0
+    assert all(s.get("skip") for s in scenes)
 
 
 def test_library_has_tracks_and_no_repeat(tmp_path, monkeypatch):
