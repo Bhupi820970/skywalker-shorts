@@ -129,8 +129,9 @@
       "id": "stock-aotfinal-06",
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
-      "status": "pending",
-      "queued_at": "2026-11-18 21:18 IST"
+      "status": "failed",
+      "queued_at": "2026-11-18 21:18 IST",
+      "result_id": "stock-aotfinal-06"
     },
     {
       "id": "stock-apothecarydiaries2-01",
