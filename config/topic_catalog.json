@@ -2113,6 +2113,32 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "thebatman",
+      "pillar": "hollywood",
+      "words": "THE BATMAN",
+      "hook": "Why Batman scares the criminals",
+      "title": "Why Batman scares the criminals | Batman enters the club | #edit",
+      "description": "Why Batman scares the criminals. From official The Batman clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #batman #thebatman #dc",
+      "tags": [
+        "batman",
+        "thebatman",
+        "dc",
+        "movieedit",
+        "phonk",
+        "brucewayne",
+        "action"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=GGZdoD7gYnE",
+      "scene_assets": [
+        "thebatman_scene1_h264.mp4",
+        "thebatman_scene2_h264.mp4",
+        "thebatman_scene3_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-18T09:57:41Z",
-  "last_upload_at": "2026-11-18T09:57:41Z"
+  "last_run_at": "2026-11-18T10:01:14Z",
+  "last_upload_at": "2026-11-18T10:01:14Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
@@ -9,6 +9,8 @@
   "yt:5oRczmZ6dGU",
   "yt:7LzDcr20SHc",
   "yt:B0pIISs-o8w",
+  "yt:DIefkYvjq6E",
+  "yt:GGZdoD7gYnE",
   "yt:HGCsAcFzaFw",
   "yt:HYfycqyIuEk",
   "yt:HgwIz90uzTg",
@@ -29,6 +31,7 @@
   "yt:golG9lmaR_U",
   "yt:jeQYEIQ6eHw",
   "yt:r9oI7Kvqwsg",
+  "yt:xPJLyIFyF50",
   "yt:yWBA876qftM"
  ],
  "clips": [
@@ -317,6 +320,39 @@
    "kbps": 1386,
    "by": "box",
    "at": "2026-11-18T09:57:41Z"
+  },
+  {
+   "asset": "thebatman_scene1_h264.mp4",
+   "id": "yt:GGZdoD7gYnE",
+   "title": "The Batman - Metro Fight Scene [4K]",
+   "channel": "MovieClipsHD",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 5125,
+   "by": "box",
+   "at": "2026-11-18T10:01:14Z"
+  },
+  {
+   "asset": "thebatman_scene2_h264.mp4",
+   "id": "yt:xPJLyIFyF50",
+   "title": "The Batman (2022) - Club Fight Scene [4K HDR - Dolby 5.1]",
+   "channel": "MaxMovieClips",
+   "kind": "scene",
+   "res": "3840x1608",
+   "kbps": 4282,
+   "by": "box",
+   "at": "2026-11-18T10:01:14Z"
+  },
+  {
+   "asset": "thebatman_scene3_h264.mp4",
+   "id": "yt:DIefkYvjq6E",
+   "title": "The Batman (2022) | Batman vs Riddler's Gang Final Fight Scene",
+   "channel": "MrSam Movie Clips",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 5876,
+   "by": "box",
+   "at": "2026-11-18T10:01:14Z"
   }
  ],
  "github": {
