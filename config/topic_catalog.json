@@ -1988,7 +1988,9 @@
       "market": "IN",
       "source_url": "https://www.youtube.com/watch?v=0Z_mA7n5zIA",
       "scene_assets": [
-        "vikram_scene1_h264.mp4"
+        "vikram_scene1_h264.mp4",
+        "vikram_scene2_h264.mp4",
+        "vikram_scene3_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
