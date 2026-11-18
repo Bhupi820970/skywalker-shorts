@@ -282,5 +282,9 @@
       "dur": 1.5
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "stock_used": true,
+  "assigned_slot": "2026-11-18T18:30:00+05:30",
+  "assigned_result": "20261118-1830-aotfinal",
+  "used_at": "2026-11-18 18:48 IST"
 }

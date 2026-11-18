@@ -1,0 +1,288 @@
+{
+  "id": "20261118-1830-aotfinal",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL) (assigned from stock-aotfinal-04)",
+  "at": "2026-11-18 18:48 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44147302072",
+  "slot": "2026-11-18T18:30:00+05:30",
+  "title": "Ranbir Kapoor walking in to end them #animal #ranbirkapoor #bollywood",
+  "hook": "He came to settle the score",
+  "description": "He came to settle the score. Ranvijay Singh makes a lethal entrance to confront his father's enemies and assert total dominance. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit",
+  "tags": [
+    "animal",
+    "ranbirkapoor",
+    "bollywood",
+    "edit",
+    "phonk",
+    "aura",
+    "action"
+  ],
+  "queue_meta": {
+    "hook": "Why he is the villain",
+    "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+    "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+    "tags": [
+      "animal",
+      "ranbirkapoor",
+      "bollywood",
+      "edit",
+      "phonk",
+      "aura",
+      "action"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Ranbir Kapoor walking in to end them",
+      "click_score": 92.0
+    },
+    {
+      "title": "They were not ready for this confrontation",
+      "click_score": 88.0
+    },
+    {
+      "title": "When he tells you to sit down",
+      "click_score": 85.0
+    },
+    {
+      "title": "Nobody suspected Ranvijay was this dangerous",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment Ranvijay takes control",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.1,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.8,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.5,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 13.1,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-aotfinal",
+  "stock": true,
+  "stock_topic": "backup-aotfinal",
+  "spare": true,
+  "words": "ANIMAL",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "attackontitan",
+      "from_words": "ATTACK ON TITAN",
+      "to": "animal",
+      "to_words": "ANIMAL",
+      "reason": "pipeline/QA failed (exit 1): only 8.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "attackontitan",
+  "swapped_to": "animal",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 8.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/aotfinal_scene1_h264.mp4",
+      "music": "sw_stoppostingaboutballer.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+      "music": "sw_stoppostingaboutballer.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-aotfinal-04.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+  "music": "sw_stoppostingaboutballer.mp3",
+  "music_credit": "Song: Roblox Music - Stop posting about baller (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "description_final": "He came to settle the score. Ranvijay Singh makes a lethal entrance to confront his father's enemies and assert total dominance. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit\n\nMusic:\nSong: Roblox Music - Stop posting about baller (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-aotfinal-04-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 23.808,
+      "audio": true
+    },
+    "lufs": -14.1,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.5,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards, including the correct layout, hook, and audio requirements."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 22,
+      "src_start": 36.417,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 42,
+      "src_start": 77.417,
+      "dur": 1.658,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 28,
+      "src_start": 57.75,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 78,
+      "src_start": 133.417,
+      "dur": 1.728,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 59,
+      "src_start": 109.125,
+      "dur": 1.858
+    },
+    {
+      "id": 69,
+      "src_start": 116.042,
+      "dur": 1.585
+    },
+    {
+      "id": 6,
+      "src_start": 11.0,
+      "dur": 2.107,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 25,
+      "src_start": 50.487,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 57,
+      "src_start": 101.625,
+      "dur": 1.543
+    },
+    {
+      "id": 4,
+      "src_start": 7.417,
+      "dur": 1.46,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 51,
+      "src_start": 91.292,
+      "dur": 2.293,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 17,
+      "src_start": 27.833,
+      "dur": 1.5
+    },
+    {
+      "id": 76,
+      "src_start": 129.0,
+      "dur": 1.5
+    }
+  ],
+  "qc_status": "pass",
+  "stock_id": "stock-aotfinal-04",
+  "assigned_from_stock": true
+}
