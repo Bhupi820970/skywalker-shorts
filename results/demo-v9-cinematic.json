@@ -1,0 +1,321 @@
+{
+  "id": "demo-v9-cinematic",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok [no-publish]",
+  "at": "2026-11-18 20:45 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44328221827",
+  "slot": null,
+  "title": "Watch Jinx descend into total chaos #arcane #jinx #leagueoflegends",
+  "hook": "Jinx is losing her mind",
+  "description": "Jinx is losing her mind. A haunting look at Jinx's mental collapse and her dangerous transformation through the lens of Arcane's most intense visual sequences. From the official Arcane trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#arcane #jinx #leagueoflegends #shorts #edit",
+  "tags": [
+    "arcane",
+    "jinx",
+    "leagueoflegends",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts"
+  ],
+  "queue_meta": {
+    "hook": "Jinx never wanted this war",
+    "title": "Jinx never wanted this war | Arcane | #edit",
+    "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane",
+    "tags": [
+      "arcane",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Watch Jinx descend into total chaos",
+      "click_score": 92.0
+    },
+    {
+      "title": "Jinx is not the same person anymore",
+      "click_score": 88.0
+    },
+    {
+      "title": "Nobody expected Jinx to break like this",
+      "click_score": 85.0
+    },
+    {
+      "title": "The moment Jinx finally lost control",
+      "click_score": 82.0
+    },
+    {
+      "title": "Jinx entering her darkest state",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.6,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.4,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 3.1,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "ARCANE",
+  "edit_format": "action",
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+      "music": "sw_deusexsoundtrack.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/test-renders",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-v9-cinematic.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 2.962,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+  "music": "sw_deusexsoundtrack.mp3",
+  "music_credit": "Song: Alexander Brandon, Dan Gardopée, Michiel van den Bos - Deus Ex soundtrack (http://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "Jinx is losing her mind. A haunting look at Jinx's mental collapse and her dangerous transformation through the lens of Arcane's most intense visual sequences. From the official Arcane trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#arcane #jinx #leagueoflegends #shorts #edit\n\nMusic:\nSong: Alexander Brandon, Dan Gardopée, Michiel van den Bos - Deus Ex soundtrack (http://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": true,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-v9-cinematic-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 22.101,
+      "audio": true
+    },
+    "lufs": -13.6,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.2,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 8.0,
+        "captions": 10.0,
+        "post_worthy": 9.0
+      },
+      "reasons": [
+        "The video is well-edited and follows all formatting guidelines.",
+        "The 'Netflix' watermark is present in the source footage, which is acceptable for official trailer clips, though a completely clean source would be ideal."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 76,
+      "src_start": 120.542,
+      "dur": 1.46,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 69,
+      "src_start": 107.917,
+      "dur": 1.502,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 6,
+      "src_start": 13.958,
+      "dur": 1.46,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 15,
+      "src_start": 27.0,
+      "dur": 1.627
+    },
+    {
+      "id": 41101,
+      "src_start": 65.445,
+      "dur": 2.148
+    },
+    {
+      "id": 90,
+      "src_start": 143.07,
+      "dur": 2.043
+    },
+    {
+      "id": 84,
+      "src_start": 130.333,
+      "dur": 0.752,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 40,
+      "src_start": 62.5,
+      "dur": 0.835,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 18,
+      "src_start": 30.917,
+      "dur": 1.293,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 51,
+      "src_start": 79.958,
+      "dur": 0.752
+    },
+    {
+      "id": 27,
+      "src_start": 44.375,
+      "dur": 1.335
+    },
+    {
+      "id": 61,
+      "src_start": 95.25,
+      "dur": 1.252
+    },
+    {
+      "id": 46,
+      "src_start": 76.583,
+      "dur": 0.668
+    },
+    {
+      "id": 88,
+      "src_start": 139.5,
+      "dur": 0.668
+    },
+    {
+      "id": 73,
+      "src_start": 115.708,
+      "dur": 1.254
+    },
+    {
+      "id": 8,
+      "src_start": 19.083,
+      "dur": 0.793
+    }
+  ],
+  "qc_status": "pass"
+}
