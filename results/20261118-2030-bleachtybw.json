@@ -1,0 +1,267 @@
+{
+  "id": "20261118-2030-bleachtybw",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
+  "at": "2026-11-18 13:49 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44257549645",
+  "slot": "2026-11-18T20:30:00+05:30",
+  "title": "Nobody expected Ranvijay to show up like this #animal #ranbirkapoor #bollywood",
+  "hook": "Nobody expected him to enter like this",
+  "description": "Nobody expected him to enter like this. Ranbir Kapoor leads his armed squad into a crowded hall to intimidate everyone present in Animal. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit",
+  "tags": [
+    "animal",
+    "ranbirkapoor",
+    "bollywood",
+    "edit",
+    "phonk",
+    "aura",
+    "action"
+  ],
+  "queue_meta": {
+    "hook": "Why he is the villain",
+    "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+    "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+    "tags": [
+      "animal",
+      "ranbirkapoor",
+      "bollywood",
+      "edit",
+      "phonk",
+      "aura",
+      "action"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "bold claim",
+  "title_candidates": [
+    {
+      "title": "Nobody expected Ranvijay to show up like this",
+      "click_score": 92.0
+    },
+    {
+      "title": "They did not expect Ranbir Kapoor to be this dangerous",
+      "click_score": 90.0
+    },
+    {
+      "title": "The moment Ranvijay took over the entire room",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch the last two seconds of Ranvijay entering",
+      "click_score": 85.0
+    },
+    {
+      "title": "Ranvijay entering the room is pure chaos",
+      "click_score": 83.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 85.0,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 52.8,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 18.2,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "ANIMAL",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "bleachtybw",
+      "from_words": "BLEACH",
+      "to": "animal",
+      "to_words": "ANIMAL",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] 4Gti6YqvMzE: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] e8YBesRKq_U: Sign in to confirm you’re not a bot. This helps protect "
+    }
+  ],
+  "swapped_from": "bleachtybw",
+  "swapped_to": "animal",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: yt-dlp:ERROR: [youtube] 4Gti6YqvMzE: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] e8YBesRKq_U: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] QoIMRS2xCkI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] g2iWIWqJ39s: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+      "music": "sw_passobemsolto.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261118-2030-bleachtybw",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-2030-bleachtybw/render-20261118-2030-bleachtybw.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+  "music": "sw_passobemsolto.mp3",
+  "music_credit": "Song: ATLXS - PASSO BEM SOLTO (Slowed)",
+  "description_final": "Nobody expected him to enter like this. Ranbir Kapoor leads his armed squad into a crowded hall to intimidate everyone present in Animal. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit\n\nMusic:\nSong: ATLXS - PASSO BEM SOLTO (Slowed)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-2030-bleachtybw/render-20261118-2030-bleachtybw-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.213,
+      "audio": true
+    },
+    "lufs": -14.2,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.9,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 9.0,
+        "title": 9.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 8.0,
+        "captions": 10.0,
+        "post_worthy": 9.0
+      },
+      "reasons": [],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 4,
+      "src_start": 7.417,
+      "dur": 1.46,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 72,
+      "src_start": 121.125,
+      "dur": 1.628,
+      "gemini_score": 9.4,
+      "reason": "gemini score 9.4"
+    },
+    {
+      "id": 22,
+      "src_start": 36.417,
+      "dur": 1.556,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 42,
+      "src_start": 77.417,
+      "dur": 1.556,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 25,
+      "src_start": 50.487,
+      "dur": 2.067,
+      "gemini_score": 8.8,
+      "reason": "gemini score 8.8"
+    },
+    {
+      "id": 6,
+      "src_start": 11.0,
+      "dur": 2.067,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 28,
+      "src_start": 57.75,
+      "dur": 1.502,
+      "gemini_score": 7.1,
+      "reason": "gemini score 7.1"
+    },
+    {
+      "id": 51,
+      "src_start": 91.292,
+      "dur": 1.609,
+      "gemini_score": 6.4,
+      "reason": "gemini score 6.4"
+    },
+    {
+      "id": 17,
+      "src_start": 27.833,
+      "dur": 2.066
+    },
+    {
+      "id": 63,
+      "src_start": 109.75,
+      "dur": 1.918,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 93,
+      "src_start": 165.292,
+      "dur": 1.46
+    },
+    {
+      "id": 76,
+      "src_start": 129.0,
+      "dur": 1.668
+    },
+    {
+      "id": 88,
+      "src_start": 149.875,
+      "dur": 1.5
+    }
+  ],
+  "qc_status": "pass"
+}
