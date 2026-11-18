@@ -827,8 +827,10 @@
       "id": "stock-firforce3-03",
       "topic_id": "backup-firforce3",
       "slug": "firforce3",
-      "status": "pending",
-      "queued_at": "2026-11-18 10:43 IST"
+      "status": "ready",
+      "queued_at": "2026-11-18 10:43 IST",
+      "result_id": "stock-firforce3-03",
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-firforce3-03.mp4"
     },
     {
       "id": "stock-firstslamdunk-01",
@@ -915,7 +917,8 @@
       "topic_id": "backup-frieren",
       "slug": "frieren",
       "status": "pending",
-      "queued_at": "2026-11-18 10:43 IST"
+      "queued_at": "2026-11-18 10:43 IST",
+      "result_id": "stock-frieren-03"
     },
     {
       "id": "stock-frieren2-01",
