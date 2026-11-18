@@ -115,31 +115,37 @@ jobs:
           # Static GPL build first (has vidstab, no apt mirrors needed); apt only as fallback.
           # Retry the tarball, verify it is a real xz, then fall back to apt.
           install_static_ffmpeg() {
-            local url="https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"
-            local txz=/tmp/ffmpeg.txz
-            for i in 1 2 3; do
-              rm -f "$txz"
-              echo "static ffmpeg download attempt $i"
-              if ! curl -fsSL --retry 3 --retry-delay 8 --max-time 180 -o "$txz" "$url"; then
-                echo "curl failed"; sleep 8; continue
-              fi
-              if [ "$(wc -c < "$txz")" -lt 1000000 ]; then
-                echo "tarball too small ($(wc -c < "$txz") bytes)"; sleep 8; continue
-              fi
-              if ! xz -t "$txz"; then
-                echo "xz -t failed (corrupt or not xz)"; sleep 8; continue
-              fi
-              rm -rf /tmp/ff && mkdir -p /tmp/ff
-              if ! tar -xJf "$txz" -C /tmp/ff --strip-components=1; then
-                echo "tar extract failed"; sleep 8; continue
-              fi
-              if /tmp/ff/ffmpeg -hide_banner -filters 2>/dev/null | grep -q vidstabdetect; then
-                sudo install -m 0755 /tmp/ff/ffmpeg /tmp/ff/ffprobe /usr/local/bin/
-                hash -r
-                return 0
-              fi
-              echo "static binary missing vidstab"
-              sleep 8
+            # johnvansickle first (same build as before), then BtbN GPL static on GitHub (has vidstab,
+            # reachable when johnvansickle serves a tiny error page), apt only as last fallback.
+            local txz=/tmp/ffmpeg.txz url
+            for url in "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz" \
+                       "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n8.1-latest-linux64-gpl-8.1.tar.xz" \
+                       "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz"; do
+              for i in 1 2; do
+                rm -f "$txz"
+                echo "static ffmpeg download attempt $i: $url"
+                if ! curl -fsSL --retry 3 --retry-delay 8 --max-time 300 -o "$txz" "$url"; then
+                  echo "curl failed"; sleep 5; continue
+                fi
+                if [ "$(wc -c < "$txz")" -lt 1000000 ]; then
+                  echo "tarball too small ($(wc -c < "$txz") bytes)"; break
+                fi
+                if ! xz -t "$txz"; then
+                  echo "xz -t failed (corrupt or not xz)"; sleep 5; continue
+                fi
+                rm -rf /tmp/ff && mkdir -p /tmp/ff
+                if ! tar -xJf "$txz" -C /tmp/ff --strip-components=1; then
+                  echo "tar extract failed"; sleep 5; continue
+                fi
+                local fb; fb=$(dirname "$(find /tmp/ff -type f -name ffmpeg | head -1)")
+                if "$fb/ffmpeg" -hide_banner -filters 2>/dev/null | grep -q vidstabdetect; then
+                  sudo install -m 0755 "$fb/ffmpeg" "$fb/ffprobe" /usr/local/bin/
+                  hash -r
+                  ffmpeg -version | head -1
+                  return 0
+                fi
+                echo "static binary missing vidstab"; break
+              done
             done
             return 1
           }
