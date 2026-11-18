@@ -451,10 +451,10 @@ def apply_title_swap(item: dict, candidate: dict, *, reason: str = "") -> dict:
         item["edit_format"] = "love"
         item["pillar"] = "romance"
         item["content_kind"] = item.get("content_kind") or "romance scene"
-        item["edit_mode"] = "dialogue_bed"
+        item["edit_mode"] = "music_only"  # no dialogue anywhere
     elif fmt == "gta6":
         item["edit_format"] = "gta6"
-        item["edit_mode"] = item.get("edit_mode") or "music_only"
+        item["edit_mode"] = "music_only"
     else:
         item["edit_format"] = item.get("edit_format") or "action"
         item["edit_mode"] = "music_only"

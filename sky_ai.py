@@ -578,15 +578,8 @@ def subtitle_text(work: Path) -> str:
 
 
 def qc_audio_mode(ac_mode: str = "", layout_mode: str = "", edit_format: str = "") -> str:
-    """Which QC audio rule to apply. Song-only never applies to love / dialogue_bed."""
-    fmt = (edit_format or "").strip().lower()
-    lay = (layout_mode or "").strip().lower()
-    ac = (ac_mode or "").strip().lower()
-    if fmt in ("love", "romance") or lay in ("love", "romance", "dialogue_bed") or ac in ("love", "romance", "dialogue_bed"):
-        return "dialogue_bed"
-    if lay == "music_only" or ac == "music_only":
-        return "music_only"
-    return lay or ac or "two_act"
+    """Which QC audio rule to apply. Owner rule: no dialogue anywhere, so always song-only."""
+    return "music_only"
 
 
 QC_KEYS = ("hook", "title", "speech_clarity", "shake", "crop", "length", "layout", "clean_footage", "captions",
@@ -635,7 +628,8 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
             "Expected: a tight WHITE bar with black italic English hook text in its own band at the TOP of the frame, "
             "directly ABOVE (never over) the full, uncropped landscape movie frame. The picture is vertically centered "
             "in the frame, scaled to fit under the bar without cropping; blur or letterbox fills the leftover space "
-            "above and below the picture. This is a SONG-ONLY edit: the hype song plays at full level "
+            "above and below the picture. This is a SONG-ONLY edit: our song (hype for action, soft romantic for love "
+            "edits) plays at full level "
             "from second 0 over beat-cut action/visuals. There is NO character voice, NO trailer audio, and NO "
             "lower-third dialogue subtitles (that is correct — do not reject for missing dialogue or captions). "
             "Nothing else is written on the footage. The first shot should be the strongest hook visual."

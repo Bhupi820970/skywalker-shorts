@@ -1,4 +1,4 @@
-"""Romance edits keep dialogue and duck the instrumental under speech."""
+"""Romance audio: owner rule is song-only (no dialogue) for love too. Legacy duck helpers stay tested."""
 from __future__ import annotations
 
 import os
@@ -12,9 +12,10 @@ import vocal_mix
 import dialogue
 
 
-def test_love_format_defaults_to_dialogue_bed():
-    assert edit_mode.choose_edit_mode("any-id-would-be-music-only", fmt="love") == "dialogue_bed"
-    assert edit_mode.choose_edit_mode("any-id-would-be-music-only", fmt="romance") == "dialogue_bed"
+def test_love_format_is_song_only_no_dialogue():
+    assert edit_mode.choose_edit_mode("any-id", fmt="love") == "music_only"
+    assert edit_mode.choose_edit_mode("any-id", fmt="romance") == "music_only"
+    assert edit_mode.choose_edit_mode("any-id", override="dialogue_bed", fmt="love") == "music_only"
     # action titles are always music-only (no leftover dialogue)
     assert edit_mode.choose_edit_mode("z" * 8, fmt="action") == "music_only"
     assert edit_mode.choose_edit_mode("z" * 8, fmt="action", iconic_hook=True) == "music_only"

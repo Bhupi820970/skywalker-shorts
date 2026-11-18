@@ -211,11 +211,11 @@ def test_edit_mode_choice():
     assert edit_mode.choose_edit_mode("any-id") == "music_only"
     assert edit_mode.choose_edit_mode("any-id", iconic_hook=True) == "music_only"
     assert edit_mode.choose_edit_mode("any-id", fmt="action", iconic_hook=True) == "music_only"
-    assert edit_mode.choose_edit_mode("any-id", fmt="love") == "dialogue_bed"
-    # An explicit override always wins (demo / forced two_act still possible).
+    # Owner rule: no dialogue anywhere, love included; legacy overrides map to music_only.
+    assert edit_mode.choose_edit_mode("any-id", fmt="love") == "music_only"
     assert edit_mode.choose_edit_mode("any-id", override="music_only", iconic_hook=True) == "music_only"
-    assert edit_mode.choose_edit_mode("any-id", override="two_act") == "two_act"
-    assert edit_mode.choose_edit_mode("x", override="dialogue_bed") == "dialogue_bed"
+    assert edit_mode.choose_edit_mode("any-id", override="two_act") == "music_only"
+    assert edit_mode.choose_edit_mode("x", override="dialogue_bed") == "music_only"
     # Same id always maps to the same bucket (legacy helper, unused for mode).
     assert edit_mode.item_mode_bucket("demo-superman-v4") == edit_mode.item_mode_bucket("demo-superman-v4")
 

@@ -107,7 +107,7 @@ def test_romance_demo_swaps_to_next_official_romance_title(tmp_path):
     assert "weatheringwithyou_scene1_h264.mp4" in " ".join(item["sources"])
     assert item["edit_format"] == "love"
     assert item["pillar"] == "romance"
-    assert item["edit_mode"] == "dialogue_bed"
+    assert item["edit_mode"] == "music_only"  # no dialogue anywhere
     assert item["title_swaps"][0]["from"] == "suzume"
     assert item["title_swaps"][0]["to"] == "weatheringwithyou"
 

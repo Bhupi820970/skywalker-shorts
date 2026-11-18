@@ -1437,8 +1437,8 @@ def is_two_act(edl: list[dict] | None) -> bool:
 
 
 def is_love_dialogue() -> bool:
-    """Romance/dialogue_bed keeps original speech; never a song-only cut."""
-    return (globals().get("EDIT_FORMAT") == "love") or (EDIT_MODE == "dialogue_bed")
+    """Owner rule: no dialogue anywhere. Love edits are song-only too."""
+    return False
 
 
 def is_music_only(edl: list[dict] | None = None) -> bool:
@@ -3406,19 +3406,9 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     bed = WORK / "bed.wav"
     prepare_bed(music, dur, bed)
     audio = None
-    if is_love_dialogue():
-        # Romance: keep original dialogue; duck the instrumental under speech.
-        audio = _mix_source_and_music(bed, dur, src=src, edl=edl)
-    elif is_music_only(edl):
-        audio = _mix_music_only(music, dur, bed)
-        if audio is None:
-            # Never fall back to source/trailer audio on a song-only edit.
-            audio = bed
-    elif is_two_act(edl):
-        audio = _mix_two_act(music, dur, src, edl)
-    if audio is None and not is_music_only(edl):
-        # Last-resort fallback (non-whitebar / unexpected): never the default for whitebar Shorts.
-        audio = _mix_source_and_music(bed, dur, src=src, edl=edl)
+    # Owner rule: NO dialogue anywhere (action, love, gta6...). Source audio is
+    # dropped completely; only our song plays. Never fall back to source audio.
+    audio = _mix_music_only(music, dur, bed)
     if audio is None:
         audio = bed
     audio = _loudnorm_final(Path(audio), dur)
@@ -4172,9 +4162,7 @@ def main():
         print(f"  edit format skipped: {type(e).__name__}: {e}")
     ov = (args.edit_mode or os.environ.get("SKY_EDIT_MODE") or "").strip().lower()
     FORCED_EDIT_MODE = ov in ("music_only", "two_act", "dialogue_bed")
-    EDIT_MODE = choose_edit_mode(args.item_id, ov or None, fmt=EDIT_FORMAT)
-    if EDIT_FORMAT == "love" and not FORCED_EDIT_MODE:
-        EDIT_MODE = "dialogue_bed"
+    EDIT_MODE = choose_edit_mode(args.item_id, ov or None, fmt=EDIT_FORMAT)  # always music_only
     os.environ["SKY_EDIT_FORMAT"] = EDIT_FORMAT
     print(f"  edit mode: {EDIT_MODE}" + (" (forced)" if FORCED_EDIT_MODE else f" (format={EDIT_FORMAT})"))
     RELAX = bool(args.relax)

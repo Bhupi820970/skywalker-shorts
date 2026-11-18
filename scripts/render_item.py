@@ -568,11 +568,9 @@ def run_pipeline(src, out, qa_json, work, *, relax=False, alt_scenes=False, excl
         cmd += ["--exclude-music", ",".join(excl_all)]
     if music_salt:
         cmd += ["--music-salt", music_salt]
-    mode = (item.get("edit_mode") or os.environ.get("SKY_EDIT_MODE") or "").strip().lower()
-    if mode not in ("music_only", "two_act", "dialogue_bed"):
-        fmt = edit_format.infer_format(item, pillar=str(item.get("pillar") or ""))
-        mode = "dialogue_bed" if fmt == "love" else "music_only"
-        item["edit_mode"] = mode
+    # Owner rule: no dialogue anywhere; every format is song-only.
+    mode = "music_only"
+    item["edit_mode"] = mode
     if mode in ("music_only", "two_act", "dialogue_bed"):
         cmd += ["--edit-mode", mode]
     checkout = Path(__file__).resolve().parent.parent
@@ -581,6 +579,9 @@ def run_pipeline(src, out, qa_json, work, *, relax=False, alt_scenes=False, excl
     if mode in ("music_only", "two_act", "dialogue_bed"):
         env["SKY_EDIT_MODE"] = mode
     env["SKY_EDIT_FORMAT"] = item.get("edit_format") or edit_format.infer_format(item, pillar=str(item.get("pillar") or ""))
+    if item.get("music_genre"):
+        # Force the song category (action / love / cinematic / hiphop), e.g. per-genre demos.
+        env["SKY_MUSIC_GENRE"] = str(item["music_genre"]).strip().lower()
     if (item.get("market") or "").upper() == "IN" or item.get("dialogue_lang") in ("hi", "te", "ta"):
         # Hindi/South dubs: whisper-small output was garbled ("पेवरेट ग्रिकेट").
         # medium + forced language is far closer to the real lines (~3 min CPU).
