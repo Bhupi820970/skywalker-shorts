@@ -2,3 +2,14 @@ out/
 work/
 __pycache__/
 music/lib/
+
+# credentials — never commit
+cookies*.txt
+*.cookies
+.env
+.env.*
+*.env
+!.env.example
+keys/
+*.key
+*.pem
