@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-17T10:44:38Z",
-  "last_upload_at": "2026-11-17T10:44:33Z"
+  "last_run_at": "2026-11-18T07:17:42Z",
+  "last_upload_at": "2026-11-18T07:17:42Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
@@ -19,6 +19,7 @@
   "yt:VAikfIsQyRM",
   "yt:VwwZU7YgC6A",
   "yt:Y9XqnjKXgTs",
+  "yt:YRL74JmhVgk",
   "yt:ckEUVyKanhw",
   "yt:golG9lmaR_U",
   "yt:jeQYEIQ6eHw",
@@ -245,6 +246,17 @@
    "kbps": 1625,
    "by": "box",
    "at": "2026-11-17T10:44:33Z"
+  },
+  {
+   "asset": "cyberpunk2077_scene1_h264.mp4",
+   "id": "yt:YRL74JmhVgk",
+   "title": "Cyberpsycho VS the NCPD | Cyberpunk: Edgerunners | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3058,
+   "by": "box",
+   "at": "2026-11-18T07:17:42Z"
   }
  ],
  "github": {
