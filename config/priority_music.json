@@ -1,5 +1,75 @@
 {
   "note": "Owner's hand-picked songs (highest selection weight). Fill tracks/playlists, then run on the box: python3 scripts/add_priority_music.py (downloads with yt-dlp, analyses drops, uploads to the 'music' release, updates music/library.json). cat = action | love | cinematic | hiphop | auto. Spotify links cannot be downloaded (DRM): put the matching YouTube upload instead.",
-  "tracks": [],
-  "playlists": []
+  "tracks": [
+    {
+      "url": "https://www.youtube.com/watch?v=NT4eF9YsYnM",
+      "cat": "auto"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=7FVa1p4g1xk",
+      "cat": "auto"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_GL6beebCuU",
+      "cat": "auto"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=EDw86_4uLyA",
+      "cat": "auto"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=tAcnQYvPl1s",
+      "cat": "auto"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=zoQEPCMD7Zk",
+      "cat": "auto"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6snDsbwxRUI",
+      "cat": "auto"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Fp0UWqgRavY",
+      "cat": "auto"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xY0ZyU6TGeQ",
+      "cat": "auto"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ZzDRSxx3zgY",
+      "cat": "auto"
+    },
+    {
+      "url": "ytsearch1:Percy Faith Theme from A Summer Place",
+      "cat": "love"
+    },
+    {
+      "url": "ytsearch1:Henry Mancini Moon River instrumental",
+      "cat": "love"
+    },
+    {
+      "url": "ytsearch1:Francis Lai Love Story theme instrumental",
+      "cat": "love"
+    },
+    {
+      "url": "ytsearch1:Ennio Morricone Deborah's Theme",
+      "cat": "love"
+    },
+    {
+      "url": "ytsearch1:Yiruma River Flows in You",
+      "cat": "love"
+    },
+    {
+      "url": "ytsearch1:Joe Hisaishi One Summer's Day piano",
+      "cat": "love"
+    }
+  ],
+  "playlists": [
+    {
+      "url": "https://music.youtube.com/playlist?list=PLT7-N9uBlU2k2ewy7OFqFSWsStFJmVCgm",
+      "cat": "auto"
+    }
+  ]
 }
