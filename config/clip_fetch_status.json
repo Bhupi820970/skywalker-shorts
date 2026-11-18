@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-18T08:03:23Z",
-  "last_upload_at": "2026-11-18T08:03:23Z"
+  "last_run_at": "2026-11-18T09:56:58Z",
+  "last_upload_at": "2026-11-18T09:56:58Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
@@ -22,6 +22,7 @@
   "yt:XnseVYTF8_0",
   "yt:Y9XqnjKXgTs",
   "yt:YRL74JmhVgk",
+  "yt:Zq4zTcIM0yQ",
   "yt:_lmn16npMXw",
   "yt:ckEUVyKanhw",
   "yt:golG9lmaR_U",
@@ -293,6 +294,17 @@
    "kbps": 2427,
    "by": "box",
    "at": "2026-11-18T08:03:23Z"
+  },
+  {
+   "asset": "cyberpunk2077_scene2_h264.mp4",
+   "id": "yt:Zq4zTcIM0yQ",
+   "title": "Drive Like Hell | Cyberpunk: Edgerunners | Clips | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1615,
+   "by": "box",
+   "at": "2026-11-18T09:56:58Z"
   }
  ],
  "github": {
