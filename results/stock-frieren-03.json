@@ -1,17 +1,14 @@
 {
   "id": "stock-frieren-03",
-  "status": "retry_queued",
-  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 13.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-18 12:49 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44242795040",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
+  "at": "2026-11-19 00:18 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44367222283",
   "slot": null,
-  "title": "The moment Frieren realized Fern had grown up #frieren #fern #animeedit",
-  "hook": "Her proud smile said it all",
-  "description": "Her proud smile said it all. Frieren watches proudly as Fern demonstrates her growing strength under the moonlight. From the official Frieren trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#frieren #fern #animeedit #shorts #edit",
+  "title": "Ranvijay walking in is pure chaos #animal #ranbirkapoor #bollywood",
+  "hook": "Ranvijay just declared war",
+  "description": "Ranvijay just declared war. Ranvijay confronts the boardroom with his armed guards to assert dominance. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit",
   "tags": [
-    "frieren",
-    "fern",
-    "animeedit",
     "animal",
     "ranbirkapoor",
     "bollywood",
@@ -36,27 +33,27 @@
   },
   "gemini_meta": true,
   "hook_source": "gemini",
-  "hook_style": "emotional observation",
+  "hook_style": "Curiosity gap",
   "title_candidates": [
     {
-      "title": "The moment Frieren realized Fern had grown up",
+      "title": "Ranvijay walking in is pure chaos",
       "click_score": 92.0
     },
     {
-      "title": "Frieren did not expect this from Fern",
+      "title": "Watch how he handles the boardroom",
       "click_score": 88.0
     },
     {
-      "title": "Why Frieren cannot stop watching Fern grow",
+      "title": "Ranbir Kapoor owning the room",
       "click_score": 85.0
     },
     {
-      "title": "Watch the gentle smile Frieren gives Fern",
-      "click_score": 81.0
+      "title": "The moment he stops playing nice",
+      "click_score": 82.0
     },
     {
-      "title": "Frieren watching Fern take flight is so wholesome",
-      "click_score": 78.0
+      "title": "Nobody is safe when he enters",
+      "click_score": 79.0
     }
   ],
   "gemini_calls": [
@@ -64,98 +61,52 @@
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 74.0,
+      "s": 9.2,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.6,
       "ok": true
     },
     {
       "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 32.8,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "s": 17.2,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "s": 39.5,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 4.4,
+      "s": 6.8,
       "ok": true
     },
     {
       "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "s": 3.5,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 5.2,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "s": 8.1,
+      "key": "key1",
+      "s": 9.0,
       "ok": true
     }
   ],
@@ -171,30 +122,168 @@
       "from_words": "FRIEREN",
       "to": "animal",
       "to_words": "ANIMAL",
-      "reason": "pipeline/QA failed (exit 1): only 17.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+      "reason": "pipeline/QA failed (exit 1): only 17.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
     }
   ],
   "swapped_from": "frieren",
   "swapped_to": "animal",
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 17.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 17.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene3_h264.mp4",
-      "music": "sw_saiyaara.mp3",
+      "music": "sw_memoryreboot.mp3",
       "qc_status": null
     },
     {
       "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 13.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene3_h264.mp4",
-      "music": "sw_spotimateiolabubufunksxl.mp3",
-      "qc_status": null
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+      "music": "pr_montagemsantafe2.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 13.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-frieren-03.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+  "music": "pr_montagemsantafe2.mp3",
+  "music_credit": "Song: qaraqshy - Topic - MONTAGEM SANTA FE 2",
+  "description_final": "Ranvijay just declared war. Ranvijay confronts the boardroom with his armed guards to assert dominance. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit\n\nMusic:\nSong: qaraqshy - Topic - MONTAGEM SANTA FE 2",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-frieren-03-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.32,
+      "audio": true
+    },
+    "lufs": -14.2,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.8,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards: correct layout, clean footage, no dialogue, and engaging hook."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 4,
+      "src_start": 7.417,
+      "dur": 1.46,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 78,
+      "src_start": 133.417,
+      "dur": 1.877,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 59,
+      "src_start": 109.125,
+      "dur": 2.043
+    },
+    {
+      "id": 70,
+      "src_start": 117.667,
+      "dur": 1.71,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 22,
+      "src_start": 36.417,
+      "dur": 1.668,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 42,
+      "src_start": 77.417,
+      "dur": 2.002,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 6,
+      "src_start": 11.0,
+      "dur": 2.197,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 25,
+      "src_start": 50.487,
+      "dur": 2.09,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 57,
+      "src_start": 101.625,
+      "dur": 1.543
+    },
+    {
+      "id": 28,
+      "src_start": 57.75,
+      "dur": 1.502,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 51,
+      "src_start": 91.292,
+      "dur": 2.293,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 17,
+      "src_start": 27.833,
+      "dur": 1.716
+    }
+  ],
+  "qc_status": "pass"
 }
