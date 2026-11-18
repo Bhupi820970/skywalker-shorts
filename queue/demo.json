@@ -1,1187 +1,1270 @@
 [
- {
-  "id": "demo-foolnight",
-  "slot": "2026-11-10T14:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=2Qg_AfPF2sM",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/foolnight_trailer.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "The reason why Fool Night has everyone talking",
-  "words": "FOOL NIGHT",
-  "title": "The reason why Fool Night has everyone talking 💀 | The flower-tree transformation | #edit",
-  "description": "The reason why Fool Night has everyone talking. Energy edit (beat cuts, ramp, drop flash + punch-in) from the official Netflix Anime Fool Night trailer.\nSource: official trailer (https://www.youtube.com/watch?v=2Qg_AfPF2sM).\n#edit #shorts #foolnight",
-  "tags": [
-   "foolnight",
-   "netflixanime",
-   "anime",
-   "animeedit",
-   "phonk",
-   "edit",
-   "shorts",
-   "trending"
-  ],
-  "target_dur": 32,
-  "status": "retired",
-  "market": "US/UK",
-  "demo": true,
-  "fallback_release": "sources",
-  "fallback_asset": "foolnight_trailer.mp4",
-  "retired_reason": "Demo only (slot passed, not an upload). Fool Night trailer has burned-in text cards/logos across most shots, so too little clean footage under the no-card hard rule; stop re-rendering it."
- },
- {
-  "id": "demo-cliffbooth-v2",
-  "pillar": "movie",
-  "source_url": "https://www.youtube.com/watch?v=fJH-wfSXnWg",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cliffbooth_trailer_h264.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "Cliff Booth is back",
-  "words": "CLIFF BOOTH",
-  "title": "Cliff Booth is back | demo",
-  "description": "Cliff Booth is back in 1977 from the official The Further Mis-Adventures of Cliff Booth trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=fJH-wfSXnWg). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #cliffbooth",
-  "tags": [
-   "cliffbooth",
-   "bradpitt",
-   "davidfincher",
-   "tarantino",
-   "netflix",
-   "edit",
-   "shorts",
-   "trending"
-  ],
-  "target_dur": 32,
-  "status": "retired",
-  "market": "US/UK",
-  "fallback_release": "sources",
-  "fallback_asset": "cliffbooth_trailer_h264.mp4",
-  "note": "Demo of the research-based hook/edit upgrade. No slot, so it is never posted to Buffer/YouTube. Retired: run 43248265692 cut to 24.6s clean shots."
- },
- {
-  "id": "demo-superman",
-  "pillar": "movie",
-  "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "Superman still saves everyone",
-  "words": "SUPERMAN",
-  "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
-  "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
-  "tags": [
-   "superman",
-   "dc",
-   "davidcorenswet",
-   "jamesgunn",
-   "superhero",
-   "edit",
-   "shorts",
-   "trending"
-  ],
-  "target_dur": 32,
-  "market": "US/UK",
-  "fallback_release": "sources",
-  "fallback_asset": "superman_trailer_h264.mp4",
-  "status": "retired",
-  "note": "Demo of the research-based hook/edit upgrade. No slot, so it is never posted to Buffer/YouTube. Retired: owner reviewed v1 (muddy audio, weak title)."
- },
- {
-  "id": "demo-superman-v2",
-  "pillar": "movie",
-  "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "Superman still saves everyone",
-  "words": "SUPERMAN",
-  "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
-  "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
-  "tags": [
-   "superman",
-   "dc",
-   "davidcorenswet",
-   "jamesgunn",
-   "superhero",
-   "edit",
-   "shorts",
-   "trending"
-  ],
-  "target_dur": 32,
-  "market": "US/UK",
-  "fallback_release": "sources",
-  "fallback_asset": "superman_trailer_h264.mp4",
-  "status": "retired",
-  "note": "Demo v2: Demucs-isolated dialogue + ducked song, 5 ranked title candidates, Gemini watches the final cut. No slot, never posted. Retired: owner wants two-act structure (dialogue first, song after)."
- },
- {
-  "id": "demo-superman-v3",
-  "pillar": "movie",
-  "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "Superman still saves everyone",
-  "words": "SUPERMAN",
-  "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
-  "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
-  "tags": [
-   "superman",
-   "dc",
-   "davidcorenswet",
-   "jamesgunn",
-   "superhero",
-   "edit",
-   "shorts",
-   "trending"
-  ],
-  "target_dur": 32,
-  "market": "US/UK",
-  "fallback_release": "sources",
-  "fallback_asset": "superman_trailer_h264.mp4",
-  "status": "retired",
-  "note": "Demo v3: two-act (short dialogue then song+action). Retired after owner asked for mostly song-only edits (no character voice) with a minority two-act mix."
- },
- {
-  "id": "demo-superman-v4",
-  "pillar": "movie",
-  "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "Superman still saves everyone",
-  "words": "SUPERMAN",
-  "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
-  "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
-  "tags": [
-   "superman",
-   "dc",
-   "davidcorenswet",
-   "jamesgunn",
-   "superhero",
-   "edit",
-   "shorts",
-   "trending"
-  ],
-  "target_dur": 32,
-  "market": "US/UK",
-  "fallback_release": "sources",
-  "fallback_asset": "superman_trailer_h264.mp4",
-  "status": "queued",
-  "edit_mode": "music_only",
-  "note": "Demo v4: music_only (hype song from second 0, no character voice, beat-cut action, white hook bar only). Forced music_only so the owner can review the new majority style. No slot, never posted."
- },
- {
-  "id": "test-superman-dryrun",
-  "pillar": "movie",
-  "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "Superman still saves everyone",
-  "words": "SUPERMAN",
-  "title": "Superman still saves everyone | dry-run test | #edit",
-  "description": "Superman still saves everyone. Dry-run test render from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
-  "tags": [
-   "superman",
-   "dc",
-   "edit",
-   "shorts",
-   "trending",
-   "test"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "demo": true,
-  "no_publish": true,
-  "fallback_release": "sources",
-  "fallback_asset": "superman_trailer_h264.mp4",
-  "content_kind": "trailer",
-  "note": "Dry-run / no-publish test item. Never posted to Buffer/YouTube."
- },
- {
-  "id": "test-improvements-dryrun",
-  "pillar": "movie",
-  "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "He never stopped saving them",
-  "words": "SUPERMAN",
-  "title": "He never stopped saving them | blur fill dry-run | #edit",
-  "description": "He never stopped saving them. Dry-run test render for blur fill, bigger captions, cold open, seamless loop, and -14 LUFS. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
-  "tags": [
-   "superman",
-   "dc",
-   "edit",
-   "shorts",
-   "trending",
-   "test"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "demo": true,
-  "no_publish": true,
-  "fallback_release": "sources",
-  "fallback_asset": "superman_trailer_h264.mp4",
-  "content_kind": "trailer",
-  "edit_mode": "music_only",
-  "note": "Follow-up improvements dry-run (blur fill / captions / cold open / loop / LUFS). Never posted."
- },
- {
-  "id": "test-improvements-v2-dryrun",
-  "pillar": "movie",
-  "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "He never stopped saving them",
-  "words": "SUPERMAN",
-  "title": "He never stopped saving them | improvements v2 dry-run | #edit",
-  "description": "He never stopped saving them. Dry-run v2 after seamless-loop audio fix. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
-  "tags": [
-   "superman",
-   "dc",
-   "edit",
-   "shorts",
-   "trending",
-   "test"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "demo": true,
-  "no_publish": true,
-  "fallback_release": "sources",
-  "fallback_asset": "superman_trailer_h264.mp4",
-  "content_kind": "trailer",
-  "edit_mode": "music_only",
-  "note": "v2 dry-run after seamless-loop audio fix. Never posted."
- },
- {
-  "id": "demo-clips-jjkgojovstoji",
-  "slot": "2026-11-16T13:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
-  "template": "whitebar",
-  "hook": "Why Toji could not break Gojo",
-  "words": "JUJUTSU KAISEN",
-  "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
-  "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
-  "tags": [
-   "jujutsukaisen",
-   "gojosatoru",
-   "tojifushiguro",
-   "jjk",
-   "animeedit",
-   "anime",
-   "gojo"
-  ],
-  "target_dur": 26,
-  "status": "retired",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_trailer_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "jjkgojovstoji_scene1_h264.mp4",
-  "demo": true,
-  "no_publish": true,
-  "retired_reason": "Demo render of Gemini-chosen box clips (no_publish, test-renders only)"
- },
- {
-  "id": "demo-clips-vinlandsagathorfinn",
-  "slot": "2026-11-16T13:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=yWBA876qftM",
-  "template": "whitebar",
-  "hook": "Why Thorfinn dropped his daggers forever",
-  "words": "VINLAND SAGA",
-  "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
-  "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
-  "tags": [
-   "vinlandsaga",
-   "thorfinn",
-   "askeladd",
-   "animeedit",
-   "vinland",
-   "anime",
-   "ihavenoenemies"
-  ],
-  "target_dur": 26,
-  "status": "retired",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
-  "demo": true,
-  "no_publish": true,
-  "retired_reason": "Demo render of Gemini-chosen box clips (no_publish, test-renders only)"
- },
- {
-  "id": "demo-clips-mobpsycho100per",
-  "slot": "2026-11-16T13:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=VwwZU7YgC6A",
-  "template": "whitebar",
-  "hook": "Why Mob never used full power",
-  "words": "MOB PSYCHO 100",
-  "title": "Why Mob never used full power 💀 | Mob 100 Percent | #edit",
-  "description": "Why Mob never used full power. From official Mob Psycho 100 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #mobpsycho100 #shigeokageyama #reigen",
-  "tags": [
-   "mobpsycho100",
-   "shigeokageyama",
-   "reigen",
-   "mobpsycho",
-   "animeedit",
-   "anime"
-  ],
-  "target_dur": 26,
-  "status": "retired",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mobpsycho100per_trailer_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mobpsycho100per_trailer_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "mobpsycho100per_trailer_h264.mp4",
-  "demo": true,
-  "no_publish": true,
-  "retired_reason": "Demo render of Gemini-chosen box clips (no_publish, test-renders only)"
- },
- {
-  "id": "demo-clips-jjkgojovstoji-v2",
-  "slot": "2026-12-01T13:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
-  "template": "whitebar",
-  "hook": "Why Toji could not break Gojo",
-  "words": "JUJUTSU KAISEN",
-  "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
-  "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
-  "tags": [
-   "jujutsukaisen",
-   "gojosatoru",
-   "tojifushiguro",
-   "jjk",
-   "animeedit",
-   "anime",
-   "gojo"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_trailer_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "jjkgojovstoji_scene1_h264.mp4",
-  "demo": true,
-  "no_publish": true
- },
- {
-  "id": "demo-clips-bluelockisagi",
-  "slot": "2026-12-01T13:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=ckEUVyKanhw",
-  "template": "whitebar",
-  "hook": "Why Isagi predicted Rin next move",
-  "words": "BLUE LOCK",
-  "title": "Why Isagi predicted Rin next move 💀 | Isagi Metavision | #edit",
-  "description": "Why Isagi predicted Rin next move. From official Blue Lock clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #bluelock #isagiyoichi #rinitoshi",
-  "tags": [
-   "bluelock",
-   "isagiyoichi",
-   "rinitoshi",
-   "bluelockedit",
-   "animeedit",
-   "anime",
-   "football"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "bluelockisagi_scene1_h264.mp4",
-  "demo": true,
-  "no_publish": true
- },
- {
-  "id": "demo-clips-vinlandsagathorfinn-v2",
-  "slot": "2026-12-01T13:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=yWBA876qftM",
-  "template": "whitebar",
-  "hook": "Why Thorfinn dropped his daggers forever",
-  "words": "VINLAND SAGA",
-  "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
-  "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
-  "tags": [
-   "vinlandsaga",
-   "thorfinn",
-   "askeladd",
-   "animeedit",
-   "vinland",
-   "anime",
-   "ihavenoenemies"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
-  "demo": true,
-  "no_publish": true
- },
- {
-  "id": "demo-clips-vinlandsagathorfinn-v3",
-  "slot": "2026-12-01T13:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=B0pIISs-o8w",
-  "template": "whitebar",
-  "hook": "Why Thorfinn dropped his daggers forever",
-  "words": "VINLAND SAGA",
-  "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
-  "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
-  "tags": [
-   "vinlandsaga",
-   "thorfinn",
-   "askeladd",
-   "animeedit",
-   "vinland",
-   "anime",
-   "ihavenoenemies"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "vinlandsagathorfinn_scene2_h264.mp4",
-  "demo": true,
-  "no_publish": true
- },
- {
-  "id": "demo-clips-jjkgojovstoji-v3",
-  "slot": "2026-12-01T13:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
-  "template": "whitebar",
-  "hook": "Why Toji could not break Gojo",
-  "words": "JUJUTSU KAISEN",
-  "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
-  "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
-  "tags": [
-   "jujutsukaisen",
-   "gojosatoru",
-   "tojifushiguro",
-   "jjk",
-   "animeedit",
-   "anime",
-   "gojo"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "jjkgojovstoji_scene1_h264.mp4",
-  "demo": true,
-  "no_publish": true
- },
- {
-  "id": "demo-edit-improvements",
-  "slot": "2026-12-15T13:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=B0pIISs-o8w",
-  "template": "whitebar",
-  "hook": "Why Thorfinn walked away from revenge",
-  "words": "VINLAND SAGA",
-  "title": "Why Thorfinn walked away from revenge | Vinland Saga | #edit",
-  "description": "Why Thorfinn walked away from revenge. From official Vinland Saga scene clips. Edit by Skywalker.",
-  "tags": [
-   "vinlandsaga",
-   "thorfinn",
-   "askeladd",
-   "animeedit",
-   "vinland",
-   "anime"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
-  "demo": true,
-  "no_publish": true
- },
- {
-  "id": "demo-v4-arcane2",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-  "template": "whitebar",
-  "hook": "Jinx never wanted this war",
-  "words": "ARCANE",
-  "title": "Jinx never wanted this war | Arcane | #edit",
-  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane2",
-  "tags": [
-   "arcane2",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "jinx"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "arcane2_scene1_h264.mp4",
-  "no_publish": true
- },
- {
-  "id": "demo-v4-dandadanevil",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
-  "template": "whitebar",
-  "hook": "Evil Eye was a lonely kid",
-  "words": "DAN DA DAN",
-  "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
-  "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
-  "tags": [
-   "dandadanevil",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "okarun"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "dandadanevil_scene1_h264.mp4",
-  "no_publish": true
- },
- {
-  "id": "demo-v4-lazarus",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
-  "template": "whitebar",
-  "hook": "Axel has thirty days to run",
-  "words": "LAZARUS",
-  "title": "Axel has thirty days to run | Lazarus | #edit",
-  "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
-  "tags": [
-   "lazarus",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "axel"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "lazarus_scene1_h264.mp4",
-  "no_publish": true
- },
- {
-  "id": "demo-romance-yourname",
-  "pillar": "romance",
-  "edit_format": "love",
-  "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
-  "template": "whitebar",
-  "hook": "He forgot her name again",
-  "words": "YOUR NAME",
-  "title": "He forgot her name again | Your Name | #edit",
-  "description": "He forgot her name again. From official Your Name clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #yourname #romance",
-  "tags": [
-   "yourname",
-   "anime",
-   "romance",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "romance scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "yourname_scene1_h264.mp4",
-  "no_publish": true,
-  "demo": true
- },
- {
-  "id": "demo-v5-romance",
-  "pillar": "romance",
-  "edit_format": "love",
-  "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
-  "template": "whitebar",
-  "hook": "She kept walking back",
-  "words": "SUZUME",
-  "title": "She kept walking back | Suzume | #edit",
-  "description": "She kept walking back. From official Suzume clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #suzume #romance",
-  "tags": [
-   "suzume",
-   "anime",
-   "romance",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "romance scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "suzume_scene1_h264.mp4",
-  "official_channels": [
-   "GKIDS Films",
-   "TOHO animation",
-   "Crunchyroll India",
-   "Netflix Anime"
-  ],
-  "no_publish": true,
-  "demo": true
- },
- {
-  "id": "demo-v5-lazarus",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=2xsR9kGy0GA",
-  "template": "whitebar",
-  "hook": "Axel has thirty days to run",
-  "words": "LAZARUS",
-  "title": "Axel has thirty days to run | Lazarus | #edit",
-  "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
-  "tags": [
-   "lazarus",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "lazarus_scene2_h264.mp4",
-  "no_publish": true,
-  "demo": true
- },
- {
-  "id": "demo-v5-arcane",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-  "template": "whitebar",
-  "hook": "Jinx never wanted this war",
-  "words": "ARCANE",
-  "title": "Jinx never wanted this war | Arcane | #edit",
-  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane",
-  "tags": [
-   "arcane",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "arcane2_scene1_h264.mp4",
-  "no_publish": true,
-  "demo": true
- },
- {
-  "id": "demo-v6-arcane",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-  "template": "whitebar",
-  "hook": "Jinx never wanted this war",
-  "words": "ARCANE",
-  "title": "Jinx never wanted this war | Arcane | #edit",
-  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane",
-  "tags": [
-   "arcane",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "arcane2_scene1_h264.mp4",
-  "no_publish": true,
-  "demo": true,
-  "chunked": true
- },
- {
-  "id": "demo-v7-romance",
-  "pillar": "romance",
-  "edit_format": "love",
-  "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
-  "template": "whitebar",
-  "hook": "She kept walking back",
-  "words": "SUZUME",
-  "title": "She kept walking back | Suzume | #edit",
-  "description": "She kept walking back. From official Suzume clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #suzume #romance",
-  "tags": [
-   "suzume",
-   "anime",
-   "romance",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "romance scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "suzume_scene1_h264.mp4",
-  "official_channels": [
-   "GKIDS Films",
-   "TOHO animation",
-   "Crunchyroll India",
-   "Netflix Anime"
-  ],
-  "no_publish": true,
-  "demo": true
- },
- {
-  "id": "demo-v7-dandadan",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
-  "template": "whitebar",
-  "hook": "Evil Eye was a lonely kid",
-  "words": "DAN DA DAN",
-  "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
-  "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
-  "tags": [
-   "dandadanevil",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "okarun"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "dandadanevil_scene1_h264.mp4",
-  "no_publish": true
- },
- {
-  "id": "demo-v8-romance",
-  "pillar": "romance",
-  "edit_format": "love",
-  "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
-  "template": "whitebar",
-  "hook": "The sky followed them",
-  "words": "WEATHERING WITH YOU",
-  "title": "The sky followed them | Weathering With You | #edit",
-  "description": "The sky followed them. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou #romance",
-  "tags": [
-   "weatheringwithyou",
-   "anime",
-   "romance",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "romance scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "weatheringwithyou_scene1_h264.mp4",
-  "official_channels": [
-   "GKIDS Films",
-   "TOHO animation"
-  ],
-  "no_publish": true,
-  "demo": true
- },
- {
-  "id": "demo-v8-action",
-  "pillar": "anime",
-  "edit_format": "action",
-  "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
-  "template": "whitebar",
-  "hook": "He walked into the cursed house",
-  "words": "DAN DA DAN",
-  "title": "He walked into the cursed house | Dan Da Dan | #edit",
-  "description": "He walked into the cursed house. From official Dan Da Dan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
-  "tags": [
-   "dandadan",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "dandadan_scene1_h264.mp4",
-  "official_channels": [
-   "Crunchyroll",
-   "Netflix Anime"
-  ],
-  "no_publish": true,
-  "demo": true
- },
- {
-  "id": "demo-v9-action",
-  "pillar": "anime",
-  "edit_format": "action",
-  "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
-  "template": "whitebar",
-  "hook": "He walked into the cursed house",
-  "words": "DAN DA DAN",
-  "title": "He walked into the cursed house | Dan Da Dan | #edit",
-  "description": "He walked into the cursed house. From official Dan Da Dan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
-  "tags": [
-   "dandadan",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "dandadan_scene1_h264.mp4",
-  "official_channels": [
-   "Crunchyroll",
-   "Netflix Anime"
-  ],
-  "no_publish": true,
-  "demo": true,
-  "music_genre": "action",
-  "edit_mode": "music_only"
- },
- {
-  "id": "demo-v9-love",
-  "pillar": "romance",
-  "edit_format": "love",
-  "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
-  "template": "whitebar",
-  "hook": "The sky followed them",
-  "words": "WEATHERING WITH YOU",
-  "title": "The sky followed them | Weathering With You | #edit",
-  "description": "The sky followed them. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou #romance",
-  "tags": [
-   "weatheringwithyou",
-   "anime",
-   "romance",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "romance scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "weatheringwithyou_scene1_h264.mp4",
-  "official_channels": [
-   "GKIDS Films",
-   "TOHO animation"
-  ],
-  "no_publish": true,
-  "demo": true,
-  "music_genre": "love",
-  "edit_mode": "music_only"
- },
- {
-  "id": "demo-v9-cinematic",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-  "template": "whitebar",
-  "hook": "Jinx never wanted this war",
-  "words": "ARCANE",
-  "title": "Jinx never wanted this war | Arcane | #edit",
-  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane",
-  "tags": [
-   "arcane",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "arcane2_scene1_h264.mp4",
-  "no_publish": true,
-  "demo": true,
-  "chunked": true,
-  "music_genre": "cinematic",
-  "edit_format": "action",
-  "edit_mode": "music_only"
- },
- {
-  "id": "demo-v9-hiphop",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=2xsR9kGy0GA",
-  "template": "whitebar",
-  "hook": "Axel has thirty days to run",
-  "words": "LAZARUS",
-  "title": "Axel has thirty days to run | Lazarus | #edit",
-  "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
-  "tags": [
-   "lazarus",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "lazarus_scene2_h264.mp4",
-  "no_publish": true,
-  "demo": true,
-  "music_genre": "hiphop",
-  "edit_format": "action",
-  "edit_mode": "music_only"
- }
+  {
+    "id": "demo-foolnight",
+    "slot": "2026-11-10T14:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=2Qg_AfPF2sM",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/foolnight_trailer.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "The reason why Fool Night has everyone talking",
+    "words": "FOOL NIGHT",
+    "title": "The reason why Fool Night has everyone talking 💀 | The flower-tree transformation | #edit",
+    "description": "The reason why Fool Night has everyone talking. Energy edit (beat cuts, ramp, drop flash + punch-in) from the official Netflix Anime Fool Night trailer.\nSource: official trailer (https://www.youtube.com/watch?v=2Qg_AfPF2sM).\n#edit #shorts #foolnight",
+    "tags": [
+      "foolnight",
+      "netflixanime",
+      "anime",
+      "animeedit",
+      "phonk",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 32,
+    "status": "retired",
+    "market": "US/UK",
+    "demo": true,
+    "fallback_release": "sources",
+    "fallback_asset": "foolnight_trailer.mp4",
+    "retired_reason": "Demo only (slot passed, not an upload). Fool Night trailer has burned-in text cards/logos across most shots, so too little clean footage under the no-card hard rule; stop re-rendering it."
+  },
+  {
+    "id": "demo-cliffbooth-v2",
+    "pillar": "movie",
+    "source_url": "https://www.youtube.com/watch?v=fJH-wfSXnWg",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cliffbooth_trailer_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "Cliff Booth is back",
+    "words": "CLIFF BOOTH",
+    "title": "Cliff Booth is back | demo",
+    "description": "Cliff Booth is back in 1977 from the official The Further Mis-Adventures of Cliff Booth trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=fJH-wfSXnWg). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #cliffbooth",
+    "tags": [
+      "cliffbooth",
+      "bradpitt",
+      "davidfincher",
+      "tarantino",
+      "netflix",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 32,
+    "status": "retired",
+    "market": "US/UK",
+    "fallback_release": "sources",
+    "fallback_asset": "cliffbooth_trailer_h264.mp4",
+    "note": "Demo of the research-based hook/edit upgrade. No slot, so it is never posted to Buffer/YouTube. Retired: run 43248265692 cut to 24.6s clean shots."
+  },
+  {
+    "id": "demo-superman",
+    "pillar": "movie",
+    "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "Superman still saves everyone",
+    "words": "SUPERMAN",
+    "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
+    "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
+    "tags": [
+      "superman",
+      "dc",
+      "davidcorenswet",
+      "jamesgunn",
+      "superhero",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 32,
+    "market": "US/UK",
+    "fallback_release": "sources",
+    "fallback_asset": "superman_trailer_h264.mp4",
+    "status": "retired",
+    "note": "Demo of the research-based hook/edit upgrade. No slot, so it is never posted to Buffer/YouTube. Retired: owner reviewed v1 (muddy audio, weak title)."
+  },
+  {
+    "id": "demo-superman-v2",
+    "pillar": "movie",
+    "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "Superman still saves everyone",
+    "words": "SUPERMAN",
+    "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
+    "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
+    "tags": [
+      "superman",
+      "dc",
+      "davidcorenswet",
+      "jamesgunn",
+      "superhero",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 32,
+    "market": "US/UK",
+    "fallback_release": "sources",
+    "fallback_asset": "superman_trailer_h264.mp4",
+    "status": "retired",
+    "note": "Demo v2: Demucs-isolated dialogue + ducked song, 5 ranked title candidates, Gemini watches the final cut. No slot, never posted. Retired: owner wants two-act structure (dialogue first, song after)."
+  },
+  {
+    "id": "demo-superman-v3",
+    "pillar": "movie",
+    "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "Superman still saves everyone",
+    "words": "SUPERMAN",
+    "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
+    "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
+    "tags": [
+      "superman",
+      "dc",
+      "davidcorenswet",
+      "jamesgunn",
+      "superhero",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 32,
+    "market": "US/UK",
+    "fallback_release": "sources",
+    "fallback_asset": "superman_trailer_h264.mp4",
+    "status": "retired",
+    "note": "Demo v3: two-act (short dialogue then song+action). Retired after owner asked for mostly song-only edits (no character voice) with a minority two-act mix."
+  },
+  {
+    "id": "demo-superman-v4",
+    "pillar": "movie",
+    "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "Superman still saves everyone",
+    "words": "SUPERMAN",
+    "title": "Superman still saves everyone | Superman returns to Metropolis | #edit",
+    "description": "Superman still saves everyone. Superman returns to Metropolis from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
+    "tags": [
+      "superman",
+      "dc",
+      "davidcorenswet",
+      "jamesgunn",
+      "superhero",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 32,
+    "market": "US/UK",
+    "fallback_release": "sources",
+    "fallback_asset": "superman_trailer_h264.mp4",
+    "status": "queued",
+    "edit_mode": "music_only",
+    "note": "Demo v4: music_only (hype song from second 0, no character voice, beat-cut action, white hook bar only). Forced music_only so the owner can review the new majority style. No slot, never posted."
+  },
+  {
+    "id": "test-superman-dryrun",
+    "pillar": "movie",
+    "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "Superman still saves everyone",
+    "words": "SUPERMAN",
+    "title": "Superman still saves everyone | dry-run test | #edit",
+    "description": "Superman still saves everyone. Dry-run test render from the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
+    "tags": [
+      "superman",
+      "dc",
+      "edit",
+      "shorts",
+      "trending",
+      "test"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "demo": true,
+    "no_publish": true,
+    "fallback_release": "sources",
+    "fallback_asset": "superman_trailer_h264.mp4",
+    "content_kind": "trailer",
+    "note": "Dry-run / no-publish test item. Never posted to Buffer/YouTube."
+  },
+  {
+    "id": "test-improvements-dryrun",
+    "pillar": "movie",
+    "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "He never stopped saving them",
+    "words": "SUPERMAN",
+    "title": "He never stopped saving them | blur fill dry-run | #edit",
+    "description": "He never stopped saving them. Dry-run test render for blur fill, bigger captions, cold open, seamless loop, and -14 LUFS. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
+    "tags": [
+      "superman",
+      "dc",
+      "edit",
+      "shorts",
+      "trending",
+      "test"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "demo": true,
+    "no_publish": true,
+    "fallback_release": "sources",
+    "fallback_asset": "superman_trailer_h264.mp4",
+    "content_kind": "trailer",
+    "edit_mode": "music_only",
+    "note": "Follow-up improvements dry-run (blur fill / captions / cold open / loop / LUFS). Never posted."
+  },
+  {
+    "id": "test-improvements-v2-dryrun",
+    "pillar": "movie",
+    "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "He never stopped saving them",
+    "words": "SUPERMAN",
+    "title": "He never stopped saving them | improvements v2 dry-run | #edit",
+    "description": "He never stopped saving them. Dry-run v2 after seamless-loop audio fix. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
+    "tags": [
+      "superman",
+      "dc",
+      "edit",
+      "shorts",
+      "trending",
+      "test"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "demo": true,
+    "no_publish": true,
+    "fallback_release": "sources",
+    "fallback_asset": "superman_trailer_h264.mp4",
+    "content_kind": "trailer",
+    "edit_mode": "music_only",
+    "note": "v2 dry-run after seamless-loop audio fix. Never posted."
+  },
+  {
+    "id": "demo-clips-jjkgojovstoji",
+    "slot": "2026-11-16T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
+    "template": "whitebar",
+    "hook": "Why Toji could not break Gojo",
+    "words": "JUJUTSU KAISEN",
+    "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
+    "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
+    "tags": [
+      "jujutsukaisen",
+      "gojosatoru",
+      "tojifushiguro",
+      "jjk",
+      "animeedit",
+      "anime",
+      "gojo"
+    ],
+    "target_dur": 26,
+    "status": "retired",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_trailer_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "jjkgojovstoji_scene1_h264.mp4",
+    "demo": true,
+    "no_publish": true,
+    "retired_reason": "Demo render of Gemini-chosen box clips (no_publish, test-renders only)"
+  },
+  {
+    "id": "demo-clips-vinlandsagathorfinn",
+    "slot": "2026-11-16T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=yWBA876qftM",
+    "template": "whitebar",
+    "hook": "Why Thorfinn dropped his daggers forever",
+    "words": "VINLAND SAGA",
+    "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+    "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+    "tags": [
+      "vinlandsaga",
+      "thorfinn",
+      "askeladd",
+      "animeedit",
+      "vinland",
+      "anime",
+      "ihavenoenemies"
+    ],
+    "target_dur": 26,
+    "status": "retired",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
+    "demo": true,
+    "no_publish": true,
+    "retired_reason": "Demo render of Gemini-chosen box clips (no_publish, test-renders only)"
+  },
+  {
+    "id": "demo-clips-mobpsycho100per",
+    "slot": "2026-11-16T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=VwwZU7YgC6A",
+    "template": "whitebar",
+    "hook": "Why Mob never used full power",
+    "words": "MOB PSYCHO 100",
+    "title": "Why Mob never used full power 💀 | Mob 100 Percent | #edit",
+    "description": "Why Mob never used full power. From official Mob Psycho 100 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #mobpsycho100 #shigeokageyama #reigen",
+    "tags": [
+      "mobpsycho100",
+      "shigeokageyama",
+      "reigen",
+      "mobpsycho",
+      "animeedit",
+      "anime"
+    ],
+    "target_dur": 26,
+    "status": "retired",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mobpsycho100per_trailer_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mobpsycho100per_trailer_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "mobpsycho100per_trailer_h264.mp4",
+    "demo": true,
+    "no_publish": true,
+    "retired_reason": "Demo render of Gemini-chosen box clips (no_publish, test-renders only)"
+  },
+  {
+    "id": "demo-clips-jjkgojovstoji-v2",
+    "slot": "2026-12-01T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
+    "template": "whitebar",
+    "hook": "Why Toji could not break Gojo",
+    "words": "JUJUTSU KAISEN",
+    "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
+    "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
+    "tags": [
+      "jujutsukaisen",
+      "gojosatoru",
+      "tojifushiguro",
+      "jjk",
+      "animeedit",
+      "anime",
+      "gojo"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_trailer_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "jjkgojovstoji_scene1_h264.mp4",
+    "demo": true,
+    "no_publish": true
+  },
+  {
+    "id": "demo-clips-bluelockisagi",
+    "slot": "2026-12-01T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=ckEUVyKanhw",
+    "template": "whitebar",
+    "hook": "Why Isagi predicted Rin next move",
+    "words": "BLUE LOCK",
+    "title": "Why Isagi predicted Rin next move 💀 | Isagi Metavision | #edit",
+    "description": "Why Isagi predicted Rin next move. From official Blue Lock clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #bluelock #isagiyoichi #rinitoshi",
+    "tags": [
+      "bluelock",
+      "isagiyoichi",
+      "rinitoshi",
+      "bluelockedit",
+      "animeedit",
+      "anime",
+      "football"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "bluelockisagi_scene1_h264.mp4",
+    "demo": true,
+    "no_publish": true
+  },
+  {
+    "id": "demo-clips-vinlandsagathorfinn-v2",
+    "slot": "2026-12-01T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=yWBA876qftM",
+    "template": "whitebar",
+    "hook": "Why Thorfinn dropped his daggers forever",
+    "words": "VINLAND SAGA",
+    "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+    "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+    "tags": [
+      "vinlandsaga",
+      "thorfinn",
+      "askeladd",
+      "animeedit",
+      "vinland",
+      "anime",
+      "ihavenoenemies"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
+    "demo": true,
+    "no_publish": true
+  },
+  {
+    "id": "demo-clips-vinlandsagathorfinn-v3",
+    "slot": "2026-12-01T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=B0pIISs-o8w",
+    "template": "whitebar",
+    "hook": "Why Thorfinn dropped his daggers forever",
+    "words": "VINLAND SAGA",
+    "title": "Why Thorfinn dropped his daggers forever 💀 | Thorfinn Oath | #edit",
+    "description": "Why Thorfinn dropped his daggers forever. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vinlandsaga #thorfinn #askeladd",
+    "tags": [
+      "vinlandsaga",
+      "thorfinn",
+      "askeladd",
+      "animeedit",
+      "vinland",
+      "anime",
+      "ihavenoenemies"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "vinlandsagathorfinn_scene2_h264.mp4",
+    "demo": true,
+    "no_publish": true
+  },
+  {
+    "id": "demo-clips-jjkgojovstoji-v3",
+    "slot": "2026-12-01T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
+    "template": "whitebar",
+    "hook": "Why Toji could not break Gojo",
+    "words": "JUJUTSU KAISEN",
+    "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
+    "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
+    "tags": [
+      "jujutsukaisen",
+      "gojosatoru",
+      "tojifushiguro",
+      "jjk",
+      "animeedit",
+      "anime",
+      "gojo"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "jjkgojovstoji_scene1_h264.mp4",
+    "demo": true,
+    "no_publish": true
+  },
+  {
+    "id": "demo-edit-improvements",
+    "slot": "2026-12-15T13:00:00+05:30",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=B0pIISs-o8w",
+    "template": "whitebar",
+    "hook": "Why Thorfinn walked away from revenge",
+    "words": "VINLAND SAGA",
+    "title": "Why Thorfinn walked away from revenge | Vinland Saga | #edit",
+    "description": "Why Thorfinn walked away from revenge. From official Vinland Saga scene clips. Edit by Skywalker.",
+    "tags": [
+      "vinlandsaga",
+      "thorfinn",
+      "askeladd",
+      "animeedit",
+      "vinland",
+      "anime"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
+    "demo": true,
+    "no_publish": true
+  },
+  {
+    "id": "demo-v4-arcane2",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+    "template": "whitebar",
+    "hook": "Jinx never wanted this war",
+    "words": "ARCANE",
+    "title": "Jinx never wanted this war | Arcane | #edit",
+    "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane2",
+    "tags": [
+      "arcane2",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "jinx"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "arcane2_scene1_h264.mp4",
+    "no_publish": true
+  },
+  {
+    "id": "demo-v4-dandadanevil",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
+    "template": "whitebar",
+    "hook": "Evil Eye was a lonely kid",
+    "words": "DAN DA DAN",
+    "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+    "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+    "tags": [
+      "dandadanevil",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "okarun"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "dandadanevil_scene1_h264.mp4",
+    "no_publish": true
+  },
+  {
+    "id": "demo-v4-lazarus",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
+    "template": "whitebar",
+    "hook": "Axel has thirty days to run",
+    "words": "LAZARUS",
+    "title": "Axel has thirty days to run | Lazarus | #edit",
+    "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+    "tags": [
+      "lazarus",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "axel"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "lazarus_scene1_h264.mp4",
+    "no_publish": true
+  },
+  {
+    "id": "demo-romance-yourname",
+    "pillar": "romance",
+    "edit_format": "love",
+    "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
+    "template": "whitebar",
+    "hook": "He forgot her name again",
+    "words": "YOUR NAME",
+    "title": "He forgot her name again | Your Name | #edit",
+    "description": "He forgot her name again. From official Your Name clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #yourname #romance",
+    "tags": [
+      "yourname",
+      "anime",
+      "romance",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "romance scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "yourname_scene1_h264.mp4",
+    "no_publish": true,
+    "demo": true
+  },
+  {
+    "id": "demo-v5-romance",
+    "pillar": "romance",
+    "edit_format": "love",
+    "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
+    "template": "whitebar",
+    "hook": "She kept walking back",
+    "words": "SUZUME",
+    "title": "She kept walking back | Suzume | #edit",
+    "description": "She kept walking back. From official Suzume clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #suzume #romance",
+    "tags": [
+      "suzume",
+      "anime",
+      "romance",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "romance scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "suzume_scene1_h264.mp4",
+    "official_channels": [
+      "GKIDS Films",
+      "TOHO animation",
+      "Crunchyroll India",
+      "Netflix Anime"
+    ],
+    "no_publish": true,
+    "demo": true
+  },
+  {
+    "id": "demo-v5-lazarus",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=2xsR9kGy0GA",
+    "template": "whitebar",
+    "hook": "Axel has thirty days to run",
+    "words": "LAZARUS",
+    "title": "Axel has thirty days to run | Lazarus | #edit",
+    "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+    "tags": [
+      "lazarus",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "lazarus_scene2_h264.mp4",
+    "no_publish": true,
+    "demo": true
+  },
+  {
+    "id": "demo-v5-arcane",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+    "template": "whitebar",
+    "hook": "Jinx never wanted this war",
+    "words": "ARCANE",
+    "title": "Jinx never wanted this war | Arcane | #edit",
+    "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane",
+    "tags": [
+      "arcane",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "arcane2_scene1_h264.mp4",
+    "no_publish": true,
+    "demo": true
+  },
+  {
+    "id": "demo-v6-arcane",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+    "template": "whitebar",
+    "hook": "Jinx never wanted this war",
+    "words": "ARCANE",
+    "title": "Jinx never wanted this war | Arcane | #edit",
+    "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane",
+    "tags": [
+      "arcane",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "arcane2_scene1_h264.mp4",
+    "no_publish": true,
+    "demo": true,
+    "chunked": true
+  },
+  {
+    "id": "demo-v7-romance",
+    "pillar": "romance",
+    "edit_format": "love",
+    "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
+    "template": "whitebar",
+    "hook": "She kept walking back",
+    "words": "SUZUME",
+    "title": "She kept walking back | Suzume | #edit",
+    "description": "She kept walking back. From official Suzume clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #suzume #romance",
+    "tags": [
+      "suzume",
+      "anime",
+      "romance",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "romance scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "suzume_scene1_h264.mp4",
+    "official_channels": [
+      "GKIDS Films",
+      "TOHO animation",
+      "Crunchyroll India",
+      "Netflix Anime"
+    ],
+    "no_publish": true,
+    "demo": true
+  },
+  {
+    "id": "demo-v7-dandadan",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
+    "template": "whitebar",
+    "hook": "Evil Eye was a lonely kid",
+    "words": "DAN DA DAN",
+    "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+    "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+    "tags": [
+      "dandadanevil",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "okarun"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "dandadanevil_scene1_h264.mp4",
+    "no_publish": true
+  },
+  {
+    "id": "demo-v8-romance",
+    "pillar": "romance",
+    "edit_format": "love",
+    "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+    "template": "whitebar",
+    "hook": "The sky followed them",
+    "words": "WEATHERING WITH YOU",
+    "title": "The sky followed them | Weathering With You | #edit",
+    "description": "The sky followed them. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou #romance",
+    "tags": [
+      "weatheringwithyou",
+      "anime",
+      "romance",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "romance scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "weatheringwithyou_scene1_h264.mp4",
+    "official_channels": [
+      "GKIDS Films",
+      "TOHO animation"
+    ],
+    "no_publish": true,
+    "demo": true
+  },
+  {
+    "id": "demo-v8-action",
+    "pillar": "anime",
+    "edit_format": "action",
+    "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+    "template": "whitebar",
+    "hook": "He walked into the cursed house",
+    "words": "DAN DA DAN",
+    "title": "He walked into the cursed house | Dan Da Dan | #edit",
+    "description": "He walked into the cursed house. From official Dan Da Dan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
+    "tags": [
+      "dandadan",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "dandadan_scene1_h264.mp4",
+    "official_channels": [
+      "Crunchyroll",
+      "Netflix Anime"
+    ],
+    "no_publish": true,
+    "demo": true
+  },
+  {
+    "id": "demo-v9-action",
+    "pillar": "anime",
+    "edit_format": "action",
+    "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+    "template": "whitebar",
+    "hook": "He walked into the cursed house",
+    "words": "DAN DA DAN",
+    "title": "He walked into the cursed house | Dan Da Dan | #edit",
+    "description": "He walked into the cursed house. From official Dan Da Dan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
+    "tags": [
+      "dandadan",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "dandadan_scene1_h264.mp4",
+    "official_channels": [
+      "Crunchyroll",
+      "Netflix Anime"
+    ],
+    "no_publish": true,
+    "demo": true,
+    "music_genre": "action",
+    "edit_mode": "music_only"
+  },
+  {
+    "id": "demo-v9-love",
+    "pillar": "romance",
+    "edit_format": "love",
+    "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+    "template": "whitebar",
+    "hook": "The sky followed them",
+    "words": "WEATHERING WITH YOU",
+    "title": "The sky followed them | Weathering With You | #edit",
+    "description": "The sky followed them. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou #romance",
+    "tags": [
+      "weatheringwithyou",
+      "anime",
+      "romance",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "romance scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "weatheringwithyou_scene1_h264.mp4",
+    "official_channels": [
+      "GKIDS Films",
+      "TOHO animation"
+    ],
+    "no_publish": true,
+    "demo": true,
+    "music_genre": "love",
+    "edit_mode": "music_only"
+  },
+  {
+    "id": "demo-v9-cinematic",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+    "template": "whitebar",
+    "hook": "Jinx never wanted this war",
+    "words": "ARCANE",
+    "title": "Jinx never wanted this war | Arcane | #edit",
+    "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane",
+    "tags": [
+      "arcane",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "arcane2_scene1_h264.mp4",
+    "no_publish": true,
+    "demo": true,
+    "chunked": true,
+    "music_genre": "cinematic",
+    "edit_format": "action",
+    "edit_mode": "music_only"
+  },
+  {
+    "id": "demo-v9-hiphop",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=2xsR9kGy0GA",
+    "template": "whitebar",
+    "hook": "Axel has thirty days to run",
+    "words": "LAZARUS",
+    "title": "Axel has thirty days to run | Lazarus | #edit",
+    "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+    "tags": [
+      "lazarus",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "lazarus_scene2_h264.mp4",
+    "no_publish": true,
+    "demo": true,
+    "music_genre": "hiphop",
+    "edit_format": "action",
+    "edit_mode": "music_only"
+  },
+  {
+    "id": "demo-v10-action",
+    "pillar": "anime",
+    "edit_format": "action",
+    "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+    "template": "whitebar",
+    "hook": "He walked into the cursed house",
+    "words": "DAN DA DAN",
+    "title": "He walked into the cursed house | Dan Da Dan | #edit",
+    "description": "He walked into the cursed house. From official Dan Da Dan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
+    "tags": [
+      "dandadan",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "dandadan_scene1_h264.mp4",
+    "official_channels": [
+      "Crunchyroll",
+      "Netflix Anime"
+    ],
+    "no_publish": true,
+    "demo": true,
+    "music_genre": "action",
+    "edit_mode": "music_only"
+  },
+  {
+    "id": "demo-v10-love",
+    "pillar": "romance",
+    "edit_format": "love",
+    "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+    "template": "whitebar",
+    "hook": "The sky followed them",
+    "words": "WEATHERING WITH YOU",
+    "title": "The sky followed them | Weathering With You | #edit",
+    "description": "The sky followed them. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou #romance",
+    "tags": [
+      "weatheringwithyou",
+      "anime",
+      "romance",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "romance scene",
+    "fallback_mp4": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "weatheringwithyou_scene1_h264.mp4",
+    "official_channels": [
+      "GKIDS Films",
+      "TOHO animation"
+    ],
+    "no_publish": true,
+    "demo": true,
+    "music_genre": "love",
+    "edit_mode": "music_only"
+  }
 ]
