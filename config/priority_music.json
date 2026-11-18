@@ -1,0 +1,5 @@
+{
+  "note": "Owner's hand-picked songs (highest selection weight). Fill tracks/playlists, then run on the box: python3 scripts/add_priority_music.py (downloads with yt-dlp, analyses drops, uploads to the 'music' release, updates music/library.json). cat = action | love | cinematic | hiphop | auto. Spotify links cannot be downloaded (DRM): put the matching YouTube upload instead.",
+  "tracks": [],
+  "playlists": []
+}

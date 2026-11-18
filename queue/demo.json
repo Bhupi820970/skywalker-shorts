@@ -1023,5 +1023,165 @@
   ],
   "no_publish": true,
   "demo": true
+ },
+ {
+  "id": "demo-v9-action",
+  "pillar": "anime",
+  "edit_format": "action",
+  "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+  "template": "whitebar",
+  "hook": "He walked into the cursed house",
+  "words": "DAN DA DAN",
+  "title": "He walked into the cursed house | Dan Da Dan | #edit",
+  "description": "He walked into the cursed house. From official Dan Da Dan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
+  "tags": [
+   "dandadan",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dandadan_scene1_h264.mp4",
+  "official_channels": [
+   "Crunchyroll",
+   "Netflix Anime"
+  ],
+  "no_publish": true,
+  "demo": true,
+  "music_genre": "action",
+  "edit_mode": "music_only"
+ },
+ {
+  "id": "demo-v9-love",
+  "pillar": "romance",
+  "edit_format": "love",
+  "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+  "template": "whitebar",
+  "hook": "The sky followed them",
+  "words": "WEATHERING WITH YOU",
+  "title": "The sky followed them | Weathering With You | #edit",
+  "description": "The sky followed them. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou #romance",
+  "tags": [
+   "weatheringwithyou",
+   "anime",
+   "romance",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "romance scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "weatheringwithyou_scene1_h264.mp4",
+  "official_channels": [
+   "GKIDS Films",
+   "TOHO animation"
+  ],
+  "no_publish": true,
+  "demo": true,
+  "music_genre": "love",
+  "edit_mode": "music_only"
+ },
+ {
+  "id": "demo-v9-cinematic",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+  "template": "whitebar",
+  "hook": "Jinx never wanted this war",
+  "words": "ARCANE",
+  "title": "Jinx never wanted this war | Arcane | #edit",
+  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane",
+  "tags": [
+   "arcane",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "arcane2_scene1_h264.mp4",
+  "no_publish": true,
+  "demo": true,
+  "chunked": true,
+  "music_genre": "cinematic",
+  "edit_format": "action",
+  "edit_mode": "music_only"
+ },
+ {
+  "id": "demo-v9-hiphop",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=2xsR9kGy0GA",
+  "template": "whitebar",
+  "hook": "Axel has thirty days to run",
+  "words": "LAZARUS",
+  "title": "Axel has thirty days to run | Lazarus | #edit",
+  "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+  "tags": [
+   "lazarus",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "lazarus_scene2_h264.mp4",
+  "no_publish": true,
+  "demo": true,
+  "music_genre": "hiphop",
+  "edit_format": "action",
+  "edit_mode": "music_only"
  }
 ]

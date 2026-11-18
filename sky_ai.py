@@ -402,7 +402,8 @@ date/"coming soon" card, rating card, credits, or on-screen text/typography rath
 {_song_brief(songs)}
 Return JSON: {{"shots": [{{"i": int, "score": number, "card": bool}}], "act1": [line ids in play order],
 "act2": [shot indexes for the hype part, best first], "iconic_hook": bool,
-"song": "exact file name from the library", "song_alts": ["backup file", "backup file"]}}"""
+"song": "exact file name from the library", "song_alts": ["backup file", "backup file"],
+"song_drop": seconds into the chosen song where the drop should hit (one of its highs) or null}}"""
     out = gemini.generate_json(prompt, [sheet], purpose="scenes", temperature=0.2)
     if not isinstance(out, dict) or not isinstance(out.get("shots"), list):
         return None
@@ -416,13 +417,18 @@ Return JSON: {{"shots": [{{"i": int, "score": number, "card": bool}}], "act1": [
         ranks[f"{float(s['start']):.2f}-{float(s['end']):.2f}"] = {
             "score": max(0.0, min(10.0, float(r.get("score") or 0))), "card": bool(r.get("card"))}
     arr = {"act1": [], "act2": [], "iconic_hook": bool(out.get("iconic_hook")),
-           "song": None, "song_alts": []}
+           "song": None, "song_alts": [], "song_drop": None}
     allowed = {s.get("file") for s in (songs or []) if s.get("file")}
     song = out.get("song")
     if isinstance(song, dict):
         song = song.get("file") or song.get("name")
     if isinstance(song, str) and song in allowed:
         arr["song"] = song
+        try:
+            if out.get("song_drop") is not None:
+                arr["song_drop"] = round(float(out.get("song_drop")), 2)
+        except Exception:
+            pass
     alts = out.get("song_alts") or []
     if isinstance(alts, str):
         alts = [alts]
@@ -493,12 +499,19 @@ def _song_brief(songs: list[dict] | None) -> str:
         rows.append(
             f'{s.get("file")}: "{s.get("title") or ""}" / {s.get("artist") or ""} | '
             f'{s.get("genre") or ""} {s.get("mood") or ""} bpm={s.get("bpm")} energy={s.get("energy")} '
-            f'pillars={",".join(s.get("pillars") or [])}'
+            f'pillars={",".join(s.get("pillars") or [])} cat={s.get("cat") or ""}'
+            + (" PRIORITY" if s.get("priority") else "")
+            + (f' drop={s.get("drop_t")} highs={s.get("highs")}' if s.get("highs") else
+               (f' drop={s.get("drop_t")}' if s.get("drop_t") is not None else ""))
         )
     return (
         "\nPick the ONE library song that best matches this trailer's mood, genre and energy "
         "(hype/dark/epic/fun/romance, plus language/market if obvious). Then name 2 backups. "
         "Use the exact file name from this list. Prefer a pillar fit. Do not invent a file name.\n"
+        "Songs marked PRIORITY are the owner's hand-picked tracks: pick one of them whenever its cat fits "
+        "(action/hiphop for action edits, love for romance). Never pick a phonk/action song for a love edit.\n"
+        "Also set song_drop = the second in that song (its drop or one of its highs) that should hit on the "
+        "strongest cut; the edit starts on it so the hype lands from second 0.\n"
         "Library (already excluding recently used songs):\n" + "\n".join(rows)
     )
 

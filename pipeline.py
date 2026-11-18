@@ -4062,6 +4062,18 @@ def apply_auto_music(args, *, prefer: str | None = None, prefer_alts: list[str] 
     except Exception as e:
         print("music style skipped:", e)
     MUSIC_DROP_HINT = tr.get("drop_t") if tr.get("library") else None
+    # Gemini may pick which drop/high-energy point of ITS chosen song lands on the cuts.
+    gd = globals().get("GEMINI_SONG_DROP")
+    if tr.get("library") and gd is not None and tr.get("picked_by") == "gemini":
+        try:
+            import music_lib as _ml
+            snapped = _ml.valid_drop(tr, float(gd))
+            if snapped is not None:
+                MUSIC_DROP_HINT = snapped
+                tr["drop_by"] = "gemini"
+                print(f"  gemini drop point: {snapped:.2f}s")
+        except Exception:
+            pass
     (WORK / "music_credit.json").write_text(json.dumps(tr, indent=2, ensure_ascii=False))
     print("Music:", tr["file"], "|", tr["credit"].splitlines()[0], "|", tr.get("picked_by") or "hash")
     return Path(args.music)
@@ -4392,7 +4404,7 @@ def main():
         excl = [x.strip() for x in (args.exclude_music or "").split(",") if x.strip()]
         try:
             import music_lib as _mlib
-            songs = _mlib.catalog(AE, exclude=excl)
+            songs = _mlib.catalog(AE, exclude=excl, mood=globals().get("EDIT_FORMAT") or None)
         except Exception:
             songs = []
         ranks = sky_ai.rank_scenes(mezz, scenes, transcript, HOOK_TEXT, WORK, cache=cache, lines=a1_lines,
@@ -4424,6 +4436,7 @@ def main():
         arr = json.loads((WORK / "arrangement.json").read_text()) if (WORK / "arrangement.json").exists() else {}
         prefer = arr.get("song")
         prefer_alts = arr.get("song_alts") or []
+        globals()["GEMINI_SONG_DROP"] = arr.get("song_drop")
         if prefer:
             print(f"  gemini song pick: {prefer} alts={prefer_alts}")
     except Exception:

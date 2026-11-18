@@ -152,25 +152,105 @@ def is_curated_edit_song(t: dict, *, mood: str | None = None) -> bool:
     return any(w in blob for w in CURATED_MARKERS)
 
 
+# ---------------------------------------------------------------------------
+# Genre categories + owner priority tracks
+# ---------------------------------------------------------------------------
+MUSIC_CATS = ("action", "love", "cinematic", "hiphop")
+# Which song categories fit an edit format (first = best).
+FORMAT_CATS = {
+    "action": ("action", "hiphop"),
+    "gta6": ("action", "hiphop"),
+    "love": ("love",),
+    "romance": ("love",),
+    "cinematic": ("cinematic",),
+    "hiphop": ("hiphop",),
+}
+PRIORITY_BONUS = 60.0
+_HIPHOP = ("hip hop", "hip-hop", "hiphop", "rap", "trap", "drill", "boom bap")
+_CINEMATIC = ("cinematic", "epic", "orchestral", "trailer", "score", "ambient", "soundtrack")
+
+
+def track_cat(t: dict) -> str:
+    """action | love | cinematic | hiphop. Explicit `cat` wins, else derived from tags/genre."""
+    c = (t.get("cat") or "").strip().lower()
+    if c in MUSIC_CATS:
+        return c
+    blob = _track_blob(t)
+    if any(w in blob for w in ("phonk", "funk", "drift", "hardstyle", "dubstep")):
+        return "action"
+    if is_love_track(t):
+        return "love"
+    if re.search(r"\b(hip[ -]?hop|rap|trap|drill|boom bap)\b", blob):
+        return "hiphop"
+    if any(w in blob for w in _CINEMATIC):
+        return "cinematic"
+    return "action"
+
+
+def valid_drop(t: dict, sec: float, tol: float = 1.5) -> float | None:
+    """Accept a Gemini drop second only if it is near the track's analysed drop/highs."""
+    pts = [float(x) for x in (t.get("highs") or []) if x is not None]
+    if t.get("drop_t") is not None:
+        pts.append(float(t["drop_t"]))
+    dur = float(t.get("duration_s") or 0)
+    if dur and not (0 <= sec < dur - 8):
+        return None
+    if not pts:
+        return None
+    best = min(pts, key=lambda x: abs(x - sec))
+    return best if abs(best - sec) <= tol else None
+
+
+def is_priority(t: dict) -> bool:
+    return (t.get("priority") or "").strip().lower() == "high"
+
+
+def forced_genre() -> str:
+    g = (os.environ.get("SKY_MUSIC_GENRE") or "").strip().lower()
+    return g if g in MUSIC_CATS else ""
+
+
+def cats_for(mood: str | None) -> tuple[str, ...]:
+    g = forced_genre()
+    if g:
+        return (g,)
+    return FORMAT_CATS.get((mood or "action").strip().lower(), ("action", "hiphop"))
+
+
 def curated_tracks(tracks: list[dict], *, mood: str | None = None) -> list[dict]:
     """Prefer the curated phonk/edit library; only if it is empty, allow the rest (incl. CC beats).
 
-    Love mood prefers romance/emotional tracks first.
+    Love mood prefers romance/emotional tracks first. Owner priority tracks of a
+    fitting category are always kept. A forced genre (SKY_MUSIC_GENRE) narrows
+    the pool to that category when it has tracks.
     """
+    g = forced_genre()
+    if g:
+        only = [t for t in tracks if track_cat(t) == g]
+        if only:
+            return only
+    want = cats_for(mood)
+    prio = [t for t in tracks if is_priority(t) and track_cat(t) in want]
     if (mood or "") in ("love", "romance"):
         love = [t for t in tracks if is_love_track(t) and not is_generic_cc_beat(t)]
         modern = [t for t in love if not is_dated_love_track(t)]
+        modern = prio + [t for t in modern if t not in prio]
         if modern:
             return modern
         if love:
             return love
     curated = [t for t in tracks if is_curated_edit_song(t, mood=mood)]
+    for t in prio:
+        if t not in curated:
+            curated.append(t)
     return curated if curated else list(tracks)
 
 
 
-def catalog(AE: Path, exclude: list[str] | None = None) -> list[dict]:
-    """Compact library rows for a Gemini prompt (no paths, no licenses)."""
+def catalog(AE: Path, exclude: list[str] | None = None, mood: str | None = None) -> list[dict]:
+    """Compact library rows for a Gemini prompt (no paths, no licenses).
+
+    Owner priority tracks of a fitting category are listed first."""
     lp = AE / "music" / "library.json"
     if not lp.exists():
         return []
@@ -180,14 +260,20 @@ def catalog(AE: Path, exclude: list[str] | None = None) -> list[dict]:
         return []
     excl = {x for x in (exclude or []) if x}
     out = []
-    pool = curated_tracks([t for t in (lib.get("tracks") or []) if t.get("file") and not is_denied_track(t, AE)])
+    pool = curated_tracks([t for t in (lib.get("tracks") or []) if t.get("file") and not is_denied_track(t, AE)],
+                          mood=mood)
+    want = cats_for(mood) if (mood or forced_genre()) else MUSIC_CATS
     for t in pool:
         if t["file"] in excl:
             continue
-        out.append({k: t.get(k) for k in (
+        row = {k: t.get(k) for k in (
             "file", "title", "artist", "genre", "mood", "bpm", "energy", "pillars",
-            "safety", "drop_t",
-        )})
+            "safety", "drop_t", "highs",
+        )}
+        row["cat"] = track_cat(t)
+        row["priority"] = "high" if is_priority(t) else ""
+        out.append(row)
+    out.sort(key=lambda r: (0 if (r["priority"] and r["cat"] in want) else 1))
     return out
 
 
@@ -225,6 +311,7 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
     except Exception:
         if (pillar or "").lower() in ("romance", "love"):
             mood = "love"
+    want = cats_for(mood)
     curated = curated_tracks(tracks, mood=mood)
     if curated and curated != tracks:
         tracks = curated
@@ -248,6 +335,14 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
 
     def score(t):
         sc = 0.0
+        cat = track_cat(t)
+        if cat in want:
+            sc += 20 if cat == want[0] else 8
+        elif mood == "love" or forced_genre():
+            sc -= 40
+        if is_priority(t) and cat in want:
+            # Owner's hand-picked songs beat everything that fits the format.
+            sc += PRIORITY_BONUS
         if p in (t.get("pillars") or []):
             sc += 30
         g = (t.get("genre") or "").lower()
@@ -315,6 +410,10 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
 
     for how, name in [("gemini", prefer), * [("gemini_alt", a) for a in (prefer_alts or [])]]:
         if name and name in by_file:
+            if track_cat(by_file[name]) not in want:
+                print(f"  music library: {how} chose {name} but it is {track_cat(by_file[name])}, "
+                      f"not {'/'.join(want)}; skipping")
+                continue
             print(f"  music library: {how} chose {name}")
             return finish(by_file[name], how)
 
