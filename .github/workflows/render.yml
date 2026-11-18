@@ -111,6 +111,8 @@ jobs:
             faster-whisper-
       - name: Install ffmpeg + deps
         timeout-minutes: 20
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           # Static GPL build first (has vidstab, no apt mirrors needed); apt only as fallback.
           # Retry the tarball, verify it is a real xz, then fall back to apt.
@@ -118,13 +120,20 @@ jobs:
             # johnvansickle first (same build as before), then BtbN GPL static on GitHub (has vidstab,
             # reachable when johnvansickle serves a tiny error page), apt only as last fallback.
             local txz=/tmp/ffmpeg.txz url
-            for url in "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz" \
+            # 1st: our own pinned copy in this repo's `tools` release (inside GitHub, no outside host).
+            # Outside hosts follow with a short connect timeout so a dead host can never eat the 20 min.
+            for url in "release:tools" \
                        "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n8.1-latest-linux64-gpl-8.1.tar.xz" \
-                       "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz"; do
+                       "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz" \
+                       "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"; do
               for i in 1 2; do
                 rm -f "$txz"
                 echo "static ffmpeg download attempt $i: $url"
-                if ! curl -fsSL --retry 3 --retry-delay 8 --max-time 300 -o "$txz" "$url"; then
+                if [ "$url" = "release:tools" ]; then
+                  if ! timeout 180 gh release download tools -R "$GITHUB_REPOSITORY" -p ffmpeg-linux64-gpl.tar.xz -O "$txz" --clobber; then
+                    echo "release download failed"; sleep 5; continue
+                  fi
+                elif ! curl -fsSL --connect-timeout 15 --retry 2 --retry-delay 5 --max-time 240 -o "$txz" "$url"; then
                   echo "curl failed"; sleep 5; continue
                 fi
                 if [ "$(wc -c < "$txz")" -lt 1000000 ]; then
