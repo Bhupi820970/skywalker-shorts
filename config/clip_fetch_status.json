@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-18T09:56:58Z",
-  "last_upload_at": "2026-11-18T09:56:58Z"
+  "last_run_at": "2026-11-18T09:57:41Z",
+  "last_upload_at": "2026-11-18T09:57:41Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
@@ -11,6 +11,7 @@
   "yt:B0pIISs-o8w",
   "yt:HGCsAcFzaFw",
   "yt:HYfycqyIuEk",
+  "yt:HgwIz90uzTg",
   "yt:IXbnzEHZDPg",
   "yt:LmWrEpYpUec",
   "yt:MeIk9ap1u_E",
@@ -305,6 +306,17 @@
    "kbps": 1615,
    "by": "box",
    "at": "2026-11-18T09:56:58Z"
+  },
+  {
+   "asset": "violetevergarden_scene3_h264.mp4",
+   "id": "yt:HgwIz90uzTg",
+   "title": "Violet Evergarden | Clip: Anne's Tears | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1386,
+   "by": "box",
+   "at": "2026-11-18T09:57:41Z"
   }
  ],
  "github": {
