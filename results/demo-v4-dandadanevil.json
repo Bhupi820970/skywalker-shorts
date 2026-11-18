@@ -1,27 +1,62 @@
 {
   "id": "demo-v4-dandadanevil",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.979, 'edge_corr_median': 0.975, 'shift_px_median': 3.48, 'pairs': 6}",
-  "at": "2026-11-18 00:17 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44134209927",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok [no-publish]",
+  "at": "2026-11-18 04:34 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44171805208",
   "slot": null,
-  "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
-  "hook": "Evil Eye was a lonely kid",
-  "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+  "title": "Nobody expected the Evil Eye to be this terrifying #dandadan #anime #okarun",
+  "hook": "The Evil Eye has awakened",
+  "description": "The Evil Eye has awakened. A transformation sequence showcasing the chilling manifestation and descent of the Evil Eye spirit. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #anime #okarun #shorts #edit",
   "tags": [
-    "dandadanevil",
+    "dandadan",
     "anime",
+    "okarun",
+    "dandadanevil",
     "animeedit",
     "edit",
     "shorts",
-    "trending",
-    "okarun"
+    "trending"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Evil Eye was a lonely kid",
+    "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+    "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+    "tags": [
+      "dandadanevil",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "okarun"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Nobody expected the Evil Eye to be this terrifying",
+      "click_score": 92.0
+    },
+    {
+      "title": "Watch what happens when the Evil Eye awakens",
+      "click_score": 88.0
+    },
+    {
+      "title": "Okarun was not ready for the Evil Eye",
+      "click_score": 85.0
+    },
+    {
+      "title": "The moment the Evil Eye took control",
+      "click_score": 82.0
+    },
+    {
+      "title": "This is the true power of the Evil Eye",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "scenes",
@@ -33,33 +68,33 @@
       "purpose": "scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "HTTP 429"
+      "err": "HTTP 503"
     },
     {
       "purpose": "scenes",
       "model": "gemini-flash-latest",
       "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 10.5,
+      "s": 3.0,
       "ok": true
     },
     {
       "purpose": "hook",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 4.9,
+      "s": 26.5,
       "ok": true
     },
     {
-      "purpose": "scenes",
+      "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 4.2,
+      "s": 14.9,
       "ok": true
     }
   ],
@@ -72,33 +107,162 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "ok": true,
+      "error": null,
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
-      "music": "sw_phonkmemphisrap2.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 2,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
-      "music": "sw_phonkmemphisrap2.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 3,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.979, 'edge_corr_median': 0.975, 'shift_px_median': 3.48, 'pairs': 6}",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
-      "music": "sw_stoppostingaboutballer.mp3",
-      "qc_status": null
+      "music": "sw_lilwardenssecretsecretse2.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.979, 'edge_corr_median': 0.975, 'shift_px_median': 3.48, 'pairs': 6}"
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/test-renders",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-v4-dandadanevil.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 3.274,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+  "music": "sw_lilwardenssecretsecretse2.mp3",
+  "music_credit": "Song: lil' warden - lil' warden's SECRET SECRET SECRET phonk sigma mixxes vol one (https://creativecommons.org/licenses/by-sa/4.0/)",
+  "description_final": "The Evil Eye has awakened. A transformation sequence showcasing the chilling manifestation and descent of the Evil Eye spirit. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #anime #okarun #shorts #edit\n\nMusic:\nSong: lil' warden - lil' warden's SECRET SECRET SECRET phonk sigma mixxes vol one (https://creativecommons.org/licenses/by-sa/4.0/)",
+  "no_publish": true,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-v4-dandadanevil-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.661,
+      "audio": true
+    },
+    "lufs": -14.5,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -18.6,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video perfectly adheres to all formatting and content requirements.",
+        "The hook is clear and engaging.",
+        "The audio is clean and free of unwanted dialogue.",
+        "The layout is correct with the white bar positioned above the uncropped footage."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 42,
+      "src_start": 137.846,
+      "dur": 1.5,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 21,
+      "src_start": 68.193,
+      "dur": 1.774,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 23001,
+      "src_start": 82.823,
+      "dur": 1.672,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 27,
+      "src_start": 96.763,
+      "dur": 1.672,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 13,
+      "src_start": 47.923,
+      "dur": 2.113,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 2,
+      "src_start": 8.967,
+      "dur": 1.92,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 25,
+      "src_start": 90.34,
+      "dur": 2.376,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 22,
+      "src_start": 73.949,
+      "dur": 1.579,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 11,
+      "src_start": 40.707,
+      "dur": 2.531,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 18,
+      "src_start": 61.395,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 6,
+      "src_start": 22.898,
+      "dur": 1.5,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 10,
+      "src_start": 36.995,
+      "dur": 1.5
+    }
+  ],
+  "qc_status": "pass"
 }

@@ -1,27 +1,61 @@
 {
   "id": "stock-dragonballdaima-03",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-17 23:53 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44126567455",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
+  "at": "2026-11-18 05:32 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44171805208",
   "slot": null,
-  "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
-  "hook": "Goku got small, not weak",
-  "description": "Goku got small, not weak. From official Dragon Ball Daima clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dragonballdaima",
+  "title": "Ranbir Kapoor is not holding back #animal #ranbirkapoor #action",
+  "hook": "He came to settle the score",
+  "description": "He came to settle the score. Ranbir Kapoor leads his armed entourage into a high-stakes confrontation with cold precision. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #action #shorts #edit",
   "tags": [
-    "dragonballdaima",
-    "anime",
-    "animeedit",
+    "animal",
+    "ranbirkapoor",
+    "action",
+    "bollywood",
     "edit",
-    "shorts",
-    "trending",
-    "goku"
+    "phonk",
+    "aura"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Why he is the villain",
+    "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+    "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+    "tags": [
+      "animal",
+      "ranbirkapoor",
+      "bollywood",
+      "edit",
+      "phonk",
+      "aura",
+      "action"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "Curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Ranbir Kapoor is not holding back",
+      "click_score": 92.0
+    },
+    {
+      "title": "Watch the moment he enters the room",
+      "click_score": 88.0
+    },
+    {
+      "title": "Nobody expected him to be this dangerous",
+      "click_score": 85.0
+    },
+    {
+      "title": "Ranbir Kapoor walking in like a boss",
+      "click_score": 82.0
+    },
+    {
+      "title": "He just changed the game entirely",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "scenes",
@@ -45,21 +79,7 @@
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 6.2,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.9,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 3.4,
+      "s": 10.4,
       "ok": true
     },
     {
@@ -73,7 +93,28 @@
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 5.7,
+      "s": 4.4,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.7,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 4.0,
       "ok": true
     }
   ],
@@ -81,33 +122,206 @@
   "stock": true,
   "stock_topic": "backup-dragonballdaima",
   "spare": true,
-  "auto_retries": 0,
+  "words": "ANIMAL",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "dragonballdaima",
+      "from_words": "DRAGON BALL DAIMA",
+      "to": "animal",
+      "to_words": "ANIMAL",
+      "reason": "pipeline/QA failed (exit 1): only 12.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "dragonballdaima",
+  "swapped_to": "animal",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 12.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 12.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4",
-      "music": "sw_stoppostingaboutballer.mp3",
+      "music": "sw_lilwardenssecretsecretse2.mp3",
       "qc_status": null
     },
     {
-      "attempt": 2,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 11.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4",
-      "music": "sw_stoppostingaboutballer.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 3,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4",
-      "music": "sw_jujalarimfunkoverslowed.mp3",
-      "qc_status": null
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
+      "music": "sw_lilwardenssecretsecretse2.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-03.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
+  "music": "sw_lilwardenssecretsecretse2.mp3",
+  "music_credit": "Song: lil' warden - lil' warden's SECRET SECRET SECRET phonk sigma mixxes vol one (https://creativecommons.org/licenses/by-sa/4.0/)",
+  "description_final": "He came to settle the score. Ranbir Kapoor leads his armed entourage into a high-stakes confrontation with cold precision. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #action #shorts #edit\n\nMusic:\nSong: lil' warden - lil' warden's SECRET SECRET SECRET phonk sigma mixxes vol one (https://creativecommons.org/licenses/by-sa/4.0/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-03-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.405,
+      "audio": true
+    },
+    "lufs": -14.5,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -19.0,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards: correct layout, clean audio, no dialogue, and engaging hook."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 33,
+      "src_start": 77.333,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 54,
+      "src_start": 167.125,
+      "dur": 1.774,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 28,
+      "src_start": 42.792,
+      "dur": 1.672,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 46,
+      "src_start": 129.542,
+      "dur": 1.672,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 31,
+      "src_start": 60.542,
+      "dur": 2.113,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 39,
+      "src_start": 96.25,
+      "dur": 2.159,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 49,
+      "src_start": 145.5,
+      "dur": 1.579,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 9,
+      "src_start": 17.333,
+      "dur": 1.625
+    },
+    {
+      "id": 28001,
+      "src_start": 57.144,
+      "dur": 0.899,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 17,
+      "src_start": 27.042,
+      "dur": 1.335,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 41,
+      "src_start": 112.292,
+      "dur": 0.877,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 43,
+      "src_start": 125.125,
+      "dur": 1.17,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 50,
+      "src_start": 149.375,
+      "dur": 0.71,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 52,
+      "src_start": 158.583,
+      "dur": 1.043,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 7,
+      "src_start": 10.542,
+      "dur": 1.335,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 13,
+      "src_start": 22.292,
+      "dur": 0.637
+    }
+  ],
+  "qc_status": "pass"
 }

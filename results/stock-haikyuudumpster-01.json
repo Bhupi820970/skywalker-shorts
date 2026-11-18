@@ -1,27 +1,61 @@
 {
   "id": "stock-haikyuudumpster-01",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-17 23:36 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44126762071",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
+  "at": "2026-11-18 04:17 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44171805208",
   "slot": null,
-  "title": "The rematch everyone waited for | Haikyu | #edit",
-  "hook": "The rematch everyone waited for",
-  "description": "The rematch everyone waited for. From official Haikyu clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #haikyuudumpster",
+  "title": "Nobody expected this level of intensity #animal #ranbirkapoor #action",
+  "hook": "Ranbir Kapoor enters with total control",
+  "description": "Ranbir Kapoor enters with total control. Ranbir Kapoor commands his armed entourage while confronting his enemies with cold, calculated precision. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #action #shorts #edit",
   "tags": [
-    "haikyuudumpster",
-    "anime",
-    "animeedit",
+    "animal",
+    "ranbirkapoor",
+    "action",
+    "bollywood",
     "edit",
-    "shorts",
-    "trending",
-    "hinata"
+    "phonk",
+    "aura"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Why he is the villain",
+    "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+    "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+    "tags": [
+      "animal",
+      "ranbirkapoor",
+      "bollywood",
+      "edit",
+      "phonk",
+      "aura",
+      "action"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "bold claim",
+  "title_candidates": [
+    {
+      "title": "Nobody expected this level of intensity",
+      "click_score": 92.0
+    },
+    {
+      "title": "Ranbir Kapoor owning the room",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch the silence before the chaos",
+      "click_score": 85.0
+    },
+    {
+      "title": "Ranbir Kapoor is not holding back",
+      "click_score": 82.0
+    },
+    {
+      "title": "He just changed the game",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "scenes",
@@ -33,7 +67,7 @@
       "purpose": "scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "scenes",
@@ -45,14 +79,28 @@
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 2.5,
+      "s": 2.9,
       "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 40.1,
+      "s": 2.8,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.4,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.2,
       "ok": true
     }
   ],
@@ -60,33 +108,178 @@
   "stock": true,
   "stock_topic": "backup-haikyuudumpster",
   "spare": true,
-  "auto_retries": 0,
+  "words": "ANIMAL",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "haikyu",
+      "from_words": "HAIKYU",
+      "to": "animal",
+      "to_words": "ANIMAL",
+      "reason": "pipeline/QA failed (exit 1): only 11.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "haikyu",
+  "swapped_to": "animal",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 10.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 11.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
-      "music": "sw_phonkmemphisrap2.mp3",
+      "music": "sw_escenarioslowed.mp3",
       "qc_status": null
     },
     {
-      "attempt": 2,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 10.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
-      "music": "sw_phonkmemphisrap2.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 3,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
-      "music": "sw_stoppostingaboutballer.mp3",
-      "qc_status": null
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+      "music": "sw_lilwardenssecretsecretse2.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-haikyuudumpster-01.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+  "music": "sw_lilwardenssecretsecretse2.mp3",
+  "music_credit": "Song: lil' warden - lil' warden's SECRET SECRET SECRET phonk sigma mixxes vol one (https://creativecommons.org/licenses/by-sa/4.0/)",
+  "description_final": "Ranbir Kapoor enters with total control. Ranbir Kapoor commands his armed entourage while confronting his enemies with cold, calculated precision. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #action #shorts #edit\n\nMusic:\nSong: lil' warden - lil' warden's SECRET SECRET SECRET phonk sigma mixxes vol one (https://creativecommons.org/licenses/by-sa/4.0/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-haikyuudumpster-01-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 23.808,
+      "audio": true
+    },
+    "lufs": -14.5,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -18.9,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality and formatting requirements. The hook is clear, the layout is correct, the footage is clean, and the audio is properly mixed for a music-only edit."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 4,
+      "src_start": 7.417,
+      "dur": 1.46,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 78,
+      "src_start": 133.417,
+      "dur": 1.814,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 22,
+      "src_start": 36.417,
+      "dur": 1.668,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 42,
+      "src_start": 77.417,
+      "dur": 1.676,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 6,
+      "src_start": 11.0,
+      "dur": 2.113,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 63,
+      "src_start": 109.75,
+      "dur": 1.918,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 25,
+      "src_start": 50.487,
+      "dur": 2.378,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 28,
+      "src_start": 57.75,
+      "dur": 1.502,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 70,
+      "src_start": 117.667,
+      "dur": 1.71,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 17,
+      "src_start": 27.833,
+      "dur": 2.418
+    },
+    {
+      "id": 51,
+      "src_start": 91.292,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 93,
+      "src_start": 165.292,
+      "dur": 1.46
+    }
+  ],
+  "qc_status": "pass"
 }

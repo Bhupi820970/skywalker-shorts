@@ -1,64 +1,137 @@
 {
   "id": "stock-frieren-01",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 13.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-17 22:21 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44122222189",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): only 14.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-18 05:15 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44171805208",
   "slot": null,
-  "title": "She outlived everyone she loved | Frieren | #edit",
-  "hook": "She outlived everyone she loved",
-  "description": "She outlived everyone she loved. From official Frieren clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #frieren",
+  "title": "Frieren finally understands him #frieren #animeedit #frierenbeyondjourneysend",
+  "hook": "She finally understood his kindness",
+  "description": "She finally understood his kindness. Frieren experiences a quiet, transformative moment of realization regarding the emotional bond she shares with those around her. From the official Frieren trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#frieren #animeedit #frierenbeyondjourneysend #shorts #edit",
   "tags": [
     "frieren",
-    "anime",
     "animeedit",
+    "frierenbeyondjourneysend",
+    "animal",
+    "ranbirkapoor",
+    "bollywood",
     "edit",
-    "shorts",
-    "trending",
-    "frieren"
+    "phonk",
+    "aura",
+    "action"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Why he is the villain",
+    "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+    "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+    "tags": [
+      "animal",
+      "ranbirkapoor",
+      "bollywood",
+      "edit",
+      "phonk",
+      "aura",
+      "action"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "emotional observation",
+  "title_candidates": [
+    {
+      "title": "Frieren finally understands him",
+      "click_score": 92.0
+    },
+    {
+      "title": "The moment Frieren stopped hiding her feelings",
+      "click_score": 88.0
+    },
+    {
+      "title": "How Fern changed Frieren forever",
+      "click_score": 85.0
+    },
+    {
+      "title": "Watch the look on her face",
+      "click_score": 82.0
+    },
+    {
+      "title": "Frieren finds a new way to see the world",
+      "click_score": 78.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "s": 18.4,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
       "err": "HTTP 429"
     },
     {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
+      "purpose": "scenes",
       "model": "gemini-flash-latest",
       "key": "key1",
       "err": "HTTP 429"
     },
     {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.8,
+      "ok": true
+    },
+    {
       "purpose": "hook",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 4.4,
+      "s": 2.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.8,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 12.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.8,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 12.2,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key4",
+      "s": 2.8,
       "ok": true
     }
   ],
@@ -66,33 +139,38 @@
   "stock": true,
   "stock_topic": "backup-frieren",
   "spare": true,
-  "auto_retries": 0,
+  "words": "ANIMAL",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "frieren",
+      "from_words": "FRIEREN",
+      "to": "animal",
+      "to_words": "ANIMAL",
+      "reason": "pipeline/QA failed (exit 1): only 16.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "frieren",
+  "swapped_to": "animal",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): auto_qc: 2 frame(s) failed empty-dark/logo/text detectors",
+      "error": "pipeline/QA failed (exit 1): only 16.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene3_h264.mp4",
       "music": "sw_powergloveplaybackvinylr.mp3",
       "qc_status": null
     },
     {
-      "attempt": 2,
+      "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): auto_qc: 2 frame(s) failed empty-dark/logo/text detectors",
+      "error": "pipeline/QA failed (exit 1): only 14.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene3_h264.mp4",
-      "music": "sw_powergloveplaybackvinylr.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 3,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 13.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/frieren2_scene3_h264.mp4",
-      "music": "sw_powerglovetrialsoftheblo.mp3",
+      "music": "sw_lilwardenssecretsecretse2.mp3",
       "qc_status": null
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 13.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": "pipeline/QA failed (exit 1): only 14.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
 }
