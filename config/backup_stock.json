@@ -819,8 +819,9 @@
       "id": "stock-firforce3-02",
       "topic_id": "backup-firforce3",
       "slug": "firforce3",
-      "status": "pending",
-      "queued_at": "2026-11-18 06:31 IST"
+      "status": "failed",
+      "queued_at": "2026-11-18 06:31 IST",
+      "result_id": "stock-firforce3-02"
     },
     {
       "id": "stock-firstslamdunk-01",
@@ -898,8 +899,9 @@
       "id": "stock-frieren-02",
       "topic_id": "backup-frieren",
       "slug": "frieren",
-      "status": "pending",
-      "queued_at": "2026-11-18 06:31 IST"
+      "status": "failed",
+      "queued_at": "2026-11-18 06:31 IST",
+      "result_id": "stock-frieren-02"
     },
     {
       "id": "stock-frieren2-01",
