@@ -531,7 +531,7 @@ def apply_scene_ranks(scenes: list[dict], ranks: dict, min_keep_s: float = 34.0)
         if not r:
             continue
         d = float(s["end"]) - float(s["start"])
-        if r.get("card") and kept_dur - d >= min_keep_s:
+        if r.get("card"):  # logos/cards are a hard rule: never kept to pad footage
             s["skip"] = True
             s["reason"] = s["card_reason"] = "gemini_card"
             s["score"] = 0
@@ -696,12 +696,15 @@ shake (10 = steady; low if footage is jittery/handheld-shaky in a distracting wa
 crop (10 = full uncropped frame; low if faces/heads are cut by a zoom or the picture is cropped),
 length (pacing fits {dur:.0f}s; no dead air, no abrupt cut-off),
 layout (white bar at the top ABOVE the uncropped frame, never covering it; picture vertically centered with blur above and below; nothing else written on the footage),
-clean_footage (no studio logo intro, title/date/rating card, watermark, or repeated shot),
+clean_footage (no studio logo intro, title/date/rating card, watermark, or repeated shot; ANY streamer/studio
+logo or corner bug - Netflix N / NETFLIX / SUBSCRIBE card, Crunchyroll, Prime Video, Disney+, HBO, Hulu, Aniplex, Toho,
+channel watermark, show-title text - in ANY frame means clean_footage <= 2 and reject=true),
 {cap_crit},
 post_worthy (overall: would a top edit channel post this as is?).
 Set reject=true for any clear hard failure ({reject_bits}) or if it is simply not post-worthy.
 Return JSON: {{"scores": {{"hook": n, "title": n, "speech_clarity": n, "shake": n, "crop": n, "length": n,
-"layout": n, "clean_footage": n, "captions": n, "post_worthy": n}}, "reject": bool, "reasons": [str]}}"""
+"layout": n, "clean_footage": n, "captions": n, "post_worthy": n}}, "logos_seen": [str], "reject": bool, "reasons": [str]}}
+logos_seen lists every logo/watermark/corner bug/brand text you saw anywhere (empty list if none)."""
     media = [p for p in (proxy, sheet) if p]
     out = gemini.generate_json(prompt, media, purpose="qc", temperature=0.1, timeout=150.0)
     if not isinstance(out, dict):
@@ -714,7 +717,7 @@ Return JSON: {{"scores": {{"hook": n, "title": n, "speech_clarity": n, "shake": 
                 scores[k] = float(sc.get(k))
         except Exception:
             pass
-    hard = {"speech_clarity": 5, "crop": 5, "layout": 5, "clean_footage": 5, "shake": 4, "hook": 5}
+    hard = {"speech_clarity": 5, "crop": 5, "layout": 5, "clean_footage": 9, "shake": 4, "hook": 5}
     if mode == "music_only":
         # Missing dialogue/subtitles is the point of a song-only edit.
         hard.pop("speech_clarity", None)
@@ -726,6 +729,30 @@ Return JSON: {{"scores": {{"hook": n, "title": n, "speech_clarity": n, "shake": 
     low = [k for k, v in scores.items() if k not in skip and v < hard.get(k, 4)]
     if scores.get("post_worthy") is not None and scores["post_worthy"] < 6:
         low.append("post_worthy")
+    logos = [str(x)[:80] for x in (out.get("logos_seen") or []) if str(x).strip()]
+    reasons = [str(r)[:200] for r in (out.get("reasons") or [])][:6]
+    if logos or logo_mentioned(reasons):
+        low.append("logo")
     reject = bool(out.get("reject")) or bool(low)
-    return {"pass": not reject, "scores": scores, "reasons": [str(r)[:200] for r in (out.get("reasons") or [])][:6],
-            "low": low, "watched_video": bool(proxy)}
+    if logos:
+        reasons = [f"logo seen: {', '.join(logos)[:160]}"] + reasons
+    return {"pass": not reject, "scores": scores, "reasons": reasons[:6],
+            "low": low, "logos_seen": logos, "watched_video": bool(proxy)}
+
+
+_LOGO_WORDS = ("netflix", "crunchyroll", "prime video", "disney+", "hbo", "hulu", "aniplex", "toho", "watermark",
+               "subscribe", "corner bug", "logo")
+_NEG = ("no ", "without ", "free of ", "absence of ", "not ", "zero ")
+
+
+def logo_mentioned(reasons: list[str]) -> bool:
+    """True if a QC reason reports a logo/watermark (e.g. 'Netflix Subscribe watermark in the first frames')."""
+    for r in reasons or []:
+        low = str(r).lower()
+        for w in _LOGO_WORDS:
+            i = low.find(w)
+            while i >= 0:
+                if not any(n in low[max(0, i - 24):i] for n in _NEG):
+                    return True
+                i = low.find(w, i + 1)
+    return False

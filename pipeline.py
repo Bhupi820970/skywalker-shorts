@@ -4380,6 +4380,20 @@ def main():
         print(f"  {len(kept)} usable scenes")
         scored_path.write_text(json.dumps(scenes, indent=2))
 
+    print("=== 2a. No-logo guard (source edges + dense Gemini scan) ===")
+    try:
+        import logo_guard
+        _mdur = ffprobe_dur(mezz)
+        n_edge = logo_guard.apply_edge_guard(scenes, _mdur)
+        print(f"  edge guard: {n_edge} scene(s) trimmed/skipped (head/tail s = {logo_guard.edge_guard(_mdur)})")
+        lres = logo_guard.scan_scenes(mezz, scenes, WORK)
+        flagged = {k: v[:2] for k, v in (lres.get("hits") or {}).items()}
+        print(f"  logo scan: ok={lres.get('ok')} frames={lres.get('frames')} flagged={len(flagged)} {json.dumps(flagged)[:600]}")
+        (WORK / "logo_scenes.json").write_text(json.dumps(lres, indent=2, default=str))
+        scored_path.write_text(json.dumps(scenes, indent=2, default=str))
+    except Exception as e:
+        print("  logo guard (pre-cut) error; final gate still blocks logos:", e)
+
     print("=== 2b. Transcribe original dialogue ===")
     transcript = {"words": [], "segments": [], "ok": False}
     try:
