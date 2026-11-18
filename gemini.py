@@ -197,6 +197,9 @@ def generate_json(prompt: str, images: list | None = None, *, purpose: str = "",
     b = _budget()
     mx_calls = int(os.environ.get("GEMINI_MAX_CALLS", "5"))
     mx_http = int(os.environ.get("GEMINI_MAX_HTTP", "16"))
+    # Logo guard is a hard safety check: never starved by the per-video budget.
+    if purpose.startswith("logo"):
+        mx_calls = mx_http = 10 ** 6
     if b.get("calls", 0) >= mx_calls:
         if purpose == "qc" and int(b.get("qc_retry") or 0) > 0:
             b["qc_retry"] = int(b.get("qc_retry") or 0) - 1
