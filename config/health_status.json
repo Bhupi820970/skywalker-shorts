@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-18 12:46 IST",
+  "at": "2026-11-18 13:28 IST",
   "slots_checked": 12,
   "ready": [
     {
       "slot": "2026-11-18T11:30:00+05:30",
-      "id": "backup-kaiju8s2",
-      "how": "backup_pool"
+      "id": "stock",
+      "how": "backup_stock"
     },
     {
       "slot": "2026-11-18T12:30:00+05:30",
@@ -135,13 +135,14 @@
     "stock-kalki2898ad-01",
     "20261114-1330-dune2",
     "20261116-1600-venom3",
+    "stock-firforce3-03",
     "20261115-1330-avatarfireandash",
     "stock-gachiakuta-02",
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 14,
-  "stock_pending": 16,
+  "stock_ready": 15,
+  "stock_pending": 15,
   "stock_used": 21,
   "stock_target": 30,
   "stock_need_refill": false,
