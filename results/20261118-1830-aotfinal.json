@@ -284,5 +284,9 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-aotfinal-04",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "buffer_post_id": "6afda5b21c55ed7dd8025740",
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-18T13:18:42.659Z",
+  "buffer_created_at": "2026-11-18 18:48 IST"
 }
