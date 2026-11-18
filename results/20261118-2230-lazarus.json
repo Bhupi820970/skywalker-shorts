@@ -1,0 +1,252 @@
+{
+  "id": "20261118-2230-lazarus",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-18 15:17 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44274274612",
+  "slot": "2026-11-18T22:30:00+05:30",
+  "title": "Axel admitting his bad habit mid escape | Lazarus #lazarus #axel #animeedit",
+  "hook": "He admitted his bad habit mid escape",
+  "description": "He admitted his bad habit mid escape. Axel casually confesses his bad habits while holding a hostage and staging an insane prison break in Lazarus. From the official Lazarus trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#lazarus #axel #animeedit #shorts #edit",
+  "tags": [
+    "lazarus",
+    "axel",
+    "animeedit",
+    "anime",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Axel has thirty days to run",
+    "title": "Axel has thirty days to run | Lazarus | #edit",
+    "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+    "tags": [
+      "lazarus",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "axel"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "quote tease / tight moment",
+  "title_candidates": [
+    {
+      "title": "Axel admitting his bad habit mid escape | Lazarus",
+      "click_score": 94.0
+    },
+    {
+      "title": "Watch what Axel does right after confessing | Lazarus",
+      "click_score": 91.0
+    },
+    {
+      "title": "Nobody expected Axel to break out like this | Lazarus",
+      "click_score": 88.0
+    },
+    {
+      "title": "Axel making a prison break look this smooth",
+      "click_score": 85.0
+    },
+    {
+      "title": "The moment Axel turned his arrest into an escape",
+      "click_score": 83.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 76.9,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 68.2,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 23.4,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-lazarus",
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "LAZARUS",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+      "music": "sw_reasonablebailefunk.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261118-2230-lazarus",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-2230-lazarus/render-20261118-2230-lazarus.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 3.228,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+  "music": "sw_reasonablebailefunk.mp3",
+  "music_credit": "Song: atari - Reasonable Baile Funk (http://creativecommons.org/licenses/by-sa/2.5/)",
+  "description_final": "He admitted his bad habit mid escape. Axel casually confesses his bad habits while holding a hostage and staging an insane prison break in Lazarus. From the official Lazarus trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#lazarus #axel #animeedit #shorts #edit\n\nMusic:\nSong: atari - Reasonable Baile Funk (http://creativecommons.org/licenses/by-sa/2.5/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-2230-lazarus/render-20261118-2230-lazarus-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.896,
+      "audio": true
+    },
+    "lufs": -14.1,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.9,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 9.0,
+        "title": 9.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 9.0,
+        "captions": 10.0,
+        "post_worthy": 9.0
+      },
+      "reasons": [],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 13,
+      "src_start": 29.196,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 3,
+      "src_start": 6.673,
+      "dur": 1.728,
+      "gemini_score": 7.2,
+      "reason": "gemini score 7.2"
+    },
+    {
+      "id": 19,
+      "src_start": 42.376,
+      "dur": 1.5,
+      "gemini_score": 8.8,
+      "reason": "gemini score 8.8"
+    },
+    {
+      "id": 75,
+      "src_start": 175.801,
+      "dur": 1.681,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 72,
+      "src_start": 151.068,
+      "dur": 1.881,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 10,
+      "src_start": 20.646,
+      "dur": 2.0,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 34,
+      "src_start": 74.137,
+      "dur": 1.715
+    },
+    {
+      "id": 40,
+      "src_start": 88.324,
+      "dur": 1.5
+    },
+    {
+      "id": 1,
+      "src_start": 0.0,
+      "dur": 2.215,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 50,
+      "src_start": 105.836,
+      "dur": 1.231,
+      "gemini_score": 8.6,
+      "reason": "gemini score 8.6"
+    },
+    {
+      "id": 6,
+      "src_start": 13.555,
+      "dur": 0.961,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 15,
+      "src_start": 32.95,
+      "dur": 1.378,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 57,
+      "src_start": 117.284,
+      "dur": 1.22
+    },
+    {
+      "id": 26,
+      "src_start": 55.514,
+      "dur": 1.336
+    }
+  ],
+  "qc_status": "pass"
+}
