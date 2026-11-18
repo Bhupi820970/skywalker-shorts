@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-18T10:01:14Z",
-  "last_upload_at": "2026-11-18T10:01:14Z"
+  "last_run_at": "2026-11-18T14:37:23Z",
+  "last_upload_at": "2026-11-18T14:37:23Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
@@ -15,20 +15,24 @@
   "yt:HYfycqyIuEk",
   "yt:HgwIz90uzTg",
   "yt:IXbnzEHZDPg",
+  "yt:Lbmsv1tcgf8",
   "yt:LmWrEpYpUec",
   "yt:MeIk9ap1u_E",
   "yt:MgVkBzXOc8Q",
   "yt:RGenZI9HT_Y",
   "yt:UPBRjoTmYaw",
   "yt:VAikfIsQyRM",
+  "yt:VVBziwNCHq8",
   "yt:VwwZU7YgC6A",
   "yt:XnseVYTF8_0",
   "yt:Y9XqnjKXgTs",
   "yt:YRL74JmhVgk",
   "yt:Zq4zTcIM0yQ",
+  "yt:_GFcWG0M-YM",
   "yt:_lmn16npMXw",
   "yt:ckEUVyKanhw",
   "yt:golG9lmaR_U",
+  "yt:iAIBF2ngbWY",
   "yt:jeQYEIQ6eHw",
   "yt:r9oI7Kvqwsg",
   "yt:xPJLyIFyF50",
@@ -353,6 +357,50 @@
    "kbps": 5876,
    "by": "box",
    "at": "2026-11-18T10:01:14Z"
+  },
+  {
+   "asset": "animal_scene5_h264.mp4",
+   "id": "yt:Lbmsv1tcgf8",
+   "title": "Ranbir Kapoor's MOST INTENSE Scene with Anil Kapoor! 😨| #Animal | Netflix India",
+   "channel": "Netflix India",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2093,
+   "by": "box",
+   "at": "2026-11-18T14:37:23Z"
+  },
+  {
+   "asset": "animal_scene6_h264.mp4",
+   "id": "yt:VVBziwNCHq8",
+   "title": "Animal: Arjan Vailly Full Video (Film Version) Ranbir Kapoor, Sandeep,Bhupinder B,Manan | Bhushan K",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 14935,
+   "by": "box",
+   "at": "2026-11-18T14:37:23Z"
+  },
+  {
+   "asset": "animal_scene7_h264.mp4",
+   "id": "yt:_GFcWG0M-YM",
+   "title": "Animal: Arjan Vailly 8K Video Song | Ranbir Kapoor | Sandeep Vanga | Bhupinder B,Manan B | Bhushan K",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 13850,
+   "by": "box",
+   "at": "2026-11-18T14:37:23Z"
+  },
+  {
+   "asset": "animal_scene8_h264.mp4",
+   "id": "yt:iAIBF2ngbWY",
+   "title": "ANIMAL:Pehle Bhi Main(Full Video) | Ranbir Kapoor,Tripti Dimri |Sandeep V |Vishal M,Raj S |Bhushan K",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 7986,
+   "by": "box",
+   "at": "2026-11-18T14:37:23Z"
   }
  ],
  "github": {

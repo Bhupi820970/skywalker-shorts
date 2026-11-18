@@ -1934,7 +1934,11 @@
         "animal_scene1_h264.mp4",
         "animal_scene2_h264.mp4",
         "animal_scene3_h264.mp4",
-        "animal_scene4_h264.mp4"
+        "animal_scene4_h264.mp4",
+        "animal_scene5_h264.mp4",
+        "animal_scene6_h264.mp4",
+        "animal_scene7_h264.mp4",
+        "animal_scene8_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
