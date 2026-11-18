@@ -1,0 +1,309 @@
+{
+  "id": "20261118-1130-kaiju8s2",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
+  "at": "2026-11-18 13:20 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44242888542",
+  "slot": "2026-11-18T11:30:00+05:30",
+  "title": "Ranvijay makes a scene for milk #animal #ranbirkapoor #bollywood",
+  "hook": "Ranvijay demands his milk",
+  "description": "Ranvijay demands his milk. Ranvijay makes a cold, tension-filled entrance to demand a glass of milk in the middle of a business meeting. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit",
+  "tags": [
+    "animal",
+    "ranbirkapoor",
+    "bollywood",
+    "edit",
+    "phonk",
+    "aura",
+    "action"
+  ],
+  "queue_meta": {
+    "hook": "Why he is the villain",
+    "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+    "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+    "tags": [
+      "animal",
+      "ranbirkapoor",
+      "bollywood",
+      "edit",
+      "phonk",
+      "aura",
+      "action"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Ranvijay makes a scene for milk",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody expected him to ask for milk",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch Ranvijay enter the room",
+      "click_score": 85.0
+    },
+    {
+      "title": "The moment Ranvijay demanded milk",
+      "click_score": 82.0
+    },
+    {
+      "title": "Ranvijay is not playing games here",
+      "click_score": 78.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.9,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 8.3,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 23.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 12.6,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-kaiju8s2",
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "ANIMAL",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "kaiju8s2",
+      "from_words": "KAIJU NO. 8",
+      "to": "animal",
+      "to_words": "ANIMAL",
+      "reason": "pipeline/QA failed (exit 1): only 6.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "kaiju8s2",
+  "swapped_to": "animal",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 6.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene1_h264.mp4",
+      "music": "sw_spotimateiolabubufunksxl.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
+      "music": "sw_spotimateiolabubufunksxl.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261118-1130-kaiju8s2",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-1130-kaiju8s2/render-20261118-1130-kaiju8s2.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
+  "music": "sw_spotimateiolabubufunksxl.mp3",
+  "music_credit": "Song: Labubinnga TN 2001 - Spoti Mate.io LABUBU FUNK SXLLX (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "Ranvijay demands his milk. Ranvijay makes a cold, tension-filled entrance to demand a glass of milk in the middle of a business meeting. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit\n\nMusic:\nSong: Labubinnga TN 2001 - Spoti Mate.io LABUBU FUNK SXLLX (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-1130-kaiju8s2/render-20261118-1130-kaiju8s2-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.256,
+      "audio": true
+    },
+    "lufs": -14.5,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.7,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all technical and creative requirements.",
+        "The hook is clear and engaging.",
+        "The layout is correct with the white bar at the top and the footage uncropped.",
+        "The audio is clean and contains only the music as requested."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 33,
+      "src_start": 77.333,
+      "dur": 1.5,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 31,
+      "src_start": 60.542,
+      "dur": 1.821,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 54,
+      "src_start": 167.125,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 28,
+      "src_start": 42.792,
+      "dur": 1.774,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 46,
+      "src_start": 129.542,
+      "dur": 1.858,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 39,
+      "src_start": 96.25,
+      "dur": 2.0,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 49,
+      "src_start": 145.5,
+      "dur": 1.669,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 37,
+      "src_start": 92.75,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 53,
+      "src_start": 159.667,
+      "dur": 1.92
+    },
+    {
+      "id": 9,
+      "src_start": 17.333,
+      "dur": 2.294
+    },
+    {
+      "id": 17,
+      "src_start": 27.042,
+      "dur": 1.335,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 28001,
+      "src_start": 57.144,
+      "dur": 0.899,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 43,
+      "src_start": 125.125,
+      "dur": 1.17,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 41,
+      "src_start": 112.292,
+      "dur": 0.861,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    }
+  ],
+  "qc_status": "pass"
+}
