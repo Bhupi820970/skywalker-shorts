@@ -290,7 +290,9 @@
   ],
   "qc_status": "pass",
   "buffer_post_id": "6afd49c0ec7ce5264371eded",
-  "buffer_status": "scheduled",
+  "buffer_status": "sent",
   "buffer_due_at": "2026-11-18T07:00:00.000Z",
-  "buffer_created_at": "2026-11-18 12:16 IST"
+  "buffer_created_at": "2026-11-18 12:16 IST",
+  "youtube_url": "https://www.youtube.com/shorts/uFsHVdf_XHI",
+  "buffer_posted_at": "2026-11-18T07:00:10.890Z"
 }
