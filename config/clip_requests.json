@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17 17:18 IST",
+ "generated_at": "2026-11-18 17:07 IST",
  "max_clips_per_title": 5,
  "min_height": 1080,
  "requests": [
@@ -8,171 +8,64 @@
    "pillar": "anime",
    "words": "MOB PSYCHO 100",
    "characters": [
-    "Mob",
-    "Reigen"
+    "Shigeo Kageyama",
+    "Toichiro"
    ],
    "scene_types": [
-    "aura",
-    "fight"
-   ],
-   "search_queries": [
-    "Mob Psycho 100 Mob 100 percent scene",
-    "Mob Psycho 100 Reigen scene",
-    "Mob Psycho 100 fight official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "hook": "Why Mob never uses his powers",
-   "title": "Why Mob never uses his powers | Mob reaches 100 percent | #edit",
-   "tags": [
-    "mobpsycho100",
-    "mob",
-    "reigen",
-    "animeedit",
-    "phonk",
-    "psychic",
-    "anime"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "hellsingultimate",
-   "pillar": "anime",
-   "words": "HELLSING ULTIMATE",
-   "characters": [
-    "Alucard"
-   ],
-   "scene_types": [
-    "aura",
-    "fight"
-   ],
-   "search_queries": [
-    "Hellsing Ultimate Alucard scene",
-    "Alucard vs Anderson official clip",
-    "Hellsing Ultimate fight scene",
-    "Alucard entrance official"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "hook": "Why Alucard is the ultimate monster",
-   "title": "Why Alucard is the ultimate monster | The release of level zero | #edit",
-   "tags": [
-    "hellsing",
-    "alucard",
-    "animeedit",
-    "phonk",
-    "vampire",
-    "anime",
-    "action"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "cyberpunk2077",
-   "pillar": "anime",
-   "words": "CYBERPUNK EDGERUNNERS",
-   "characters": [
-    "David Martinez",
-    "Lucy"
-   ],
-   "scene_types": [
-    "aura",
-    "emotional"
-   ],
-   "search_queries": [
-    "Cyberpunk Edgerunners David scene",
-    "Cyberpunk Edgerunners fight official",
-    "Cyberpunk Edgerunners emotional scene"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "hook": "Why David could not stop the cyberpsychosis",
-   "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
-   "tags": [
-    "cyberpunk",
-    "edgerunners",
-    "davidmartinez",
-    "animeedit",
-    "phonk",
-    "netflix",
-    "anime"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "violetevergarden",
-   "pillar": "anime",
-   "words": "VIOLET EVERGARDEN",
-   "characters": [
-    "Violet"
-   ],
-   "scene_types": [
-    "emotional",
+    "fight",
     "aura"
    ],
    "search_queries": [
-    "Violet Evergarden emotional scene",
-    "Violet Evergarden battle scene",
-    "Violet Evergarden official clip"
+    "Mob Psycho 100 Mob 100 percent clip",
+    "Mob Psycho 100 Mob vs Toichiro clip",
+    "Mob Psycho 100 fight scene official"
    ],
    "official_channels": [
-    "Netflix",
-    "Netflix Anime"
+    "Warner Bros. Japan Video"
    ],
-   "hook": "Why Violet had to learn human emotions",
-   "title": "Why Violet had to learn human emotions | Violet's final letter | #edit",
+   "hook": "Why Mob tried to suppress his powers",
+   "title": "Why Mob tried to suppress his powers 💀 | Mob goes 100 percent | #edit",
    "tags": [
-    "violetevergarden",
-    "violet",
+    "mobpsycho100",
+    "mobpsycho",
+    "shigeokageyama",
+    "reigen",
     "animeedit",
-    "phonk",
-    "emotional",
-    "anime",
-    "kyotoanimation"
+    "anime"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "interstellar",
-   "pillar": "hollywood",
-   "words": "INTERSTELLAR",
+   "slug": "hunterxhunter",
+   "pillar": "anime",
+   "words": "HUNTER X HUNTER",
    "characters": [
-    "Cooper",
-    "Brand"
+    "Gon Freecss",
+    "Neferpitou"
    ],
    "scene_types": [
-    "aura",
-    "emotional"
+    "fight",
+    "aura"
    ],
    "search_queries": [
-    "Interstellar docking scene official",
-    "Interstellar Cooper scene",
-    "Interstellar emotional scene official"
+    "Hunter x Hunter Gon vs Pitou clip",
+    "Hunter x Hunter Adult Gon clip",
+    "Hunter x Hunter Gon rage scene clip"
    ],
    "official_channels": [
-    "Warner Bros. Pictures",
-    "Paramount Pictures"
+    "VIZ Media",
+    "Netflix"
    ],
-   "hook": "Why Cooper had to leave his family",
-   "title": "Why Cooper had to leave his family | The docking sequence | #edit",
+   "hook": "Why Gon traded his own life",
+   "title": "Why Gon traded his own life 💀 | Gon transforms | #edit",
    "tags": [
-    "interstellar",
-    "cooper",
-    "nolan",
-    "scifi",
-    "movieedit",
-    "phonk",
-    "space"
+    "hunterxhunter",
+    "gonfreecss",
+    "gonvspitou",
+    "hxh",
+    "animeedit",
+    "anime"
    ],
    "market": "US/UK",
    "known_topic": false
@@ -186,266 +79,266 @@
     "Penguin"
    ],
    "scene_types": [
-    "fight",
-    "aura"
+    "entrance",
+    "fight"
    ],
    "search_queries": [
-    "The Batman car chase scene",
-    "The Batman fight club scene",
-    "The Batman official clip"
+    "The Batman batmobile chase official clip",
+    "The Batman hallway fight official clip",
+    "The Batman upside down walk clip"
    ],
    "official_channels": [
     "Warner Bros. Pictures",
-    "DC"
-   ],
-   "hook": "Why Batman scares the criminals",
-   "title": "Why Batman scares the criminals | Batman enters the club | #edit",
-   "tags": [
-    "batman",
-    "thebatman",
-    "dc",
-    "movieedit",
-    "phonk",
-    "brucewayne",
-    "action"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "topgunmaverick",
-   "pillar": "hollywood",
-   "words": "TOP GUN MAVERICK",
-   "characters": [
-    "Maverick"
-   ],
-   "scene_types": [
-    "aura",
-    "entrance"
-   ],
-   "search_queries": [
-    "Top Gun Maverick flight scene",
-    "Maverick flying scene official",
-    "Top Gun Maverick dogfight official"
-   ],
-   "official_channels": [
-    "Paramount Pictures"
-   ],
-   "hook": "Why Maverick is the greatest pilot",
-   "title": "Why Maverick is the greatest pilot | The final training run | #edit",
-   "tags": [
-    "topgun",
-    "maverick",
-    "tomcruise",
-    "movieedit",
-    "phonk",
-    "aviation",
-    "action"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "johnwick",
-   "pillar": "hollywood",
-   "words": "JOHN WICK",
-   "characters": [
-    "John Wick"
-   ],
-   "scene_types": [
-    "fight",
-    "aura"
-   ],
-   "search_queries": [
-    "John Wick nightclub scene official",
-    "John Wick fight scene official",
-    "John Wick gun fu scene"
-   ],
-   "official_channels": [
-    "Lionsgate Movies",
     "Movieclips"
    ],
-   "hook": "Why John Wick cannot be stopped",
-   "title": "Why John Wick cannot be stopped | The nightclub massacre | #edit",
+   "hook": "Why Penguin trembled at his footsteps",
+   "title": "Why Penguin trembled at his footsteps 💀 | Batman batmobile chase | #edit",
    "tags": [
-    "johnwick",
-    "keanureeves",
+    "thebatman",
+    "batman",
+    "robertpattinson",
     "movieedit",
-    "phonk",
-    "action",
-    "gunfu",
-    "edit"
+    "dc",
+    "hollywood"
    ],
    "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "animal",
-   "pillar": "bollywood",
-   "words": "ANIMAL",
-   "characters": [
-    "Ranbir Kapoor"
-   ],
-   "scene_types": [
-    "fight",
-    "aura"
-   ],
-   "search_queries": [
-    "Animal movie hallway fight",
-    "Ranbir Kapoor Animal scene",
-    "Animal movie action scene"
-   ],
-   "official_channels": [
-    "T-Series"
-   ],
-   "hook": "Why he became the ultimate villain",
-   "title": "Why he became the ultimate villain | The hallway massacre | #edit",
-   "tags": [
-    "animal",
-    "ranbirkapoor",
-    "bollywood",
-    "movieedit",
-    "phonk",
-    "action",
-    "edit"
-   ],
-   "market": "IN",
    "known_topic": true
   },
   {
-   "slug": "gangleader",
-   "pillar": "bollywood",
-   "words": "GANGS OF WASSEYPUR",
+   "slug": "whiplash",
+   "pillar": "hollywood",
+   "words": "WHIPLASH",
    "characters": [
-    "Faizal Khan"
+    "Andrew Neiman",
+    "Terrence Fletcher"
+   ],
+   "scene_types": [
+    "aura",
+    "emotional"
+   ],
+   "search_queries": [
+    "Whiplash final solo official clip",
+    "Whiplash Fletcher tempo scene official clip",
+    "Whiplash Andrew drum solo clip"
+   ],
+   "official_channels": [
+    "Sony Pictures Classics",
+    "Movieclips"
+   ],
+   "hook": "Why Fletcher never apologized to Andrew",
+   "title": "Why Fletcher never apologized to Andrew 💀 | Caravan final solo | #edit",
+   "tags": [
+    "whiplash",
+    "andrewneiman",
+    "fletcher",
+    "movieedit",
+    "cinema",
+    "whiplashedit"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "thedarkknight",
+   "pillar": "hollywood",
+   "words": "THE DARK KNIGHT",
+   "characters": [
+    "Joker",
+    "Batman"
    ],
    "scene_types": [
     "aura",
     "entrance"
    ],
    "search_queries": [
-    "Gangs of Wasseypur Faizal entry",
-    "Faizal Khan scene official",
-    "Gangs of Wasseypur fight"
+    "The Dark Knight interrogation official clip",
+    "The Dark Knight pencil trick clip",
+    "The Dark Knight Joker entrance clip"
    ],
    "official_channels": [
-    "T-Series"
+    "Warner Bros. Pictures",
+    "Movieclips"
    ],
-   "hook": "Why Faizal is the king of Wasseypur",
-   "title": "Why Faizal is the king of Wasseypur | Faizal's entrance | #edit",
+   "hook": "Why Joker wanted Batman to break",
+   "title": "Why Joker wanted Batman to break 💀 | Joker interrogation scene | #edit",
    "tags": [
-    "gangsofwasseypur",
-    "faizalkhan",
-    "bollywood",
+    "thedarkknight",
+    "joker",
+    "heathledger",
+    "batman",
     "movieedit",
-    "phonk",
-    "gangster",
-    "edit"
+    "hollywood"
    ],
-   "market": "IN",
+   "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "fighther",
-   "pillar": "bollywood",
-   "words": "FIGHTER",
+   "slug": "fightclub",
+   "pillar": "hollywood",
+   "words": "FIGHT CLUB",
    "characters": [
-    "Hrithik Roshan"
+    "Tyler Durden",
+    "The Narrator"
    ],
    "scene_types": [
     "aura",
     "fight"
    ],
    "search_queries": [
-    "Fighter movie Hrithik flying",
-    "Fighter action scene",
-    "Hrithik Roshan fighter official"
+    "Fight Club basement fight clip official",
+    "Fight Club chemical burn clip",
+    "Fight Club Tyler Durden speech clip"
    ],
    "official_channels": [
-    "Viacom18 Studios",
+    "Searchlight Pictures",
+    "Movieclips"
+   ],
+   "hook": "Why Tyler Durden never existed",
+   "title": "Why Tyler Durden never existed 💀 | Tyler Durden rule one | #edit",
+   "tags": [
+    "fightclub",
+    "tylerdurden",
+    "bradpitt",
+    "movieedit",
+    "cinema",
+    "hollywood"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "pathaan",
+   "pillar": "bollywood",
+   "words": "PATHAAN",
+   "characters": [
+    "Pathaan",
+    "Jim"
+   ],
+   "scene_types": [
+    "fight",
+    "entrance"
+   ],
+   "search_queries": [
+    "Pathaan ice chase official clip",
+    "Pathaan jetpack fight official clip",
+    "Pathaan entry scene clip"
+   ],
+   "official_channels": [
     "YRF"
    ],
-   "hook": "Why he dominates the sky",
-   "title": "Why he dominates the sky | Hrithik's aerial combat | #edit",
+   "hook": "Why Jim turned against his nation",
+   "title": "Why Jim turned against his nation 💀 | Pathaan jetpack chase | #edit",
    "tags": [
-    "fighter",
-    "hrithikroshan",
-    "bollywood",
-    "movieedit",
-    "phonk",
-    "action",
-    "edit"
+    "pathaan",
+    "shahrukhkhan",
+    "srk",
+    "yrf",
+    "bollywoodedit",
+    "bollywood"
    ],
    "market": "IN",
    "known_topic": false
   },
   {
-   "slug": "kgf2",
-   "pillar": "south",
-   "words": "KGF CHAPTER 2",
+   "slug": "don2",
+   "pillar": "bollywood",
+   "words": "DON 2",
    "characters": [
-    "Rocky Bhai"
+    "Don",
+    "Vardhaan"
    ],
    "scene_types": [
     "aura",
     "entrance"
    ],
    "search_queries": [
-    "KGF 2 Rocky entry scene",
-    "KGF 2 fight scene official",
-    "Rocky Bhai throne scene"
+    "Don 2 prison break official clip",
+    "Don 2 car chase official clip",
+    "Don 2 entry scene official clip"
    ],
    "official_channels": [
-    "Hombale Films",
-    "Excel Movies"
+    "Reliance Entertainment",
+    "Excel Entertainment"
    ],
-   "hook": "Why Rocky Bhai owns the city",
-   "title": "Why Rocky Bhai owns the city | The throne entrance | #edit",
+   "hook": "Why Don surrendered himself to police",
+   "title": "Why Don surrendered himself to police 💀 | Don prison break | #edit",
    "tags": [
-    "kgf2",
-    "rockybhai",
-    "southindia",
-    "movieedit",
-    "phonk",
-    "action",
-    "edit"
+    "don2",
+    "shahrukhkhan",
+    "srk",
+    "don",
+    "bollywoodedit",
+    "bollywood"
    ],
    "market": "IN",
    "known_topic": false
   },
   {
-   "slug": "vikram",
-   "pillar": "south",
-   "words": "VIKRAM",
+   "slug": "dhoom2",
+   "pillar": "bollywood",
+   "words": "DHOOM 2",
    "characters": [
-    "Vikram"
+    "Aryan",
+    "Mr. A"
    ],
    "scene_types": [
-    "fight",
+    "entrance",
     "aura"
    ],
    "search_queries": [
-    "Vikram Kamal Haasan action scene",
-    "Vikram movie fight official",
-    "Vikram interval scene"
+    "Dhoom 2 train heist official clip",
+    "Dhoom 2 Hrithik entry clip",
+    "Dhoom 2 museum robbery clip official"
    ],
    "official_channels": [
-    "Raaj Kamal Films International",
-    "Sony Music South"
+    "YRF"
    ],
-   "hook": "Why Vikram is the deadliest agent",
-   "title": "Why Vikram is the deadliest agent | The house fight | #edit",
+   "hook": "Why Mr A never got caught",
+   "title": "Why Mr A never got caught 💀 | Train disguise heist | #edit",
    "tags": [
-    "vikram",
-    "kamalhaasan",
-    "southindia",
-    "movieedit",
-    "phonk",
-    "action",
-    "edit"
+    "dhoom2",
+    "hrithikroshan",
+    "mra",
+    "yrf",
+    "bollywoodedit",
+    "bollywood"
    ],
    "market": "IN",
-   "known_topic": true
+   "known_topic": false
+  },
+  {
+   "slug": "rrr",
+   "pillar": "south",
+   "words": "RRR",
+   "characters": [
+    "Bheem",
+    "Ram"
+   ],
+   "scene_types": [
+    "fight",
+    "entrance"
+   ],
+   "search_queries": [
+    "RRR Bheem animal entry official clip",
+    "RRR Ram intro scene official clip",
+    "RRR bridge rescue scene clip"
+   ],
+   "official_channels": [
+    "DVV Entertainment",
+    "Netflix India"
+   ],
+   "hook": "Why Bheem unleashed the wild beasts",
+   "title": "Why Bheem unleashed the wild beasts 💀 | Bheem palace entry | #edit",
+   "tags": [
+    "rrr",
+    "jrntr",
+    "ramcharan",
+    "ssrajamouli",
+    "southedit",
+    "tollywood"
+   ],
+   "market": "IN",
+   "known_topic": false
   }
  ]
 }
