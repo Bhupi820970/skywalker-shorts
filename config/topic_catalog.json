@@ -2143,6 +2143,33 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "fighther",
+      "pillar": "bollywood",
+      "words": "FIGHTER",
+      "hook": "Why he dominates the sky",
+      "title": "Why he dominates the sky | Hrithik's aerial combat | #edit",
+      "description": "Why he dominates the sky. From official Fighter clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #fighter #hrithikroshan #bollywood",
+      "tags": [
+        "fighter",
+        "hrithikroshan",
+        "bollywood",
+        "movieedit",
+        "phonk",
+        "action",
+        "edit"
+      ],
+      "market": "IN",
+      "source_url": "https://www.youtube.com/watch?v=eifvzpMt_lE",
+      "scene_assets": [
+        "fighther_scene1_h264.mp4",
+        "fighther_scene2_h264.mp4",
+        "fighther_scene3_h264.mp4",
+        "fighther_scene4_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
