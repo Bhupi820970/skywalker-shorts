@@ -1,0 +1,70 @@
+{
+  "note": "Content ID block-list approved by BiBi. (1) Big-label songs (WMG/Warner, Sony/SME, UMG/Universal, T-Series and similar) are skipped unless the song is one of BiBi's priority songs (priority=high). (2) A song that already got a Content ID claim is never used again, priority or not. Matched on artist / title / credit / label / channel / uploader / source_url. Checked by music_lib.is_denied_track, so the picker, the credits.json fallback, ingest and the box music restore all obey it.",
+  "label_patterns": [
+    "warner music",
+    "warner records",
+    "warner bros. records",
+    "wmg",
+    "atlantic records",
+    "elektra",
+    "parlophone",
+    "asylum records",
+    "reprise records",
+    "rhino",
+    "sony music",
+    "sony/atv",
+    "sme",
+    "columbia records",
+    "rca records",
+    "epic records",
+    "arista",
+    "legacy recordings",
+    "sony music india",
+    "universal music",
+    "umg",
+    "interscope",
+    "republic records",
+    "def jam",
+    "island records",
+    "capitol records",
+    "geffen",
+    "motown",
+    "polydor",
+    "virgin records",
+    "emi",
+    "universal music india",
+    "t-series",
+    "tseries",
+    "zee music",
+    "tips official",
+    "tips music",
+    "saregama",
+    "yrf music",
+    "sony music south",
+    "aditya music",
+    "lahari music",
+    "speed records",
+    "think music",
+    "venus",
+    "eros now music",
+    "white hill music"
+  ],
+  "label_artists": [
+    "kc & the sunshine band",
+    "kc and the sunshine band"
+  ],
+  "claimed": [
+    {
+      "title": "Give It Up",
+      "artist": "KC & The Sunshine Band",
+      "note": "Content ID claim (Vice Cartel / Skywalker). Never reuse."
+    }
+  ],
+  "label_songs": [
+    {
+      "title": "Saiyaara",
+      "file": "sw_saiyaara.mp3",
+      "label": "YRF Music (Saiyaara film soundtrack)"
+    }
+  ]
+}

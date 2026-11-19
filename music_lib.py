@@ -39,10 +39,128 @@ def denylist_entries(AE: Path | None = None) -> list[dict]:
     return entries
 
 
-def is_denied_track(t: dict | None, AE: Path | None = None) -> bool:
-    """True if this track is on the permanent music denylist."""
+_BLOCK_CACHE: dict | None = None
+
+
+def blocklist(AE: Path | None = None) -> dict:
+    """Content ID block-list (config/music_blocklist.json)."""
+    global _BLOCK_CACHE
+    if _BLOCK_CACHE is not None:
+        return _BLOCK_CACHE
+    doc: dict = {}
+    for base in (AE, ROOT):
+        if not base:
+            continue
+        fp = Path(base) / "config" / "music_blocklist.json"
+        if fp.exists():
+            try:
+                doc = json.loads(fp.read_text())
+            except Exception:
+                doc = {}
+            break
+    _BLOCK_CACHE = doc
+    return doc
+
+
+def _norm_amp(s: str) -> str:
+    return _norm_music((s or "").replace("&", " and "))
+
+
+def _meta_blob(t: dict) -> str:
+    return " ".join(str(t.get(k) or "") for k in (
+        "artist", "title", "credit", "label", "channel", "uploader", "source_url", "album", "file",
+    )).lower()
+
+
+def is_claimed_track(t: dict | None, AE: Path | None = None) -> bool:
+    """A song that already got a Content ID claim is never used again (priority or not)."""
     if not t:
         return False
+    title = _norm_amp(t.get("title") or "")
+    blob = _norm_amp(_meta_blob(t))
+    for c in blocklist(AE).get("claimed") or []:
+        ct = _norm_amp(c.get("title") or "")
+        ca = _norm_amp(c.get("artist") or "")
+        if c.get("file") and c["file"] == t.get("file"):
+            return True
+        if ct and (ct == title or (len(ct) >= 6 and ct in blob)) and (not ca or ca in blob):
+            return True
+    return False
+
+
+def is_big_label_track(t: dict | None, AE: Path | None = None) -> bool:
+    """WMG / Sony / UMG / T-Series and similar label songs (Content ID risk)."""
+    if not t:
+        return False
+    doc = blocklist(AE)
+    raw = _meta_blob(t)
+    flat = _norm_music(raw)
+    for pat in doc.get("label_patterns") or []:
+        p = str(pat).lower().strip()
+        if not p:
+            continue
+        if len(_norm_music(p)) <= 4:
+            if re.search(r"(?<![a-z0-9])" + re.escape(p) + r"(?![a-z0-9])", raw):
+                return True
+        elif _norm_music(p) in flat:
+            return True
+    for a in doc.get("label_artists") or []:
+        if _norm_amp(a) and _norm_amp(a) in _norm_amp(t.get("artist") or ""):
+            return True
+    fname = (t.get("file") or "").lower()
+    title = _norm_amp(t.get("title") or "")
+    for e in doc.get("label_songs") or []:
+        if e.get("file") and e["file"].lower() == fname:
+            return True
+        et = _norm_amp(e.get("title") or "")
+        if et and len(et) >= 5 and title.startswith(et):
+            return True
+    return False
+
+
+def is_blocked_track(t: dict | None, AE: Path | None = None) -> bool:
+    """Approved Content ID block-list: claimed songs always; big-label songs unless BiBi's priority song."""
+    if not t:
+        return False
+    if is_claimed_track(t, AE):
+        return True
+    if is_big_label_track(t, AE) and not is_priority(t):
+        return True
+    return False
+
+
+def credit_block(t: dict) -> str:
+    """Description credit for the song: artist, title and the official link (+ license when known)."""
+    artist = (t.get("artist") or "").strip() or "Unknown artist"
+    title = (t.get("title") or "").strip() or (t.get("file") or "track")
+    lines = [f"Song: {artist} - {title}"]
+    link = (t.get("source_url") or t.get("source_page") or "").strip()
+    if not link and (t.get("source") == "archive.org") and t.get("source_id"):
+        link = f"https://archive.org/details/{t['source_id']}"
+    old = (t.get("credit") or "").strip()
+    if not link:
+        m = re.search(r"https?://\S+", old)
+        if m and "creativecommons.org" not in m.group(0):
+            link = m.group(0).rstrip(").,")
+    if link:
+        lines.append(f"Official link: {link}")
+    lic = (t.get("license_url") or t.get("license") or "").strip()
+    if lic:
+        lines.append(f"License: {lic}")
+    # keep extra lines of an existing multi-line credit (e.g. "Music provided by NoCopyrightSounds")
+    for extra in old.splitlines()[1:]:
+        e = extra.strip()
+        if e and e not in lines and not any(e.endswith(x) for x in (link, lic) if x):
+            lines.append(e)
+    return "\n".join(lines)
+
+
+def is_denied_track(t: dict | None, AE: Path | None = None) -> bool:
+    """True if this track is on the permanent music denylist or the Content ID block-list."""
+    if not t:
+        return False
+    if is_blocked_track(t, AE):
+        return True
     entries = denylist_entries(AE)
     if not entries:
         return False
@@ -403,7 +521,7 @@ def pick(AE: Path, pillar: str, seed: str = "", exclude: list[str] | None = None
         t["library"] = True
         t["source"] = t.get("source") or "library"
         t["pillar"] = p
-        t.setdefault("credit", f"Song: {t.get('artist')} - {t.get('title')}")
+        t["credit"] = credit_block(t)
         t["rank"] = score(t)
         t["picked_by"] = how
         return t

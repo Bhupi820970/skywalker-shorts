@@ -1035,6 +1035,7 @@ def pick_music(pillar: str, seed: str = "", exclude: list[str] | None = None, sa
     t = dict(pool[h % len(pool)])
     t["path"] = str(AE / "music" / t["file"])
     t["rank"] = _rank(t)
+    t["credit"] = music_lib.credit_block(t)  # artist, title, official link in every description
     return t
 
 
