@@ -588,6 +588,14 @@ def publish(final, fw, fh, up, used, qa, credit, qa_obj):
     )
     if cover_url:
         out["cover_url"] = cover_url
+    try:
+        lays = sorted(OUT.glob(f"work_{iid}*/layout.json"), key=lambda q: q.stat().st_mtime)
+        sc = json.loads(lays[-1].read_text()).get("story_captions") if lays else None
+        if sc:
+            out["caption_pattern"] = sc.get("pattern")
+            out["caption_style"] = "neon"
+    except Exception:
+        pass
     return out
 
 def run_pipeline(src, out, qa_json, work, *, relax=False, alt_scenes=False, exclude_music=None, music_salt=""):

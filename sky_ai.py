@@ -636,6 +636,11 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
     except Exception:
         pass
     mode = qc_audio_mode(ac.get("mode") or "", lay_mode, fmt)
+    story_caps = False
+    try:
+        story_caps = bool(lay.get("story_captions"))
+    except Exception:
+        pass
     if mode == "music_only":
         expected = (
             "Expected: a tight WHITE bar with black italic English hook text in its own band at the TOP of the frame, "
@@ -647,6 +652,13 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
             "lower-third dialogue subtitles (that is correct — do not reject for missing dialogue or captions). "
             "Nothing else is written on the footage. The first shot should be the strongest hook visual."
         )
+        if story_caps:
+            expected = expected.replace(
+                "Nothing else is written on the footage.",
+                "This edit ALSO has intended neon story captions: short big Anton words (bright neon key words, small "
+                "white fillers, black shadow) popping in on the beat BESIDE faces inside the picture. They are part of "
+                "the approved style: do not reject or lower layout/clean_footage for them; only penalise them if they "
+                "cover a face, run off the picture, or quote song lyrics.")
         speech_crit = (
             "speech_clarity (10 if there is no leftover trailer voice/SFX under the song and the song is clean and loud; "
             "low only if character dialogue or trailer music is still mixed in)"
@@ -679,6 +691,7 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
         speech_crit = "speech_clarity (every spoken line clear, no music under act-1 dialogue, song never toggling in/out, no muddy mix)"
         cap_crit = "captions (subtitles real dialogue and in sync)"
         reject_bits = "logo/title card, cropped picture, muddy/inaudible dialogue, garbage captions, non-English hook/title, a different film"
+    cap_ok = " except the intended neon story captions" if story_caps else ""
     prompt = f"""You are the final quality judge for a YouTube Short (vertical 9:16, {dur:.1f}s) before it is published.
 You get the finished video itself (watch it AND listen to it) plus an image of 8 frames sampled across it.
 {expected}
@@ -695,7 +708,7 @@ title (curiosity/emotion, character-focused, English, would you tap it),
 shake (10 = steady; low if footage is jittery/handheld-shaky in a distracting way),
 crop (10 = full uncropped frame; low if faces/heads are cut by a zoom or the picture is cropped),
 length (pacing fits {dur:.0f}s; no dead air, no abrupt cut-off),
-layout (white bar at the top ABOVE the uncropped frame, never covering it; picture vertically centered with blur above and below; nothing else written on the footage),
+layout (white bar at the top ABOVE the uncropped frame, never covering it; picture vertically centered with blur above and below; nothing else written on the footage{cap_ok}),
 clean_footage (no studio logo intro, title/date/rating card, watermark, or repeated shot; ANY streamer/studio
 logo or corner bug - Netflix N / NETFLIX / SUBSCRIBE card, Crunchyroll, Prime Video, Disney+, HBO, Hulu, Aniplex, Toho,
 channel watermark, show-title text - in ANY frame means clean_footage <= 2 and reject=true),

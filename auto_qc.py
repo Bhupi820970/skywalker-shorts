@@ -272,6 +272,27 @@ def check_duplicate_shots(path: Path, layout: dict | None = None, dur: float = 0
     return similarity.shot_duplicate_pairs(mids, mid_t)
 
 
+def mask_story_captions(fr, layout: dict | None, t: float):
+    """Intended neon story captions (story_captions.py) are not 'text on the footage' defects:
+    blank their boxes while they are on screen so the text/logo detectors only judge the footage."""
+    boxes = (layout or {}).get("story_caption_boxes") or []
+    if not boxes or fr is None:
+        return fr
+    sx, sy = fr.shape[1] / 1080.0, fr.shape[0] / 1920.0
+    out = None
+    for c in boxes:
+        if float(c.get("t0", 0)) - 0.15 <= t <= float(c.get("t1", 0)) + 0.15:
+            x, y, w, h = c["box"]
+            pad = 12
+            x0, y0 = max(0, int((x - pad) * sx)), max(0, int((y - pad) * sy))
+            x1, y1 = min(fr.shape[1], int((x + w + pad) * sx)), min(fr.shape[0], int((y + h + pad) * sy))
+            if x1 > x0 and y1 > y0:
+                if out is None:
+                    out = fr.copy()
+                out[y0:y1, x0:x1] = out[y0:y1, x0:x1].mean(axis=(0, 1)).astype(out.dtype)
+    return fr if out is None else out
+
+
 def check(path: Path, layout: dict | None = None, caption_y: int = 1420) -> dict:
     path = Path(path)
     issues = []
@@ -320,6 +341,7 @@ def check(path: Path, layout: dict | None = None, caption_y: int = 1420) -> dict
             issues.append(f"missing frame at {t:.2f}s")
             continue
         checked += 1
+        fr = mask_story_captions(fr, layout, t)
         # scale the picture region only? detectors must ignore the white bar
         # and the black canvas. Use the plate if layout is known.
         plate = fr

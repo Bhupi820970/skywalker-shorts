@@ -3489,6 +3489,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     # and never as a Skywalker watermark (watermark is forbidden).
     ass_extra = ""
     fontsdir = AE / "fonts"
+    story_ass = None
     try:
         import captions as capmod
         import dialogue as dmod
@@ -3535,6 +3536,32 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
                 style=cap_style, plate_y=int(lay["plate_y"]), plate_h=int(lay["plate_h"]),
                 letter_spacing=cap_sp, keyword_highlight=cap_kw,
             )
+        if is_music_only(edl) and not caps:
+            # Optional pro-edit neon story captions (~1 in 3 videos): our story beats on the music, never lyrics.
+            try:
+                import story_captions as scap
+                _it = {}
+                _ip = os.environ.get("SKY_ITEM_JSON")
+                if _ip and Path(_ip).exists():
+                    _it = json.loads(Path(_ip).read_text()).get("item") or {}
+                _iid = str(_it.get("id") or globals().get("ITEM_ID") or "")
+                if scap.wanted(_it, _iid, os.environ.get("SKY_STORY_CAPTIONS")):
+                    import beat_sync as _bs
+                    _beats = (_bs.detect_beats(audio) or {}).get("beats") or []
+                    sc = scap.build(item=_it, item_id=_iid, hook=str(HOOK_TEXT or ""), beats=_beats, dur=float(dur),
+                                    lay=lay, video_for_faces=Path(silent), out_ass=WORK / "storycaps.ass",
+                                    results_dir=AE / "results")
+                    bad = scap.qa(sc["boxes"], lay) if sc else []
+                    if sc and not bad:
+                        story_ass = WORK / "storycaps.ass"
+                        layout["story_captions"] = {"pattern": sc["pattern"], "name": sc["pattern_name"],
+                                                    "count": len(sc["boxes"])}
+                        layout["story_caption_boxes"] = sc["boxes"]
+                        print(f"  neon story captions: {len(sc['boxes'])} beats, pattern {sc['pattern']} ({sc['pattern_name']})")
+                    else:
+                        print(f"  neon story captions skipped: {bad[:3] or 'no usable story lines'}")
+            except Exception as e:
+                print(f"  neon story captions skipped: {type(e).__name__}: {e}")
         layout["caption_y"] = capmod.caption_y(
             plate_bottom, style=cap_style, plate_y=int(lay["plate_y"]), plate_h=int(lay["plate_h"]),
         )
@@ -3550,7 +3577,9 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         layout["edit_format"] = globals().get("EDIT_FORMAT") or "action"
         (WORK / "layout.json").write_text(json.dumps(layout, default=str))
         (WORK / "subtitles.json").write_text(json.dumps(caps, indent=2, ensure_ascii=False))
-        if caps:
+        if story_ass is not None:
+            ass_lt = story_ass
+        if caps or story_ass is not None:
             ass_esc = Path(ass_lt).as_posix().replace(':', r'\:')
             fd_esc = Path(fontsdir).as_posix().replace(':', r'\:')
             ass_extra = f",ass={ass_esc}:fontsdir={fd_esc}"
@@ -3592,7 +3621,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         ass_for_chunks = None
         if "ass=" in (vfilt or ""):
             # Prefer the lower-thirds file we just wrote.
-            cand = WORK / "lowerthirds.ass"
+            cand = story_ass if story_ass is not None else WORK / "lowerthirds.ass"
             if cand.exists():
                 ass_for_chunks = cand
         if _ch.chunked_active():
