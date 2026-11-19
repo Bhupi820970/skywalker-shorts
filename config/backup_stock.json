@@ -411,6 +411,13 @@
       "used_at": "2026-11-19 08:19 IST"
     },
     {
+      "id": "stock-bluegiant-03",
+      "topic_id": "backup-bluegiant",
+      "slug": "bluegiant",
+      "status": "pending",
+      "queued_at": "2026-11-19 09:36 IST"
+    },
+    {
       "id": "stock-bluelock2-01",
       "topic_id": "backup-bluelock2",
       "slug": "bluelock2",
@@ -1196,6 +1203,13 @@
       "queued_at": "2026-11-15 00:26 IST",
       "result_id": "stock-kalki2898ad-02",
       "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-kalki2898ad-02.mp4"
+    },
+    {
+      "id": "stock-lazarus-01",
+      "topic_id": "backup-lazarus",
+      "slug": "lazarus",
+      "status": "pending",
+      "queued_at": "2026-11-19 09:36 IST"
     },
     {
       "id": "stock-missionimpossible-01",
