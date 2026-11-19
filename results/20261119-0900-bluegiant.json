@@ -253,9 +253,13 @@
   "stock_id": "stock-bluegiant-02",
   "assigned_from_stock": true,
   "buffer_post_id": "6afe75b659eff0b616dbd076",
-  "buffer_status": "error",
+  "buffer_status": "dead",
   "buffer_due_at": "2026-11-19T04:06:14.745Z",
   "buffer_created_at": "2026-11-19 09:36 IST",
   "buffer_retry_count": 1,
-  "buffer_prev_post_id": "6afe63ae3802f5b9fc60eb06"
+  "buffer_prev_post_id": "6afe63ae3802f5b9fc60eb06",
+  "buffer_error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists.",
+  "publish_dead": true,
+  "buffer_note": "Buffer error after retry: An unknown error has occurred. Please retry the post again, and get in touch if this persists.",
+  "buffer_dead_at": "2026-11-19 10:10 IST"
 }
