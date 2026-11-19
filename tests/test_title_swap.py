@@ -297,8 +297,64 @@ def test_youtube_watch_alts_do_not_block_romance_title_swap():
     keys = title_swap.item_keys(item)
     assert "watch" not in keys
     nxt = title_swap.next_eligible_title(item, root=ROOT)
-    assert nxt is not None, f"expected a love title, keys={keys}"
-    assert title_swap.title_slug(nxt) in {
-        "weatheringwithyou", "yourname", "apothecarydiaries", "apothecarydiaries2",
+    # Recently posted/queued love titles are skipped; any leftover official
+    # romance title is fine. The bug this test covers is the 'watch' slug.
+    if nxt is not None:
+        assert title_swap.item_format(nxt) == "love"
+        assert title_swap.title_slug(nxt) not in {"suzume", "watch"}
+
+def test_skips_recently_posted_swap_destination(tmp_path):
+    """A slot that already auto-swapped to Animal must not pick Animal again."""
+    from datetime import datetime, timedelta, timezone
+    IST = timezone(timedelta(hours=5, minutes=30))
+    now = datetime(2026, 11, 19, 11, 0, tzinfo=IST)
+    topics = [
+        {
+            "slug": "animal",
+            "words": "ANIMAL",
+            "hook": "Why he is the villain",
+            "scene_assets": [
+                "animal_scene1_h264.mp4",
+                "animal_scene2_h264.mp4",
+                "animal_scene3_h264.mp4",
+            ],
+            "pillar": "bollywood",
+            "content_kind": "best scene",
+        },
+        {
+            "slug": "pathaan",
+            "words": "PATHAAN",
+            "hook": "Why Jim turned against his nation",
+            "scene_assets": ["pathaan_scene1_h264.mp4"],
+            "pillar": "bollywood",
+            "content_kind": "best scene",
+        },
+    ]
+    repo = _repo(tmp_path, topics)
+    (repo / "results").mkdir()
+    (repo / "results" / "20261118-0630-spyxfamily3.json").write_text(json.dumps({
+        "id": "20261118-0630-spyxfamily3",
+        "status": "done",
+        "slot": "2026-11-18T06:30:00+05:30",
+        "words": "ANIMAL",
+        "swapped_to": "animal",
+        "title": "Ranvijay walked in and changed everything #animal #ranbirkapoor #bollywood",
+        "buffer_status": "sent",
+        "youtube_url": "https://www.youtube.com/shorts/dA64X3MLp00",
+        "title_swaps": [{"from": "spyxfamily3", "to": "animal", "to_words": "ANIMAL"}],
+    }))
+    item = {
+        "id": "20261119-0900-vinlandsaga2",
+        "words": "VINLAND SAGA",
+        "hook": "Thorfinn took every punch",
+        "sources": [_scene("vinlandsaga2")],
+        "pillar": "anime",
+        "content_kind": "best scene",
     }
-    assert title_swap.item_format(nxt) == "love"
+    used = title_swap.recently_used_slugs(repo, now=now)
+    assert "animal" in used
+    assert "spyxfamily3" not in used  # original slot was not the posted title
+    nxt = title_swap.next_eligible_title(item, root=repo)
+    assert nxt is not None
+    assert title_swap.title_slug(nxt) == "pathaan"
+    assert title_swap.title_slug(nxt) != "animal"

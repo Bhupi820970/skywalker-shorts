@@ -25,8 +25,8 @@
       "hero_shot_max": 5.0,
       "max_flash_shots": 0,
       "max_hero_shots": 4,
-      "target_dur_min": 20,
-      "target_dur_max": 32
+      "target_dur_min": 24,
+      "target_dur_max": 29
     },
     "captions": {
       "style": "cinematic_center",
@@ -43,6 +43,7 @@
     "hook": {
       "pattern": "3-7 word English emotional observation about the moment (often past tense or a quiet feeling). Character-specific, no fight/aura hooks, no emoji, no hashtags.",
       "style_examples": [
+        "Why Jinshi cannot stop watching her",
         "She already knew",
         "They almost said it",
         "One look was enough",
@@ -198,6 +199,71 @@
         "search_queries": [
           "Weathering With You official scene clip GKIDS",
           "Tenki no Ko official clip TOHO"
+        ]
+      },
+      {
+        "slug": "apothecarydiaries",
+        "words": "THE APOTHECARY DIARIES",
+        "official_channels": [
+          "Crunchyroll",
+          "Netflix Anime"
+        ],
+        "hook": "Why Jinshi cannot stop watching her",
+        "search_queries": [
+          "The Apothecary Diaries official scene clip",
+          "Kusuriya no Hitorigoto official clip Crunchyroll"
+        ]
+      },
+      {
+        "slug": "apothecarydiaries2",
+        "words": "APOTHECARY DIARIES",
+        "official_channels": [
+          "Crunchyroll",
+          "Netflix Anime"
+        ],
+        "hook": "Why Jinshi only looks at her",
+        "search_queries": [
+          "The Apothecary Diaries Season 2 official scene clip",
+          "Kusuriya no Hitorigoto season 2 official clip"
+        ]
+      },
+      {
+        "slug": "dandadan2",
+        "words": "DAN DA DAN 2",
+        "official_channels": [
+          "Crunchyroll",
+          "Netflix Anime"
+        ],
+        "hook": "Momo never lets him go",
+        "search_queries": [
+          "Dan Da Dan official romance scene clip",
+          "Dandadan official clip Crunchyroll Momo Okarun"
+        ]
+      },
+      {
+        "slug": "violetevergarden",
+        "words": "VIOLET EVERGARDEN",
+        "official_channels": [
+          "Netflix Anime",
+          "TOHO animation"
+        ],
+        "hook": "Why Violet had to learn human emotions",
+        "search_queries": [
+          "Violet Evergarden official scene clip",
+          "Violet Evergarden official clip Netflix"
+        ]
+      },
+      {
+        "slug": "jjk0",
+        "words": "JUJUTSU KAISEN 0",
+        "official_channels": [
+          "Crunchyroll",
+          "TOHO animation"
+        ],
+        "hook": "Yuta only fights for her",
+        "search_queries": [
+          "Jujutsu Kaisen 0 official scene clip",
+          "Jujutsu Kaisen 0 official clip Yuta Rika"
         ]
       }
     ]

@@ -123,7 +123,7 @@ def _make_item(day: str, hhmm: str, topic: dict, have: set[str] | None = None) -
             item["pillar"] = "romance"
             item["edit_format"] = "love"
             item["content_kind"] = topic.get("content_kind") or "romance scene"
-            item["target_dur"] = max(20, min(32, int(item.get("target_dur") or 26)))
+            item["target_dur"] = max(24, min(29, int(item.get("target_dur") or 26)))
         elif fmt == "gta6":
             item["edit_format"] = "gta6"
             item["content_kind"] = "gameplay"

@@ -176,38 +176,39 @@
   "fallback_asset": "mushokutensei2_scene1_h264.mp4"
  },
  {
-  "id": "20261122-1830-bluelock2",
+  "id": "20261122-1830-jjk0",
   "slot": "2026-11-22T18:30:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=ckEUVyKanhw",
+  "pillar": "romance",
+  "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
   "template": "whitebar",
-  "hook": "Isagi sees the whole field",
-  "words": "BLUE LOCK",
-  "title": "Isagi sees the whole field | Blue Lock | #edit",
-  "description": "Isagi sees the whole field. From official Blue Lock clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bluelock2",
+  "hook": "Yuta only fights for her",
+  "words": "JUJUTSU KAISEN 0",
+  "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
+  "description": "Yuta only fights for her. From official Jujutsu Kaisen 0 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jjk0",
   "tags": [
-   "bluelock2",
+   "jjk0",
+   "yuta",
    "anime",
    "animeedit",
    "edit",
    "shorts",
-   "trending",
-   "isagi"
+   "trending"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
-  "content_kind": "best scene",
+  "content_kind": "romance scene",
+  "edit_format": "love",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene3_h264.mp4"
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelock2_scene3_h264.mp4"
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "bluelock2_scene2_h264.mp4"
+  "fallback_asset": "jjk0_scene1_h264.mp4"
  },
  {
   "id": "20261122-2030-hellsparadise",

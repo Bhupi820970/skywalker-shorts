@@ -171,42 +171,39 @@
   "fallback_asset": "vikram_scene1_h264.mp4"
  },
  {
-  "id": "20261123-1830-animal",
+  "id": "20261123-1830-pathaan",
   "slot": "2026-11-23T18:30:00+05:30",
   "pillar": "bollywood",
-  "source_url": "https://www.youtube.com/watch?v=Y9XqnjKXgTs",
+  "source_url": "https://www.youtube.com/watch?v=hQDyX9sOe04",
   "template": "whitebar",
-  "hook": "Why he is the villain",
-  "words": "ANIMAL",
-  "title": "Why he is the villain 💀 | Hallway massacre | #edit",
-  "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
+  "hook": "Why Jim turned against his nation",
+  "words": "PATHAAN",
+  "title": "Why Jim turned against his nation | Pathaan jetpack chase | #edit",
+  "description": "Why Jim turned against his nation. From official Pathaan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #pathaan #shahrukhkhan #srk",
   "tags": [
-   "animal",
-   "ranbirkapoor",
-   "bollywood",
-   "edit",
-   "phonk",
-   "aura",
-   "action"
+   "pathaan",
+   "shahrukhkhan",
+   "srk",
+   "yrf",
+   "bollywoodedit",
+   "bollywood"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "IN",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene4_h264.mp4"
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/pathaan_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/pathaan_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/pathaan_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene4_h264.mp4"
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/pathaan_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/pathaan_scene2_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/pathaan_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "animal_scene1_h264.mp4"
+  "fallback_asset": "pathaan_scene1_h264.mp4"
  },
  {
   "id": "20261123-2030-oshinoko2",

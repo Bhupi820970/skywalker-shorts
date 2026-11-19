@@ -146,37 +146,37 @@
   "fallback_asset": "fighther_scene1_h264.mp4"
  },
  {
-  "id": "20261124-1600-taarezameenpar",
+  "id": "20261124-1600-don2",
   "slot": "2026-11-24T16:00:00+05:30",
-  "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=1oiRkOT4Z_4",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=Q4Tr7giZaXM",
   "template": "whitebar",
-  "hook": "Why he felt so alone",
-  "words": "TAARE ZAMEEN PAR",
-  "title": "Why he felt so alone 💀 | The painting scene | #edit",
-  "description": "Why he felt so alone. From official Taare Zameen Par clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #taarezameenpar #ishaan #bollywood",
+  "hook": "Why Don surrendered himself to police",
+  "words": "DON 2",
+  "title": "Why Don surrendered himself to police | Don prison break | #edit",
+  "description": "Why Don surrendered himself to police. From official Don 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #don2 #shahrukhkhan #srk",
   "tags": [
-   "taarezameenpar",
-   "ishaan",
+   "don2",
+   "shahrukhkhan",
+   "srk",
    "bollywood",
    "edit",
-   "phonk",
-   "emotional",
-   "aura"
+   "shorts"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "IN",
   "content_kind": "best scene",
-  "edit_format": "love",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene1_h264.mp4"
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/don2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/don2_scene2_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene1_h264.mp4"
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/don2_scene1_h264.mp4",
+   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/don2_scene2_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "taarezameenpar_scene1_h264.mp4"
+  "fallback_asset": "don2_scene1_h264.mp4"
  },
  {
   "id": "20261124-1830-topgunmaverick",

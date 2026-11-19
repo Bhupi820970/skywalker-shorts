@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import re
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import edit_format
@@ -18,6 +19,8 @@ import sourcing
 REPO = Path(__file__).resolve().parent
 SOURCES_RELEASE = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources"
 MAX_SWAPS = 4
+RECENT_TITLE_DAYS = 3
+IST = timezone(timedelta(hours=5, minutes=30))
 
 # Keep identity / publish / render flags when the topic changes.
 _KEEP = (
@@ -385,11 +388,170 @@ def _load_pool(root: Path | None = None) -> list[dict]:
     return found
 
 
+def _norm_key(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", str(s or "").lower())
+
+
+def _parse_when(value: str) -> datetime | None:
+    raw = str(value or "").strip()
+    if not raw:
+        return None
+    raw = raw.replace("Z", "+00:00")
+    # "2026-11-18 02:39 IST"
+    if raw.endswith(" IST"):
+        raw = raw[:-4].strip()
+        try:
+            return datetime.strptime(raw, "%Y-%m-%d %H:%M").replace(tzinfo=IST)
+        except ValueError:
+            pass
+    try:
+        dt = datetime.fromisoformat(raw)
+        return dt if dt.tzinfo else dt.replace(tzinfo=IST)
+    except ValueError:
+        return None
+
+
+def _in_recent_window(dt: datetime | None, *, days: int, now: datetime) -> bool:
+    if not dt:
+        return False
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=IST)
+    start = (now - timedelta(days=days)).astimezone(IST).replace(
+        hour=0, minute=0, second=0, microsecond=0
+    )
+    # Look ahead far enough to cover the filled official queue (min 4 days + buffer).
+    end = (now + timedelta(days=6)).astimezone(IST).replace(
+        hour=23, minute=59, second=59, microsecond=0
+    )
+    return start <= dt.astimezone(IST) <= end
+
+
+def _slug_from_id(iid: str) -> str:
+    parts = (iid or "").split("-")
+    if len(parts) >= 3 and parts[0].isdigit():
+        return "-".join(parts[2:])
+    if (iid or "").startswith("backup-"):
+        return iid[len("backup-"):]
+    if (iid or "").startswith("stock-"):
+        bits = iid.split("-")
+        if len(bits) >= 2:
+            return bits[1] if not bits[-1].isdigit() else "-".join(bits[1:-1])
+    return ""
+
+
+def recently_used_slugs(root: Path | None = None, *, days: int = RECENT_TITLE_DAYS,
+                        now: datetime | None = None) -> set[str]:
+    """Slugs/words posted or already queued in the last `days` plus the next 2 days.
+
+    Includes auto-swap destinations (swapped_to / words) so a Spy x Family slot
+    that published as Animal still blocks Animal from being reused.
+    """
+    root = Path(root) if root else REPO
+    now = now or datetime.now(IST)
+    keys: set[str] = set()
+
+    def add(*vals: object) -> None:
+        for v in vals:
+            if not v:
+                continue
+            raw = str(v).strip()
+            if raw.lower().startswith("backup-"):
+                raw = raw[len("backup-"):]
+            if raw.lower().startswith("stock-"):
+                raw = _slug_from_id("stock-" + raw[len("stock-"):]) or raw
+            k = _norm_key(raw)
+            if len(k) >= 4:
+                keys.add(k)
+
+    for p in (root / "results").glob("*.json"):
+        try:
+            r = json.loads(p.read_text())
+        except Exception:
+            continue
+        if not isinstance(r, dict):
+            continue
+        if r.get("no_publish") or r.get("demo"):
+            continue
+        posted = (
+            r.get("buffer_status") in ("sent", "scheduled")
+            or r.get("buffer_post_id") or r.get("youtube_url")
+            or r.get("assigned_from_stock") or r.get("assigned_slot")
+        )
+        if not posted:
+            continue
+        when = None
+        for key in ("buffer_posted_at", "buffer_due_at", "slot", "assigned_slot",
+                    "used_at", "at", "buffer_created_at"):
+            when = _parse_when(str(r.get(key) or ""))
+            if when:
+                break
+        if when is None:
+            # 20261118-0630-spyxfamily3 or stock-animal-01 dates from filename prefix
+            m = re.match(r"(20\d{6})", p.stem)
+            if m:
+                try:
+                    when = datetime.strptime(m.group(1), "%Y%m%d").replace(tzinfo=IST)
+                except ValueError:
+                    when = None
+        if when and not _in_recent_window(when, days=days, now=now):
+            continue
+        if when is None:
+            continue
+        # After an auto-swap, the original queue id (e.g. spyxfamily3) was not
+        # posted — only the destination title was. Do not block the original.
+        swapped_to = r.get("swapped_to") or ""
+        hist = [h for h in (r.get("title_swaps") or []) if isinstance(h, dict)]
+        if not swapped_to and hist:
+            swapped_to = hist[-1].get("to") or ""
+        if swapped_to:
+            add(swapped_to, r.get("words"), r.get("slug"))
+            for h in hist:
+                add(h.get("to"), h.get("to_words"))
+        else:
+            add(
+                r.get("slug"), r.get("words"),
+                _slug_from_id(str(r.get("id") or "")),
+                r.get("stock_topic"), r.get("backup_item"),
+            )
+
+    for p in (root / "queue").glob("2026-*.json"):
+        try:
+            items = json.loads(p.read_text())
+        except Exception:
+            continue
+        if not isinstance(items, list):
+            continue
+        for it in items:
+            if not isinstance(it, dict):
+                continue
+            if it.get("status") in ("replaced", "retired", "cancelled"):
+                continue
+            when = _parse_when(str(it.get("slot") or ""))
+            if when is None:
+                try:
+                    when = datetime.strptime(p.stem, "%Y-%m-%d").replace(tzinfo=IST)
+                except ValueError:
+                    when = None
+            if not _in_recent_window(when, days=days, now=now):
+                continue
+            # Past slots are covered by results (the posted title, not the
+            # original queue id after an auto-swap). Only block still-planned items.
+            if when and when < now:
+                continue
+            add(
+                it.get("slug"), it.get("words"), it.get("swapped_to"),
+                _slug_from_id(str(it.get("id") or "")),
+            )
+
+    return keys
+
+
 def same_format_candidates(item: dict, *, exclude: set[str] | None = None,
                            root: Path | None = None) -> list[dict]:
     fmt = item_format(item, root=root)
     blocked = set(exclude or []) | item_keys(item)
     blocked |= {re.sub(r"[^a-z0-9]+", "", x) for x in blocked}
+    blocked |= recently_used_slugs(root)
     out = []
     for cand in _load_pool(root):
         if item_format(cand, root=root) != fmt:

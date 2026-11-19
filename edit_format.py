@@ -99,6 +99,21 @@ def is_explicit_item(item: dict | None = None, extra: str = "") -> bool:
     )
 
 
+def _has_keyword(blob: str, words: tuple[str, ...]) -> bool:
+    """Whole-word (or whole-phrase) match so 'love' does not hit 'blackclover' or 'belong'."""
+    blob = (blob or "").lower()
+    for w in words:
+        w = str(w or "").strip().lower()
+        if not w:
+            continue
+        if " " in w:
+            if w in blob:
+                return True
+        elif re.search(r"\b" + re.escape(w) + r"\b", blob):
+            return True
+    return False
+
+
 def is_love_item(item: dict | None = None, *, pillar: str = "", text: str = "") -> bool:
     """True when a queue item or hook/title is a romance/love edit."""
     p = (pillar or (item or {}).get("pillar") or "").lower()
@@ -115,9 +130,9 @@ def is_love_item(item: dict | None = None, *, pillar: str = "", text: str = "") 
         tok = re.sub(r"[^a-z0-9]+", "", name)
         if len(tok) >= 5 and tok in compact:
             return True
-    if any(w in blob for w in ACTION_KEYWORDS) and not any(w in blob for w in LOVE_KEYWORDS):
+    if _has_keyword(blob, ACTION_KEYWORDS) and not _has_keyword(blob, LOVE_KEYWORDS):
         return False
-    return any(w in blob for w in LOVE_KEYWORDS)
+    return _has_keyword(blob, LOVE_KEYWORDS)
 
 
 def is_gta6_item(item: dict | None = None, text: str = "") -> bool:

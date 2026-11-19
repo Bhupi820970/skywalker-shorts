@@ -75,3 +75,26 @@ def test_explicit_text_blocks_sexual_not_cute_romance():
     assert not edit_format.is_explicit_text("A cute almost-kiss on the train")
     assert not edit_format.is_explicit_item({"title": "She already knew | Bridgerton | #edit",
                                             "content_kind": "romance scene"})
+
+def test_love_keyword_is_whole_word_not_substring():
+    """'love' must not match 'blackclover' or 'belong'."""
+    clover = {
+        "slug": "blackclover",
+        "pillar": "anime",
+        "words": "BLACK CLOVER",
+        "hook": "Asta's magic finally erupts",
+        "title": "Asta's magic finally erupts | Black Clover | #edit",
+        "content_kind": "fight scene",
+        "tags": ["blackclover", "anime"],
+    }
+    assert edit_format.is_love_item(clover) is False
+    assert edit_format.infer_format(clover) == "action"
+    assert edit_format.is_love_item({"hook": "All rights belong to the owners"}) is False
+    assert edit_format.is_love_item({
+        "slug": "apothecarydiaries2",
+        "words": "APOTHECARY DIARIES",
+        "hook": "Why Jinshi cannot stop watching her",
+        "title": "Why Jinshi cannot stop watching her | The Apothecary Diaries | #edit",
+        "pillar": "anime",
+        "content_kind": "best scene",
+    }) is True
