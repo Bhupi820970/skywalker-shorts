@@ -68,6 +68,11 @@ def main() -> int:
     now = datetime.now(IST)
     # Auto-retire (never delete) topics that keep failing on logo/404/bot-check.
     backup_stock.retire_broken_topics(REPO, now)
+    # Stock whose mp4 is gone from the release is never assigned (an empty release just means "no stock").
+    try:
+        backup_stock.audit_lost_assets(REPO, now=now)
+    except Exception as e:
+        print("stock audit skipped:", type(e).__name__)
     horizon = now + timedelta(hours=24)
     items = queue_items()
     pool = load_pool()

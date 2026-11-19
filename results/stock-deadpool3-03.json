@@ -169,5 +169,7 @@
       "low": [],
       "watched_video": true
     }
-  }
+  },
+  "stock_ready": false,
+  "stock_lost": "asset stock-deadpool3-03.mp4 not on the backup-stock release (2026-11-20 01:51 IST)"
 }

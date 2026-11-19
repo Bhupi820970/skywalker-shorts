@@ -1004,6 +1004,48 @@ def status_summary(root: Path | None = None, now: datetime | None = None) -> dic
     }
 
 
+def release_asset_names(tag: str = RELEASE) -> set[str] | None:
+    """Asset names on the backup-stock release, or None if they cannot be listed (then nothing changes)."""
+    import subprocess
+    repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
+    try:
+        r = subprocess.run(["gh", "api", "--paginate", f"repos/{repo}/releases/tags/{tag}", "-q", ".assets[].name"],
+                           capture_output=True, text=True, timeout=120)
+    except Exception:
+        return None
+    if r.returncode != 0:
+        return None
+    return set(r.stdout.split())
+
+
+def audit_lost_assets(root: Path | None = None, assets: set[str] | None = None,
+                      now: datetime | None = None) -> list[str]:
+    """A 'ready' stock video whose mp4 is no longer on the release (e.g. lost with the suspended account)
+    must never be assigned to a slot. Stamps stock_ready=false + stock_lost; never deletes anything.
+    Returns the ids it stamped. If the release cannot be listed, does nothing."""
+    root = root or _repo()
+    now = now or now_ist()
+    if assets is None:
+        assets = release_asset_names()
+    if assets is None:
+        return []
+    stamped = []
+    for r in iter_results(root):
+        iid = r.get("id") or ""
+        if not parse_stock_id(iid) or r.get("stock_used") or r.get("assigned_slot"):
+            continue
+        if r.get("status") != "done" or not r.get("asset_url"):
+            continue
+        name = str(r["asset_url"]).rsplit("/", 1)[-1]
+        if name in assets or r.get("stock_lost"):
+            continue
+        r["stock_ready"] = False
+        r["stock_lost"] = f"asset {name} not on the {RELEASE} release ({now:%Y-%m-%d %H:%M} IST)"
+        write_result(root, r)
+        stamped.append(iid)
+    return stamped
+
+
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
     cmd = (argv[0] if argv else "status").replace("_", "-")
@@ -1012,6 +1054,12 @@ def main(argv: list[str] | None = None) -> int:
     if cmd == "assign":
         got = assign_needed(root, now)
         print(json.dumps({"assigned": [g["id"] for g in got], "n": len(got)}))
+        return 0
+    if cmd == "audit-lost":
+        got = audit_lost_assets(root, now=now)
+        if got:
+            sync(root, now)
+        print(json.dumps({"lost": got, "n": len(got)}))
         return 0
     if cmd == "retire":
         got = retire_broken_topics(root, now)

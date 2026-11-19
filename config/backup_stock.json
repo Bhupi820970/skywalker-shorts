@@ -415,7 +415,8 @@
       "topic_id": "backup-bluegiant",
       "slug": "bluegiant",
       "status": "pending",
-      "queued_at": "2026-11-19 09:36 IST"
+      "queued_at": "2026-11-19 09:36 IST",
+      "result_id": "stock-bluegiant-03"
     },
     {
       "id": "stock-bluelock2-01",
@@ -631,7 +632,7 @@
       "id": "stock-cyberpunkedgerunners-01",
       "topic_id": "backup-cyberpunkedgerunners",
       "slug": "cyberpunkedgerunners",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 16:32 IST",
       "result_id": "stock-cyberpunkedgerunners-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-01.mp4"
@@ -664,7 +665,7 @@
       "id": "stock-dandadan2-02",
       "topic_id": "backup-dandadan2",
       "slug": "dandadan2",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 19:52 IST",
       "result_id": "stock-dandadan2-02",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dandadan2-02.mp4"
@@ -673,7 +674,7 @@
       "id": "stock-dandadanevil-01",
       "topic_id": "backup-dandadanevil",
       "slug": "dandadanevil",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 17:10 IST",
       "result_id": "stock-dandadanevil-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dandadanevil-01.mp4"
@@ -824,7 +825,7 @@
       "id": "stock-dragonballdaima-03",
       "topic_id": "backup-dragonballdaima",
       "slug": "dragonballdaima",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 22:00 IST",
       "result_id": "stock-dragonballdaima-03",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-03.mp4"
@@ -895,7 +896,7 @@
       "id": "stock-firforce3-03",
       "topic_id": "backup-firforce3",
       "slug": "firforce3",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-18 10:43 IST",
       "result_id": "stock-firforce3-03",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-firforce3-03.mp4"
@@ -984,7 +985,7 @@
       "id": "stock-frieren-03",
       "topic_id": "backup-frieren",
       "slug": "frieren",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-18 10:43 IST",
       "result_id": "stock-frieren-03",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-frieren-03.mp4"
@@ -993,7 +994,7 @@
       "id": "stock-frieren2-01",
       "topic_id": "backup-frieren2",
       "slug": "frieren2",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 21:43 IST",
       "result_id": "stock-frieren2-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-frieren2-01.mp4"
@@ -1031,7 +1032,7 @@
       "id": "stock-gachiakuta-02",
       "topic_id": "backup-gachiakuta",
       "slug": "gachiakuta",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 22:50 IST",
       "result_id": "stock-gachiakuta-02",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-gachiakuta-02.mp4"
@@ -1088,7 +1089,7 @@
       "id": "stock-haikyuudumpster-01",
       "topic_id": "backup-haikyuudumpster",
       "slug": "haikyuudumpster",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 22:01 IST",
       "result_id": "stock-haikyuudumpster-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-haikyuudumpster-01.mp4"
@@ -1097,7 +1098,7 @@
       "id": "stock-hellsparadise-01",
       "topic_id": "backup-hellsparadise",
       "slug": "hellsparadise",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 22:01 IST",
       "result_id": "stock-hellsparadise-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-hellsparadise-01.mp4"
@@ -1106,7 +1107,7 @@
       "id": "stock-jjk0-01",
       "topic_id": "backup-jjk0",
       "slug": "jjk0",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 22:30 IST",
       "result_id": "stock-jjk0-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-jjk0-01.mp4"
@@ -1115,7 +1116,7 @@
       "id": "stock-jujutsukaisencullinggame-01",
       "topic_id": "backup-jujutsukaisencullinggame",
       "slug": "jujutsukaisencullinggame",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 22:50 IST",
       "result_id": "stock-jujutsukaisencullinggame-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-jujutsukaisencullinggame-01.mp4"
@@ -1180,7 +1181,7 @@
       "id": "stock-kaiju8-01",
       "topic_id": "backup-kaiju8",
       "slug": "kaiju8",
-      "status": "ready",
+      "status": "not_ready",
       "queued_at": "2026-11-17 23:53 IST",
       "result_id": "stock-kaiju8-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-kaiju8-01.mp4"
@@ -1219,7 +1220,8 @@
       "topic_id": "backup-lazarus",
       "slug": "lazarus",
       "status": "pending",
-      "queued_at": "2026-11-19 09:36 IST"
+      "queued_at": "2026-11-19 09:36 IST",
+      "result_id": "stock-lazarus-01"
     },
     {
       "id": "stock-mashle-01",

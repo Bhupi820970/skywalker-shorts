@@ -246,5 +246,7 @@
       "reason": "gemini score 6.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "stock_ready": false,
+  "stock_lost": "asset stock-dandadan2-02.mp4 not on the backup-stock release (2026-11-20 01:51 IST)"
 }
