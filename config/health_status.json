@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-19 05:39 IST",
-  "slots_checked": 10,
+  "at": "2026-11-19 06:40 IST",
+  "slots_checked": 11,
   "ready": [
     {
       "slot": "2026-11-19T06:30:00+05:30",
@@ -50,6 +50,11 @@
     {
       "slot": "2026-11-19T22:30:00+05:30",
       "id": "20261119-2230-undeadunluck",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-20T06:30:00+05:30",
+      "id": "20261120-0630-apothecarydiaries2",
       "how": "queued+fallback"
     }
   ],

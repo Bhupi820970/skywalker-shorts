@@ -137,10 +137,13 @@
       "id": "stock-aotfinal-07",
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
-      "status": "ready",
+      "status": "used",
       "queued_at": "2026-11-18 23:08 IST",
       "result_id": "stock-aotfinal-07",
-      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-aotfinal-07.mp4"
+      "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-aotfinal-07.mp4",
+      "assigned_slot": "2026-11-19T06:30:00+05:30",
+      "assigned_result": "20261119-0630-aotfinal",
+      "used_at": "2026-11-19 06:40 IST"
     },
     {
       "id": "stock-apothecarydiaries2-01",
