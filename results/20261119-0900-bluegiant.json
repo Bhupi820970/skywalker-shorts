@@ -1,0 +1,255 @@
+{
+  "id": "20261119-0900-bluegiant",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok (assigned from stock-bluegiant-02)",
+  "at": "2026-11-19 08:19 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44171805208",
+  "slot": "2026-11-19T09:00:00+05:30",
+  "title": "Dai Miyamoto loses himself in the music #bluegiant #jazz #anime",
+  "hook": "The moment jazz becomes obsession",
+  "description": "The moment jazz becomes obsession. A high-stakes live performance where the sheer passion of the jazz trio creates an overwhelming visual and auditory experience. From the official Blue Giant trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#bluegiant #jazz #anime #shorts #edit",
+  "tags": [
+    "bluegiant",
+    "jazz",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "dai"
+  ],
+  "queue_meta": {
+    "hook": "His saxophone hits like thunder",
+    "title": "His saxophone hits like thunder | Blue Giant | #edit",
+    "description": "His saxophone hits like thunder. From official Blue Giant clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bluegiant",
+    "tags": [
+      "bluegiant",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "dai"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Dai Miyamoto loses himself in the music",
+      "click_score": 92.0
+    },
+    {
+      "title": "Watch the intensity of this solo",
+      "click_score": 88.0
+    },
+    {
+      "title": "This is what true musical genius looks like",
+      "click_score": 85.0
+    },
+    {
+      "title": "Nobody plays the saxophone like him",
+      "click_score": 82.0
+    },
+    {
+      "title": "The exact second the crowd stood up",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.6,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.0,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 35.0,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-bluegiant",
+  "stock": true,
+  "stock_topic": "backup-bluegiant",
+  "spare": true,
+  "words": "BLUE GIANT",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 1,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4",
+      "music": "sw_escenarioslowed.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-bluegiant-02.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 2.965,
+  "energy": true,
+  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4",
+  "music": "sw_escenarioslowed.mp3",
+  "music_credit": "Song: bxka . OMIIR - ESCENARIO Slowed (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "description_final": "The moment jazz becomes obsession. A high-stakes live performance where the sheer passion of the jazz trio creates an overwhelming visual and auditory experience. From the official Blue Giant trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#bluegiant #jazz #anime #shorts #edit\n\nMusic:\nSong: bxka . OMIIR - ESCENARIO Slowed (https://creativecommons.org/publicdomain/mark/1.0/)",
+  "no_publish": false,
+  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-bluegiant-02-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 21.162,
+      "audio": true
+    },
+    "lufs": -14.6,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.4,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video perfectly adheres to all formatting and content requirements.",
+        "The hook is engaging and clearly displayed in the requested layout.",
+        "The audio is clean, music-only, and well-paced.",
+        "The visual presentation is professional and free of any unwanted elements."
+      ],
+      "low": [],
+      "watched_video": true
+    }
+  },
+  "scenes_picked": [
+    {
+      "id": 12,
+      "src_start": 14.556,
+      "dur": 1.462
+    },
+    {
+      "id": 23,
+      "src_start": 43.126,
+      "dur": 1.503,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 49,
+      "src_start": 92.009,
+      "dur": 2.045,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 29,
+      "src_start": 51.218,
+      "dur": 1.628,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 39001,
+      "src_start": 71.467,
+      "dur": 2.348,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 56,
+      "src_start": 105.647,
+      "dur": 2.004,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 32,
+      "src_start": 56.014,
+      "dur": 1.92
+    },
+    {
+      "id": 42,
+      "src_start": 82.916,
+      "dur": 1.695
+    },
+    {
+      "id": 4,
+      "src_start": 3.086,
+      "dur": 1.753
+    },
+    {
+      "id": 60,
+      "src_start": 112.863,
+      "dur": 1.462
+    },
+    {
+      "id": 8,
+      "src_start": 7.841,
+      "dur": 1.17,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    }
+  ],
+  "qc_status": "pass",
+  "stock_id": "stock-bluegiant-02",
+  "assigned_from_stock": true
+}
