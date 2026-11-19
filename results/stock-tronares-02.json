@@ -3,7 +3,7 @@
   "status": "done",
   "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok (retry: alt music/scenes, non-hard relax)",
   "at": "2026-11-15 07:45 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43661391258",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/43661391258",
   "slot": null,
   "title": "Ares aura in Tron Ares is unreal #tronares #jaredleto #scifi",
   "hook": "An AI just entered the real world",
@@ -113,27 +113,27 @@
       "attempt": 1,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): only 17.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; auto_qc: 1 frame(s) failed empty-dark/logo/text detectors; auto_qc: only 17.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 17.676s of unique clean shots (need ≥18.0s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/tronares_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/tronares_trailer_h264.mp4",
       "music": "sw_perturbatoriamthenightvi.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): only 17.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; auto_qc: 1 frame(s) failed empty-dark/logo/text detectors; auto_qc: only 17.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 17.676s of unique clean shots (need ≥18.0s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/tronares_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/tronares_trailer_h264.mp4",
       "music": "sw_perturbatoriamthenightvi.mp3"
     },
     {
       "attempt": 3,
       "ok": true,
       "error": null,
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/tronares_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/tronares_trailer_h264.mp4",
       "music": "sw_carpenterbrutleatherterr.mp3"
     }
   ],
   "last_error": null,
-  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
-  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-tronares-02.mp4",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-tronares-02.mp4",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -143,7 +143,7 @@
   },
   "drop_t": 3.348,
   "energy": true,
-  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/tronares_trailer_h264.mp4",
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/tronares_trailer_h264.mp4",
   "music": "sw_carpenterbrutleatherterr.mp3",
   "music_credit": "Song: Carpenter Brut - Carpenter Brut - Leather Terror vinyl rip (http://creativecommons.org/publicdomain/zero/1.0/)",
   "description_final": "An AI just entered the real world. Ares crosses over from the digital Grid into the real world to unleash futuristic destruction. From the official Tron: Ares trailer. Edit by Skywalker.\nSource: official trailer.\n#tronares #jaredleto #scifi #shorts #edit\n\nMusic:\nSong: Carpenter Brut - Carpenter Brut - Leather Terror vinyl rip (http://creativecommons.org/publicdomain/zero/1.0/)",

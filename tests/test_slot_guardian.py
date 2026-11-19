@@ -54,7 +54,7 @@ def test_guardian_assigns_ready_stock_when_buffer_empty(tmp_path, monkeypatch):
 def test_guardian_never_posts_or_assigns_demo(tmp_path, monkeypatch):
     root = _root(tmp_path, monkeypatch)
     demo = _ready_result("demo-v5-romance", no_publish=True, demo=True, slot="2026-11-17T22:30:00+05:30",
-                         asset_url="https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-v5-romance.mp4")
+                         asset_url="https://github.com/Bhupi820970/skywalker-shorts/releases/download/test-renders/test-demo-v5-romance.mp4")
     _write(root / "results" / "demo-v5-romance.json", demo)
     from datetime import datetime
     now = datetime.fromisoformat("2026-11-17T22:10:00+05:30")

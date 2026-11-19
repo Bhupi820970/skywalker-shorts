@@ -79,7 +79,7 @@ def test_fallback_prefers_same_format_then_any_backup(tmp_path):
     (tmp_path / "config" / "topic_catalog.json").write_text('{"items":[]}')
     (tmp_path / "config" / "source_catalog.json").write_text('{"topics":{}}')
     (tmp_path / "config" / "edit_formats.json").write_text('{"love":{"titles":[]}}')
-    gh = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources"
+    gh = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources"
     pool = [
         {
             "id": "backup-lazarus",

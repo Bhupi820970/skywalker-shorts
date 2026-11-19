@@ -3,7 +3,7 @@
   "status": "done",
   "detail": "rendered 2160x3840 (lanczos 854x480 source -> 2160x3840), QA ok (retry: alt music/scenes, non-hard relax) (assigned from stock-dune2-01)",
   "at": "2026-11-14 12:51 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43568611404",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/43568611404",
   "slot": "2026-11-14T13:30:00+05:30",
   "title": "Paul Atreides was never meant to survive #dune #paulatreides #scifi",
   "hook": "Paul Atreides returns for revenge",
@@ -113,27 +113,27 @@
       "attempt": 1,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4",
       "music": "sw_metamorphosis.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4",
       "music": "sw_metamorphosis.mp3"
     },
     {
       "attempt": 3,
       "ok": true,
       "error": null,
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4",
       "music": "sw_aura1hourauramusicplayli.mp3"
     }
   ],
   "last_error": null,
-  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
-  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-dune2-01.mp4",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dune2-01.mp4",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -143,7 +143,7 @@
   },
   "drop_t": 2.429,
   "energy": true,
-  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4",
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune2_trailer_h264.mp4",
   "music": "sw_aura1hourauramusicplayli.mp3",
   "music_credit": "Song: d - AURA ♾️ 1 HOUR AURA MUSIC PLAYLIST 2025 🔥 EMPIRE PHONK (https://creativecommons.org/publicdomain/mark/1.0/)",
   "description_final": "Paul Atreides returns for revenge. Paul Atreides grapples with the weight of his survival and the inevitable path of vengeance on Arrakis. From the official Dune: Part Two trailer. Edit by Skywalker.\nSource: official trailer.\n#dune #paulatreides #scifi #shorts #edit\n\nMusic:\nSong: d - AURA ♾️ 1 HOUR AURA MUSIC PLAYLIST 2025 🔥 EMPIRE PHONK (https://creativecommons.org/publicdomain/mark/1.0/)",

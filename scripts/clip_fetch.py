@@ -19,7 +19,7 @@ sys.path.insert(0, str(REPO))
 import overlay_guard  # noqa: E402
 import sourcing  # noqa: E402
 
-GH_REPO = "chatgpt820970/skywalker-shorts"
+GH_REPO = "Bhupi820970/skywalker-shorts"
 IST = timezone(timedelta(hours=5, minutes=30))
 REQ = REPO / "config" / "clip_requests.json"
 STATUS = REPO / "config" / "clip_fetch_status.json"

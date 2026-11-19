@@ -5,7 +5,7 @@
   "pillar": "movie",
   "source_url": "https://www.youtube.com/watch?v=CL1EFACsWag",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/werwulf_trailer_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/werwulf_trailer_h264.mp4"
   ],
   "template": "whitebar",
   "hook": "Nobody leaves the village after dark",
@@ -51,7 +51,7 @@
   "status": "queued",
   "market": "US/UK",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bonetemple_trailer_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bonetemple_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "bonetemple_trailer_h264.mp4",
@@ -93,7 +93,7 @@
   "pillar": "movie",
   "source_url": "https://www.youtube.com/watch?v=p7eE_dn9u4k",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mahavatarnarsimha_trailer_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mahavatarnarsimha_trailer_h264.mp4"
   ],
   "template": "whitebar",
   "hook": "Mahavatar Narsimha stays in everyone's heart",
@@ -145,7 +145,7 @@
   ],
   "content_kind": "trailer",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/hoppers_trailer_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hoppers_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "hoppers_trailer_h264.mp4"
@@ -156,7 +156,7 @@
   "pillar": "funny",
   "source_url": "https://www.youtube.com/watch?v=zhApeaHMvfs",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jumanji_trailer_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jumanji_trailer_h264.mp4"
   ],
   "template": "whitebar",
   "hook": "Nobody wants to play Jumanji again",
@@ -202,12 +202,12 @@
   "status": "queued",
   "market": "US/UK",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/toystory5_trailer_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/toystory5_trailer_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "toystory5_trailer_h264.mp4",
   "alt_source_urls": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/toystory5_alt_trailer_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/toystory5_alt_trailer_h264.mp4"
   ],
   "content_kind": "trailer"
  },
@@ -217,7 +217,7 @@
   "pillar": "anime",
   "source_url": "https://www.youtube.com/watch?v=i2iicVzWa5A",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dragonballsuper_trailer_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballsuper_trailer_h264.mp4"
   ],
   "template": "whitebar",
   "hook": "Even Goku fears Beerus",

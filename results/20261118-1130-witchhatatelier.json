@@ -3,7 +3,7 @@
   "status": "failed",
   "detail": "pipeline/QA failed (exit 1): only 15.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
   "at": "2026-11-18 12:15 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44242762689",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44242762689",
   "slot": "2026-11-18T11:30:00+05:30",
   "title": "The moment Coco realized what she unleashed #witchhatatelier #coco #anime",
   "hook": "She unleashed something she cannot control",
@@ -133,7 +133,7 @@
       "attempt": 1,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): only 15.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene3_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene3_h264.mp4",
       "music": "sw_sentemaisoverslowed.mp3",
       "qc_status": null
     }

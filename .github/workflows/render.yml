@@ -43,6 +43,7 @@ concurrency:
 
 jobs:
   plan:
+    if: ${{ secrets.GEMINI_API_KEY != '' }}
     runs-on: ubuntu-latest
     outputs:
       ids: ${{ steps.p.outputs.ids }}
@@ -213,7 +214,7 @@ jobs:
               raise SystemExit(0)
           p.parent.mkdir(parents=True, exist_ok=True)
           run_id = os.environ.get("GITHUB_RUN_ID") or ""
-          repo = os.environ.get("GITHUB_REPOSITORY") or "chatgpt820970/skywalker-shorts"
+          repo = os.environ.get("GITHUB_REPOSITORY") or "Bhupi820970/skywalker-shorts"
           server = os.environ.get("GITHUB_SERVER_URL") or "https://github.com"
           doc = {
               "id": iid,
@@ -244,7 +245,7 @@ jobs:
 
   commit-results:
     needs: [plan, render]
-    if: always() && needs.plan.outputs.count != '0'
+    if: always() && needs.plan.result != 'skipped' && needs.plan.outputs.count != '0'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

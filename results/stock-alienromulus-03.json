@@ -3,7 +3,7 @@
   "status": "done",
   "detail": "rendered 2160x3840 (lanczos 910x480 source -> 2160x3840), QA ok (retry: alt music/scenes, non-hard relax)",
   "at": "2026-11-15 14:58 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43694999171",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/43694999171",
   "slot": null,
   "title": "The moment Rain realized they were trapped #alienromulus #caileespaeny #horror",
   "hook": "This station was never abandoned",
@@ -94,27 +94,27 @@
       "attempt": 1,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): only 15.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4",
       "music": "sw_coiltheanalstaircaseaggr.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): only 15.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4",
       "music": "sw_coiltheanalstaircaseaggr.mp3"
     },
     {
       "attempt": 3,
       "ok": true,
       "error": null,
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4",
       "music": "sw_memoryreboot.mp3"
     }
   ],
   "last_error": null,
-  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
-  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-alienromulus-03.mp4",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-alienromulus-03.mp4",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -124,7 +124,7 @@
   },
   "drop_t": 2.939,
   "energy": true,
-  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4",
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/alienromulus_trailer_h264.mp4",
   "music": "sw_memoryreboot.mp3",
   "music_credit": "Song: VØJ, Narvent - Memory Reboot (Slowed)",
   "description_final": "This station was never abandoned. A group of space scavengers board a desolate station seeking escape, unaware of the nightmare lurking in the dark. From the official Alien: Romulus trailer. Edit by Skywalker.\nSource: official trailer.\n#alienromulus #caileespaeny #horror #shorts #edit\n\nMusic:\nSong: VØJ, Narvent - Memory Reboot (Slowed)",

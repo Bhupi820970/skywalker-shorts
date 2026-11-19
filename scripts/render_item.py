@@ -131,7 +131,7 @@ def fetch_music_library():
     have = {p.name for p in ldir.glob("*.mp3")}
     need = [t["file"] for t in lib.get("tracks") or [] if t["file"] not in have]
     if need:
-        repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+        repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
         args = ["gh", "release", "download", lib.get("release") or "music", "-R", repo, "-D", str(ldir), "--clobber"]
         for f in need:
             args += ["-p", f]
@@ -245,7 +245,7 @@ def download_fallback(src, skip=None):
         errors.append(info)
     if item.get("fallback_release") and item.get("fallback_asset") and not sourcing.is_trailer_source(item.get("fallback_asset") or "") and not sourcing.is_unusable_source(item.get("fallback_asset") or "", item):
         tag, asset = item["fallback_release"], item["fallback_asset"]
-        repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+        repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
         r = subprocess.run(["gh", "release", "download", tag, "-p", asset, "-R", repo, "-D", str(OUT), "--clobber"],
                            capture_output=True, text=True)
         cand = OUT / asset
@@ -255,7 +255,7 @@ def download_fallback(src, skip=None):
             return f"gh:release/{tag}/{asset}", []
         errors.append("gh release " + (r.stderr.strip().splitlines() or ["?"])[-1][:300])
     # last resort: sources release, guess asset from fallback_mp4 names or id
-    repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+    repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
     guesses = []
     if item.get("fallback_asset") and not sourcing.is_trailer_source(item.get("fallback_asset") or "") and not sourcing.is_unusable_source(item.get("fallback_asset") or "", item):
         guesses.append(item["fallback_asset"])
@@ -286,7 +286,7 @@ def _stem_tokens(name: str) -> set[str]:
 
 def list_source_siblings():
     """Other official SCENE clips already uploaded to the sources release (never trailers)."""
-    repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+    repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
     r = subprocess.run(
         ["gh", "release", "view", "sources", "-R", repo, "--json", "assets"],
         capture_output=True, text=True,

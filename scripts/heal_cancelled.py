@@ -14,7 +14,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-GH_REPO = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+GH_REPO = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
 HOURS = float(os.environ.get("HEAL_HOURS", "8"))
 DRY = os.environ.get("HEAL_DRY") == "1"
 

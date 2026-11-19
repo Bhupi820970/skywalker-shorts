@@ -3,7 +3,7 @@
   "status": "retry_queued",
   "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: download failed: yt-dlp:ERROR: [youtube] 168U5JgEeu8: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A",
   "at": "2026-11-14 07:23 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43543079635",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/43543079635",
   "slot": "2026-11-14T06:30:00+05:30",
   "title": "There's something in the attic | Ed and Lorraine's last case | #edit",
   "hook": "There's something in the attic",

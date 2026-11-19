@@ -3,7 +3,7 @@
   "status": "failed",
   "detail": "gemini QC rejected 2 re-renders; backup item takes the slot: gemini QC reject: The footage is heavily cropped/zoomed, cutting off significant portions of the original landscape frame to fit the vertical format, which violates the requirement for a full, uncropped frame.; The 'LIVE' watermark from the source material is visible on the footage, which violates the requirement for clean footage.",
   "at": "2026-11-14 21:51 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43612637456",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/43612637456",
   "slot": null,
   "title": "Gru's absolute villain era is unmatched #despicableme #gru #animation",
   "hook": "Gru terrorizes the entire globe",
@@ -144,14 +144,14 @@
       "attempt": 1,
       "ok": false,
       "error": "gemini QC reject: The footage is heavily cropped/zoomed to fit the vertical format, cutting off significant parts of the original landscape frame.; The 'LIVE' watermark from the source footage is visible, which violates the clean footage requirement.",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/despicableme4_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/despicableme4_trailer_h264.mp4",
       "music": "sw_bateaublanc.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
       "error": "gemini QC reject: The footage is heavily cropped/zoomed, cutting off significant portions of the original landscape frame to fit the vertical format, which violates the requirement for a full, uncropped frame.; The 'LIVE' watermark from the source material is visible on the footage, which violates the requirement for clean footage.",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/despicableme4_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/despicableme4_trailer_h264.mp4",
       "music": "sw_bateaublanc.mp3"
     }
   ],

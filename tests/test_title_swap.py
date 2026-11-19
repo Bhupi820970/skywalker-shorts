@@ -23,7 +23,7 @@ def _repo(tmp_path: Path, topics, pool=None, queue=None, sources=None) -> Path:
 
 
 def _scene(slug: str, n: int = 1) -> str:
-    return f"https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/{slug}_scene{n}_h264.mp4"
+    return f"https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/{slug}_scene{n}_h264.mp4"
 
 
 def test_should_swap_on_short_footage_qc_logo_404_bot_but_not_cancel():

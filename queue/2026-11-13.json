@@ -5,7 +5,7 @@
     "pillar": "movie",
     "source_url": "https://www.youtube.com/watch?v=uJqaGLmZpGo",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dunepartthree_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dunepartthree_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "The reason why Paul Atreides became the villain",
@@ -35,7 +35,7 @@
     "pillar": "movie",
     "source_url": "https://www.youtube.com/watch?v=fJH-wfSXnWg",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/cliffbooth_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cliffbooth_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "The reason why Cliff Booth never walks away",
@@ -64,7 +64,7 @@
     "pillar": "movie",
     "source_url": "https://www.youtube.com/watch?v=mjBym9uKth4",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/war2_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/war2_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "The reason why War 2's shadow never stops",
@@ -116,7 +116,7 @@
     "pillar": "funny",
     "source_url": "https://www.youtube.com/watch?v=5AwtptT8X8k",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/zootopia2_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/zootopia2_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "Judy can't trust anyone",
@@ -165,7 +165,7 @@
     "fallback_release": "sources",
     "fallback_asset": "projecthailmary_trailer_h264.mp4",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/projecthailmary_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/projecthailmary_trailer_h264.mp4"
     ],
     "alt_source_urls": [
       "https://archive.org/download/project-hail-mary-official-trailer/Project%20Hail%20Mary%20-%20Official%20Trailer.mp4"
@@ -178,9 +178,9 @@
     "pillar": "romance",
     "source_url": "https://www.youtube.com/watch?v=2KBxrmKh-M0",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries_cr_trailer_h264.mp4",
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries_s3_trailer_h264.mp4",
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/apothecarydiaries_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/apothecarydiaries_cr_trailer_h264.mp4",
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/apothecarydiaries_s3_trailer_h264.mp4",
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/apothecarydiaries_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "The reason why Jinshi can't stop looking at Maomao",
@@ -236,7 +236,7 @@
     "pillar": "movie",
     "source_url": "https://www.youtube.com/watch?v=kQDd1AhGIHk",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kalki2898ad_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kalki2898ad_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "Kalki's world is ending",
@@ -266,7 +266,7 @@
     "pillar": "movie",
     "source_url": "https://www.youtube.com/watch?v=f_bKjZeJBBI",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/odyssey_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/odyssey_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "Ithaca's king is coming back",
@@ -295,7 +295,7 @@
     "pillar": "anime",
     "source_url": "https://www.youtube.com/watch?v=BwdMT-OiARI",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/blackclover_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/blackclover_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "The reason why Asta never gives up",
@@ -347,7 +347,7 @@
       "https://www.youtube.com/watch?v=6MSY8_acauE"
     ],
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/demonslayer_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/demonslayer_trailer_h264.mp4"
     ],
     "fallback_release": "sources",
     "fallback_asset": "demonslayer_trailer_h264.mp4"

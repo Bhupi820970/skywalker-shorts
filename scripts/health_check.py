@@ -28,7 +28,7 @@ import backup_stock  # noqa: E402
 import slot_times  # noqa: E402
 
 IST = timezone(timedelta(hours=5, minutes=30))
-GH = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources"
+GH = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources"
 
 
 def load_pool() -> list[dict]:

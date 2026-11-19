@@ -24,7 +24,7 @@ VINLAND = {
     "title": "Why Thorfinn refused to fight back in Vinland Saga",
     "fallback_asset": "vinlandsagathorfinn_scene1_h264.mp4",
     "fallback_mp4": [
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4"
     ],
 }
 
@@ -36,7 +36,7 @@ def test_retry_sources_must_be_same_topic():
     assert not sourcing.source_matches_topic(VINLAND, "bluelockisagi_scene1_h264.mp4")
     assert not sourcing.source_matches_topic(
         VINLAND,
-        "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4",
     )
     assets = [
         "vinlandsagathorfinn_scene1_h264.mp4",
@@ -59,9 +59,9 @@ def test_qc_skipped_result_is_not_ready():
     r = {
         "id": "stock-vinland-01",
         "status": "done",
-        "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-vinland-01.mp4",
+        "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-vinland-01.mp4",
         "title": "Why Thorfinn refused to fight back",
-        "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+        "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
         "gate": {"ok": True, "gemini_qc": "skipped (unavailable/budget) - heuristic gate only"},
         "qc_status": "skipped",
     }
@@ -142,25 +142,25 @@ def test_audit_marks_mismatch_and_qc_skipped_not_ready(tmp_path, monkeypatch):
     (tmp_path / "results").mkdir()
     good = {
         "id": "stock-dune2-02", "status": "done",
-        "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-dune2-02.mp4",
+        "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dune2-02.mp4",
         "title": "Paul Atreides enters the battlefield #dune",
-        "source": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dune2_scene1_h264.mp4",
+        "source": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune2_scene1_h264.mp4",
         "gate": {"ok": True, "gemini_qc": {"pass": True, "scores": {"hook": 8}}},
         "qc_status": "pass",
     }
     mismatch = {
         "id": "stock-vinlandsagathorfinn-01", "status": "done",
-        "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-vinlandsagathorfinn-01.mp4",
+        "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-vinlandsagathorfinn-01.mp4",
         "title": "Why Thorfinn refused to fight back in Vinland Saga",
-        "source": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4",
+        "source": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4",
         "gate": {"ok": True, "gemini_qc": {"pass": True, "scores": {"hook": 8}}},
         "qc_status": "pass",
     }
     skipped = {
         "id": "stock-jjkgojovstoji-01", "status": "done",
-        "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-jjkgojovstoji-01.mp4",
+        "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-jjkgojovstoji-01.mp4",
         "title": "Why Toji could not break Gojo",
-        "source": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4",
+        "source": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjkgojovstoji_scene1_h264.mp4",
         "gate": {"ok": True, "gemini_qc": "skipped (unavailable/budget) - heuristic gate only"},
         "qc_status": "skipped",
     }

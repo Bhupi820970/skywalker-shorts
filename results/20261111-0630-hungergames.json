@@ -3,7 +3,7 @@
   "status": "done",
   "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok",
   "at": "2026-11-11 13:36 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/42982467687",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/42982467687",
   "slot": "2026-11-11T06:30:00+05:30",
   "title": "The reason why Haymitch was never the same after this 💀 | Haymitch enters the Quarter Quell | #edit",
   "auto_retries": 1,
@@ -13,13 +13,13 @@
       "attempt": 1,
       "ok": true,
       "error": null,
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/hungergames_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hungergames_trailer_h264.mp4",
       "music": "ncs_godless.mp3"
     }
   ],
   "last_error": null,
-  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261111-0630-hungergames",
-  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261111-0630-hungergames/render-20261111-0630-hungergames.mp4",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261111-0630-hungergames",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261111-0630-hungergames/render-20261111-0630-hungergames.mp4",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -29,7 +29,7 @@
   },
   "drop_t": 12.562,
   "energy": true,
-  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/hungergames_trailer_h264.mp4",
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hungergames_trailer_h264.mp4",
   "music": "ncs_godless.mp3",
   "music_credit": "Song: Ailow - Godless\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/godless\nWatch: http://ncs.lnk.to/godlessAT/youtube",
   "description_final": "The reason why Haymitch was never the same after this. Haymitch enters the Quarter Quell from the official The Hunger Games: Sunrise on the Reaping trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=lYXtL5TreOE). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #hungergames\n\nMusic:\nSong: Ailow - Godless\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/godless\nWatch: http://ncs.lnk.to/godlessAT/youtube"

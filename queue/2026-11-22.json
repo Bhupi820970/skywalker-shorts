@@ -23,14 +23,14 @@
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rezero3_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rezero3_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rezero3_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/rezero3_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rezero3_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rezero3_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rezero3_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "rezero3_scene1_h264.mp4"
@@ -59,12 +59,12 @@
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "gachiakuta_scene1_h264.mp4"
@@ -93,12 +93,12 @@
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "kaiju8s2_scene1_h264.mp4"
@@ -127,14 +127,14 @@
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/windbreaker_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/windbreaker_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/windbreaker_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/windbreaker_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/windbreaker_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/windbreaker_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/windbreaker_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "windbreaker_scene1_h264.mp4"
@@ -163,14 +163,14 @@
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mushokutensei2_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "mushokutensei2_scene1_h264.mp4"
@@ -200,12 +200,12 @@
   "content_kind": "romance scene",
   "edit_format": "love",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "jjk0_scene1_h264.mp4"
@@ -234,10 +234,10 @@
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "hellsparadise_scene1_h264.mp4"
@@ -266,14 +266,14 @@
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
-   "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
   "fallback_asset": "spyxfamilycodewhite_scene1_h264.mp4"

@@ -24,7 +24,7 @@ def _ready_result(iid: str, **extra):
     r = {
         "id": iid,
         "status": "done",
-        "asset_url": f"https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/{iid}.mp4",
+        "asset_url": f"https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/{iid}.mp4",
         "title": f"Hook for {iid}",
         "hook": "A cold open that slaps",
         "description": "From the official trailer. Edit by Skywalker.",
@@ -404,7 +404,7 @@ def test_trailer_stock_is_not_ready_and_not_assigned(tmp_path, monkeypatch):
     _write(root / "results" / "stock-wickedforgood-01.json", _ready_result(
         "stock-wickedforgood-01",
         stock_topic="backup-wickedforgood",
-        source="gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wickedforgood_trailer_h264.mp4",
+        source="gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wickedforgood_trailer_h264.mp4",
         title="The moment Elphaba chose her own path",
     ))
     r = json.loads((root / "results" / "stock-wickedforgood-01.json").read_text())
@@ -465,7 +465,7 @@ def test_trailer_only_pool_item_is_not_preuploaded():
         "id": "backup-wickedforgood",
         "fallback_asset": "wickedforgood_trailer_h264.mp4",
         "fallback_mp4": [
-            "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/wickedforgood_trailer_h264.mp4"
+            "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wickedforgood_trailer_h264.mp4"
         ],
     }) is False
     assert backup_stock.has_preuploaded({

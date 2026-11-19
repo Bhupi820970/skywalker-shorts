@@ -89,7 +89,7 @@ else
   cp "$OUT" "$UPLOAD"
 fi
 
-REPO_SLUG="${GITHUB_REPOSITORY:-chatgpt820970/skywalker-shorts}"
+REPO_SLUG="${GITHUB_REPOSITORY:-Bhupi820970/skywalker-shorts}"
 echo "uploading $ASSET to the sources release..."
 gh release upload sources "$UPLOAD" -R "$REPO_SLUG" --clobber
 

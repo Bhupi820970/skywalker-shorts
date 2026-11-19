@@ -5,7 +5,7 @@
     "pillar": "movie",
     "source_url": "https://www.youtube.com/watch?v=lYXtL5TreOE",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/hungergames_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hungergames_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "The reason why Haymitch was never the same after this",
@@ -34,7 +34,7 @@
     "pillar": "movie",
     "source_url": "https://www.youtube.com/watch?v=noatJVfA22U",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/peddi_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/peddi_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "The reason why Peddi playground ka hero ban gaya",
@@ -63,7 +63,7 @@
     "pillar": "funny",
     "source_url": "https://www.youtube.com/watch?v=vyISuWUWcFs",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/fockerinlaw_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fockerinlaw_trailer_h264.mp4"
     ],
     "template": "whitebar",
     "hook": "The reason why Greg Focker can never relax",
@@ -92,7 +92,7 @@
     "pillar": "celeb",
     "source_url": "https://www.youtube.com/watch?v=fA8-gXDoAk8",
     "fallback_mp4": [
-      "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/maatrubhumi_trailer_h264.mp4"
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/maatrubhumi_trailer_h264.mp4"
     ],
     "alt_source_urls": [
       "https://www.youtube.com/watch?v=4HlRYUXOZc4"

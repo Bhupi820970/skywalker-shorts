@@ -3,7 +3,7 @@
   "status": "failed",
   "detail": "gemini QC rejected 2 re-renders; backup item takes the slot: gemini QC reject: The footage contains a Netflix 'SUBSCRIBE' watermark/logo card at 0:17, which violates the clean footage requirement.",
   "at": "2026-11-17 18:42 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44070415595",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44070415595",
   "slot": null,
   "title": "Momo never lets him go | Dandadan | #edit",
   "hook": "Momo never lets him go",
@@ -132,7 +132,7 @@
       "attempt": 1,
       "ok": false,
       "error": "gemini QC reject: The video contains a 'DAN DA DAN SEASON 2' watermark/text overlay in the corner of the footage, which violates the clean footage requirement.; There is a 'Do it!' subtitle visible in one of the frames, which violates the requirement for no burned-in subtitles.",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
       "music": "sw_phnk2.mp3",
       "qc_status": "fail"
     },
@@ -140,7 +140,7 @@
       "attempt": 2,
       "ok": false,
       "error": "gemini QC reject: The footage contains a Netflix 'SUBSCRIBE' watermark/logo card at 0:17, which violates the clean footage requirement.",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
       "music": "sw_phnk2.mp3",
       "qc_status": "fail"
     }

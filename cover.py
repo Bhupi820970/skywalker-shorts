@@ -145,7 +145,7 @@ def download_official_thumbnail(url: str, dest: Path, *, timeout: float = 15.0) 
     """
     dest = Path(dest)
     dest.parent.mkdir(parents=True, exist_ok=True)
-    ua = "Mozilla/5.0 (compatible; SkywalkerShorts/1.0; +https://github.com/chatgpt820970/skywalker-shorts)"
+    ua = "Mozilla/5.0 (compatible; SkywalkerShorts/1.0; +https://github.com/Bhupi820970/skywalker-shorts)"
     for thumb in official_thumb_urls(url):
         try:
             req = Request(thumb, headers={"User-Agent": ua})

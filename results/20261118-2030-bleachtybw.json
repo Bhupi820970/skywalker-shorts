@@ -3,7 +3,7 @@
   "status": "done",
   "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
   "at": "2026-11-18 13:49 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44257549645",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44257549645",
   "slot": "2026-11-18T20:30:00+05:30",
   "title": "Nobody expected Ranvijay to show up like this #animal #ranbirkapoor #bollywood",
   "hook": "Nobody expected him to enter like this",
@@ -108,7 +108,7 @@
     {
       "attempt": 1,
       "ok": false,
-      "error": "download failed: yt-dlp:ERROR: [youtube] 4Gti6YqvMzE: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] e8YBesRKq_U: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] QoIMRS2xCkI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] g2iWIWqJ39s: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4",
+      "error": "download failed: yt-dlp:ERROR: [youtube] 4Gti6YqvMzE: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] e8YBesRKq_U: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] QoIMRS2xCkI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] g2iWIWqJ39s: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | reject logo/watermark: gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4",
       "source": null,
       "music": null,
       "qc_status": null
@@ -117,14 +117,14 @@
       "attempt": 1,
       "ok": true,
       "error": null,
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
       "music": "sw_passobemsolto.mp3",
       "qc_status": "pass"
     }
   ],
   "last_error": null,
-  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/render-20261118-2030-bleachtybw",
-  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-2030-bleachtybw/render-20261118-2030-bleachtybw.mp4",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261118-2030-bleachtybw",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261118-2030-bleachtybw/render-20261118-2030-bleachtybw.mp4",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -134,12 +134,12 @@
   },
   "drop_t": null,
   "energy": false,
-  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
   "music": "sw_passobemsolto.mp3",
   "music_credit": "Song: ATLXS - PASSO BEM SOLTO (Slowed)",
   "description_final": "Nobody expected him to enter like this. Ranbir Kapoor leads his armed squad into a crowded hall to intimidate everyone present in Animal. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #bollywood #shorts #edit\n\nMusic:\nSong: ATLXS - PASSO BEM SOLTO (Slowed)",
   "no_publish": false,
-  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/render-20261118-2030-bleachtybw/render-20261118-2030-bleachtybw-cover.jpg",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261118-2030-bleachtybw/render-20261118-2030-bleachtybw-cover.jpg",
   "gate": {
     "ok": true,
     "failures": [],

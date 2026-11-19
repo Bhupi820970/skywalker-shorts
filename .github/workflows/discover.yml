@@ -32,6 +32,7 @@ concurrency:
 
 jobs:
   discover:
+    if: ${{ secrets.GEMINI_API_KEY != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:

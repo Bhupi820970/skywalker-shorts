@@ -204,7 +204,7 @@ def main() -> int:
             mp3 = mp3.rename(mp3.with_name(fname))
         if not args.no_upload:
             r = subprocess.run(["gh", "release", "upload", lib.get("release") or "music", str(mp3), "--clobber",
-                                "-R", "chatgpt820970/skywalker-shorts"], capture_output=True, text=True)
+                                "-R", "Bhupi820970/skywalker-shorts"], capture_output=True, text=True)
             if r.returncode != 0:
                 print(f"  upload failed: {fname}: {(r.stderr or '')[-200:]}")
                 continue

@@ -17,7 +17,7 @@ import edit_format
 import sourcing
 
 REPO = Path(__file__).resolve().parent
-SOURCES_RELEASE = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources"
+SOURCES_RELEASE = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources"
 MAX_SWAPS = 4
 RECENT_TITLE_DAYS = 3
 IST = timezone(timedelta(hours=5, minutes=30))

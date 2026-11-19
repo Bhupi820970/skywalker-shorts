@@ -3,7 +3,7 @@
   "status": "failed",
   "detail": "gemini QC rejected 2 re-renders; backup item takes the slot: gemini QC reject: Includes a Netflix subscribe outro bumper / logo glitch inserted at 00:21.; Footage contains leftover burn-in subtitles ('Do it!' at 00:15) and a channel watermark ('DAN DA DAN SEASON 2' at 00:17).",
   "at": "2026-11-17 18:39 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44070415595",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44070415595",
   "slot": null,
   "title": "Okarun finally snapped #dandadan #okarun #animeedit",
   "hook": "Okarun is not holding back",
@@ -140,7 +140,7 @@
       "attempt": 1,
       "ok": false,
       "error": "gemini QC reject: The footage contains multiple instances of 'DAN DA DAN SEASON 2' text overlays and a 'NETFLIX SUBSCRIBE' watermark, which violates the clean footage requirement.; The video includes a repetitive, low-quality audio loop that sounds like a distorted remix rather than a clean, high-quality hype song.; The visual pacing is inconsistent, featuring several static or low-action shots that do not match the intensity of the hook.",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
       "music": "sw_phnk2.mp3",
       "qc_status": "fail"
     },
@@ -148,7 +148,7 @@
       "attempt": 2,
       "ok": false,
       "error": "gemini QC reject: Includes a Netflix subscribe outro bumper / logo glitch inserted at 00:21.; Footage contains leftover burn-in subtitles ('Do it!' at 00:15) and a channel watermark ('DAN DA DAN SEASON 2' at 00:17).",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
       "music": "sw_phnk2.mp3",
       "qc_status": "fail"
     }

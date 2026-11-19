@@ -22,7 +22,7 @@ import slot_times  # noqa: E402
 import backup_stock  # noqa: E402
 
 IST = timezone(timedelta(hours=5, minutes=30))
-GH = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources"
+GH = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources"
 QUEUE = REPO / "queue"
 CATALOG = REPO / "config" / "topic_catalog.json"
 
@@ -45,7 +45,7 @@ def release_assets() -> set[str] | None:
     """Asset names on the sources release (None when unknown, e.g. offline)."""
     import subprocess
     try:
-        r = subprocess.run(["gh", "api", "--paginate", "repos/chatgpt820970/skywalker-shorts/releases/tags/sources",
+        r = subprocess.run(["gh", "api", "--paginate", "repos/Bhupi820970/skywalker-shorts/releases/tags/sources",
                             "-q", ".assets[].name"], capture_output=True, text=True, timeout=60)
         if r.returncode == 0 and r.stdout.strip():
             return set(r.stdout.split())
@@ -53,7 +53,7 @@ def release_assets() -> set[str] | None:
         pass
     try:
         import urllib.request
-        url = "https://api.github.com/repos/chatgpt820970/skywalker-shorts/releases/tags/sources"
+        url = "https://api.github.com/repos/Bhupi820970/skywalker-shorts/releases/tags/sources"
         with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "skywalker"}), timeout=30) as r:
             return {a["name"] for a in json.loads(r.read()).get("assets") or []}
     except Exception:

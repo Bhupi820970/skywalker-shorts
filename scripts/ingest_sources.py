@@ -21,7 +21,7 @@ sys.path.insert(0, str(REPO))
 import sourcing  # noqa: E402
 
 UA = {"User-Agent": "SkywalkerSourceIngest/1.0"}
-GH = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources"
+GH = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources"
 OUT = REPO / "out" / "sources_ingest"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -105,7 +105,7 @@ def to_h264(src: Path, dst: Path) -> bool:
 def upload(files: list[Path]) -> bool:
     if not files:
         return True
-    repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+    repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
     r = subprocess.run(["gh", "release", "view", "sources", "-R", repo], capture_output=True)
     if r.returncode != 0:
         subprocess.check_call([
@@ -128,7 +128,7 @@ _ASSETS: set[str] | None = None
 def release_has(asset: str) -> bool:
     global _ASSETS
     if _ASSETS is None:
-        repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+        repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
         r = subprocess.run(
             ["gh", "release", "view", "sources", "-R", repo, "--json", "assets", "-q", ".assets[].name"],
             capture_output=True, text=True,

@@ -3,7 +3,7 @@
   "status": "done",
   "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to ANIMAL)",
   "at": "2026-11-17 23:20 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44135932740",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44135932740",
   "slot": null,
   "title": "Ranbir Kapoor enters the room and changes everything #animal #ranbirkapoor #action",
   "hook": "He came to silence everyone",
@@ -120,7 +120,7 @@
     {
       "attempt": 1,
       "ok": false,
-      "error": "download failed: yt-dlp:ERROR: [youtube] 3J0KJCJdWU4: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Dl1hSMXlCFk: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] -cKs3ZAaaZ4: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] ylpE6QkgMKI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] yeRvDchyo44: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] zHQzXiMQoRE: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4 | yt-dlp:ERROR: [generic] gachiakuta_scene2_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | reject logo/watermark: gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4",
+      "error": "download failed: yt-dlp:ERROR: [youtube] 3J0KJCJdWU4: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Dl1hSMXlCFk: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] -cKs3ZAaaZ4: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] ylpE6QkgMKI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] yeRvDchyo44: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] zHQzXiMQoRE: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | reject logo/watermark: gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gachiakuta_scene1_h264.mp4 | yt-dlp:ERROR: [generic] gachiakuta_scene2_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | reject logo/watermark: gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gachiakuta_scene3_h264.mp4",
       "source": null,
       "music": null,
       "qc_status": null
@@ -129,14 +129,14 @@
       "attempt": 1,
       "ok": true,
       "error": null,
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
       "music": "sw_phonkmemphisrap2.mp3",
       "qc_status": "pass"
     }
   ],
   "last_error": null,
-  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/backup-stock",
-  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-gachiakuta-02.mp4",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-gachiakuta-02.mp4",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -146,12 +146,12 @@
   },
   "drop_t": null,
   "energy": false,
-  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene1_h264.mp4",
   "music": "sw_phonkmemphisrap2.mp3",
   "music_credit": "Song: Wittty-T33th - Phonk\\Memphis Rap (https://creativecommons.org/publicdomain/mark/1.0/)",
   "description_final": "He came to silence everyone. Ranbir Kapoor makes a lethal entrance and dominates the boardroom meeting with his presence. From the official Animal trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#animal #ranbirkapoor #action #shorts #edit\n\nMusic:\nSong: Wittty-T33th - Phonk\\Memphis Rap (https://creativecommons.org/publicdomain/mark/1.0/)",
   "no_publish": false,
-  "cover_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-gachiakuta-02-cover.jpg",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-gachiakuta-02-cover.jpg",
   "gate": {
     "ok": true,
     "failures": [],

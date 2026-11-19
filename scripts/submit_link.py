@@ -28,7 +28,7 @@ import slot_times  # noqa: E402
 import sourcing  # noqa: E402
 
 IST = timezone(timedelta(hours=5, minutes=30))
-GH = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources"
+GH = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources"
 YT = re.compile(r"(?:youtube\.com|youtu\.be)", re.I)
 X = re.compile(r"(?:(?:^|\.)x\.com|(?:^|\.)twitter\.com)", re.I)
 MIN_AHEAD_H = 3.0

@@ -3,7 +3,7 @@
   "status": "done",
   "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok [no-publish] (retry: alt music/scenes, non-hard relax)",
   "at": "2026-11-16 16:00 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43832914072",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/43832914072",
   "slot": "2026-11-16T13:00:00+05:30",
   "title": "Why Thorfinn refused to fight back in Vinland Saga #vinlandsaga #thorfinn #anime",
   "hook": "Why Thorfinn refused to fight back",
@@ -122,27 +122,27 @@
       "attempt": 1,
       "ok": false,
       "error": "gemini QC reject: Crunchyroll logo watermark is visible in the top-left corner of the video frame throughout the clip.; Canvas background uses a blurred video fill rather than pure solid black.",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
       "music": "sw_interworldrapturephonk.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsagathorfinn_scene1_h264.mp4",
       "music": "sw_interworldrapturephonk.mp3"
     },
     {
       "attempt": 3,
       "ok": true,
       "error": null,
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4",
       "music": "sw_moonwalkleaninmeaninphon.mp3"
     }
   ],
   "last_error": null,
-  "release_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/tag/test-renders",
-  "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/test-renders/test-demo-clips-vinlandsagathorfinn.mp4",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/test-renders",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/test-renders/test-demo-clips-vinlandsagathorfinn.mp4",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -152,7 +152,7 @@
   },
   "drop_t": 2.485,
   "energy": true,
-  "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4",
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluelockisagi_scene1_h264.mp4",
   "music": "sw_moonwalkleaninmeaninphon.mp3",
   "music_credit": "Song: Moonwalk - Moonwalk - Leanin' & Meanin' (Phonk Hip-Hop Beat) (http://creativecommons.org/licenses/by/3.0/)",
   "description_final": "Why Thorfinn refused to fight back. Thorfinn endures brutal strikes without retaliating to earn an audience with King Canute and prove his resolve. From the official Vinland Saga trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#vinlandsaga #thorfinn #anime #shorts #edit\n\nMusic:\nSong: Moonwalk - Moonwalk - Leanin' & Meanin' (Phonk Hip-Hop Beat) (http://creativecommons.org/licenses/by/3.0/)",

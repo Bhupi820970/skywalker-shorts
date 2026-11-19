@@ -3,6 +3,6 @@
   "status": "failed",
   "detail": "render job ended with no result JSON (timed out or cancelled mid-render)",
   "at": "2026-11-16T19:28:06Z",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43939162088",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/43939162088",
   "last_error": "no result JSON; job cancelled or timed out"
 }

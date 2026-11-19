@@ -26,7 +26,7 @@ import music_lib  # noqa: E402
 CFG_PATH = REPO / "config" / "music_sources.json"
 LIB_PATH = REPO / "music" / "library.json"
 LIB_DIR = REPO / "music" / "lib"
-UA = "SkywalkerShortsMusicIngest/1.0 (CC ingest; +https://github.com/chatgpt820970/skywalker-shorts)"
+UA = "SkywalkerShortsMusicIngest/1.0 (CC ingest; +https://github.com/Bhupi820970/skywalker-shorts)"
 IA_SEARCH = "https://archive.org/advancedsearch.php"
 IA_META = "https://archive.org/metadata/{id}"
 IA_DL = "https://archive.org/download/{id}/{name}"
@@ -322,7 +322,7 @@ def unique_filename(name: str, taken: set[str]) -> str:
 def upload_release(files: list[Path], tag: str = "music") -> bool:
     if not files:
         return True
-    repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+    repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
     # ensure release exists
     r = subprocess.run(["gh", "release", "view", tag, "-R", repo], capture_output=True, text=True)
     if r.returncode != 0:

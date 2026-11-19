@@ -3,7 +3,7 @@
   "status": "failed",
   "detail": "pipeline/QA failed (exit 1): only 1.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
   "at": "2026-11-14 13:48 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43568592829",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/43568592829",
   "slot": "2026-11-14T17:30:00+05:30",
   "title": "She married her own assassin | A wedding that saves her life | #edit",
   "hook": "She married her own assassin",
@@ -131,21 +131,21 @@
       "attempt": 1,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): only 1.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/fireflywedding_mainpv_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fireflywedding_mainpv_trailer_h264.mp4",
       "music": "sw_montagemfujin.mp3"
     },
     {
       "attempt": 2,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): only 1.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/fireflywedding_mainpv_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fireflywedding_mainpv_trailer_h264.mp4",
       "music": "sw_saiyaara.mp3"
     },
     {
       "attempt": 3,
       "ok": false,
       "error": "pipeline/QA failed (exit 1): only 1.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/fireflywedding_mainpv_trailer_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fireflywedding_mainpv_trailer_h264.mp4",
       "music": "sw_powerglovetrialsoftheblo.mp3"
     }
   ],

@@ -14,7 +14,7 @@ def test_rank_prefers_x_then_youtube_then_release():
     x = "https://x.com/NetflixAnime/status/123"
     yt = "https://www.youtube.com/watch?v=abc"
     studio = "https://www.marvel.com/movies/foo"
-    gh = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/x.mp4"
+    gh = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/x.mp4"
     assert sourcing._rank_url(x) < sourcing._rank_url(yt) < sourcing._rank_url(studio) < sourcing._rank_url(gh)
     assert sourcing.is_x_url(x) and sourcing.is_x_url("https://twitter.com/TOHO_official/status/9")
     assert sourcing.is_youtube_url(yt)
@@ -28,7 +28,7 @@ def test_build_candidate_urls_orders_x_and_youtube_before_release():
         "source_url": "https://www.youtube.com/watch?v=KD18ddeFuyM",
         "content_kind": "best scene",
         "fallback_mp4": [
-            "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/runningman_scene1_h264.mp4"
+            "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/runningman_scene1_h264.mp4"
         ],
         "x_urls": ["https://x.com/Netflix/status/555"],
         "alt_source_urls": [
@@ -77,9 +77,9 @@ def test_trailers_are_never_candidates_or_queries():
         "source_url": "https://www.youtube.com/watch?v=ThozbbykMdY",
         "fallback_asset": "firforce3_trailer_h264.mp4",
         "fallback_mp4": [
-            "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firforce3_scene1_h264.mp4",
-            "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firforce3_scene2_h264.mp4",
-            "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/firforce3_trailer_h264.mp4",
+            "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/firforce3_scene1_h264.mp4",
+            "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/firforce3_scene2_h264.mp4",
+            "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/firforce3_trailer_h264.mp4",
         ],
     }
     assert sourcing.is_trailer_source("firforce3_trailer_h264.mp4")
@@ -94,7 +94,7 @@ def test_trailers_are_never_candidates_or_queries():
         "id": "20261117-0900-fnaf2",
         "fallback_asset": "fnaf2_trailer_h264.mp4",
         "fallback_mp4": [
-            "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/fnaf2_trailer_h264.mp4"
+            "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fnaf2_trailer_h264.mp4"
         ],
         "content_kind": "trailer",
     }
@@ -224,7 +224,7 @@ def test_more_official_seeds_catalog_urls_when_search_is_empty(monkeypatch):
         stderr = "no"
     monkeypatch.setattr(sourcing.subprocess, "run", lambda *a, **k: _R())
     item = {"words": "YOUR NAME", "pillar": "romance"}
-    already = ["https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"]
+    already = ["https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"]
     urls = sourcing.more_official_scene_urls(item, already=already, entries=None)
     assert any("Ja1q9DnLI6M" in u or "RuyHIkXdYf8" in u for u in urls)
     assert not any(sourcing.is_trailer_source(u) for u in urls)

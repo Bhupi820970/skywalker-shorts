@@ -19,7 +19,7 @@ import sourcing  # noqa: E402
 import submit_link  # noqa: E402
 
 IST = timezone(timedelta(hours=5, minutes=30))
-GH = "https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources"
+GH = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources"
 MAX_TITLES_PER_RUN = 2
 PARTS = (2, 3)
 

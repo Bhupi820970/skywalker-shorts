@@ -137,7 +137,7 @@ jobs:
           err = (r.stderr or r.stdout or "")[-800:]
           print(err)
           if r.returncode == 0 and dest.exists() and dest.stat().st_size > 500_000:
-              repo = os.environ.get("GITHUB_REPOSITORY", "chatgpt820970/skywalker-shorts")
+              repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
               up = subprocess.run(["gh", "release", "upload", "sources", str(dest), "-R", repo, "--clobber"],
                                   capture_output=True, text=True)
               print(up.stdout, up.stderr)
