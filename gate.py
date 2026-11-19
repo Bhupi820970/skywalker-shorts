@@ -52,7 +52,7 @@ def qc_verdict(gem_qc) -> str:
 
 
 def run_gate(final: Path, *, qa_obj: dict, checks: dict, item: dict, work: Path | None,
-             gemini_qc: dict | None, out_res: int = 2160, logo_scan=None) -> dict:
+             gemini_qc: dict | None, out_res: int = 2160, logo_scan=None, layout: dict | None = None) -> dict:
     fails, info = [], {}
     pr = probe(final)
     info["probe"] = pr
@@ -119,17 +119,25 @@ def run_gate(final: Path, *, qa_obj: dict, checks: dict, item: dict, work: Path 
     # HARD: whole final video at 2 fps, Gemini logo/watermark scan. No verdict = blocked.
     try:
         import logo_guard
-        lg = logo_scan(final) if logo_scan else logo_guard.scan_video(final, Path(work or final.parent))
+        if layout is None and work and (Path(work) / "layout.json").exists():
+            layout = json.loads((Path(work) / "layout.json").read_text())
+        lg = (logo_scan(final) if logo_scan
+              else logo_guard.scan_video(final, Path(work or final.parent), layout=layout))
     except Exception as e:
         lg = {"ok": None, "error": str(e)}
     info["logo_scan"] = lg
+    info["logo_verdict"] = lg.get("ok")
+    n_before = len(fails)
     if lg.get("ok") is not True:
         fails.append("logo scan: " + (json.dumps(lg.get("hits"))[:300] if lg.get("hits")
-                                      else str(lg.get("error") or "no verdict")))
+                                      else "no verdict: " + str(lg.get("error") or "gemini unavailable")))
     if gemini_qc is None:
         info["gemini_qc"] = "skipped (unavailable/budget) - heuristic gate only"
     else:
         info["gemini_qc"] = gemini_qc
         if not gemini_qc.get("pass"):
             fails.append("gemini QC reject: " + "; ".join(gemini_qc.get("reasons") or gemini_qc.get("low") or ["?"]))
+    # Only blocker = a missing logo verdict (transient Gemini outage): the render itself is fine,
+    # so callers keep it and re-check later instead of re-rendering from scratch.
+    info["logo_pending_only"] = (lg.get("ok") is None and len(fails) == 1 and n_before == 0)
     return {"ok": not fails, "failures": fails, **info}

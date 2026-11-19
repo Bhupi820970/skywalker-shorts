@@ -14,9 +14,16 @@ Three layers, all hard (a hit is never shipped):
    clip/source/title/backup.
 3. scan_video: dense (2 fps) Gemini scan of the whole FINAL video in the publish
    gate. Any hit (or no verdict) blocks publishing.
+
+v10 fix: the final scan used to flag OUR OWN white hook/caption bar ("text caption
+at top") on every frame, so every passed render was rejected and the job looped to
+the 150-min timeout. The bar rows are now blanked (grey) before Gemini sees the
+frame, using work/layout.json (or auto-detected when the layout is missing).
+In-scene text (T-shirt prints, signs) with no brand/logo word is not a logo hit.
 """
 from __future__ import annotations
 
+import re
 import subprocess
 from pathlib import Path
 
@@ -31,8 +38,9 @@ Flag EVERY frame that shows ANY of these, even if tiny, faint, semi-transparent,
 - a corner bug / channel watermark / "SUBSCRIBE" / "Watch now" / "Only on" / "Coming soon" / release date / rating card
 - a show or film TITLE text or logotype on the picture (e.g. "DAN DA DAN SEASON 2"), studio intro or end-screen card
 - burned-in subtitles or any other text printed on the footage
-IGNORE only: a plain white caption bar with black text at the very top of a vertical frame (that is ours),
-and text that is physically part of the scene (shop signs, T-shirt prints, books).
+IGNORE only: flat grey blanked bands (our own caption bar was masked out there), a plain white caption
+bar with black text above the picture (that is ours), and text that is physically part of the scene
+(shop signs, T-shirt prints, name tags, books).
 When unsure, FLAG it. Return JSON: {{"flagged": [{{"i": int, "what": "short description"}}]}}"""
 
 HEAD_MAX, HEAD_FRAC = 3.0, 0.06
@@ -83,11 +91,84 @@ def sample_times(t0: float, t1: float, fps: float = 2.0) -> list[float]:
     return ts
 
 
-def _grab(video: Path, t: float, dst: Path, w: int) -> Path:
+# A hit that only describes in-world text (no brand / logo / watermark word) is not a logo.
+_BRAND_RX = re.compile(r"logo|watermark|wordmark|bug|subscribe|netflix|crunchyroll|prime|amazon|disney|hulu|hbo|"
+                       r"\bmax\b|apple|paramount|peacock|funimation|hidive|aniplex|toho|mappa|ufotable|muse|ani-one|"
+                       r"bilibili|warner|sony|universal|a24|channel|network|studio|copyright|\(c\)|©|"
+                       r"coming soon|only on|watch now|release|rating|subtitle|title card|end card|intro card", re.I)
+_INSCENE_RX = re.compile(r"shirt|jersey|jacket|uniform|cap\b|hat\b|name ?tag|badge|sign\b|signage|shop|store|"
+                         r"street|book|newspaper|letter|note\b|poster on|graffiti|label on|menu", re.I)
+_OURBAR_RX = re.compile(r"(gr[ae]y|blank|masked|empty)\s*(band|bar|box|area|strip)", re.I)
+
+
+def real_hit(what: str) -> bool:
+    """False for in-scene text with no brand/logo word and for our masked bar."""
+    w = str(what or "")
+    if _OURBAR_RX.search(w) and not _BRAND_RX.search(w):
+        return False
+    if _INSCENE_RX.search(w) and not _BRAND_RX.search(w):
+        return False
+    return True
+
+
+def _grab(video: Path, t: float, dst: Path, w: int, mask=None) -> Path:
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{max(0.0, t):.3f}", "-i", str(video),
                     "-frames:v", "1", "-vf", f"scale={w}:-2", str(dst)],
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if mask and dst.exists():
+        apply_mask(dst, mask)
     return dst
+
+
+def apply_mask(img_path: Path, mask) -> None:
+    """Paint rows (y0_frac, y1_frac) flat grey: our own caption bar is never a logo."""
+    from PIL import Image, ImageDraw
+    im = Image.open(img_path).convert("RGB")
+    W, H = im.size
+    dr = ImageDraw.Draw(im)
+    for y0, y1 in mask:
+        dr.rectangle([0, max(0, int(y0 * H) - 2), W, min(H, int(round(y1 * H)) + 2)], fill=(128, 128, 128))
+    im.save(img_path, quality=92)
+
+
+def detect_caption_band(img_path: Path):
+    """Fallback when layout.json is missing: the widest band of mostly-white full-width rows
+    (our hook bar: white with black text). Returns (y0_frac, y1_frac) or None."""
+    try:
+        from PIL import Image
+        im = Image.open(img_path).convert("L")
+    except Exception:
+        return None
+    W, H = im.size
+    px = im.load()
+    white = []
+    for y in range(H):
+        n = sum(1 for x in range(0, W, 4) if px[x, y] >= 225)
+        white.append(n / max(1, len(range(0, W, 4))) >= 0.6)
+    best, cur, start = (0, 0), 0, 0
+    for y, wv in enumerate(white + [False]):
+        if wv:
+            if cur == 0:
+                start = y
+            cur += 1
+        else:
+            if cur > best[1] - best[0]:
+                best = (start, start + cur)
+            cur = 0
+    if best[1] - best[0] < 0.03 * H or best[1] - best[0] > 0.25 * H:
+        return None
+    return best[0] / H, best[1] / H
+
+
+def layout_mask(layout: dict | None, frame_h: int = 1920):
+    """Caption bar rows from pipeline layout.json (1080x1920 master coords)."""
+    try:
+        y, h = float(layout["bar_y"]), float(layout["bar_h"])
+    except Exception:
+        return None
+    if h <= 0:
+        return None
+    return [(y / frame_h, (y + h) / frame_h)]
 
 
 def _sheets(frames: list[Path], work: Path, tag: str, per: int, cols: int, w: int) -> list[Path]:
@@ -118,7 +199,7 @@ def _sheets(frames: list[Path], work: Path, tag: str, per: int, cols: int, w: in
 
 
 def scan(video: Path, windows: list[tuple[str, float, float]], work: Path, *, tag: str,
-         fps: float = 2.0, w: int = 480, vertical: bool = False, ask=None) -> dict:
+         fps: float = 2.0, w: int = 480, vertical: bool = False, ask=None, mask=None) -> dict:
     """Gemini scan of every window at `fps`. Returns {"ok": bool|None, "hits": {key: [what]}, "frames": n}.
 
     ok=None means no verdict (Gemini unavailable) -> callers treat it as NOT clean.
@@ -130,7 +211,7 @@ def scan(video: Path, windows: list[tuple[str, float, float]], work: Path, *, ta
     frames, owner = [], []
     for key, t0, t1 in windows:
         for t in sample_times(t0, t1, fps):
-            frames.append(_grab(Path(video), t, work / f"f{len(frames):04d}.jpg", w))
+            frames.append(_grab(Path(video), t, work / f"f{len(frames):04d}.jpg", w, mask=mask))
             owner.append((key, t))
     if not frames:
         return {"ok": True, "hits": {}, "frames": 0}
@@ -140,18 +221,38 @@ def scan(video: Path, windows: list[tuple[str, float, float]], work: Path, *, ta
         import gemini
         ask = lambda p, imgs: gemini.generate_json(p, imgs, purpose=f"logo_{tag}", temperature=0.0, timeout=150.0)
     hits: dict[str, list[str]] = {}
+    ignored: list[str] = []
+    per_call = 6 * per
     for g in range(0, len(sheets), 6):  # <= 6 sheets per call
-        out = ask(PROMPT.format(brands=BRANDS), sheets[g:g + 6])
+        out = None
+        for _try in range(2):  # one retry on a transient miss; never an endless loop
+            out = ask(PROMPT.format(brands=BRANDS), sheets[g:g + 6])
+            if isinstance(out, dict) and isinstance(out.get("flagged"), list):
+                break
         if not isinstance(out, dict) or not isinstance(out.get("flagged"), list):
             return {"ok": None, "hits": hits, "frames": len(frames), "error": "no gemini verdict"}
         for r in out["flagged"]:
+            lo, hi = g * per, min(len(owner), g * per + per_call)
             try:
                 i = int(r.get("i"))
-                key, t = owner[i]
             except Exception:
+                i = -1
+            if not (lo <= i < hi):
+                # labels are global; a per-call number is shifted, anything else is pinned to
+                # this call's first frame (fail-safe: a flagged logo is never dropped)
+                i = i + lo if 0 <= i + lo < hi else lo
+            key, t = owner[i]
+            what = str(r.get("what") or "logo")[:60]
+            if not real_hit(what):
+                ignored.append(f"{t:.2f}s {what}")
                 continue
-            hits.setdefault(key, []).append(f"{t:.2f}s {str(r.get('what') or 'logo')[:60]}")
-    return {"ok": not hits, "hits": hits, "frames": len(frames)}
+            hits.setdefault(key, []).append(f"{t:.2f}s {what}")
+    res = {"ok": not hits, "hits": hits, "frames": len(frames)}
+    if ignored:
+        res["ignored"] = ignored[:20]
+    if mask:
+        res["masked_rows"] = [[round(a, 4), round(b, 4)] for a, b in mask]
+    return res
 
 
 def scan_scenes(mezz: Path, scenes: list[dict], work: Path, ask=None) -> dict:
@@ -169,12 +270,21 @@ def scan_scenes(mezz: Path, scenes: list[dict], work: Path, ask=None) -> dict:
     return res
 
 
-def scan_video(video: Path, work: Path, ask=None) -> dict:
-    """Final gate: whole output at 2 fps (every frame of every cut, start to end)."""
+def scan_video(video: Path, work: Path, ask=None, layout: dict | None = None) -> dict:
+    """Final gate: whole output at 2 fps (every frame of every cut, start to end).
+
+    Our own caption bar rows are blanked first (layout.json, else auto-detected)."""
     r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(video)],
                        capture_output=True, text=True)
     try:
         dur = float(r.stdout.strip())
     except Exception:
         return {"ok": None, "hits": {}, "frames": 0, "error": "probe failed"}
-    return scan(video, [("final", 0.0, dur)], work, tag="final", fps=2.0, vertical=True, ask=ask)
+    mask = layout_mask(layout)
+    if mask is None:
+        probe_img = Path(work) / "logo_final_probe.jpg"
+        Path(work).mkdir(parents=True, exist_ok=True)
+        _grab(Path(video), min(1.0, dur / 2), probe_img, 540)
+        band = detect_caption_band(probe_img)
+        mask = [band] if band else None
+    return scan(video, [("final", 0.0, dur)], work, tag="final", fps=2.0, vertical=True, ask=ask, mask=mask)
