@@ -312,7 +312,8 @@ def gemini_vet(path: Path, title: str, channel: str) -> str | None:
             f.unlink(missing_ok=True)
     if not isinstance(res, dict):
         return None
-    flags = [k for k in ("watermark", "channel_logo", "burned_subtitles", "hud_overlay", "trailer_card") if res.get(k)]
+    # same fatal flags as pro-edit's vet(); a stray end/title card is cut out later by the render's card filter
+    flags = [k for k in ("watermark", "channel_logo", "burned_subtitles", "hud_overlay") if res.get(k)]
     if res.get("official_quality") is False:
         flags.append("not official quality")
     if res.get("editable") is False:
