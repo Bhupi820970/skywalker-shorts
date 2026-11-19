@@ -1266,5 +1266,81 @@
     "demo": true,
     "music_genre": "love",
     "edit_mode": "music_only"
+  },
+  {
+    "id": "demo-v11-action",
+    "pillar": "anime",
+    "edit_format": "action",
+    "source_url": "https://www.youtube.com/@NetflixAnime",
+    "template": "whitebar",
+    "hook": "He was never meant to survive",
+    "words": "EDGERUNNERS",
+    "title": "Cyberpunk: Edgerunners | David's last ride",
+    "description": "DEMO (not published). Cyberpunk: Edgerunners - David goes all in.",
+    "tags": [
+      "cyberpunkedgerunners",
+      "anime",
+      "action",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "action scene",
+    "fallback_mp4": [
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "cyberpunkedgerunners_scene1_h264.mp4",
+    "official_channels": [
+      "Netflix Anime",
+      "Netflix"
+    ],
+    "no_publish": true,
+    "demo": true,
+    "music_genre": "action",
+    "edit_mode": "music_only",
+    "topic_slug": "cyberpunkedgerunners",
+    "caption_style": "neon"
+  },
+  {
+    "id": "demo-v11-love",
+    "pillar": "romance",
+    "edit_format": "love",
+    "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+    "template": "whitebar",
+    "hook": "The sky followed them",
+    "words": "WEATHERING WITH YOU",
+    "title": "Weathering With You | Hina and Hodaka",
+    "description": "DEMO (not published). The sky followed them. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou #romance",
+    "tags": [
+      "weatheringwithyou",
+      "anime",
+      "romance",
+      "edit",
+      "shorts"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "romance scene",
+    "fallback_mp4": [
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "weatheringwithyou_scene1_h264.mp4",
+    "official_channels": [
+      "GKIDS Films",
+      "GKIDS"
+    ],
+    "no_publish": true,
+    "demo": true,
+    "music_genre": "love",
+    "edit_mode": "music_only",
+    "topic_slug": "weatheringwithyou",
+    "caption_style": "none"
   }
 ]
