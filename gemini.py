@@ -1,6 +1,6 @@
 """Tiny Gemini REST client for the Skywalker pipeline (stdlib only).
 
-- Keys come from env GEMINI_API_KEY and GEMINI_API_KEY_2..GEMINI_API_KEY_6
+- Keys come from env GEMINI_API_KEY and GEMINI_API_KEY_2..GEMINI_API_KEY_7
   (GitHub secrets). Values are never printed, logged, or written to the budget file.
 - On 429 / quota / 503 for a key, try the next model, then the next key.
   The last key (and model) that worked is tried first on the next call.
@@ -22,7 +22,7 @@ from pathlib import Path
 
 API = "https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent"
 DEFAULT_MODELS = ["gemini-3.5-flash", "gemini-3.8-flash", "gemini-flash-latest", "gemini-3.1-flash-lite"]
-KEY_ENVS = ("GEMINI_API_KEY",) + tuple(f"GEMINI_API_KEY_{i}" for i in range(2, 7))
+KEY_ENVS = ("GEMINI_API_KEY",) + tuple(f"GEMINI_API_KEY_{i}" for i in range(2, 8))
 
 
 def _models() -> list[str]:

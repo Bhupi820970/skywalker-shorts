@@ -44,7 +44,7 @@ def test_gemini_key_rotation(monkeypatch, tmp_path):
     monkeypatch.setenv("SKY_GEMINI_BUDGET_FILE", str(tmp_path / "b.json"))
     assert gemini.KEY_ENVS == (
         "GEMINI_API_KEY", "GEMINI_API_KEY_2", "GEMINI_API_KEY_3",
-        "GEMINI_API_KEY_4", "GEMINI_API_KEY_5", "GEMINI_API_KEY_6",
+        "GEMINI_API_KEY_4", "GEMINI_API_KEY_5", "GEMINI_API_KEY_6", "GEMINI_API_KEY_7",
     )
     assert gemini._keys() == []
     assert not gemini.available()

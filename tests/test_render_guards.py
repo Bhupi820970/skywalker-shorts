@@ -78,6 +78,7 @@ def test_qc_retry_rotates_to_next_gemini_key(tmp_path, monkeypatch):
     monkeypatch.delenv("GEMINI_API_KEY_4", raising=False)
     monkeypatch.delenv("GEMINI_API_KEY_5", raising=False)
     monkeypatch.delenv("GEMINI_API_KEY_6", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY_7", raising=False)
     names = [n for n, _ in gemini._ordered_keys()]
     assert names[0] == "GEMINI_API_KEY"
     gemini.allow_qc_retry(after_key="key1")
