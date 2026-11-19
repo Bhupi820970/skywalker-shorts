@@ -21,7 +21,7 @@ import sourcing  # noqa: E402
 
 GH_REPO = "Bhupi820970/skywalker-shorts"
 IST = timezone(timedelta(hours=5, minutes=30))
-REQ = REPO / "config" / "clip_requests.json"
+REQ = Path(os.environ.get("CLIP_REQUESTS_FILE") or REPO / "config" / "clip_requests.json")
 STATUS = REPO / "config" / "clip_fetch_status.json"
 CATALOG = REPO / "config" / "topic_catalog.json"
 DENY = REPO / "config" / "clip_denylist.json"
@@ -122,6 +122,31 @@ def search(req: dict, youtube: bool) -> list[dict]:
     prefixes = (["ytsearch10"] if youtube else []) + ["dmsearch5", "bilibilisearch3"]
     chans = official_set(req)
     found, seen = [], set()
+    # 1) link mode: explicit official links in the request, X posts before YouTube.
+    links = [u for u in (req.get("links") or []) if isinstance(u, str) and u.startswith("https://")]
+    links.sort(key=lambda u: 0 if re.search(r"https://(www\.)?(x|twitter)\.com/", u) else 1)
+    for u in links[:10]:
+        if TRAILER.search(u) or sourcing.is_trailer_source(u) or u in seen:
+            continue
+        seen.add(u)
+        m = re.search(r"(?:v=|youtu\.be/|/shorts/|/status/)([\w-]{6,})", u)
+        pfx = "x" if re.search(r"(x|twitter)\.com/", u) else "yt"
+        found.append({"id": f"{pfx}:{m.group(1) if m else u}", "url": u, "title": req.get("words") or req["slug"],
+                      "kind": "scene", "channel": "link", "link": True})
+    # 2) official X accounts for the title (before YouTube).
+    try:
+        for e in sourcing.search_official_x_entries({"words": words, "slug": req["slug"],
+                                                     "official_channels": req.get("official_channels") or []},
+                                                    limit=4):
+            t = e.get("title") or ""
+            if not e.get("url") or e["url"] in seen or TRAILER.search(t) or JUNK.search(t):
+                continue
+            seen.add(e["url"])
+            found.append({"id": e.get("id") or f"x:{e['url']}", "url": e["url"], "title": t[:200],
+                          "kind": "scene", "channel": e.get("channel") or e.get("handle") or "x", "x": True})
+    except Exception as ex:
+        log(f"{req.get('slug')}: x search skipped ({type(ex).__name__})")
+    n_first = len(found)
     for q in scene_q:
         for pfx in prefixes:
             r = run(["yt-dlp", "--flat-playlist", "-J", "--no-warnings", f"{pfx}:{q}"], timeout=90)
@@ -153,8 +178,9 @@ def search(req: dict, youtube: bool) -> list[dict]:
                     url = f"https://www.youtube.com/watch?v={vid}"
                 found.append({"id": f"{pfx[:2]}:{vid}", "url": url, "title": title, "kind": "scene",
                               "channel": ch})
-    found.sort(key=lambda c: sourcing.channel_preference(c.get("channel") or ""))
-    return found
+    head, rest = found[:n_first], found[n_first:]
+    rest.sort(key=lambda c: sourcing.channel_preference(c.get("channel") or ""))
+    return head + rest
 
 
 def probe(p: Path) -> dict:
@@ -181,11 +207,22 @@ def quality_ok(m: dict) -> str | None:
     return None
 
 
+def browser_cookie_args() -> list[str]:
+    """Box only, opt-in: SKY_YTDLP_BROWSER=chrome:/path/to/profile lets yt-dlp read the box browser's
+    YouTube / X login for this download. Cookies stay in the browser profile; they are never copied into
+    the repo, a release, a log or a manifest. Never set this on GitHub runners."""
+    b = (os.environ.get("SKY_YTDLP_BROWSER") or "").strip()
+    if not b or b.startswith("-") or any(ch in b for ch in ";|&`$\n"):
+        return []
+    return ["--cookies-from-browser", b]
+
+
 def download(url: str, dest: Path) -> bool:
     for f in WORK.glob(dest.stem + "*"):
         f.unlink(missing_ok=True)
     cmd = ["yt-dlp", "--no-playlist", "--remote-components", "ejs:github", "-f", FMT, "-S", SORT,
-           "--merge-output-format", "mp4", "-o", str(dest), "--no-warnings", "--no-part", url]
+           "--merge-output-format", "mp4", "-o", str(dest), "--no-warnings", "--no-part",
+           *browser_cookie_args(), url]
     r = run(cmd, timeout=900)
     return r.returncode == 0 and dest.exists() and dest.stat().st_size > 1_000_000
 
@@ -290,6 +327,9 @@ def main() -> int:
     for req in reqs:
         slug = req.get("slug")
         if not slug:
+            continue
+        if sum(1 for x in have if x.startswith(f"{slug}_scene")) >= per:
+            log(f"{slug}: already has {per}+ scene clips on the release; request done")
             continue
         try:
             cands = retry(lambda: search(req, not a.no_youtube) or None, 2, 10) or []

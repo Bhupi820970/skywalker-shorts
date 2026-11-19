@@ -130,8 +130,18 @@ def fetch_music_library():
     ldir.mkdir(parents=True, exist_ok=True)
     have = {p.name for p in ldir.glob("*.mp3")}
     need = [t["file"] for t in lib.get("tracks") or [] if t["file"] not in have]
+    repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
     if need:
-        repo = os.environ.get("GITHUB_REPOSITORY", "Bhupi820970/skywalker-shorts")
+        # Only ask for files that are on the release (a lost/restoring track must not fail the whole download).
+        r = subprocess.run(["gh", "api", "--paginate", f"repos/{repo}/releases/tags/{lib.get('release') or 'music'}",
+                            "-q", ".assets[].name"], capture_output=True, text=True)
+        if r.returncode == 0 and r.stdout.strip():
+            on_release = set(r.stdout.split())
+            skipped = [f for f in need if f not in on_release]
+            if skipped:
+                print(f"music library: {len(skipped)} track(s) not on the release yet (box restores them); skipped")
+            need = [f for f in need if f in on_release]
+    if need:
         args = ["gh", "release", "download", lib.get("release") or "music", "-R", repo, "-D", str(ldir), "--clobber"]
         for f in need:
             args += ["-p", f]
@@ -503,8 +513,14 @@ def _try_pexels(dest):
 
 def publish(final, fw, fh, up, used, qa, credit, qa_obj):
     desc = item.get("description", "")
-    if credit.get("credit"):
-        desc = desc.rstrip() + "\n\nMusic:\n" + credit["credit"]
+    if credit.get("file") or credit.get("credit"):
+        try:
+            import music_lib
+            ctext = music_lib.credit_block(credit)
+        except Exception:
+            ctext = credit.get("credit") or ""
+        if ctext and "\n\nMusic:" not in desc:
+            desc = desc.rstrip() + "\n\nMusic:\n" + ctext
     # Prefer safe-track credit; always keep license line for description.
     notes = f"{item.get('title','')}\n\n{desc}\n\nTags: {', '.join(item.get('tags', []))}\nSource: {used}\nRun: {run_url}"
     no_publish = (

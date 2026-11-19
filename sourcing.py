@@ -705,7 +705,7 @@ def _flat_x_entries(target: str, n: int = 8) -> list[dict]:
     try:
         r = subprocess.run(
             ["yt-dlp", "--flat-playlist", "-I", f"1:{n}", "-J", "--no-warnings",
-             "--no-cookies", target],
+             *(_browser_cookie_args() or ["--no-cookies"]), target],
             capture_output=True, text=True, timeout=60,
         )
     except Exception:
@@ -815,7 +815,16 @@ def _cookies_args() -> list[str]:
     path = (os.environ.get("YTDLP_COOKIES_FILE") or "").strip()
     if path and Path(path).exists():
         return ["--cookies", path]
-    return []
+    return _browser_cookie_args()
+
+
+def _browser_cookie_args() -> list[str]:
+    """Box only, opt-in: SKY_YTDLP_BROWSER=chrome:/profile lets yt-dlp use the box browser's own
+    YouTube / X login for downloads. Nothing is copied or logged; never set on GitHub runners."""
+    b = (os.environ.get("SKY_YTDLP_BROWSER") or "").strip()
+    if not b or b.startswith("-") or any(ch in b for ch in ";|&`$\n"):
+        return []
+    return ["--cookies-from-browser", b]
 
 
 
