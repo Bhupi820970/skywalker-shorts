@@ -2144,7 +2144,11 @@
         "thebatman_scene3_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "unusable_assets": {
+        "thebatman_scene1_h264.mp4": "unofficial re-upload channel (MovieClipsHD); restored by mistake 2026-11-20, replace with an official clip",
+        "thebatman_scene3_h264.mp4": "unofficial re-upload channel (MrSam Movie Clips); restored by mistake 2026-11-20, replace with an official clip"
+      }
     },
     {
       "slug": "fighther",

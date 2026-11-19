@@ -260,6 +260,22 @@ def pre_check(url: str, meta: dict | None) -> str | None:
     return None
 
 
+def official_reason(meta: dict | None, item: dict, slug: str) -> str | None:
+    """Official studio / distributor channels only (never fan re-upload channels)."""
+    if not meta:
+        return None
+    try:
+        import clip_fetch
+        cat = json.loads((REPO / "config" / "source_catalog.json").read_text()).get("topics") or {}
+        chans = clip_fetch.official_set({"official_channels": list(item.get("official_channels") or [])
+                                         + list((cat.get(slug) or {}).get("official_channels") or [])})
+        if clip_fetch.is_official(meta, chans):
+            return None
+    except Exception as e:
+        return f"official check failed ({type(e).__name__})"
+    return f"not an official channel: {meta.get('channel') or meta.get('uploader')}"
+
+
 def download_clip(url: str, dest: Path) -> bool:
     for f in dest.parent.glob(dest.stem + "*"):
         f.unlink(missing_ok=True)
@@ -457,7 +473,7 @@ def step_clips(st: dict, tick=lambda: None, limit: int = 0) -> dict:
         if not tries_ok(st, a):
             continue
         meta = url_meta(url)
-        why = pre_check(url, meta)
+        why = pre_check(url, meta) or official_reason(meta, n["item"], ASSET_RX.match(a).group(1))
         if why:
             log(f"clips: {a}: skip {url} ({why})")
             count_try(st, a, why)
