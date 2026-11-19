@@ -29,6 +29,27 @@ from pathlib import Path
 IST = timezone(timedelta(hours=5, minutes=30))
 REPO = Path(__file__).resolve().parent.parent
 iid = sys.argv[1]
+
+def _retired_topic_exit(rid, reason):
+    """Pool topic was removed: write a terminal result (no more auto-retry dispatches) and exit 0."""
+    from datetime import datetime as _dt, timezone as _tz
+    _res = REPO / "results"
+    _res.mkdir(exist_ok=True)
+    _p = _res / f"{rid}.json"
+    try:
+        _prev = json.loads(_p.read_text()) if _p.exists() else {}
+    except Exception:
+        _prev = {}
+    _prev.update({"id": rid, "status": "failed", "retired": True, "detail": reason, "last_error": reason,
+                  "auto_retries": int(_prev.get("max_auto_retries") or 1),
+                  "at": _dt.now(_tz.utc).strftime("%Y-%m-%dT%H:%M:%SZ")})
+    _p.write_text(json.dumps(_prev, indent=2, ensure_ascii=False))
+    _o = REPO / "out" / "results"
+    _o.mkdir(parents=True, exist_ok=True)
+    (_o / f"{rid}.json").write_text(json.dumps(_prev, indent=2, ensure_ascii=False))
+    print(f"::warning::{rid}: {reason}; marked failed/retired (no retry)")
+    sys.exit(0)
+
 BACKUP = None
 STOCK = None
 if iid.startswith("stock-"):
@@ -41,7 +62,7 @@ if iid.startswith("stock-"):
     _pool = json.load(open(REPO / "config" / "backup_pool.json")).get("items") or []
     STOCK = next((dict(b) for b in _pool if b.get("id") == f"backup-{_slug}"), None)
     if STOCK is None:
-        sys.exit(f"stock topic backup-{_slug} not found")
+        _retired_topic_exit(iid, f"stock topic backup-{_slug} not in backup_pool (retired)")
     STOCK.pop("slot", None)
     STOCK["id"] = iid
     STOCK["stock"] = True
@@ -55,7 +76,7 @@ elif "@" in iid:
     _pool = json.load(open(REPO / "config" / "backup_pool.json")).get("items") or []
     BACKUP = next((dict(b) for b in _pool if b["id"] == _bid), None)
     if BACKUP is None:
-        sys.exit(f"backup item {_bid} not found")
+        _retired_topic_exit(f"{_code}-{_bid[len('backup-'):]}", f"backup item {_bid} not in backup_pool (retired)")
     _d, _t = _code.split("-")
     BACKUP["slot"] = f"{_d[:4]}-{_d[4:6]}-{_d[6:]}T{_t[:2]}:{_t[2:]}:00+05:30"
     BACKUP["backup_item"] = _bid
@@ -344,6 +365,9 @@ def _concat_scene_files(paths, dest):
 MAX_SCENE_CLIPS = 5
 
 
+LAST_BUNDLE = []  # clips merged into the last downloaded bundle
+
+
 def download_scene_bundle(src, skip=None):
     """Download up to 5 official scene clips of this topic and merge them.
 
@@ -425,6 +449,7 @@ def download_scene_bundle(src, skip=None):
         print("  scene clip skips: " + " | ".join(str(e) for e in errors[:8])[:800], flush=True)
     if not paths:
         return None, errors or ["no official scene clips for this topic"]
+    LAST_BUNDLE[:] = list(useds)
     if not _concat_scene_files(paths, src):
         return None, errors + ["failed to merge official scene clips"]
     # Per-clip trim is 180s, but two clips can still exceed the 210s bundle
@@ -723,13 +748,31 @@ def _qc_only_retry(prev, auto_retries):
         return None
     work = OUT / f"work_{iid}_qc"
     work.mkdir(parents=True, exist_ok=True)
-    gem_qc = run_gemini_qc(dest, work)
+    prev_gate = prev.get("gate") if isinstance(prev.get("gate"), dict) else {}
+    if prev.get("qc_status") == "pass" and isinstance(prev_gate.get("gemini_qc"), dict):
+        gem_qc = prev_gate["gemini_qc"]  # QC already passed; only the logo verdict was missing
+    else:
+        gem_qc = run_gemini_qc(dest, work)
     verdict = qc_verdict(gem_qc)
     print(f"gemini QC (retry): {verdict}", json.dumps(gem_qc, ensure_ascii=False) if gem_qc else "")
+    lg = None
+    if verdict == "pass":
+        # HARD: the whole-video logo scan must pass on THIS file before it is ever marked done.
+        import logo_guard
+        try:
+            lg = logo_guard.scan_video(dest, work, layout=prev.get("layout"))
+        except Exception as e:
+            lg = {"ok": None, "error": str(e)}
+        print("logo scan (retry):", json.dumps(lg, ensure_ascii=False)[:600])
+        if lg.get("ok") is False:
+            print("  logo found in kept render; dropping it and rendering fresh", flush=True)
+            return "rerender"
+        if lg.get("ok") is None:
+            return "skipped"
     extra = {k: prev.get(k) for k in (
         "release_url", "asset_url", "cover_url", "qa", "drop_t", "energy", "source",
         "music", "music_credit", "description_final", "gate", "no_publish",
-        "scenes_picked",
+        "scenes_picked", "layout",
     ) if prev.get(k) is not None}
     attempts = list(prev.get("attempts") or [])
     attempts.append({"attempt": "qc_retry", "ok": verdict == "pass",
@@ -740,6 +783,9 @@ def _qc_only_retry(prev, auto_retries):
         if isinstance(g, dict):
             g = dict(g)
             g["gemini_qc"] = gem_qc
+            g["logo_scan"] = lg
+            g["logo_verdict"] = True
+            g["failures"] = []
             g["ok"] = True
             extra["gate"] = g
         write("done", (prev.get("detail") or "rendered") + " (QC retry pass)",
@@ -764,7 +810,20 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
     last = None
     src_i = 0
     expand_rounds = 0
+    prev_bundle = ()
+    global SOURCES_RENDERED
     while True:
+        if src_i > 0 or SOURCES_RENDERED > 0:
+            if SOURCES_RENDERED >= MAX_SOURCES_PER_JOB:
+                print(f"  source cap: {SOURCES_RENDERED} sources rendered this job; stopping fall-through", flush=True)
+                return False, dict(last or {"attempt": n, "ok": False, "source": None, "music": None},
+                                   error=f"source cap {MAX_SOURCES_PER_JOB} reached; last: "
+                                         + str((last or {}).get("error") or "none")[:500], capped=True)
+            if not _budget_left_for(SOURCE_EST_S[0]):
+                return False, dict(last or {"attempt": n, "ok": False, "source": None, "music": None},
+                                   error="time budget reached; last: " + str((last or {}).get("error") or "none")[:500],
+                                   capped=True)
+        t_src = time.monotonic()
         used, errors = download_source(src, force_fallback=force_fallback, skip=tried)
         if not used:
             if last:
@@ -794,11 +853,21 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
             out = OUT / f"{iid}_1080_a{suffix}.mp4"
             qa_json = OUT / f"{iid}_qa_a{suffix}.json"
             work = OUT / f"work_{iid}_a{suffix}"
+        bundle = tuple(LAST_BUNDLE)
+        if expand_rounds and bundle and bundle == prev_bundle:
+            # The "fetch more clips" round added nothing new (e.g. YouTube extraction failed):
+            # re-rendering the identical bundle can only fail the same way.
+            print("  expanded bundle is identical (no new official clip downloaded); not re-rendering it", flush=True)
+            expand_rounds = 99
+            continue
+        prev_bundle = bundle
+        SOURCES_RENDERED += 1
         rc, qa, credit, checks = run_pipeline(
             src, out, qa_json, work,
             relax=relax, alt_scenes=alt_scenes,
             exclude_music=exclude_music, music_salt=music_salt,
         )
+        SOURCE_EST_S[0] = max(SOURCE_EST_S[0], time.monotonic() - t_src)
         if rc != 0 or not out.exists():
             reason = f"pipeline/QA failed (exit {rc}): " + "; ".join((qa.get("issues") or [])[:5])[:800]
             if not reason.endswith(")") and not qa.get("issues"):
@@ -860,6 +929,7 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
                 extra = publish(final, fw, fh, up, used, checks, credit, qa)
                 extra["gate"] = {"ok": False, "failures": ["gemini QC skipped (unavailable/budget)"],
                                  "gemini_qc": "skipped (unavailable/budget)"}
+                extra["layout"] = _layout(work)
                 extra["scenes_picked"] = scenes_picked(work)
                 extra["edit_mode"] = (qa or {}).get("edit_mode") or item.get("edit_mode")
                 extra.update({"attempt": n, "ok": False, "error": "gemini QC skipped",
@@ -868,6 +938,18 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
                 return False, extra
             g = gate.run_gate(final, qa_obj=qa, checks=checks, item=item, work=work, gemini_qc=gem_qc, out_res=OUT_RES)
             print("publish gate:", json.dumps(g, ensure_ascii=False, default=str))
+            if not g["ok"] and g.get("logo_pending_only"):
+                # Everything passed except a missing logo verdict (Gemini outage). Keep this render
+                # (upload now) and re-check it later; never re-render a good cut for a transient error.
+                extra = publish(final, fw, fh, up, used, checks, credit, qa)
+                extra["gate"] = g
+                extra["layout"] = _layout(work)
+                extra["scenes_picked"] = scenes_picked(work)
+                extra["edit_mode"] = (qa or {}).get("edit_mode") or item.get("edit_mode")
+                extra.update({"attempt": n, "ok": False, "error": "final logo scan: no Gemini verdict",
+                              "qc_pending": True, "logo_pending": True, "qc_status": verdict,
+                              "source": used, "music": credit.get("file"), "qa": checks})
+                return False, extra
             if not g["ok"]:
                 last = {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
                         "gate": g, "qc_status": verdict,
@@ -876,6 +958,7 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
                 continue
             extra = publish(final, fw, fh, up, used, checks, credit, qa)
             extra["gate"] = g
+            extra["layout"] = _layout(work)
             extra["scenes_picked"] = scenes_picked(work)
             extra["edit_mode"] = (qa or {}).get("edit_mode") or item.get("edit_mode")
             extra["qc_status"] = "pass"
@@ -888,9 +971,25 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
 RECENT_MUSIC = []
 AVOID_OPENERS = []
 JOB_T0 = time.monotonic()
-# render.yml job cap is 180 min; stop starting new attempts well before it so the
-# result json is always written (no more silent cancel at the job timeout).
-JOB_BUDGET_S = float(os.environ.get("SKY_JOB_BUDGET_MIN", "140")) * 60.0
+# render.yml "Render" step timeout is 150 min. Soft budget: no new source/attempt/title is
+# started past 115 min. Hard cap: at 138 min a watchdog stops the job and writes the result
+# json with the exact reason (v10 Weathering looped source->title->backup until the step was
+# killed at 150 min with no result).
+JOB_BUDGET_S = float(os.environ.get("SKY_JOB_BUDGET_MIN", "115")) * 60.0
+HARD_CAP_S = float(os.environ.get("SKY_HARD_CAP_MIN", "138")) * 60.0
+MAX_SOURCES_PER_JOB = int(os.environ.get("SKY_MAX_SOURCES", "12"))
+SOURCES_RENDERED = 0
+SOURCE_EST_S = [480.0]  # running max of one source render (download+stabilize+cut+QA)
+LAST_INFO = {}
+ATTEMPTS_LOG_REF = []
+
+
+class JobTimeout(Exception):
+    pass
+
+
+def _on_hard_cap(signum, frame):
+    raise JobTimeout(f"hard time cap {HARD_CAP_S/60:.0f} min reached")
 
 
 def _budget_left_for(next_est_s: float) -> bool:
@@ -905,8 +1004,15 @@ def _budget_left_for(next_est_s: float) -> bool:
 RESULT_KEYS = (
     "release_url", "asset_url", "cover_url", "qa", "drop_t", "energy", "source",
     "music", "music_credit", "description_final", "gate", "no_publish",
-    "scenes_picked", "qc_status",
+    "scenes_picked", "qc_status", "layout",
 )
+
+
+def _layout(work):
+    try:
+        return json.loads((Path(work) / "layout.json").read_text())
+    except Exception:
+        return None
 
 
 def _result_extra(info):
@@ -919,12 +1025,14 @@ def _record_attempt(attempts_log, info):
 
 def _write_qc_pending(info, attempts_log, auto_retries):
     """Render exists but Gemini QC was skipped — never mark done/ready."""
-    write("retry_queued",
-          "gemini QC skipped; will retry QC with the next key (no re-render)",
-          auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
-          attempts=attempts_log, last_error="gemini QC skipped",
-          qc_pending=True, qc_status="skipped", **_result_extra(info))
-    print(f"::warning::{iid}: QC skipped; queued QC retry with next Gemini key")
+    why = info.get("error") or "gemini QC skipped"
+    fields = dict(_result_extra(info))
+    fields.update(auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
+                  attempts=attempts_log, last_error=why, qc_pending=True,
+                  qc_status=info.get("qc_status") or "skipped",
+                  logo_pending=bool(info.get("logo_pending")))
+    write("retry_queued", f"{why}; render kept, will re-check with the next key (no re-render)", **fields)
+    print(f"::warning::{iid}: {why}; queued re-check with next Gemini key")
     return 0
 
 
@@ -1009,10 +1117,12 @@ def main():
     global RECENT_MUSIC
     RECENT_MUSIC = recent
 
+    rc = None
     if prev.get("qc_pending") and prev.get("asset_url"):
         rc = _qc_only_retry(prev, auto_retries)
         if rc in (0, 1):
             return rc
+    if rc == "skipped":
         print("  QC-only retry still skipped; leaving item queued", flush=True)
         if auto_retries < MAX_AUTO_RETRIES:
             write("retry_queued", "gemini QC still skipped; will retry QC with the next key",
@@ -1020,15 +1130,15 @@ def main():
                   attempts=list(prev.get("attempts") or []) + [{"attempt": "qc_retry", "ok": False,
                                                                 "error": "gemini QC skipped"}],
                   last_error="gemini QC skipped", qc_pending=True, qc_status="skipped",
-                  **{k: prev[k] for k in RESULT_KEYS if k in prev})
+                  **{k: prev[k] for k in RESULT_KEYS if k in prev and k != "qc_status"})
             return 0
         write("failed", "gemini QC skipped after retries; not marking ready",
               auto_retries=auto_retries, max_auto_retries=MAX_AUTO_RETRIES,
               attempts=prev.get("attempts") or [], last_error="gemini QC skipped",
-              qc_status="skipped", **{k: prev[k] for k in RESULT_KEYS if k in prev})
+              qc_status="skipped", **{k: prev[k] for k in RESULT_KEYS if k in prev and k != "qc_status"})
         return 1
 
-    attempts_log = []
+    attempts_log = ATTEMPTS_LOG_REF
     tried = title_swap.item_keys(item)
     swaps = 0
     backups = 0
@@ -1040,6 +1150,8 @@ def main():
         _record_attempt(attempts_log, info)
         if info.get("qc_pending"):
             return _write_qc_pending(info, attempts_log, auto_retries)
+        if info.get("capped"):
+            return _give_up(attempts_log, auto_retries, last_info=info)
         if ok:
             detail = info["detail"]
             if item.get("title_swaps"):
@@ -1052,7 +1164,7 @@ def main():
             nonlocal swaps, backups
             err = (current or {}).get("error") or (attempts_log[-1].get("error") if attempts_log else "")
             # Do not start another long render if the job budget is already gone.
-            if not _budget_left_for(est):
+            if not _budget_left_for(min(est, SOURCE_EST_S[0] * 2)) or SOURCES_RENDERED >= MAX_SOURCES_PER_JOB:
                 return "give_up"
             action = title_swap.recovery_action(
                 err, sources_left=False,
@@ -1080,6 +1192,8 @@ def main():
         _record_attempt(attempts_log, info)
         if info.get("qc_pending"):
             return _write_qc_pending(info, attempts_log, auto_retries)
+        if info.get("capped"):
+            return _give_up(attempts_log, auto_retries, last_info=info)
         if ok:
             write("done", info["detail"] + " (retry: sources fallback)", auto_retries=auto_retries,
                   max_auto_retries=MAX_AUTO_RETRIES, attempts=attempts_log, last_error=None,
@@ -1098,6 +1212,8 @@ def main():
         _record_attempt(attempts_log, info)
         if info.get("qc_pending"):
             return _write_qc_pending(info, attempts_log, auto_retries)
+        if info.get("capped"):
+            return _give_up(attempts_log, auto_retries, last_info=info)
         if ok:
             write("done", info["detail"] + " (retry: alt music/scenes, non-hard relax)", auto_retries=auto_retries,
                   max_auto_retries=MAX_AUTO_RETRIES, attempts=attempts_log, last_error=None,
@@ -1149,5 +1265,42 @@ def _give_up(attempts_log, auto_retries, last_info=None):
     print(f"::error::{iid}: {last[:300]}")
     return 1
 
+def _crash_result(reason):
+    """Always leave a result json with the exact reason (hard cap, crash) before the job dies."""
+    try:
+        log = list(ATTEMPTS_LOG_REF) or [{"attempt": 0, "ok": False, "error": reason}]
+        prev = read_prev()
+        auto = int(prev.get("auto_retries") or 0) + (1 if prev.get("status") == "retry_queued" else 0)
+        last = str(log[-1].get("error") or "")
+        detail = f"{reason}" + (f"; last attempt: {last}" if last and last != reason else "")
+        if auto < MAX_AUTO_RETRIES:
+            write("retry_queued", ("render stopped: " + detail)[:800], auto_retries=auto,
+                  max_auto_retries=MAX_AUTO_RETRIES, attempts=log, last_error=detail[:800])
+            print(f"::warning::{iid}: {detail[:300]} (auto-retry queued)")
+            return 0
+        write("failed", ("render stopped: " + detail)[:800], auto_retries=auto,
+              max_auto_retries=MAX_AUTO_RETRIES, attempts=log, last_error=detail[:800])
+        print(f"::error::{iid}: {detail[:300]}")
+        return 1
+    except Exception as e:  # never mask the original failure
+        print(f"::error::{iid}: could not write result json: {e}")
+        return 1
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    import signal
+    import traceback
+    signal.signal(signal.SIGALRM, _on_hard_cap)
+    signal.alarm(max(60, int(HARD_CAP_S - (time.monotonic() - JOB_T0))))
+    try:
+        rc = main()
+    except JobTimeout as e:
+        rc = _crash_result(str(e))
+    except SystemExit:
+        raise
+    except Exception as e:
+        traceback.print_exc()
+        rc = _crash_result(f"render_item crashed: {type(e).__name__}: {e}"[:400])
+    finally:
+        signal.alarm(0)
+    sys.exit(rc)
