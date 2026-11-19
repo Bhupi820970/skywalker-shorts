@@ -1,21 +1,21 @@
 {
   "id": "20261119-1230-mhafinal",
-  "status": "retry_queued",
-  "detail": "all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): No usable scenes after filtering",
-  "at": "2026-11-19 07:21 IST",
-  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44429554367",
+  "status": "failed",
+  "detail": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering; only 7.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-19 09:24 IST",
+  "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/44443175394",
   "slot": "2026-11-19T12:30:00+05:30",
-  "title": "Bakugo finally understood Deku | My Hero Academia | #edit",
-  "hook": "Bakugo finally understood Deku",
-  "description": "Bakugo finally understood Deku. From official My Hero Academia clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mhafinal",
+  "title": "Why he is the villain 💀 | Hallway massacre | #edit",
+  "hook": "Why he is the villain",
+  "description": "Why he is the villain. From official Animal clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #animal #ranbirkapoor #bollywood",
   "tags": [
-    "mhafinal",
-    "anime",
-    "animeedit",
+    "animal",
+    "ranbirkapoor",
+    "bollywood",
     "edit",
-    "shorts",
-    "trending",
-    "deku"
+    "phonk",
+    "aura",
+    "action"
   ],
   "queue_meta": null,
   "gemini_meta": false,
@@ -27,14 +27,13 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 14.5,
-      "ok": true
+      "err": "TimeoutError"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 429"
+      "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
@@ -46,21 +45,7 @@
       "purpose": "logo_scenes",
       "model": "gemini-flash-latest",
       "key": "key1",
-      "s": 9.9,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 4.4,
-      "ok": true
+      "err": "TimeoutError"
     },
     {
       "purpose": "logo_scenes",
@@ -84,21 +69,7 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 4.2,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.0,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 4.8,
+      "s": 6.3,
       "ok": true
     },
     {
@@ -109,136 +80,73 @@
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key5",
-      "err": "HTTP 503"
+      "s": 1.7,
+      "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 13.5,
+      "s": 6.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 7.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 66.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 14.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 8.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 40.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 15.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 30.6,
       "ok": true
     }
   ],
@@ -246,12 +154,20 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "words": "MY HERO ACADEMIA",
-  "edit_format": null,
-  "title_swaps": null,
-  "swapped_from": null,
-  "swapped_to": null,
-  "auto_retries": 0,
+  "words": "ANIMAL",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "mhafinal",
+      "from_words": "MY HERO ACADEMIA",
+      "to": "animal",
+      "to_words": "ANIMAL",
+      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
+    }
+  ],
+  "swapped_from": "mhafinal",
+  "swapped_to": "animal",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -261,7 +177,15 @@
       "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/mhafinal_scene3_h264.mp4",
       "music": "pr_nobatidoslowed.mp3",
       "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering; only 7.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/chatgpt820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
+      "music": "pr_nobatidoslowed.mp3",
+      "qc_status": null
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): No usable scenes after filtering"
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering; only 7.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
 }

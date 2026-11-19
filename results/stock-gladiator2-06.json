@@ -1,8 +1,8 @@
 {
   "id": "stock-gladiator2-06",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 10.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-16 14:24 IST",
+  "status": "failed",
+  "detail": "stock topic backup-gladiator2 not in backup_pool (retired)",
+  "at": "2026-11-19T02:18:46Z",
   "run_url": "https://github.com/chatgpt820970/skywalker-shorts/actions/runs/43833058680",
   "slot": null,
   "title": "Rome wants blood again | Lucius enters the arena | #edit",
@@ -40,7 +40,7 @@
   "stock": true,
   "stock_topic": "backup-gladiator2",
   "spare": true,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -65,5 +65,6 @@
       "music": "sw_interworldrapturephonk.mp3"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 10.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+  "last_error": "stock topic backup-gladiator2 not in backup_pool (retired)",
+  "retired": true
 }
