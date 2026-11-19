@@ -1226,6 +1226,13 @@
       "queued_at": "2026-11-19 09:37 IST"
     },
     {
+      "id": "stock-mhayourenext-01",
+      "topic_id": "backup-mhayourenext",
+      "slug": "mhayourenext",
+      "status": "pending",
+      "queued_at": "2026-11-19 10:05 IST"
+    },
+    {
       "id": "stock-missionimpossible-01",
       "topic_id": "backup-missionimpossible",
       "slug": "missionimpossible",
@@ -1245,6 +1252,13 @@
       "queued_at": "2026-11-15 02:23 IST",
       "result_id": "stock-missionimpossible-02",
       "asset_url": "https://github.com/chatgpt820970/skywalker-shorts/releases/download/backup-stock/stock-missionimpossible-02.mp4"
+    },
+    {
+      "id": "stock-mononoke-01",
+      "topic_id": "backup-mononoke",
+      "slug": "mononoke",
+      "status": "pending",
+      "queued_at": "2026-11-19 10:05 IST"
     },
     {
       "id": "stock-mortalkombat2-01",
