@@ -1,30 +1,25 @@
 {
-  "at": "2026-11-19 08:19 IST",
+  "at": "2026-11-19 09:36 IST",
   "slots_checked": 11,
   "ready": [
     {
-      "slot": "2026-11-19T06:30:00+05:30",
+      "slot": "2026-11-19T09:00:00+05:30",
       "id": "stock",
       "how": "backup_stock"
     },
     {
-      "slot": "2026-11-19T09:00:00+05:30",
-      "id": "20261119-0900-vinlandsagathorfinn",
-      "how": "queued+fallback"
-    },
-    {
       "slot": "2026-11-19T11:30:00+05:30",
-      "id": "backup-mashle",
+      "id": "backup-mononoke",
       "how": "backup_pool"
     },
     {
       "slot": "2026-11-19T12:30:00+05:30",
-      "id": "20261119-1230-mhafinal",
-      "how": "queued+fallback"
+      "id": "backup-mushokutensei2",
+      "how": "backup_pool"
     },
     {
       "slot": "2026-11-19T13:30:00+05:30",
-      "id": "backup-mhafinal",
+      "id": "backup-onepieceegghead",
       "how": "backup_pool"
     },
     {
@@ -55,6 +50,11 @@
     {
       "slot": "2026-11-20T06:30:00+05:30",
       "id": "20261120-0630-apothecarydiaries2",
+      "how": "queued+fallback"
+    },
+    {
+      "slot": "2026-11-20T09:00:00+05:30",
+      "id": "20261120-0900-firforce3",
       "how": "queued+fallback"
     }
   ],
@@ -136,6 +136,7 @@
     "stock-avatarfireandash-03",
     "stock-boyandheron-01",
     "stock-kalki2898ad-01",
+    "20261119-0900-bluegiant",
     "20261114-1330-dune2",
     "20261116-1600-venom3",
     "stock-firforce3-03",
@@ -144,11 +145,11 @@
     "stock-toystory5-01"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 15,
-  "stock_pending": 15,
-  "stock_used": 23,
+  "stock_ready": 14,
+  "stock_pending": 8,
+  "stock_used": 24,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": true
 }

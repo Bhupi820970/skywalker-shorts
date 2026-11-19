@@ -76,7 +76,7 @@
       "id": "stock-alienromulus-09",
       "topic_id": "backup-alienromulus",
       "slug": "alienromulus",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 15:46 IST",
       "result_id": "stock-alienromulus-09"
     },
@@ -149,7 +149,7 @@
       "id": "stock-aotfinal-08",
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
-      "status": "failed",
+      "status": "pending",
       "queued_at": "2026-11-19 07:37 IST",
       "result_id": "stock-aotfinal-08"
     },
@@ -158,7 +158,8 @@
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
       "status": "pending",
-      "queued_at": "2026-11-19 07:47 IST"
+      "queued_at": "2026-11-19 07:47 IST",
+      "result_id": "stock-aotfinal-09"
     },
     {
       "id": "stock-apothecarydiaries2-01",
@@ -525,7 +526,7 @@
       "id": "stock-chainsawman-09",
       "topic_id": "backup-chainsawman",
       "slug": "chainsawman",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 17:20 IST",
       "result_id": "stock-chainsawman-09"
     },
@@ -597,7 +598,7 @@
       "id": "stock-civilwar-09",
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 17:19 IST",
       "result_id": "stock-civilwar-09"
     },
@@ -605,7 +606,7 @@
       "id": "stock-civilwar-10",
       "topic_id": "backup-civilwar",
       "slug": "civilwar",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 17:20 IST",
       "result_id": "stock-civilwar-10"
     },
@@ -1062,7 +1063,7 @@
       "id": "stock-gladiator2-06",
       "topic_id": "backup-gladiator2",
       "slug": "gladiator2",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 14:09 IST",
       "result_id": "stock-gladiator2-06"
     },
@@ -1154,7 +1155,7 @@
       "id": "stock-jurassicworldrebirth-07",
       "topic_id": "backup-jurassicworldrebirth",
       "slug": "jurassicworldrebirth",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 14:16 IST",
       "result_id": "stock-jurassicworldrebirth-07"
     },
@@ -1172,7 +1173,8 @@
       "topic_id": "backup-kaiju8s2",
       "slug": "kaiju8s2",
       "status": "pending",
-      "queued_at": "2026-11-19 07:47 IST"
+      "queued_at": "2026-11-19 07:47 IST",
+      "result_id": "stock-kaiju8s2-01"
     },
     {
       "id": "stock-kalki2898ad-01",
@@ -1316,7 +1318,7 @@
       "id": "stock-onepiece-06",
       "topic_id": "backup-onepiece",
       "slug": "onepiece",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 14:16 IST",
       "result_id": "stock-onepiece-06"
     },
@@ -1517,7 +1519,7 @@
       "id": "stock-venom3-03",
       "topic_id": "backup-venom3",
       "slug": "venom3",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-16 17:19 IST",
       "result_id": "stock-venom3-03"
     },
