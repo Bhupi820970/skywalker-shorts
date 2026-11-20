@@ -100,8 +100,10 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "queue: official link ${{ steps.go.outputs.ids }}"
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
-      - name: Try download on GitHub (often blocked) and note the box fallback
-        if: steps.go.outputs.ids != ''
+      # Disabled: GitHub never downloads (bot wall). The box service picks the queued link up and
+      # uploads the clip to the sources release; render reads it from there.
+      - name: Try download on GitHub (disabled; box downloads)
+        if: ${{ false }}
         env:
           GH_TOKEN: ${{ github.token }}
           LINK_URL: ${{ github.event.inputs.link_url }}

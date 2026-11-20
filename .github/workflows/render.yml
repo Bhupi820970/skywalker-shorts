@@ -169,7 +169,7 @@ jobs:
             done
           fi
           ffmpeg -hide_banner -filters | grep -q vidstabdetect || { echo "ffmpeg still lacks vidstab"; exit 1; }
-          pip install -q -r requirements.txt "yt-dlp[default]"
+          pip install -q -r requirements.txt  # no yt-dlp: renders read clips ONLY from the sources release (box downloads)
           # Demucs (htdemucs, CPU) isolates the actors' voices from the trailer audio for the clean dialogue mix.
           pip install -q torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
           pip install -q demucs==4.1.0  # 4.1 pulls htdemucs from Hugging Face (dl.fbaipublicfiles cert expired)
@@ -189,6 +189,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           SKY_WHISPER_MODEL: small
+          SKY_RELEASE_ONLY: "1"
           SKY_MAX_SOURCE_S: "180"
           SKY_CHUNKED: "auto"
           SKY_FFMPEG_THREADS: "2"

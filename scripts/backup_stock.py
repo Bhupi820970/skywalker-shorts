@@ -105,6 +105,36 @@ def load_pool(root: Path | None = None) -> list[dict]:
         return []
 
 
+def release_clip_count(b: dict, assets: set[str]) -> int:
+    """How many of this pool topic's scene clips already exist on the sources release."""
+    import sourcing
+    names = {str(u or "").rstrip("/").rsplit("/", 1)[-1] for u in (b.get("fallback_mp4") or []) + (b.get("sources") or [])}
+    names |= set(b.get("scene_assets") or [])
+    have = {n for n in names if n in assets and not sourcing.is_trailer_source(n)}
+    have |= set(sourcing.release_scene_assets(pool_slug(b), assets))
+    return len(have)
+
+
+def release_backed_pool(pool: list[dict]) -> list[dict]:
+    """On GitHub (release-only) stock is filled only from topics whose clips are on the release.
+
+    Topics with >=2 clips first (enough unique shots); 1-clip topics only if nothing better exists.
+    Off GitHub / when the release cannot be listed the pool is returned unchanged.
+    """
+    try:
+        import sourcing
+    except Exception:
+        return pool
+    if not sourcing.release_only():
+        return pool
+    assets = sourcing.release_source_assets()
+    if assets is None:
+        return pool
+    counted = [(release_clip_count(b, assets), b) for b in pool]
+    two = [b for n, b in counted if n >= 2]
+    return two or [b for n, b in counted if n >= 1]
+
+
 def has_preuploaded(it: dict) -> bool:
     """True when the pool topic has at least one official scene clip (never a trailer)."""
     try:
@@ -131,6 +161,17 @@ def must_not_publish(r: dict | None) -> bool:
     return False
 
 
+_DOWNLOAD_TOOLING = (
+    "sign in to confirm", "not a bot", "failed to extract", "yt-dlp", "release-only",
+    "no official scene clips", "no unused official source", "not on the sources release",
+)
+
+
+def _is_download_tooling(e: str) -> bool:
+    e = (e or "").lower()
+    return any(m in e for m in _DOWNLOAD_TOOLING)
+
+
 def is_retire_worthy_error(err: str | None, r: dict | None = None) -> bool:
     """True when this failure means the topic's official footage is unusable.
 
@@ -138,15 +179,20 @@ def is_retire_worthy_error(err: str | None, r: dict | None = None) -> bool:
     (yt-dlp fixed-output-name, ffmpeg install) and timeouts do not.
     """
     e = (err or "").lower()
+    if _is_download_tooling(e) and not any(
+            m in e for m in ("reject logo", "reject burned-in", "404")):
+        return False  # the failure itself was a GitHub download problem, not the footage
     if r:
         e = (e + " " + str(r.get("detail") or "")).lower()
     source_markers = (
         "reject logo", "reject logo/watermark", "reject burned-in",
         "http error 404", "404: not found", "error 404",
-        "sign in to confirm",
-        "no official scene clips", "no unused official source",
     )
     has_source = any(m in e for m in source_markers)
+    # GitHub-side download problems (YouTube bot wall, yt-dlp, clip not on the release yet) say
+    # nothing about the footage: the box fetches those clips, so the topic is never retired for them.
+    if not has_source and _is_download_tooling(e):
+        return False
     tooling_only = (
         ("fixed output name" in e or "install ffmpeg" in e or "xz -t" in e)
         and not has_source
@@ -192,6 +238,10 @@ def retired_slugs(root: Path | None = None, man: dict | None = None) -> set[str]
         if isinstance(row, str) and row.strip():
             out.add(row.strip().lower())
         elif isinstance(row, dict) and row.get("slug"):
+            reason = str(row.get("reason") or "").lower()
+            if _is_download_tooling(reason) and not any(
+                    m in reason for m in ("reject logo", "reject burned-in", "404")):
+                continue  # retired only for a GitHub download failure: usable again (row kept)
             out.add(str(row["slug"]).strip().lower())
     return out
 
@@ -850,6 +900,7 @@ def next_refill_ids(root: Path | None = None, limit: int | None = None,
     if need <= 0 or cap <= 0:
         return []
     pool = [b for b in load_pool(root) if has_preuploaded(b)]
+    pool = release_backed_pool(pool)
     if not pool:
         return []
     existing_ids = {e.get("id") for e in man.get("items") or []}

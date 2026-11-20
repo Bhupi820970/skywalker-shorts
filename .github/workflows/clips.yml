@@ -59,7 +59,9 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "clip requests: $(date -u +%F)"
           for i in 1 2 3 4; do git pull --rebase -q && git push && break; sleep 7; done
+      # Disabled: GitHub never downloads clips (bot wall). The box service fetches every request.
       - name: Fetch non-YouTube official clips
+        if: ${{ false }}
         timeout-minutes: 90
         env:
           GH_TOKEN: ${{ github.token }}

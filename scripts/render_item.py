@@ -393,7 +393,7 @@ def download_scene_bundle(src, skip=None):
     for u in list_source_siblings():
         if u not in urls and not sourcing.is_trailer_source(u):
             urls.append(u)
-    allow_yt = os.environ.get("SKY_ALLOW_YOUTUBE", "1") != "0"
+    allow_yt = os.environ.get("SKY_ALLOW_YOUTUBE", "1") != "0" and not sourcing.release_only()
     for u in sourcing.build_candidate_urls(item, include_youtube=allow_yt):
         if u and not sourcing.is_trailer_source(u) and u not in urls:
             urls.append(u)
@@ -405,6 +405,18 @@ def download_scene_bundle(src, skip=None):
             if u and u not in urls and not sourcing.is_trailer_source(u):
                 urls.append(u)
     urls = [u for u in urls if not _is_skipped(u, skip) and not _is_skipped(f"gh:{u}", skip)]
+    if sourcing.release_only():
+        # GitHub never downloads from YouTube/X (bot wall). Only clips the box already put on the
+        # `sources` release are used; anything else is the box's job (config/scene_requests.json).
+        have = sourcing.release_source_assets()
+        rel = [u for u in urls if sourcing.is_release_url(u)]
+        missing = [u for u in urls if u not in rel]
+        if have is not None:
+            missing += [u for u in rel if u.rsplit("/", 1)[-1] not in have]
+            rel = [u for u in rel if u.rsplit("/", 1)[-1] in have]
+        if missing:
+            errors.append(f"release-only: {len(missing)} clip(s) not on the sources release yet (box fetches them)")
+        urls = rel
     urls.sort(key=sourcing._rank_url)
     paths, useds = [], []
     for u in urls:
@@ -425,7 +437,7 @@ def download_scene_bundle(src, skip=None):
         )
         if is_direct:
             ok, info = download_url(u, part)
-        if not ok:
+        if not ok and not sourcing.release_only():
             ok, info = sourcing.download_ytdlp(u, part, allow_youtube=allow_yt)
         if not ok or not _ok_src(part):
             errors.append(info or f"fail:{u}")

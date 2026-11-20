@@ -358,6 +358,26 @@ def _asset_of(u: str) -> str:
     return u.rsplit("/", 1)[-1] if "/releases/download/sources/" in (u or "") else ""
 
 
+def _slot_too_late(it: dict, hours: float = 6.0) -> bool:
+    raw = str(it.get("slot") or "")
+    try:
+        dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    if not dt.tzinfo:
+        dt = dt.replace(tzinfo=IST)
+    return dt < datetime.now(IST) - timedelta(hours=hours)
+
+
+def scene_requests() -> list[dict]:
+    """config/scene_requests.json (GitHub's plan: show, scenes, queries, missing assets), soonest slot first."""
+    try:
+        rows = json.loads((REPO / "config" / "scene_requests.json").read_text()).get("requests") or []
+    except Exception:
+        return []
+    return sorted([r for r in rows if r.get("slug")], key=lambda r: (str(r.get("slot") or "9999"), r["slug"]))
+
+
 def needed_clips(days: int = 8) -> list[dict]:
     """Scene assets the queue (today..+days, soonest slot first) and the backup pool point at."""
     out: dict[str, dict] = {}
@@ -371,6 +391,8 @@ def needed_clips(days: int = 8) -> list[dict]:
         for it in items:
             if (it.get("status") or "queued") not in ("queued", "retry_queued"):
                 continue
+            if _slot_too_late(it):
+                continue  # publish skips slots >6h late; spend the box on slots that can still post
             for u in (it.get("fallback_mp4") or []) + (it.get("sources") or []):
                 a = _asset_of(u)
                 if a and ASSET_RX.match(a) and not TRAILER.search(a):
@@ -460,63 +482,87 @@ def step_clips(st: dict, tick=lambda: None, limit: int = 0) -> dict:
     idx = url_index()
     done, failed, search_slugs = [], [], {}
     WORK.mkdir(parents=True, exist_ok=True)
-    log(f"clips: {len(needs)} needed scene clip(s) missing on the release")
-    for n in needs:
-        if limit and len(done) >= limit:
-            break
-        tick()
-        a = n["asset"]
-        url = resolve_url(n, idx)
-        if not url:
-            search_slugs.setdefault(ASSET_RX.match(a).group(1), n["item"])
-            continue
-        if not tries_ok(st, a):
-            continue
-        meta = url_meta(url)
-        why = pre_check(url, meta) or official_reason(meta, n["item"], ASSET_RX.match(a).group(1))
-        if why:
-            log(f"clips: {a}: skip {url} ({why})")
-            count_try(st, a, why)
-            st.setdefault("bad_urls", {})[url] = why
-            search_slugs.setdefault(ASSET_RX.match(a).group(1), n["item"])
-            failed.append(a)
-            continue
-        dest = WORK / a
-        try:
-            if not download_clip(url, dest):
-                count_try(st, a, "download failed")
-                failed.append(a)
-                continue
-            why = vet_file(dest, meta.get("title") or "", meta.get("channel") or meta.get("uploader") or "")
-            if why:
-                log(f"clips: {a}: reject ({why}); skipped, never cropped")
-                count_try(st, a, why)
-                st.setdefault("bad_urls", {})[url] = why
-                search_slugs.setdefault(ASSET_RX.match(a).group(1), n["item"])
-                failed.append(a)
-                continue
-            if upload("sources", dest):
-                m = probe(dest)
-                rec = {"asset": a, "id": "yt:" + meta["id"] if "youtube" in url or "youtu.be" in url else meta.get("id"),
-                       "url": url, "title": (meta.get("title") or "")[:120],
-                       "channel": meta.get("channel") or meta.get("uploader") or "", "kind": "scene",
-                       "res": f"{m['w']}x{m['h']}", "for": n["why"], "by": "box",
-                       "at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
-                st.setdefault("uploaded", []).append(rec)
-                st["uploaded"] = st["uploaded"][-1000:]
-                save_state(st)
-                done.append(rec)
-                log(f"clips: uploaded {a} {rec['res']} [{n['why']}] {rec['channel']}: {rec['title'][:50]}")
-            else:
-                count_try(st, a, "upload failed")
-                failed.append(a)
-        finally:
-            for f in WORK.glob(Path(a).stem + "*"):
-                f.unlink(missing_ok=True)
-    # titles with no usable original URL: official search (X first, then YouTube / DM / Bilibili) via clip_fetch
+    reqs = scene_requests()
+    log(f"clips: {len(needs)} needed scene clip(s) missing on the release; "
+        f"{len(reqs)} scene request(s) ({sum(1 for r in reqs if r.get('for') == 'slot')} for upcoming slots)")
+    # Upcoming slots first: their exact assets, then an official search for any slot title that still
+    # has <2 clips on the release. The backup-pool backlog comes after.
+    slot_needs = [n for n in needs if n["why"] == "queue"]
+    pool_needs = [n for n in needs if n["why"] != "queue"]
+    req_by_slug = {r["slug"]: r for r in reqs}
+    slot_search = {}
+    for r in reqs:
+        if r.get("for") == "slot" and len(r.get("on_release") or []) < 2:
+            slot_search.setdefault(r["slug"], r)
+
+    def _search_now(slugs: dict) -> int:
+        if not slugs or limit:
+            return 0
+        rows = {k: dict(req_by_slug.get(k) or {}, **{kk: vv for kk, vv in v.items() if vv}) for k, v in slugs.items()}
+        return search_fill(st, rows, tick)
+
     searched = 0
-    if search_slugs and not limit:
-        searched = search_fill(st, search_slugs, tick)
+    for phase, plist in (("slot", slot_needs), ("pool", pool_needs)):
+      for n in plist:
+          if limit and len(done) >= limit:
+              break
+          tick()
+          a = n["asset"]
+          url = resolve_url(n, idx)
+          if not url:
+              search_slugs.setdefault(ASSET_RX.match(a).group(1), n["item"])
+              continue
+          if not tries_ok(st, a):
+              continue
+          meta = url_meta(url)
+          why = pre_check(url, meta) or official_reason(meta, n["item"], ASSET_RX.match(a).group(1))
+          if why:
+              log(f"clips: {a}: skip {url} ({why})")
+              count_try(st, a, why)
+              st.setdefault("bad_urls", {})[url] = why
+              search_slugs.setdefault(ASSET_RX.match(a).group(1), n["item"])
+              failed.append(a)
+              continue
+          dest = WORK / a
+          try:
+              if not download_clip(url, dest):
+                  count_try(st, a, "download failed")
+                  failed.append(a)
+                  continue
+              why = vet_file(dest, meta.get("title") or "", meta.get("channel") or meta.get("uploader") or "")
+              if why:
+                  log(f"clips: {a}: reject ({why}); skipped, never cropped")
+                  count_try(st, a, why)
+                  st.setdefault("bad_urls", {})[url] = why
+                  search_slugs.setdefault(ASSET_RX.match(a).group(1), n["item"])
+                  failed.append(a)
+                  continue
+              if upload("sources", dest):
+                  m = probe(dest)
+                  rec = {"asset": a, "id": "yt:" + meta["id"] if "youtube" in url or "youtu.be" in url else meta.get("id"),
+                         "url": url, "title": (meta.get("title") or "")[:120],
+                         "channel": meta.get("channel") or meta.get("uploader") or "", "kind": "scene",
+                         "res": f"{m['w']}x{m['h']}", "for": n["why"], "by": "box",
+                         "at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+                  st.setdefault("uploaded", []).append(rec)
+                  st["uploaded"] = st["uploaded"][-1000:]
+                  save_state(st)
+                  done.append(rec)
+                  log(f"clips: uploaded {a} {rec['res']} [{n['why']}] {rec['channel']}: {rec['title'][:50]}")
+              else:
+                  count_try(st, a, "upload failed")
+                  failed.append(a)
+          finally:
+              for f in WORK.glob(Path(a).stem + "*"):
+                  f.unlink(missing_ok=True)
+      if phase == "slot":
+          slot_search.update({k: v for k, v in search_slugs.items()})
+          searched += _search_now(slot_search)
+          for k in slot_search:
+              search_slugs.pop(k, None)
+
+    # titles with no usable original URL: official search (X first, then YouTube / DM / Bilibili) via clip_fetch
+    searched += _search_now(search_slugs)
     if done:
         record_status(done)
     st["clips_summary"] = {"at": datetime.now(IST).strftime("%Y-%m-%d %H:%M IST"), "needed_missing": len(needs),
@@ -538,10 +584,12 @@ def search_fill(st: dict, slugs: dict, tick) -> int:
             continue
         words = (it.get("words") or slug).strip()
         reqs.append({"slug": slug, "pillar": it.get("pillar") or "anime", "words": words,
-                     "scene_types": ["fight", "emotional", "aura"],
-                     "search_queries": [f"{words} fight scene official clip", f"{words} best scene official clip",
-                                        f"{words} official clip"],
-                     "official_channels": (cat.get(slug) or {}).get("official_channels") or [],
+                     "scene_types": it.get("scene_types") or ["fight", "emotional", "aura"],
+                     "search_queries": it.get("search_queries") or [
+                         f"{words} fight scene official clip", f"{words} best scene official clip",
+                         f"{words} official clip"],
+                     "official_channels": (cat.get(slug) or {}).get("official_channels")
+                     or it.get("official_channels") or [],
                      "hook": it.get("hook") or "", "title": it.get("title") or "", "tags": it.get("tags") or [],
                      "market": it.get("market") or "US/UK"})
         count_try(st, f"search:{slug}", "search")

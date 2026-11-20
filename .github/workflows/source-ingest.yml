@@ -37,7 +37,9 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
           pip install -q "yt-dlp[default]" curl_cffi
+      # Disabled: GitHub never downloads clips (bot wall). The box service ingests sources.
       - name: Ingest official sources
+        if: ${{ false }}
         env:
           GH_TOKEN: ${{ github.token }}
           TOPICS: ${{ github.event.inputs.topics }}

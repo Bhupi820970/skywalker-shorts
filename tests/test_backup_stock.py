@@ -527,7 +527,8 @@ def test_fixed_output_name_alone_is_not_retire_worthy():
     assert backup_stock.is_retire_worthy_error(
         "Fixed output name but more than one file | reject logo/watermark: gh:x.mp4")
     assert backup_stock.is_retire_worthy_error("HTTP Error 404: Not Found")
-    assert backup_stock.is_retire_worthy_error("Sign in to confirm you're not a bot")
+    # GitHub bot-check is a download problem (the box fetches), never a reason to retire the topic.
+    assert not backup_stock.is_retire_worthy_error("Sign in to confirm you're not a bot")
     assert not backup_stock.is_retire_worthy_error("no result JSON; job cancelled or timed out")
 
 

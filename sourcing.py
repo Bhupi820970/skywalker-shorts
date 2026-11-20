@@ -515,6 +515,56 @@ def search_queries(item: dict) -> list[str]:
     return uniq[:16]
 
 
+# ---------------------------------------------------------------- release-only (GitHub never downloads)
+RELEASE_ONLY_MSG = "release-only: GitHub never downloads from YouTube/X; the box fetches it (config/scene_requests.json)"
+
+
+def release_only() -> bool:
+    """True on GitHub runners: clips come ONLY from the `sources` release (the box downloads them).
+
+    SKY_RELEASE_ONLY=1/0 overrides; default is on whenever GITHUB_ACTIONS=true. The box
+    (box_service.py / clip_fetch.py) never sets GITHUB_ACTIONS, so it keeps downloading.
+    """
+    v = (os.environ.get("SKY_RELEASE_ONLY") or "").strip().lower()
+    if v:
+        return v not in ("0", "false", "no", "off")
+    return (os.environ.get("GITHUB_ACTIONS") or "").lower() == "true"
+
+
+_RELEASE_ASSETS: dict[str, set[str] | None] = {}
+
+
+def release_source_assets(tag: str = "sources", *, refresh: bool = False) -> set[str] | None:
+    """Asset names on a release of this repo (cached per process); None if they cannot be listed."""
+    if tag in _RELEASE_ASSETS and not refresh:
+        return _RELEASE_ASSETS[tag]
+    names: set[str] | None = None
+    fixed = os.environ.get("SKY_SOURCES_ASSETS_FILE")
+    if fixed and tag == "sources" and Path(fixed).exists():
+        names = {ln.strip() for ln in Path(fixed).read_text().splitlines() if ln.strip()}
+    else:
+        repo = os.environ.get("GITHUB_REPOSITORY") or "Bhupi820970/skywalker-shorts"
+        try:
+            r = subprocess.run(["gh", "api", "--paginate", f"repos/{repo}/releases/tags/{tag}",
+                                "-q", ".assets[].name"], capture_output=True, text=True, timeout=90)
+            if r.returncode == 0:
+                names = {ln.strip() for ln in r.stdout.splitlines() if ln.strip()}
+        except Exception:
+            names = None
+    _RELEASE_ASSETS[tag] = names
+    return names
+
+
+def release_scene_assets(slug: str, assets: set[str] | None = None) -> list[str]:
+    """Existing `<slug>_sceneN_h264.mp4` assets on the sources release (never trailers)."""
+    assets = release_source_assets() if assets is None else assets
+    slug = re.sub(r"[^a-z0-9]+", "", (slug or "").lower())
+    if not assets or not slug:
+        return []
+    rx = re.compile(rf"^{re.escape(slug)}_scene\d+_h264\.mp4$")
+    return sorted(a for a in assets if rx.match(a) and not is_trailer_source(a))
+
+
 def build_candidate_urls(item: dict, *, include_youtube: bool = True) -> list[str]:
     """Ordered unique URL list for one queue item."""
     urls: list[str] = []
@@ -544,6 +594,8 @@ def build_candidate_urls(item: dict, *, include_youtube: bool = True) -> list[st
     urls = scene_only(urls)
     if not include_youtube:
         urls = [u for u in urls if not is_youtube_url(u)]
+    if release_only():
+        urls = [u for u in urls if is_release_url(u) or "/releases/download/" in u]
     urls.sort(key=_rank_url)
     return urls
 
@@ -958,6 +1010,8 @@ def more_official_scene_urls(
     Unofficial re-uploads and trailers never pass. If `entries` is given
     (unit tests or a pre-run search), no network is used.
     """
+    if entries is None and release_only():
+        return []
     already_l = {str(u).rstrip("/").lower() for u in (already or []) if u}
     official = official_name_set()
     # Always include official_channels named on the item and in the catalog topic
@@ -1100,6 +1154,8 @@ def _gather_ytdlp_dest(dest: Path) -> bool:
 
 def _run_ytdlp(url: str, dest: Path, *, max_s: float, allow_youtube: bool,
                fmt: str, sections: bool) -> tuple[subprocess.CompletedProcess | None, str]:
+    if release_only():
+        return None, RELEASE_ONLY_MSG
     dest = Path(dest)
     dest.unlink(missing_ok=True)
     tmpl = ytdlp_output_template(dest)
@@ -1126,6 +1182,8 @@ def _run_ytdlp(url: str, dest: Path, *, max_s: float, allow_youtube: bool,
 
 
 def download_ytdlp(url: str, dest: Path, *, allow_youtube: bool = True) -> tuple[bool, str]:
+    if release_only():
+        return False, RELEASE_ONLY_MSG
     if not allow_youtube and any(h in _host(url) for h in ("youtube.com", "youtu.be")):
         return False, "youtube skipped (blocked / no cookies)"
     dest.unlink(missing_ok=True)
@@ -1226,6 +1284,8 @@ def download_source(
 
 def clip_search_urls(item: dict, limit: int = 6) -> list[str]:
     """Best-effort discover official clip URLs via yt-dlp flat search (no download)."""
+    if release_only():
+        return []
     found: list[str] = []
     for q in search_queries(item):
         if not q.startswith(("ytsearch", "dmsearch", "bilibilisearch")):

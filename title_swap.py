@@ -546,6 +546,46 @@ def recently_used_slugs(root: Path | None = None, *, days: int = RECENT_TITLE_DA
     return keys
 
 
+def release_clip_names(cand: dict, assets: set[str] | None) -> list[str]:
+    """Scene assets of this candidate that really exist on the sources release."""
+    if not assets:
+        return []
+    names = set()
+    for u in (cand.get("sources") or []) + (cand.get("fallback_mp4") or []):
+        n = str(u or "").rstrip("/").rsplit("/", 1)[-1]
+        if n in assets and not sourcing.is_trailer_source(n):
+            names.add(n)
+    names |= set(sourcing.release_scene_assets(title_slug(cand), assets))
+    return sorted(names)
+
+
+def with_release_clips(cand: dict, assets: set[str] | None) -> dict | None:
+    """Release-only mode: point the candidate at its existing release clips; None if it has none."""
+    names = release_clip_names(cand, assets)
+    if not names:
+        return None
+    out = dict(cand)
+    urls = [asset_url(n) for n in names]
+    out["sources"] = urls
+    out["fallback_mp4"] = list(urls)
+    out["fallback_release"] = "sources"
+    out["fallback_asset"] = names[0]
+    out["scene_assets"] = list(names)
+    return out
+
+
+def _release_filter(cands: list[dict]) -> list[dict]:
+    """On GitHub (release-only) keep only titles whose clips are on the release, most clips first."""
+    if not sourcing.release_only():
+        return cands
+    assets = sourcing.release_source_assets()
+    if assets is None:
+        return cands
+    out = [c2 for c2 in (with_release_clips(c, assets) for c in cands) if c2]
+    out.sort(key=lambda c: len(c.get("scene_assets") or []), reverse=True)
+    return out
+
+
 def same_format_candidates(item: dict, *, exclude: set[str] | None = None,
                            root: Path | None = None) -> list[dict]:
     fmt = item_format(item, root=root)
@@ -560,6 +600,9 @@ def same_format_candidates(item: dict, *, exclude: set[str] | None = None,
         if keys & blocked:
             continue
         out.append(cand)
+    if sourcing.release_only():
+        # Only titles with >=2 clips on the release; else next_fallback_item picks (recent allowed).
+        return [c for c in _release_filter(out) if len(c.get("scene_assets") or []) >= 2]
     # Prefer titles that already have official sources-release scene clips.
     def score(c: dict) -> tuple:
         urls = c.get("sources") or []
@@ -583,11 +626,15 @@ def next_fallback_item(item: dict, *, exclude: set[str] | None = None,
         return nxt
     blocked = set(exclude or []) | item_keys(item)
     blocked |= {re.sub(r"[^a-z0-9]+", "", x) for x in blocked}
-    for cand in _load_pool(root):
-        if item_keys(cand) & blocked:
-            continue
-        return cand
-    return None
+    rest = [c for c in _load_pool(root) if not (item_keys(c) & blocked)]
+    if sourcing.release_only():
+        # Never leave a slot empty: any title with clips already on the release (recent or not).
+        recent = recently_used_slugs(root)
+        rest = _release_filter(rest)
+        # >=2 clips first (a 1-clip title rarely has 18s of unique clean shots), then not-recent.
+        rest.sort(key=lambda c: (len(c.get("scene_assets") or []) < 2, bool(item_keys(c) & recent),
+                                 -len(c.get("scene_assets") or [])))
+    return rest[0] if rest else None
 
 
 def apply_title_swap(item: dict, candidate: dict, *, reason: str = "") -> dict:

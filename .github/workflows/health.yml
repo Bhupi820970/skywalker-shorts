@@ -42,6 +42,8 @@ jobs:
           python3 scripts/health_check.py
           set +e
           python3 scripts/slot_guardian.py
+          # Scene request list for the box downloader (GitHub never downloads; renders read the sources release).
+          python3 scripts/scene_requests.py
           set -e
           short=$(python3 -c "import json; print(','.join(json.load(open('config/health_status.json')).get('short') or []))")
           pre=$(python3 -c "import json; print(int(json.load(open('config/health_status.json')).get('backup_pool_preuploaded') or 0))")
@@ -58,7 +60,7 @@ jobs:
           if [ -n "$short" ] || [ "$pre" -lt 20 ]; then echo "need_backup=1" >> "$GITHUB_OUTPUT"; else echo "need_backup=0" >> "$GITHUB_OUTPUT"; fi
           git config user.name "skywalker-health"
           git config user.email "actions@users.noreply.github.com"
-          git add config/health_status.json config/backup_stock.json queue/ results/*.json || true
+          git add config/health_status.json config/backup_stock.json config/scene_requests.json queue/ results/*.json || true
           git diff --cached --quiet || {
             git commit -m "health: $(date -u +%F-%H%M)"
             for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
