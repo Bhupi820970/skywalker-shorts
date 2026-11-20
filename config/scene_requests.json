@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-20 20:20 IST",
+ "generated_at": "2026-11-20 23:26 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 36,
+ "release_scene_clips": 37,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -28,10 +28,10 @@
     "Netflix Anime"
    ],
    "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4",
-   "missing_assets": [
+   "missing_assets": [],
+   "on_release": [
     "princessmononoke_scene2_h264.mp4"
    ],
-   "on_release": [],
    "hook": "San would die for the forest",
    "title": "San would die for the forest | PRINCESS MONONOKE | #edit",
    "tags": [
@@ -580,6 +580,87 @@
    "market": "US/UK"
   },
   {
+   "slug": "hellsparadise",
+   "slot": "2026-11-22T20:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261122-2030-hellsparadise",
+   "pillar": "anime",
+   "words": "HELL'S PARADISE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "HELL'S PARADISE fight scene official clip",
+    "HELL'S PARADISE best scene official clip",
+    "HELL'S PARADISE official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=JKvNlvV6ZW4",
+   "missing_assets": [
+    "hellsparadise_scene1_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Gabimaru fights to go home",
+   "title": "Gabimaru fights to go home | Hell's Paradise | #edit",
+   "tags": [
+    "hellsparadise",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "gabimaru"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "spyxfamilycodewhite",
+   "slot": "2026-11-22T22:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261122-2230-spyxfamilycodewhite",
+   "pillar": "anime",
+   "words": "SPY X FAMILY",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "SPY X FAMILY fight scene official clip",
+    "SPY X FAMILY best scene official clip",
+    "SPY X FAMILY official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "Sony Pictures Entertainment",
+    "Sony Pictures Releasing Australia"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=TLpqTS1iKSM",
+   "missing_assets": [
+    "spyxfamilycodewhite_scene1_h264.mp4",
+    "spyxfamilycodewhite_scene2_h264.mp4",
+    "spyxfamilycodewhite_scene3_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Loid almost blew his cover",
+   "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
+   "tags": [
+    "spyxfamilycodewhite",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "anya"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "aotfinal",
    "slot": "9999",
    "for": "backup_pool",
@@ -1062,44 +1143,6 @@
     "shorts",
     "trending",
     "frieren"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "hellsparadise",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-hellsparadise",
-   "pillar": "anime",
-   "words": "HELL'S PARADISE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "HELL'S PARADISE fight scene official clip",
-    "HELL'S PARADISE best scene official clip",
-    "HELL'S PARADISE official clip"
-   ],
-   "official_channels": [
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=JKvNlvV6ZW4",
-   "missing_assets": [
-    "hellsparadise_scene1_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Gabimaru fights to go home",
-   "title": "Gabimaru fights to go home | Hell's Paradise | #edit",
-   "tags": [
-    "hellsparadise",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "gabimaru"
    ],
    "market": "US/UK"
   },
@@ -1668,49 +1711,6 @@
     "trending",
     "anya",
     "loid"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "spyxfamilycodewhite",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-spyxfamilycodewhite",
-   "pillar": "anime",
-   "words": "SPY X FAMILY",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SPY X FAMILY fight scene official clip",
-    "SPY X FAMILY best scene official clip",
-    "SPY X FAMILY official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "Sony Pictures Entertainment",
-    "Sony Pictures Releasing Australia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=TLpqTS1iKSM",
-   "missing_assets": [
-    "spyxfamilycodewhite_scene1_h264.mp4",
-    "spyxfamilycodewhite_scene2_h264.mp4",
-    "spyxfamilycodewhite_scene3_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Loid almost blew his cover",
-   "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
-   "tags": [
-    "spyxfamilycodewhite",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "anya"
    ],
    "market": "US/UK"
   },
