@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-20T05:22:42Z",
-  "last_upload_at": "2026-11-20T05:22:42Z"
+  "last_run_at": "2026-11-20T05:27:55Z",
+  "last_upload_at": "2026-11-20T05:27:55Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
@@ -45,6 +45,7 @@
   "yt:YJ8vvIAxcss",
   "yt:YRL74JmhVgk",
   "yt:YwgTPwxPZ9A",
+  "yt:ZivADyFlILE",
   "yt:Zq4zTcIM0yQ",
   "yt:_GFcWG0M-YM",
   "yt:_lmn16npMXw",
@@ -773,6 +774,17 @@
    "kbps": 1897,
    "by": "box",
    "at": "2026-11-20T05:22:42Z"
+  },
+  {
+   "asset": "mashle_scene1_h264.mp4",
+   "id": "yt:ZivADyFlILE",
+   "title": "MASHLE: MAGIC AND MUSCLES The Tri-Magicathlon Divine Visionary Final Exam Arc  |  FIRST LOOK",
+   "channel": "Aniplex USA",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1430,
+   "by": "box",
+   "at": "2026-11-20T05:27:55Z"
   }
  ],
  "github": {
