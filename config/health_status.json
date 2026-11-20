@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-20 16:29 IST",
+  "at": "2026-11-20 18:47 IST",
   "slots_checked": 9,
   "ready": [
     {
@@ -14,20 +14,21 @@
     }
   ],
   "short": [
-    "2026-11-20T16:00:00+05:30",
     "2026-11-20T20:30:00+05:30",
     "2026-11-21T06:30:00+05:30",
     "2026-11-21T09:00:00+05:30",
     "2026-11-21T11:30:00+05:30",
     "2026-11-21T13:30:00+05:30",
-    "2026-11-21T16:00:00+05:30"
+    "2026-11-21T16:00:00+05:30",
+    "2026-11-21T18:30:00+05:30"
   ],
   "need_render": [
     "20261121-0630-haikyuudumpster",
     "20261121-0900-dandadan",
     "20261121-1130-drstone",
     "20261121-1330-yourname",
-    "20261121-1600-boyandheron"
+    "20261121-1600-boyandheron",
+    "20261121-1830-dbsuperhero"
   ],
   "backup_pool_size": 52,
   "backup_pool_preuploaded": 52,
@@ -118,7 +119,7 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 1,
-  "stock_pending": 18,
+  "stock_pending": 15,
   "stock_used": 25,
   "stock_target": 30,
   "stock_need_refill": true,
