@@ -1,106 +1,129 @@
 {
   "id": "20261120-0630-apothecarydiaries2",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3342, 2160], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.95, 'edge_corr_median': 0.884, 'shift_px_median': 3.15, 'pairs': 6}",
-  "at": "2026-11-20 13:06 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44688574028",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to JUJUTSU KAISEN)",
+  "at": "2026-11-20 16:27 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44716891067",
   "slot": "2026-11-20T06:30:00+05:30",
-  "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
-  "hook": "Yuji has nothing left to lose",
-  "description": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame",
+  "title": "Why Higuruma could not look away #jujutsukaisen #higuruma #anime",
+  "hook": "He never wanted to fight",
+  "description": "He never wanted to fight. Higuruma confronts Yuji in a tense standoff where the weight of his own cursed technique begins to consume the atmosphere. From the official Jujutsu Kaisen trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#jujutsukaisen #higuruma #anime #shorts #edit",
   "tags": [
-    "jujutsukaisencullinggame",
+    "jujutsukaisen",
+    "higuruma",
     "anime",
+    "jujutsukaisencullinggame",
     "animeedit",
     "edit",
     "shorts",
     "trending",
     "yuji"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Yuji has nothing left to lose",
+    "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+    "description": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame",
+    "tags": [
+      "jujutsukaisencullinggame",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "yuji"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "emotional observation",
+  "title_candidates": [
+    {
+      "title": "Why Higuruma could not look away",
+      "click_score": 92.0
+    },
+    {
+      "title": "Higuruma finally found his match",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch how he reacts to her",
+      "click_score": 85.0
+    },
+    {
+      "title": "Nobody expected this quiet moment",
+      "click_score": 82.0
+    },
+    {
+      "title": "He finally realized the truth",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 76.6,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
+      "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "s": 134.7,
-      "ok": true
+      "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "s": 138.4,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
       "model": "gemini-flash-latest",
       "key": "key1",
-      "err": "HTTP 429"
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.0,
+      "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 3.7,
+      "s": 3.3,
       "ok": true
     },
     {
       "purpose": "hook",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 2.1,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
       "s": 2.0,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
+      "key": "key2",
       "s": 2.0,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 1.4,
+      "key": "key2",
+      "s": 3.8,
       "ok": true
     }
   ],
@@ -128,7 +151,7 @@
   ],
   "swapped_from": "sololeveling2",
   "swapped_to": "jujutsukaisencullinggame",
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -149,12 +172,184 @@
     },
     {
       "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3342, 2160], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.95, 'edge_corr_median': 0.884, 'shift_px_median': 3.15, 'pairs': 6}",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene2_h264.mp4",
-      "music": "pr_ytsearch1enniomorriconedeborahstheme.mp3",
-      "qc_status": null
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
+      "music": "pr_ytsearch1henrymancinimoonriverinstrument.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3342, 2160], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.95, 'edge_corr_median': 0.884, 'shift_px_median': 3.15, 'pairs': 6}"
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261120-0630-apothecarydiaries2",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261120-0630-apothecarydiaries2/render-20261120-0630-apothecarydiaries2.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
+  "music": "pr_ytsearch1henrymancinimoonriverinstrument.mp3",
+  "music_credit": "Song: Cláudio Borges - Moon River (instrumental) - Henry Mancini\nOfficial link: ytsearch1:Henry Mancini Moon River instrumental",
+  "description_final": "He never wanted to fight. Higuruma confronts Yuji in a tense standoff where the weight of his own cursed technique begins to consume the atmosphere. From the official Jujutsu Kaisen trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#jujutsukaisen #higuruma #anime #shorts #edit\n\nMusic:\nSong: Cláudio Borges - Moon River (instrumental) - Henry Mancini\nOfficial link: ytsearch1:Henry Mancini Moon River instrumental",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261120-0630-apothecarydiaries2/render-20261120-0630-apothecarydiaries2-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 21.25,
+      "audio": true
+    },
+    "lufs": -13.7,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.1,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 44,
+      "masked_rows": [
+        [
+          0.2687,
+          0.3417
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video adheres to all formatting requirements.",
+        "The hook is clear, readable, and well-placed.",
+        "The footage is clean and free of watermarks.",
+        "The audio is music-only as requested."
+      ],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 516,
+    "bar_h": 140,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1780,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "caption_y": 1069,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "love",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 52101,
+      "src_start": 110.953,
+      "dur": 2.5,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 53001101,
+      "src_start": 118.524,
+      "dur": 2.5,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 57,
+      "src_start": 147.583,
+      "dur": 2.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 39,
+      "src_start": 73.55,
+      "dur": 0.96,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 26,
+      "src_start": 46.833,
+      "dur": 2.243,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 61,
+      "src_start": 163.533,
+      "dur": 0.66,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 20,
+      "src_start": 37.717,
+      "dur": 0.92,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 1,
+      "src_start": 3.0,
+      "dur": 0.853,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 58,
+      "src_start": 157.948,
+      "dur": 0.695
+    },
+    {
+      "id": 49,
+      "src_start": 97.21,
+      "dur": 1.76
+    },
+    {
+      "id": 32,
+      "src_start": 61.703,
+      "dur": 2.057
+    },
+    {
+      "id": 45,
+      "src_start": 82.909,
+      "dur": 1.018
+    }
+  ],
+  "qc_status": "pass"
 }
