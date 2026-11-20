@@ -1192,6 +1192,13 @@
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-jjk0-01.mp4"
     },
     {
+      "id": "stock-jjk0-02",
+      "topic_id": "backup-jjk0",
+      "slug": "jjk0",
+      "status": "pending",
+      "queued_at": "2026-11-20 16:29 IST"
+    },
+    {
       "id": "stock-jujutsukaisencullinggame-01",
       "topic_id": "backup-jujutsukaisencullinggame",
       "slug": "jujutsukaisencullinggame",
@@ -1199,6 +1206,13 @@
       "queued_at": "2026-11-17 22:50 IST",
       "result_id": "stock-jujutsukaisencullinggame-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-jujutsukaisencullinggame-01.mp4"
+    },
+    {
+      "id": "stock-jujutsukaisencullinggame-02",
+      "topic_id": "backup-jujutsukaisencullinggame",
+      "slug": "jujutsukaisencullinggame",
+      "status": "pending",
+      "queued_at": "2026-11-20 16:29 IST"
     },
     {
       "id": "stock-jurassicworldrebirth-01",
