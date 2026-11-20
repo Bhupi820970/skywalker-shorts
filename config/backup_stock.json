@@ -701,7 +701,8 @@
       "topic_id": "backup-dandadanevil",
       "slug": "dandadanevil",
       "status": "pending",
-      "queued_at": "2026-11-20 14:54 IST"
+      "queued_at": "2026-11-20 14:54 IST",
+      "result_id": "stock-dandadanevil-03"
     },
     {
       "id": "stock-dbsuperhero-01",
@@ -1097,8 +1098,9 @@
       "id": "stock-gachiakuta-03",
       "topic_id": "backup-gachiakuta",
       "slug": "gachiakuta",
-      "status": "pending",
-      "queued_at": "2026-11-20 14:54 IST"
+      "status": "failed",
+      "queued_at": "2026-11-20 14:54 IST",
+      "result_id": "stock-gachiakuta-03"
     },
     {
       "id": "stock-gladiator2-01",
