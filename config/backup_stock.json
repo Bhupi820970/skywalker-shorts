@@ -848,6 +848,13 @@
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-03.mp4"
     },
     {
+      "id": "stock-dragonballdaima-04",
+      "topic_id": "backup-dragonballdaima",
+      "slug": "dragonballdaima",
+      "status": "pending",
+      "queued_at": "2026-11-20 12:02 IST"
+    },
+    {
       "id": "stock-drstone-01",
       "topic_id": "backup-drstone",
       "slug": "drstone",
@@ -917,6 +924,13 @@
       "queued_at": "2026-11-18 10:43 IST",
       "result_id": "stock-firforce3-03",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-firforce3-03.mp4"
+    },
+    {
+      "id": "stock-firforce3-04",
+      "topic_id": "backup-firforce3",
+      "slug": "firforce3",
+      "status": "pending",
+      "queued_at": "2026-11-20 12:02 IST"
     },
     {
       "id": "stock-firstslamdunk-01",
