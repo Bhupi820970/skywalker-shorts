@@ -4,7 +4,7 @@
   "detail": "rendered 2160x3840 (lanczos 1920x1080 source -> 2160x3840), QA ok (assigned from stock-boyandheron-01)",
   "at": "2026-11-19 10:47 IST",
   "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44070315205",
-  "slot": "2026-11-19T11:30:00+05:30",
+  "slot": "2026-11-20T14:30:00+05:30",
   "title": "Mahito enters the world of spirits #theboyandtheheron #mahito #studioghibli",
   "hook": "Mahito finds the spirit world",
   "description": "Mahito finds the spirit world. Mahito observes the surreal migration of the warawara spirits in the enchanted night forest. From the official The Boy And The Heron trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#theboyandtheheron #mahito #studioghibli #shorts #edit",
@@ -271,7 +271,14 @@
   "stock_id": "stock-boyandheron-01",
   "assigned_from_stock": true,
   "buffer_post_id": "6afe868ff6b6aa0cd4a34483",
-  "buffer_status": "scheduled",
+  "buffer_status": "dead",
   "buffer_due_at": "2026-11-19T06:00:00.000Z",
-  "buffer_created_at": "2026-11-19 10:48 IST"
+  "buffer_created_at": "2026-11-19 10:48 IST",
+  "buffer_error": "An unknown error has occurred. Please retry the post again, and get in touch if this persists.",
+  "buffer_retry_count": 1,
+  "buffer_prev_post_id": "6afe868ff6b6aa0cd4a34483",
+  "slot_original": "2026-11-19T11:30:00+05:30",
+  "publish_dead": true,
+  "buffer_note": "retry create failed: createPost: Invalid post: Video could not be read from its URL.",
+  "buffer_dead_at": "2026-11-20 12:02 IST"
 }
