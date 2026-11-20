@@ -115,7 +115,12 @@ def select_slot_backups(items, result_fn, pool, used, now, ahead, busy, past_h=6
     return picks, used
 
 def main():
-    now = datetime.now(IST)
+    if os.environ.get("PLAN_NOW"):
+        now = datetime.fromisoformat(os.environ["PLAN_NOW"])
+        if now.tzinfo is None:
+            now = now.replace(tzinfo=IST)
+    else:
+        now = datetime.now(IST)
     ahead = float(os.environ.get("RENDER_AHEAD_HOURS", "8"))
     cap = int(os.environ.get("MAX_PER_RUN", "4") or 4)
     force_ids = [x.strip() for x in os.environ.get("IDS", "").split(",") if x.strip()]
@@ -153,6 +158,12 @@ def main():
     elif backups_only:
         pass  # only the backup rule below should add ids
     else:
+        # Upcoming and recently missed official slots fill the cap first.
+        # Items more than PLAN_PAST_HOURS (default 6, same as late_post_hours)
+        # in the past are only used as leftover-cap fillers, so a day of
+        # late yesterday items cannot block today's 8 official slots.
+        past_priority_h = float(os.environ.get("PLAN_PAST_HOURS", "6"))
+        current, overdue = [], []
         for i, it in sorted(items.items(), key=lambda kv: kv[1].get("slot", "")):
             if it.get("status", "queued") != "queued":
                 continue
@@ -171,7 +182,11 @@ def main():
             except Exception:
                 continue
             if slot - now <= timedelta(hours=ahead) and now - slot <= timedelta(hours=24):
-                pick.append(i)
+                if now - slot <= timedelta(hours=past_priority_h):
+                    current.append(i)
+                else:
+                    overdue.append(i)
+        pick = current + overdue
     # --- never start an id that another in-progress render run is already working on
     def in_flight():
         repo = os.environ.get("GITHUB_REPOSITORY")

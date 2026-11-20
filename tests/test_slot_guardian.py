@@ -89,3 +89,23 @@ def test_guardian_skips_already_posted_evergreen(tmp_path, monkeypatch):
               "metadata": {"title": "Same Title Hook"}}]
     ent = slot_guardian.pick_evergreen(root, "2026-11-17", now, posts)
     assert ent is None
+
+
+
+def test_guardian_queued_fallback_is_uncovered(tmp_path, monkeypatch):
+    """A queued official item with source clips but no finished video is not covered."""
+    root = _root(tmp_path, monkeypatch)
+    slot = "2026-11-20T11:30:00+05:30"
+    _write(root / "queue" / "2026-11-20.json", [{
+        "id": "20261120-1130-aotfinal",
+        "slot": slot,
+        "status": "queued",
+        "fallback_asset": "aotfinal_scene1_h264.mp4",
+        "fallback_mp4": ["https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/aotfinal_scene1_h264.mp4"],
+    }])
+    from datetime import datetime
+    now = datetime.fromisoformat("2026-11-20T11:10:00+05:30")
+    report = slot_guardian.guard(root, now, posts=[], fetch_buffer=False, lead_min=45, past_min=20)
+    assert slot in (report.get("uncovered") or [])
+    assert "20261120-1130-aotfinal" not in (report.get("need_publish") or [])
+    assert not report.get("ok")

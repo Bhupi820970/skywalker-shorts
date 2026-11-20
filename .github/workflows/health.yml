@@ -68,7 +68,25 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh workflow run render.yml -f max=2 -f retry_failed=false || true
+          # A short slot still needs a finished video. Render the queued
+          # official items (need_render) up to 8 per run; if none are listed,
+          # let plan.py pick due slots (upcoming first).
+          python3 - <<'PY'
+          import json, os
+          s = json.load(open("config/health_status.json"))
+          ids = [x for x in (s.get("need_render") or []) if x]
+          n = max(len(s.get("short") or []), len(ids), 4)
+          n = min(n, 8)
+          ids = ids[:n]
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write(f"SHORT_N={n}\nSHORT_IDS={','.join(ids)}\n")
+          print(f"short={s.get('short')} need_render={ids} max={n}")
+          PY
+          if [ -n "${SHORT_IDS:-}" ]; then
+            gh workflow run render.yml -f "ids=$SHORT_IDS" -f "max=$SHORT_N" -f retry_failed=false || true
+          else
+            gh workflow run render.yml -f "max=$SHORT_N" -f retry_failed=false || true
+          fi
       - name: Dispatch stock refill (few per run, does not block slot renders)
         if: steps.h.outputs.need_stock == '1'
         env:

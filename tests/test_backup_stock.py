@@ -529,3 +529,53 @@ def test_fixed_output_name_alone_is_not_retire_worthy():
     assert backup_stock.is_retire_worthy_error("HTTP Error 404: Not Found")
     assert backup_stock.is_retire_worthy_error("Sign in to confirm you're not a bot")
     assert not backup_stock.is_retire_worthy_error("no result JSON; job cancelled or timed out")
+
+
+def test_plan_prioritizes_upcoming_over_stale_past(tmp_path, monkeypatch, capsys):
+    """A cap of 4 must go to today's official slots, not 14h-late yesterday items.
+
+    This is how the 07:25 IST cron on 20 Nov spent itself on 19 Nov 17:30-22:30
+    and never started today's 06:30/09:00/11:30/13:30 renders.
+    """
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("SKY_ROOT", str(tmp_path))
+    monkeypatch.setattr(backup_stock, "REPO", tmp_path)
+    (tmp_path / "queue").mkdir()
+    (tmp_path / "results").mkdir()
+    (tmp_path / "config").mkdir()
+    _write(tmp_path / "config" / "backup_pool.json", {"items": []})
+    scene = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/{}_scene1_h264.mp4"
+    rows = []
+    for day, times in (
+        ("2026-11-19", ["17:30", "18:30", "20:30", "22:30"]),
+        ("2026-11-20", ["06:30", "09:00", "11:30", "13:30"]),
+    ):
+        for hhmm in times:
+            slug = f"t{day[-2:]}{hhmm.replace(':', '')}"
+            iid = f"{day.replace('-', '')}-{hhmm.replace(':', '')}-{slug}"
+            rows.append({
+                "id": iid,
+                "slot": f"{day}T{hhmm}:00+05:30",
+                "status": "queued",
+                "fallback_asset": f"{slug}_scene1_h264.mp4",
+                "fallback_mp4": [scene.format(slug)],
+                "sources": [scene.format(slug)],
+            })
+    _write(tmp_path / "queue" / "2026-11-20.json", rows)
+    monkeypatch.setenv("PLAN_NOW", "2026-11-20T07:25:00+05:30")
+    monkeypatch.setenv("MAX_PER_RUN", "4")
+    monkeypatch.setenv("RENDER_AHEAD_HOURS", "8")
+    monkeypatch.delenv("IDS", raising=False)
+    monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
+    monkeypatch.delenv("BACKUPS_ONLY", raising=False)
+    monkeypatch.delenv("RETRY_FAILED", raising=False)
+    monkeypatch.delenv("PLAN_PAST_HOURS", raising=False)
+    plan.main()
+    captured = capsys.readouterr()
+    text = captured.out + captured.err
+    assert "20261120-0630-" in text
+    assert "20261120-0900-" in text
+    assert "20261120-1130-" in text
+    assert "20261120-1330-" in text
+    assert "20261119-1730-" not in text
+    assert "20261119-2230-" not in text
