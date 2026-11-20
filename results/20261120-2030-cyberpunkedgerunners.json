@@ -306,5 +306,7 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-cyberpunkedgerunners-02",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "buffer_status": "create_failed",
+  "buffer_error": "createPost: You have already scheduled the maximum number of posts YouTube allows in a day (2). Please consider scheduling this post for another day."
 }
