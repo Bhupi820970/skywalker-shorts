@@ -245,6 +245,55 @@
   "fallback_asset": "dandadan2_scene1_h264.mp4"
  },
  {
+  "id": "20261120-2030-princessmononoke",
+  "slot": "2026-11-20T20:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4",
+  "alt_source_urls": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4"
+  ],
+  "scene_assets": [
+   "princessmononoke_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "princessmononoke_scene2_h264.mp4",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4"
+  ],
+  "template": "whitebar",
+  "hook": "San would die for the forest",
+  "words": "PRINCESS MONONOKE",
+  "title": "San would die for the forest | PRINCESS MONONOKE | #edit",
+  "description": "San would die for the forest. Official scene clip. Edit by Skywalker.",
+  "tags": [
+   "princessmononoke",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "ashitaka",
+   "san",
+   "part2"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "link_request": true,
+  "demo": false,
+  "no_publish": false,
+  "series_part": 2,
+  "series_parent": "20261118-1730-princessmononoke",
+  "series_slug": "princessmononoke",
+  "avoid_sources": [
+   "princessmononoke_scene1_h264.mp4"
+  ]
+ },
+ {
   "id": "20261120-2230-weatheringwithyou",
   "slot": "2026-11-20T22:30:00+05:30",
   "pillar": "anime",
