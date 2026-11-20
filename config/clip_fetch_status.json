@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-20T05:27:55Z",
-  "last_upload_at": "2026-11-20T05:27:55Z"
+  "last_run_at": "2026-11-20T05:28:37Z",
+  "last_upload_at": "2026-11-20T05:28:37Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
@@ -51,6 +51,7 @@
   "yt:_lmn16npMXw",
   "yt:aeLkBvyiRfg",
   "yt:aoi11BdfpoM",
+  "yt:cbft6JWPkpA",
   "yt:ckEUVyKanhw",
   "yt:eifvzpMt_lE",
   "yt:fmKWuAVt1vI",
@@ -785,6 +786,17 @@
    "kbps": 1430,
    "by": "box",
    "at": "2026-11-20T05:27:55Z"
+  },
+  {
+   "asset": "dragonballdaima_scene1_h264.mp4",
+   "id": "yt:cbft6JWPkpA",
+   "title": "Young Master Roshi | Dragon Ball DAIMA | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1940,
+   "by": "box",
+   "at": "2026-11-20T05:28:37Z"
   }
  ],
  "github": {
