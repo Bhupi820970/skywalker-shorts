@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-20T05:15:28Z",
-  "last_upload_at": "2026-11-20T05:15:28Z"
+  "last_run_at": "2026-11-20T05:17:09Z",
+  "last_upload_at": "2026-11-20T05:17:09Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
@@ -41,6 +41,7 @@
   "yt:Y9XqnjKXgTs",
   "yt:YJ8vvIAxcss",
   "yt:YRL74JmhVgk",
+  "yt:YwgTPwxPZ9A",
   "yt:Zq4zTcIM0yQ",
   "yt:_GFcWG0M-YM",
   "yt:_lmn16npMXw",
@@ -725,6 +726,17 @@
    "kbps": 2715,
    "by": "box",
    "at": "2026-11-20T05:15:28Z"
+  },
+  {
+   "asset": "cyberpunkedgerunners_scene3_h264.mp4",
+   "id": "yt:YwgTPwxPZ9A",
+   "title": "The Fight For Capri | Cyberpunk: Edgerunners 2 | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1441,
+   "by": "box",
+   "at": "2026-11-20T05:17:09Z"
   }
  ],
  "github": {
