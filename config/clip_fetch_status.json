@@ -1,13 +1,14 @@
 {
  "box": {
-  "last_run_at": "2026-11-20T05:28:37Z",
-  "last_upload_at": "2026-11-20T05:28:37Z"
+  "last_run_at": "2026-11-20T05:43:33Z",
+  "last_upload_at": "2026-11-20T05:43:33Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
   "yt:1oiRkOT4Z_4",
   "yt:2_BkCz3OnlY",
   "yt:3bMYgo_S0Kc",
+  "yt:4ZkOJjwRYoQ",
   "yt:5oRczmZ6dGU",
   "yt:7LzDcr20SHc",
   "yt:9vzlmyNNt70",
@@ -55,6 +56,7 @@
   "yt:ckEUVyKanhw",
   "yt:eifvzpMt_lE",
   "yt:fmKWuAVt1vI",
+  "yt:gDhtSggAoNI",
   "yt:golG9lmaR_U",
   "yt:hNg1ksFeyv0",
   "yt:hQDyX9sOe04",
@@ -797,6 +799,28 @@
    "kbps": 1940,
    "by": "box",
    "at": "2026-11-20T05:28:37Z"
+  },
+  {
+   "asset": "jujutsukaisencullinggame_scene1_h264.mp4",
+   "id": "yt:4ZkOJjwRYoQ",
+   "title": "Yuji Vs. Higuruma | Jujutsu Kaisen Season 3 | Prime Video",
+   "channel": "Prime Video AU & NZ",
+   "kind": "scene",
+   "res": "3342x2160",
+   "kbps": 9045,
+   "by": "box",
+   "at": "2026-11-20T05:43:33Z"
+  },
+  {
+   "asset": "jujutsukaisencullinggame_scene2_h264.mp4",
+   "id": "yt:gDhtSggAoNI",
+   "title": "3-Way Domain Expansion | Jujutsu Kaisen Season 3 | Prime Video",
+   "channel": "Prime Video AU & NZ",
+   "kind": "scene",
+   "res": "3342x2160",
+   "kbps": 9510,
+   "by": "box",
+   "at": "2026-11-20T05:43:33Z"
   }
  ],
  "github": {
