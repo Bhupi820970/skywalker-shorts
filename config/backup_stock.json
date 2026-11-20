@@ -638,6 +638,13 @@
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-01.mp4"
     },
     {
+      "id": "stock-cyberpunkedgerunners-02",
+      "topic_id": "backup-cyberpunkedgerunners",
+      "slug": "cyberpunkedgerunners",
+      "status": "pending",
+      "queued_at": "2026-11-20 10:08 IST"
+    },
+    {
       "id": "stock-dandadan-01",
       "topic_id": "backup-dandadan",
       "slug": "dandadan",
@@ -678,6 +685,13 @@
       "queued_at": "2026-11-17 17:10 IST",
       "result_id": "stock-dandadanevil-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dandadanevil-01.mp4"
+    },
+    {
+      "id": "stock-dandadanevil-02",
+      "topic_id": "backup-dandadanevil",
+      "slug": "dandadanevil",
+      "status": "pending",
+      "queued_at": "2026-11-20 10:08 IST"
     },
     {
       "id": "stock-dbsuperhero-01",
