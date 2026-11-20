@@ -1,0 +1,160 @@
+{
+  "id": "20261120-0630-apothecarydiaries2",
+  "status": "retry_queued",
+  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3342, 2160], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.95, 'edge_corr_median': 0.884, 'shift_px_median': 3.15, 'pairs': 6}",
+  "at": "2026-11-20 13:06 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44688574028",
+  "slot": "2026-11-20T06:30:00+05:30",
+  "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+  "hook": "Yuji has nothing left to lose",
+  "description": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame",
+  "tags": [
+    "jujutsukaisencullinggame",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "yuji"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 76.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "s": 134.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "s": 138.4,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.7,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.4,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "JUJUTSU KAISEN",
+  "edit_format": "love",
+  "title_swaps": [
+    {
+      "from": "apothecarydiaries2",
+      "from_words": "APOTHECARY DIARIES",
+      "to": "sololeveling2",
+      "to_words": "SOLO LEVELING",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] cWu6Q72jfuM: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Y3pmO6q8jSU: Sign in to confirm you’re not a bot. This helps protect "
+    },
+    {
+      "from": "sololeveling2",
+      "from_words": "SOLO LEVELING",
+      "to": "jujutsukaisencullinggame",
+      "to_words": "JUJUTSU KAISEN",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] kIFY5rqD0pE: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] 7Wbwr--JiT0: Sign in to confirm you’re not a bot. This helps protect "
+    }
+  ],
+  "swapped_from": "sololeveling2",
+  "swapped_to": "jujutsukaisencullinggame",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: yt-dlp:ERROR: [youtube] cWu6Q72jfuM: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Y3pmO6q8jSU: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Gk30NUs9oRI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] yo8rklUv1EY: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] XYNGkSvFT8c: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] 9A3Itqpl26M: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [generic] apothecarydiaries2_scene1_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | yt-dlp:ERROR: [generic] apothecarydiaries2_scene2_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | yt-dlp:ERROR: [generic] apothecarydiaries2_scene3_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: yt-dlp:ERROR: [youtube] kIFY5rqD0pE: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] 7Wbwr--JiT0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] MoVYF42TB2Q: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] byJ7pxxhaDY: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] VEa-32eURrc: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Mgk5_MXodvY: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] cWu6Q72jfuM: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Y3pmO6q8jSU: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] Gk30NUs9oRI: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] yo8rklUv1EY: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] XYNGkSvFT8c: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [youtube] 9A3Itqpl26M: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. A | yt-dlp:ERROR: [generic] sololeveling2_scene1_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | yt-dlp:ERROR: [generic] sololeveling2_scene2_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | yt-dlp:ERROR: [generic] sololeveling2_scene3_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3342, 2160], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.95, 'edge_corr_median': 0.884, 'shift_px_median': 3.15, 'pairs': 6}",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene2_h264.mp4",
+      "music": "pr_ytsearch1enniomorriconedeborahstheme.mp3",
+      "qc_status": null
+    }
+  ],
+  "last_error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3342, 2160], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.95, 'edge_corr_median': 0.884, 'shift_px_median': 3.15, 'pairs': 6}"
+}
