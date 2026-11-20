@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-20 18:47 IST",
+ "generated_at": "2026-11-20 19:06 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 35,
+ "release_scene_clips": 36,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -42,48 +42,6 @@
     "shorts",
     "trending",
     "saitama"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "dandadan2",
-   "slot": "2026-11-20T20:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261120-2030-dandadan2",
-   "pillar": "anime",
-   "words": "DAN DA DAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DAN DA DAN fight scene official clip",
-    "DAN DA DAN best scene official clip",
-    "DAN DA DAN official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=_41-0Pj8IN8",
-   "missing_assets": [
-    "dandadan2_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "dandadan2_scene1_h264.mp4",
-    "dandadan2_scene2_h264.mp4"
-   ],
-   "hook": "Momo never lets him go",
-   "title": "Momo never lets him go | Dandadan | #edit",
-   "tags": [
-    "dandadan2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "momo"
    ],
    "market": "US/UK"
   },
