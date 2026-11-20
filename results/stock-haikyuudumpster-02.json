@@ -1,25 +1,36 @@
 {
   "id": "stock-haikyuudumpster-02",
   "status": "retry_queued",
-  "detail": "all 7 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
-  "at": "2026-11-20 18:21 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44723748901",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-20 22:04 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44757075397",
   "slot": null,
-  "title": "Bakugo finally understood Deku | My Hero Academia | #edit",
-  "hook": "Bakugo finally understood Deku",
-  "description": "Bakugo finally understood Deku. From official My Hero Academia clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mhafinal",
+  "title": "Why Jim turned against his nation 💀 | Pathaan jetpack chase | #edit",
+  "hook": "Why Jim turned against his nation",
+  "description": "Why Jim turned against his nation. From official Pathaan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #pathaan #shahrukhkhan #srk",
   "tags": [
-    "mhafinal",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "deku"
+    "pathaan",
+    "shahrukhkhan",
+    "srk",
+    "yrf",
+    "bollywoodedit",
+    "bollywood"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
+  "queue_meta": {
+    "hook": "Why Jim turned against his nation",
+    "title": "Why Jim turned against his nation 💀 | Pathaan jetpack chase | #edit",
+    "description": "Why Jim turned against his nation. From official Pathaan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #pathaan #shahrukhkhan #srk",
+    "tags": [
+      "pathaan",
+      "shahrukhkhan",
+      "srk",
+      "yrf",
+      "bollywoodedit",
+      "bollywood"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
   "hook_style": null,
   "title_candidates": null,
   "gemini_calls": [
@@ -27,7 +38,7 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 53.3,
+      "s": 59.2,
       "ok": true
     },
     {
@@ -40,103 +51,110 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-flash-latest",
       "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 2.0,
+      "s": 6.5,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 9.1,
+      "s": 7.1,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 3.3,
+      "s": 9.9,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 9.5,
+      "s": 5.2,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 2.2,
+      "s": 7.8,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 20.8,
+      "s": 56.7,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 2.3,
+      "s": 23.3,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 8.2,
+      "s": 5.5,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 2.1,
+      "s": 18.0,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 7.9,
+      "s": 8.9,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 9.1,
+      "s": 26.0,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 20.1,
+      "s": 39.0,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 14.8,
+      "s": 8.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 22.9,
       "ok": true
     }
   ],
@@ -144,55 +162,146 @@
   "stock": true,
   "stock_topic": "backup-haikyuudumpster",
   "spare": true,
-  "words": "MY HERO ACADEMIA",
+  "words": "PATHAAN",
   "edit_format": "action",
   "title_swaps": [
     {
       "from": "haikyu",
       "from_words": "HAIKYU",
-      "to": "dhoom2",
-      "to_words": "DHOOM 2",
-      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
-    },
-    {
-      "from": "dhoom2",
-      "from_words": "DHOOM 2",
-      "to": "rrr",
-      "to_words": "RRR",
-      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
-    },
-    {
-      "from": "rrr",
-      "from_words": "RRR",
-      "to": "sololeveling2",
-      "to_words": "SOLO LEVELING",
-      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
-    },
-    {
-      "from": "sololeveling2",
-      "from_words": "SOLO LEVELING",
-      "to": "frieren",
-      "to_words": "FRIEREN",
-      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
-    },
-    {
-      "from": "frieren",
-      "from_words": "FRIEREN",
-      "to": "onepieceegghead",
-      "to_words": "ONE PIECE",
-      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
-    },
-    {
-      "from": "onepieceegghead",
-      "from_words": "ONE PIECE",
-      "to": "mhafinal",
-      "to_words": "MY HERO ACADEMIA",
+      "to": "pathaan",
+      "to_words": "PATHAAN",
       "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
     }
   ],
-  "swapped_from": "onepieceegghead",
-  "swapped_to": "mhafinal",
-  "auto_retries": 0,
+  "swapped_from": "haikyu",
+  "swapped_to": "pathaan",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-haikyuudumpster-02.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/pathaan_scene4_h264.mp4",
+  "music": "pr_jgrzsombraycoraznphonk.mp3",
+  "music_credit": "Song: Phonk Time - jgrz - Sombra y Corazón (Phonk)\nOfficial link: https://www.youtube.com/watch?v=IMjEpCPS-D8",
+  "description_final": "Why Jim turned against his nation. From official Pathaan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #pathaan #shahrukhkhan #srk\n\nMusic:\nSong: Phonk Time - jgrz - Sombra y Corazón (Phonk)\nOfficial link: https://www.youtube.com/watch?v=IMjEpCPS-D8",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-haikyuudumpster-02-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 534,
+    "bar_h": 122,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1798,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 113,
+      "src_start": 131.645,
+      "dur": 1.5
+    },
+    {
+      "id": 26,
+      "src_start": 29.8,
+      "dur": 1.867
+    },
+    {
+      "id": 81,
+      "src_start": 90.533,
+      "dur": 1.556
+    },
+    {
+      "id": 105,
+      "src_start": 121.5,
+      "dur": 1.858
+    },
+    {
+      "id": 45,
+      "src_start": 53.367,
+      "dur": 2.093
+    },
+    {
+      "id": 12,
+      "src_start": 12.433,
+      "dur": 1.627
+    },
+    {
+      "id": 67,
+      "src_start": 77.9,
+      "dur": 0.727
+    },
+    {
+      "id": 71,
+      "src_start": 81.333,
+      "dur": 0.993
+    },
+    {
+      "id": 53,
+      "src_start": 62.5,
+      "dur": 1.127
+    },
+    {
+      "id": 109,
+      "src_start": 127.2,
+      "dur": 0.827
+    },
+    {
+      "id": 32,
+      "src_start": 39.167,
+      "dur": 1.06
+    },
+    {
+      "id": 40,
+      "src_start": 47.567,
+      "dur": 1.227
+    },
+    {
+      "id": 57,
+      "src_start": 67.067,
+      "dur": 1.16
+    },
+    {
+      "id": 72,
+      "src_start": 86.867,
+      "dur": 0.76
+    },
+    {
+      "id": 49,
+      "src_start": 59.067,
+      "dur": 0.96
+    },
+    {
+      "id": 22,
+      "src_start": 25.0,
+      "dur": 1.327
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -206,51 +315,13 @@
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/pathaan_scene4_h264.mp4",
       "music": "pr_jgrzsombraycoraznphonk.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
-      "music": "pr_jgrzsombraycoraznphonk.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
-      "music": "pr_jgrzsombraycoraznphonk.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
-      "music": "pr_jgrzsombraycoraznphonk.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
-      "music": "pr_jgrzsombraycoraznphonk.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4",
-      "music": "pr_jgrzsombraycoraznphonk.mp3",
-      "qc_status": null
+      "qc_status": "skipped"
     }
   ],
-  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering"
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false
 }

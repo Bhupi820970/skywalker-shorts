@@ -1,38 +1,24 @@
 {
   "id": "stock-jjk0-02",
-  "status": "retry_queued",
-  "detail": "all 4 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): No usable scenes after filtering",
-  "at": "2026-11-20 17:51 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44723829921",
+  "status": "failed",
+  "detail": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
+  "at": "2026-11-20 21:51 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44757075397",
   "slot": null,
-  "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
-  "hook": "Yuji has nothing left to lose",
-  "description": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame",
+  "title": "Why Jim turned against his nation 💀 | Pathaan jetpack chase | #edit",
+  "hook": "Why Jim turned against his nation",
+  "description": "Why Jim turned against his nation. From official Pathaan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #pathaan #shahrukhkhan #srk",
   "tags": [
-    "jujutsukaisencullinggame",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "yuji"
+    "pathaan",
+    "shahrukhkhan",
+    "srk",
+    "yrf",
+    "bollywoodedit",
+    "bollywood"
   ],
-  "queue_meta": {
-    "hook": "Yuji has nothing left to lose",
-    "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
-    "description": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame",
-    "tags": [
-      "jujutsukaisencullinggame",
-      "anime",
-      "animeedit",
-      "edit",
-      "shorts",
-      "trending",
-      "yuji"
-    ]
-  },
-  "gemini_meta": true,
-  "hook_source": "queue",
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
   "hook_style": null,
   "title_candidates": null,
   "gemini_calls": [
@@ -40,26 +26,106 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 60.8,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-flash-latest",
       "key": "key1",
       "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 29.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 8.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 7.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 90.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 40.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 7.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 14.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.7,
+      "ok": true
     },
     {
       "purpose": "logo_scenes",
@@ -72,91 +138,7 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 8.1,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 1.7,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 7.1,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 6.7,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 3.0,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.8,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 1.5,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.5,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.5,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 4.8,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "s": 2.5,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "s": 8.2,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "s": 1.6,
+      "s": 17.6,
       "ok": true
     }
   ],
@@ -164,34 +146,20 @@
   "stock": true,
   "stock_topic": "backup-jjk0",
   "spare": true,
-  "words": "JUJUTSU KAISEN",
+  "words": "PATHAAN",
   "edit_format": "love",
   "title_swaps": [
     {
       "from": "jujutsukaisen0",
       "from_words": "JUJUTSU KAISEN 0",
-      "to": "apothecarydiaries2",
-      "to_words": "APOTHECARY DIARIES",
-      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
-    },
-    {
-      "from": "apothecarydiaries2",
-      "from_words": "APOTHECARY DIARIES",
-      "to": "sololeveling2",
-      "to_words": "SOLO LEVELING",
-      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
-    },
-    {
-      "from": "sololeveling2",
-      "from_words": "SOLO LEVELING",
-      "to": "jujutsukaisencullinggame",
-      "to_words": "JUJUTSU KAISEN",
+      "to": "pathaan",
+      "to_words": "PATHAAN",
       "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
     }
   ],
-  "swapped_from": "sololeveling2",
-  "swapped_to": "jujutsukaisencullinggame",
-  "auto_retries": 0,
+  "swapped_from": "jujutsukaisen0",
+  "swapped_to": "pathaan",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -205,27 +173,11 @@
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4",
-      "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4",
-      "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4",
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/pathaan_scene3_h264.mp4",
       "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3",
       "qc_status": null
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): No usable scenes after filtering"
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering"
 }
