@@ -149,7 +149,7 @@
       "id": "stock-aotfinal-08",
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-19 07:37 IST",
       "result_id": "stock-aotfinal-08"
     },
@@ -157,7 +157,7 @@
       "id": "stock-aotfinal-09",
       "topic_id": "backup-aotfinal",
       "slug": "aotfinal",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-19 07:47 IST",
       "result_id": "stock-aotfinal-09"
     },
@@ -414,7 +414,7 @@
       "id": "stock-bluegiant-03",
       "topic_id": "backup-bluegiant",
       "slug": "bluegiant",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-19 09:36 IST",
       "result_id": "stock-bluegiant-03"
     },
@@ -1190,7 +1190,7 @@
       "id": "stock-kaiju8s2-01",
       "topic_id": "backup-kaiju8s2",
       "slug": "kaiju8s2",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-19 07:47 IST",
       "result_id": "stock-kaiju8s2-01"
     },
@@ -1219,7 +1219,7 @@
       "id": "stock-lazarus-01",
       "topic_id": "backup-lazarus",
       "slug": "lazarus",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-19 09:36 IST",
       "result_id": "stock-lazarus-01"
     },
@@ -1696,6 +1696,36 @@
         "stock-drstone-01"
       ],
       "retired_at": "2026-11-17 21:37 IST"
+    },
+    {
+      "slug": "dandadan",
+      "reason": "gemini QC reject: Includes a Netflix subscribe outro bumper / logo glitch inserted at 00:21.; Footage contains leftover burn-in subtitles ('Do it!' at 00:15) and a channel watermark ('DAN DA DAN SEASON 2' at 00:17).",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1830-dandadan",
+        "stock-dandadan-01"
+      ],
+      "retired_at": "2026-11-20 10:08 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-20 10:08 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "stock-aotfinal-09",
+        "stock-aotfinal-08"
+      ],
+      "retired_at": "2026-11-20 10:08 IST"
     }
   ]
 }
