@@ -304,5 +304,9 @@
       "reason": "gemini score 9.5"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "stock_used": true,
+  "assigned_slot": "2026-11-20T20:30:00+05:30",
+  "assigned_result": "20261120-2030-cyberpunkedgerunners",
+  "used_at": "2026-11-20 19:46 IST"
 }

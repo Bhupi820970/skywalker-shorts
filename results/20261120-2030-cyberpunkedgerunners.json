@@ -1,0 +1,310 @@
+{
+  "id": "20261120-2030-cyberpunkedgerunners",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok (assigned from stock-cyberpunkedgerunners-02)",
+  "at": "2026-11-20 19:46 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44675780782",
+  "slot": "2026-11-20T20:30:00+05:30",
+  "title": "David did not expect Night City to be this ruthless #cyberpunkedgerunners #david #animeedit",
+  "hook": "They only call you for carnage",
+  "description": "They only call you for carnage. Heavy gunfire and cyberpsycho violence unleash complete mayhem across the streets of Night City. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #david #animeedit #shorts #edit",
+  "tags": [
+    "cyberpunkedgerunners",
+    "david",
+    "animeedit",
+    "anime",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "David wanted to be a legend",
+    "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+    "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
+    "tags": [
+      "cyberpunkedgerunners",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "david"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "dialogue tease",
+  "title_candidates": [
+    {
+      "title": "David did not expect Night City to be this ruthless",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody suspected Night City was this dangerous in Edgerunners",
+      "click_score": 90.0
+    },
+    {
+      "title": "Watch what happens when MaxTac gets called in Edgerunners",
+      "click_score": 88.0
+    },
+    {
+      "title": "Cyberpunk Edgerunners proves nobody survives this city",
+      "click_score": 86.0
+    },
+    {
+      "title": "Cyberpunk Edgerunners showed the harsh reality of Night City",
+      "click_score": 85.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 8.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "s": 15.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "s": 15.2,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "s": 22.7,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 7.7,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 8.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 13.4,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-cyberpunkedgerunners",
+  "stock": true,
+  "stock_topic": "backup-cyberpunkedgerunners",
+  "spare": true,
+  "words": "EDGERUNNERS",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "music": "sw_worthnothingfeatolivertr.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-02.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 3.298,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+  "music": "sw_worthnothingfeatolivertr.mp3",
+  "music_credit": "Song: PHONK DRIFT - WORTH NOTHING (feat. Oliver Tree)\nOfficial link: https://archive.org/details/worth-nothing-feat.-oliver-tree\nLicense: https://creativecommons.org/publicdomain/mark/1.0/",
+  "description_final": "They only call you for carnage. Heavy gunfire and cyberpsycho violence unleash complete mayhem across the streets of Night City. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #david #animeedit #shorts #edit\n\nMusic:\nSong: PHONK DRIFT - WORTH NOTHING (feat. Oliver Tree)\nOfficial link: https://archive.org/details/worth-nothing-feat.-oliver-tree\nLicense: https://creativecommons.org/publicdomain/mark/1.0/",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-02-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.748,
+      "audio": true
+    },
+    "lufs": -14.4,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.2,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 51,
+      "masked_rows": [
+        [
+          0.275,
+          0.3417
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 528,
+    "bar_h": 128,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1792,
+    "block_h": 1920,
+    "drop_t": 3.298,
+    "energy": true,
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 41,
+      "src_start": 126.835,
+      "dur": 0.836,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
+    },
+    {
+      "id": 56,
+      "src_start": 156.823,
+      "dur": 2.462,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 7,
+      "src_start": 28.591,
+      "dur": 2.22,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 53,
+      "src_start": 149.153,
+      "dur": 1.958,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 49,
+      "src_start": 141.016,
+      "dur": 3.338,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 26,
+      "src_start": 97.139,
+      "dur": 1.837,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 1,
+      "src_start": 3.0,
+      "dur": 3.466,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 21,
+      "src_start": 86.211,
+      "dur": 1.795
+    },
+    {
+      "id": 6,
+      "src_start": 22.481,
+      "dur": 2.22
+    },
+    {
+      "id": 47,
+      "src_start": 135.802,
+      "dur": 1.295,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 36001,
+      "src_start": 119.237,
+      "dur": 0.673,
+      "gemini_score": 9.5,
+      "reason": "gemini score 9.5"
+    }
+  ],
+  "qc_status": "pass",
+  "stock_id": "stock-cyberpunkedgerunners-02",
+  "assigned_from_stock": true
+}
