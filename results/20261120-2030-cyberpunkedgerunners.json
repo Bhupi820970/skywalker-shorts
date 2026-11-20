@@ -307,6 +307,9 @@
   "qc_status": "pass",
   "stock_id": "stock-cyberpunkedgerunners-02",
   "assigned_from_stock": true,
-  "buffer_status": "create_failed",
-  "buffer_error": "createPost: You have already scheduled the maximum number of posts YouTube allows in a day (2). Please consider scheduling this post for another day."
+  "buffer_status": "sending",
+  "buffer_error": "createPost: You have already scheduled the maximum number of posts YouTube allows in a day (2). Please consider scheduling this post for another day.",
+  "buffer_post_id": "6b00a76473831df01483b39e",
+  "buffer_due_at": "2026-11-20T20:02:45.110Z",
+  "buffer_created_at": "2026-11-21 01:32 IST"
 }

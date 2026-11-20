@@ -333,5 +333,9 @@
       "reason": "gemini score 3.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "buffer_post_id": "6b00a770861298c9b14c7373",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-21T03:30:00.000Z",
+  "buffer_created_at": "2026-11-21 01:32 IST"
 }
