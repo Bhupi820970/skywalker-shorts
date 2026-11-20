@@ -1,39 +1,129 @@
 {
   "id": "20261120-2030-dandadan2",
-  "status": "failed",
-  "detail": "gemini QC reject on retry: The hook text on the video ('Yuji has nothing left to lose') does not match the expected hook ('Momo never lets him go').; The video feature Jujutsu Kaisen footage instead of the expected anime (Dandadan).; The video contains cropped/zoomed footage (e.g. at 00:09) rather than preserving the uncropped landscape image.",
-  "at": "2026-11-20 15:50 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44716891067",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-20 19:18 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44742950098",
   "slot": "2026-11-20T20:30:00+05:30",
-  "title": "Momo never lets him go | Dandadan | #edit",
-  "hook": "Momo never lets him go",
-  "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+  "title": "Why Okarun cannot stop watching her #dandadan #momoayase #anime",
+  "hook": "He finally found his match",
+  "description": "He finally found his match. Okarun and Momo navigate a surreal world where their growing connection defies the chaos surrounding them. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #momoayase #anime #shorts #edit",
   "tags": [
-    "dandadan2",
+    "dandadan",
+    "momoayase",
     "anime",
+    "dandadan2",
     "animeedit",
     "edit",
     "shorts",
     "trending",
     "momo"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Momo never lets him go",
+    "title": "Momo never lets him go | Dandadan | #edit",
+    "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+    "tags": [
+      "dandadan2",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "momo"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "emotional curiosity",
+  "title_candidates": [
+    {
+      "title": "Why Okarun cannot stop watching her",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody expected them to get this close",
+      "click_score": 88.0
+    },
+    {
+      "title": "Momo and Okarun changed the game",
+      "click_score": 85.0
+    },
+    {
+      "title": "Watch the last two seconds of this bond",
+      "click_score": 82.0
+    },
+    {
+      "title": "Okarun did not expect this from Momo",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
-      "purpose": "qc",
+      "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "TimeoutError"
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.4,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.4,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 17.8,
+      "ok": true
     },
     {
       "purpose": "qc",
-      "model": "gemini-3.5-flash",
+      "model": "gemini-3.1-flash-lite",
       "key": "key2",
-      "s": 24.0,
+      "s": 4.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 12.8,
       "ok": true
     }
   ],
@@ -51,50 +141,16 @@
   "attempts": [
     {
       "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 14.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4",
-      "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "download failed: yt-dlp:ERROR: [youtube] cWu6Q72jfuM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] Y3pmO6q8jSU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] Gk30NUs9oRI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] yo8rklUv1EY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] XYNGkSvFT8c: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] 9A3Itqpl26M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] _41-0Pj8IN8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] -VE7havwyoM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] FpR2IaKqF64: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] uXr9Ha9qRHE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] Ua4NZ3yW2lk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] 0G7HX16YTLU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [generic] apothecarydiaries2_scene1_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | yt-dlp:ERROR: [generic] apothecarydiaries2_scene2_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | yt-dlp:ERROR: [generic] apothecarydiaries2_scene3_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)",
-      "source": null,
-      "music": null,
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "download failed: yt-dlp:ERROR: [youtube] kIFY5rqD0pE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] 7Wbwr--JiT0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] MoVYF42TB2Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] byJ7pxxhaDY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] VEa-32eURrc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] Mgk5_MXodvY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] _41-0Pj8IN8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] -VE7havwyoM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] FpR2IaKqF64: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] uXr9Ha9qRHE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] Ua4NZ3yW2lk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [youtube] 0G7HX16YTLU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp | yt-dlp:ERROR: [generic] sololeveling2_scene1_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | yt-dlp:ERROR: [generic] sololeveling2_scene2_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>) | yt-dlp:ERROR: [generic] sololeveling2_scene3_h264: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)",
-      "source": null,
-      "music": null,
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "gemini QC skipped",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
-      "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3",
-      "qc_status": "skipped"
-    },
-    {
-      "attempt": "qc_retry",
-      "ok": false,
-      "error": "gemini QC fail",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
-      "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3"
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene1_h264.mp4",
+      "music": "pr_ytsearch1enniomorriconedeborahstheme.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "gemini QC reject",
-  "qc_rejected": true,
-  "qc_status": "fail",
+  "last_error": null,
   "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261120-2030-dandadan2",
   "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261120-2030-dandadan2/render-20261120-2030-dandadan2.mp4",
-  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261120-2030-dandadan2/render-20261120-2030-dandadan2-cover.jpg",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -102,76 +158,66 @@
     "no_shake": true,
     "no_logo": true
   },
+  "drop_t": null,
   "energy": false,
-  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
-  "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3",
-  "music_credit": "Song: Dart Vader The Invisible Art of Film Music - Francis Lai - Theme From Love Story (Finale)\nOfficial link: ytsearch1:Francis Lai Love Story theme instrumental",
-  "description_final": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame\n\nMusic:\nSong: Dart Vader The Invisible Art of Film Music - Francis Lai - Theme From Love Story (Finale)\nOfficial link: ytsearch1:Francis Lai Love Story theme instrumental",
-  "gate": {
-    "ok": false,
-    "failures": [
-      "gemini QC skipped (unavailable/budget)"
-    ],
-    "gemini_qc": "skipped (unavailable/budget)"
-  },
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene1_h264.mp4",
+  "music": "pr_ytsearch1enniomorriconedeborahstheme.mp3",
+  "music_credit": "Song: Amitoj Gautam - Deborah's Theme (Once Upon a Time in America)---Ennio Morricone\nOfficial link: ytsearch1:Ennio Morricone Deborah's Theme",
+  "description_final": "He finally found his match. Okarun and Momo navigate a surreal world where their growing connection defies the chaos surrounding them. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #momoayase #anime #shorts #edit\n\nMusic:\nSong: Amitoj Gautam - Deborah's Theme (Once Upon a Time in America)---Ennio Morricone\nOfficial link: ytsearch1:Ennio Morricone Deborah's Theme",
   "no_publish": false,
-  "scenes_picked": [
-    {
-      "id": 1,
-      "src_start": 3.0,
-      "dur": 0.836
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261120-2030-dandadan2/render-20261120-2030-dandadan2-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 21.888,
+      "audio": true
     },
-    {
-      "id": 53001101,
-      "src_start": 118.524,
-      "dur": 2.5
+    "lufs": -15.4,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -18.6,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
     },
-    {
-      "id": 57,
-      "src_start": 147.583,
-      "dur": 2.864
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 45,
+      "masked_rows": [
+        [
+          0.2698,
+          0.3417
+        ]
+      ]
     },
-    {
-      "id": 52,
-      "src_start": 108.133,
-      "dur": 2.5
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
     },
-    {
-      "id": 39,
-      "src_start": 73.779,
-      "dur": 0.731
-    },
-    {
-      "id": 26,
-      "src_start": 46.833,
-      "dur": 2.243
-    },
-    {
-      "id": 20,
-      "src_start": 37.717,
-      "dur": 0.92
-    },
-    {
-      "id": 58,
-      "src_start": 157.717,
-      "dur": 0.927
-    },
-    {
-      "id": 49,
-      "src_start": 97.21,
-      "dur": 1.76
-    },
-    {
-      "id": 32,
-      "src_start": 61.703,
-      "dur": 2.057
-    },
-    {
-      "id": 45,
-      "src_start": 82.679,
-      "dur": 1.248
-    }
-  ],
+    "logo_pending_only": false
+  },
   "layout": {
     "bar_y": 518,
     "bar_h": 138,
@@ -190,5 +236,96 @@
     "edit_mode": "music_only",
     "edit_format": "love",
     "blur_fill": true
-  }
+  },
+  "scenes_picked": [
+    {
+      "id": 88001,
+      "src_start": 156.854,
+      "dur": 2.5,
+      "gemini_score": 10.0,
+      "reason": "gemini score 10.0"
+    },
+    {
+      "id": 40001,
+      "src_start": 65.393,
+      "dur": 1.134,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 36,
+      "src_start": 59.233,
+      "dur": 0.86,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 32,
+      "src_start": 52.467,
+      "dur": 2.217,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 67,
+      "src_start": 118.153,
+      "dur": 0.72,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 15,
+      "src_start": 31.2,
+      "dur": 1.16,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 74,
+      "src_start": 132.067,
+      "dur": 1.742,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 79,
+      "src_start": 142.5,
+      "dur": 1.46,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 27,
+      "src_start": 43.8,
+      "dur": 1.327,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 57,
+      "src_start": 87.533,
+      "dur": 1.293
+    },
+    {
+      "id": 81,
+      "src_start": 146.213,
+      "dur": 2.189
+    },
+    {
+      "id": 84,
+      "src_start": 151.233,
+      "dur": 0.687
+    },
+    {
+      "id": 6,
+      "src_start": 17.21,
+      "dur": 1.05
+    },
+    {
+      "id": 46,
+      "src_start": 72.667,
+      "dur": 0.893
+    }
+  ],
+  "qc_status": "pass"
 }
