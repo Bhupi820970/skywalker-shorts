@@ -1,0 +1,173 @@
+{
+  "id": "stock-jujutsukaisencullinggame-02",
+  "status": "retry_queued",
+  "detail": "all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: publish gate failed: logo scan: {\"final\": [\"1.54s burned-in text 'NANAMI REVEALS HIS'\", \"2.04s burned-in text 'NANAMI REVEALS HIS'\", \"2.54s burned-in text 'NANAMI REVEALS HIS'\", \"3.04s burned-in text 'TRUE POWER'\", \"3.54s burned-in text 'TRUE POWER'\", \"4.04s burned-in text 'TRUE POWER'\", \"4.54s burned-in text 'YUJI HAS NOTHING'\", ",
+  "at": "2026-11-20 17:35 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44723829921",
+  "slot": null,
+  "title": "Nanami was holding back the whole time #jujutsukaisen #nanami #anime",
+  "hook": "Nanami reveals his true power",
+  "description": "Nanami reveals his true power. Kento Nanami corners his target and showcases the lethal efficiency of a grade one sorcerer during a high-stakes confrontation. From the official Jujutsu Kaisen trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#jujutsukaisen #nanami #anime #shorts #edit",
+  "tags": [
+    "jujutsukaisen",
+    "nanami",
+    "anime",
+    "jujutsukaisencullinggame",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "yuji"
+  ],
+  "queue_meta": {
+    "hook": "Yuji has nothing left to lose",
+    "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+    "description": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame",
+    "tags": [
+      "jujutsukaisencullinggame",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "yuji"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Nanami was holding back the whole time",
+      "click_score": 92.0
+    },
+    {
+      "title": "Watch Nanami dismantle a grade one curse",
+      "click_score": 88.0
+    },
+    {
+      "title": "Nanami underestimated his opponent",
+      "click_score": 85.0
+    },
+    {
+      "title": "Nobody expected Nanami to be this fast",
+      "click_score": 82.0
+    },
+    {
+      "title": "Nanami finally gets serious in battle",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.1,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 14.8,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 19.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 6.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 4.2,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-jujutsukaisencullinggame",
+  "stock": true,
+  "stock_topic": "backup-jujutsukaisencullinggame",
+  "spare": true,
+  "words": "JUJUTSU KAISEN",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "publish gate failed: logo scan: {\"final\": [\"1.54s burned-in text 'NANAMI REVEALS HIS'\", \"2.04s burned-in text 'NANAMI REVEALS HIS'\", \"2.54s burned-in text 'NANAMI REVEALS HIS'\", \"3.04s burned-in text 'TRUE POWER'\", \"3.54s burned-in text 'TRUE POWER'\", \"4.04s burned-in text 'TRUE POWER'\", \"4.54s burned-in text 'YUJI HAS NOTHING'\", ",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene2_h264.mp4",
+      "music": "pr_provocarmunh0desyr.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": "publish gate failed: logo scan: {\"final\": [\"1.54s burned-in text 'NANAMI REVEALS HIS'\", \"2.04s burned-in text 'NANAMI REVEALS HIS'\", \"2.54s burned-in text 'NANAMI REVEALS HIS'\", \"3.04s burned-in text 'TRUE POWER'\", \"3.54s burned-in text 'TRUE POWER'\", \"4.04s burned-in text 'TRUE POWER'\", \"4.54s burned-in text 'YUJI HAS NOTHING'\", "
+}
