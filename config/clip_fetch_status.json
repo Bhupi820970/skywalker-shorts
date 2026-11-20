@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-20T05:17:09Z",
-  "last_upload_at": "2026-11-20T05:17:09Z"
+  "last_run_at": "2026-11-20T05:20:30Z",
+  "last_upload_at": "2026-11-20T05:20:30Z"
  },
  "done_ids": [
   "yt:0Z_mA7n5zIA",
@@ -11,6 +11,7 @@
   "yt:5oRczmZ6dGU",
   "yt:7LzDcr20SHc",
   "yt:9vzlmyNNt70",
+  "yt:A1dnxXrpN-o",
   "yt:AXbeD92Ty50",
   "yt:B0pIISs-o8w",
   "yt:DDAHHPGcLzo",
@@ -737,6 +738,17 @@
    "kbps": 1441,
    "by": "box",
    "at": "2026-11-20T05:17:09Z"
+  },
+  {
+   "asset": "dandadan2_scene1_h264.mp4",
+   "id": "yt:A1dnxXrpN-o",
+   "title": "DAN DA DAN OP | Otonoke by Creepy Nuts | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1485,
+   "by": "box",
+   "at": "2026-11-20T05:20:30Z"
   }
  ],
  "github": {
