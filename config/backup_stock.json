@@ -692,7 +692,7 @@
       "id": "stock-dandadanevil-02",
       "topic_id": "backup-dandadanevil",
       "slug": "dandadanevil",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-20 10:08 IST",
       "result_id": "stock-dandadanevil-02"
     },
@@ -852,7 +852,8 @@
       "topic_id": "backup-dragonballdaima",
       "slug": "dragonballdaima",
       "status": "pending",
-      "queued_at": "2026-11-20 12:02 IST"
+      "queued_at": "2026-11-20 12:02 IST",
+      "result_id": "stock-dragonballdaima-04"
     },
     {
       "id": "stock-drstone-01",
@@ -929,8 +930,9 @@
       "id": "stock-firforce3-04",
       "topic_id": "backup-firforce3",
       "slug": "firforce3",
-      "status": "pending",
-      "queued_at": "2026-11-20 12:02 IST"
+      "status": "failed",
+      "queued_at": "2026-11-20 12:02 IST",
+      "result_id": "stock-firforce3-04"
     },
     {
       "id": "stock-firstslamdunk-01",
@@ -1026,7 +1028,8 @@
       "topic_id": "backup-frieren",
       "slug": "frieren",
       "status": "pending",
-      "queued_at": "2026-11-20 12:03 IST"
+      "queued_at": "2026-11-20 12:03 IST",
+      "result_id": "stock-frieren-04"
     },
     {
       "id": "stock-frieren2-01",
@@ -1042,7 +1045,8 @@
       "topic_id": "backup-frieren2",
       "slug": "frieren2",
       "status": "pending",
-      "queued_at": "2026-11-20 12:03 IST"
+      "queued_at": "2026-11-20 12:03 IST",
+      "result_id": "stock-frieren2-02"
     },
     {
       "id": "stock-furiosa-01",
@@ -1771,6 +1775,26 @@
         "stock-aotfinal-08"
       ],
       "retired_at": "2026-11-20 10:08 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261120-0900-firforce3",
+        "stock-firforce3-04"
+      ],
+      "retired_at": "2026-11-20 14:54 IST"
+    },
+    {
+      "slug": "sakamotodays",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261116-1600-sakamotodays",
+        "20261120-1330-sakamotodays"
+      ],
+      "retired_at": "2026-11-20 14:54 IST"
     }
   ]
 }
