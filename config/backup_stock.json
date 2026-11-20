@@ -1160,6 +1160,13 @@
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-haikyuudumpster-01.mp4"
     },
     {
+      "id": "stock-haikyuudumpster-02",
+      "topic_id": "backup-haikyuudumpster",
+      "slug": "haikyuudumpster",
+      "status": "pending",
+      "queued_at": "2026-11-20 16:28 IST"
+    },
+    {
       "id": "stock-hellsparadise-01",
       "topic_id": "backup-hellsparadise",
       "slug": "hellsparadise",
@@ -1167,6 +1174,13 @@
       "queued_at": "2026-11-17 22:01 IST",
       "result_id": "stock-hellsparadise-01",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-hellsparadise-01.mp4"
+    },
+    {
+      "id": "stock-hellsparadise-02",
+      "topic_id": "backup-hellsparadise",
+      "slug": "hellsparadise",
+      "status": "pending",
+      "queued_at": "2026-11-20 16:28 IST"
     },
     {
       "id": "stock-jjk0-01",
