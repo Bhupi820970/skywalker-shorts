@@ -1,52 +1,10 @@
 {
- "generated_at": "2026-11-21 01:33 IST",
+ "generated_at": "2026-11-21 03:00 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 37,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "princessmononoke",
-   "slot": "2026-11-20T20:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261120-2030-princessmononoke",
-   "pillar": "anime",
-   "words": "PRINCESS MONONOKE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "PRINCESS MONONOKE fight scene official clip",
-    "PRINCESS MONONOKE best scene official clip",
-    "PRINCESS MONONOKE official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll Store Australia",
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4",
-   "missing_assets": [],
-   "on_release": [
-    "princessmononoke_scene2_h264.mp4"
-   ],
-   "hook": "San would die for the forest",
-   "title": "San would die for the forest | PRINCESS MONONOKE | #edit",
-   "tags": [
-    "princessmononoke",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "ashitaka",
-    "san",
-    "part2"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "haikyuudumpster",
    "slot": "2026-11-21T06:30:00+05:30",
@@ -1507,6 +1465,49 @@
     "trending",
     "aqua",
     "ruby"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "princessmononoke",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-princessmononoke",
+   "pillar": "anime",
+   "words": "PRINCESS MONONOKE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "PRINCESS MONONOKE fight scene official clip",
+    "PRINCESS MONONOKE best scene official clip",
+    "PRINCESS MONONOKE official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll Store Australia",
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
+   "missing_assets": [
+    "princessmononoke_scene1_h264.mp4"
+   ],
+   "on_release": [
+    "princessmononoke_scene2_h264.mp4"
+   ],
+   "hook": "San would die for the forest",
+   "title": "San would die for the forest | Princess Mononoke | #edit",
+   "tags": [
+    "princessmononoke",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "ashitaka",
+    "san"
    ],
    "market": "US/UK"
   },
