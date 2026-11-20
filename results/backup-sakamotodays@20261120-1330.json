@@ -1,0 +1,8 @@
+{
+  "id": "backup-sakamotodays@20261120-1330",
+  "status": "failed",
+  "detail": "render job ended with no result JSON (timed out or cancelled mid-render)",
+  "at": "2026-11-20T07:43:20Z",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44688636389",
+  "last_error": "no result JSON; job cancelled or timed out"
+}
