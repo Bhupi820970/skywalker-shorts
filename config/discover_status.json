@@ -3,19 +3,19 @@
   "queued_ids": [],
   "skipped": [
     {
+      "slug": "gta6",
+      "url": "https://www.youtube.com/watch?v=_yl5ELcmugI",
+      "channel": "Rockstar Games",
+      "title": "Grand Theft Auto VI: Out Now",
+      "skip": "sample download failed",
+      "words": "GRAND THEFT AUTO VI",
+      "hook": "The map just opened"
+    },
+    {
       "slug": "bridgerton",
       "url": "https://www.youtube.com/watch?v=JpIE4RnAkKU",
       "channel": "Netflix",
       "title": "Bridgerton | Exclusive Clip: Dinner with the Bridgertons | Netflix",
-      "skip": "sample download failed",
-      "words": "BRIDGERTON",
-      "hook": "She already knew"
-    },
-    {
-      "slug": "bridgerton",
-      "url": "https://www.youtube.com/watch?v=eKhh9VerYms",
-      "channel": "Netflix",
-      "title": "Bridgerton Season 3 | Official Clip | Netflix",
       "skip": "sample download failed",
       "words": "BRIDGERTON",
       "hook": "She already knew"
@@ -75,15 +75,6 @@
       "hook": "They almost said it"
     },
     {
-      "slug": "anyonebutyou",
-      "url": "https://www.youtube.com/watch?v=xgntISlmKkc",
-      "channel": "Movieclips",
-      "title": "Anyone But You (2023) - We Were Faking It The Whole Time Scene | Movieclips",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "ANYONE BUT YOU",
-      "hook": "One look was enough"
-    },
-    {
       "slug": "thesummeritp",
       "url": "https://www.youtube.com/watch?v=_w1YmoDdnk4",
       "channel": "Prime Video",
@@ -103,9 +94,9 @@
     },
     {
       "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=K8gBwJu5X1A",
+      "url": "https://www.youtube.com/watch?v=fiZ_DizQBeU",
       "channel": "Prime Video",
-      "title": "Conrad Tells Belly She’s Heartless | The Summer I Turned Pretty | Prime Video",
+      "title": "Taylor Admits Her Feelings for Steven at the Hospital | The Summer I Turned Pretty | Prime Video",
       "skip": "sample download failed",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss"
@@ -155,5 +146,5 @@
     "x_below_1080": 0,
     "x_unknown": 0
   },
-  "last_run_at": "2026-11-20 19:10 IST"
+  "last_run_at": "2026-11-21 18:32 IST"
 }
