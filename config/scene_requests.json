@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21 22:15 IST",
+ "generated_at": "2026-11-21 22:51 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 52,
@@ -708,6 +708,42 @@
     "trending",
     "aqua",
     "ruby"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "oppenheimer",
+   "slot": "2026-11-23T22:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261123-2230-oppenheimer",
+   "pillar": "hollywood",
+   "words": "OPPENHEIMER",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "OPPENHEIMER fight scene official clip",
+    "OPPENHEIMER best scene official clip",
+    "OPPENHEIMER official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=MeIk9ap1u_E",
+   "missing_assets": [
+    "oppenheimer_scene1_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Why he regrets his creation",
+   "title": "Why he regrets his creation 💀 | The Trinity Test | #edit",
+   "tags": [
+    "oppenheimer",
+    "nolan",
+    "hollywood",
+    "cillianmurphy",
+    "edit",
+    "phonk",
+    "aura"
    ],
    "market": "US/UK"
   },
