@@ -134,7 +134,13 @@ def main():
     os.environ.setdefault("GEMINI_MAX_CALLS", "3")
     now = datetime.now(IST)
     lib = json.loads((REPO / "music" / "library.json").read_text())
-    songs = [f"{t['title']} - {t['artist']}" for t in lib.get("tracks", [])]
+    try:
+        import music_lib  # noqa: WPS433
+        _usable = [t for t in lib.get("tracks", []) if not music_lib.is_denied_track(t, REPO)]
+    except Exception:
+        music_lib = None
+        _usable = list(lib.get("tracks", []))
+    songs = [f"{t['title']} - {t['artist']}" for t in _usable]
     sample = yt_search_sample()
     ours = own_performance()
     research = gemini.generate_text(
@@ -185,6 +191,12 @@ Return JSON with keys:
         data["title_patterns"] = _clean(data.get("title_patterns"))
     except Exception:
         pass
+    if music_lib is not None:
+        # Never let a talk / podcast / banned track ride in as a "trending" pick.
+        for key in ("song_picks", "songs_to_add"):
+            data[key] = [x for x in (data.get(key) or [])
+                         if not music_lib.is_non_music_track({"title": str(x)})
+                         and not music_lib.is_denied_track({"title": str(x)}, REPO)]
     data.update(generated_at=now.strftime("%Y-%m-%d %H:%M IST"), research_chars=len(research),
                 yt_sample=len(sample), own_videos=len(ours))
     (REPO / "trends").mkdir(exist_ok=True)

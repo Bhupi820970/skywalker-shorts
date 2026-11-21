@@ -902,3 +902,58 @@ def apply_title_swap(item: dict, candidate: dict, *, reason: str = "") -> dict:
     item["swapped_from"] = before["slug"]
     item["swapped_to"] = title_slug(item)
     return item
+
+
+# ---------------------------------------------------------------------------
+# Footage <-> metadata guard. The 20261121-1330-yourname QC-only retry judged a
+# Jujutsu Kaisen render (backup fallthrough in the previous run) against the
+# untouched "Your Name" queue title, so Gemini QC rejected it. Metadata must
+# always describe the show whose clips are actually in the video.
+
+_SWAP_META_KEYS = ("words", "hook", "title", "description", "tags", "edit_format",
+                   "title_swaps", "swapped_from", "swapped_to")
+
+
+def _clip_ref(source: str | None) -> str:
+    s = str(source or "").strip()
+    if s.startswith("gh:"):
+        s = s[3:]
+    return s
+
+
+def restore_swap_from_result(item: dict, prev: dict | None) -> bool:
+    """Re-apply a title/backup swap recorded in an earlier result onto the queue item.
+
+    A QC-only retry reloads the ORIGINAL queue item, while the kept render may be a
+    different show (swapped mid-run). Copy that show's title/description/hashtags back
+    and pin the item's sources to the clip actually rendered. Returns True if changed."""
+    prev = prev or {}
+    to = re.sub(r"[^a-z0-9]+", "", str(prev.get("swapped_to") or "").lower())
+    if not to or to == title_slug(item):
+        return False
+    for k in _SWAP_META_KEYS:
+        if prev.get(k) is not None:
+            item[k] = prev[k]
+    item["slug"] = to
+    clip = _clip_ref(prev.get("source"))
+    if clip:
+        item["sources"] = [clip]
+        item["fallback_mp4"] = [clip]
+        item.pop("fallback_asset", None)
+        item.pop("fallback_release", None)
+        item.pop("alt_source_urls", None)
+    return True
+
+
+def footage_title_mismatch(item: dict | None, source: str | None) -> str:
+    """'' when the rendered clip belongs to the show the metadata describes, else a reason.
+
+    Only sources-release asset names carry a show slug; page URLs (YouTube/X) return ''."""
+    clip = _clip_ref(source)
+    slug = sourcing.source_topic_slug(clip)
+    if not clip or not slug:
+        return ""
+    if sourcing.source_matches_topic(item or {}, clip):
+        return ""
+    return (f"footage/title mismatch: clips are from '{slug}' but title/description/hashtags "
+            f"are for '{title_slug(item) or (item or {}).get('words') or '?'}'")

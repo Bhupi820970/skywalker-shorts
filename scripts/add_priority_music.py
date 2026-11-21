@@ -158,6 +158,9 @@ def build_row(fname: str, src: dict, meta: dict, a: dict) -> dict:
         "energy": a["energy"], "tags": sorted(set(cm["tags"])),
         "credit": f"Song: {artist} - {title}" if artist else f"Song: {title}",
         "source": "youtube", "source_url": src["url"], "safety": "claim_risk",
+        # YouTube metadata so music_lib.is_non_music_track can drop talks/podcasts (category != Music).
+        "categories": [str(c) for c in (meta.get("categories") or [])][:3],
+        "channel": str(meta.get("channel") or meta.get("uploader") or "")[:80],
     }
 
 

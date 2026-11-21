@@ -359,7 +359,9 @@ def process_candidate(item: dict, fileinfo: dict, lib: dict, cfg: dict, taken: s
     license_url = meta_text(item.get("licenseurl"), "")
     if not license_ok(license_url):
         return None
-    if music_lib.is_denied_track({"title": title, "artist": artist, "source_id": ident,
+    coll = item.get("collection") or []
+    coll = " ".join(coll) if isinstance(coll, list) else str(coll)
+    if music_lib.is_denied_track({"title": title, "artist": artist, "source_id": ident, "channel": coll,
                                   "source_file": fileinfo.get("name") or ""}):
         return None
     fname = unique_filename(slugify(title, ident), taken)
@@ -407,8 +409,11 @@ def process_candidate(item: dict, fileinfo: dict, lib: dict, cfg: dict, taken: s
     reject = tuple(str(x).lower() for x in (cfg.get("reject_title_substrings") or [
         "podcast", "instrumentals volume", "album collection", "ost extended",
         "soundtrack collection", "audiobook", "interview", "asmr",
+        "librivox", "old time radio", "oldtimeradio", "radio program", "radio drama",
     ]))
-    if any(r in blob for r in reject):
+    if any(r in blob for r in reject) or music_lib.is_non_music_track(
+            {"title": title, "artist": artist, "source_id": ident, "duration_s": meta.get("duration_s")}):
+        print(f"    reject non-music {fname}")
         out.unlink(missing_ok=True)
         return None
     # Prefer phonk / drift / brazilian / slowed for the edit library.

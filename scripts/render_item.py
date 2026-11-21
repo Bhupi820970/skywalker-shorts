@@ -202,6 +202,15 @@ def write(status, detail, **extra):
          "words": item.get("words"), "edit_format": item.get("edit_format"),
          "title_swaps": item.get("title_swaps") or None,
          "swapped_from": item.get("swapped_from"), "swapped_to": item.get("swapped_to"), **extra}
+    # HARD guard: the title/description/hashtags must be for the show whose clips are in the video.
+    mismatch = title_swap.footage_title_mismatch(item, r.get("source"))
+    if mismatch:
+        r["footage_mismatch"] = mismatch
+        if status == "done":
+            print(f"::warning::{iid}: {mismatch}; refusing to mark it ready", flush=True)
+            r["status"] = "failed"
+            r["detail"] = f"{mismatch} (refused; was: {detail})"[:900]
+            r["last_error"] = mismatch
     if SOURCE_FAILS and "source_attempts" not in r:
         r["source_attempts"] = SOURCE_FAILS[-30:]
     prev = read_prev()
@@ -800,6 +809,15 @@ def _qc_only_retry(prev, auto_retries):
     if not url:
         return None
     print("=== QC-only retry (no re-render) ===", flush=True)
+    # The kept render may be a swapped/backup show; judge and label it as THAT show.
+    if title_swap.restore_swap_from_result(item, prev):
+        _refresh_item_context()
+        print(f"  QC retry: restored swapped title {prev.get('swapped_from')} -> {prev.get('swapped_to')} "
+              f"({item.get('words')}): {item.get('title')!r}", flush=True)
+    mismatch = title_swap.footage_title_mismatch(item, prev.get("source"))
+    if mismatch:
+        print(f"  QC retry: {mismatch}; rendering fresh instead of re-judging", flush=True)
+        return "rerender"
     gemini.allow_qc_retry(after_key=gemini.last_key_from_log(prev.get("gemini_calls") or []))
     dest = OUT / f"render-{iid}.mp4"
     ok, info = download_url(url, dest)

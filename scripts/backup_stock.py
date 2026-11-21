@@ -167,6 +167,8 @@ def must_not_publish(r: dict | None) -> bool:
         return True
     if r.get("no_publish") or r.get("demo") or r.get("dry_run"):
         return True
+    if r.get("footage_mismatch"):
+        return True  # clips are from another show than the title/description (render_item guard)
     if "/test-renders/" in str(r.get("asset_url") or ""):
         return True
     iid = str(r.get("id") or "")

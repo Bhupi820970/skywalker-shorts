@@ -155,10 +155,68 @@ def credit_block(t: dict) -> str:
     return "\n".join(lines)
 
 
+# Spoken-word / non-music audio (podcasts, talks, audiobooks, business/motivation videos).
+# Matched on title + artist + source_id + channel, never on the mp3 audio itself.
+_NON_MUSIC_RE = re.compile(
+    r"(?<![a-z0-9])(?:"
+    r"podcasts?|interviews?|audio ?books?|librivox|lectures?|sermons?|speech(?:es)?|ted ?x? ?talks?|"
+    r"motivational|motivation (?:speech|video)|business|entrepreneurs?|mindset|self[- ]help|"
+    r"advice|i built|from scratch|how i|how to|tutorials?|explained|documentar(?:y|ies)|"
+    r"full episodes?|episode \d+|chapter \d+|dramatic poem|radio (?:drama|play)|adaption|adaptation|"
+    r"hpr\d+|storytelling|vlogs?|reaction videos?|news (?:report|update)|q ?& ?a|chatgpt|claude ai|"
+    r"make money|passive income|millionaire|side hustle|investing|stock market|keynote|webinar|"
+    r"masterclass|asmr|old ?time ?radio|radio ?programs?"
+    r")(?![a-z0-9])", re.I)
+# Words that mark a long file as music (DJ mixes, playlists, OST suites) rather than talk.
+_MUSIC_MARKERS_RE = re.compile(
+    r"(?<![a-z0-9])(?:mix(?:es|tape)?|playlist|compilation|ost|soundtrack|score|theme|instrumental|"
+    r"phonk|funk|slowed|reverb|remix|album|beats?|songs?|music|vinyl|piano|symphony|concerto|sonata|"
+    r"suite|opera|orchestra|hardstyle|dubstep|techno|ep|lp|vol\.?)(?![a-z0-9])", re.I)
+NON_MUSIC_MAX_S = 900.0  # a 15+ minute "song" with no music words is a talk/podcast, not an edit track
+
+
+def _non_music_blob(t: dict) -> str:
+    return " ".join(str(t.get(k) or "") for k in (
+        "title", "artist", "source_id", "channel", "uploader", "album",
+    )).replace("_", " ").lower()
+
+
+def non_music_reason(t: dict | None) -> str:
+    """Why this library row is not music (podcast / talk / audiobook / business video), or ''.
+
+    Applies to priority songs too: a talk is never edit audio."""
+    if not t:
+        return ""
+    blob = _non_music_blob(t)
+    m = _NON_MUSIC_RE.search(blob)
+    if m:
+        return f"spoken-word keyword '{m.group(0).strip()}'"
+    cats = t.get("categories") or t.get("category") or []
+    if isinstance(cats, str):
+        cats = [cats]
+    cats = [str(c).strip().lower() for c in cats if str(c).strip()]
+    if cats and "music" not in cats:
+        return f"YouTube category {'/'.join(cats)} (not Music)"
+    try:
+        dur = float(t.get("duration_s") or 0)
+    except (TypeError, ValueError):
+        dur = 0.0
+    if dur > NON_MUSIC_MAX_S and not _MUSIC_MARKERS_RE.search(blob):
+        return f"{dur / 60:.0f} min long with no music words"
+    return ""
+
+
+def is_non_music_track(t: dict | None) -> bool:
+    return bool(non_music_reason(t))
+
+
 def is_denied_track(t: dict | None, AE: Path | None = None) -> bool:
-    """True if this track is on the permanent music denylist or the Content ID block-list."""
+    """True if this track is on the permanent music denylist, the Content ID block-list,
+    or is not music at all (podcast / talk / audiobook / business video)."""
     if not t:
         return False
+    if is_non_music_track(t):
+        return True
     if is_blocked_track(t, AE):
         return True
     entries = denylist_entries(AE)
