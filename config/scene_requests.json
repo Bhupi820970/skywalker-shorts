@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-21 20:05 IST",
+ "generated_at": "2026-11-21 21:15 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 44,
+ "release_scene_clips": 52,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -124,6 +124,42 @@
     "shorts",
     "trending",
     "mash"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dragonballdaima",
+   "slot": "2026-11-21T22:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261121-2230-dragonballdaima",
+   "pillar": "anime",
+   "words": "DRAGON BALL DAIMA",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DRAGON BALL DAIMA fight scene official clip",
+    "DRAGON BALL DAIMA best scene official clip",
+    "DRAGON BALL DAIMA official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Goku got small, not weak",
+   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+   "tags": [
+    "dragonballdaima",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "goku"
    ],
    "market": "US/UK"
   },
@@ -357,9 +393,7 @@
    "missing_assets": [
     "jjk0_scene1_h264.mp4"
    ],
-   "on_release": [
-    "jjk0_scene2_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Yuta only fights for her",
    "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
    "tags": [
@@ -530,6 +564,44 @@
    "market": "IN"
   },
   {
+   "slug": "jujutsukaisencullinggame",
+   "slot": "2026-11-23T11:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261123-1130-jujutsukaisencullinggame",
+   "pillar": "anime",
+   "words": "JUJUTSU KAISEN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "JUJUTSU KAISEN fight scene official clip",
+    "JUJUTSU KAISEN best scene official clip",
+    "JUJUTSU KAISEN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "TOHO animation チャンネル and 2 more"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Yuji has nothing left to lose",
+   "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+   "tags": [
+    "jujutsukaisencullinggame",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "yuji"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "kgf",
    "slot": "2026-11-23T13:30:00+05:30",
    "for": "slot",
@@ -603,6 +675,79 @@
     "action"
    ],
    "market": "IN"
+  },
+  {
+   "slug": "pathaan",
+   "slot": "2026-11-23T18:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261123-1830-pathaan",
+   "pillar": "bollywood",
+   "words": "PATHAAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "PATHAAN fight scene official clip",
+    "PATHAAN best scene official clip",
+    "PATHAAN official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=hQDyX9sOe04",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Why Jim turned against his nation",
+   "title": "Why Jim turned against his nation | Pathaan jetpack chase | #edit",
+   "tags": [
+    "pathaan",
+    "shahrukhkhan",
+    "srk",
+    "yrf",
+    "bollywoodedit",
+    "bollywood"
+   ],
+   "market": "IN"
+  },
+  {
+   "slug": "oshinoko2",
+   "slot": "2026-11-23T20:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261123-2030-oshinoko2",
+   "pillar": "anime",
+   "words": "OSHI NO KO",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "OSHI NO KO fight scene official clip",
+    "OSHI NO KO best scene official clip",
+    "OSHI NO KO official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=B6dq_yNQG4M",
+   "missing_assets": [
+    "oshinoko2_scene1_h264.mp4",
+    "oshinoko2_scene2_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Ruby cannot forgive him",
+   "title": "Ruby cannot forgive him | Aqua and Ruby | #edit",
+   "tags": [
+    "oshinoko",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "aqua",
+    "ruby"
+   ],
+   "market": "US/UK"
   },
   {
    "slug": "aotfinal",
@@ -713,9 +858,7 @@
     "arcane2_scene1_h264.mp4",
     "arcane2_scene2_h264.mp4"
    ],
-   "on_release": [
-    "arcane2_scene3_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Jinx never wanted this war",
    "title": "Jinx never wanted this war | Arcane | #edit",
    "tags": [
@@ -794,10 +937,11 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=KaB7tTJ2T5o",
    "missing_assets": [
-    "bluegiant_scene1_h264.mp4",
     "bluegiant_scene2_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "bluegiant_scene1_h264.mp4"
+   ],
    "hook": "His saxophone hits like thunder",
    "title": "His saxophone hits like thunder | Blue Giant | #edit",
    "tags": [
@@ -889,6 +1033,45 @@
    "market": "US/UK"
   },
   {
+   "slug": "cyberpunkedgerunners",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-cyberpunkedgerunners",
+   "pillar": "anime",
+   "words": "EDGERUNNERS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "EDGERUNNERS fight scene official clip",
+    "EDGERUNNERS best scene official clip",
+    "EDGERUNNERS official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+   "missing_assets": [],
+   "on_release": [
+    "cyberpunkedgerunners_scene1_h264.mp4"
+   ],
+   "hook": "David wanted to be a legend",
+   "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+   "tags": [
+    "cyberpunkedgerunners",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "dandadan",
    "slot": "9999",
    "for": "backup_pool",
@@ -914,8 +1097,7 @@
     "dandadan_scene1_h264.mp4"
    ],
    "on_release": [
-    "dandadan_scene2_h264.mp4",
-    "dandadan_scene3_h264.mp4"
+    "dandadan_scene2_h264.mp4"
    ],
    "hook": "Okarun was never ready for this",
    "title": "Okarun was never ready for this | Dandadan | #edit",
@@ -953,11 +1135,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
    "missing_assets": [
-    "dandadanevil_scene1_h264.mp4",
     "dandadanevil_scene2_h264.mp4",
     "dandadanevil_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "dandadanevil_scene1_h264.mp4"
+   ],
    "hook": "Evil Eye was a lonely kid",
    "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
    "tags": [
@@ -1196,9 +1379,7 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
    "missing_assets": [],
-   "on_release": [
-    "haikyuudumpster_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "The rematch everyone waited for",
    "title": "The rematch everyone waited for | Haikyu | #edit",
    "tags": [
@@ -1537,46 +1718,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "oshinoko2",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-oshinoko2",
-   "pillar": "anime",
-   "words": "OSHI NO KO",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "OSHI NO KO fight scene official clip",
-    "OSHI NO KO best scene official clip",
-    "OSHI NO KO official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=B6dq_yNQG4M",
-   "missing_assets": [
-    "oshinoko2_scene1_h264.mp4",
-    "oshinoko2_scene2_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Ruby cannot forgive him",
-   "title": "Ruby cannot forgive him | Aqua and Ruby | #edit",
-   "tags": [
-    "oshinoko",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "aqua",
-    "ruby"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "princessmononoke",
    "slot": "9999",
    "for": "backup_pool",
@@ -1599,11 +1740,9 @@
     "Netflix Anime"
    ],
    "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
-   "missing_assets": [
-    "princessmononoke_scene1_h264.mp4"
-   ],
+   "missing_assets": [],
    "on_release": [
-    "princessmononoke_scene2_h264.mp4"
+    "princessmononoke_scene1_h264.mp4"
    ],
    "hook": "San would die for the forest",
    "title": "San would die for the forest | Princess Mononoke | #edit",
@@ -1820,6 +1959,44 @@
     "trending",
     "anya",
     "loid"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "suzume",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-suzume",
+   "pillar": "anime",
+   "words": "SUZUME",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "SUZUME fight scene official clip",
+    "SUZUME best scene official clip",
+    "SUZUME official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll India",
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "She keeps closing doors alone",
+   "title": "She keeps closing doors alone | Suzume | #edit",
+   "tags": [
+    "suzume",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "suzume"
    ],
    "market": "US/UK"
   },
