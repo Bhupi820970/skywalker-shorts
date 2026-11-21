@@ -58,6 +58,26 @@ def channel_posts():
     return [e["node"] for e in d["posts"]["edges"]]
 
 
+def limit_status(when):
+    """Buffer's own daily posting limit check for a post at `when` (datetime)."""
+    q = """query L($ch: [ChannelId!]!, $d: DateTime) {
+      dailyPostingLimits(input: {channelIds: $ch, date: $d}) { channelId isAtLimit limit scheduled sent } }"""
+    d = gql(q, {"ch": [CH], "d": when.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")})
+    rows = d.get("dailyPostingLimits") or []
+    return rows[0] if rows else {}
+
+
+def delete_post(post_id):
+    """Delete a queued (never a sent) Buffer post. Caller checks status != sent."""
+    m = """mutation D($input: DeletePostInput!) { deletePost(input: $input) {
+      ... on DeletePostSuccess { id }
+      ... on MutationError { message } } }"""
+    d = gql(m, {"input": {"id": post_id}})["deletePost"]
+    if not d.get("id"):
+        raise RuntimeError("deletePost: " + str(d.get("message")))
+    return d["id"]
+
+
 def norm(t):
     return " ".join((t or "").lower().split())
 

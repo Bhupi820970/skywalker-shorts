@@ -1,0 +1,29 @@
+name: buffer-status
+
+# Manual only. Prints recent Buffer posts + daily posting limit. DELETE_IDS removes
+# queued (never sent) posts only.
+on:
+  workflow_dispatch:
+    inputs:
+      delete_ids:
+        description: "Queued Buffer post ids to delete (never sent ones)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Buffer status
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          DELETE_IDS: ${{ github.event.inputs.delete_ids }}
+        run: python3 scripts/buffer_status.py
