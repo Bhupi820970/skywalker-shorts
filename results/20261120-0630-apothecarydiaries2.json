@@ -353,5 +353,15 @@
   ],
   "qc_status": "pass",
   "reslotted_from": "2026-11-20T06:30:00+05:30",
-  "reslot_note": "missed Nov 20 slot; BiBi approved re-slot 2026-11-21 20:03 IST (YouTube direct)"
+  "reslot_note": "missed Nov 20 slot; BiBi approved re-slot 2026-11-21 20:03 IST (YouTube direct)",
+  "publish_via": "youtube",
+  "yt_video_id": "Y6NLSv1Q3UE",
+  "yt_uploaded_at": "2026-11-21 20:04 IST",
+  "yt_privacy": "private",
+  "yt_publish_at": "2026-11-21T20:30:00+05:30",
+  "yt_status": "scheduled",
+  "youtube_url": "https://youtube.com/shorts/Y6NLSv1Q3UE",
+  "buffer_post_id": "yt:Y6NLSv1Q3UE",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-21T15:00:00.000Z"
 }
