@@ -131,6 +131,15 @@ def release_backed_pool(pool: list[dict]) -> list[dict]:
     if assets is None:
         return pool
     counted = [(release_clip_count(b, assets), b) for b in pool]
+    # Never refill stock from footage known not to pass the no-logo/scene filter.
+    try:
+        import title_swap
+        health = title_swap.release_clip_health(_repo())
+        block = title_swap.release_title_blocklist(_repo())
+        counted = [(n, b) for n, b in counted
+                   if not title_swap.clips_known_bad(pool_slug(b), health, block)]
+    except Exception:
+        pass
     two = [b for n, b in counted if n >= 2]
     return two or [b for n, b in counted if n >= 1]
 
@@ -412,6 +421,8 @@ def is_ready_result(r: dict | None) -> bool:
         return False
     if r.get("stock_ready") is False:
         return False
+    if r.get("publish_blocked"):
+        return False
     if qc_was_skipped(r) or source_topic_mismatch(r):
         return False
     try:
@@ -427,6 +438,37 @@ def is_ready_result(r: dict | None) -> bool:
 
 def norm_title(t: str) -> str:
     return " ".join((t or "").lower().split())
+
+
+def hook_key(t: str) -> str:
+    """Title minus hashtags / ' | Show' suffix / emoji: same hook = same video to a viewer.
+
+    'Why Hodaka cannot stop watching her #weatheringwithyou #hina #anime' and the
+    '... #animeedit' variant are one video; Buffer's exact-title check missed that.
+    """
+    t = str(t or "").split("\n")[0]
+    t = re.sub(r"#\w+", " ", t)
+    t = t.split(" | ")[0]
+    t = re.sub(r"[^a-z0-9 ]+", " ", t.lower())
+    return " ".join(t.split())
+
+
+def _is_posted(r: dict) -> bool:
+    return bool(r.get("buffer_status") in ("sent", "scheduled") or r.get("youtube_url")
+                or r.get("buffer_posted_at"))
+
+
+def posted_hook_keys(root: Path, exclude_id: str | None = None) -> set[str]:
+    """Hook keys of every result already sent/scheduled on Buffer (all time)."""
+    keys = set()
+    for r in iter_results(root):
+        if r.get("id") == exclude_id or r.get("publish_blocked") or must_not_publish(r):
+            continue
+        if _is_posted(r):
+            k = hook_key(r.get("title") or r.get("hook") or "")
+            if k:
+                keys.add(k)
+    return keys
 
 
 def is_title_match_miss(r: dict, slot_s: str | None = None) -> bool:
@@ -471,6 +513,8 @@ def slot_post_conflicts(r: dict, rows: list[dict]) -> bool:
         if o.get("id") == iid or o.get("slot") != slot:
             continue
         if is_title_match_miss(o, slot):
+            continue
+        if o.get("publish_blocked") or o.get("publish_dead") or o.get("buffer_status") == "dead":
             continue
         if o.get("buffer_post_id"):
             return True
@@ -699,6 +743,8 @@ def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
     used = topics_used_on_day(root, day)
     recent_titles, recent_slugs = recent_titles_and_topics(root, now, buffer_posts=buffer_posts)
     used |= recent_slugs
+    posted = posted_hook_keys(root)
+    recent_hooks = {hook_key(t) for t in recent_titles}
 
     def conflicts(e: dict) -> bool:
         if (e.get("slug") or "") in used:
@@ -722,7 +768,11 @@ def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
         except Exception:
             pass
         title = norm_title(src.get("title") or e.get("title") or "")
-        return bool(title and title in recent_titles)
+        if title and title in recent_titles:
+            return True
+        # Never re-post a hook that already went out (hashtag variants included).
+        hk = hook_key(src.get("title") or e.get("title") or "")
+        return bool(hk and (hk in posted or hk in recent_hooks))
 
     prefer = [e for e in ready if not conflicts(e)]
     # Never fall back to a title/topic Buffer would swallow (same-title miss).

@@ -145,7 +145,8 @@ def save(p, r):
 
 
 def is_publish_dead(r):
-    return r.get("buffer_status") == "dead" or r.get("publish_dead") or r.get("status") == "dead"
+    return (r.get("buffer_status") == "dead" or r.get("publish_dead") or r.get("status") == "dead"
+            or bool(r.get("publish_blocked")))
 
 
 def mark_publish_dead(r, note, now):
@@ -268,11 +269,134 @@ def retry_error_post(r, x, now, late_h, all_r, posts):
     return "retry", gap, False, err
 
 
+LIMIT_MARKERS = ("daily posting limit", "posts per 24 hours")
+
+
+def is_limit_error(msg):
+    m = (msg or "").lower()
+    return any(k in m for k in LIMIT_MARKERS)
+
+
+def _post_when(x):
+    return _parse_dt(x.get("sentAt") or "") or _parse_dt(x.get("dueAt") or "")
+
+
+def limit_points(posts):
+    """Times that count toward Buffer's YouTube daily cap: sent + still-scheduled posts."""
+    pts = []
+    for x in posts or []:
+        if (x.get("status") or "") not in ("sent", "scheduled"):
+            continue
+        dt = _post_when(x)
+        if dt:
+            pts.append(dt)
+    return sorted(pts)
+
+
+def _window_ok(points, limit, window):
+    pts = sorted(points)
+    for i, p in enumerate(pts):
+        n = sum(1 for q in pts[: i + 1] if q > p - window)
+        if n > limit:
+            return False
+    return True
+
+
+def first_allowed_time(t, points, limit, window_h=24.0, margin_min=6.0):
+    """Earliest time >= t a new post fits Buffer's rolling 24h YouTube cap.
+
+    Buffer (Nov 19 2026) caps YouTube Shorts per channel per rolling 24h (Free plan: 2).
+    Posts over the cap fail with 'daily posting limit'. Returns None if nothing in 48h.
+    """
+    if not limit or limit <= 0:
+        return t
+    window = timedelta(hours=window_h)
+    margin = timedelta(minutes=margin_min)
+    cands = sorted({t} | {p + window + margin for p in points if p + window + margin > t})
+    for c in cands:
+        if c > t + timedelta(hours=48):
+            break
+        if _window_ok(list(points) + [c], limit, window):
+            return c
+    return None
+
+
+def posted_index(all_r, posts):
+    """(hook_key, when, id, sent?) for everything already sent/scheduled (results + Buffer)."""
+    idx = []
+    for r in all_r:
+        if r.get("publish_blocked") or backup_stock.must_not_publish(r):
+            continue
+        st = r.get("buffer_status")
+        sent = bool(st == "sent" or r.get("youtube_url") or r.get("buffer_posted_at"))
+        if not (sent or st == "scheduled"):
+            continue
+        k = backup_stock.hook_key(r.get("title") or r.get("hook") or "")
+        when = _parse_dt(r.get("buffer_posted_at") or r.get("buffer_due_at") or r.get("slot"))
+        idx.append({"key": k, "when": when, "id": r.get("id"), "post": r.get("buffer_post_id"),
+                    "sent": sent, "source": str(r.get("source") or "")})
+    for x in posts or []:
+        st = x.get("status") or ""
+        if st not in ("sent", "scheduled"):
+            continue
+        k = backup_stock.hook_key((x.get("metadata") or {}).get("title") or "")
+        idx.append({"key": k, "when": _post_when(x), "id": None, "post": x.get("id"),
+                    "sent": st == "sent", "source": ""})
+    return idx
+
+
+SOURCE_REPEAT_H = 72
+
+
+def repeat_of(r, idx, when=None):
+    """Reason string if r would re-post a hook (any time) or source clip (72h) that already went out."""
+    me, mine = r.get("id"), r.get("buffer_post_id")
+    k = backup_stock.hook_key(r.get("title") or r.get("hook") or "")
+    src = str(r.get("source") or "")
+    when = when or _parse_dt(r.get("slot"))
+    for e in idx:
+        if (e["id"] and e["id"] == me) or (mine and e["post"] == mine):
+            continue
+        earlier = e["sent"] or (e["when"] and when and e["when"] < when)
+        if not earlier:
+            continue
+        if k and e["key"] == k:
+            return f"same hook already posted ({e['id'] or e['post']}): {k!r}"
+        if src and e["source"] == src and e["sent"] and e["when"] and when \
+                and abs((when - e["when"]).total_seconds()) < SOURCE_REPEAT_H * 3600:
+            return f"same source clip posted <{SOURCE_REPEAT_H}h ago ({e['id']})"
+    return None
+
+
+def block_repeat(p, r, why, now, changed, cur=None):
+    """Mark a repeat so it is never posted; delete its queued (never sent) Buffer post."""
+    pid = r.get("buffer_post_id")
+    live = cur or {}
+    if pid and live.get("id") == pid and live.get("status") != "sent" and not DRY:
+        try:
+            delete_post(pid)
+            r["buffer_deleted_post_id"] = pid
+            print(f"{r.get('id')}: deleted queued repeat Buffer post {pid}")
+        except Exception as e:
+            print(f"{r.get('id')}: could not delete queued Buffer post {pid}: {e}")
+    print(f"{r.get('id')}: NOT posting - repeat: {why}")
+    if DRY:
+        return
+    r["publish_blocked"] = ("repeat: " + why)[:300]
+    r["publish_blocked_at"] = now.strftime("%Y-%m-%d %H:%M IST")
+    for k in ("buffer_post_id", "buffer_status", "buffer_due_at"):
+        r.pop(k, None)
+    save(p, r); changed.append(r.get("id"))
+
+
 def main():
     now = datetime.now(IST)
     start = datetime.fromisoformat(CFG["post_from_slot"])
     late_h = float(CFG.get("late_post_hours") or 6)
+    limit_defer_h = float(CFG.get("limit_defer_hours") or 12)
+    daily_limit = int(CFG.get("buffer_daily_limit") or 0)
     posts = None
+    idx = None
     failed, changed = [], []
     rows = []
     for p in sorted(glob.glob(str(REPO / "results" / "*.json"))):
@@ -303,7 +427,28 @@ def main():
             continue
         if posts is None:
             posts = channel_posts()
+        if idx is None:
+            idx = posted_index(all_r, posts)
         byid = {x["id"]: x for x in posts}
+        # Repeat guard: never schedule a hook (or source clip) that already went out.
+        cur = byid.get(r.get("buffer_post_id") or "") or {}
+        if (cur.get("status") or r.get("buffer_status")) != "sent":
+            why = repeat_of(r, idx)
+            if why:
+                block_repeat(p, r, why, now, changed, cur)
+                idx[:] = [e for e in idx if e["id"] != iid and not (cur and e["post"] == cur.get("id"))]
+                continue
+        # Buffer's daily cap rejected the post: not a content error. Re-queue it (no retry
+        # counted) inside limit_defer_hours of the slot, at the first time the cap allows.
+        if r.get("buffer_post_id") and (cur.get("status") or r.get("buffer_status")) == "error" \
+                and is_limit_error(((cur.get("error") or {}).get("message")) or r.get("buffer_error")):
+            print(f"{iid}: Buffer post {r['buffer_post_id']} hit the daily posting limit; re-queueing")
+            r["buffer_limit_failed_post_ids"] = list(r.get("buffer_limit_failed_post_ids") or []) + [r["buffer_post_id"]]
+            for k in ("buffer_post_id", "buffer_status", "buffer_due_at", "buffer_error", "buffer_retry_count"):
+                r.pop(k, None)
+            r["limit_deferred"] = True
+            if not DRY:
+                save(p, r); changed.append(iid)
         # refresh status of an already-created post; a re-render with new hook/title edits the scheduled post
         if r.get("buffer_post_id"):
             x = byid.get(r["buffer_post_id"])
@@ -383,18 +528,35 @@ def main():
             print(f"{iid}: NOT posting ({'; '.join(errs)})")
             continue
         # idempotency: same title already on the channel (Buffer or manual Studio upload)
-        dup = next((x for x in posts if norm((x.get("metadata") or {}).get("title")) == norm(r["title"])), None)
+        dup = next((x for x in posts if (x.get("status") or "") in ("sent", "scheduled")
+                    and norm((x.get("metadata") or {}).get("title")) == norm(r["title"])), None)
         if dup:
             print(f"{iid}: already on Buffer as {dup['id']} ({dup.get('status')}); recording, not posting")
             r.update(buffer_post_id=dup["id"], buffer_status=dup.get("status"), buffer_due_at=dup.get("dueAt"),
                      youtube_url=dup.get("externalLink"), buffer_note="matched existing post by title")
             save(p, r); changed.append(iid)
             continue
-        if slot < now - timedelta(hours=late_h):
-            print(f"{iid}: slot {r['slot']} is more than {late_h}h past and not posted - needs a manual decision")
-            failed.append(f"{iid}: missed slot not auto-posted (>{late_h}h late)")
+        win_h = limit_defer_h if r.get("limit_deferred") else late_h
+        if slot < now - timedelta(hours=win_h):
+            print(f"{iid}: slot {r['slot']} is more than {win_h}h past and not posted - needs a manual decision")
+            failed.append(f"{iid}: missed slot not auto-posted (>{win_h}h late)")
             continue
-        share_now = slot <= now + timedelta(minutes=3)
+        due = slot
+        if daily_limit:
+            want = max(slot, now + timedelta(minutes=2))
+            ok_at = first_allowed_time(want, limit_points(posts), daily_limit)
+            if ok_at is None or ok_at > slot + timedelta(hours=win_h):
+                print(f"::warning::{iid}: Buffer YouTube cap ({daily_limit}/24h) is full until after "
+                      f"{win_h}h past the slot; not posting (video kept)")
+                continue
+            if ok_at > slot + timedelta(minutes=3):
+                due = ok_at
+                print(f"{iid}: Buffer cap {daily_limit}/24h -> scheduling at {due:%Y-%m-%d %H:%M IST} instead of {slot:%H:%M}")
+        if due != slot:
+            share_now = False
+            slot = due
+        else:
+            share_now = slot <= now + timedelta(minutes=3)
         print(f"{iid}: {'shareNow' if share_now else 'schedule ' + r['slot']} -> Buffer channel {CH}: {r['title']!r}")
         if DRY:
             continue
@@ -407,7 +569,10 @@ def main():
         r.update(buffer_post_id=post["id"], buffer_status=post.get("status"), buffer_due_at=post.get("dueAt"),
                  buffer_created_at=now.strftime("%Y-%m-%d %H:%M IST"))
         save(p, r); changed.append(iid)
-        posts.append({"id": post["id"], "status": post.get("status"), "metadata": {"title": r["title"]}})
+        posts.append({"id": post["id"], "status": post.get("status"), "dueAt": post.get("dueAt"),
+                      "metadata": {"title": r["title"]}})
+        idx.append({"key": backup_stock.hook_key(r["title"]), "when": slot, "id": iid, "post": post["id"],
+                    "sent": False, "source": str(r.get("source") or "")})
         print(f"{iid}: Buffer post {post['id']} status={post.get('status')} dueAt={post.get('dueAt')}")
     out = os.environ.get("GITHUB_OUTPUT")
     if out:

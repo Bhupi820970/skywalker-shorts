@@ -4,5 +4,8 @@
   "youtube_category_id": "24",
   "post_from_slot": "2026-11-12T22:30:00+05:30",
   "late_post_hours": 6,
-  "note": "Only results with slot >= post_from_slot are posted (older slots were uploaded by hand). Late (missed) slots within late_post_hours are posted now (shareNow); never skipped silently."
+  "note": "Only results with slot >= post_from_slot are posted (older slots were uploaded by hand). Late (missed) slots within late_post_hours are posted now (shareNow); never skipped silently.",
+  "buffer_daily_limit": 2,
+  "limit_defer_hours": 12,
+  "limit_note": "Buffer caps YouTube Shorts per channel per rolling 24h since Nov 19 2026 (Free plan: 2; paid+verified email: 100). Posts over the cap fail, so publish schedules each post at the first time the cap allows (within late_post_hours of its slot, or limit_defer_hours for a post the cap already rejected)."
 }

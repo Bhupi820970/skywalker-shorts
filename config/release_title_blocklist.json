@@ -1,0 +1,6 @@
+{
+  "note": "Titles whose sources-release clips cannot pass the no-logo filter (burned-in channel/studio logo in every frame). Never used as a render fallback. Do not delete the release assets.",
+  "titles": {
+    "pathaan": "YRF logo burned into the corner of every frame of pathaan_scene*.mp4 (Gemini logo scan flags ~100% of frames -> 'No usable scenes after filtering'); 7 fallback renders failed 20-21 Nov"
+  }
+}

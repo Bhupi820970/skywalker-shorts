@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import re
+import zlib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -574,7 +575,80 @@ def with_release_clips(cand: dict, assets: set[str] | None) -> dict | None:
     return out
 
 
-def _release_filter(cands: list[dict]) -> list[dict]:
+CLIP_HEALTH_DAYS = 7
+# Failures that mean the title's release clips themselves do not pass the scene filter.
+_CLIP_FILTER_FAIL = ("no usable scenes", "unique clean shots", "logo", "watermark", "burned")
+
+
+def release_title_blocklist(root: Path | None = None) -> dict:
+    root = Path(root) if root else REPO
+    try:
+        return dict(json.loads((root / "config" / "release_title_blocklist.json").read_text()).get("titles") or {})
+    except Exception:
+        return {}
+
+
+def _result_footage_slug(r: dict) -> str:
+    """Slug of the footage a result actually rendered (after any swap)."""
+    s = r.get("swapped_to") or _slug_from_id(str(r.get("id") or ""))
+    return re.sub(r"[^a-z0-9]+", "", str(s or "").lower())
+
+
+def release_clip_health(root: Path | None = None, *, days: int = CLIP_HEALTH_DAYS,
+                        now: datetime | None = None) -> dict[str, dict]:
+    """{slug: {"ok": n, "bad": n}} from recent results: did this title's clips render?
+
+    ok  = a done render from this title's footage.
+    bad = a render that died because its clips did not pass the scene/logo filter.
+    """
+    root = Path(root) if root else REPO
+    now = now or datetime.now(IST)
+    start = now - timedelta(days=days)
+    out: dict[str, dict] = {}
+    for p in (root / "results").glob("*.json"):
+        try:
+            r = json.loads(p.read_text())
+        except Exception:
+            continue
+        if r.get("demo") or str(r.get("id") or "").startswith(("test-", "demo-")):
+            continue
+        at = str(r.get("at") or "")
+        try:
+            when = datetime.strptime(at[:16], "%Y-%m-%d %H:%M").replace(tzinfo=IST)
+        except Exception:
+            when = datetime.fromtimestamp(p.stat().st_mtime, IST)
+        if when < start:
+            continue
+        slug = _result_footage_slug(r)
+        if not slug:
+            continue
+        h = out.setdefault(slug, {"ok": 0, "bad": 0})
+        st = r.get("status")
+        if st == "done" and r.get("asset_url"):
+            h["ok"] += 1
+        elif st in ("failed", "retry_queued"):
+            blob = " ".join(str(r.get(k) or "") for k in ("detail", "last_error")).lower()
+            if any(m in blob for m in _CLIP_FILTER_FAIL):
+                h["bad"] += 1
+    return out
+
+
+def clips_known_bad(slug: str, health: dict, blocklist: dict) -> bool:
+    """Blocklisted, or >=2 recent filter failures and never a successful render."""
+    k = re.sub(r"[^a-z0-9]+", "", (slug or "").lower())
+    if k in blocklist:
+        return True
+    h = health.get(k) or {}
+    return h.get("bad", 0) >= 2 and h.get("ok", 0) == 0
+
+
+def _clip_rank(c: dict, health: dict) -> tuple:
+    """Proven titles (a recent done render) first, then most release clips."""
+    h = health.get(title_slug(c)) or {}
+    return (0 if h.get("ok", 0) > 0 else 1, -len(c.get("scene_assets") or []))
+
+
+def _release_filter(cands: list[dict], root: Path | None = None) -> list[dict]:
     """On GitHub (release-only) keep only titles whose clips are on the release, most clips first."""
     if not sourcing.release_only():
         return cands
@@ -582,7 +656,12 @@ def _release_filter(cands: list[dict]) -> list[dict]:
     if assets is None:
         return cands
     out = [c2 for c2 in (with_release_clips(c, assets) for c in cands) if c2]
-    out.sort(key=lambda c: len(c.get("scene_assets") or []), reverse=True)
+    # A fallback must be footage that actually passes the filter: drop titles whose
+    # release clips are logo-burned (blocklist) or keep failing the scene filter.
+    health = release_clip_health(root)
+    block = release_title_blocklist(root)
+    out = [c for c in out if not clips_known_bad(title_slug(c), health, block)]
+    out.sort(key=lambda c: _clip_rank(c, health))
     return out
 
 
@@ -602,7 +681,7 @@ def same_format_candidates(item: dict, *, exclude: set[str] | None = None,
         out.append(cand)
     if sourcing.release_only():
         # Only titles with >=2 clips on the release; else next_fallback_item picks (recent allowed).
-        return [c for c in _release_filter(out) if len(c.get("scene_assets") or []) >= 2]
+        return [c for c in _release_filter(out, root) if len(c.get("scene_assets") or []) >= 2]
     # Prefer titles that already have official sources-release scene clips.
     def score(c: dict) -> tuple:
         urls = c.get("sources") or []
@@ -615,6 +694,8 @@ def same_format_candidates(item: dict, *, exclude: set[str] | None = None,
 def next_eligible_title(item: dict, *, exclude: set[str] | None = None,
                         root: Path | None = None) -> dict | None:
     cands = same_format_candidates(item, exclude=exclude, root=root)
+    if cands and sourcing.release_only():
+        return _spread_pick(cands, item, root)
     return cands[0] if cands else None
 
 
@@ -630,11 +711,68 @@ def next_fallback_item(item: dict, *, exclude: set[str] | None = None,
     if sourcing.release_only():
         # Never leave a slot empty: any title with clips already on the release (recent or not).
         recent = recently_used_slugs(root)
-        rest = _release_filter(rest)
-        # >=2 clips first (a 1-clip title rarely has 18s of unique clean shots), then not-recent.
-        rest.sort(key=lambda c: (len(c.get("scene_assets") or []) < 2, bool(item_keys(c) & recent),
-                                 -len(c.get("scene_assets") or [])))
+        rest = _release_filter(rest, root)
+        health = release_clip_health(root)
+        # Proven footage first (a recent done render), then >=2 clips (a 1-clip title
+        # rarely has 18s of unique clean shots), then not-recent, then most clips.
+        return _spread_pick(rest, item, root, health=health, recent=recent)
     return rest[0] if rest else None
+
+
+def _spread_pick(cands: list[dict], item: dict, root: Path | None, *, health: dict | None = None,
+                 recent: set[str] | None = None) -> dict | None:
+    """Best release-backed candidate; parallel slot renders are spread over the top tier.
+
+    Order: proven footage (a recent done render) > not used today > >=2 clips > not recent.
+    """
+    if not cands:
+        return None
+    health = release_clip_health(root) if health is None else health
+    recent = set(recent or ())
+    today = used_today_slugs(item, root)
+
+    def tier_key(c: dict) -> tuple:
+        return (_clip_rank(c, health)[0], bool(item_keys(c) & today), len(c.get("scene_assets") or []) < 2)
+
+    ordered = sorted(cands, key=lambda c: tier_key(c) + (bool(item_keys(c) & recent),
+                                                         -len(c.get("scene_assets") or [])))
+    k0 = tier_key(ordered[0])
+    tier = [c for c in ordered if tier_key(c) == k0]
+    return tier[_slot_spread_index(item) % len(tier)]
+
+
+def _slot_spread_index(item: dict) -> int:
+    """0,1,2.. for the day's official slots (06:30 -> 0); stable hash for anything else."""
+    iid = str(item.get("id") or "")
+    parts = iid.split("-")
+    try:
+        import slot_times
+        times = [t.replace(":", "") for t in slot_times.official_times()]
+        if len(parts) >= 2 and parts[1] in times:
+            return times.index(parts[1])
+    except Exception:
+        pass
+    return zlib.crc32(iid.encode())
+
+
+def used_today_slugs(item: dict, root: Path | None = None) -> set[str]:
+    """Footage slugs other results of this IST day already rendered/assigned."""
+    root = Path(root) if root else REPO
+    iid = str(item.get("id") or "")
+    day = iid[:8] if iid[:8].isdigit() else datetime.now(IST).strftime("%Y%m%d")
+    out: set[str] = set()
+    for p in (root / "results").glob(f"{day}-*.json"):
+        if p.stem == iid:
+            continue
+        try:
+            r = json.loads(p.read_text())
+        except Exception:
+            continue
+        if r.get("status") in ("done", "rendering", "queued") or r.get("assigned_from_stock"):
+            s = _result_footage_slug(r)
+            if s:
+                out.add(s)
+    return out
 
 
 def apply_title_swap(item: dict, candidate: dict, *, reason: str = "") -> dict:
