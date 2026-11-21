@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-21T14:03:36Z",
-  "last_upload_at": "2026-11-21T14:03:36Z"
+  "last_run_at": "2026-11-21T14:40:21Z",
+  "last_upload_at": "2026-11-21T14:40:21Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -13,6 +13,7 @@
   "yt:5oRczmZ6dGU",
   "yt:7LzDcr20SHc",
   "yt:8sOJxGx7aio",
+  "yt:9QvzrledPxg",
   "yt:9vzlmyNNt70",
   "yt:A1dnxXrpN-o",
   "yt:AXbeD92Ty50",
@@ -53,10 +54,12 @@
   "yt:_GFcWG0M-YM",
   "yt:_lmn16npMXw",
   "yt:aeLkBvyiRfg",
+  "yt:afE7WD2raMw",
   "yt:aoi11BdfpoM",
   "yt:cbft6JWPkpA",
   "yt:ckEUVyKanhw",
   "yt:eifvzpMt_lE",
+  "yt:exdsbFvhocI",
   "yt:fS8SjwHwJyU",
   "yt:fmKWuAVt1vI",
   "yt:gDhtSggAoNI",
@@ -869,6 +872,39 @@
    "kbps": 8239,
    "by": "box",
    "at": "2026-11-21T14:03:36Z"
+  },
+  {
+   "asset": "fighther_scene1_h264.mp4",
+   "id": "yt:exdsbFvhocI",
+   "title": "FIGHTER: Sher Khul Gaye (Full Video) Hrithik, Deepika, Vishal-Sheykhar, Benny, Shilpa, Kumaar",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 17216,
+   "by": "box",
+   "at": "2026-11-21T14:40:21Z"
+  },
+  {
+   "asset": "fighther_scene2_h264.mp4",
+   "id": "yt:9QvzrledPxg",
+   "title": "FIGHTER: Mitti (Full Video) Hrithik Roshan, Deepika Padukone, Anil Kapoor | Vishal-Sheykhar",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 15945,
+   "by": "box",
+   "at": "2026-11-21T14:40:21Z"
+  },
+  {
+   "asset": "fighther_scene3_h264.mp4",
+   "id": "yt:afE7WD2raMw",
+   "title": "FIGHTER: Sher Khul Gaye (Lyrical) Hrithik,Deepika | Vishal-Sheykhar,Benny,Shilpa,Kumaar,Bosco-Caesar",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2352,
+   "by": "box",
+   "at": "2026-11-21T14:40:21Z"
   }
  ],
  "github": {
