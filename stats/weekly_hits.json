@@ -1,214 +1,214 @@
 {
-  "week_of": "2026-11-14",
-  "through": "2026-11-20",
-  "at": "2026-11-20 17:15 IST",
+  "week_of": "2026-11-15",
+  "through": "2026-11-21",
+  "at": "2026-11-21 16:40 IST",
   "lookback_days": 7,
-  "median_views": 1055.0,
-  "n": 53,
+  "median_views": 1064.0,
+  "n": 47,
   "top_titles": [
     {
-      "name": "apothecarydiaries",
-      "views": 20353.0,
-      "likes": 1602.0,
-      "title": "Why Jinshi cannot stop watching her 💀 | Maomao and Jinshi | #edit",
-      "slug": "apothecarydiaries"
-    },
-    {
-      "name": "despicableme",
-      "views": 5133.0,
-      "likes": 52.0,
-      "title": "Gru entering the scene is peak comedy #despicableme #gru #animation",
-      "slug": "despicableme"
-    },
-    {
       "name": "twisters",
-      "views": 5015.0,
-      "likes": 88.0,
+      "views": 5098.0,
+      "likes": 90.0,
       "title": "Glen Powell's aura in Twisters is unreal #twisters #glenpowell #action",
       "slug": "twisters"
     },
     {
       "name": "princessmononoke",
-      "views": 2812.0,
-      "likes": 53.0,
+      "views": 3328.0,
+      "likes": 60.0,
       "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
       "slug": "princessmononoke"
     },
     {
+      "name": "cyberpunkedgerunners",
+      "views": 1800.0,
+      "likes": 27.0,
+      "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+      "slug": "cyberpunkedgerunners"
+    },
+    {
       "name": "dandadan",
-      "views": 1519.0,
-      "likes": 19.0,
+      "views": 1614.0,
+      "likes": 21.0,
       "title": "Okarun finally loses control of his power #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
       "name": "animal",
-      "views": 1304.0,
-      "likes": 24.0,
+      "views": 1375.0,
+      "likes": 25.0,
       "title": "Ranbir makes them regret everything #animal #ranbirkapoor #bollywood",
       "slug": "animal"
     },
     {
       "name": "missionimpossible",
-      "views": 1285.0,
+      "views": 1289.0,
       "likes": 13.0,
       "title": "Ethan Hunt's final mission goes wrong #missionimpossible #tomcruise #action",
       "slug": "missionimpossible"
     },
     {
       "name": "werwulf",
-      "views": 1221.0,
+      "views": 1222.0,
       "likes": 11.0,
       "title": "POV: you're trapped in Robert Eggers' Werwulf #werwulf #roberteggers #horrormovie",
       "slug": "werwulf"
+    },
+    {
+      "name": "toystory5",
+      "views": 1214.0,
+      "likes": 28.0,
+      "title": "POV: You get replaced by an iPad in Toy Story 5 #toystory5 #woody #animation",
+      "slug": "toystory5"
     }
   ],
   "top_hooks": [
     {
-      "name": "Why Jinshi cannot stop watching her",
-      "views": 20353.0,
-      "likes": 1602.0,
-      "title": "Why Jinshi cannot stop watching her 💀 | Maomao and Jinshi | #edit",
-      "slug": "apothecarydiaries"
-    },
-    {
-      "name": "Gru arrives to steal the show",
-      "views": 5133.0,
-      "likes": 52.0,
-      "title": "Gru entering the scene is peak comedy #despicableme #gru #animation",
-      "slug": "despicableme"
-    },
-    {
       "name": "He chases what everyone else fears",
-      "views": 5015.0,
-      "likes": 88.0,
+      "views": 5098.0,
+      "likes": 90.0,
       "title": "Glen Powell's aura in Twisters is unreal #twisters #glenpowell #action",
       "slug": "twisters"
     },
     {
       "name": "Ashitaka walked through an entire army",
-      "views": 2812.0,
-      "likes": 53.0,
+      "views": 3328.0,
+      "likes": 60.0,
       "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
       "slug": "princessmononoke"
     },
     {
+      "name": "David wanted to be a legend",
+      "views": 1800.0,
+      "likes": 27.0,
+      "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+      "slug": "cyberpunkedgerunners"
+    },
+    {
       "name": "Okarun finally unleashes his true power",
-      "views": 1519.0,
-      "likes": 19.0,
+      "views": 1614.0,
+      "likes": 21.0,
       "title": "Okarun finally loses control of his power #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
       "name": "Why Okarun cannot stop watching her",
-      "views": 1377.0,
+      "views": 1414.0,
       "likes": 31.0,
       "title": "Why Okarun cannot stop watching her #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
       "name": "Ranbir faces his father's enemies",
-      "views": 1304.0,
-      "likes": 24.0,
+      "views": 1375.0,
+      "likes": 25.0,
       "title": "Ranbir makes them regret everything #animal #ranbirkapoor #bollywood",
       "slug": "animal"
     },
     {
       "name": "Ethan Hunt has reached his limit",
-      "views": 1285.0,
+      "views": 1289.0,
       "likes": 13.0,
       "title": "Ethan Hunt's final mission goes wrong #missionimpossible #tomcruise #action",
       "slug": "missionimpossible"
+    },
+    {
+      "name": "When Okarun goes all out twice",
+      "views": 1249.0,
+      "likes": 23.0,
+      "title": "The moment Okarun unleashed his full power in Dan Da Dan #dandadan #okarun #animeedit",
+      "slug": "dandadan"
     }
   ],
   "top_songs": [
     {
-      "name": "sw_memoryreboot.mp3",
-      "views": 20353.0,
-      "likes": 1602.0,
-      "title": "Why Jinshi cannot stop watching her 💀 | Maomao and Jinshi | #edit",
-      "slug": "apothecarydiaries"
-    },
-    {
-      "name": "sw_goofyahhphonkfullversion.mp3",
-      "views": 5133.0,
-      "likes": 52.0,
-      "title": "Gru entering the scene is peak comedy #despicableme #gru #animation",
-      "slug": "despicableme"
-    },
-    {
       "name": "sw_worthnothingfeatolivertr.mp3",
-      "views": 5015.0,
-      "likes": 88.0,
+      "views": 5098.0,
+      "likes": 90.0,
       "title": "Glen Powell's aura in Twisters is unreal #twisters #glenpowell #action",
       "slug": "twisters"
     },
     {
       "name": "sw_sentemaisoverslowed.mp3",
-      "views": 2812.0,
-      "likes": 53.0,
+      "views": 3328.0,
+      "likes": 60.0,
       "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
       "slug": "princessmononoke"
     },
     {
       "name": "sw_aura1hourauramusicplayli.mp3",
-      "views": 1519.0,
-      "likes": 19.0,
-      "title": "Okarun finally loses control of his power #dandadan #okarun #anime",
-      "slug": "dandadan"
+      "views": 1800.0,
+      "likes": 27.0,
+      "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+      "slug": "cyberpunkedgerunners"
     },
     {
       "name": "sw_phnk2.mp3",
-      "views": 1377.0,
+      "views": 1414.0,
       "likes": 31.0,
       "title": "Why Okarun cannot stop watching her #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
       "name": "sw_interworldrapturephonk.mp3",
-      "views": 1285.0,
+      "views": 1289.0,
       "likes": 13.0,
       "title": "Ethan Hunt's final mission goes wrong #missionimpossible #tomcruise #action",
       "slug": "missionimpossible"
     },
     {
       "name": "sw_metamorphosis.mp3",
-      "views": 1236.0,
+      "views": 1249.0,
       "likes": 23.0,
       "title": "The moment Okarun unleashed his full power in Dan Da Dan #dandadan #okarun #animeedit",
       "slug": "dandadan"
+    },
+    {
+      "name": "sw_lycans.mp3",
+      "views": 1222.0,
+      "likes": 11.0,
+      "title": "POV: you're trapped in Robert Eggers' Werwulf #werwulf #roberteggers #horrormovie",
+      "slug": "werwulf"
+    },
+    {
+      "name": "sw_closeeyes.mp3",
+      "views": 1214.0,
+      "likes": 28.0,
+      "title": "POV: You get replaced by an iPad in Toy Story 5 #toystory5 #woody #animation",
+      "slug": "toystory5"
     }
   ],
   "weights": {
     "titles": {
-      "apothecarydiaries": 12.5039,
-      "despicableme": 9.9332,
-      "twisters": 10.0914,
-      "princessmononoke": 9.3382,
-      "dandadan": 8.375,
-      "animal": 8.3006,
-      "missionimpossible": 8.083,
-      "werwulf": 7.978
+      "twisters": 10.1156,
+      "princessmononoke": 9.5492,
+      "cyberpunkedgerunners": 8.6624,
+      "dandadan": 8.469,
+      "animal": 8.3673,
+      "missionimpossible": 8.0861,
+      "werwulf": 7.9788,
+      "toystory5": 8.2811
     },
     "hooks": {
-      "Why Jinshi cannot stop watching her": 12.5039,
-      "Gru arrives to steal the show": 9.9332,
-      "He chases what everyone else fears": 10.0914,
-      "Ashitaka walked through an entire army": 9.3382,
-      "Okarun finally unleashes his true power": 8.375,
-      "Why Okarun cannot stop watching her": 8.4414,
-      "Ranbir faces his father's enemies": 8.3006,
-      "Ethan Hunt has reached his limit": 8.083
+      "He chases what everyone else fears": 10.1156,
+      "Ashitaka walked through an entire army": 9.5492,
+      "David wanted to be a legend": 8.6624,
+      "Okarun finally unleashes his true power": 8.469,
+      "Why Okarun cannot stop watching her": 8.4679,
+      "Ranbir faces his father's enemies": 8.3673,
+      "Ethan Hunt has reached his limit": 8.0861,
+      "When Okarun goes all out twice": 8.2432
     },
     "songs": {
-      "sw_memoryreboot.mp3": 12.5039,
-      "sw_goofyahhphonkfullversion.mp3": 9.9332,
-      "sw_worthnothingfeatolivertr.mp3": 10.0914,
-      "sw_sentemaisoverslowed.mp3": 9.3382,
-      "sw_aura1hourauramusicplayli.mp3": 8.375,
-      "sw_phnk2.mp3": 8.4414,
-      "sw_interworldrapturephonk.mp3": 8.083,
-      "sw_metamorphosis.mp3": 8.2328
+      "sw_worthnothingfeatolivertr.mp3": 10.1156,
+      "sw_sentemaisoverslowed.mp3": 9.5492,
+      "sw_aura1hourauramusicplayli.mp3": 8.6624,
+      "sw_phnk2.mp3": 8.4679,
+      "sw_interworldrapturephonk.mp3": 8.0861,
+      "sw_metamorphosis.mp3": 8.2432,
+      "sw_lycans.mp3": 7.9788,
+      "sw_closeeyes.mp3": 8.2811
     }
   }
 }
