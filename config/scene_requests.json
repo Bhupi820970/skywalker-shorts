@@ -1,48 +1,10 @@
 {
- "generated_at": "2026-11-21 21:15 IST",
+ "generated_at": "2026-11-21 22:15 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 52,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "boyandheron",
-   "slot": "2026-11-21T16:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261121-1600-boyandheron",
-   "pillar": "anime",
-   "words": "THE BOY AND THE HERON",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "THE BOY AND THE HERON fight scene official clip",
-    "THE BOY AND THE HERON best scene official clip",
-    "THE BOY AND THE HERON official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
-   "missing_assets": [],
-   "on_release": [
-    "boyandheron_scene1_h264.mp4"
-   ],
-   "hook": "The heron knew his secret",
-   "title": "The heron knew his secret | The Boy and the Heron | #edit",
-   "tags": [
-    "boyandheron",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "mahito"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "dbsuperhero",
    "slot": "2026-11-21T18:30:00+05:30",
@@ -1033,6 +995,44 @@
    "market": "US/UK"
   },
   {
+   "slug": "boyandheron",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-boyandheron",
+   "pillar": "anime",
+   "words": "THE BOY AND THE HERON",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "THE BOY AND THE HERON fight scene official clip",
+    "THE BOY AND THE HERON best scene official clip",
+    "THE BOY AND THE HERON official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
+   "missing_assets": [],
+   "on_release": [
+    "boyandheron_scene1_h264.mp4"
+   ],
+   "hook": "The heron knew his secret",
+   "title": "The heron knew his secret | The Boy and the Heron | #edit",
+   "tags": [
+    "boyandheron",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "mahito"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "cyberpunkedgerunners",
    "slot": "9999",
    "for": "backup_pool",
@@ -1701,9 +1701,7 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
    "missing_assets": [],
-   "on_release": [
-    "onepunchman3_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Saitama ends fights in one hit",
    "title": "Saitama ends fights in one hit | One Punch Man | #edit",
    "tags": [
