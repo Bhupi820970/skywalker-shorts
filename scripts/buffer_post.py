@@ -293,11 +293,17 @@ def limit_points(posts):
     return sorted(pts)
 
 
-def _window_ok(points, limit, window):
-    pts = sorted(points)
-    for i, p in enumerate(pts):
-        n = sum(1 for q in pts[: i + 1] if q > p - window)
-        if n > limit:
+def _window_ok(points, cand, limit, window):
+    """True if adding `cand` keeps every rolling window that contains it at <= limit.
+
+    Only windows ending at cand or at a later point within `window` contain cand, so
+    old busy days (before the cap existed) never block a new post.
+    """
+    pts = sorted(list(points) + [cand])
+    for p in pts:
+        if not (cand <= p < cand + window):
+            continue
+        if sum(1 for q in pts if p - window < q <= p) > limit:
             return False
     return True
 
@@ -316,7 +322,7 @@ def first_allowed_time(t, points, limit, window_h=24.0, margin_min=6.0):
     for c in cands:
         if c > t + timedelta(hours=48):
             break
-        if _window_ok(list(points) + [c], limit, window):
+        if _window_ok(points, c, limit, window):
             return c
     return None
 

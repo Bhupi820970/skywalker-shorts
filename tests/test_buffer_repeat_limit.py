@@ -31,6 +31,9 @@ def test_first_allowed_time_rolling_cap():
     got2 = buffer_post.first_allowed_time(want, sent + [got], 2)
     assert got2 == datetime(2026, 11, 21, 17, 8, tzinfo=Z)  # 22:38 IST
     assert buffer_post.first_allowed_time(want, [], 2) == want
+    # an old busy day (6 posts on 18 Nov, before the cap) must not block today
+    busy = [datetime(2026, 11, 18, h, 0, tzinfo=Z) for h in range(8, 14)]
+    assert buffer_post.first_allowed_time(want, busy + sent, 2) == got
 
 
 def _res(iid, slot, title, **kw):
@@ -112,6 +115,9 @@ def test_limit_error_requeues_into_cap_window(monkeypatch, tmp_path):
               "When the maid cafe order gets weird #dandadan #okarun #anime",
               buffer_post_id="e2", buffer_status="error", buffer_retry_count=1)
     posts = [
+        {"id": "o%d" % h, "status": "sent", "sentAt": "2026-11-18T%02d:00:00Z" % h, "metadata": {"title": "O%d" % h}}
+        for h in range(8, 14)
+    ] + [
         {"id": "s1", "status": "sent", "sentAt": "2026-11-20T13:01:08Z", "metadata": {"title": "A"}},
         {"id": "s2", "status": "sent", "sentAt": "2026-11-20T17:02:29Z", "metadata": {"title": "B"}},
         {"id": "e2", "status": "error", "dueAt": "2026-11-21T07:30:47Z", "error": {"message": msg},
