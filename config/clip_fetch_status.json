@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-21T14:40:59Z",
-  "last_upload_at": "2026-11-21T14:40:59Z"
+  "last_run_at": "2026-11-21T14:41:49Z",
+  "last_upload_at": "2026-11-21T14:41:49Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -9,6 +9,7 @@
   "yt:1oiRkOT4Z_4",
   "yt:2_BkCz3OnlY",
   "yt:3bMYgo_S0Kc",
+  "yt:3nwBwJiyQ_g",
   "yt:4ZkOJjwRYoQ",
   "yt:5oRczmZ6dGU",
   "yt:6LWoO3UIZSg",
@@ -917,6 +918,17 @@
    "kbps": 1301,
    "by": "box",
    "at": "2026-11-21T14:40:59Z"
+  },
+  {
+   "asset": "topgunmaverick_scene1_h264.mp4",
+   "id": "yt:3nwBwJiyQ_g",
+   "title": "Top Gun: Maverick (2022) - Maverick Goes Down Scene | Movieclips",
+   "channel": "Movieclips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1358,
+   "by": "box",
+   "at": "2026-11-21T14:41:49Z"
   }
  ],
  "github": {
