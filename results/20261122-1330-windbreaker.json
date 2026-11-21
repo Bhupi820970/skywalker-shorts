@@ -2,177 +2,160 @@
   "id": "20261122-1330-windbreaker",
   "status": "retry_queued",
   "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
-  "at": "2026-11-21 21:28 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44915337753",
+  "at": "2026-11-22 03:59 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44950679429",
   "slot": "2026-11-22T13:30:00+05:30",
-  "title": "Why Hodaka cannot stop watching her #weatheringwithyou #hina #animeedit",
-  "hook": "He did not expect her gift",
-  "description": "He did not expect her gift. Hodaka realizes the depth of Hina's kindness during a quiet, rainy rooftop encounter. From the official Weathering With You trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#weatheringwithyou #hina #animeedit #shorts #edit",
+  "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+  "hook": "David wanted to be a legend",
+  "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
   "tags": [
-    "weatheringwithyou",
-    "hina",
-    "animeedit",
+    "cyberpunkedgerunners",
     "anime",
+    "animeedit",
     "edit",
     "shorts",
     "trending",
-    "hodaka"
+    "david"
   ],
   "queue_meta": {
-    "hook": "He chose her over the sky",
-    "title": "He chose her over the sky | Weathering With You | #edit",
-    "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
+    "hook": "David wanted to be a legend",
+    "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+    "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
     "tags": [
-      "weatheringwithyou",
+      "cyberpunkedgerunners",
       "anime",
       "animeedit",
       "edit",
       "shorts",
       "trending",
-      "hina",
-      "hodaka"
+      "david"
     ]
   },
   "gemini_meta": true,
-  "hook_source": "gemini",
-  "hook_style": "emotional observation",
-  "title_candidates": [
-    {
-      "title": "Why Hodaka cannot stop watching her",
-      "click_score": 92.0
-    },
-    {
-      "title": "The moment Hina finally noticed him",
-      "click_score": 88.0
-    },
-    {
-      "title": "Watch how she changes his world",
-      "click_score": 85.0
-    },
-    {
-      "title": "He was speechless after her gesture",
-      "click_score": 82.0
-    },
-    {
-      "title": "Hina caught him completely off guard",
-      "click_score": 79.0
-    }
-  ],
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
   "gemini_calls": [
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 17.9,
+      "key": "key4",
+      "s": 7.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 11.8,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
-      "key": "key1",
+      "key": "key4",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.8-flash",
-      "key": "key1",
+      "key": "key4",
+      "s": 62.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
+      "key": "key4",
+      "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.4,
+      "key": "key4",
+      "s": 3.2,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 48.4,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 8.9,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 6.5,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
+      "key": "key4",
       "s": 2.1,
       "ok": true
     },
     {
-      "purpose": "logo_final",
+      "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "s": 4.1,
+      "key": "key4",
+      "s": 3.2,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "s": 15.3,
+      "key": "key4",
+      "s": 1.9,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "s": 2.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "s": 4.4,
+      "key": "key4",
+      "s": 1.9,
       "ok": true
     },
     {
       "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 4.1,
+      "key": "key5",
+      "s": 2.7,
       "ok": true
     },
     {
       "purpose": "logo_final",
       "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 11.4,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 6.0,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
+      "key": "key5",
       "s": 4.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key5",
+      "s": 2.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key5",
+      "s": 3.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key5",
+      "s": 4.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key5",
+      "s": 2.6,
       "ok": true
     }
   ],
@@ -180,8 +163,8 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "words": "WEATHERING WITH YOU",
-  "edit_format": "love",
+  "words": "EDGERUNNERS",
+  "edit_format": "action",
   "title_swaps": [
     {
       "from": "windbreaker",
@@ -189,10 +172,24 @@
       "to": "weatheringwithyou",
       "to_words": "WEATHERING WITH YOU",
       "reason": "download failed: release-only: 3 clip(s) not on the sources release yet (box fetches them)"
+    },
+    {
+      "from": "weatheringwithyou",
+      "from_words": "WEATHERING WITH YOU",
+      "to": "boyandheron",
+      "to_words": "THE BOY AND THE HERON",
+      "reason": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"4.54s burned-in subtitle text\", \"5.04s burned-in subtitle text\", \"5.54s burned-in subtitle text\", \"6.54s burned-in subtitle text\", \"7.04s burned-in subtitle"
+    },
+    {
+      "from": "boyandheron",
+      "from_words": "THE BOY AND THE HERON",
+      "to": "cyberpunkedgerunners",
+      "to_words": "EDGERUNNERS",
+      "reason": "pipeline/QA failed (exit 1): only 14.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
     }
   ],
-  "swapped_from": "windbreaker",
-  "swapped_to": "weatheringwithyou",
+  "swapped_from": "boyandheron",
+  "swapped_to": "cyberpunkedgerunners",
   "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261122-1330-windbreaker",
   "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261122-1330-windbreaker/render-20261122-1330-windbreaker.mp4",
   "qa": {
@@ -202,12 +199,12 @@
     "no_shake": true,
     "no_logo": true
   },
-  "drop_t": null,
-  "energy": false,
-  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4",
-  "music": "sw_powergloveplaybackvinylr.mp3",
-  "music_credit": "Song: Power Glove - Power Glove - Playback vinyl rip\nOfficial link: https://archive.org/details/playback_202112\nLicense: http://creativecommons.org/publicdomain/zero/1.0/",
-  "description_final": "He did not expect her gift. Hodaka realizes the depth of Hina's kindness during a quiet, rainy rooftop encounter. From the official Weathering With You trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#weatheringwithyou #hina #animeedit #shorts #edit\n\nMusic:\nSong: Power Glove - Power Glove - Playback vinyl rip\nOfficial link: https://archive.org/details/playback_202112\nLicense: http://creativecommons.org/publicdomain/zero/1.0/",
+  "drop_t": 3.482,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+  "music": "pr_funkpowerultraslowed.mp3",
+  "music_credit": "Song: Phonk Time - FUNK POWER (ULTRA SLOWED)\nOfficial link: https://www.youtube.com/watch?v=CltCF4Aw4fI",
+  "description_final": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners\n\nMusic:\nSong: Phonk Time - FUNK POWER (ULTRA SLOWED)\nOfficial link: https://www.youtube.com/watch?v=CltCF4Aw4fI",
   "no_publish": false,
   "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261122-1330-windbreaker/render-20261122-1330-windbreaker-cover.jpg",
   "gate": {
@@ -218,203 +215,162 @@
     "gemini_qc": "skipped (unavailable/budget)"
   },
   "layout": {
-    "bar_y": 516,
-    "bar_h": 140,
+    "bar_y": 524,
+    "bar_h": 132,
     "plate_y": 656,
     "video_y": 656,
     "plate_x": 0,
     "plate_w": 1080,
     "plate_h": 608,
-    "region_h": 1780,
+    "region_h": 1788,
     "block_h": 1920,
-    "drop_t": null,
-    "energy": false,
+    "drop_t": 3.482,
+    "energy": true,
     "story_captions": {
       "pattern": "P08",
       "name": "2-word punch, mid",
-      "count": 6
+      "count": 3
     },
     "story_caption_boxes": [
       {
-        "t0": 1.625,
-        "t1": 2.601,
+        "t0": 1.602,
+        "t1": 2.856,
         "box": [
-          249,
-          816,
-          106,
-          43
+          64,
+          792,
+          475,
+          91
         ],
-        "text": "He did",
+        "text": "David wanted",
         "faces": []
       },
       {
-        "t0": 3.088,
-        "t1": 4.064,
+        "t0": 3.483,
+        "t1": 4.76,
         "box": [
-          249,
-          780,
-          311,
-          93
-        ],
-        "text": "not expect",
-        "faces": [
-          [
-            569,
-            813,
-            21,
-            27
-          ]
-        ]
-      },
-      {
-        "t0": 4.551,
-        "t1": 5.48,
-        "box": [
-          408,
-          900,
-          214,
-          93
-        ],
-        "text": "her gift",
-        "faces": [
-          [
-            215,
-            849,
-            138,
-            195
-          ]
-        ]
-      },
-      {
-        "t0": 5.944,
-        "t1": 6.873,
-        "box": [
-          391,
-          902,
-          265,
-          93
-        ],
-        "text": "He chose",
-        "faces": [
-          [
-            173,
-            851,
-            156,
-            196
-          ]
-        ]
-      },
-      {
-        "t0": 7.338,
-        "t1": 8.266,
-        "box": [
-          455,
-          834,
-          151,
+          731,
+          816,
+          92,
           43
         ],
-        "text": "her over",
-        "faces": [
-          [
-            346,
-            799,
-            78,
-            113
-          ]
-        ]
+        "text": "to be",
+        "faces": []
       },
       {
-        "t0": 8.707,
-        "t1": 9.543,
+        "t0": 5.387,
+        "t1": 6.641,
         "box": [
-          489,
-          788,
-          200,
+          203,
+          783,
+          279,
           93
         ],
-        "text": "the sky",
+        "text": "a legend",
         "faces": [
           [
-            393,
-            785,
-            69,
-            100
+            156,
+            809,
+            34,
+            42
           ]
         ]
       }
     ],
-    "caption_y": 1069,
+    "caption_y": 1292,
     "captions": [],
     "speech_windows": [],
     "edit_mode": "music_only",
-    "edit_format": "love",
+    "edit_format": "action",
     "blur_fill": true
   },
   "scenes_picked": [
     {
-      "id": 14,
-      "src_start": 53.542,
-      "dur": 2.5
+      "id": 26,
+      "src_start": 97.139,
+      "dur": 1.5
     },
     {
-      "id": 8,
-      "src_start": 25.792,
-      "dur": 2.5
+      "id": 39,
+      "src_start": 122.914,
+      "dur": 1.982
     },
     {
-      "id": 15,
-      "src_start": 63.5,
-      "dur": 2.5
+      "id": 56,
+      "src_start": 156.823,
+      "dur": 2.184
     },
     {
-      "id": 22,
-      "src_start": 87.542,
-      "dur": 2.5
+      "id": 53,
+      "src_start": 149.129,
+      "dur": 1.904
     },
     {
-      "id": 19,
-      "src_start": 74.0,
-      "dur": 3.0
+      "id": 49,
+      "src_start": 141.016,
+      "dur": 2.531
+    },
+    {
+      "id": 1,
+      "src_start": 3.0,
+      "dur": 2.508
+    },
+    {
+      "id": 7,
+      "src_start": 28.821,
+      "dur": 1.74
     },
     {
       "id": 21,
-      "src_start": 82.0,
-      "dur": 2.5
+      "src_start": 86.211,
+      "dur": 1.795
     },
     {
-      "id": 13,
-      "src_start": 44.042,
-      "dur": 3.0
+      "id": 6,
+      "src_start": 22.481,
+      "dur": 3.215
     },
     {
-      "id": 5,
-      "src_start": 13.292,
-      "dur": 3.0
+      "id": 28,
+      "src_start": 101.727,
+      "dur": 1.044
     },
     {
-      "id": 11,
-      "src_start": 32.042,
-      "dur": 0.6
+      "id": 14,
+      "src_start": 52.594,
+      "dur": 0.796
+    },
+    {
+      "id": 34,
+      "src_start": 114.906,
+      "dur": 0.902
     }
   ],
   "qc_status": "skipped",
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "download failed: release-only: 3 clip(s) not on the sources release yet (box fetches them)",
-      "source": null,
-      "music": null,
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"4.54s burned-in subtitle text\", \"5.04s burned-in subtitle text\", \"5.54s burned-in subtitle text\", \"6.54s burned-in subtitle text\", \"7.04s burned-in subtitle",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "music": "sw_powerglovetrialsoftheblo.mp3",
+      "qc_status": "pass"
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 14.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4",
+      "music": "pr_funkpowerultraslowed.mp3",
       "qc_status": null
     },
     {
       "attempt": 1,
       "ok": false,
       "error": "gemini QC skipped",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4",
-      "music": "sw_powergloveplaybackvinylr.mp3",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "music": "pr_funkpowerultraslowed.mp3",
       "qc_status": "skipped"
     }
   ],
@@ -423,14 +379,19 @@
   "logo_pending": false,
   "source_attempts": [
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'HE DID'\", \"2.54s burned-in text 'HE DID'\", \"3.54s burned-in text 'NOT EXPECT'\", \"4.04s burned-in text 'NOT EXPECT'\", \"5.04s burned-in text 'HER GIFT'\", \"5.54s burned-in text 'HER GIFT'\", \"6.04s burned-in text 'HE CHOSE'\", \"6.54s burne",
-      "at": "2026-11-21 20:43 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4",
+      "error": "gemini QC reject: The video follows all formatting guidelines perfectly.; The hook is engaging and readable.; The footage is clean and free of any watermarks or logos.; The audio is well-mixed with no leftover dialogue.",
+      "at": "2026-11-22 03:09 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
-      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'HE DID'\", \"2.54s burned-in text 'HE DID'\", \"3.54s burned-in text 'NOT EXPECT'\", \"4.04s burned-in text 'NOT EXPECT'\", \"5.04s burned-in text 'HER GIFT'\", \"6.04s burned-in text 'HE CHOSE'\", \"6.54s burned-in text 'HE CHOSE'\", \"7.54s burne",
-      "at": "2026-11-21 21:10 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"4.54s burned-in subtitle text\", \"5.04s burned-in subtitle text\", \"5.54s burned-in subtitle text\", \"6.54s burned-in subtitle ",
+      "at": "2026-11-22 03:24 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 14.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-22 03:32 IST"
     }
   ]
 }
