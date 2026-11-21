@@ -1,50 +1,10 @@
 {
- "generated_at": "2026-11-21 08:38 IST",
+ "generated_at": "2026-11-21 13:00 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 37,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "haikyuudumpster",
-   "slot": "2026-11-21T06:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261121-0630-haikyuudumpster",
-   "pillar": "anime",
-   "words": "HAIKYU",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "HAIKYU fight scene official clip",
-    "HAIKYU best scene official clip",
-    "HAIKYU official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Sony Pictures New Zealand Official",
-    "TOHO animation チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
-   "missing_assets": [],
-   "on_release": [
-    "haikyuudumpster_scene1_h264.mp4"
-   ],
-   "hook": "The rematch everyone waited for",
-   "title": "The rematch everyone waited for | Haikyu | #edit",
-   "tags": [
-    "haikyuudumpster",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "hinata"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "dandadan",
    "slot": "2026-11-21T09:00:00+05:30",
@@ -655,6 +615,44 @@
    "market": "IN"
   },
   {
+   "slug": "gangsofwasseypur",
+   "slot": "2026-11-23T09:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261123-0900-gangsofwasseypur",
+   "pillar": "bollywood",
+   "words": "GANGS OF WASSEYPUR",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "GANGS OF WASSEYPUR fight scene official clip",
+    "GANGS OF WASSEYPUR best scene official clip",
+    "GANGS OF WASSEYPUR official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=5oRczmZ6dGU",
+   "missing_assets": [
+    "gangsofwasseypur_scene1_h264.mp4",
+    "gangsofwasseypur_scene2_h264.mp4",
+    "gangsofwasseypur_scene3_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Why Faizal is a menace",
+   "title": "Why Faizal is a menace 💀 | The legend enters | #edit",
+   "tags": [
+    "gangsofwasseypur",
+    "faizalkhan",
+    "bollywood",
+    "edit",
+    "phonk",
+    "aura",
+    "classic"
+   ],
+   "market": "IN"
+  },
+  {
    "slug": "aotfinal",
    "slot": "9999",
    "for": "backup_pool",
@@ -1137,6 +1135,46 @@
     "shorts",
     "trending",
     "frieren"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "haikyuudumpster",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-haikyuudumpster",
+   "pillar": "anime",
+   "words": "HAIKYU",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "HAIKYU fight scene official clip",
+    "HAIKYU best scene official clip",
+    "HAIKYU official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Sony Pictures New Zealand Official",
+    "TOHO animation チャンネル"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
+   "missing_assets": [],
+   "on_release": [
+    "haikyuudumpster_scene1_h264.mp4"
+   ],
+   "hook": "The rematch everyone waited for",
+   "title": "The rematch everyone waited for | Haikyu | #edit",
+   "tags": [
+    "haikyuudumpster",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "hinata"
    ],
    "market": "US/UK"
   },
