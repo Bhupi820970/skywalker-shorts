@@ -1,92 +1,10 @@
 {
- "generated_at": "2026-11-21 17:11 IST",
+ "generated_at": "2026-11-21 20:05 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 42,
+ "release_scene_clips": 44,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "drstone",
-   "slot": "2026-11-21T11:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261121-1130-drstone",
-   "pillar": "anime",
-   "words": "DR. STONE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DR. STONE fight scene official clip",
-    "DR. STONE best scene official clip",
-    "DR. STONE official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=j8YijNavM7Y",
-   "missing_assets": [
-    "drstone_scene1_h264.mp4",
-    "drstone_scene2_h264.mp4",
-    "drstone_scene3_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Senku rebuilt the world with science",
-   "title": "Senku rebuilt the world with science | Dr. Stone | #edit",
-   "tags": [
-    "drstone",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "senku"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "yourname",
-   "slot": "2026-11-21T13:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261121-1330-yourname",
-   "pillar": "romance",
-   "words": "YOUR NAME",
-   "scene_types": [
-    "romantic",
-    "emotional",
-    "confession"
-   ],
-   "search_queries": [
-    "YOUR NAME romantic scene",
-    "YOUR NAME emotional scene",
-    "YOUR NAME official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll India",
-    "GKIDS Films",
-    "TOHO animation",
-    "TOHO",
-    "CoMix Wave Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
-   "missing_assets": [
-    "yourname_scene1_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "He forgot her name again",
-   "title": "He forgot her name again | Your Name | #edit",
-   "tags": [
-    "yourname",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "taki"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "boyandheron",
    "slot": "2026-11-21T16:00:00+05:30",
@@ -631,11 +549,12 @@
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=HYfycqyIuEk",
    "missing_assets": [
-    "kgf_scene1_h264.mp4",
-    "kgf_scene2_h264.mp4",
     "kgf_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "kgf_scene1_h264.mp4",
+    "kgf_scene2_h264.mp4"
+   ],
    "hook": "Why Rocky owns the city",
    "title": "Why Rocky owns the city 💀 | The entry | #edit",
    "tags": [
@@ -1049,6 +968,46 @@
     "shorts",
     "trending",
     "okarun"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "drstone",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-drstone",
+   "pillar": "anime",
+   "words": "DR. STONE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DR. STONE fight scene official clip",
+    "DR. STONE best scene official clip",
+    "DR. STONE official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=j8YijNavM7Y",
+   "missing_assets": [
+    "drstone_scene1_h264.mp4",
+    "drstone_scene2_h264.mp4",
+    "drstone_scene3_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Senku rebuilt the world with science",
+   "title": "Senku rebuilt the world with science | Dr. Stone | #edit",
+   "tags": [
+    "drstone",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "senku"
    ],
    "market": "US/UK"
   },
@@ -2020,6 +1979,48 @@
     "shorts",
     "trending",
     "coco"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "yourname",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-yourname",
+   "pillar": "anime",
+   "words": "YOUR NAME",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "YOUR NAME fight scene official clip",
+    "YOUR NAME best scene official clip",
+    "YOUR NAME official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll India",
+    "GKIDS Films",
+    "TOHO animation",
+    "TOHO",
+    "CoMix Wave Films"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
+   "missing_assets": [
+    "yourname_scene1_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "He forgot her name again",
+   "title": "He forgot her name again | Your Name | #edit",
+   "tags": [
+    "yourname",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "taki"
    ],
    "market": "US/UK"
   }
