@@ -1,0 +1,24 @@
+name: yt-auth-check
+
+# Manual check that the SKY_YT_* OAuth secrets work. Prints only the channel title and handle.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Verify YouTube token
+        env:
+          SKY_YT_CLIENT_ID: ${{ secrets.SKY_YT_CLIENT_ID }}
+          SKY_YT_CLIENT_SECRET: ${{ secrets.SKY_YT_CLIENT_SECRET }}
+          SKY_YT_REFRESH_TOKEN: ${{ secrets.SKY_YT_REFRESH_TOKEN }}
+        run: python3 scripts/yt_upload.py --auth-check

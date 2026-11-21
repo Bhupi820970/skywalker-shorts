@@ -395,6 +395,21 @@ def block_repeat(p, r, why, now, changed, cur=None):
     save(p, r); changed.append(r.get("id"))
 
 
+def metadata_errors(r):
+    """Gate re-check on metadata (render-time gate already checked the video itself)."""
+    g = r.get("gate") or {}
+    body = (r.get("description_final") or r.get("description") or "").split("\n\nMusic:")[0]
+    bad = sky_ai.banned_hits(r.get("title"), body)
+    errs = hook_text.check_item_hook_fields(r) + (["banned: " + ",".join(bad)] if bad else [])
+    if hook_text.template_errors(r.get("hook") or "") or hook_text.template_errors(r.get("title") or ""):
+        errs.append("old 'The reason why' template; needs re-render")
+    if g and g.get("ok") is False:
+        errs.append("render gate failed")
+    if not (r.get("title") or "").strip():
+        errs.append("empty title")
+    return errs
+
+
 def main():
     now = datetime.now(IST)
     start = datetime.fromisoformat(CFG["post_from_slot"])
@@ -519,17 +534,7 @@ def main():
                 if any(r.get(k) != v for k, v in upd.items()):
                     r.update(upd); save(p, r); changed.append(iid)
             continue
-        # gate re-check on metadata (render-time gate already checked the video itself)
-        g = r.get("gate") or {}
-        body = (r.get("description_final") or r.get("description") or "").split("\n\nMusic:")[0]
-        bad = sky_ai.banned_hits(r.get("title"), body)
-        errs = hook_text.check_item_hook_fields(r) + (["banned: " + ",".join(bad)] if bad else [])
-        if hook_text.template_errors(r.get("hook") or "") or hook_text.template_errors(r.get("title") or ""):
-            errs.append("old 'The reason why' template; needs re-render")
-        if g and g.get("ok") is False:
-            errs.append("render gate failed")
-        if not (r.get("title") or "").strip():
-            errs.append("empty title")
+        errs = metadata_errors(r)
         if errs:
             print(f"{iid}: NOT posting ({'; '.join(errs)})")
             continue
