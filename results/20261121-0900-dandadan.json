@@ -334,10 +334,10 @@
     }
   ],
   "qc_status": "pass",
-  "buffer_post_id": "6b0148a75e993799d85d8f49",
-  "buffer_status": "error",
-  "buffer_due_at": "2026-11-21T07:30:47.102Z",
   "buffer_created_at": "2026-11-21 13:00 IST",
-  "buffer_retry_count": 1,
-  "buffer_prev_post_id": "6b00a770861298c9b14c7373"
+  "buffer_prev_post_id": "6b00a770861298c9b14c7373",
+  "buffer_limit_failed_post_ids": [
+    "6b0148a75e993799d85d8f49"
+  ],
+  "limit_deferred": true
 }
