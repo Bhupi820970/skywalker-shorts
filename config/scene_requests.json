@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-21 13:00 IST",
+ "generated_at": "2026-11-21 14:29 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 37,
+ "release_scene_clips": 39,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -518,10 +518,10 @@
     "Netflix Anime"
    ],
    "source_url": "https://www.youtube.com/watch?v=JKvNlvV6ZW4",
-   "missing_assets": [
+   "missing_assets": [],
+   "on_release": [
     "hellsparadise_scene1_h264.mp4"
    ],
-   "on_release": [],
    "hook": "Gabimaru fights to go home",
    "title": "Gabimaru fights to go home | Hell's Paradise | #edit",
    "tags": [
@@ -597,10 +597,10 @@
    ],
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=1oiRkOT4Z_4",
-   "missing_assets": [
+   "missing_assets": [],
+   "on_release": [
     "taarezameenpar_scene1_h264.mp4"
    ],
-   "on_release": [],
    "hook": "Why he felt so alone",
    "title": "Why he felt so alone 💀 | The painting scene | #edit",
    "tags": [
@@ -649,6 +649,44 @@
     "phonk",
     "aura",
     "classic"
+   ],
+   "market": "IN"
+  },
+  {
+   "slug": "kgf",
+   "slot": "2026-11-23T13:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261123-1330-kgf",
+   "pillar": "south",
+   "words": "KGF CHAPTER 2",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "KGF CHAPTER 2 fight scene official clip",
+    "KGF CHAPTER 2 best scene official clip",
+    "KGF CHAPTER 2 official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=HYfycqyIuEk",
+   "missing_assets": [
+    "kgf_scene1_h264.mp4",
+    "kgf_scene2_h264.mp4",
+    "kgf_scene3_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Why Rocky owns the city",
+   "title": "Why Rocky owns the city 💀 | The entry | #edit",
+   "tags": [
+    "kgf2",
+    "rockybhai",
+    "south",
+    "edit",
+    "phonk",
+    "aura",
+    "action"
    ],
    "market": "IN"
   },
