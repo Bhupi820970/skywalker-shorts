@@ -1,53 +1,10 @@
 {
- "generated_at": "2026-11-22 00:36 IST",
+ "generated_at": "2026-11-22 02:46 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 52,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "mashle",
-   "slot": "2026-11-21T20:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261121-2030-mashle",
-   "pillar": "anime",
-   "words": "MASHLE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "MASHLE fight scene official clip",
-    "MASHLE best scene official clip",
-    "MASHLE official clip"
-   ],
-   "official_channels": [
-    "Aniplex USA",
-    "Aniplex USA and Sony",
-    "Crunchyroll"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
-   "missing_assets": [
-    "mashle_scene2_h264.mp4",
-    "mashle_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "mashle_scene1_h264.mp4"
-   ],
-   "hook": "Mash breaks magic with muscles",
-   "title": "Mash breaks magic with muscles | Mashle | #edit",
-   "tags": [
-    "mashle",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "mash"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "dragonballdaima",
    "slot": "2026-11-21T22:30:00+05:30",
@@ -350,9 +307,7 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=JKvNlvV6ZW4",
    "missing_assets": [],
-   "on_release": [
-    "hellsparadise_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Gabimaru fights to go home",
    "title": "Gabimaru fights to go home | Hell's Paradise | #edit",
    "tags": [
@@ -508,7 +463,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "jujutsukaisencullinggame_scene2_h264.mp4"
+   ],
    "hook": "Yuji has nothing left to lose",
    "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
    "tags": [
@@ -1546,6 +1503,49 @@
     "shorts",
     "trending",
     "axel"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "mashle",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-mashle",
+   "pillar": "anime",
+   "words": "MASHLE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "MASHLE fight scene official clip",
+    "MASHLE best scene official clip",
+    "MASHLE official clip"
+   ],
+   "official_channels": [
+    "Aniplex USA",
+    "Aniplex USA and Sony",
+    "Crunchyroll"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
+   "missing_assets": [
+    "mashle_scene2_h264.mp4",
+    "mashle_scene3_h264.mp4"
+   ],
+   "on_release": [
+    "mashle_scene1_h264.mp4"
+   ],
+   "hook": "Mash breaks magic with muscles",
+   "title": "Mash breaks magic with muscles | Mashle | #edit",
+   "tags": [
+    "mashle",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "mash"
    ],
    "market": "US/UK"
   },

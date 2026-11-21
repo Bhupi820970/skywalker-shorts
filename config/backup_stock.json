@@ -653,7 +653,7 @@
       "id": "stock-cyberpunkedgerunners-03",
       "topic_id": "backup-cyberpunkedgerunners",
       "slug": "cyberpunkedgerunners",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-20 19:06 IST",
       "result_id": "stock-cyberpunkedgerunners-03"
     },
@@ -661,7 +661,7 @@
       "id": "stock-cyberpunkedgerunners-04",
       "topic_id": "backup-cyberpunkedgerunners",
       "slug": "cyberpunkedgerunners",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-20 19:27 IST",
       "result_id": "stock-cyberpunkedgerunners-04",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-04.mp4"
@@ -672,15 +672,17 @@
       "slug": "cyberpunkedgerunners",
       "status": "pending",
       "queued_at": "2026-11-20 19:46 IST",
-      "result_id": "stock-cyberpunkedgerunners-05"
+      "result_id": "stock-cyberpunkedgerunners-05",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-05.mp4"
     },
     {
       "id": "stock-cyberpunkedgerunners-06",
       "topic_id": "backup-cyberpunkedgerunners",
       "slug": "cyberpunkedgerunners",
-      "status": "pending",
+      "status": "ready",
       "queued_at": "2026-11-20 20:20 IST",
-      "result_id": "stock-cyberpunkedgerunners-06"
+      "result_id": "stock-cyberpunkedgerunners-06",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-06.mp4"
     },
     {
       "id": "stock-dandadan-01",
@@ -905,7 +907,8 @@
       "slug": "dragonballdaima",
       "status": "pending",
       "queued_at": "2026-11-20 18:47 IST",
-      "result_id": "stock-dragonballdaima-05"
+      "result_id": "stock-dragonballdaima-05",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-05.mp4"
     },
     {
       "id": "stock-dragonballdaima-06",
@@ -913,15 +916,17 @@
       "slug": "dragonballdaima",
       "status": "pending",
       "queued_at": "2026-11-20 19:08 IST",
-      "result_id": "stock-dragonballdaima-06"
+      "result_id": "stock-dragonballdaima-06",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-06.mp4"
     },
     {
       "id": "stock-dragonballdaima-07",
       "topic_id": "backup-dragonballdaima",
       "slug": "dragonballdaima",
-      "status": "pending",
+      "status": "ready",
       "queued_at": "2026-11-20 19:27 IST",
-      "result_id": "stock-dragonballdaima-07"
+      "result_id": "stock-dragonballdaima-07",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-07.mp4"
     },
     {
       "id": "stock-dragonballdaima-08",
@@ -929,7 +934,8 @@
       "slug": "dragonballdaima",
       "status": "pending",
       "queued_at": "2026-11-20 23:26 IST",
-      "result_id": "stock-dragonballdaima-08"
+      "result_id": "stock-dragonballdaima-08",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-08.mp4"
     },
     {
       "id": "stock-drstone-01",
@@ -1291,9 +1297,10 @@
       "id": "stock-jujutsukaisencullinggame-03",
       "topic_id": "backup-jujutsukaisencullinggame",
       "slug": "jujutsukaisencullinggame",
-      "status": "pending",
+      "status": "ready",
       "queued_at": "2026-11-20 19:08 IST",
-      "result_id": "stock-jujutsukaisencullinggame-03"
+      "result_id": "stock-jujutsukaisencullinggame-03",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-jujutsukaisencullinggame-03.mp4"
     },
     {
       "id": "stock-jujutsukaisencullinggame-04",
@@ -1301,7 +1308,8 @@
       "slug": "jujutsukaisencullinggame",
       "status": "pending",
       "queued_at": "2026-11-20 19:46 IST",
-      "result_id": "stock-jujutsukaisencullinggame-04"
+      "result_id": "stock-jujutsukaisencullinggame-04",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-jujutsukaisencullinggame-04.mp4"
     },
     {
       "id": "stock-jujutsukaisencullinggame-05",
@@ -1683,15 +1691,16 @@
       "id": "stock-suzume-01",
       "topic_id": "backup-suzume",
       "slug": "suzume",
-      "status": "pending",
+      "status": "ready",
       "queued_at": "2026-11-20 18:47 IST",
-      "result_id": "stock-suzume-01"
+      "result_id": "stock-suzume-01",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-suzume-01.mp4"
     },
     {
       "id": "stock-suzume-02",
       "topic_id": "backup-suzume",
       "slug": "suzume",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-20 19:09 IST",
       "result_id": "stock-suzume-02"
     },
@@ -1699,9 +1708,10 @@
       "id": "stock-suzume-03",
       "topic_id": "backup-suzume",
       "slug": "suzume",
-      "status": "pending",
+      "status": "ready",
       "queued_at": "2026-11-20 20:19 IST",
-      "result_id": "stock-suzume-03"
+      "result_id": "stock-suzume-03",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-suzume-03.mp4"
     },
     {
       "id": "stock-toystory5-01",
@@ -1819,7 +1829,7 @@
       "id": "stock-weatheringwithyou-02",
       "topic_id": "backup-weatheringwithyou",
       "slug": "weatheringwithyou",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-20 19:09 IST",
       "result_id": "stock-weatheringwithyou-02",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-weatheringwithyou-02.mp4"
@@ -13687,6 +13697,264 @@
         "20261119-1730-bluegiant"
       ],
       "retired_at": "2026-11-22 02:08 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261120-0900-firforce3",
+        "stock-firforce3-04"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "gachiakuta",
+      "reason": "gemini QC reject",
+      "fail_count": 2,
+      "failed_ids": [
+        "stock-gachiakuta-03",
+        "20261122-0900-gachiakuta"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-08"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261120-0900-firforce3",
+        "stock-firforce3-04"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-08"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261120-0900-firforce3",
+        "stock-firforce3-04"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-08"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261120-0900-firforce3",
+        "stock-firforce3-04"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-08"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261120-0900-firforce3",
+        "stock-firforce3-04"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-08"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261120-0900-firforce3",
+        "stock-firforce3-04"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-08"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261120-0900-firforce3",
+        "stock-firforce3-04"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-08"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261120-0900-firforce3",
+        "stock-firforce3-04"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-08"
+      ],
+      "retired_at": "2026-11-22 02:46 IST"
     }
   ]
 }
