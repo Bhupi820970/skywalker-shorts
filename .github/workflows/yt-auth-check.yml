@@ -1,8 +1,14 @@
 name: yt-auth-check
 
 # Manual check that the SKY_YT_* OAuth secrets work. Prints only the channel title and handle.
+# With video_ids: also prints privacy / publishAt / upload + processing status of those videos.
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      video_ids:
+        description: "Optional comma-separated YouTube video ids to report status for"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -21,4 +27,7 @@ jobs:
           SKY_YT_CLIENT_ID: ${{ secrets.SKY_YT_CLIENT_ID }}
           SKY_YT_CLIENT_SECRET: ${{ secrets.SKY_YT_CLIENT_SECRET }}
           SKY_YT_REFRESH_TOKEN: ${{ secrets.SKY_YT_REFRESH_TOKEN }}
-        run: python3 scripts/yt_upload.py --auth-check
+          VIDEO_IDS: ${{ github.event.inputs.video_ids }}
+        run: |
+          python3 scripts/yt_upload.py --auth-check
+          if [ -n "$VIDEO_IDS" ]; then python3 scripts/yt_upload.py --status; fi

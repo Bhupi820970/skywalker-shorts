@@ -375,10 +375,35 @@ def auth_check():
     return 0
 
 
+def video_status(ids):
+    """Print privacy / publishAt / upload + processing status for our own video ids (no secrets)."""
+    ids = [x.strip() for x in ids if x.strip()]
+    if not ids:
+        print("no video ids")
+        return 1
+    tok = access_token()
+    d = api_get(tok, "videos", {"part": "status,processingDetails,snippet", "id": ",".join(ids[:50])})
+    found = {v["id"]: v for v in d.get("items") or []}
+    for vid in ids:
+        v = found.get(vid)
+        if not v:
+            print(f"{vid}: not found")
+            continue
+        st, pd = v.get("status") or {}, v.get("processingDetails") or {}
+        print(f"{vid}: title={(v.get('snippet') or {}).get('title')!r} privacy={st.get('privacyStatus')} "
+              f"publishAt={st.get('publishAt')} upload={st.get('uploadStatus')} "
+              f"rejection={st.get('rejectionReason')} failure={st.get('failureReason')} "
+              f"madeForKids={st.get('madeForKids')} processing={pd.get('processingStatus')} "
+              f"processingFailure={pd.get('processingFailureReason')}")
+    return 0
+
+
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     if "--auth-check" in argv:
         return auth_check()
+    if "--status" in argv:
+        return video_status(os.environ.get("VIDEO_IDS", "").split(","))
     dry = os.environ.get("DRY_RUN") == "1"
     only = {x.strip() for x in os.environ.get("IDS", "").split(",") if x.strip()}
     now = datetime.now(IST)
