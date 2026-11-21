@@ -1,0 +1,320 @@
+{
+  "id": "stock-weatheringwithyou-06",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-22 03:17 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44950715006",
+  "slot": null,
+  "title": "Why Hodaka cannot stop looking at Hina #weatheringwithyou #hina #animeedit",
+  "hook": "He just wanted the rain gone",
+  "description": "He just wanted the rain gone. Hodaka watches as Hina performs the ritual to bring the sun back through the endless rain. From the official Weathering With You trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#weatheringwithyou #hina #animeedit #shorts #edit",
+  "tags": [
+    "weatheringwithyou",
+    "hina",
+    "animeedit",
+    "anime",
+    "edit",
+    "shorts",
+    "trending",
+    "hodaka"
+  ],
+  "queue_meta": {
+    "hook": "He chose her over the sky",
+    "title": "He chose her over the sky | Weathering With You | #edit",
+    "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
+    "tags": [
+      "weatheringwithyou",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "hina",
+      "hodaka"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "emotional observation",
+  "title_candidates": [
+    {
+      "title": "Why Hodaka cannot stop looking at Hina",
+      "click_score": 92.0
+    },
+    {
+      "title": "The moment Hodaka realized she was special",
+      "click_score": 88.0
+    },
+    {
+      "title": "Hina knew it would clear up",
+      "click_score": 85.0
+    },
+    {
+      "title": "Watch the last two seconds of this",
+      "click_score": 82.0
+    },
+    {
+      "title": "Hodaka did not expect her to answer",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 9.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "s": 62.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 63.5,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.3,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.4,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-weatheringwithyou",
+  "stock": true,
+  "stock_topic": "backup-weatheringwithyou",
+  "spare": true,
+  "words": "WEATHERING WITH YOU",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "music": "sw_powerglovetrialsoftheblo.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-weatheringwithyou-06.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+  "music": "sw_powerglovetrialsoftheblo.mp3",
+  "music_credit": "Song: Power Glove - Power Glove - Trials Of The Blood Dragon Official Game Soundtrack vinyl rip\nOfficial link: https://archive.org/details/trials-of-the-blood-dragon-soundtrack\nLicense: http://creativecommons.org/publicdomain/zero/1.0/",
+  "description_final": "He just wanted the rain gone. Hodaka watches as Hina performs the ritual to bring the sun back through the endless rain. From the official Weathering With You trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#weatheringwithyou #hina #animeedit #shorts #edit\n\nMusic:\nSong: Power Glove - Power Glove - Trials Of The Blood Dragon Official Game Soundtrack vinyl rip\nOfficial link: https://archive.org/details/trials-of-the-blood-dragon-soundtrack\nLicense: http://creativecommons.org/publicdomain/zero/1.0/",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-weatheringwithyou-06-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 24.6,
+      "audio": true
+    },
+    "lufs": -14.2,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.7,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 50,
+      "masked_rows": [
+        [
+          0.2729,
+          0.3417
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards: clean footage, correct layout, engaging hook, and perfect audio mixing."
+      ],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 524,
+    "bar_h": 132,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1788,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "caption_y": 1069,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "love",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 23,
+      "src_start": 90.542,
+      "dur": 2.5,
+      "gemini_score": 10.0,
+      "reason": "gemini score 10.0"
+    },
+    {
+      "id": 21,
+      "src_start": 82.042,
+      "dur": 2.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 13,
+      "src_start": 44.042,
+      "dur": 2.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 8,
+      "src_start": 25.792,
+      "dur": 2.5,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 14,
+      "src_start": 53.542,
+      "dur": 3.0,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 19,
+      "src_start": 74.042,
+      "dur": 2.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 33,
+      "src_start": 135.667,
+      "dur": 2.96,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 15,
+      "src_start": 63.542,
+      "dur": 3.111,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 6,
+      "src_start": 16.792,
+      "dur": 0.529,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    }
+  ],
+  "qc_status": "pass"
+}

@@ -1,0 +1,561 @@
+{
+  "id": "stock-weatheringwithyou-05",
+  "status": "retry_queued",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-22 03:43 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44950715006",
+  "slot": null,
+  "title": "When Hodaka realized she was the sun #weatheringwithyou #hina #anime",
+  "hook": "He finally found her",
+  "description": "He finally found her. Hodaka discovers Hina's secret ability to clear the skies, forever changing their fates. From the official Weathering With You trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#weatheringwithyou #hina #anime #shorts #edit",
+  "tags": [
+    "weatheringwithyou",
+    "hina",
+    "anime",
+    "princessmononoke",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "ashitaka",
+    "san"
+  ],
+  "queue_meta": {
+    "hook": "San would die for the forest",
+    "title": "San would die for the forest | Princess Mononoke | #edit",
+    "description": "San would die for the forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke",
+    "tags": [
+      "princessmononoke",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "ashitaka",
+      "san"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "emotional observation",
+  "title_candidates": [
+    {
+      "title": "When Hodaka realized she was the sun",
+      "click_score": 92.0
+    },
+    {
+      "title": "Why Hodaka cannot stop watching Hina",
+      "click_score": 88.0
+    },
+    {
+      "title": "She changed his world in seconds",
+      "click_score": 85.0
+    },
+    {
+      "title": "The moment Hodaka made his choice",
+      "click_score": 82.0
+    },
+    {
+      "title": "Nobody expected their meeting to be this",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 7.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.4,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.3,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.2,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 4.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 5.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 5.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.9,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-weatheringwithyou",
+  "stock": true,
+  "stock_topic": "backup-weatheringwithyou",
+  "spare": true,
+  "words": "PRINCESS MONONOKE",
+  "edit_format": "love",
+  "title_swaps": [
+    {
+      "from": "weatheringwithyou",
+      "from_words": "WEATHERING WITH YOU",
+      "to": "princessmononoke",
+      "to_words": "PRINCESS MONONOKE",
+      "reason": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"5.04s burned-in subtitle text\", \"5.54s burned-in subtitle text\", \"6.54s burned-in subtitle text\", \"7.04s burned-in subtitle text\"]}"
+    }
+  ],
+  "swapped_from": "weatheringwithyou",
+  "swapped_to": "princessmononoke",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-weatheringwithyou-05.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+  "music": "sw_powerglovetrialsoftheblo.mp3",
+  "music_credit": "Song: Power Glove - Power Glove - Trials Of The Blood Dragon Official Game Soundtrack vinyl rip\nOfficial link: https://archive.org/details/trials-of-the-blood-dragon-soundtrack\nLicense: http://creativecommons.org/publicdomain/zero/1.0/",
+  "description_final": "He finally found her. Hodaka discovers Hina's secret ability to clear the skies, forever changing their fates. From the official Weathering With You trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#weatheringwithyou #hina #anime #shorts #edit\n\nMusic:\nSong: Power Glove - Power Glove - Trials Of The Blood Dragon Official Game Soundtrack vinyl rip\nOfficial link: https://archive.org/details/trials-of-the-blood-dragon-soundtrack\nLicense: http://creativecommons.org/publicdomain/zero/1.0/",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-weatheringwithyou-05-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 516,
+    "bar_h": 140,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1780,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "story_captions": {
+      "pattern": "P06",
+      "name": "Close + nudge to centre",
+      "count": 3
+    },
+    "story_caption_boxes": [
+      {
+        "t0": 1.602,
+        "t1": 2.624,
+        "box": [
+          577,
+          802,
+          400,
+          71
+        ],
+        "text": "He finally found",
+        "faces": [
+          [
+            326,
+            855,
+            36,
+            47
+          ],
+          [
+            238,
+            861,
+            33,
+            41
+          ],
+          [
+            376,
+            857,
+            33,
+            42
+          ],
+          [
+            70,
+            860,
+            28,
+            36
+          ],
+          [
+            862,
+            856,
+            32,
+            40
+          ],
+          [
+            937,
+            909,
+            34,
+            43
+          ],
+          [
+            111,
+            849,
+            25,
+            31
+          ],
+          [
+            13,
+            872,
+            22,
+            29
+          ],
+          [
+            183,
+            862,
+            30,
+            40
+          ],
+          [
+            495,
+            865,
+            26,
+            36
+          ],
+          [
+            424,
+            875,
+            26,
+            36
+          ],
+          [
+            921,
+            868,
+            29,
+            35
+          ],
+          [
+            1003,
+            870,
+            25,
+            33
+          ],
+          [
+            142,
+            869,
+            29,
+            34
+          ],
+          [
+            1046,
+            854,
+            29,
+            36
+          ],
+          [
+            752,
+            866,
+            25,
+            33
+          ]
+        ]
+      },
+      {
+        "t0": 3.158,
+        "t1": 4.203,
+        "box": [
+          746,
+          817,
+          63,
+          42
+        ],
+        "text": "her",
+        "faces": []
+      },
+      {
+        "t0": 6.316,
+        "t1": 7.384,
+        "box": [
+          151,
+          802,
+          302,
+          71
+        ],
+        "text": "for the forest",
+        "faces": [
+          [
+            1009,
+            848,
+            25,
+            33
+          ],
+          [
+            495,
+            840,
+            27,
+            36
+          ],
+          [
+            448,
+            855,
+            27,
+            35
+          ],
+          [
+            733,
+            827,
+            26,
+            33
+          ],
+          [
+            964,
+            894,
+            21,
+            27
+          ],
+          [
+            844,
+            853,
+            24,
+            32
+          ],
+          [
+            802,
+            855,
+            27,
+            33
+          ],
+          [
+            879,
+            860,
+            24,
+            29
+          ],
+          [
+            599,
+            853,
+            20,
+            26
+          ],
+          [
+            633,
+            848,
+            25,
+            31
+          ],
+          [
+            547,
+            853,
+            23,
+            27
+          ],
+          [
+            533,
+            885,
+            26,
+            31
+          ],
+          [
+            1047,
+            850,
+            18,
+            25
+          ],
+          [
+            962,
+            846,
+            23,
+            28
+          ],
+          [
+            58,
+            836,
+            20,
+            24
+          ],
+          [
+            707,
+            848,
+            22,
+            29
+          ]
+        ]
+      }
+    ],
+    "caption_y": 1069,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "love",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 20,
+      "src_start": 48.298,
+      "dur": 2.5
+    },
+    {
+      "id": 49,
+      "src_start": 155.363,
+      "dur": 2.5
+    },
+    {
+      "id": 4,
+      "src_start": 5.756,
+      "dur": 2.5
+    },
+    {
+      "id": 43,
+      "src_start": 134.05,
+      "dur": 2.5
+    },
+    {
+      "id": 24,
+      "src_start": 57.807,
+      "dur": 3.0
+    },
+    {
+      "id": 27,
+      "src_start": 73.698,
+      "dur": 2.5
+    },
+    {
+      "id": 14,
+      "src_start": 30.197,
+      "dur": 3.0
+    },
+    {
+      "id": 10,
+      "src_start": 21.647,
+      "dur": 3.071
+    },
+    {
+      "id": 16,
+      "src_start": 41.625,
+      "dur": 0.529
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"5.04s burned-in subtitle text\", \"5.54s burned-in subtitle text\", \"6.54s burned-in subtitle text\", \"7.04s burned-in subtitle text\"]}",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4",
+      "music": "sw_powerglovetrialsoftheblo.mp3",
+      "qc_status": "pass"
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+      "music": "sw_powerglovetrialsoftheblo.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false,
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'HE FINALLY FOUND'\", \"2.54s burned-in text 'HE FINALLY FOUND'\", \"3.54s burned-in text 'HER'\", \"4.04s burned-in text 'HER'\", \"5.04s burned-in text 'HE CHOSE HER'\", \"5.54s burned-in text 'HE CHOSE HER'\", \"6.54s burned-in text 'OVER THE S",
+      "at": "2026-11-22 03:09 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"5.04s burned-in subtitle text\", \"5.54s burned-in subtitle text\", \"6.54s burned-in subtitle text\", \"7.04s burned-in subtitle ",
+      "at": "2026-11-22 03:23 IST"
+    }
+  ]
+}
