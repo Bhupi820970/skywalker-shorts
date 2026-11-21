@@ -16,6 +16,7 @@ REL = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources
 def _env(monkeypatch, assets):
     monkeypatch.setenv("SKY_RELEASE_ONLY", "1")
     monkeypatch.setattr(sourcing, "_RELEASE_ASSETS", {"sources": set(assets)})
+    monkeypatch.setattr(title_swap, "bad_release_assets", lambda root=None, **k: set())
 
 
 def test_release_only_default_on_github(monkeypatch):
@@ -153,3 +154,64 @@ def test_scene_requests_plan(monkeypatch):
     assert isinstance(doc["requests"], list)
     for r in doc["requests"]:
         assert r["search_queries"] and all("trailer" not in q.lower() for q in r["search_queries"])
+
+
+def _write_results(tmp_path, rows):
+    (tmp_path / "results").mkdir(exist_ok=True)
+    (tmp_path / "config").mkdir(exist_ok=True)
+    for r in rows:
+        (tmp_path / "results" / f"{r['id']}.json").write_text(json.dumps(r))
+
+
+def test_asset_quarantine_counts_every_source_failure(tmp_path):
+    """A clip that keeps failing the logo/scene filter is quarantined even if its title once rendered."""
+    from datetime import datetime
+    now = datetime(2026, 11, 21, 20, tzinfo=title_swap.IST)
+    logo = "pipeline/QA failed (exit 1): No usable scenes after filtering"
+    short = "pipeline/QA failed (exit 1): only 11.5s of unique clean shots (need >=18s)"
+    _write_results(tmp_path, [
+        {"id": "20261121-1600-boyandheron", "status": "failed", "at": "2026-11-21 17:00 IST",
+         "source_attempts": [{"source": "gh:" + REL + "cyberpunkedgerunners_scene3_h264.mp4", "error": logo},
+                             {"source": "gh:" + REL + "boyandheron_scene1_h264.mp4", "error": short}],
+         "attempts": [{"attempt": 1, "ok": False, "error": logo,
+                       "source": "gh:" + REL + "cyberpunkedgerunners_scene3_h264.mp4"}]},
+        {"id": "20261121-2030-x", "status": "failed", "at": "2026-11-21 18:00 IST",
+         "attempts": [{"attempt": 1, "ok": False, "error": logo,
+                       "source": "gh:" + REL + "cyberpunkedgerunners_scene3_h264.mp4"}]},
+        {"id": "20261121-0900-ok", "status": "done", "asset_url": "u", "at": "2026-11-21 08:00 IST",
+         "attempts": [{"attempt": 1, "ok": True, "error": None,
+                       "source": "gh:" + REL + "cyberpunkedgerunners_scene1_h264.mp4"}]},
+    ])
+    h = title_swap.release_asset_health(tmp_path, now=now)
+    # the same failure in source_attempts and attempts is counted once
+    assert h["cyberpunkedgerunners_scene3_h264.mp4"] == {"ok": 0, "bad": 2}
+    assert h["cyberpunkedgerunners_scene1_h264.mp4"] == {"ok": 1, "bad": 0}
+    bad = title_swap.bad_release_assets(tmp_path, health=h, blocklist={})
+    assert "cyberpunkedgerunners_scene3_h264.mp4" in bad
+    assert "cyberpunkedgerunners_scene1_h264.mp4" not in bad
+    assert "boyandheron_scene1_h264.mp4" not in bad  # one failure is not enough
+
+
+def test_quarantined_clips_never_reach_fallback(monkeypatch, tmp_path):
+    monkeypatch.setenv("SKY_RELEASE_ONLY", "1")
+    monkeypatch.setattr(sourcing, "_RELEASE_ASSETS", {"sources": {
+        "aaa_scene1_h264.mp4", "aaa_scene2_h264.mp4", "bbb_scene1_h264.mp4", "bbb_scene2_h264.mp4"}})
+    monkeypatch.setattr(title_swap, "bad_release_assets",
+                        lambda root=None, **k: {"aaa_scene1_h264.mp4", "aaa_scene2_h264.mp4"})
+    _no_health(monkeypatch, health={"aaa": {"ok": 3, "bad": 0}, "bbb": {"ok": 0, "bad": 0}})
+    pool = [{"slug": s_, "words": s_.upper(), "sources": []} for s_ in ("aaa", "bbb")]
+    monkeypatch.setattr(title_swap, "_load_pool", lambda root=None: [dict(p) for p in pool])
+    monkeypatch.setattr(title_swap, "recently_used_slugs", lambda root=None, **k: set())
+    nxt = title_swap.next_fallback_item({"id": "20261122-0630-x", "slug": "x", "words": "X"})
+    assert title_swap.title_slug(nxt) == "bbb"
+    assert all(n.startswith("bbb_") for n in nxt["scene_assets"])
+
+
+def test_asset_blocklist_file_and_title_blocklist(tmp_path):
+    _write_results(tmp_path, [])
+    (tmp_path / "config" / "release_asset_blocklist.json").write_text(
+        json.dumps({"assets": {"zzz_scene2_h264.mp4": "netflix logo"}}))
+    (tmp_path / "config" / "release_title_blocklist.json").write_text(json.dumps({"titles": {"yyy": "logo"}}))
+    have = {"zzz_scene1_h264.mp4", "zzz_scene2_h264.mp4", "yyy_scene1_h264.mp4"}
+    assert title_swap.usable_release_assets(have, tmp_path) == {"zzz_scene1_h264.mp4"}
+    assert title_swap.usable_release_assets(None, tmp_path) is None

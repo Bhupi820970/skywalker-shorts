@@ -633,6 +633,91 @@ def release_clip_health(root: Path | None = None, *, days: int = CLIP_HEALTH_DAY
     return out
 
 
+# Per-asset failures: the clip itself did not pass the scene/logo/crop filter (a title can have
+# one clean clip and one Netflix-logo clip, so title-level health alone keeps retrying the dirty one).
+_ASSET_FILTER_FAIL = _CLIP_FILTER_FAIL + ("under duration", "no_crop", "near-duplicate")
+ASSET_BAD_MIN = 2
+
+
+def _asset_name(src) -> str:
+    u = str(src or "")
+    if "/releases/download/sources/" not in u:
+        return ""
+    return u.rstrip("/").rsplit("/", 1)[-1]
+
+
+def release_asset_blocklist(root: Path | None = None) -> dict:
+    root = Path(root) if root else REPO
+    try:
+        return dict(json.loads((root / "config" / "release_asset_blocklist.json").read_text()).get("assets") or {})
+    except Exception:
+        return {}
+
+
+def release_asset_health(root: Path | None = None, *, days: int = CLIP_HEALTH_DAYS,
+                         now: datetime | None = None) -> dict[str, dict]:
+    """{asset: {"ok": n, "bad": n}} from recent results' per-source attempts."""
+    root = Path(root) if root else REPO
+    now = now or datetime.now(IST)
+    start = now - timedelta(days=days)
+    out: dict[str, dict] = {}
+    for p in (root / "results").glob("*.json"):
+        try:
+            r = json.loads(p.read_text())
+        except Exception:
+            continue
+        at = str(r.get("at") or "")
+        try:
+            when = datetime.strptime(at[:16], "%Y-%m-%d %H:%M").replace(tzinfo=IST)
+        except Exception:
+            when = datetime.fromtimestamp(p.stat().st_mtime, IST)
+        if when < start:
+            continue
+        per_src = [a for a in r.get("source_attempts") or [] if isinstance(a, dict)]
+        logged = {(str(a.get("source")), str(a.get("error") or "")[:120]) for a in per_src}
+        rows = per_src + [a for a in r.get("attempts") or [] if isinstance(a, dict)
+                          and (a.get("ok") or (str(a.get("source")), str(a.get("error") or "")[:120]) not in logged)]
+        for a in rows:
+            name = _asset_name(a.get("source"))
+            if not name:
+                continue
+            h = out.setdefault(name, {"ok": 0, "bad": 0})
+            if a.get("ok"):
+                h["ok"] += 1
+            elif any(m in str(a.get("error") or "").lower() for m in _ASSET_FILTER_FAIL):
+                h["bad"] += 1
+    return out
+
+
+def bad_release_assets(root: Path | None = None, *, health: dict | None = None,
+                       blocklist: dict | None = None) -> set[str]:
+    """Release clips not worth another 15-20 min render attempt.
+
+    >=ASSET_BAD_MIN recent filter failures (logo / burned-in text / too few clean shots /
+    crop / near-duplicate) and at least 3 failures per success, or the title is blocklisted.
+    """
+    health = release_asset_health(root) if health is None else health
+    block = release_title_blocklist(root) if blocklist is None else blocklist
+    bad = set(release_asset_blocklist(root))
+    bad |= {n for n, h in health.items() if h.get("bad", 0) >= ASSET_BAD_MIN
+           and h.get("bad", 0) >= 3 * h.get("ok", 0)}
+    for slug in block:
+        bad |= {n for n in health if n.startswith(f"{slug}_scene")}
+    return bad
+
+
+def usable_release_assets(assets: set[str] | None, root: Path | None = None) -> set[str] | None:
+    """Release asset names minus quarantined (blocklisted / repeatedly failing) clips."""
+    if assets is None:
+        return None
+    try:
+        bad = bad_release_assets(root)
+    except Exception:
+        return set(assets)
+    block = release_title_blocklist(root)
+    return {a for a in assets if a not in bad and not any(a.startswith(f"{s}_scene") for s in block)}
+
+
 def clips_known_bad(slug: str, health: dict, blocklist: dict) -> bool:
     """Blocklisted, or >=2 recent filter failures and never a successful render."""
     k = re.sub(r"[^a-z0-9]+", "", (slug or "").lower())
@@ -652,7 +737,7 @@ def _release_filter(cands: list[dict], root: Path | None = None) -> list[dict]:
     """On GitHub (release-only) keep only titles whose clips are on the release, most clips first."""
     if not sourcing.release_only():
         return cands
-    assets = sourcing.release_source_assets()
+    assets = usable_release_assets(sourcing.release_source_assets(), root)
     if assets is None:
         return cands
     out = [c2 for c2 in (with_release_clips(c, assets) for c in cands) if c2]

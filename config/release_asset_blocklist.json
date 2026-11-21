@@ -1,0 +1,11 @@
+{
+  "note": "Release clips quarantined by hand from render logs (per-source failures before results kept source_attempts). title_swap.usable_release_assets skips them; delete an entry to retry the clip.",
+  "assets": {
+    "dragonballdaima_scene1_h264.mp4": "21 Nov logs: 8x under duration gate + 'DRAGON BALL DAIMA' watermark / burned-in subtitles, 0 ok",
+    "cyberpunkedgerunners_scene2_h264.mp4": "21 Nov logs: 4x near-duplicate shot pair + burned-in call-interface text, 0 ok",
+    "suzume_scene1_h264.mp4": "21 Nov logs: 6x under duration gate + copyright text / burned-in subtitles, 0 ok",
+    "princessmononoke_scene2_h264.mp4": "21 Nov logs: Netflix logo",
+    "jujutsukaisencullinggame_scene1_h264.mp4": "21 Nov logs: 14x under duration gate (only 1 ok in 7 days)",
+    "pathaan_scene1_h264.mp4": "21 Nov logs: Netflix logo + Fighter title text (not even Pathaan footage), 10x under duration gate"
+  }
+}

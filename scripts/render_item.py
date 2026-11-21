@@ -178,6 +178,19 @@ def read_prev():
             return {}
     return {}
 
+# Every per-source failure of this job (attempts only keeps the last one per attempt); feeds the
+# per-clip quarantine in title_swap.release_asset_health.
+SOURCE_FAILS = []
+
+
+def _note_source_fail(last):
+    try:
+        SOURCE_FAILS.append({"source": last.get("source"), "error": str(last.get("error") or "")[:300],
+                             "at": now()})
+    except Exception:
+        pass
+
+
 def write(status, detail, **extra):
     r = {"id": iid, "status": status, "detail": detail, "at": now(), "run_url": run_url,
          "slot": item.get("slot"), "title": item.get("title"), "hook": item.get("hook"),
@@ -189,6 +202,8 @@ def write(status, detail, **extra):
          "words": item.get("words"), "edit_format": item.get("edit_format"),
          "title_swaps": item.get("title_swaps") or None,
          "swapped_from": item.get("swapped_from"), "swapped_to": item.get("swapped_to"), **extra}
+    if SOURCE_FAILS and "source_attempts" not in r:
+        r["source_attempts"] = SOURCE_FAILS[-30:]
     prev = read_prev()
     for k in ("buffer_post_id", "buffer_status", "buffer_due_at", "buffer_posted_at", "youtube_url"):
         if prev.get(k) and k not in r:
@@ -409,6 +424,15 @@ def download_scene_bundle(src, skip=None):
         # GitHub never downloads from YouTube/X (bot wall). Only clips the box already put on the
         # `sources` release are used; anything else is the box's job (config/scene_requests.json).
         have = sourcing.release_source_assets()
+        usable = title_swap.usable_release_assets(have, REPO)
+        if have is not None and usable is not None and len(usable) < len(have):
+            quarantined = [u for u in urls if sourcing.is_release_url(u)
+                           and u.rsplit("/", 1)[-1] in have and u.rsplit("/", 1)[-1] not in usable]
+            if quarantined:
+                errors.append(f"quarantined {len(quarantined)} clip(s) that keep failing the logo/scene filter: "
+                              + ", ".join(u.rsplit("/", 1)[-1] for u in quarantined)[:300])
+            urls = [u for u in urls if u not in quarantined]
+            have = usable
         rel = [u for u in urls if sourcing.is_release_url(u)]
         missing = [u for u in urls if u not in rel]
         if have is not None:
@@ -910,6 +934,7 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
                 reason = f"pipeline/QA failed (exit {rc})"
             last = {"attempt": n, "ok": False, "error": reason, "source": used,
                     "music": credit.get("file"), "qa": checks}
+            _note_source_fail(last)
             if _is_short_failure(reason, qa):
                 already = list(tried) + list(item.get("alt_source_urls") or []) + list(item.get("fallback_mp4") or [])
                 extra = sourcing.more_official_scene_urls(item, already=already, limit=MAX_SCENE_CLIPS)
@@ -955,6 +980,7 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
             last = {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
                     "qc_status": "fail",
                     "error": "gemini QC reject: " + "; ".join(gem_qc.get("reasons") or gem_qc.get("low") or ["?"])[:600]}
+            _note_source_fail(last)
             print(f"  gemini QC reject; trying next official scene clip: {last['error'][:220]}", flush=True)
             continue
         try:
@@ -990,6 +1016,7 @@ def attempt(n, *, force_fallback=False, relax=False, alt_scenes=False, exclude_m
                 last = {"attempt": n, "ok": False, "source": used, "music": credit.get("file"), "qa": checks,
                         "gate": g, "qc_status": verdict,
                         "error": "publish gate failed: " + "; ".join(g["failures"])[:600]}
+                _note_source_fail(last)
                 print(f"  publish gate failed; trying next official scene clip: {last['error'][:220]}", flush=True)
                 continue
             extra = publish(final, fw, fh, up, used, checks, credit, qa)

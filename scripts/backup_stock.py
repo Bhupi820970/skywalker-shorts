@@ -130,6 +130,11 @@ def release_backed_pool(pool: list[dict]) -> list[dict]:
     assets = sourcing.release_source_assets()
     if assets is None:
         return pool
+    try:
+        import title_swap
+        assets = title_swap.usable_release_assets(assets, _repo())
+    except Exception:
+        pass
     counted = [(release_clip_count(b, assets), b) for b in pool]
     # Never refill stock from footage known not to pass the no-logo/scene filter.
     try:

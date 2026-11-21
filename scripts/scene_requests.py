@@ -71,6 +71,11 @@ def _queries(words: str, love: bool) -> list[str]:
 def build(now: datetime | None = None, have: set[str] | None = None) -> dict:
     now = now or datetime.now(IST)
     have = sourcing.release_source_assets() if have is None else have
+    try:
+        import title_swap
+        usable = title_swap.usable_release_assets(have, REPO)
+    except Exception:
+        usable = have
     cat = sourcing.load_catalog().get("topics") or {}
     reqs: dict[str, dict] = {}
 
@@ -79,7 +84,8 @@ def build(now: datetime | None = None, have: set[str] | None = None) -> dict:
         if not slug:
             return
         wanted = _assets_of(it)
-        on_release = sourcing.release_scene_assets(slug, have) if have is not None else []
+        # Quarantined (logo / too-short) clips do not count: ask the box for fresh ones.
+        on_release = sourcing.release_scene_assets(slug, usable) if usable is not None else []
         missing = [a for a in wanted if have is None or a not in have]
         if have is not None and len(on_release) >= 2 and not missing:
             return  # enough clips already
