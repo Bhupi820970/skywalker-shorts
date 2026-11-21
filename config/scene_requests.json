@@ -1,46 +1,10 @@
 {
- "generated_at": "2026-11-22 02:48 IST",
+ "generated_at": "2026-11-22 04:36 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 52,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "dragonballdaima",
-   "slot": "2026-11-21T22:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261121-2230-dragonballdaima",
-   "pillar": "anime",
-   "words": "DRAGON BALL DAIMA",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DRAGON BALL DAIMA fight scene official clip",
-    "DRAGON BALL DAIMA best scene official clip",
-    "DRAGON BALL DAIMA official clip"
-   ],
-   "official_channels": [
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Goku got small, not weak",
-   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
-   "tags": [
-    "dragonballdaima",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "goku"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "rezero3",
    "slot": "2026-11-22T06:30:00+05:30",
@@ -968,9 +932,7 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
    "missing_assets": [],
-   "on_release": [
-    "boyandheron_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "The heron knew his secret",
    "title": "The heron knew his secret | The Boy and the Heron | #edit",
    "tags": [
@@ -1144,6 +1106,42 @@
     "shorts",
     "trending",
     "gohan"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dragonballdaima",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dragonballdaima",
+   "pillar": "anime",
+   "words": "DRAGON BALL DAIMA",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DRAGON BALL DAIMA fight scene official clip",
+    "DRAGON BALL DAIMA best scene official clip",
+    "DRAGON BALL DAIMA official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Goku got small, not weak",
+   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+   "tags": [
+    "dragonballdaima",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "goku"
    ],
    "market": "US/UK"
   },
@@ -2148,6 +2146,45 @@
     "vinland",
     "anime",
     "ihavenoenemies"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "weatheringwithyou",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-weatheringwithyou",
+   "pillar": "anime",
+   "words": "WEATHERING WITH YOU",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "WEATHERING WITH YOU fight scene official clip",
+    "WEATHERING WITH YOU best scene official clip",
+    "WEATHERING WITH YOU official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+   "missing_assets": [],
+   "on_release": [
+    "weatheringwithyou_scene1_h264.mp4"
+   ],
+   "hook": "He chose her over the sky",
+   "title": "He chose her over the sky | Weathering With You | #edit",
+   "tags": [
+    "weatheringwithyou",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "hina",
+    "hodaka"
    ],
    "market": "US/UK"
   },
