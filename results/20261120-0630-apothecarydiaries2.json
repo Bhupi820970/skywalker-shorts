@@ -4,7 +4,7 @@
   "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to JUJUTSU KAISEN)",
   "at": "2026-11-20 16:27 IST",
   "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44716891067",
-  "slot": "2026-11-20T06:30:00+05:30",
+  "slot": "2026-11-21T20:30:00+05:30",
   "title": "Why Higuruma could not look away #jujutsukaisen #higuruma #anime",
   "hook": "He never wanted to fight",
   "description": "He never wanted to fight. Higuruma confronts Yuji in a tense standoff where the weight of his own cursed technique begins to consume the atmosphere. From the official Jujutsu Kaisen trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#jujutsukaisen #higuruma #anime #shorts #edit",
@@ -351,5 +351,7 @@
       "dur": 1.018
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "reslotted_from": "2026-11-20T06:30:00+05:30",
+  "reslot_note": "missed Nov 20 slot; BiBi approved re-slot 2026-11-21 20:03 IST (YouTube direct)"
 }

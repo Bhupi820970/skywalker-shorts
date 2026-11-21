@@ -4,7 +4,7 @@
   "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok (title auto-swap to ARCANE)",
   "at": "2026-11-20 13:43 IST",
   "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44688636389",
-  "slot": "2026-11-20T09:00:00+05:30",
+  "slot": "2026-11-21T22:30:00+05:30",
   "title": "Jinx finally loses her mind #arcane #jinx #leagueoflegends",
   "hook": "Jinx finally loses her mind",
   "description": "Jinx finally loses her mind. Witness the heartbreaking descent of Jinx as she confronts her fractured identity and inner chaos. From the official Arcane trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#arcane #jinx #leagueoflegends #shorts #edit",
@@ -451,5 +451,7 @@
       "reason": "gemini score 7.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "reslotted_from": "2026-11-20T09:00:00+05:30",
+  "reslot_note": "missed Nov 20 slot; BiBi approved re-slot 2026-11-21 20:03 IST (YouTube direct)"
 }
