@@ -307,11 +307,15 @@
   "qc_status": "pass",
   "stock_id": "stock-cyberpunkedgerunners-02",
   "assigned_from_stock": true,
-  "buffer_status": "scheduled",
+  "buffer_status": "dead",
   "buffer_post_id": "6b00bbcb5102766245d445a3",
   "buffer_due_at": "2026-11-20T22:30:00.000Z",
   "buffer_created_at": "2026-11-21 02:59 IST",
   "buffer_retry_count": 1,
   "buffer_prev_post_id": "6b00a76473831df01483b39e",
-  "slot_original": "2026-11-20T20:30:00+05:30"
+  "slot_original": "2026-11-20T20:30:00+05:30",
+  "buffer_error": "The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later.",
+  "publish_dead": true,
+  "buffer_note": "Buffer error after retry: The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later.",
+  "buffer_dead_at": "2026-11-21 07:59 IST"
 }
