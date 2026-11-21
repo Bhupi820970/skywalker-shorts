@@ -1,52 +1,10 @@
 {
- "generated_at": "2026-11-21 14:32 IST",
+ "generated_at": "2026-11-21 15:08 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 40,
+ "release_scene_clips": 42,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "dandadan",
-   "slot": "2026-11-21T09:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261121-0900-dandadan",
-   "pillar": "anime",
-   "words": "DAN DA DAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DAN DA DAN fight scene official clip",
-    "DAN DA DAN best scene official clip",
-    "DAN DA DAN official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
-   "missing_assets": [
-    "dandadan_scene1_h264.mp4"
-   ],
-   "on_release": [
-    "dandadan_scene2_h264.mp4",
-    "dandadan_scene3_h264.mp4"
-   ],
-   "hook": "Okarun was never ready for this",
-   "title": "Okarun was never ready for this | Dandadan | #edit",
-   "tags": [
-    "dandadan",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "okarun"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "drstone",
    "slot": "2026-11-21T11:30:00+05:30",
@@ -634,11 +592,12 @@
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=5oRczmZ6dGU",
    "missing_assets": [
-    "gangsofwasseypur_scene1_h264.mp4",
     "gangsofwasseypur_scene2_h264.mp4",
     "gangsofwasseypur_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "gangsofwasseypur_scene1_h264.mp4"
+   ],
    "hook": "Why Faizal is a menace",
    "title": "Why Faizal is a menace 💀 | The legend enters | #edit",
    "tags": [
@@ -971,6 +930,48 @@
     "animeedit",
     "anime",
     "football"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dandadan",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dandadan",
+   "pillar": "anime",
+   "words": "DAN DA DAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DAN DA DAN fight scene official clip",
+    "DAN DA DAN best scene official clip",
+    "DAN DA DAN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+   "missing_assets": [
+    "dandadan_scene1_h264.mp4"
+   ],
+   "on_release": [
+    "dandadan_scene2_h264.mp4",
+    "dandadan_scene3_h264.mp4"
+   ],
+   "hook": "Okarun was never ready for this",
+   "title": "Okarun was never ready for this | Dandadan | #edit",
+   "tags": [
+    "dandadan",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
    ],
    "market": "US/UK"
   },
