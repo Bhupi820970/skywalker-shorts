@@ -1,140 +1,58 @@
 {
   "id": "stock-cyberpunkedgerunners-04",
-  "status": "retry_queued",
-  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
-  "at": "2026-11-20 20:01 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44748864682",
+  "status": "failed",
+  "detail": "gemini QC reject on retry: The hook text in the white bar does not match the requested text ('David wanted to be a legend').; The video contains burned-in subtitles ('They keep you on call') which violates the requirement for no burned-in subtitles.; The layout is incorrect; the text is inside the video frame rather than in a separate white bar above the frame.",
+  "at": "2026-11-22 00:02 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44926262407",
   "slot": null,
-  "title": "They keep you on call | Edgerunners #cyberpunkedgerunners #anime #movieedit",
-  "hook": "\"They keep you on call\"",
-  "description": "They keep you on call. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #anime #movieedit #shorts #edit",
+  "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+  "hook": "David wanted to be a legend",
+  "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
   "tags": [
     "cyberpunkedgerunners",
     "anime",
-    "movieedit",
     "animeedit",
     "edit",
     "shorts",
     "trending",
     "david"
   ],
-  "queue_meta": {
-    "hook": "David wanted to be a legend",
-    "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
-    "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
-    "tags": [
-      "cyberpunkedgerunners",
-      "anime",
-      "animeedit",
-      "edit",
-      "shorts",
-      "trending",
-      "david"
-    ]
-  },
-  "gemini_meta": true,
-  "hook_source": "fallback",
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
   "hook_style": null,
   "title_candidates": null,
   "gemini_calls": [
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
-      "key": "key1",
+      "key": "key3",
       "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
+      "key": "key3",
+      "err": "TimeoutError"
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
       "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
+      "key": "key3",
+      "err": "HTTP 503"
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 29.8,
+      "key": "key3",
+      "s": 1.5,
       "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 14.1,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "s": 47.8,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "TimeoutError"
     }
   ],
   "backup_item": "backup-cyberpunkedgerunners",
@@ -146,8 +64,31 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
+  "auto_retries": 1,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "music": "pr_montagempegadoraslowed.mp3",
+      "qc_status": "skipped"
+    },
+    {
+      "attempt": "qc_retry",
+      "ok": false,
+      "error": "gemini QC fail",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "music": "pr_montagempegadoraslowed.mp3"
+    }
+  ],
+  "last_error": "gemini QC reject",
+  "qc_rejected": true,
+  "qc_status": "fail",
   "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
   "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-04.mp4",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-04-cover.jpg",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -161,8 +102,6 @@
   "music": "pr_montagempegadoraslowed.mp3",
   "music_credit": "Song: Rubikdice - MONTAGEM PEGADORA (Slowed)\nOfficial link: https://www.youtube.com/watch?v=4E4VaL5krv8",
   "description_final": "They keep you on call. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #anime #movieedit #shorts #edit\n\nMusic:\nSong: Rubikdice - MONTAGEM PEGADORA (Slowed)\nOfficial link: https://www.youtube.com/watch?v=4E4VaL5krv8",
-  "no_publish": false,
-  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-cyberpunkedgerunners-04-cover.jpg",
   "gate": {
     "ok": false,
     "failures": [
@@ -170,25 +109,7 @@
     ],
     "gemini_qc": "skipped (unavailable/budget)"
   },
-  "layout": {
-    "bar_y": 516,
-    "bar_h": 140,
-    "plate_y": 656,
-    "video_y": 656,
-    "plate_x": 0,
-    "plate_w": 1080,
-    "plate_h": 608,
-    "region_h": 1780,
-    "block_h": 1920,
-    "drop_t": 3.482,
-    "energy": true,
-    "caption_y": 1292,
-    "captions": [],
-    "speech_windows": [],
-    "edit_mode": "music_only",
-    "edit_format": "action",
-    "blur_fill": true
-  },
+  "no_publish": false,
   "scenes_picked": [
     {
       "id": 26,
@@ -251,20 +172,23 @@
       "dur": 0.796
     }
   ],
-  "qc_status": "skipped",
-  "auto_retries": 0,
-  "max_auto_retries": 1,
-  "attempts": [
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "gemini QC skipped",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
-      "music": "pr_montagempegadoraslowed.mp3",
-      "qc_status": "skipped"
-    }
-  ],
-  "last_error": "gemini QC skipped",
-  "qc_pending": true,
-  "logo_pending": false
+  "layout": {
+    "bar_y": 516,
+    "bar_h": 140,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1780,
+    "block_h": 1920,
+    "drop_t": 3.482,
+    "energy": true,
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  }
 }

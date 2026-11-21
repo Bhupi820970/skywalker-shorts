@@ -1,32 +1,70 @@
 {
   "id": "stock-dragonballdaima-08",
   "status": "retry_queued",
-  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.872, 'edge_corr_median': 0.907, 'shift_px_median': 3.36, 'pairs': 6}",
-  "at": "2026-11-21 00:59 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44788064602",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-21 23:58 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44926262407",
   "slot": null,
-  "title": "Why Jim turned against his nation 💀 | Pathaan jetpack chase | #edit",
-  "hook": "Why Jim turned against his nation",
-  "description": "Why Jim turned against his nation. From official Pathaan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #pathaan #shahrukhkhan #srk",
+  "title": "David Martinez against the entire city #cyberpunkedgerunners #davidmartinez #cyberpunk",
+  "hook": "They never stop coming for him",
+  "description": "They never stop coming for him. David Martinez fights through a relentless onslaught of Night City forces as he struggles to maintain control. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #davidmartinez #cyberpunk #shorts #edit",
   "tags": [
-    "pathaan",
-    "shahrukhkhan",
-    "srk",
-    "yrf",
-    "bollywoodedit",
-    "bollywood"
+    "cyberpunkedgerunners",
+    "davidmartinez",
+    "cyberpunk",
+    "dandadan2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "momo"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Momo never lets him go",
+    "title": "Momo never lets him go | Dandadan | #edit",
+    "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+    "tags": [
+      "dandadan2",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "momo"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "David Martinez against the entire city",
+      "click_score": 92.0
+    },
+    {
+      "title": "Watch how David handles the pressure",
+      "click_score": 88.0
+    },
+    {
+      "title": "David Martinez was never meant to survive",
+      "click_score": 85.0
+    },
+    {
+      "title": "The moment David pushes past his limit",
+      "click_score": 82.0
+    },
+    {
+      "title": "Nobody is prepared for David in combat",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 50.0,
+      "s": 53.1,
       "ok": true
     },
     {
@@ -51,129 +89,105 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 4.0,
+      "s": 3.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.3,
       "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 3.7,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 9.2,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 38.4,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 7.0,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 44.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 43.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 10.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 7.1,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 6.5,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 26.6,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
       "s": 3.6,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "hook",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 4.1,
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.6,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 14.1,
+      "key": "key2",
+      "s": 2.0,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 83.3,
+      "key": "key2",
+      "s": 1.7,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 3.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 4.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 4.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.2,
       "ok": true
     }
   ],
@@ -181,38 +195,295 @@
   "stock": true,
   "stock_topic": "backup-dragonballdaima",
   "spare": true,
-  "words": "PATHAAN",
-  "edit_format": "action",
+  "words": "DAN DA DAN",
+  "edit_format": "love",
   "title_swaps": [
     {
       "from": "dragonballdaima",
       "from_words": "DRAGON BALL DAIMA",
-      "to": "pathaan",
-      "to_words": "PATHAAN",
-      "reason": "pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+      "to": "cyberpunkedgerunners",
+      "to_words": "EDGERUNNERS",
+      "reason": "download failed: quarantined 2 clip(s) that keep failing the logo/scene filter: dragonballdaima_scene1_h264.mp4, dragonballdaima_scene2_h264.mp4"
+    },
+    {
+      "from": "cyberpunkedgerunners",
+      "from_words": "EDGERUNNERS",
+      "to": "princessmononoke",
+      "to_words": "PRINCESS MONONOKE",
+      "reason": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'THEY NEVER STOP'\", \"2.54s burned-in text 'THEY NEVER STOP'\", \"3.54s burned-in text 'COMING FOR HIM'\", \"4.04s burned-in text 'COMING FOR HIM'\", \"5.04s burned-in text 'DAVID WANTED TO'\", \"5.54s burned-in text 'DAVID WANTED TO'\", \"6.54s burned-in text 'BE A LEGEND'\", \""
+    },
+    {
+      "from": "princessmononoke",
+      "from_words": "PRINCESS MONONOKE",
+      "to": "boyandheron",
+      "to_words": "THE BOY AND THE HERON",
+      "reason": "gemini QC reject: The video content is from the film 'Princess Mononoke', which does not match the provided title and description about 'Cyberpunk: Edgerunners' and 'David Martinez'.; The title and description are completely irrelevant to the actual visual content of the video."
+    },
+    {
+      "from": "boyandheron",
+      "from_words": "THE BOY AND THE HERON",
+      "to": "hellsparadise",
+      "to_words": "HELL'S PARADISE",
+      "reason": "pipeline/QA failed (exit 1): only 12.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    },
+    {
+      "from": "hellsparadise",
+      "from_words": "HELL'S PARADISE",
+      "to": "dandadan2",
+      "to_words": "DAN DA DAN",
+      "reason": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors"
     }
   ],
-  "swapped_from": "dragonballdaima",
-  "swapped_to": "pathaan",
-  "auto_retries": 0,
+  "swapped_from": "hellsparadise",
+  "swapped_to": "dandadan2",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-08.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene1_h264.mp4",
+  "music": "pr_ytsearch1joehisaishionesummersdaypiano.mp3",
+  "music_credit": "Song: Joe Hisaishi Official - Joe Hisaishi - One Summer's Day\nOfficial link: ytsearch1:Joe Hisaishi One Summer's Day piano",
+  "description_final": "They never stop coming for him. David Martinez fights through a relentless onslaught of Night City forces as he struggles to maintain control. From the official Edgerunners trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#cyberpunkedgerunners #davidmartinez #cyberpunk #shorts #edit\n\nMusic:\nSong: Joe Hisaishi Official - Joe Hisaishi - One Summer's Day\nOfficial link: ytsearch1:Joe Hisaishi One Summer's Day piano",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-08-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 530,
+    "bar_h": 126,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1794,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "story_captions": {
+      "pattern": "P05",
+      "name": "Stepping up beside",
+      "count": 4
+    },
+    "story_caption_boxes": [
+      {
+        "t0": 1.532,
+        "t1": 3.042,
+        "box": [
+          116,
+          846,
+          372,
+          72
+        ],
+        "text": "They never stop",
+        "faces": []
+      },
+      {
+        "t0": 3.831,
+        "t1": 5.387,
+        "box": [
+          609,
+          802,
+          337,
+          72
+        ],
+        "text": "coming for him",
+        "faces": []
+      },
+      {
+        "t0": 6.153,
+        "t1": 7.686,
+        "box": [
+          62,
+          735,
+          455,
+          72
+        ],
+        "text": "Momo never lets",
+        "faces": [
+          [
+            547,
+            781,
+            73,
+            99
+          ]
+        ]
+      },
+      {
+        "t0": 8.475,
+        "t1": 10.008,
+        "box": [
+          696,
+          839,
+          163,
+          85
+        ],
+        "text": "him go",
+        "faces": []
+      }
+    ],
+    "caption_y": 1069,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "love",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 84,
+      "src_start": 151.233,
+      "dur": 0.687
+    },
+    {
+      "id": 88001,
+      "src_start": 157.084,
+      "dur": 1.99
+    },
+    {
+      "id": 39,
+      "src_start": 67.1,
+      "dur": 0.96
+    },
+    {
+      "id": 16,
+      "src_start": 28.221,
+      "dur": 1.439
+    },
+    {
+      "id": 27,
+      "src_start": 43.8,
+      "dur": 1.327
+    },
+    {
+      "id": 36,
+      "src_start": 59.233,
+      "dur": 0.86
+    },
+    {
+      "id": 79,
+      "src_start": 142.5,
+      "dur": 1.46
+    },
+    {
+      "id": 32,
+      "src_start": 52.467,
+      "dur": 2.293
+    },
+    {
+      "id": 74,
+      "src_start": 132.067,
+      "dur": 2.227
+    },
+    {
+      "id": 57,
+      "src_start": 87.533,
+      "dur": 1.293
+    },
+    {
+      "id": 81,
+      "src_start": 146.213,
+      "dur": 2.299
+    },
+    {
+      "id": 6,
+      "src_start": 17.21,
+      "dur": 1.05
+    },
+    {
+      "id": 46,
+      "src_start": 72.667,
+      "dur": 0.893
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 7.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4",
-      "music": "pr_funkpowerultraslowed.mp3",
+      "error": "download failed: quarantined 2 clip(s) that keep failing the logo/scene filter: dragonballdaima_scene1_h264.mp4, dragonballdaima_scene2_h264.mp4",
+      "source": null,
+      "music": null,
       "qc_status": null
     },
     {
       "attempt": 1,
       "ok": false,
-      "error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.872, 'edge_corr_median': 0.907, 'shift_px_median': 3.36, 'pairs': 6}",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/pathaan_scene4_h264.mp4",
-      "music": "pr_montagemdune.mp3",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'THEY NEVER STOP'\", \"2.54s burned-in text 'THEY NEVER STOP'\", \"3.54s burned-in text 'COMING FOR HIM'\", \"4.04s burned-in text 'COMING FOR HIM'\", \"5.04s burned-in text 'DAVID WANTED TO'\", \"5.54s burned-in text 'DAVID WANTED TO'\", \"6.54s burned-in text 'BE A LEGEND'\", \"",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "music": "pr_nt4ef9ysynm.mp3",
+      "qc_status": "pass"
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC reject: The video content is from the film 'Princess Mononoke', which does not match the provided title and description about 'Cyberpunk: Edgerunners' and 'David Martinez'.; The title and description are completely irrelevant to the actual visual content of the video.",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+      "music": "pr_montagemeldersuperslowed.mp3",
+      "qc_status": "fail"
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 12.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4",
+      "music": "pr_montagemeldersuperslowed.mp3",
       "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4",
+      "music": "pr_montagemeldersuperslowed.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene1_h264.mp4",
+      "music": "pr_ytsearch1joehisaishionesummersdaypiano.mp3",
+      "qc_status": "skipped"
     }
   ],
-  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.872, 'edge_corr_median': 0.907, 'shift_px_median': 3.36, 'pairs': 6}"
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false,
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'THEY NEVER STOP'\", \"2.54s burned-in text 'THEY NEVER STOP'\", \"3.54s burned-in text 'COMING FOR HIM'\", \"4.04s burned-in text 'COMING FOR HIM'\", \"5.04s burned-in text 'DAVID WANTED TO'\", \"5.54s burned-in text 'DAVID WANTED TO'\", \"6.54s ",
+      "at": "2026-11-21 23:04 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+      "error": "gemini QC reject: The video content is from the film 'Princess Mononoke', which does not match the provided title and description about 'Cyberpunk: Edgerunners' and 'David Martinez'.; The title and description are completely irrelevant to the actual visual content of the video.",
+      "at": "2026-11-21 23:15 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 12.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-21 23:20 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "at": "2026-11-21 23:34 IST"
+    }
+  ]
 }

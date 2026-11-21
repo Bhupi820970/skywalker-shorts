@@ -1,32 +1,67 @@
 {
   "id": "stock-suzume-02",
-  "status": "retry_queued",
-  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): only 1.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering",
-  "at": "2026-11-20 20:43 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44746267029",
+  "status": "failed",
+  "detail": "time budget reached; last: pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+  "at": "2026-11-21 23:33 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44926262407",
   "slot": null,
-  "title": "Why Jim turned against his nation 💀 | Pathaan jetpack chase | #edit",
-  "hook": "Why Jim turned against his nation",
-  "description": "Why Jim turned against his nation. From official Pathaan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #pathaan #shahrukhkhan #srk",
+  "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+  "hook": "David wanted to be a legend",
+  "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
   "tags": [
-    "pathaan",
-    "shahrukhkhan",
-    "srk",
-    "yrf",
-    "bollywoodedit",
-    "bollywood"
+    "cyberpunkedgerunners",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "David wanted to be a legend",
+    "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+    "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
+    "tags": [
+      "cyberpunkedgerunners",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "david"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "emotional line",
+  "title_candidates": [
+    {
+      "title": "Why Gabimaru cannot stop watching her",
+      "click_score": 92.0
+    },
+    {
+      "title": "The moment Gabimaru chose a different path",
+      "click_score": 88.0
+    },
+    {
+      "title": "Sagiri did not expect this from him",
+      "click_score": 85.0
+    },
+    {
+      "title": "Watch the last two seconds",
+      "click_score": 82.0
+    },
+    {
+      "title": "Gabimaru admits what he really wants",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 429"
+      "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
@@ -44,225 +79,91 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 4.3,
+      "s": 5.3,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 3.2,
+      "s": 4.8,
       "ok": true
     },
     {
       "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.8,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
       "s": 2.2,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 34.4,
+      "s": 10.6,
       "ok": true
     },
     {
-      "purpose": "scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 27.6,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 53.6,
+      "s": 2.6,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 12.2,
+      "s": 5.6,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "s": 10.0,
+      "s": 9.1,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 5.7,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 10.8,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
       "key": "key2",
-      "s": 38.7,
+      "s": 3.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.6,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key2",
-      "s": 9.3,
+      "s": 2.8,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 30.5,
+      "s": 5.2,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 22.6,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 10.1,
+      "s": 2.4,
       "ok": true
     }
   ],
@@ -270,38 +171,85 @@
   "stock": true,
   "stock_topic": "backup-suzume",
   "spare": true,
-  "words": "PATHAAN",
+  "words": "EDGERUNNERS",
   "edit_format": "love",
   "title_swaps": [
     {
       "from": "suzume",
       "from_words": "SUZUME",
-      "to": "pathaan",
-      "to_words": "PATHAAN",
-      "reason": "pipeline/QA failed (exit 1): only 1.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+      "to": "hellsparadise",
+      "to_words": "HELL'S PARADISE",
+      "reason": "download failed: quarantined 3 clip(s) that keep failing the logo/scene filter: suzume_scene1_h264.mp4, suzume_scene2_h264.mp4, suzume_scene3_h264.mp4"
+    },
+    {
+      "from": "hellsparadise",
+      "from_words": "HELL'S PARADISE",
+      "to": "princessmononoke",
+      "to_words": "PRINCESS MONONOKE",
+      "reason": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text overlay\", \"2.54s burned-in text overlay\", \"3.54s burned-in text overlay\", \"4.04s burned-in text overlay\", \"5.04s burned-in text overlay\", \"6.04s burned-in text overlay\", \"6.54s burned-in text overlay\"]}"
+    },
+    {
+      "from": "princessmononoke",
+      "from_words": "PRINCESS MONONOKE",
+      "to": "cyberpunkedgerunners",
+      "to_words": "EDGERUNNERS",
+      "reason": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.04s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"4.54s burned-in subtitle text\", \"5.04s burned-in subtitle text\", \"5.54s burned-in subtitle text\", \"6.54s burned-in subtitle"
     }
   ],
-  "swapped_from": "suzume",
-  "swapped_to": "pathaan",
-  "auto_retries": 0,
+  "swapped_from": "princessmononoke",
+  "swapped_to": "cyberpunkedgerunners",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 1.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene3_h264.mp4",
-      "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3",
+      "error": "download failed: quarantined 3 clip(s) that keep failing the logo/scene filter: suzume_scene1_h264.mp4, suzume_scene2_h264.mp4, suzume_scene3_h264.mp4",
+      "source": null,
+      "music": null,
       "qc_status": null
     },
     {
       "attempt": 1,
       "ok": false,
-      "error": "time budget reached; last: pipeline/QA failed (exit 1): only 1.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/pathaan_scene3_h264.mp4",
-      "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text overlay\", \"2.54s burned-in text overlay\", \"3.54s burned-in text overlay\", \"4.04s burned-in text overlay\", \"5.04s burned-in text overlay\", \"6.04s burned-in text overlay\", \"6.54s burned-in text overlay\"]}",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4",
+      "music": "sw_powergloveplaybackvinylr.mp3",
+      "qc_status": "pass"
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.04s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"4.54s burned-in subtitle text\", \"5.04s burned-in subtitle text\", \"5.54s burned-in subtitle text\", \"6.54s burned-in subtitle",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+      "music": "pr_ytsearch1joehisaishionesummersdaypiano.mp3",
+      "qc_status": "pass"
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "music": "pr_ytsearch1joehisaishionesummersdaypiano.mp3",
       "qc_status": null
     }
   ],
-  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): only 1.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering"
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text overlay\", \"2.54s burned-in text overlay\", \"3.54s burned-in text overlay\", \"4.04s burned-in text overlay\", \"5.04s burned-in text overlay\", \"6.04s burned-in text overlay\", \"6.54s burned-in text overlay\"]}",
+      "at": "2026-11-21 22:36 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.04s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"4.54s burned-in subtitle text\", \"5.04s burned-in subtitle text\", \"5.54s burned-in subtitle ",
+      "at": "2026-11-21 22:56 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "at": "2026-11-21 23:33 IST"
+    }
+  ]
 }
