@@ -294,5 +294,7 @@
       "reason": "gemini score 6.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "publish_blocked": "repeat: same hook already posted (20261120-2230-weatheringwithyou): 'why hodaka cannot stop watching her'",
+  "publish_blocked_at": "2026-11-22 04:35 IST"
 }
