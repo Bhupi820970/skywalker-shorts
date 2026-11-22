@@ -1,68 +1,67 @@
 [
  {
-  "id": "20261126-0630-jjk0",
+  "id": "20261126-0630-bluegiant",
   "slot": "2026-11-26T06:30:00+05:30",
-  "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=KaB7tTJ2T5o",
   "template": "whitebar",
-  "hook": "Yuta only fights for her",
-  "words": "JUJUTSU KAISEN 0",
-  "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
-  "description": "Yuta only fights for her. From official Jujutsu Kaisen 0 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jjk0",
+  "hook": "His saxophone hits like thunder",
+  "words": "BLUE GIANT",
+  "title": "His saxophone hits like thunder | Blue Giant | #edit",
+  "description": "His saxophone hits like thunder. From official Blue Giant clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bluegiant",
   "tags": [
-   "jjk0",
+   "bluegiant",
    "anime",
    "animeedit",
    "edit",
    "shorts",
    "trending",
-   "yuta"
+   "dai"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
-  "edit_format": "love",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "jjk0_scene2_h264.mp4"
+  "fallback_asset": "bluegiant_scene1_h264.mp4"
  },
  {
-  "id": "20261126-0900-vikram",
+  "id": "20261126-0900-onepunchman3",
   "slot": "2026-11-26T09:00:00+05:30",
-  "pillar": "south",
-  "source_url": "https://www.youtube.com/watch?v=0Z_mA7n5zIA",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
   "template": "whitebar",
-  "hook": "Why he is the legend",
-  "words": "VIKRAM",
-  "title": "Why he is the legend 💀 | Vikram returns | #edit",
-  "description": "Why he is the legend. From official Vikram clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vikram #kamalhaasan #south",
+  "hook": "Saitama ends fights in one hit",
+  "words": "ONE PUNCH MAN",
+  "title": "Saitama ends fights in one hit | One Punch Man | #edit",
+  "description": "Saitama ends fights in one hit. From official One Punch Man clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #onepunchman3",
   "tags": [
-   "vikram",
-   "kamalhaasan",
-   "south",
+   "onepunchman3",
+   "anime",
+   "animeedit",
    "edit",
-   "phonk",
-   "aura",
-   "action"
+   "shorts",
+   "trending",
+   "saitama"
   ],
   "target_dur": 26,
   "status": "queued",
-  "market": "IN",
+  "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/onepunchman3_scene1_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/onepunchman3_scene1_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "vikram_scene1_h264.mp4"
+  "fallback_asset": "onepunchman3_scene1_h264.mp4"
  },
  {
   "id": "20261126-1130-boyandheron",
@@ -168,9 +167,9 @@
   "pillar": "romance",
   "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
   "template": "whitebar",
-  "hook": "He chose her over the sky",
+  "hook": "The sky followed them",
   "words": "WEATHERING WITH YOU",
-  "title": "He chose her over the sky | Weathering With You | #edit",
+  "title": "The sky followed them | Weathering With You | #edit",
   "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
   "tags": [
    "weatheringwithyou",
@@ -185,7 +184,7 @@
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
-  "content_kind": "best scene",
+  "content_kind": "romance scene",
   "edit_format": "love",
   "fallback_mp4": [
    "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
@@ -201,47 +200,14 @@
   "fallback_asset": "weatheringwithyou_scene1_h264.mp4"
  },
  {
-  "id": "20261126-2030-violetevergarden",
+  "id": "20261126-2030-suzume",
   "slot": "2026-11-26T20:30:00+05:30",
-  "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=_lmn16npMXw",
-  "template": "whitebar",
-  "hook": "Why Violet had to learn human emotions",
-  "words": "VIOLET EVERGARDEN",
-  "title": "Why Violet had to learn human emotions | Violet's final letter | #edit",
-  "description": "Why Violet had to learn human emotions. From official Violet Evergarden clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #violetevergarden #violet #animeedit",
-  "tags": [
-   "violetevergarden",
-   "violet",
-   "animeedit",
-   "phonk",
-   "emotional",
-   "anime",
-   "kyotoanimation"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "edit_format": "love",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene2_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene2_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "violetevergarden_scene2_h264.mp4"
- },
- {
-  "id": "20261126-2230-suzume",
-  "slot": "2026-11-26T22:30:00+05:30",
   "pillar": "romance",
   "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
   "template": "whitebar",
-  "hook": "She keeps closing doors alone",
+  "hook": "She kept walking back",
   "words": "SUZUME",
-  "title": "She keeps closing doors alone | Suzume | #edit",
+  "title": "She kept walking back | Suzume | #edit",
   "description": "She keeps closing doors alone. From official Suzume clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #suzume",
   "tags": [
    "suzume",
@@ -255,7 +221,7 @@
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
-  "content_kind": "best scene",
+  "content_kind": "romance scene",
   "edit_format": "love",
   "fallback_mp4": [
    "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
@@ -269,5 +235,38 @@
   ],
   "fallback_release": "sources",
   "fallback_asset": "suzume_scene1_h264.mp4"
+ },
+ {
+  "id": "20261126-2230-don2",
+  "slot": "2026-11-26T22:30:00+05:30",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=Q4Tr7giZaXM",
+  "template": "whitebar",
+  "hook": "Don let them think they had won",
+  "words": "DON 2",
+  "title": "Don let them think they had won | Don 2 | #edit",
+  "description": "Why Don surrendered himself to police. From official Don 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #don2 #shahrukhkhan #srk",
+  "tags": [
+   "don2",
+   "shahrukhkhan",
+   "srk",
+   "don",
+   "bollywoodedit",
+   "bollywood"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "don2_scene1_h264.mp4"
  }
 ]

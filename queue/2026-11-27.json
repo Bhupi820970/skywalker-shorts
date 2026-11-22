@@ -1,108 +1,109 @@
 [
  {
-  "id": "20261127-0630-weatheringwithyou",
+  "id": "20261127-0630-fighther",
   "slot": "2026-11-27T06:30:00+05:30",
-  "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
-  "template": "whitebar",
-  "hook": "He chose her over the sky",
-  "words": "WEATHERING WITH YOU",
-  "title": "He chose her over the sky | Weathering With You | #edit",
-  "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
-  "tags": [
-   "weatheringwithyou",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "hina",
-   "hodaka"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "edit_format": "love",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "weatheringwithyou_scene1_h264.mp4"
- },
- {
-  "id": "20261127-0900-violetevergarden",
-  "slot": "2026-11-27T09:00:00+05:30",
-  "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=_lmn16npMXw",
-  "template": "whitebar",
-  "hook": "Why Violet had to learn human emotions",
-  "words": "VIOLET EVERGARDEN",
-  "title": "Why Violet had to learn human emotions | Violet's final letter | #edit",
-  "description": "Why Violet had to learn human emotions. From official Violet Evergarden clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #violetevergarden #violet #animeedit",
-  "tags": [
-   "violetevergarden",
-   "violet",
-   "animeedit",
-   "phonk",
-   "emotional",
-   "anime",
-   "kyotoanimation"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "edit_format": "love",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "violetevergarden_scene2_h264.mp4"
- },
- {
-  "id": "20261127-1130-gangsofwasseypur",
-  "slot": "2026-11-27T11:30:00+05:30",
   "pillar": "bollywood",
-  "source_url": "https://www.youtube.com/watch?v=5oRczmZ6dGU",
+  "source_url": "https://www.youtube.com/watch?v=eifvzpMt_lE",
   "template": "whitebar",
-  "hook": "Why Faizal is a menace",
-  "words": "GANGS OF WASSEYPUR",
-  "title": "Why Faizal is a menace 💀 | The legend enters | #edit",
-  "description": "Why Faizal is a menace. From official Gangs Of Wasseypur clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gangsofwasseypur #faizalkhan #bollywood",
+  "hook": "Hrithik took the fight into the air",
+  "words": "FIGHTER",
+  "title": "Hrithik took the fight into the air | Fighter | #edit",
+  "description": "Why he dominates the sky. From official Fighter clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #fighter #hrithikroshan #bollywood",
   "tags": [
-   "gangsofwasseypur",
-   "faizalkhan",
+   "fighter",
+   "hrithikroshan",
    "bollywood",
-   "edit",
+   "movieedit",
    "phonk",
-   "aura",
-   "classic"
+   "action",
+   "edit"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "IN",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gangsofwasseypur_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene4_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gangsofwasseypur_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene4_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "gangsofwasseypur_scene1_h264.mp4"
+  "fallback_asset": "fighther_scene1_h264.mp4"
+ },
+ {
+  "id": "20261127-0900-thebatman",
+  "slot": "2026-11-27T09:00:00+05:30",
+  "pillar": "hollywood",
+  "source_url": "https://www.youtube.com/watch?v=GGZdoD7gYnE",
+  "template": "whitebar",
+  "hook": "The club went silent when he walked in",
+  "words": "THE BATMAN",
+  "title": "The club went silent when he walked in | The Batman | #edit",
+  "description": "Why Batman scares the criminals. From official The Batman clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #batman #thebatman #dc",
+  "tags": [
+   "batman",
+   "thebatman",
+   "dc",
+   "movieedit",
+   "phonk",
+   "brucewayne",
+   "action"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "thebatman_scene2_h264.mp4"
+ },
+ {
+  "id": "20261127-1130-cyberpunkedgerunners",
+  "slot": "2026-11-27T11:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+  "template": "whitebar",
+  "hook": "David paid for the legendary life",
+  "words": "CYBERPUNK",
+  "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
+  "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
+  "tags": [
+   "cyberpunkedgerunners",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "david"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "cyberpunkedgerunners_scene1_h264.mp4"
  },
  {
   "id": "20261127-1330-mashle",
@@ -137,46 +138,83 @@
   "fallback_asset": "mashle_scene1_h264.mp4"
  },
  {
-  "id": "20261127-1600-topgunmaverick",
+  "id": "20261127-1600-kgf",
   "slot": "2026-11-27T16:00:00+05:30",
-  "pillar": "hollywood",
-  "source_url": "https://www.youtube.com/watch?v=IXbnzEHZDPg",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=HYfycqyIuEk",
   "template": "whitebar",
-  "hook": "Why Maverick is the greatest pilot",
-  "words": "TOP GUN MAVERICK",
-  "title": "Why Maverick is the greatest pilot | The final training run | #edit",
-  "description": "Why Maverick is the greatest pilot. From official Top Gun Maverick clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #topgun #maverick #tomcruise",
+  "hook": "Rocky walked in and took the city",
+  "words": "KGF",
+  "title": "Rocky walked in and took the city | KGF | #edit",
+  "description": "Why Rocky owns the city. From official Kgf Chapter 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #kgf2 #rockybhai #south",
   "tags": [
-   "topgun",
-   "maverick",
-   "tomcruise",
-   "movieedit",
+   "kgf2",
+   "rockybhai",
+   "south",
+   "edit",
    "phonk",
-   "aviation",
+   "aura",
    "action"
   ],
   "target_dur": 26,
   "status": "queued",
-  "market": "US/UK",
+  "market": "IN",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene2_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene2_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "topgunmaverick_scene1_h264.mp4"
+  "fallback_asset": "kgf_scene1_h264.mp4"
  },
  {
-  "id": "20261127-1830-suzume",
+  "id": "20261127-1830-violetevergarden",
   "slot": "2026-11-27T18:30:00+05:30",
+  "pillar": "romance",
+  "source_url": "https://www.youtube.com/watch?v=_lmn16npMXw",
+  "template": "whitebar",
+  "hook": "She wrote what she could not say",
+  "words": "VIOLET EVERGARDEN",
+  "title": "She wrote what she could not say | Violet Evergarden | #edit",
+  "description": "Why Violet had to learn human emotions. From official Violet Evergarden clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #violetevergarden #violet #animeedit",
+  "tags": [
+   "violetevergarden",
+   "violet",
+   "animeedit",
+   "phonk",
+   "emotional",
+   "anime",
+   "kyotoanimation"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "romance scene",
+  "edit_format": "love",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "violetevergarden_scene2_h264.mp4"
+ },
+ {
+  "id": "20261127-2030-suzume",
+  "slot": "2026-11-27T20:30:00+05:30",
   "pillar": "romance",
   "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
   "template": "whitebar",
-  "hook": "She keeps closing doors alone",
+  "hook": "The door would not stay closed",
   "words": "SUZUME",
-  "title": "She keeps closing doors alone | Suzume | #edit",
+  "title": "The door would not stay closed | Suzume | #edit",
   "description": "She keeps closing doors alone. From official Suzume clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #suzume",
   "tags": [
    "suzume",
@@ -190,7 +228,7 @@
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
-  "content_kind": "best scene",
+  "content_kind": "romance scene",
   "edit_format": "love",
   "fallback_mp4": [
    "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
@@ -206,68 +244,41 @@
   "fallback_asset": "suzume_scene1_h264.mp4"
  },
  {
-  "id": "20261127-2030-arcane2",
-  "slot": "2026-11-27T20:30:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-  "template": "whitebar",
-  "hook": "Jinx never wanted this war",
-  "words": "ARCANE",
-  "title": "Jinx never wanted this war | Arcane | #edit",
-  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane2",
-  "tags": [
-   "arcane2",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "jinx"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "arcane2_scene3_h264.mp4"
- },
- {
-  "id": "20261127-2230-jjk0",
+  "id": "20261127-2230-weatheringwithyou",
   "slot": "2026-11-27T22:30:00+05:30",
   "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
+  "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
   "template": "whitebar",
-  "hook": "Yuta only fights for her",
-  "words": "JUJUTSU KAISEN 0",
-  "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
-  "description": "Yuta only fights for her. From official Jujutsu Kaisen 0 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jjk0",
+  "hook": "He stayed when the sky fell",
+  "words": "WEATHERING WITH YOU",
+  "title": "He stayed when the sky fell | Weathering With You | #edit",
+  "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
   "tags": [
-   "jjk0",
+   "weatheringwithyou",
    "anime",
    "animeedit",
    "edit",
    "shorts",
    "trending",
-   "yuta"
+   "hina",
+   "hodaka"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
-  "content_kind": "best scene",
+  "content_kind": "romance scene",
   "edit_format": "love",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "jjk0_scene2_h264.mp4"
+  "fallback_asset": "weatheringwithyou_scene1_h264.mp4"
  }
 ]

@@ -211,36 +211,39 @@
   "fallback_asset": "topgunmaverick_scene1_h264.mp4"
  },
  {
-  "id": "20261124-2030-oppenheimer",
+  "id": "20261124-2030-princessmononoke",
   "slot": "2026-11-24T20:30:00+05:30",
-  "pillar": "hollywood",
-  "source_url": "https://www.youtube.com/watch?v=MeIk9ap1u_E",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
   "template": "whitebar",
-  "hook": "Why he regrets his creation",
-  "words": "OPPENHEIMER",
-  "title": "Why he regrets his creation 💀 | The Trinity Test | #edit",
-  "description": "Why he regrets his creation. From official Oppenheimer clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #oppenheimer #nolan #hollywood",
+  "hook": "San would die for the forest",
+  "words": "PRINCESS MONONOKE",
+  "title": "San would die for the forest | Princess Mononoke | #edit",
+  "description": "San would die for the forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke",
   "tags": [
-   "oppenheimer",
-   "nolan",
-   "hollywood",
-   "cillianmurphy",
+   "princessmononoke",
+   "anime",
+   "animeedit",
    "edit",
-   "phonk",
-   "aura"
+   "shorts",
+   "trending",
+   "ashitaka",
+   "san"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "oppenheimer_scene1_h264.mp4"
+  "fallback_asset": "princessmononoke_scene1_h264.mp4"
  },
  {
   "id": "20261124-2230-cyberpunk2077",

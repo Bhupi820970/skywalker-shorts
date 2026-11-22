@@ -2250,7 +2250,8 @@
       "scene_assets": [
         "pathaan_scene1_h264.mp4",
         "pathaan_scene2_h264.mp4",
-        "pathaan_scene3_h264.mp4"
+        "pathaan_scene3_h264.mp4",
+        "pathaan_scene4_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"

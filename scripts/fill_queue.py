@@ -74,22 +74,45 @@ def topic_assets(topic: dict, have: set[str] | None) -> list[str]:
     return [n for n in names if n in have]
 
 
-def _used_slugs() -> set[str]:
-    used = set()
-    for p in QUEUE.glob("2026-*.json"):
-        try:
-            items = json.loads(p.read_text())
-        except Exception:
-            continue
-        for it in items:
+def _item_slug(it: dict) -> str:
+    parts = (it.get("id") or "").split("-")
+    if len(parts) >= 3 and parts[0].isdigit():
+        return "-".join(parts[2:]).lower()
+    return ""
+
+
+def _norm_text(text: str) -> str:
+    return " ".join((text or "").casefold().split())
+
+
+def _used_in_days(days: list[str]) -> tuple[set[str], set[str]]:
+    """Slugs and hooks already queued in the given days.
+
+    Only the item id slug is counted (not tags), so a tag like
+    "dandadan" cannot mark a different topic as already used.
+    """
+    slugs: set[str] = set()
+    hooks: set[str] = set()
+    for day in days:
+        for it in _load_day(day):
             if it.get("status") in ("replaced", "retired"):
                 continue
-            parts = (it.get("id") or "").split("-")
-            if len(parts) >= 3 and parts[0].isdigit():
-                used.add("-".join(parts[2:]).lower())
-            for t in it.get("tags") or []:
-                used.add(str(t).lower())
-    return used
+            s = _item_slug(it)
+            if s:
+                slugs.add(s)
+            hook = _norm_text(it.get("hook") or "")
+            if hook:
+                hooks.add(hook)
+            title = _norm_text((it.get("title") or "").split("#")[0])
+            if title:
+                hooks.add(title)
+    return slugs, hooks
+
+
+def _used_slugs() -> set[str]:
+    """Backward-compatible helper: slugs queued in the fill window."""
+    slugs, _hooks = _used_in_days(_window_days())
+    return slugs
 
 
 def _make_item(day: str, hhmm: str, topic: dict, have: set[str] | None = None) -> dict:
@@ -139,7 +162,7 @@ def _make_item(day: str, hhmm: str, topic: dict, have: set[str] | None = None) -
     return item
 
 
-def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | None = None) -> int:
+def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | None = None, used_hooks: set[str] | None = None) -> int:
     items = _load_day(day)
     existing_isos = [it.get("slot") for it in items if it.get("slot")]
     need = slot_times.next_official_to_add(existing_isos, day)
@@ -157,9 +180,13 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
         catalog = [t for t in catalog if (t.get("slug") or "").lower() not in blocked]
     if not catalog:
         return 0
+    used_hooks = used_hooks if used_hooks is not None else set()
     pool = [t for t in catalog if t["slug"] not in used]
+    # Do not fall back to already-queued slugs; identical hooks in the
+    # lookahead window weaken the channel. Leave a slot empty rather than
+    # clone a title already scheduled this window (backup stock covers it).
     if not pool:
-        pool = list(catalog)
+        return 0
     try:
         perf_data = perf.load_perf(REPO)
     except Exception:
@@ -267,7 +294,15 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
         topic, pi = next_topic(love_n, gta_n, pi, day_slugs)
         while tries < len(pool):
             cand = _make_item(day, hhmm, topic, have)
-            bad = topic["slug"] in day_slugs or hook_text.check_item_hook_fields(cand)
+            hook_n = _norm_text(cand.get("hook") or "")
+            title_n = _norm_text((cand.get("title") or "").split("#")[0])
+            dup = (
+                topic["slug"] in day_slugs
+                or topic["slug"] in used
+                or (hook_n and hook_n in used_hooks)
+                or (title_n and title_n in used_hooks)
+            )
+            bad = dup or hook_text.check_item_hook_fields(cand)
             if not bad:
                 item = cand
                 break
@@ -277,6 +312,12 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
             continue
         items.append(item)
         used.add(topic["slug"])
+        hook_n = _norm_text(item.get("hook") or "")
+        if hook_n:
+            used_hooks.add(hook_n)
+        title_n = _norm_text((item.get("title") or "").split("#")[0])
+        if title_n:
+            used_hooks.add(title_n)
         added += 1
         if item.get("edit_format") == "love" or (item.get("pillar") or "").lower() in ("romance", "love"):
             love_n += 1
@@ -293,12 +334,23 @@ def days_ahead(n: int | None = None) -> list[str]:
     return [(now + timedelta(days=i)).isoformat() for i in range(0, n + 1)]
 
 
+def _window_days(n: int | None = None) -> list[str]:
+    """Yesterday through the fill horizon, so we do not re-queue a title
+    that just ran or is already on the upcoming calendar."""
+    targets = days_ahead(n)
+    if not targets:
+        return []
+    first = datetime.fromisoformat(targets[0]).date()
+    yesterday = (first - timedelta(days=1)).isoformat()
+    return [yesterday, *targets]
+
+
 def main() -> int:
     cat = json.loads(CATALOG.read_text()).get("items") or []
     if not cat:
         print("empty topic catalog", file=sys.stderr)
         return 1
-    used = _used_slugs()
+    used, used_hooks = _used_in_days(_window_days())
     have = release_assets()
     total = 0
     # Always cover through min_ahead_days (plus one extra day of buffer).
@@ -306,7 +358,7 @@ def main() -> int:
     for day in targets:
         if day < "2026-11-14":
             continue
-        n = fill_day(day, cat, used, have)
+        n = fill_day(day, cat, used, have, used_hooks)
         if n:
             print(f"{day}: added {n} slot(s)")
         total += n
