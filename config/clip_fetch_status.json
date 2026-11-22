@@ -1,10 +1,11 @@
 {
  "box": {
-  "last_run_at": "2026-11-22T15:04:45Z",
-  "last_upload_at": "2026-11-22T15:04:45Z"
+  "last_run_at": "2026-11-22T15:06:28Z",
+  "last_upload_at": "2026-11-22T15:06:28Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
+  "yt:05EIB6kOu6Y",
   "yt:0Z_mA7n5zIA",
   "yt:1QZamgwEjiw",
   "yt:1VUqQqUlSv4",
@@ -68,6 +69,7 @@
   "yt:aiCMXJ4zKWA",
   "yt:aoi11BdfpoM",
   "yt:cbft6JWPkpA",
+  "yt:chjVPTdBel8",
   "yt:ckEUVyKanhw",
   "yt:e5ctO_lhS8Y",
   "yt:eifvzpMt_lE",
@@ -1109,6 +1111,28 @@
    "kbps": 1532,
    "by": "box",
    "at": "2026-11-22T15:04:45Z"
+  },
+  {
+   "asset": "sakamotodays_scene1_h264.mp4",
+   "id": "yt:05EIB6kOu6Y",
+   "title": "Slur and Sakamoto Face Off! | SAKAMOTO DAYS Season 1 Part 2 | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1765,
+   "by": "box",
+   "at": "2026-11-22T15:06:28Z"
+  },
+  {
+   "asset": "sakamotodays_scene2_h264.mp4",
+   "id": "yt:chjVPTdBel8",
+   "title": "Unconventional Weapons in SAKAMOTO DAYS | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1484,
+   "by": "box",
+   "at": "2026-11-22T15:06:28Z"
   }
  ],
  "github": {
