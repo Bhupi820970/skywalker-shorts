@@ -1,0 +1,321 @@
+{
+  "id": "stock-weatheringwithyou-12",
+  "status": "retry_queued",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-22 09:53 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44981089745",
+  "slot": null,
+  "title": "He chose her over the sky | Weathering With You | #edit",
+  "hook": "He chose her over the sky",
+  "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
+  "tags": [
+    "weatheringwithyou",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "hina",
+    "hodaka"
+  ],
+  "queue_meta": {
+    "hook": "He chose her over the sky",
+    "title": "He chose her over the sky | Weathering With You | #edit",
+    "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
+    "tags": [
+      "weatheringwithyou",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "hina",
+      "hodaka"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 6.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 5.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 62.2,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.4,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 1.6,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 3.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.7,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-weatheringwithyou",
+  "stock": true,
+  "stock_topic": "backup-weatheringwithyou",
+  "spare": true,
+  "words": "WEATHERING WITH YOU",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-weatheringwithyou-12.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4",
+  "music": "pr_ytsearch1yirumariverflowsinyou.mp3",
+  "music_credit": "Song: YIRUMA place / 이루마 official - Yiruma, (이루마) - River Flows in You\nOfficial link: ytsearch1:Yiruma River Flows in You",
+  "description_final": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou\n\nMusic:\nSong: YIRUMA place / 이루마 official - Yiruma, (이루마) - River Flows in You\nOfficial link: ytsearch1:Yiruma River Flows in You",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-weatheringwithyou-12-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 520,
+    "bar_h": 136,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1784,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "story_captions": {
+      "pattern": "P05",
+      "name": "Stepping up beside",
+      "count": 2
+    },
+    "story_caption_boxes": [
+      {
+        "t0": 1.742,
+        "t1": 3.341,
+        "box": [
+          328,
+          959,
+          277,
+          72
+        ],
+        "text": "He chose her",
+        "faces": [
+          [
+            647,
+            888,
+            105,
+            98
+          ]
+        ]
+      },
+      {
+        "t0": 4.412,
+        "t1": 6.012,
+        "box": [
+          489,
+          799,
+          251,
+          72
+        ],
+        "text": "over the sky",
+        "faces": [
+          [
+            393,
+            788,
+            69,
+            94
+          ]
+        ]
+      }
+    ],
+    "caption_y": 1069,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "love",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 24,
+      "src_start": 96.542,
+      "dur": 0.906
+    },
+    {
+      "id": 7,
+      "src_start": 22.792,
+      "dur": 2.577
+    },
+    {
+      "id": 22,
+      "src_start": 87.542,
+      "dur": 2.694
+    },
+    {
+      "id": 19,
+      "src_start": 74.0,
+      "dur": 2.5
+    },
+    {
+      "id": 14,
+      "src_start": 53.542,
+      "dur": 4.071
+    },
+    {
+      "id": 21,
+      "src_start": 82.0,
+      "dur": 2.5
+    },
+    {
+      "id": 13,
+      "src_start": 44.042,
+      "dur": 5.0
+    },
+    {
+      "id": 15,
+      "src_start": 63.5,
+      "dur": 1.852
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4",
+      "music": "pr_ytsearch1yirumariverflowsinyou.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false,
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'HE CHOSE HER'\", \"2.54s burned-in text 'HE CHOSE HER'\", \"3.04s burned-in text 'HE CHOSE HER'\", \"3.54s burned-in text 'HE CHOSE HER'\", \"4.54s burned-in text 'OVER THE SKY'\", \"5.04s burned-in text 'OVER THE SKY'\", \"5.54s burned-in text '",
+      "at": "2026-11-22 09:36 IST"
+    }
+  ]
+}
