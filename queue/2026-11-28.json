@@ -1,0 +1,141 @@
+[
+ {
+  "id": "20261128-0630-dhoom2",
+  "slot": "2026-11-28T06:30:00+05:30",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=fmKWuAVt1vI",
+  "template": "whitebar",
+  "hook": "Why Mr A never got caught",
+  "words": "DHOOM 2",
+  "title": "Why Mr A never got caught 💀 | Train disguise heist | #edit",
+  "description": "Why Mr A never got caught. From official Dhoom 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dhoom2 #hrithikroshan #mra",
+  "tags": [
+   "dhoom2",
+   "hrithikroshan",
+   "mra",
+   "yrf",
+   "bollywoodedit",
+   "bollywood"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dhoom2_scene1_h264.mp4"
+ },
+ {
+  "id": "20261128-1330-leomovie",
+  "slot": "2026-11-28T13:30:00+05:30",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=TtX8DNALc3I",
+  "template": "whitebar",
+  "hook": "Why Leo hid his true identity",
+  "words": "LEO",
+  "title": "Why Leo hid his true identity | Leo Vijay cafe fight | #edit",
+  "description": "Why Leo hid his true identity. From official Leo clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #leo #thalapathyvijay #lokeshkanagaraj",
+  "tags": [
+   "leo",
+   "thalapathyvijay",
+   "lokeshkanagaraj",
+   "southcinema",
+   "leoedit",
+   "kollywood"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "leomovie_scene1_h264.mp4"
+ },
+ {
+  "id": "20261128-1830-rrr",
+  "slot": "2026-11-28T18:30:00+05:30",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=DDAHHPGcLzo",
+  "template": "whitebar",
+  "hook": "Why Bheem unleashed the wild beasts",
+  "words": "RRR",
+  "title": "Why Bheem unleashed the wild beasts 💀 | Bheem palace entry | #edit",
+  "description": "Why Bheem unleashed the wild beasts. From official Rrr clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #rrr #jrntr #ramcharan",
+  "tags": [
+   "rrr",
+   "jrntr",
+   "ramcharan",
+   "ssrajamouli",
+   "southedit",
+   "tollywood"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rrr_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rrr_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rrr_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rrr_scene4_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rrr_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rrr_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rrr_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/rrr_scene4_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "rrr_scene1_h264.mp4"
+ },
+ {
+  "id": "20261128-2230-warmovie",
+  "slot": "2026-11-28T22:30:00+05:30",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=-RuSqMYcQK0",
+  "template": "whitebar",
+  "hook": "Why Kabir was unmatched in battle",
+  "words": "WAR",
+  "title": "Why Kabir was unmatched in battle | Hrithik Roshan entry scene | #edit",
+  "description": "Why Kabir was unmatched in battle. From official War clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #war #hrithikroshan #tigerseghal",
+  "tags": [
+   "war",
+   "hrithikroshan",
+   "tigerseghal",
+   "yrf",
+   "bollywood",
+   "waredit",
+   "action"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "warmovie_scene1_h264.mp4"
+ }
+]
