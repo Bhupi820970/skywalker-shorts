@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-22T05:59:47Z",
-  "last_upload_at": "2026-11-22T05:59:47Z"
+  "last_run_at": "2026-11-22T14:17:14Z",
+  "last_upload_at": "2026-11-22T14:17:14Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -32,6 +32,7 @@
   "yt:HtkYBLLx0Mc",
   "yt:HyFzn8JjmpA",
   "yt:IXbnzEHZDPg",
+  "yt:IkNsD9sSYzU",
   "yt:Lbmsv1tcgf8",
   "yt:LmWrEpYpUec",
   "yt:MeIk9ap1u_E",
@@ -989,6 +990,17 @@
    "kbps": 1825,
    "by": "box",
    "at": "2026-11-22T05:59:47Z"
+  },
+  {
+   "asset": "firstslamdunk_scene1_h264.mp4",
+   "id": "yt:IkNsD9sSYzU",
+   "title": "映画『THE FIRST SLAM DUNK』PV -THE FIRST-【絶賛上映中】",
+   "channel": "東映アニメーション公式YouTubeチャンネル",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1994,
+   "by": "box",
+   "at": "2026-11-22T14:17:14Z"
   }
  ],
  "github": {
