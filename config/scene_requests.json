@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22 05:24 IST",
+ "generated_at": "2026-11-22 06:58 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 52,
@@ -624,6 +624,45 @@
     "edit",
     "phonk",
     "aura"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "violetevergarden",
+   "slot": "2026-11-24T06:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261124-0630-violetevergarden",
+   "pillar": "romance",
+   "words": "VIOLET EVERGARDEN",
+   "scene_types": [
+    "romantic",
+    "emotional",
+    "confession"
+   ],
+   "search_queries": [
+    "VIOLET EVERGARDEN romantic scene",
+    "VIOLET EVERGARDEN emotional scene",
+    "VIOLET EVERGARDEN official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=_lmn16npMXw",
+   "missing_assets": [
+    "violetevergarden_scene1_h264.mp4"
+   ],
+   "on_release": [
+    "violetevergarden_scene2_h264.mp4",
+    "violetevergarden_scene3_h264.mp4"
+   ],
+   "hook": "Why Violet had to learn human emotions",
+   "title": "Why Violet had to learn human emotions | Violet's final letter | #edit",
+   "tags": [
+    "violetevergarden",
+    "violet",
+    "animeedit",
+    "phonk",
+    "emotional",
+    "anime",
+    "kyotoanimation"
    ],
    "market": "US/UK"
   },
