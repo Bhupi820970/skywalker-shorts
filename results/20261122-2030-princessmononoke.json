@@ -1,59 +1,63 @@
 {
   "id": "20261122-2030-princessmononoke",
-  "status": "retry_queued",
-  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): No usable scenes after filtering",
-  "at": "2026-11-23 00:09 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45048264718",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-23 00:42 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45057278813",
   "slot": "2026-11-22T20:30:00+05:30",
-  "title": "Axel has thirty days to run | Lazarus | #edit",
-  "hook": "Axel has thirty days to run",
-  "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+  "title": "Nobody expected Ashitaka to defy them like this #princessmononoke #ashitaka #anime",
+  "hook": "Ashitaka stands his ground alone",
+  "description": "Ashitaka stands his ground alone. Ashitaka steps between San and the villagers to stop the bloodshed while dealing with his own curse. From the official Princess Mononoke trailer. Edit by Skywalker.\nSource: official trailer (https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4). All rights to the film/series belong to their owners; short commentary edit.\n#princessmononoke #ashitaka #anime #shorts #edit",
   "tags": [
-    "lazarus",
+    "princessmononoke",
+    "ashitaka",
     "anime",
     "animeedit",
     "edit",
     "shorts",
     "trending",
-    "axel"
+    "san",
+    "part3"
   ],
   "queue_meta": {
-    "hook": "Axel has thirty days to run",
-    "title": "Axel has thirty days to run | Lazarus | #edit",
-    "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
+    "hook": "San would die for the forest",
+    "title": "San would die for the forest | PRINCESS MONONOKE | #edit",
+    "description": "San would die for the forest. Official scene clip. Edit by Skywalker.",
     "tags": [
-      "lazarus",
+      "princessmononoke",
       "anime",
       "animeedit",
       "edit",
       "shorts",
       "trending",
-      "axel"
+      "ashitaka",
+      "san",
+      "part3"
     ]
   },
   "gemini_meta": true,
   "hook_source": "gemini",
-  "hook_style": "quoting dialogue",
+  "hook_style": "curiosity gap",
   "title_candidates": [
     {
-      "title": "Ashitaka stopped an entire war by himself",
-      "click_score": 94.0
+      "title": "Nobody expected Ashitaka to defy them like this",
+      "click_score": 92.0
     },
     {
-      "title": "The moment Ashitaka showed them true hatred",
-      "click_score": 91.0
-    },
-    {
-      "title": "When the demon curse takes control of Ashitaka",
-      "click_score": 89.0
-    },
-    {
-      "title": "Nobody expected Ashitaka to do this to Eboshi",
+      "title": "Ashitaka faces the entire village alone",
       "click_score": 88.0
     },
     {
-      "title": "Watch how Ashitaka walks out with San",
+      "title": "The moment Ashitaka lost his patience",
       "click_score": 85.0
+    },
+    {
+      "title": "Watch how Ashitaka handles the crowd",
+      "click_score": 82.0
+    },
+    {
+      "title": "Ashitaka proves he is not afraid of death",
+      "click_score": 79.0
     }
   ],
   "gemini_calls": [
@@ -61,35 +65,7 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 4.4,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 8.3,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 9.3,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 9.0,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 6.0,
+      "s": 16.3,
       "ok": true
     },
     {
@@ -108,75 +84,41 @@
       "purpose": "logo_scenes",
       "model": "gemini-flash-latest",
       "key": "key1",
-      "err": "HTTP 429"
+      "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 13.4,
+      "s": 3.0,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 45.9,
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.6,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 89.4,
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.3,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 16.0,
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.2,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 19.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 16.7,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 44.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 40.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 35.4,
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.0,
       "ok": true
     }
   ],
@@ -184,60 +126,202 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "words": "LAZARUS",
-  "edit_format": "action",
-  "title_swaps": [
-    {
-      "from": "princessmononoke",
-      "from_words": "PRINCESS MONONOKE",
-      "to": "lazarus",
-      "to_words": "LAZARUS",
-      "reason": "gemini QC reject: The video strictly follows all layout, audio, and visual requirements with clean presentation."
-    }
-  ],
-  "swapped_from": "princessmononoke",
-  "swapped_to": "lazarus",
-  "auto_retries": 0,
+  "words": "PRINCESS MONONOKE",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
-      "ok": false,
-      "error": "gemini QC reject: The video strictly follows all layout, audio, and visual requirements with clean presentation.",
+      "ok": true,
+      "error": null,
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
-      "music": "pr_7fva1p4g1xk.mp3",
-      "qc_status": "fail"
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
-      "music": "pr_pyre.mp3",
-      "qc_status": null
+      "music": "pr_montagemestragoslowed.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-  "source_attempts": [
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261122-2030-princessmononoke",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261122-2030-princessmononoke/render-20261122-2030-princessmononoke.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 2.962,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+  "music": "pr_montagemestragoslowed.mp3",
+  "music_credit": "Song: Phonk Time - MONTAGEM ESTRAGO (SLOWED)\nOfficial link: https://www.youtube.com/watch?v=_STNQDKHmOk",
+  "description_final": "Ashitaka stands his ground alone. Ashitaka steps between San and the villagers to stop the bloodshed while dealing with his own curse. From the official Princess Mononoke trailer. Edit by Skywalker.\nSource: official trailer (https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4). All rights to the film/series belong to their owners; short commentary edit.\n#princessmononoke #ashitaka #anime #shorts #edit\n\nMusic:\nSong: Phonk Time - MONTAGEM ESTRAGO (SLOWED)\nOfficial link: https://www.youtube.com/watch?v=_STNQDKHmOk",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261122-2030-princessmononoke/render-20261122-2030-princessmononoke-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 22.3,
+      "audio": true
+    },
+    "lufs": -14.3,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.0,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 46,
+      "masked_rows": [
+        [
+          0.2781,
+          0.3417
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [
+        "The video meets all quality standards.",
+        "The layout is correct with the white bar at the top and the footage uncropped.",
+        "The audio is clean and music-only.",
+        "The footage is clean with no watermarks or logos."
+      ],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 534,
+    "bar_h": 122,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1798,
+    "block_h": 1920,
+    "drop_t": 2.962,
+    "energy": true,
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
-      "error": "gemini QC reject: The video strictly follows all layout, audio, and visual requirements with clean presentation.",
-      "at": "2026-11-22 23:04 IST"
+      "id": 14,
+      "src_start": 30.197,
+      "dur": 1.5,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "at": "2026-11-22 23:27 IST"
+      "id": 22,
+      "src_start": 53.303,
+      "dur": 1.462,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "at": "2026-11-22 23:48 IST"
+      "id": 28,
+      "src_start": 77.744,
+      "dur": 1.636,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "at": "2026-11-23 00:09 IST"
+      "id": 20,
+      "src_start": 48.298,
+      "dur": 1.5,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 4,
+      "src_start": 5.756,
+      "dur": 1.983,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 10,
+      "src_start": 21.647,
+      "dur": 2.0,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 5,
+      "src_start": 10.677,
+      "dur": 1.462,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 12,
+      "src_start": 26.401,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 24,
+      "src_start": 57.808,
+      "dur": 2.05,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 26,
+      "src_start": 70.737,
+      "dur": 2.229,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 16,
+      "src_start": 41.625,
+      "dur": 1.5,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 31,
+      "src_start": 84.876,
+      "dur": 0.919,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
     }
-  ]
+  ],
+  "qc_status": "pass"
 }
