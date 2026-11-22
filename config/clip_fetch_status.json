@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-22T17:57:00Z",
-  "last_upload_at": "2026-11-22T17:35:59Z"
+  "last_run_at": "2026-11-22T17:57:08Z",
+  "last_upload_at": "2026-11-22T17:57:08Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -1477,6 +1477,26 @@
    "kbps": 1453,
    "by": "box",
    "at": "2026-11-22T17:35:59Z"
+  },
+  {
+   "asset": "violetevergarden_scene1_h264.mp4",
+   "id": "yt:_lmn16npMXw",
+   "title": "Violet Evergarden | Multi-Audio Clip: Meet Violet Evergarden | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "by": "box",
+   "at": "2026-11-22T17:00:08Z"
+  },
+  {
+   "asset": "cyberpunk2077_scene2_h264.mp4",
+   "id": "yt:Zq4zTcIM0yQ",
+   "title": "Drive Like Hell | Cyberpunk: Edgerunners | Clips | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "by": "box",
+   "at": "2026-11-22T17:02:14Z"
   }
  ],
  "github": {
