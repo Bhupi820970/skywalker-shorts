@@ -353,5 +353,7 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-cyberpunkedgerunners-06",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "publish_blocked": "repeat: same source clip posted <72h ago (20261120-1830-cyberpunkedgerunners)",
+  "publish_blocked_at": "2026-11-22 08:29 IST"
 }
