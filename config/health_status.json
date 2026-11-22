@@ -1,9 +1,8 @@
 {
-  "at": "2026-11-23 00:20 IST",
-  "slots_checked": 9,
+  "at": "2026-11-23 01:19 IST",
+  "slots_checked": 8,
   "ready": [],
   "short": [
-    "2026-11-22T22:30:00+05:30",
     "2026-11-23T06:30:00+05:30",
     "2026-11-23T09:00:00+05:30",
     "2026-11-23T11:30:00+05:30",
@@ -14,7 +13,6 @@
     "2026-11-23T22:30:00+05:30"
   ],
   "need_render": [
-    "20261122-2230-cyberpunkedgerunners",
     "20261123-0630-taarezameenpar",
     "20261123-0900-gangsofwasseypur",
     "20261123-1130-jujutsukaisencullinggame",
@@ -123,6 +121,7 @@
     "20261120-2030-cyberpunkedgerunners",
     "stock-weatheringwithyou-03",
     "stock-aotfinal-07",
+    "stock-weatheringwithyou-15",
     "20261116-1600-venom3",
     "20261116-0900-tronares",
     "stock-superman-01",
@@ -135,8 +134,8 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 6,
-  "stock_pending": 24,
+  "stock_ready": 7,
+  "stock_pending": 23,
   "stock_used": 34,
   "stock_target": 30,
   "stock_need_refill": false,

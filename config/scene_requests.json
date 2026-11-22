@@ -1,50 +1,10 @@
 {
- "generated_at": "2026-11-23 00:20 IST",
+ "generated_at": "2026-11-23 01:19 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 94,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "jjk0",
-   "slot": "2026-11-22T18:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261122-1830-jjk0",
-   "pillar": "romance",
-   "words": "JUJUTSU KAISEN 0",
-   "scene_types": [
-    "romantic",
-    "emotional",
-    "confession"
-   ],
-   "search_queries": [
-    "JUJUTSU KAISEN 0 romantic scene",
-    "JUJUTSU KAISEN 0 emotional scene",
-    "JUJUTSU KAISEN 0 official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll Store Australia",
-    "Prime Video India"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
-   "missing_assets": [
-    "jjk0_scene1_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Yuta only fights for her",
-   "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
-   "tags": [
-    "jjk0",
-    "yuta",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "hellsparadise",
    "slot": "2026-11-22T20:30:00+05:30",
@@ -1144,6 +1104,46 @@
    "market": "US/UK"
   },
   {
+   "slug": "jjk0",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-jjk0",
+   "pillar": "anime",
+   "words": "JUJUTSU KAISEN 0",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "JUJUTSU KAISEN 0 fight scene official clip",
+    "JUJUTSU KAISEN 0 best scene official clip",
+    "JUJUTSU KAISEN 0 official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Crunchyroll Store Australia",
+    "Prime Video India"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
+   "missing_assets": [
+    "jjk0_scene1_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Yuta only fights for her",
+   "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
+   "tags": [
+    "jjk0",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "yuta"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "jjkgojovstoji",
    "slot": "9999",
    "for": "backup_pool",
@@ -1260,6 +1260,46 @@
     "shorts",
     "trending",
     "kafka"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "lazarus",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-lazarus",
+   "pillar": "anime",
+   "words": "LAZARUS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "LAZARUS fight scene official clip",
+    "LAZARUS best scene official clip",
+    "LAZARUS official clip"
+   ],
+   "official_channels": [
+    "Adult Swim",
+    "Adult Swim Europe",
+    "MAPPA CHANNEL"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
+   "missing_assets": [],
+   "on_release": [
+    "lazarus_scene1_h264.mp4"
+   ],
+   "hook": "Axel has thirty days to run",
+   "title": "Axel has thirty days to run | Lazarus | #edit",
+   "tags": [
+    "lazarus",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "axel"
    ],
    "market": "US/UK"
   },
@@ -1789,6 +1829,45 @@
     "vinland",
     "anime",
     "ihavenoenemies"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "weatheringwithyou",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-weatheringwithyou",
+   "pillar": "anime",
+   "words": "WEATHERING WITH YOU",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "WEATHERING WITH YOU fight scene official clip",
+    "WEATHERING WITH YOU best scene official clip",
+    "WEATHERING WITH YOU official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+   "missing_assets": [],
+   "on_release": [
+    "weatheringwithyou_scene1_h264.mp4"
+   ],
+   "hook": "He chose her over the sky",
+   "title": "He chose her over the sky | Weathering With You | #edit",
+   "tags": [
+    "weatheringwithyou",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "hina",
+    "hodaka"
    ],
    "market": "US/UK"
   },
