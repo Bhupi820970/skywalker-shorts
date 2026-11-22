@@ -1,0 +1,251 @@
+{
+  "id": "20261122-1130-yourname",
+  "status": "retry_queued",
+  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+  "at": "2026-11-22 06:01 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44960116100",
+  "slot": "2026-11-22T11:30:00+05:30",
+  "title": "Okarun did not expect this from Momo #dandadan #okarun #anime",
+  "hook": "He did not expect that",
+  "description": "He did not expect that. A shy boy finds himself caught in an unexpected rhythm alongside the girl who keeps him on his toes. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #okarun #anime #shorts #edit",
+  "tags": [
+    "dandadan",
+    "okarun",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Okarun was never ready for this",
+    "title": "Okarun was never ready for this | Dandadan | #edit",
+    "description": "Okarun was never ready for this. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
+    "tags": [
+      "dandadan",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "okarun"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "emotional observation",
+  "title_candidates": [
+    {
+      "title": "Okarun did not expect this from Momo",
+      "click_score": 92.0
+    },
+    {
+      "title": "Why Okarun cannot stop watching her",
+      "click_score": 88.0
+    },
+    {
+      "title": "Momo finally broke his shell",
+      "click_score": 85.0
+    },
+    {
+      "title": "Watch the last two seconds",
+      "click_score": 82.0
+    },
+    {
+      "title": "The moment Okarun realized he was doomed",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 9.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.3,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.2,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 30.1,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.4,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 3.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 4.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.7,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-yourname",
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "DAN DA DAN",
+  "edit_format": "love",
+  "title_swaps": [
+    {
+      "from": "yourname",
+      "from_words": "YOUR NAME",
+      "to": "dandadan",
+      "to_words": "DAN DA DAN",
+      "reason": "download failed: release-only: 1 clip(s) not on the sources release yet (box fetches them)"
+    }
+  ],
+  "swapped_from": "yourname",
+  "swapped_to": "dandadan",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: release-only: 1 clip(s) not on the sources release yet (box fetches them)",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+      "music": "pr_ytsearch1henrymancinimoonriverinstrument.mp3",
+      "qc_status": null
+    }
+  ],
+  "last_error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"1.54s burned-in subtitle text\", \"2.04s burned-in subtitle text\", \"2.54s burned-in subtitle text\", \"3.54s burned-in subtitle text\", \"4.04s burned-in subtitle text\", \"4.54s burned-in subtitle text\", \"5.54s burned-in subtitle text\", \"6.04s burned-in subtitle ",
+      "at": "2026-11-22 05:02 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "error": "gemini QC reject: The video adheres to all formatting requirements, including the white bar hook, uncropped centered footage, and music-only audio.; The neon story captions are well-placed and do not obscure faces or lyrics.; The footage is clean and free of any studio watermarks or logos.; The paci",
+      "at": "2026-11-22 05:25 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene3_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
+      "at": "2026-11-22 05:43 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "at": "2026-11-22 06:01 IST"
+    }
+  ]
+}

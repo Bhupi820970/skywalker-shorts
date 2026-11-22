@@ -1,0 +1,8 @@
+{
+  "id": "backup-yourname@20261122-1130",
+  "status": "failed",
+  "detail": "render job ended with no result JSON (timed out or cancelled mid-render)",
+  "at": "2026-11-22T00:31:31Z",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44960116100",
+  "last_error": "no result JSON; job cancelled or timed out"
+}
