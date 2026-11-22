@@ -1047,7 +1047,9 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=4Gti6YqvMzE",
       "scene_assets": [
-        "bleachtybw_scene1_h264.mp4"
+        "bleachtybw_scene1_h264.mp4",
+        "bleachtybw_scene2_h264.mp4",
+        "bleachtybw_scene3_h264.mp4"
       ],
       "fallback_asset": "bleachtybw_trailer_h264.mp4",
       "content_kind": "best scene"
