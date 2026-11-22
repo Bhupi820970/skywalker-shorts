@@ -311,5 +311,9 @@
       "reason": "gemini score 7.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "stock_used": true,
+  "assigned_slot": "2026-11-22T13:30:00+05:30",
+  "assigned_result": "20261122-1330-suzume",
+  "used_at": "2026-11-22 12:47 IST"
 }
