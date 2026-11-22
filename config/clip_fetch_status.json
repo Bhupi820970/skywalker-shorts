@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-22T17:17:24Z",
-  "last_upload_at": "2026-11-22T17:08:54Z"
+  "last_run_at": "2026-11-22T17:35:59Z",
+  "last_upload_at": "2026-11-22T17:35:59Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -21,6 +21,7 @@
   "yt:6LWoO3UIZSg",
   "yt:70NhEBzLKU8",
   "yt:7LzDcr20SHc",
+  "yt:7RINhZ-959Q",
   "yt:8sOJxGx7aio",
   "yt:9QvzrledPxg",
   "yt:9vzlmyNNt70",
@@ -1465,6 +1466,17 @@
    "kbps": 1505,
    "by": "box",
    "at": "2026-11-22T17:08:54Z"
+  },
+  {
+   "asset": "arcane2_scene2_h264.mp4",
+   "id": "yt:7RINhZ-959Q",
+   "title": "Vi and Caitlyn Hunt Jinx | Arcane: Season 2 | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1453,
+   "by": "box",
+   "at": "2026-11-22T17:35:59Z"
   }
  ],
  "github": {
