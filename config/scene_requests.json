@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-22 22:45 IST",
+ "generated_at": "2026-11-22 23:58 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 91,
+ "release_scene_clips": 93,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -453,10 +453,10 @@
    ],
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=MeIk9ap1u_E",
-   "missing_assets": [
+   "missing_assets": [],
+   "on_release": [
     "oppenheimer_scene1_h264.mp4"
    ],
-   "on_release": [],
    "hook": "Why he regrets his creation",
    "title": "Why he regrets his creation 💀 | The Trinity Test | #edit",
    "tags": [
@@ -624,47 +624,6 @@
     "trending",
     "maomao",
     "jinshi"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "arcane2",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-arcane2",
-   "pillar": "anime",
-   "words": "ARCANE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ARCANE fight scene official clip",
-    "ARCANE best scene official clip",
-    "ARCANE official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Still Watching Netflix"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-   "missing_assets": [
-    "arcane2_scene2_h264.mp4"
-   ],
-   "on_release": [
-    "arcane2_scene1_h264.mp4"
-   ],
-   "hook": "Jinx never wanted this war",
-   "title": "Jinx never wanted this war | Arcane | #edit",
-   "tags": [
-    "arcane2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "jinx"
    ],
    "market": "US/UK"
   },

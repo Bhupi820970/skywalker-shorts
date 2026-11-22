@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-22 22:45 IST",
+  "at": "2026-11-22 23:58 IST",
   "slots_checked": 9,
   "ready": [],
   "short": [
@@ -87,6 +87,7 @@
     "20261114-1600-furiosa",
     "stock-dandadan2-02",
     "stock-jjk0-01",
+    "20261122-2230-weatheringwithyou",
     "stock-suzume-03",
     "stock-runningman-01",
     "stock-wickedforgood-02",
@@ -134,11 +135,11 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 7,
-  "stock_pending": 22,
-  "stock_used": 33,
+  "stock_ready": 6,
+  "stock_pending": 24,
+  "stock_used": 34,
   "stock_target": 30,
-  "stock_need_refill": true,
+  "stock_need_refill": false,
   "stock_assigned": [],
   "ok": false
 }
