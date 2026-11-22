@@ -1,51 +1,10 @@
 {
- "generated_at": "2026-11-22 16:38 IST",
+ "generated_at": "2026-11-22 17:31 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 60,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "kaiju8s2",
-   "slot": "2026-11-22T11:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261122-1130-kaiju8s2",
-   "pillar": "anime",
-   "words": "KAIJU NO. 8",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "KAIJU NO. 8 fight scene official clip",
-    "KAIJU NO. 8 best scene official clip",
-    "KAIJU NO. 8 official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll India",
-    "TOHO animation チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=gd2pP8LgWVo",
-   "missing_assets": [
-    "kaiju8s2_scene1_h264.mp4",
-    "kaiju8s2_scene3_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Kafka cannot control it anymore",
-   "title": "Kafka cannot control it anymore | Kaiju No. 8 | #edit",
-   "tags": [
-    "kaiju8s2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "kafka"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "windbreaker",
    "slot": "2026-11-22T13:30:00+05:30",
@@ -201,6 +160,88 @@
     "shorts",
     "trending",
     "gabimaru"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "princessmononoke",
+   "slot": "2026-11-22T20:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261122-2030-princessmononoke",
+   "pillar": "anime",
+   "words": "PRINCESS MONONOKE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "PRINCESS MONONOKE fight scene official clip",
+    "PRINCESS MONONOKE best scene official clip",
+    "PRINCESS MONONOKE official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll Store Australia",
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4",
+   "missing_assets": [],
+   "on_release": [
+    "princessmononoke_scene1_h264.mp4"
+   ],
+   "hook": "San would die for the forest",
+   "title": "San would die for the forest | PRINCESS MONONOKE | #edit",
+   "tags": [
+    "princessmononoke",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "ashitaka",
+    "san",
+    "part3"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "cyberpunkedgerunners",
+   "slot": "2026-11-22T22:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261122-2230-cyberpunkedgerunners",
+   "pillar": "anime",
+   "words": "EDGERUNNERS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "EDGERUNNERS fight scene official clip",
+    "EDGERUNNERS best scene official clip",
+    "EDGERUNNERS official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+   "missing_assets": [],
+   "on_release": [
+    "cyberpunkedgerunners_scene1_h264.mp4"
+   ],
+   "hook": "This is the part they left out",
+   "title": "This is the part they left out | EDGERUNNERS | #edit",
+   "tags": [
+    "cyberpunkedgerunners",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david",
+    "part2"
    ],
    "market": "US/UK"
   },
@@ -863,45 +904,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "cyberpunkedgerunners",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-cyberpunkedgerunners",
-   "pillar": "anime",
-   "words": "EDGERUNNERS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "EDGERUNNERS fight scene official clip",
-    "EDGERUNNERS best scene official clip",
-    "EDGERUNNERS official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
-   "missing_assets": [],
-   "on_release": [
-    "cyberpunkedgerunners_scene1_h264.mp4"
-   ],
-   "hook": "David wanted to be a legend",
-   "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
-   "tags": [
-    "cyberpunkedgerunners",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "david"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "dandadan",
    "slot": "9999",
    "for": "backup_pool",
@@ -1420,6 +1422,48 @@
    "market": "US/UK"
   },
   {
+   "slug": "kaiju8s2",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-kaiju8s2",
+   "pillar": "anime",
+   "words": "KAIJU NO. 8",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "KAIJU NO. 8 fight scene official clip",
+    "KAIJU NO. 8 best scene official clip",
+    "KAIJU NO. 8 official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Crunchyroll India",
+    "TOHO animation チャンネル"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=gd2pP8LgWVo",
+   "missing_assets": [
+    "kaiju8s2_scene1_h264.mp4",
+    "kaiju8s2_scene2_h264.mp4",
+    "kaiju8s2_scene3_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Kafka cannot control it anymore",
+   "title": "Kafka cannot control it anymore | Kaiju No. 8 | #edit",
+   "tags": [
+    "kaiju8s2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "kafka"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "lazarus",
    "slot": "9999",
    "for": "backup_pool",
@@ -1703,47 +1747,6 @@
     "shorts",
     "trending",
     "saitama"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "princessmononoke",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-princessmononoke",
-   "pillar": "anime",
-   "words": "PRINCESS MONONOKE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "PRINCESS MONONOKE fight scene official clip",
-    "PRINCESS MONONOKE best scene official clip",
-    "PRINCESS MONONOKE official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll Store Australia",
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
-   "missing_assets": [],
-   "on_release": [
-    "princessmononoke_scene1_h264.mp4"
-   ],
-   "hook": "San would die for the forest",
-   "title": "San would die for the forest | Princess Mononoke | #edit",
-   "tags": [
-    "princessmononoke",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "ashitaka",
-    "san"
    ],
    "market": "US/UK"
   },
