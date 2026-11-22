@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23 05:17 IST",
+ "generated_at": "2026-11-23 05:29 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 94,
@@ -68,9 +68,7 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
    "missing_assets": [],
-   "on_release": [
-    "jujutsukaisencullinggame_scene2_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Yuji has nothing left to lose",
    "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
    "tags": [
@@ -1218,6 +1216,46 @@
    "market": "US/UK"
   },
   {
+   "slug": "lazarus",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-lazarus",
+   "pillar": "anime",
+   "words": "LAZARUS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "LAZARUS fight scene official clip",
+    "LAZARUS best scene official clip",
+    "LAZARUS official clip"
+   ],
+   "official_channels": [
+    "Adult Swim",
+    "Adult Swim Europe",
+    "MAPPA CHANNEL"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
+   "missing_assets": [],
+   "on_release": [
+    "lazarus_scene1_h264.mp4"
+   ],
+   "hook": "Axel has thirty days to run",
+   "title": "Axel has thirty days to run | Lazarus | #edit",
+   "tags": [
+    "lazarus",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "axel"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "mashle",
    "slot": "9999",
    "for": "backup_pool",
@@ -1709,6 +1747,43 @@
     "shorts",
     "trending",
     "anya"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "undeadunluck",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-undeadunluck",
+   "pillar": "anime",
+   "words": "UNDEAD UNLUCK",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "UNDEAD UNLUCK fight scene official clip",
+    "UNDEAD UNLUCK best scene official clip",
+    "UNDEAD UNLUCK official clip"
+   ],
+   "official_channels": [
+    "Anime! on TMS Official Channel",
+    "vizmedia"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "One touch changed his life",
+   "title": "One touch changed his life | Undead Unluck | #edit",
+   "tags": [
+    "undeadunluck",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "andy"
    ],
    "market": "US/UK"
   },
