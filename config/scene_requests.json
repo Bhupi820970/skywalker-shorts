@@ -1,88 +1,10 @@
 {
- "generated_at": "2026-11-23 01:19 IST",
+ "generated_at": "2026-11-23 02:30 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 94,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "hellsparadise",
-   "slot": "2026-11-22T20:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261122-2030-hellsparadise",
-   "pillar": "anime",
-   "words": "HELL'S PARADISE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "HELL'S PARADISE fight scene official clip",
-    "HELL'S PARADISE best scene official clip",
-    "HELL'S PARADISE official clip"
-   ],
-   "official_channels": [
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=JKvNlvV6ZW4",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Gabimaru fights to go home",
-   "title": "Gabimaru fights to go home | Hell's Paradise | #edit",
-   "tags": [
-    "hellsparadise",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "gabimaru"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "princessmononoke",
-   "slot": "2026-11-22T20:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261122-2030-princessmononoke",
-   "pillar": "anime",
-   "words": "PRINCESS MONONOKE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "PRINCESS MONONOKE fight scene official clip",
-    "PRINCESS MONONOKE best scene official clip",
-    "PRINCESS MONONOKE official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll Store Australia",
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene2_h264.mp4",
-   "missing_assets": [],
-   "on_release": [
-    "princessmononoke_scene1_h264.mp4"
-   ],
-   "hook": "San would die for the forest",
-   "title": "San would die for the forest | PRINCESS MONONOKE | #edit",
-   "tags": [
-    "princessmononoke",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "ashitaka",
-    "san",
-    "part3"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "cyberpunkedgerunners",
    "slot": "2026-11-22T22:30:00+05:30",
@@ -462,6 +384,47 @@
     "phonk",
     "aviation",
     "action"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "princessmononoke",
+   "slot": "2026-11-24T20:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261124-2030-princessmononoke",
+   "pillar": "anime",
+   "words": "PRINCESS MONONOKE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "PRINCESS MONONOKE fight scene official clip",
+    "PRINCESS MONONOKE best scene official clip",
+    "PRINCESS MONONOKE official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll Store Australia",
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
+   "missing_assets": [],
+   "on_release": [
+    "princessmononoke_scene1_h264.mp4"
+   ],
+   "hook": "San would die for the forest",
+   "title": "San would die for the forest | Princess Mononoke | #edit",
+   "tags": [
+    "princessmononoke",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "ashitaka",
+    "san"
    ],
    "market": "US/UK"
   },
@@ -1104,6 +1067,42 @@
    "market": "US/UK"
   },
   {
+   "slug": "hellsparadise",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-hellsparadise",
+   "pillar": "anime",
+   "words": "HELL'S PARADISE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "HELL'S PARADISE fight scene official clip",
+    "HELL'S PARADISE best scene official clip",
+    "HELL'S PARADISE official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=JKvNlvV6ZW4",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Gabimaru fights to go home",
+   "title": "Gabimaru fights to go home | Hell's Paradise | #edit",
+   "tags": [
+    "hellsparadise",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "gabimaru"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "jjk0",
    "slot": "9999",
    "for": "backup_pool",
@@ -1260,46 +1259,6 @@
     "shorts",
     "trending",
     "kafka"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "lazarus",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-lazarus",
-   "pillar": "anime",
-   "words": "LAZARUS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "LAZARUS fight scene official clip",
-    "LAZARUS best scene official clip",
-    "LAZARUS official clip"
-   ],
-   "official_channels": [
-    "Adult Swim",
-    "Adult Swim Europe",
-    "MAPPA CHANNEL"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
-   "missing_assets": [],
-   "on_release": [
-    "lazarus_scene1_h264.mp4"
-   ],
-   "hook": "Axel has thirty days to run",
-   "title": "Axel has thirty days to run | Lazarus | #edit",
-   "tags": [
-    "lazarus",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "axel"
    ],
    "market": "US/UK"
   },
