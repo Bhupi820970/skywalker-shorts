@@ -1,50 +1,10 @@
 {
- "generated_at": "2026-11-22 14:31 IST",
+ "generated_at": "2026-11-22 16:38 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 60,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "gachiakuta",
-   "slot": "2026-11-22T09:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261122-0900-gachiakuta",
-   "pillar": "anime",
-   "words": "GACHIAKUTA",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "GACHIAKUTA fight scene official clip",
-    "GACHIAKUTA best scene official clip",
-    "GACHIAKUTA official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll India"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=3J0KJCJdWU4",
-   "missing_assets": [
-    "gachiakuta_scene1_h264.mp4",
-    "gachiakuta_scene3_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Rudo turned trash into weapons",
-   "title": "Rudo turned trash into weapons | Gachiakuta | #edit",
-   "tags": [
-    "gachiakuta",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "rudo"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "kaiju8s2",
    "slot": "2026-11-22T11:30:00+05:30",
@@ -1299,6 +1259,47 @@
     "shorts",
     "trending",
     "frieren"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "gachiakuta",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-gachiakuta",
+   "pillar": "anime",
+   "words": "GACHIAKUTA",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "GACHIAKUTA fight scene official clip",
+    "GACHIAKUTA best scene official clip",
+    "GACHIAKUTA official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Crunchyroll India"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=3J0KJCJdWU4",
+   "missing_assets": [
+    "gachiakuta_scene1_h264.mp4",
+    "gachiakuta_scene2_h264.mp4",
+    "gachiakuta_scene3_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Rudo turned trash into weapons",
+   "title": "Rudo turned trash into weapons | Gachiakuta | #edit",
+   "tags": [
+    "gachiakuta",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "rudo"
    ],
    "market": "US/UK"
   },
