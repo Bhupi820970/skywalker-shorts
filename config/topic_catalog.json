@@ -1467,7 +1467,8 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
       "scene_assets": [
-        "undeadunluck_scene1_h264.mp4"
+        "undeadunluck_scene1_h264.mp4",
+        "undeadunluck_scene2_h264.mp4"
       ],
       "fallback_asset": "undeadunluck_trailer_h264.mp4",
       "content_kind": "best scene"
