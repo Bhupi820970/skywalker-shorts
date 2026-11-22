@@ -2357,6 +2357,31 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "leomovie",
+      "pillar": "south",
+      "words": "LEO",
+      "hook": "Why Leo hid his true identity",
+      "title": "Why Leo hid his true identity | Leo Vijay cafe fight | #edit",
+      "description": "Why Leo hid his true identity. From official Leo clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #leo #thalapathyvijay #lokeshkanagaraj",
+      "tags": [
+        "leo",
+        "thalapathyvijay",
+        "lokeshkanagaraj",
+        "southcinema",
+        "leoedit",
+        "kollywood"
+      ],
+      "market": "IN",
+      "source_url": "https://www.youtube.com/watch?v=TtX8DNALc3I",
+      "scene_assets": [
+        "leomovie_scene1_h264.mp4",
+        "leomovie_scene2_h264.mp4",
+        "leomovie_scene3_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
