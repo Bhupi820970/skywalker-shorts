@@ -1,0 +1,30 @@
+{
+ "note": "Library tracks whose mp3 was lost with the suspended chatgpt820970 account and could not be re-downloaded, or that the Content ID block-list removed. Kept for history; not used.",
+ "tracks": [
+  {
+   "file": "sw_saiyaara.mp3",
+   "title": "Saiyaara (Slowed + Reverb)",
+   "artist": "Tanishk Bagchi, Faheem Abdullah, Arslan Nizami",
+   "genre": "bollywood slowed reverb",
+   "mood": "romantic",
+   "pillars": [
+    "romance"
+   ],
+   "bpm": 83.4,
+   "drop_t": 231.55,
+   "duration_s": 371.4,
+   "energy": 0.515,
+   "tags": [
+    "bollywood",
+    "edit",
+    "reverb",
+    "romance",
+    "slowed",
+    "trending"
+   ],
+   "credit": "Song: Tanishk Bagchi, Faheem Abdullah, Arslan Nizami - Saiyaara (Slowed + Reverb)",
+   "safety": "claim_risk",
+   "lost_reason": "content-id block-list"
+  }
+ ]
+}
