@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-22 06:59 IST",
+ "generated_at": "2026-11-22 08:31 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 52,
+ "release_scene_clips": 53,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -971,7 +971,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "boyandheron_scene1_h264.mp4"
+   ],
    "hook": "The heron knew his secret",
    "title": "The heron knew his secret | The Boy and the Heron | #edit",
    "tags": [
@@ -1973,10 +1975,11 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
    "missing_assets": [
-    "spiritedaway_scene1_h264.mp4",
     "spiritedaway_scene2_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "spiritedaway_scene1_h264.mp4"
+   ],
    "hook": "Chihiro had to forget her name",
    "title": "Chihiro had to forget her name | Spirited Away | #edit",
    "tags": [
@@ -2185,45 +2188,6 @@
     "vinland",
     "anime",
     "ihavenoenemies"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "weatheringwithyou",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-weatheringwithyou",
-   "pillar": "anime",
-   "words": "WEATHERING WITH YOU",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "WEATHERING WITH YOU fight scene official clip",
-    "WEATHERING WITH YOU best scene official clip",
-    "WEATHERING WITH YOU official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
-   "missing_assets": [],
-   "on_release": [
-    "weatheringwithyou_scene1_h264.mp4"
-   ],
-   "hook": "He chose her over the sky",
-   "title": "He chose her over the sky | Weathering With You | #edit",
-   "tags": [
-    "weatheringwithyou",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "hina",
-    "hodaka"
    ],
    "market": "US/UK"
   },
