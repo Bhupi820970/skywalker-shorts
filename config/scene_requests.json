@@ -1,94 +1,10 @@
 {
- "generated_at": "2026-11-23 04:08 IST",
+ "generated_at": "2026-11-23 05:17 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 94,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "cyberpunkedgerunners",
-   "slot": "2026-11-22T22:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261122-2230-cyberpunkedgerunners",
-   "pillar": "anime",
-   "words": "EDGERUNNERS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "EDGERUNNERS fight scene official clip",
-    "EDGERUNNERS best scene official clip",
-    "EDGERUNNERS official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
-   "missing_assets": [],
-   "on_release": [
-    "cyberpunkedgerunners_scene1_h264.mp4"
-   ],
-   "hook": "This is the part they left out",
-   "title": "This is the part they left out | EDGERUNNERS | #edit",
-   "tags": [
-    "cyberpunkedgerunners",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "david",
-    "part2"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "spyxfamilycodewhite",
-   "slot": "2026-11-22T22:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261122-2230-spyxfamilycodewhite",
-   "pillar": "anime",
-   "words": "SPY X FAMILY",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SPY X FAMILY fight scene official clip",
-    "SPY X FAMILY best scene official clip",
-    "SPY X FAMILY official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "Sony Pictures Entertainment",
-    "Sony Pictures Releasing Australia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=TLpqTS1iKSM",
-   "missing_assets": [
-    "spyxfamilycodewhite_scene2_h264.mp4",
-    "spyxfamilycodewhite_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "spyxfamilycodewhite_scene1_h264.mp4"
-   ],
-   "hook": "Loid almost blew his cover",
-   "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
-   "tags": [
-    "spyxfamilycodewhite",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "anya"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "gangsofwasseypur",
    "slot": "2026-11-23T09:00:00+05:30",
@@ -623,6 +539,45 @@
     "shorts",
     "trending",
     "mahito"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "cyberpunkedgerunners",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-cyberpunkedgerunners",
+   "pillar": "anime",
+   "words": "EDGERUNNERS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "EDGERUNNERS fight scene official clip",
+    "EDGERUNNERS best scene official clip",
+    "EDGERUNNERS official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+   "missing_assets": [],
+   "on_release": [
+    "cyberpunkedgerunners_scene1_h264.mp4"
+   ],
+   "hook": "David wanted to be a legend",
+   "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+   "tags": [
+    "cyberpunkedgerunners",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david"
    ],
    "market": "US/UK"
   },
@@ -1710,6 +1665,50 @@
     "trending",
     "anya",
     "loid"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "spyxfamilycodewhite",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-spyxfamilycodewhite",
+   "pillar": "anime",
+   "words": "SPY X FAMILY",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "SPY X FAMILY fight scene official clip",
+    "SPY X FAMILY best scene official clip",
+    "SPY X FAMILY official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "Sony Pictures Entertainment",
+    "Sony Pictures Releasing Australia"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=TLpqTS1iKSM",
+   "missing_assets": [
+    "spyxfamilycodewhite_scene2_h264.mp4",
+    "spyxfamilycodewhite_scene3_h264.mp4"
+   ],
+   "on_release": [
+    "spyxfamilycodewhite_scene1_h264.mp4"
+   ],
+   "hook": "Loid almost blew his cover",
+   "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
+   "tags": [
+    "spyxfamilycodewhite",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "anya"
    ],
    "market": "US/UK"
   },
