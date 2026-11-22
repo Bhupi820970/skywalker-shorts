@@ -1,51 +1,10 @@
 {
- "generated_at": "2026-11-22 12:04 IST",
+ "generated_at": "2026-11-22 14:24 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 60,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "rezero3",
-   "slot": "2026-11-22T06:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261122-0630-rezero3",
-   "pillar": "anime",
-   "words": "RE:ZERO",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "RE:ZERO fight scene official clip",
-    "RE:ZERO best scene official clip",
-    "RE:ZERO official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "KADOKAWAanime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=TG-HGj5V5TM",
-   "missing_assets": [
-    "rezero3_scene1_h264.mp4",
-    "rezero3_scene2_h264.mp4",
-    "rezero3_scene3_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Subaru dies so they can live",
-   "title": "Subaru dies so they can live | Re:Zero | #edit",
-   "tags": [
-    "rezero3",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "subaru"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "gachiakuta",
    "slot": "2026-11-22T09:00:00+05:30",
@@ -1784,6 +1743,47 @@
     "trending",
     "ashitaka",
     "san"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "rezero3",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-rezero3",
+   "pillar": "anime",
+   "words": "RE:ZERO",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "RE:ZERO fight scene official clip",
+    "RE:ZERO best scene official clip",
+    "RE:ZERO official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "KADOKAWAanime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=TG-HGj5V5TM",
+   "missing_assets": [
+    "rezero3_scene1_h264.mp4",
+    "rezero3_scene2_h264.mp4",
+    "rezero3_scene3_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Subaru dies so they can live",
+   "title": "Subaru dies so they can live | Re:Zero | #edit",
+   "tags": [
+    "rezero3",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "subaru"
    ],
    "market": "US/UK"
   },
