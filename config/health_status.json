@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-22 08:31 IST",
-  "slots_checked": 8,
+  "at": "2026-11-22 09:02 IST",
+  "slots_checked": 9,
   "ready": [],
   "short": [
     "2026-11-22T09:00:00+05:30",
@@ -10,10 +10,12 @@
     "2026-11-22T18:30:00+05:30",
     "2026-11-22T20:30:00+05:30",
     "2026-11-22T22:30:00+05:30",
-    "2026-11-23T06:30:00+05:30"
+    "2026-11-23T06:30:00+05:30",
+    "2026-11-23T09:00:00+05:30"
   ],
   "need_render": [
-    "20261123-0630-taarezameenpar"
+    "20261123-0630-taarezameenpar",
+    "20261123-0900-gangsofwasseypur"
   ],
   "backup_pool_size": 52,
   "backup_pool_preuploaded": 52,
@@ -98,6 +100,7 @@
     "stock-cyberpunkedgerunners-06",
     "stock-avatarfireandash-01",
     "stock-zootopia2-01",
+    "20261122-0900-dragonballdaima",
     "stock-kaiju8-01",
     "stock-weatheringwithyou-01",
     "20261122-0900-cyberpunkedgerunners",
@@ -116,9 +119,9 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 8,
-  "stock_pending": 20,
-  "stock_used": 28,
+  "stock_ready": 7,
+  "stock_pending": 22,
+  "stock_used": 29,
   "stock_target": 30,
   "stock_need_refill": true,
   "stock_assigned": [],
