@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-22 11:28 IST",
+ "generated_at": "2026-11-22 12:04 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 59,
+ "release_scene_clips": 60,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -667,6 +667,44 @@
    "market": "US/UK"
   },
   {
+   "slug": "suzume",
+   "slot": "2026-11-24T11:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261124-1130-suzume",
+   "pillar": "romance",
+   "words": "SUZUME",
+   "scene_types": [
+    "romantic",
+    "emotional",
+    "confession"
+   ],
+   "search_queries": [
+    "SUZUME romantic scene",
+    "SUZUME emotional scene",
+    "SUZUME official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll India",
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "She keeps closing doors alone",
+   "title": "She keeps closing doors alone | Suzume | #edit",
+   "tags": [
+    "suzume",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "suzume"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "aotfinal",
    "slot": "9999",
    "for": "backup_pool",
@@ -787,48 +825,6 @@
     "shorts",
     "trending",
     "jinx"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "bluegiant",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-bluegiant",
-   "pillar": "anime",
-   "words": "BLUE GIANT",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "BLUE GIANT fight scene official clip",
-    "BLUE GIANT best scene official clip",
-    "BLUE GIANT official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films",
-    "Netflix Thailand",
-    "TOHO animation チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=KaB7tTJ2T5o",
-   "missing_assets": [
-    "bluegiant_scene2_h264.mp4"
-   ],
-   "on_release": [
-    "bluegiant_scene1_h264.mp4"
-   ],
-   "hook": "His saxophone hits like thunder",
-   "title": "His saxophone hits like thunder | Blue Giant | #edit",
-   "tags": [
-    "bluegiant",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "dai"
    ],
    "market": "US/UK"
   },
@@ -1951,44 +1947,6 @@
     "trending",
     "anya",
     "loid"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "suzume",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-suzume",
-   "pillar": "anime",
-   "words": "SUZUME",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SUZUME fight scene official clip",
-    "SUZUME best scene official clip",
-    "SUZUME official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll India",
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "She keeps closing doors alone",
-   "title": "She keeps closing doors alone | Suzume | #edit",
-   "tags": [
-    "suzume",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "suzume"
    ],
    "market": "US/UK"
   },

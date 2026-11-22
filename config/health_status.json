@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-22 11:28 IST",
-  "slots_checked": 8,
+  "at": "2026-11-22 12:04 IST",
+  "slots_checked": 9,
   "ready": [
     {
       "slot": "2026-11-22T11:30:00+05:30",
@@ -15,11 +15,13 @@
     "2026-11-22T20:30:00+05:30",
     "2026-11-22T22:30:00+05:30",
     "2026-11-23T06:30:00+05:30",
-    "2026-11-23T09:00:00+05:30"
+    "2026-11-23T09:00:00+05:30",
+    "2026-11-23T11:30:00+05:30"
   ],
   "need_render": [
     "20261123-0630-taarezameenpar",
-    "20261123-0900-gangsofwasseypur"
+    "20261123-0900-gangsofwasseypur",
+    "20261123-1130-jujutsukaisencullinggame"
   ],
   "backup_pool_size": 52,
   "backup_pool_preuploaded": 52,
@@ -40,6 +42,7 @@
     "20261114-1230-avatarfireandash",
     "stock-sololeveling-01",
     "20261119-1130-boyandheron",
+    "stock-weatheringwithyou-13",
     "stock-superman-02",
     "stock-kalki2898ad-02",
     "stock-aotfinal-04",
@@ -127,11 +130,11 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 7,
+  "stock_ready": 8,
   "stock_pending": 22,
   "stock_used": 31,
   "stock_target": 30,
-  "stock_need_refill": true,
+  "stock_need_refill": false,
   "stock_assigned": [],
   "ok": false
 }
