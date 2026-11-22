@@ -1,51 +1,10 @@
 {
- "generated_at": "2026-11-22 20:23 IST",
+ "generated_at": "2026-11-22 22:45 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 65,
+ "release_scene_clips": 91,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "mushokutensei2",
-   "slot": "2026-11-22T16:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261122-1600-mushokutensei2",
-   "pillar": "anime",
-   "words": "MUSHOKU TENSEI",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "MUSHOKU TENSEI fight scene official clip",
-    "MUSHOKU TENSEI best scene official clip",
-    "MUSHOKU TENSEI official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Muse Asia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=Hp15zFNq1qY",
-   "missing_assets": [
-    "mushokutensei2_scene1_h264.mp4",
-    "mushokutensei2_scene2_h264.mp4",
-    "mushokutensei2_scene3_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Rudeus finally grew up",
-   "title": "Rudeus finally grew up | Mushoku Tensei | #edit",
-   "tags": [
-    "mushokutensei2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "rudeus"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "jjk0",
    "slot": "2026-11-22T18:30:00+05:30",
@@ -229,11 +188,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=TLpqTS1iKSM",
    "missing_assets": [
-    "spyxfamilycodewhite_scene1_h264.mp4",
     "spyxfamilycodewhite_scene2_h264.mp4",
     "spyxfamilycodewhite_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "spyxfamilycodewhite_scene1_h264.mp4"
+   ],
    "hook": "Loid almost blew his cover",
    "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
    "tags": [
@@ -246,42 +206,6 @@
     "anya"
    ],
    "market": "US/UK"
-  },
-  {
-   "slug": "taarezameenpar",
-   "slot": "2026-11-23T06:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261123-0630-taarezameenpar",
-   "pillar": "romance",
-   "words": "TAARE ZAMEEN PAR",
-   "scene_types": [
-    "romantic",
-    "emotional",
-    "confession"
-   ],
-   "search_queries": [
-    "TAARE ZAMEEN PAR romantic scene",
-    "TAARE ZAMEEN PAR emotional scene",
-    "TAARE ZAMEEN PAR official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=1oiRkOT4Z_4",
-   "missing_assets": [],
-   "on_release": [
-    "taarezameenpar_scene1_h264.mp4"
-   ],
-   "hook": "Why he felt so alone",
-   "title": "Why he felt so alone 💀 | The painting scene | #edit",
-   "tags": [
-    "taarezameenpar",
-    "ishaan",
-    "bollywood",
-    "edit",
-    "phonk",
-    "emotional",
-    "aura"
-   ],
-   "market": "IN"
   },
   {
    "slug": "gangsofwasseypur",
@@ -543,45 +467,6 @@
     "edit",
     "phonk",
     "aura"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "violetevergarden",
-   "slot": "2026-11-24T06:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261124-0630-violetevergarden",
-   "pillar": "romance",
-   "words": "VIOLET EVERGARDEN",
-   "scene_types": [
-    "romantic",
-    "emotional",
-    "confession"
-   ],
-   "search_queries": [
-    "VIOLET EVERGARDEN romantic scene",
-    "VIOLET EVERGARDEN emotional scene",
-    "VIOLET EVERGARDEN official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=_lmn16npMXw",
-   "missing_assets": [
-    "violetevergarden_scene1_h264.mp4"
-   ],
-   "on_release": [
-    "violetevergarden_scene2_h264.mp4",
-    "violetevergarden_scene3_h264.mp4"
-   ],
-   "hook": "Why Violet had to learn human emotions",
-   "title": "Why Violet had to learn human emotions | Violet's final letter | #edit",
-   "tags": [
-    "violetevergarden",
-    "violet",
-    "animeedit",
-    "phonk",
-    "emotional",
-    "anime",
-    "kyotoanimation"
    ],
    "market": "US/UK"
   },
@@ -1459,49 +1344,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "lazarus",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-lazarus",
-   "pillar": "anime",
-   "words": "LAZARUS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "LAZARUS fight scene official clip",
-    "LAZARUS best scene official clip",
-    "LAZARUS official clip"
-   ],
-   "official_channels": [
-    "Adult Swim",
-    "Adult Swim Europe",
-    "MAPPA CHANNEL"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
-   "missing_assets": [
-    "lazarus_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "lazarus_scene1_h264.mp4",
-    "lazarus_scene2_h264.mp4"
-   ],
-   "hook": "Axel has thirty days to run",
-   "title": "Axel has thirty days to run | Lazarus | #edit",
-   "tags": [
-    "lazarus",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "axel"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "mashle",
    "slot": "9999",
    "for": "backup_pool",
@@ -1626,43 +1468,43 @@
    "market": "US/UK"
   },
   {
-   "slug": "mononoke",
+   "slug": "mushokutensei2",
    "slot": "9999",
    "for": "backup_pool",
-   "item_id": "backup-mononoke",
+   "item_id": "backup-mushokutensei2",
    "pillar": "anime",
-   "words": "MONONOKE",
+   "words": "MUSHOKU TENSEI",
    "scene_types": [
     "fight",
     "emotional",
     "aura"
    ],
    "search_queries": [
-    "MONONOKE fight scene official clip",
-    "MONONOKE best scene official clip",
-    "MONONOKE official clip"
+    "MUSHOKU TENSEI fight scene official clip",
+    "MUSHOKU TENSEI best scene official clip",
+    "MUSHOKU TENSEI official clip"
    ],
    "official_channels": [
-    "Netflix Anime",
-    "Netflix Philippines"
+    "Crunchyroll",
+    "Muse Asia"
    ],
-   "source_url": "https://www.youtube.com/watch?v=xpJWvpumgxs",
+   "source_url": "https://www.youtube.com/watch?v=Hp15zFNq1qY",
    "missing_assets": [
-    "mononoke_scene1_h264.mp4",
-    "mononoke_scene2_h264.mp4",
-    "mononoke_scene3_h264.mp4"
+    "mushokutensei2_scene1_h264.mp4",
+    "mushokutensei2_scene2_h264.mp4",
+    "mushokutensei2_scene3_h264.mp4"
    ],
    "on_release": [],
-   "hook": "The Medicine Seller sees everything",
-   "title": "The Medicine Seller sees everything | Mononoke | #edit",
+   "hook": "Rudeus finally grew up",
+   "title": "Rudeus finally grew up | Mushoku Tensei | #edit",
    "tags": [
-    "mononoke",
+    "mushokutensei2",
     "anime",
     "animeedit",
     "edit",
     "shorts",
     "trending",
-    "medicineseller"
+    "rudeus"
    ],
    "market": "US/UK"
   },
@@ -1690,11 +1532,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=G9bqtUiyxyQ",
    "missing_assets": [
-    "onepieceegghead_scene1_h264.mp4",
     "onepieceegghead_scene2_h264.mp4",
     "onepieceegghead_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "onepieceegghead_scene1_h264.mp4"
+   ],
    "hook": "Luffy laughs while gods fall",
    "title": "Luffy laughs while gods fall | One Piece | #edit",
    "tags": [
@@ -1807,11 +1650,12 @@
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=05EIB6kOu6Y",
    "missing_assets": [
-    "sakamotodays_scene1_h264.mp4",
-    "sakamotodays_scene2_h264.mp4",
     "sakamotodays_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "sakamotodays_scene1_h264.mp4",
+    "sakamotodays_scene2_h264.mp4"
+   ],
    "hook": "Retired assassin still hits hardest",
    "title": "Retired assassin still hits hardest | Sakamoto Days | #edit",
    "tags": [
@@ -1947,45 +1791,6 @@
     "trending",
     "anya",
     "loid"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "undeadunluck",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-undeadunluck",
-   "pillar": "anime",
-   "words": "UNDEAD UNLUCK",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "UNDEAD UNLUCK fight scene official clip",
-    "UNDEAD UNLUCK best scene official clip",
-    "UNDEAD UNLUCK official clip"
-   ],
-   "official_channels": [
-    "Anime! on TMS Official Channel",
-    "vizmedia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
-   "missing_assets": [
-    "undeadunluck_scene1_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "One touch changed his life",
-   "title": "One touch changed his life | Undead Unluck | #edit",
-   "tags": [
-    "undeadunluck",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "andy"
    ],
    "market": "US/UK"
   },
