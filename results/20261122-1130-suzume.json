@@ -313,5 +313,16 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-suzume-01",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "publish_via": "youtube",
+  "yt_video_id": "2hD-EGEWOqc",
+  "yt_uploaded_at": "2026-11-22 11:28 IST",
+  "yt_privacy": "public",
+  "yt_publish_at": "2026-11-22T11:28:11.124408+05:30",
+  "yt_status": "public",
+  "youtube_url": "https://youtube.com/shorts/2hD-EGEWOqc",
+  "buffer_post_id": "yt:2hD-EGEWOqc",
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-22T05:58:11.000Z",
+  "buffer_posted_at": "2026-11-22T05:58:11.000Z"
 }
