@@ -323,5 +323,7 @@
       "reason": "gemini score 6.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "publish_blocked": "repeat: same source clip posted <72h ago (20261122-1130-suzume)",
+  "publish_blocked_at": "2026-11-23 05:16 IST"
 }
