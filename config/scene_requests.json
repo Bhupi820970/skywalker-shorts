@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-22 09:02 IST",
+ "generated_at": "2026-11-22 11:27 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 53,
+ "release_scene_clips": 59,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -772,10 +772,11 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
    "missing_assets": [
-    "arcane2_scene1_h264.mp4",
     "arcane2_scene2_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "arcane2_scene1_h264.mp4"
+   ],
    "hook": "Jinx never wanted this war",
    "title": "Jinx never wanted this war | Arcane | #edit",
    "tags": [
@@ -786,47 +787,6 @@
     "shorts",
     "trending",
     "jinx"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "bleachtybw",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-bleachtybw",
-   "pillar": "anime",
-   "words": "BLEACH",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "BLEACH fight scene official clip",
-    "BLEACH best scene official clip",
-    "BLEACH official clip"
-   ],
-   "official_channels": [
-    "vizmedia",
-    "『BLEACH』アニメ公式チャンネル",
-    "『BLEACH』アニメ公式チャンネル and 2 more",
-    "アニプレックス チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=4Gti6YqvMzE",
-   "missing_assets": [
-    "bleachtybw_scene1_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Ichigo was born for this war",
-   "title": "Ichigo was born for this war | Bleach | #edit",
-   "tags": [
-    "bleachtybw",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "ichigo"
    ],
    "market": "US/UK"
   },
@@ -1952,48 +1912,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "spiritedaway",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-spiritedaway",
-   "pillar": "anime",
-   "words": "SPIRITED AWAY",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SPIRITED AWAY fight scene official clip",
-    "SPIRITED AWAY best scene official clip",
-    "SPIRITED AWAY official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll Store Australia",
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
-   "missing_assets": [
-    "spiritedaway_scene2_h264.mp4"
-   ],
-   "on_release": [
-    "spiritedaway_scene1_h264.mp4"
-   ],
-   "hook": "Chihiro had to forget her name",
-   "title": "Chihiro had to forget her name | Spirited Away | #edit",
-   "tags": [
-    "spiritedaway",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "chihiro"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "spyxfamily3",
    "slot": "9999",
    "for": "backup_pool",
@@ -2216,10 +2134,11 @@
    "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
    "missing_assets": [
     "witchhatatelier_scene1_h264.mp4",
-    "witchhatatelier_scene2_h264.mp4",
     "witchhatatelier_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "witchhatatelier_scene2_h264.mp4"
+   ],
    "hook": "Coco drew her first spell",
    "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
    "tags": [
