@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-22T14:17:14Z",
-  "last_upload_at": "2026-11-22T14:17:14Z"
+  "last_run_at": "2026-11-22T14:25:01Z",
+  "last_upload_at": "2026-11-22T14:25:01Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -63,6 +63,7 @@
   "yt:_lmn16npMXw",
   "yt:aeLkBvyiRfg",
   "yt:afE7WD2raMw",
+  "yt:aiCMXJ4zKWA",
   "yt:aoi11BdfpoM",
   "yt:cbft6JWPkpA",
   "yt:ckEUVyKanhw",
@@ -82,6 +83,7 @@
   "yt:pEwoisyyvl0",
   "yt:ppOVLojanC8",
   "yt:r9oI7Kvqwsg",
+  "yt:rH8FCwzOdpI",
   "yt:sM9Uqtia-Lo",
   "yt:tSukOsMkYnE",
   "yt:votcOf5cYCM",
@@ -1001,6 +1003,28 @@
    "kbps": 1994,
    "by": "box",
    "at": "2026-11-22T14:17:14Z"
+  },
+  {
+   "asset": "kaiju8s2_scene1_h264.mp4",
+   "id": "yt:rH8FCwzOdpI",
+   "title": "“Kaiju No. 8” Season 2 Opening Theme Animation｜'You Can’t Run From Yourself' by AURORA",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 16072,
+   "by": "box",
+   "at": "2026-11-22T14:25:01Z"
+  },
+  {
+   "asset": "kaiju8s2_scene2_h264.mp4",
+   "id": "yt:aiCMXJ4zKWA",
+   "title": "“Kaiju No. 8” Ending Theme Animation ／ 'Nobody' by OneRepublic",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 6704,
+   "by": "box",
+   "at": "2026-11-22T14:25:01Z"
   }
  ],
  "github": {
