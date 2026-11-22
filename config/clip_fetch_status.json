@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-22T16:42:59Z",
-  "last_upload_at": "2026-11-22T16:42:52Z"
+  "last_run_at": "2026-11-22T17:06:46Z",
+  "last_upload_at": "2026-11-22T17:06:46Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -110,6 +110,7 @@
   "yt:r9oI7Kvqwsg",
   "yt:rFKSrOALWdw",
   "yt:rH8FCwzOdpI",
+  "yt:rpWPQlBz2Bk",
   "yt:sM9Uqtia-Lo",
   "yt:tIiipIHwTa4",
   "yt:tR4OVXK6tG8",
@@ -1417,6 +1418,17 @@
    "kbps": 11338,
    "by": "box",
    "at": "2026-11-22T16:42:52Z"
+  },
+  {
+   "asset": "spyxfamilycodewhite_scene1_h264.mp4",
+   "id": "yt:rpWPQlBz2Bk",
+   "title": "Yor and Type F's Battle | SPY x FAMILY CODE: White | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3317,
+   "by": "box",
+   "at": "2026-11-22T17:06:46Z"
   }
  ],
  "github": {
