@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18 17:07 IST",
+ "generated_at": "2026-11-22 16:51 IST",
  "max_clips_per_title": 5,
  "min_height": 1080,
  "requests": [
@@ -8,29 +8,104 @@
    "pillar": "anime",
    "words": "MOB PSYCHO 100",
    "characters": [
-    "Shigeo Kageyama",
-    "Toichiro"
+    "Mob",
+    "Reigen Arataka"
    ],
    "scene_types": [
     "fight",
+    "aura",
+    "comedy"
+   ],
+   "search_queries": [
+    "Mob Psycho 100 Mob 100 percent scene clip",
+    "Mob Psycho 100 Reigen exorcism official clip",
+    "Mob vs Mogami fight clip"
+   ],
+   "official_channels": [
+    "Warner Bros. Japan",
+    "Netflix Anime"
+   ],
+   "hook": "Why Mob tried to suppress his powers",
+   "title": "Why Mob tried to suppress his powers | Mob goes 100 percent | #edit",
+   "tags": [
+    "mobpsycho100",
+    "mob",
+    "reigen",
+    "animeedit",
+    "anime",
+    "mob100",
+    "shonen"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "demonslayer",
+   "pillar": "anime",
+   "words": "DEMON SLAYER",
+   "characters": [
+    "Rengoku",
+    "Akaza"
+   ],
+   "scene_types": [
+    "fight",
+    "emotional",
     "aura"
    ],
    "search_queries": [
-    "Mob Psycho 100 Mob 100 percent clip",
-    "Mob Psycho 100 Mob vs Toichiro clip",
-    "Mob Psycho 100 fight scene official"
+    "Demon Slayer Rengoku vs Akaza fight clip",
+    "Mugen Train Rengoku final scene official clip",
+    "Demon Slayer flame hashira scene"
    ],
    "official_channels": [
-    "Warner Bros. Japan Video"
+    "Aniplex USA",
+    "Sony Pictures Entertainment"
    ],
-   "hook": "Why Mob tried to suppress his powers",
-   "title": "Why Mob tried to suppress his powers 💀 | Mob goes 100 percent | #edit",
+   "hook": "Why Rengoku refused to give up",
+   "title": "Why Rengoku refused to give up | Rengoku vs Akaza battle | #edit",
    "tags": [
-    "mobpsycho100",
-    "mobpsycho",
-    "shigeokageyama",
-    "reigen",
+    "demonslayer",
+    "rengoku",
+    "akaza",
     "animeedit",
+    "mugentrain",
+    "kimetsunoyaiba",
+    "anime"
+   ],
+   "market": "US/UK",
+   "known_topic": true
+  },
+  {
+   "slug": "narutoshippuden",
+   "pillar": "anime",
+   "words": "NARUTO SHIPPUDEN",
+   "characters": [
+    "Madara Uchiha",
+    "Might Guy"
+   ],
+   "scene_types": [
+    "fight",
+    "aura",
+    "entrance"
+   ],
+   "search_queries": [
+    "Madara vs Shinobi Alliance scene clip",
+    "Might Guy 8 gates Madara fight official clip",
+    "Madara entrance scene Naruto"
+   ],
+   "official_channels": [
+    "VIZ Media",
+    "Bandai Namco Entertainment"
+   ],
+   "hook": "Why Madara declared Guy the strongest",
+   "title": "Why Madara declared Guy the strongest | Might Guy 8 Gates | #edit",
+   "tags": [
+    "narutoshippuden",
+    "madara",
+    "mightguy",
+    "naruto",
+    "animeedit",
+    "uchiha",
     "anime"
    ],
    "market": "US/UK",
@@ -46,100 +121,103 @@
    ],
    "scene_types": [
     "fight",
+    "emotional",
     "aura"
    ],
    "search_queries": [
-    "Hunter x Hunter Gon vs Pitou clip",
-    "Hunter x Hunter Adult Gon clip",
-    "Hunter x Hunter Gon rage scene clip"
+    "Hunter x Hunter Gon vs Pitou scene clip",
+    "Gon transformation official clip",
+    "Hunter x Hunter Chimera Ant scene"
    ],
    "official_channels": [
     "VIZ Media",
-    "Netflix"
+    "VAP"
    ],
-   "hook": "Why Gon traded his own life",
-   "title": "Why Gon traded his own life 💀 | Gon transforms | #edit",
+   "hook": "Why Gon sacrificed everything for revenge",
+   "title": "Why Gon sacrificed everything for revenge | Adult Gon vs Pitou | #edit",
    "tags": [
     "hunterxhunter",
-    "gonfreecss",
-    "gonvspitou",
+    "gon",
+    "pitou",
     "hxh",
     "animeedit",
+    "gonfreecss",
     "anime"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "thebatman",
-   "pillar": "hollywood",
-   "words": "THE BATMAN",
+   "slug": "deathnote",
+   "pillar": "anime",
+   "words": "DEATH NOTE",
    "characters": [
-    "Batman",
-    "Penguin"
-   ],
-   "scene_types": [
-    "entrance",
-    "fight"
-   ],
-   "search_queries": [
-    "The Batman batmobile chase official clip",
-    "The Batman hallway fight official clip",
-    "The Batman upside down walk clip"
-   ],
-   "official_channels": [
-    "Warner Bros. Pictures",
-    "Movieclips"
-   ],
-   "hook": "Why Penguin trembled at his footsteps",
-   "title": "Why Penguin trembled at his footsteps 💀 | Batman batmobile chase | #edit",
-   "tags": [
-    "thebatman",
-    "batman",
-    "robertpattinson",
-    "movieedit",
-    "dc",
-    "hollywood"
-   ],
-   "market": "US/UK",
-   "known_topic": true
-  },
-  {
-   "slug": "whiplash",
-   "pillar": "hollywood",
-   "words": "WHIPLASH",
-   "characters": [
-    "Andrew Neiman",
-    "Terrence Fletcher"
+    "Light Yagami",
+    "L Lawliet"
    ],
    "scene_types": [
     "aura",
     "emotional"
    ],
    "search_queries": [
-    "Whiplash final solo official clip",
-    "Whiplash Fletcher tempo scene official clip",
-    "Whiplash Andrew drum solo clip"
+    "Death Note Light potato chip scene official clip",
+    "Death Note Light vs L tennis scene clip",
+    "Death Note final episode Light scene"
    ],
    "official_channels": [
-    "Sony Pictures Classics",
-    "Movieclips"
+    "VIZ Media",
+    "Netflix Anime"
    ],
-   "hook": "Why Fletcher never apologized to Andrew",
-   "title": "Why Fletcher never apologized to Andrew 💀 | Caravan final solo | #edit",
+   "hook": "Why Light thought he was unbeatable",
+   "title": "Why Light thought he was unbeatable | Light Yagami strategic mind | #edit",
    "tags": [
-    "whiplash",
-    "andrewneiman",
-    "fletcher",
-    "movieedit",
-    "cinema",
-    "whiplashedit"
+    "deathnote",
+    "lightyagami",
+    "llawliet",
+    "animeedit",
+    "deathnoteedit",
+    "anime",
+    "kira"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "thedarkknight",
+   "slug": "johnwick",
+   "pillar": "hollywood",
+   "words": "JOHN WICK",
+   "characters": [
+    "John Wick"
+   ],
+   "scene_types": [
+    "fight",
+    "aura",
+    "entrance"
+   ],
+   "search_queries": [
+    "John Wick club fight scene official clip",
+    "John Wick red circle scene clip",
+    "John Wick revenge scene Lionsgate"
+   ],
+   "official_channels": [
+    "Lionsgate Movies",
+    "Movieclips"
+   ],
+   "hook": "Why everyone feared the Baba Yaga",
+   "title": "Why everyone feared the Baba Yaga | John Wick nightclub rampage | #edit",
+   "tags": [
+    "johnwick",
+    "keanureeves",
+    "action",
+    "hollywood",
+    "johnwickedit",
+    "movieclips"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "darkknight",
    "pillar": "hollywood",
    "words": "THE DARK KNIGHT",
    "characters": [
@@ -148,26 +226,28 @@
    ],
    "scene_types": [
     "aura",
-    "entrance"
+    "entrance",
+    "emotional"
    ],
    "search_queries": [
-    "The Dark Knight interrogation official clip",
-    "The Dark Knight pencil trick clip",
-    "The Dark Knight Joker entrance clip"
+    "The Dark Knight Joker pencil scene official clip",
+    "Dark Knight Joker interrogation scene clip",
+    "The Dark Knight bank robbery scene clip"
    ],
    "official_channels": [
     "Warner Bros. Pictures",
     "Movieclips"
    ],
-   "hook": "Why Joker wanted Batman to break",
-   "title": "Why Joker wanted Batman to break 💀 | Joker interrogation scene | #edit",
+   "hook": "Why Joker never feared Batman's strength",
+   "title": "Why Joker never feared Batman's strength | Joker interrogation scene | #edit",
    "tags": [
     "thedarkknight",
     "joker",
-    "heathledger",
     "batman",
-    "movieedit",
-    "hollywood"
+    "heathledger",
+    "hollywood",
+    "movieclips",
+    "dc"
    ],
    "market": "US/UK",
    "known_topic": false
@@ -182,93 +262,96 @@
    ],
    "scene_types": [
     "aura",
-    "fight"
+    "emotional"
    ],
    "search_queries": [
-    "Fight Club basement fight clip official",
-    "Fight Club chemical burn clip",
-    "Fight Club Tyler Durden speech clip"
+    "Fight Club Tyler Durden speech official clip",
+    "Fight Club first fight scene clip",
+    "Fight Club ending scene clip"
    ],
    "official_channels": [
-    "Searchlight Pictures",
+    "20th Century Studios",
     "Movieclips"
    ],
-   "hook": "Why Tyler Durden never existed",
-   "title": "Why Tyler Durden never existed 💀 | Tyler Durden rule one | #edit",
+   "hook": "Why Tyler Durden became an icon",
+   "title": "Why Tyler Durden became an icon | Tyler Durden rule one | #edit",
    "tags": [
     "fightclub",
     "tylerdurden",
     "bradpitt",
-    "movieedit",
-    "cinema",
-    "hollywood"
+    "hollywood",
+    "fightclubedit",
+    "movieclips"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "pathaan",
-   "pillar": "bollywood",
-   "words": "PATHAAN",
+   "slug": "interstellar",
+   "pillar": "hollywood",
+   "words": "INTERSTELLAR",
    "characters": [
-    "Pathaan",
-    "Jim"
+    "Cooper",
+    "Murph"
+   ],
+   "scene_types": [
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "Interstellar docking scene official clip",
+    "Interstellar wave planet scene clip",
+    "Interstellar Cooper watching messages clip"
+   ],
+   "official_channels": [
+    "Warner Bros. Pictures",
+    "Paramount Pictures",
+    "Movieclips"
+   ],
+   "hook": "Why Cooper never gave up on Murph",
+   "title": "Why Cooper never gave up on Murph | Interstellar docking sequence | #edit",
+   "tags": [
+    "interstellar",
+    "cooper",
+    "christophernolan",
+    "hollywood",
+    "interstellaredit",
+    "movieclips"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "warmovie",
+   "pillar": "bollywood",
+   "words": "WAR",
+   "characters": [
+    "Kabir",
+    "Khalid"
    ],
    "scene_types": [
     "fight",
-    "entrance"
+    "entrance",
+    "aura"
    ],
    "search_queries": [
-    "Pathaan ice chase official clip",
-    "Pathaan jetpack fight official clip",
-    "Pathaan entry scene clip"
+    "War Hrithik Roshan entrance official clip",
+    "War Hrithik vs Tiger fight scene clip",
+    "War Kabir bike entry clip"
    ],
    "official_channels": [
     "YRF"
    ],
-   "hook": "Why Jim turned against his nation",
-   "title": "Why Jim turned against his nation 💀 | Pathaan jetpack chase | #edit",
+   "hook": "Why Kabir was unmatched in battle",
+   "title": "Why Kabir was unmatched in battle | Hrithik Roshan entry scene | #edit",
    "tags": [
-    "pathaan",
-    "shahrukhkhan",
-    "srk",
+    "war",
+    "hrithikroshan",
+    "tigerseghal",
     "yrf",
-    "bollywoodedit",
-    "bollywood"
-   ],
-   "market": "IN",
-   "known_topic": false
-  },
-  {
-   "slug": "don2",
-   "pillar": "bollywood",
-   "words": "DON 2",
-   "characters": [
-    "Don",
-    "Vardhaan"
-   ],
-   "scene_types": [
-    "aura",
-    "entrance"
-   ],
-   "search_queries": [
-    "Don 2 prison break official clip",
-    "Don 2 car chase official clip",
-    "Don 2 entry scene official clip"
-   ],
-   "official_channels": [
-    "Reliance Entertainment",
-    "Excel Entertainment"
-   ],
-   "hook": "Why Don surrendered himself to police",
-   "title": "Why Don surrendered himself to police 💀 | Don prison break | #edit",
-   "tags": [
-    "don2",
-    "shahrukhkhan",
-    "srk",
-    "don",
-    "bollywoodedit",
-    "bollywood"
+    "bollywood",
+    "waredit",
+    "action"
    ],
    "market": "IN",
    "known_topic": false
@@ -279,29 +362,65 @@
    "words": "DHOOM 2",
    "characters": [
     "Aryan",
-    "Mr. A"
+    "Jai Dixit"
    ],
    "scene_types": [
+    "aura",
     "entrance",
-    "aura"
+    "fight"
    ],
    "search_queries": [
-    "Dhoom 2 train heist official clip",
-    "Dhoom 2 Hrithik entry clip",
-    "Dhoom 2 museum robbery clip official"
+    "Dhoom 2 Hrithik Roshan train robbery scene clip",
+    "Dhoom 2 disguise scene YRF clip",
+    "Dhoom 2 Hrithik cliff jump clip"
    ],
    "official_channels": [
     "YRF"
    ],
-   "hook": "Why Mr A never got caught",
-   "title": "Why Mr A never got caught 💀 | Train disguise heist | #edit",
+   "hook": "Why Mr A was impossible to catch",
+   "title": "Why Mr A was impossible to catch | Hrithik train robbery scene | #edit",
    "tags": [
     "dhoom2",
     "hrithikroshan",
-    "mra",
     "yrf",
-    "bollywoodedit",
-    "bollywood"
+    "mra",
+    "bollywood",
+    "dhoom",
+    "action"
+   ],
+   "market": "IN",
+   "known_topic": true
+  },
+  {
+   "slug": "kabirsingh",
+   "pillar": "bollywood",
+   "words": "KABIR SINGH",
+   "characters": [
+    "Kabir Singh",
+    "Preeti"
+   ],
+   "scene_types": [
+    "aura",
+    "emotional",
+    "entrance"
+   ],
+   "search_queries": [
+    "Kabir Singh football fight scene clip",
+    "Kabir Singh angry scene T-Series clip",
+    "Kabir Singh entry scene official"
+   ],
+   "official_channels": [
+    "T-Series"
+   ],
+   "hook": "Why Kabir lost control after that moment",
+   "title": "Why Kabir lost control after that moment | Kabir Singh interval scene | #edit",
+   "tags": [
+    "kabirsingh",
+    "shahidkapoor",
+    "tseries",
+    "bollywood",
+    "kabirsinghedit",
+    "drama"
    ],
    "market": "IN",
    "known_topic": false
@@ -311,31 +430,69 @@
    "pillar": "south",
    "words": "RRR",
    "characters": [
-    "Bheem",
-    "Ram"
+    "Komaram Bheem",
+    "Alluri Sitarama Raju"
    ],
    "scene_types": [
     "fight",
-    "entrance"
+    "entrance",
+    "aura"
    ],
    "search_queries": [
-    "RRR Bheem animal entry official clip",
-    "RRR Ram intro scene official clip",
-    "RRR bridge rescue scene clip"
+    "RRR Bheem animal entry scene official clip",
+    "RRR Ram Charan police fight scene clip",
+    "RRR bridge rescue scene official clip"
    ],
    "official_channels": [
     "DVV Entertainment",
-    "Netflix India"
+    "Netflix India",
+    "T-Series"
    ],
    "hook": "Why Bheem unleashed the wild beasts",
-   "title": "Why Bheem unleashed the wild beasts 💀 | Bheem palace entry | #edit",
+   "title": "Why Bheem unleashed the wild beasts | Bheem animal entry scene | #edit",
    "tags": [
     "rrr",
-    "jrntr",
+    "ntr",
     "ramcharan",
     "ssrajamouli",
-    "southedit",
-    "tollywood"
+    "southcinema",
+    "rrredit",
+    "action"
+   ],
+   "market": "IN",
+   "known_topic": true
+  },
+  {
+   "slug": "leomovie",
+   "pillar": "south",
+   "words": "LEO",
+   "characters": [
+    "Leo Das",
+    "Parthi"
+   ],
+   "scene_types": [
+    "fight",
+    "entrance",
+    "aura"
+   ],
+   "search_queries": [
+    "Leo Vijay hyena fight scene official clip",
+    "Leo Vijay cafe fight scene clip",
+    "Leo Das entry scene official"
+   ],
+   "official_channels": [
+    "Seven Screen Studio",
+    "Netflix India"
+   ],
+   "hook": "Why Leo hid his true identity",
+   "title": "Why Leo hid his true identity | Leo Vijay cafe fight | #edit",
+   "tags": [
+    "leo",
+    "thalapathyvijay",
+    "lokeshkanagaraj",
+    "southcinema",
+    "leoedit",
+    "kollywood"
    ],
    "market": "IN",
    "known_topic": false
