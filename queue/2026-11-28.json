@@ -99,6 +99,39 @@
   "fallback_asset": "leomovie_scene1_h264.mp4"
  },
  {
+  "id": "20261128-1600-jjk0",
+  "slot": "2026-11-28T16:00:00+05:30",
+  "pillar": "romance",
+  "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
+  "template": "whitebar",
+  "hook": "Yuta only fights for her",
+  "words": "JUJUTSU KAISEN 0",
+  "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
+  "description": "Yuta only fights for her. From official Jujutsu Kaisen 0 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jjk0",
+  "tags": [
+   "jjk0",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "yuta"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "edit_format": "love",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "jjk0_scene2_h264.mp4"
+ },
+ {
   "id": "20261128-1830-rrr",
   "slot": "2026-11-28T18:30:00+05:30",
   "pillar": "south",
