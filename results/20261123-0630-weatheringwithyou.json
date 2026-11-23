@@ -304,5 +304,7 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-weatheringwithyou-13",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "publish_blocked": "repeat: same source clip posted <72h ago (20261120-2230-weatheringwithyou)",
+  "publish_blocked_at": "2026-11-23 06:28 IST"
 }
