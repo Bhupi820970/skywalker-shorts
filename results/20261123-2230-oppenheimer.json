@@ -1,9 +1,9 @@
 {
   "id": "20261123-2230-oppenheimer",
-  "status": "retry_queued",
-  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
-  "at": "2026-11-23 19:31 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45184008276",
+  "status": "done",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render) (QC retry pass)",
+  "at": "2026-11-24 01:05 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45249280516",
   "slot": "2026-11-23T22:30:00+05:30",
   "title": "Why he regrets his creation 💀 | The Trinity Test | #edit",
   "hook": "Why he regrets his creation",
@@ -17,123 +17,79 @@
     "phonk",
     "aura"
   ],
-  "queue_meta": {
-    "hook": "Why he regrets his creation",
-    "title": "Why he regrets his creation 💀 | The Trinity Test | #edit",
-    "description": "Why he regrets his creation. From official Oppenheimer clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #oppenheimer #nolan #hollywood",
-    "tags": [
-      "oppenheimer",
-      "nolan",
-      "hollywood",
-      "cillianmurphy",
-      "edit",
-      "phonk",
-      "aura"
-    ]
-  },
-  "gemini_meta": true,
-  "hook_source": "queue",
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
   "hook_style": null,
   "title_candidates": null,
   "gemini_calls": [
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
-      "key": "key1",
+      "key": "key2",
       "err": "TimeoutError"
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 41.1,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
+      "key": "key2",
       "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 10.4,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 43.2,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
+      "purpose": "qc",
       "model": "gemini-3.8-flash",
       "key": "key2",
       "err": "HTTP 503"
     },
     {
-      "purpose": "scenes",
+      "purpose": "qc",
       "model": "gemini-flash-latest",
       "key": "key2",
       "err": "HTTP 429"
     },
     {
-      "purpose": "scenes",
+      "purpose": "qc",
       "model": "gemini-3.1-flash-lite",
       "key": "key2",
       "err": "HTTP 503"
     },
     {
-      "purpose": "scenes",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "TimeoutError"
+      "key": "key3",
+      "s": 13.6,
+      "ok": true
     },
     {
-      "purpose": "scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
-      "key": "key1",
+      "key": "key3",
       "err": "HTTP 503"
     },
     {
-      "purpose": "scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.8-flash",
-      "key": "key1",
+      "key": "key3",
       "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-flash-latest",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 36.9,
+      "ok": true
     }
   ],
   "backup_item": null,
@@ -145,8 +101,30 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
+  "auto_retries": 1,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4",
+      "music": "pr_montagemunknown.mp3",
+      "qc_status": "skipped"
+    },
+    {
+      "attempt": "qc_retry",
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4",
+      "music": "pr_montagemunknown.mp3"
+    }
+  ],
+  "last_error": null,
+  "qc_status": "pass",
   "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261123-2230-oppenheimer",
   "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261123-2230-oppenheimer/render-20261123-2230-oppenheimer.mp4",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261123-2230-oppenheimer/render-20261123-2230-oppenheimer-cover.jpg",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -154,40 +132,47 @@
     "no_shake": true,
     "no_logo": true
   },
-  "drop_t": null,
   "energy": false,
   "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4",
   "music": "pr_montagemunknown.mp3",
   "music_credit": "Song: AKXNESHIVA - Topic - MONTAGEM UNKNOWN\nOfficial link: https://www.youtube.com/watch?v=gvGQ27rWmg0",
   "description_final": "Why he regrets his creation. From official Oppenheimer clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #oppenheimer #nolan #hollywood\n\nMusic:\nSong: AKXNESHIVA - Topic - MONTAGEM UNKNOWN\nOfficial link: https://www.youtube.com/watch?v=gvGQ27rWmg0",
-  "no_publish": false,
-  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261123-2230-oppenheimer/render-20261123-2230-oppenheimer-cover.jpg",
   "gate": {
-    "ok": false,
-    "failures": [
-      "gemini QC skipped (unavailable/budget)"
-    ],
-    "gemini_qc": "skipped (unavailable/budget)"
+    "ok": true,
+    "failures": [],
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 51,
+      "masked_rows": [
+        [
+          0.2938,
+          0.3646
+        ]
+      ]
+    },
+    "logo_verdict": true
   },
-  "layout": {
-    "bar_y": 564,
-    "bar_h": 136,
-    "plate_y": 700,
-    "video_y": 700,
-    "plate_x": 0,
-    "plate_w": 1080,
-    "plate_h": 518,
-    "region_h": 1784,
-    "block_h": 1920,
-    "drop_t": null,
-    "energy": false,
-    "caption_y": 1246,
-    "captions": [],
-    "speech_windows": [],
-    "edit_mode": "music_only",
-    "edit_format": "action",
-    "blur_fill": true
-  },
+  "no_publish": false,
   "scenes_picked": [
     {
       "id": 12,
@@ -255,20 +240,23 @@
       "dur": 1.019
     }
   ],
-  "qc_status": "skipped",
-  "auto_retries": 0,
-  "max_auto_retries": 1,
-  "attempts": [
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "gemini QC skipped",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4",
-      "music": "pr_montagemunknown.mp3",
-      "qc_status": "skipped"
-    }
-  ],
-  "last_error": "gemini QC skipped",
-  "qc_pending": true,
-  "logo_pending": false
+  "layout": {
+    "bar_y": 564,
+    "bar_h": 136,
+    "plate_y": 700,
+    "video_y": 700,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 518,
+    "region_h": 1784,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "caption_y": 1246,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  }
 }

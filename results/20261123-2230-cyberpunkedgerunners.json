@@ -1,36 +1,34 @@
 {
   "id": "20261123-2230-cyberpunkedgerunners",
-  "status": "retry_queued",
-  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
-  "at": "2026-11-23 20:02 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45188313775",
+  "status": "failed",
+  "detail": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
+  "at": "2026-11-24 02:20 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45249280516",
   "slot": "2026-11-23T22:30:00+05:30",
-  "title": "This is the part they left out | EDGERUNNERS | #edit",
-  "hook": "This is the part they left out",
-  "description": "This is the part they left out. Official scene clip. Edit by Skywalker.",
+  "title": "Axel has thirty days to run | Lazarus | #edit",
+  "hook": "Axel has thirty days to run",
+  "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
   "tags": [
-    "cyberpunkedgerunners",
+    "lazarus",
     "anime",
     "animeedit",
     "edit",
     "shorts",
     "trending",
-    "david",
-    "part3"
+    "axel"
   ],
   "queue_meta": {
-    "hook": "This is the part they left out",
-    "title": "This is the part they left out | EDGERUNNERS | #edit",
-    "description": "This is the part they left out. Official scene clip. Edit by Skywalker.",
+    "hook": "Axel has thirty days to run",
+    "title": "Axel has thirty days to run | Lazarus | #edit",
+    "description": "Axel has thirty days to run. From official Lazarus clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #lazarus",
     "tags": [
-      "cyberpunkedgerunners",
+      "lazarus",
       "anime",
       "animeedit",
       "edit",
       "shorts",
       "trending",
-      "david",
-      "part3"
+      "axel"
     ]
   },
   "gemini_meta": true,
@@ -42,39 +40,163 @@
       "purpose": "qc",
       "model": "gemini-3.5-flash",
       "key": "key4",
-      "s": 35.9,
-      "ok": true
+      "err": "TimeoutError"
     },
     {
-      "purpose": "logo_final",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
       "key": "key4",
       "err": "HTTP 503"
     },
     {
-      "purpose": "logo_final",
+      "purpose": "qc",
       "model": "gemini-3.8-flash",
       "key": "key4",
       "err": "HTTP 503"
     },
     {
-      "purpose": "logo_final",
+      "purpose": "qc",
       "model": "gemini-flash-latest",
       "key": "key4",
       "err": "HTTP 503"
     },
     {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key4",
+      "s": 9.6,
+      "ok": true
+    },
+    {
       "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key4",
+      "s": 49.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
       "key": "key4",
       "err": "HTTP 503"
     },
     {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 13.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 11.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 148.0,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 21.8,
+      "ok": true
+    },
+    {
       "purpose": "logo_final",
       "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 33.2,
+      "key": "key4",
+      "s": 7.0,
       "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 15.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 21.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key4",
+      "s": 13.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 12.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 13.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key4",
+      "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
@@ -86,63 +208,25 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.8-flash",
       "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
       "model": "gemini-flash-latest",
-      "key": "key2",
+      "key": "key1",
       "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key2",
+      "key": "key1",
       "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 83.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 79.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 35.9,
+      "key": "key2",
+      "s": 14.6,
       "ok": true
     }
   ],
@@ -150,163 +234,55 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "words": "EDGERUNNERS",
-  "edit_format": null,
-  "title_swaps": null,
-  "swapped_from": null,
-  "swapped_to": null,
-  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261123-2230-cyberpunkedgerunners",
-  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261123-2230-cyberpunkedgerunners/render-20261123-2230-cyberpunkedgerunners.mp4",
-  "qa": {
-    "no_crop": true,
-    "caption": true,
-    "audio": true,
-    "no_shake": true,
-    "no_logo": true
-  },
-  "drop_t": 3.306,
-  "energy": true,
-  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
-  "music": "pr_tikitikislowed.mp3",
-  "music_credit": "Song: QMIIR - TIKI TIKI (Slowed)\nOfficial link: https://www.youtube.com/watch?v=bEYiPCbHAtM",
-  "description_final": "This is the part they left out. Official scene clip. Edit by Skywalker.\n\nMusic:\nSong: QMIIR - TIKI TIKI (Slowed)\nOfficial link: https://www.youtube.com/watch?v=bEYiPCbHAtM",
-  "no_publish": false,
-  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261123-2230-cyberpunkedgerunners/render-20261123-2230-cyberpunkedgerunners-cover.jpg",
-  "gate": {
-    "ok": false,
-    "failures": [
-      "gemini QC skipped (unavailable/budget)"
-    ],
-    "gemini_qc": "skipped (unavailable/budget)"
-  },
-  "layout": {
-    "bar_y": 520,
-    "bar_h": 136,
-    "plate_y": 656,
-    "video_y": 656,
-    "plate_x": 0,
-    "plate_w": 1080,
-    "plate_h": 608,
-    "region_h": 1784,
-    "block_h": 1920,
-    "drop_t": 3.306,
-    "energy": true,
-    "story_captions": {
-      "pattern": "P07",
-      "name": "Far beside",
-      "count": 3
-    },
-    "story_caption_boxes": [
-      {
-        "t0": 1.556,
-        "t1": 2.368,
-        "box": [
-          214,
-          790,
-          176,
-          43
-        ],
-        "text": "This is the",
-        "faces": []
-      },
-      {
-        "t0": 2.81,
-        "t1": 3.738,
-        "box": [
-          612,
-          776,
-          330,
-          70
-        ],
-        "text": "part they left",
-        "faces": []
-      },
-      {
-        "t0": 4.18,
-        "t1": 5.039,
-        "box": [
-          269,
-          790,
-          65,
-          43
-        ],
-        "text": "out",
-        "faces": []
-      }
-    ],
-    "caption_y": 1292,
-    "captions": [],
-    "speech_windows": [],
-    "edit_mode": "music_only",
-    "edit_format": "action",
-    "blur_fill": true
-  },
-  "scenes_picked": [
+  "words": "LAZARUS",
+  "edit_format": "action",
+  "title_swaps": [
     {
-      "id": 41,
-      "src_start": 126.835,
-      "dur": 0.836
-    },
-    {
-      "id": 7,
-      "src_start": 28.591,
-      "dur": 2.47
-    },
-    {
-      "id": 53,
-      "src_start": 149.129,
-      "dur": 1.982
-    },
-    {
-      "id": 26,
-      "src_start": 97.139,
-      "dur": 1.837
-    },
-    {
-      "id": 56,
-      "src_start": 157.076,
-      "dur": 2.21
-    },
-    {
-      "id": 49,
-      "src_start": 141.016,
-      "dur": 3.338
-    },
-    {
-      "id": 1,
-      "src_start": 3.0,
-      "dur": 3.024
-    },
-    {
-      "id": 21,
-      "src_start": 86.211,
-      "dur": 1.795
-    },
-    {
-      "id": 6,
-      "src_start": 22.481,
-      "dur": 3.215
-    },
-    {
-      "id": 28,
-      "src_start": 101.727,
-      "dur": 1.044
+      "from": "cyberpunkedgerunners",
+      "from_words": "EDGERUNNERS",
+      "to": "lazarus",
+      "to_words": "LAZARUS",
+      "reason": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text ('THIS IS THE')\", \"3.04s burned-in subtitle text ('PART THEY LEFT')\", \"3.54s burned-in subtitle text ('PART THEY LEFT')\", \"4.54s burned-in text overlay ('OUT')\", \"5.04s burned-in text overlay ('OUT')\"]}"
     }
   ],
-  "qc_status": "skipped",
-  "auto_retries": 1,
+  "swapped_from": "cyberpunkedgerunners",
+  "swapped_to": "lazarus",
+  "auto_retries": 2,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "gemini QC skipped",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text ('THIS IS THE')\", \"3.04s burned-in subtitle text ('PART THEY LEFT')\", \"3.54s burned-in subtitle text ('PART THEY LEFT')\", \"4.54s burned-in text overlay ('OUT')\", \"5.04s burned-in text overlay ('OUT')\"]}",
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
       "music": "pr_tikitikislowed.mp3",
-      "qc_status": "skipped"
+      "qc_status": "pass"
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+      "music": "pr_tikitikislowed.mp3",
+      "qc_status": null
     }
   ],
-  "last_error": "gemini QC skipped",
-  "qc_pending": true,
-  "logo_pending": false
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in subtitle text ('THIS IS THE')\", \"3.04s burned-in subtitle text ('PART THEY LEFT')\", \"3.54s burned-in subtitle text ('PART THEY LEFT')\", \"4.54s burned-in text overlay ('OUT')\", \"5.04s burned-in text overlay ('OUT')\"]}",
+      "at": "2026-11-24 01:39 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-24 02:01 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-24 02:20 IST"
+    }
+  ]
 }
