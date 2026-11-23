@@ -273,5 +273,7 @@
     "edit_mode": "music_only",
     "edit_format": "love",
     "blur_fill": true
-  }
+  },
+  "publish_blocked": "repeat: same source clip posted <72h ago (20261122-1600-mushokutensei2)",
+  "publish_blocked_at": "2026-11-23 19:22 IST"
 }
