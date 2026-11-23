@@ -1,50 +1,10 @@
 {
- "generated_at": "2026-11-24 00:58 IST",
+ "generated_at": "2026-11-24 03:02 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "oshinoko2",
-   "slot": "2026-11-23T20:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261123-2030-oshinoko2",
-   "pillar": "anime",
-   "words": "OSHI NO KO",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "OSHI NO KO fight scene official clip",
-    "OSHI NO KO best scene official clip",
-    "OSHI NO KO official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=B6dq_yNQG4M",
-   "missing_assets": [
-    "oshinoko2_scene1_h264.mp4",
-    "oshinoko2_scene2_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Ruby cannot forgive him",
-   "title": "Ruby cannot forgive him | Aqua and Ruby | #edit",
-   "tags": [
-    "oshinoko",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "aqua",
-    "ruby"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "cyberpunkedgerunners",
    "slot": "2026-11-23T22:30:00+05:30",
@@ -1502,6 +1462,46 @@
     "shorts",
     "trending",
     "saitama"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "oshinoko2",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-oshinoko2",
+   "pillar": "anime",
+   "words": "OSHI NO KO",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "OSHI NO KO fight scene official clip",
+    "OSHI NO KO best scene official clip",
+    "OSHI NO KO official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=B6dq_yNQG4M",
+   "missing_assets": [
+    "oshinoko2_scene1_h264.mp4",
+    "oshinoko2_scene2_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Ruby cannot forgive him",
+   "title": "Ruby cannot forgive him | Aqua and Ruby | #edit",
+   "tags": [
+    "oshinoko",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "aqua",
+    "ruby"
    ],
    "market": "US/UK"
   },
