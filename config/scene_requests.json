@@ -1,10 +1,46 @@
 {
- "generated_at": "2026-11-23 08:52 IST",
+ "generated_at": "2026-11-23 10:30 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 95,
  "max_clips_per_title": 3,
  "requests": [
+  {
+   "slug": "taarezameenpar",
+   "slot": "2026-11-23T06:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261123-0630-taarezameenpar",
+   "pillar": "romance",
+   "words": "TAARE ZAMEEN PAR",
+   "scene_types": [
+    "romantic",
+    "emotional",
+    "confession"
+   ],
+   "search_queries": [
+    "TAARE ZAMEEN PAR romantic scene",
+    "TAARE ZAMEEN PAR emotional scene",
+    "TAARE ZAMEEN PAR official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=1oiRkOT4Z_4",
+   "missing_assets": [],
+   "on_release": [
+    "taarezameenpar_scene4_h264.mp4"
+   ],
+   "hook": "Why he felt so alone",
+   "title": "Why he felt so alone 💀 | The painting scene | #edit",
+   "tags": [
+    "taarezameenpar",
+    "ishaan",
+    "bollywood",
+    "edit",
+    "phonk",
+    "emotional",
+    "aura"
+   ],
+   "market": "IN"
+  },
   {
    "slug": "gangsofwasseypur",
    "slot": "2026-11-23T09:00:00+05:30",
@@ -104,9 +140,7 @@
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=0Z_mA7n5zIA",
    "missing_assets": [],
-   "on_release": [
-    "vikram_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Why he is the legend",
    "title": "Why he is the legend 💀 | Vikram returns | #edit",
    "tags": [
@@ -1443,7 +1477,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=xpJWvpumgxs",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "mononoke_scene2_h264.mp4"
+   ],
    "hook": "The Medicine Seller sees everything",
    "title": "The Medicine Seller sees everything | Mononoke | #edit",
    "tags": [

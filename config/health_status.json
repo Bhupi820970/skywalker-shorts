@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-23 08:52 IST",
-  "slots_checked": 8,
+  "at": "2026-11-23 10:30 IST",
+  "slots_checked": 9,
   "ready": [],
   "short": [
     "2026-11-23T09:00:00+05:30",
@@ -10,15 +10,16 @@
     "2026-11-23T18:30:00+05:30",
     "2026-11-23T20:30:00+05:30",
     "2026-11-23T22:30:00+05:30",
-    "2026-11-24T06:30:00+05:30"
+    "2026-11-24T06:30:00+05:30",
+    "2026-11-24T09:00:00+05:30"
   ],
   "need_render": [
-    "20261123-1330-kgf",
     "20261123-1600-vikram",
     "20261123-1830-pathaan",
     "20261123-2030-oshinoko2",
     "20261123-2230-oppenheimer",
-    "20261124-0630-violetevergarden"
+    "20261124-0630-violetevergarden",
+    "20261124-0900-thebatman"
   ],
   "backup_pool_size": 52,
   "backup_pool_preuploaded": 52,
@@ -109,6 +110,7 @@
     "stock-aotfinal-05",
     "stock-missionimpossible-02",
     "stock-cyberpunkedgerunners-06",
+    "20261123-0900-weatheringwithyou",
     "stock-avatarfireandash-01",
     "stock-zootopia2-01",
     "20261122-0900-dragonballdaima",
@@ -133,11 +135,11 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 6,
+  "stock_ready": 5,
   "stock_pending": 24,
-  "stock_used": 35,
+  "stock_used": 36,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": false
 }
