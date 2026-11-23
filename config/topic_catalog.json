@@ -2385,6 +2385,29 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "johnwick",
+      "pillar": "hollywood",
+      "words": "JOHN WICK",
+      "hook": "Why everyone feared the Baba Yaga",
+      "title": "Why everyone feared the Baba Yaga | John Wick nightclub rampage | #edit",
+      "description": "Why everyone feared the Baba Yaga. From official John Wick clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #johnwick #keanureeves #action",
+      "tags": [
+        "johnwick",
+        "keanureeves",
+        "action",
+        "hollywood",
+        "johnwickedit",
+        "movieclips"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=01nJH1Mek6I",
+      "scene_assets": [
+        "johnwick_scene1_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
