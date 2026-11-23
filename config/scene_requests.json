@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-23 07:04 IST",
+ "generated_at": "2026-11-23 08:52 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 94,
+ "release_scene_clips": 95,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -424,6 +424,45 @@
     "trending",
     "maomao",
     "jinshi"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "arcane2",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-arcane2",
+   "pillar": "anime",
+   "words": "ARCANE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ARCANE fight scene official clip",
+    "ARCANE best scene official clip",
+    "ARCANE official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Still Watching Netflix"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+   "missing_assets": [],
+   "on_release": [
+    "arcane2_scene1_h264.mp4"
+   ],
+   "hook": "Jinx never wanted this war",
+   "title": "Jinx never wanted this war | Arcane | #edit",
+   "tags": [
+    "arcane2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "jinx"
    ],
    "market": "US/UK"
   },
@@ -1214,6 +1253,46 @@
     "shorts",
     "trending",
     "kafka"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "lazarus",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-lazarus",
+   "pillar": "anime",
+   "words": "LAZARUS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "LAZARUS fight scene official clip",
+    "LAZARUS best scene official clip",
+    "LAZARUS official clip"
+   ],
+   "official_channels": [
+    "Adult Swim",
+    "Adult Swim Europe",
+    "MAPPA CHANNEL"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
+   "missing_assets": [],
+   "on_release": [
+    "lazarus_scene1_h264.mp4"
+   ],
+   "hook": "Axel has thirty days to run",
+   "title": "Axel has thirty days to run | Lazarus | #edit",
+   "tags": [
+    "lazarus",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "axel"
    ],
    "market": "US/UK"
   },

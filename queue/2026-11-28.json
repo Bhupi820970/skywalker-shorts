@@ -33,6 +33,37 @@
   "fallback_asset": "dhoom2_scene1_h264.mp4"
  },
  {
+  "id": "20261128-0900-johnwick",
+  "slot": "2026-11-28T09:00:00+05:30",
+  "pillar": "hollywood",
+  "source_url": "https://www.youtube.com/watch?v=01nJH1Mek6I",
+  "template": "whitebar",
+  "hook": "Why everyone feared the Baba Yaga",
+  "words": "JOHN WICK",
+  "title": "Why everyone feared the Baba Yaga | John Wick nightclub rampage | #edit",
+  "description": "Why everyone feared the Baba Yaga. From official John Wick clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #johnwick #keanureeves #action",
+  "tags": [
+   "johnwick",
+   "keanureeves",
+   "action",
+   "hollywood",
+   "johnwickedit",
+   "movieclips"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/johnwick_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/johnwick_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "johnwick_scene1_h264.mp4"
+ },
+ {
   "id": "20261128-1330-leomovie",
   "slot": "2026-11-28T13:30:00+05:30",
   "pillar": "south",
