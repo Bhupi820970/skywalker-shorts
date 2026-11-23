@@ -1,0 +1,8 @@
+{
+  "id": "20261123-1830-pathaan",
+  "status": "failed",
+  "detail": "render job ended with no result JSON (timed out or cancelled mid-render)",
+  "at": "2026-11-23T10:21:00Z",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45145004223",
+  "last_error": "no result JSON; job cancelled or timed out"
+}
