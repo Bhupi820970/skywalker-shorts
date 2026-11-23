@@ -295,5 +295,7 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-weatheringwithyou-15",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "publish_blocked": "repeat: same hook already posted (20261113-1230-war2): 'watch the last two seconds'",
+  "publish_blocked_at": "2026-11-23 12:54 IST"
 }
