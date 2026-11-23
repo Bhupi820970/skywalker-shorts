@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23 06:28 IST",
+ "generated_at": "2026-11-23 07:04 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 94,
@@ -68,7 +68,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "jujutsukaisencullinggame_scene2_h264.mp4"
+   ],
    "hook": "Yuji has nothing left to lose",
    "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
    "tags": [
@@ -1216,46 +1218,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "lazarus",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-lazarus",
-   "pillar": "anime",
-   "words": "LAZARUS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "LAZARUS fight scene official clip",
-    "LAZARUS best scene official clip",
-    "LAZARUS official clip"
-   ],
-   "official_channels": [
-    "Adult Swim",
-    "Adult Swim Europe",
-    "MAPPA CHANNEL"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
-   "missing_assets": [],
-   "on_release": [
-    "lazarus_scene1_h264.mp4"
-   ],
-   "hook": "Axel has thirty days to run",
-   "title": "Axel has thirty days to run | Lazarus | #edit",
-   "tags": [
-    "lazarus",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "axel"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "mashle",
    "slot": "9999",
    "for": "backup_pool",
@@ -1376,6 +1338,43 @@
     "shorts",
     "trending",
     "deku"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "mononoke",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-mononoke",
+   "pillar": "anime",
+   "words": "MONONOKE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "MONONOKE fight scene official clip",
+    "MONONOKE best scene official clip",
+    "MONONOKE official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime",
+    "Netflix Philippines"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=xpJWvpumgxs",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "The Medicine Seller sees everything",
+   "title": "The Medicine Seller sees everything | Mononoke | #edit",
+   "tags": [
+    "mononoke",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "medicineseller"
    ],
    "market": "US/UK"
   },
@@ -1565,8 +1564,7 @@
     "sakamotodays_scene3_h264.mp4"
    ],
    "on_release": [
-    "sakamotodays_scene1_h264.mp4",
-    "sakamotodays_scene2_h264.mp4"
+    "sakamotodays_scene1_h264.mp4"
    ],
    "hook": "Retired assassin still hits hardest",
    "title": "Retired assassin still hits hardest | Sakamoto Days | #edit",
@@ -1747,45 +1745,6 @@
     "shorts",
     "trending",
     "anya"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "undeadunluck",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-undeadunluck",
-   "pillar": "anime",
-   "words": "UNDEAD UNLUCK",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "UNDEAD UNLUCK fight scene official clip",
-    "UNDEAD UNLUCK best scene official clip",
-    "UNDEAD UNLUCK official clip"
-   ],
-   "official_channels": [
-    "Anime! on TMS Official Channel",
-    "vizmedia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
-   "missing_assets": [],
-   "on_release": [
-    "undeadunluck_scene1_h264.mp4"
-   ],
-   "hook": "One touch changed his life",
-   "title": "One touch changed his life | Undead Unluck | #edit",
-   "tags": [
-    "undeadunluck",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "andy"
    ],
    "market": "US/UK"
   },

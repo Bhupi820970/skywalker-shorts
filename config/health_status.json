@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-23 06:27 IST",
-  "slots_checked": 8,
+  "at": "2026-11-23 07:04 IST",
+  "slots_checked": 9,
   "ready": [],
   "short": [
     "2026-11-23T06:30:00+05:30",
@@ -10,15 +10,16 @@
     "2026-11-23T16:00:00+05:30",
     "2026-11-23T18:30:00+05:30",
     "2026-11-23T20:30:00+05:30",
-    "2026-11-23T22:30:00+05:30"
+    "2026-11-23T22:30:00+05:30",
+    "2026-11-24T06:30:00+05:30"
   ],
   "need_render": [
-    "20261123-1130-jujutsukaisencullinggame",
     "20261123-1330-kgf",
     "20261123-1600-vikram",
     "20261123-1830-pathaan",
     "20261123-2030-oshinoko2",
-    "20261123-2230-oppenheimer"
+    "20261123-2230-oppenheimer",
+    "20261124-0630-violetevergarden"
   ],
   "backup_pool_size": 52,
   "backup_pool_preuploaded": 52,
@@ -75,6 +76,7 @@
     "stock-bluegiant-02",
     "20261116-1830-nobody2",
     "20261114-1830-predatorbadlands",
+    "20261123-0630-weatheringwithyou",
     "stock-weatheringwithyou-07",
     "stock-dandadanevil-01",
     "stock-haikyuudumpster-01",
@@ -132,11 +134,11 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 7,
+  "stock_ready": 6,
   "stock_pending": 23,
-  "stock_used": 34,
+  "stock_used": 35,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": false
 }
