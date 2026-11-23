@@ -271,5 +271,56 @@
   ],
   "fallback_release": "sources",
   "fallback_asset": "oppenheimer_scene1_h264.mp4"
+ },
+ {
+  "id": "20261123-2230-cyberpunkedgerunners",
+  "slot": "2026-11-23T22:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+  "alt_source_urls": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4"
+  ],
+  "scene_assets": [
+   "cyberpunkedgerunners_scene2_h264.mp4",
+   "cyberpunkedgerunners_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "cyberpunkedgerunners_scene2_h264.mp4",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
+  ],
+  "template": "whitebar",
+  "hook": "This is the part they left out",
+  "words": "EDGERUNNERS",
+  "title": "This is the part they left out | EDGERUNNERS | #edit",
+  "description": "This is the part they left out. Official scene clip. Edit by Skywalker.",
+  "tags": [
+   "cyberpunkedgerunners",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "david",
+   "part3"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "link_request": true,
+  "demo": false,
+  "no_publish": false,
+  "series_part": 3,
+  "series_parent": "20261120-1830-cyberpunkedgerunners",
+  "series_slug": "cyberpunkedgerunners",
+  "avoid_sources": [
+   "cyberpunkedgerunners_scene1_h264.mp4"
+  ]
  }
 ]

@@ -1,214 +1,214 @@
 {
-  "week_of": "2026-11-16",
-  "through": "2026-11-22",
-  "at": "2026-11-22 17:00 IST",
+  "week_of": "2026-11-17",
+  "through": "2026-11-23",
+  "at": "2026-11-23 18:22 IST",
   "lookback_days": 7,
-  "median_views": 1048.0,
-  "n": 42,
+  "median_views": 1075.0,
+  "n": 32,
   "top_titles": [
     {
       "name": "arcane",
-      "views": 6135.0,
-      "likes": 296.0,
+      "views": 12700.0,
+      "likes": 547.0,
       "title": "Jinx finally loses her mind #arcane #jinx #leagueoflegends",
       "slug": "arcane"
     },
     {
-      "name": "twisters",
-      "views": 5220.0,
-      "likes": 92.0,
-      "title": "Glen Powell's aura in Twisters is unreal #twisters #glenpowell #action",
-      "slug": "twisters"
+      "name": "dandadan",
+      "views": 4812.0,
+      "likes": 91.0,
+      "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
+      "slug": "dandadan"
     },
     {
       "name": "princessmononoke",
-      "views": 3793.0,
+      "views": 4014.0,
       "likes": 63.0,
       "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
       "slug": "princessmononoke"
     },
     {
-      "name": "dandadan",
-      "views": 2584.0,
-      "likes": 56.0,
-      "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
-      "slug": "dandadan"
-    },
-    {
       "name": "cyberpunkedgerunners",
-      "views": 2256.0,
-      "likes": 31.0,
+      "views": 2638.0,
+      "likes": 36.0,
       "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
       "slug": "cyberpunkedgerunners"
     },
     {
       "name": "animal",
-      "views": 1407.0,
+      "views": 1408.0,
       "likes": 27.0,
       "title": "Ranbir makes them regret everything #animal #ranbirkapoor #bollywood",
       "slug": "animal"
     },
     {
-      "name": "toystory5",
-      "views": 1215.0,
-      "likes": 29.0,
-      "title": "POV: You get replaced by an iPad in Toy Story 5 #toystory5 #woody #animation",
-      "slug": "toystory5"
+      "name": "jujutsukaisen",
+      "views": 1156.0,
+      "likes": 25.0,
+      "title": "Why Higuruma could not look away #jujutsukaisen #higuruma #anime",
+      "slug": "jujutsukaisen"
     },
     {
-      "name": "alienromulus",
-      "views": 1085.0,
-      "likes": 16.0,
-      "title": "The moment Rain realized they were trapped #alienromulus #caileespaeny #horror",
-      "slug": "alienromulus"
+      "name": "lazarus",
+      "views": 1089.0,
+      "likes": 14.0,
+      "title": "Nobody expected Axel to be this calm #lazarus #axel #anime",
+      "slug": "lazarus"
+    },
+    {
+      "name": "nobody2",
+      "views": 1066.0,
+      "likes": 12.0,
+      "title": "Hutch Mansell aura in this scene is unreal #nobody2 #hutchmansell #action",
+      "slug": "nobody2"
     }
   ],
   "top_hooks": [
     {
       "name": "Jinx finally loses her mind",
-      "views": 6135.0,
-      "likes": 296.0,
+      "views": 12700.0,
+      "likes": 547.0,
       "title": "Jinx finally loses her mind #arcane #jinx #leagueoflegends",
       "slug": "arcane"
     },
     {
-      "name": "He chases what everyone else fears",
-      "views": 5220.0,
-      "likes": 92.0,
-      "title": "Glen Powell's aura in Twisters is unreal #twisters #glenpowell #action",
-      "slug": "twisters"
+      "name": "They realized it together",
+      "views": 4812.0,
+      "likes": 91.0,
+      "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
+      "slug": "dandadan"
     },
     {
       "name": "Ashitaka walked through an entire army",
-      "views": 3793.0,
+      "views": 4014.0,
       "likes": 63.0,
       "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
       "slug": "princessmononoke"
     },
     {
-      "name": "They realized it together",
-      "views": 2584.0,
-      "likes": 56.0,
-      "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
-      "slug": "dandadan"
-    },
-    {
       "name": "David wanted to be a legend",
-      "views": 2256.0,
-      "likes": 31.0,
+      "views": 2638.0,
+      "likes": 36.0,
       "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
       "slug": "cyberpunkedgerunners"
     },
     {
       "name": "Okarun finally unleashes his true power",
-      "views": 1621.0,
+      "views": 1623.0,
       "likes": 21.0,
       "title": "Okarun finally loses control of his power #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
+      "name": "They found each other",
+      "views": 1515.0,
+      "likes": 45.0,
+      "title": "Why Okarun cannot look away from Momo #dandadan #momoayase #romance",
+      "slug": "dandadan"
+    },
+    {
       "name": "Why Okarun cannot stop watching her",
-      "views": 1438.0,
+      "views": 1440.0,
       "likes": 31.0,
       "title": "Why Okarun cannot stop watching her #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
-      "name": "Ranbir faces his father's enemies",
-      "views": 1407.0,
-      "likes": 27.0,
-      "title": "Ranbir makes them regret everything #animal #ranbirkapoor #bollywood",
-      "slug": "animal"
+      "name": "Okarun is struggling with this order",
+      "views": 1424.0,
+      "likes": 51.0,
+      "title": "When the maid cafe order gets weird #dandadan #okarun #anime",
+      "slug": "dandadan"
     }
   ],
   "top_songs": [
     {
       "name": "pr_edw864ulya.mp3",
-      "views": 6135.0,
-      "likes": 296.0,
+      "views": 12700.0,
+      "likes": 547.0,
       "title": "Jinx finally loses her mind #arcane #jinx #leagueoflegends",
       "slug": "arcane"
     },
     {
-      "name": "sw_worthnothingfeatolivertr.mp3",
-      "views": 5220.0,
-      "likes": 92.0,
-      "title": "Glen Powell's aura in Twisters is unreal #twisters #glenpowell #action",
-      "slug": "twisters"
+      "name": "sw_powergloveplaybackvinylr.mp3",
+      "views": 4812.0,
+      "likes": 91.0,
+      "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
+      "slug": "dandadan"
     },
     {
       "name": "sw_sentemaisoverslowed.mp3",
-      "views": 3793.0,
+      "views": 4014.0,
       "likes": 63.0,
       "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
       "slug": "princessmononoke"
     },
     {
-      "name": "sw_powergloveplaybackvinylr.mp3",
-      "views": 2584.0,
-      "likes": 56.0,
-      "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
-      "slug": "dandadan"
-    },
-    {
       "name": "sw_aura1hourauramusicplayli.mp3",
-      "views": 2256.0,
-      "likes": 31.0,
+      "views": 2638.0,
+      "likes": 36.0,
       "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
       "slug": "cyberpunkedgerunners"
     },
     {
+      "name": "pr_ytsearch1joehisaishionesummersdaypiano.mp3",
+      "views": 1515.0,
+      "likes": 45.0,
+      "title": "Why Okarun cannot look away from Momo #dandadan #momoayase #romance",
+      "slug": "dandadan"
+    },
+    {
       "name": "sw_phnk2.mp3",
-      "views": 1438.0,
+      "views": 1440.0,
       "likes": 31.0,
       "title": "Why Okarun cannot stop watching her #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
-      "name": "sw_metamorphosis.mp3",
-      "views": 1257.0,
-      "likes": 23.0,
-      "title": "The moment Okarun unleashed his full power in Dan Da Dan #dandadan #okarun #animeedit",
+      "name": "pr_gl6beebcuu.mp3",
+      "views": 1424.0,
+      "likes": 51.0,
+      "title": "When the maid cafe order gets weird #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
-      "name": "pr_gl6beebcuu.mp3",
-      "views": 1252.0,
-      "likes": 44.0,
-      "title": "When the maid cafe order gets weird #dandadan #okarun #anime",
+      "name": "sw_metamorphosis.mp3",
+      "views": 1260.0,
+      "likes": 23.0,
+      "title": "The moment Okarun unleashed his full power in Dan Da Dan #dandadan #okarun #animeedit",
       "slug": "dandadan"
     }
   ],
   "weights": {
     "titles": {
-      "arcane": 10.7147,
-      "twisters": 10.1469,
-      "princessmononoke": 9.6968,
-      "dandadan": 9.2725,
-      "cyberpunkedgerunners": 8.9348,
-      "animal": 8.4162,
-      "toystory5": 8.2937,
-      "alienromulus": 7.9819
+      "arcane": 11.6566,
+      "dandadan": 10.0617,
+      "princessmononoke": 9.7534,
+      "cyberpunkedgerunners": 9.142,
+      "animal": 8.4169,
+      "jujutsukaisen": 8.1939,
+      "lazarus": 7.9418,
+      "nobody2": 7.8703
     },
     "hooks": {
-      "Jinx finally loses her mind": 10.7147,
-      "He chases what everyone else fears": 10.1469,
-      "Ashitaka walked through an entire army": 9.6968,
-      "They realized it together": 9.2725,
-      "David wanted to be a legend": 8.9348,
-      "Okarun finally unleashes his true power": 8.4733,
-      "Why Okarun cannot stop watching her": 8.4847,
-      "Ranbir faces his father's enemies": 8.4162
+      "Jinx finally loses her mind": 11.6566,
+      "They realized it together": 10.0617,
+      "Ashitaka walked through an entire army": 9.7534,
+      "David wanted to be a legend": 9.142,
+      "Okarun finally unleashes his true power": 8.4745,
+      "They found each other": 8.6639,
+      "Why Okarun cannot stop watching her": 8.4861,
+      "Okarun is struggling with this order": 8.6449
     },
     "songs": {
-      "pr_edw864ulya.mp3": 10.7147,
-      "sw_worthnothingfeatolivertr.mp3": 10.1469,
-      "sw_sentemaisoverslowed.mp3": 9.6968,
-      "sw_powergloveplaybackvinylr.mp3": 9.2725,
-      "sw_aura1hourauramusicplayli.mp3": 8.9348,
-      "sw_phnk2.mp3": 8.4847,
-      "sw_metamorphosis.mp3": 8.2496,
-      "pr_gl6beebcuu.mp3": 8.4656
+      "pr_edw864ulya.mp3": 11.6566,
+      "sw_powergloveplaybackvinylr.mp3": 10.0617,
+      "sw_sentemaisoverslowed.mp3": 9.7534,
+      "sw_aura1hourauramusicplayli.mp3": 9.142,
+      "pr_ytsearch1joehisaishionesummersdaypiano.mp3": 8.6639,
+      "sw_phnk2.mp3": 8.4861,
+      "pr_gl6beebcuu.mp3": 8.6449,
+      "sw_metamorphosis.mp3": 8.252
     }
   }
 }
