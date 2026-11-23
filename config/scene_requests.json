@@ -1,50 +1,10 @@
 {
- "generated_at": "2026-11-23 15:15 IST",
+ "generated_at": "2026-11-23 18:56 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 95,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "jujutsukaisencullinggame",
-   "slot": "2026-11-23T11:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261123-1130-jujutsukaisencullinggame",
-   "pillar": "anime",
-   "words": "JUJUTSU KAISEN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "JUJUTSU KAISEN fight scene official clip",
-    "JUJUTSU KAISEN best scene official clip",
-    "JUJUTSU KAISEN official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "TOHO animation チャンネル and 2 more"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
-   "missing_assets": [],
-   "on_release": [
-    "jujutsukaisencullinggame_scene2_h264.mp4"
-   ],
-   "hook": "Yuji has nothing left to lose",
-   "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
-   "tags": [
-    "jujutsukaisencullinggame",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "yuji"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "vikram",
    "slot": "2026-11-23T16:00:00+05:30",
@@ -151,6 +111,46 @@
     "trending",
     "aqua",
     "ruby"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "cyberpunkedgerunners",
+   "slot": "2026-11-23T22:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261123-2230-cyberpunkedgerunners",
+   "pillar": "anime",
+   "words": "EDGERUNNERS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "EDGERUNNERS fight scene official clip",
+    "EDGERUNNERS best scene official clip",
+    "EDGERUNNERS official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+   "missing_assets": [],
+   "on_release": [
+    "cyberpunkedgerunners_scene1_h264.mp4"
+   ],
+   "hook": "This is the part they left out",
+   "title": "This is the part they left out | EDGERUNNERS | #edit",
+   "tags": [
+    "cyberpunkedgerunners",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david",
+    "part3"
    ],
    "market": "US/UK"
   },
@@ -380,6 +380,84 @@
     "trending",
     "hina",
     "hodaka"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "haikyuudumpster",
+   "slot": "2026-11-25T16:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261125-1600-haikyuudumpster",
+   "pillar": "anime",
+   "words": "HAIKYU",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "HAIKYU fight scene official clip",
+    "HAIKYU best scene official clip",
+    "HAIKYU official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Sony Pictures New Zealand Official",
+    "TOHO animation チャンネル"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "The rematch everyone waited for",
+   "title": "The rematch everyone waited for | Haikyu | #edit",
+   "tags": [
+    "haikyuudumpster",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "hinata"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "witchhatatelier",
+   "slot": "2026-11-25T18:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261125-1830-witchhatatelier",
+   "pillar": "anime",
+   "words": "WITCH HAT ATELIER",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "WITCH HAT ATELIER fight scene official clip",
+    "WITCH HAT ATELIER best scene official clip",
+    "WITCH HAT ATELIER official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "TVアニメ「とんがり帽子のアトリエ」公式 and 2 more"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
+   "missing_assets": [],
+   "on_release": [
+    "witchhatatelier_scene2_h264.mp4"
+   ],
+   "hook": "Coco drew her first spell",
+   "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
+   "tags": [
+    "witchhatatelier",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "coco"
    ],
    "market": "US/UK"
   },
@@ -617,45 +695,6 @@
     "shorts",
     "trending",
     "mahito"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "cyberpunkedgerunners",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-cyberpunkedgerunners",
-   "pillar": "anime",
-   "words": "EDGERUNNERS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "EDGERUNNERS fight scene official clip",
-    "EDGERUNNERS best scene official clip",
-    "EDGERUNNERS official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
-   "missing_assets": [],
-   "on_release": [
-    "cyberpunkedgerunners_scene1_h264.mp4"
-   ],
-   "hook": "David wanted to be a legend",
-   "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
-   "tags": [
-    "cyberpunkedgerunners",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "david"
    ],
    "market": "US/UK"
   },
@@ -1021,44 +1060,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "haikyuudumpster",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-haikyuudumpster",
-   "pillar": "anime",
-   "words": "HAIKYU",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "HAIKYU fight scene official clip",
-    "HAIKYU best scene official clip",
-    "HAIKYU official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Sony Pictures New Zealand Official",
-    "TOHO animation チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "The rematch everyone waited for",
-   "title": "The rematch everyone waited for | Haikyu | #edit",
-   "tags": [
-    "haikyuudumpster",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "hinata"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "hellsparadise",
    "slot": "9999",
    "for": "backup_pool",
@@ -1167,6 +1168,46 @@
     "animeedit",
     "anime",
     "gojo"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "jujutsukaisencullinggame",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-jujutsukaisencullinggame",
+   "pillar": "anime",
+   "words": "JUJUTSU KAISEN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "JUJUTSU KAISEN fight scene official clip",
+    "JUJUTSU KAISEN best scene official clip",
+    "JUJUTSU KAISEN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "TOHO animation チャンネル and 2 more"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
+   "missing_assets": [],
+   "on_release": [
+    "jujutsukaisencullinggame_scene2_h264.mp4"
+   ],
+   "hook": "Yuji has nothing left to lose",
+   "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+   "tags": [
+    "jujutsukaisencullinggame",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "yuji"
    ],
    "market": "US/UK"
   },
@@ -1810,7 +1851,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "undeadunluck_scene1_h264.mp4"
+   ],
    "hook": "One touch changed his life",
    "title": "One touch changed his life | Undead Unluck | #edit",
    "tags": [
@@ -1940,49 +1983,6 @@
     "shorts",
     "trending",
     "sakura"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "witchhatatelier",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-witchhatatelier",
-   "pillar": "anime",
-   "words": "WITCH HAT ATELIER",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "WITCH HAT ATELIER fight scene official clip",
-    "WITCH HAT ATELIER best scene official clip",
-    "WITCH HAT ATELIER official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "TVアニメ「とんがり帽子のアトリエ」公式 and 2 more"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
-   "missing_assets": [
-    "witchhatatelier_scene1_h264.mp4",
-    "witchhatatelier_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "witchhatatelier_scene2_h264.mp4"
-   ],
-   "hook": "Coco drew her first spell",
-   "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
-   "tags": [
-    "witchhatatelier",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "coco"
    ],
    "market": "US/UK"
   },
