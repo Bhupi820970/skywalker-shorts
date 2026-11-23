@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23 05:30 IST",
+ "generated_at": "2026-11-23 06:28 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 94,
@@ -1773,7 +1773,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "undeadunluck_scene1_h264.mp4"
+   ],
    "hook": "One touch changed his life",
    "title": "One touch changed his life | Undead Unluck | #edit",
    "tags": [

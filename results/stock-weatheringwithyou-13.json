@@ -302,5 +302,9 @@
       "reason": "gemini score 6.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "stock_used": true,
+  "assigned_slot": "2026-11-23T06:30:00+05:30",
+  "assigned_result": "20261123-0630-weatheringwithyou",
+  "used_at": "2026-11-23 06:27 IST"
 }
