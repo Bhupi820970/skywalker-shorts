@@ -1,0 +1,369 @@
+{
+  "id": "20261123-2030-oshinoko2",
+  "status": "retry_queued",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-23 14:06 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45130854215",
+  "slot": "2026-11-23T20:30:00+05:30",
+  "title": "Momo never lets him go | Dandadan | #edit",
+  "hook": "Momo never lets him go",
+  "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+  "tags": [
+    "dandadan2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "momo"
+  ],
+  "queue_meta": {
+    "hook": "Momo never lets him go",
+    "title": "Momo never lets him go | Dandadan | #edit",
+    "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+    "tags": [
+      "dandadan2",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "momo"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 7.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 7.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 8.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 9.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 19.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 20.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.1,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "DAN DA DAN",
+  "edit_format": "love",
+  "title_swaps": [
+    {
+      "from": "oshinoko2",
+      "from_words": "OSHI NO KO",
+      "to": "lazarus",
+      "to_words": "LAZARUS",
+      "reason": "download failed: release-only: 2 clip(s) not on the sources release yet (box fetches them)"
+    },
+    {
+      "from": "lazarus",
+      "from_words": "LAZARUS",
+      "to": "rrr",
+      "to_words": "RRR",
+      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
+    },
+    {
+      "from": "rrr",
+      "from_words": "RRR",
+      "to": "kgf",
+      "to_words": "KGF CHAPTER 2",
+      "reason": "download failed: no official scene clips for this topic"
+    },
+    {
+      "from": "kgf",
+      "from_words": "KGF CHAPTER 2",
+      "to": "dandadan2",
+      "to_words": "DAN DA DAN",
+      "reason": "download failed: no official scene clips for this topic"
+    }
+  ],
+  "swapped_from": "kgf",
+  "swapped_to": "dandadan2",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261123-2030-oshinoko2",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261123-2030-oshinoko2/render-20261123-2030-oshinoko2.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+  "music": "sw_memoryreboot.mp3",
+  "music_credit": "Song: VØJ, Narvent - Memory Reboot (Slowed)",
+  "description_final": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2\n\nMusic:\nSong: VØJ, Narvent - Memory Reboot (Slowed)",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261123-2030-oshinoko2/render-20261123-2030-oshinoko2-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 516,
+    "bar_h": 140,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1780,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "caption_y": 1069,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "love",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 22,
+      "src_start": 47.714,
+      "dur": 0.712
+    },
+    {
+      "id": 40,
+      "src_start": 106.356,
+      "dur": 2.609
+    },
+    {
+      "id": 46,
+      "src_start": 116.825,
+      "dur": 2.5
+    },
+    {
+      "id": 55,
+      "src_start": 160.994,
+      "dur": 2.504
+    },
+    {
+      "id": 50,
+      "src_start": 143.601,
+      "dur": 4.145
+    },
+    {
+      "id": 26001,
+      "src_start": 53.352,
+      "dur": 2.353
+    },
+    {
+      "id": 16,
+      "src_start": 38.038,
+      "dur": 0.919
+    },
+    {
+      "id": 12,
+      "src_start": 28.57,
+      "dur": 2.212
+    },
+    {
+      "id": 31,
+      "src_start": 76.493,
+      "dur": 1.503
+    },
+    {
+      "id": 52,
+      "src_start": 152.11,
+      "dur": 1.044
+    },
+    {
+      "id": 19,
+      "src_start": 42.714,
+      "dur": 1.6
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: release-only: 2 clip(s) not on the sources release yet (box fetches them)",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+      "music": "pr_miamorbxkqxaxeos.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: no official scene clips for this topic",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: no official scene clips for this topic",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "music": "sw_memoryreboot.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false,
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-23 13:12 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-23 13:27 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-23 13:42 IST"
+    }
+  ]
+}
