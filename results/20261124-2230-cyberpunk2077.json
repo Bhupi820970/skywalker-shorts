@@ -210,5 +210,15 @@
     "edit_mode": "music_only",
     "edit_format": "action",
     "blur_fill": true
-  }
+  },
+  "publish_via": "youtube",
+  "yt_video_id": "zTuEqlP9Hyc",
+  "yt_uploaded_at": "2026-11-24 19:56 IST",
+  "yt_privacy": "private",
+  "yt_publish_at": "2026-11-24T22:30:00+05:30",
+  "yt_status": "scheduled",
+  "youtube_url": "https://youtube.com/shorts/zTuEqlP9Hyc",
+  "buffer_post_id": "yt:zTuEqlP9Hyc",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-24T17:00:00.000Z"
 }
