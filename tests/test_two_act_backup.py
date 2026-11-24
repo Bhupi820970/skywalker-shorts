@@ -77,7 +77,7 @@ def test_two_act_src_end_covers_the_visible_window():
 
     scenes = [
         _sc(2, 4.0, 0.4, 10, 5, speech=0.8),
-        _sc(3, 4.4, 2.6, 12, 4, speech=0.7),
+        _sc(3, 4.4, 3.6, 12, 4, speech=0.7),  # footage runs past the last word (no gap = no dirty frames)
         _sc(10, 30.0, 4.0, 80, 20),
         _sc(11, 40.0, 4.0, 70, 18, gemini=7),
         _sc(12, 50.0, 4.0, 60, 16, gemini=7),

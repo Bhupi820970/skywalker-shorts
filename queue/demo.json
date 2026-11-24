@@ -1437,7 +1437,7 @@
       "test"
     ],
     "target_dur": 45,
-    "status": "queued",
+    "status": "retired",
     "market": "US/UK",
     "demo": true,
     "no_publish": true,
@@ -1445,7 +1445,8 @@
     "fallback_asset": "superman_trailer_h264.mp4",
     "content_kind": "trailer",
     "note": "Demo of the ref-matched dialogue edit (measured on ref1/ref2): Gemini-planned tense dialogue ending on a punch line, savage hook bar, Montserrat/Cinzel captions with Gemini accents, split-second silence + riser, ref flash, kick-cut montage with push-in + motion blur. no_publish: never Buffer/YouTube.",
-    "dialogue_edit": true
+    "dialogue_edit": true,
+    "retired_reason": "BIB-12: Superman source is trailer-only (trailers are never used), so it auto-swapped to unproven footage (Lazarus/KGF/Bleach) and never produced a video. Replaced by demo-v16-refmatch on proven Oppenheimer clips."
   },
   {
     "id": "demo-v15-hookonscene",
@@ -1467,7 +1468,7 @@
       "test"
     ],
     "target_dur": 45,
-    "status": "queued",
+    "status": "retired",
     "market": "US/UK",
     "demo": true,
     "no_publish": true,
@@ -1475,6 +1476,41 @@
     "fallback_asset": "superman_trailer_h264.mp4",
     "content_kind": "trailer",
     "note": "Demo of the hook bar flush to the top edge of the scene (David / cyberpsychosis look): blur fill above the white italic hook bar and below the uncropped plate, no gap and no grey top band. no_publish: never Buffer/YouTube.",
+    "dialogue_edit": true,
+    "retired_reason": "BIB-12: Superman source is trailer-only (trailers are never used), so it auto-swapped to unproven footage (Lazarus/KGF/Bleach) and never produced a video. Replaced by demo-v16-refmatch on proven Oppenheimer clips."
+  },
+  {
+    "id": "demo-v16-refmatch",
+    "pillar": "hollywood",
+    "source_url": "https://www.youtube.com/watch?v=MeIk9ap1u_E",
+    "sources": [
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4"
+    ],
+    "fallback_mp4": [
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "He built hell and called it peace",
+    "words": "OPPENHEIMER",
+    "title": "He built hell and called it peace | Oppenheimer | #edit",
+    "description": "DEMO (not published). He built hell and called it peace. From official Oppenheimer clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #oppenheimer #nolan",
+    "tags": [
+      "oppenheimer",
+      "nolan",
+      "cillianmurphy",
+      "edit",
+      "shorts",
+      "test"
+    ],
+    "target_dur": 45,
+    "status": "queued",
+    "market": "US/UK",
+    "demo": true,
+    "no_publish": true,
+    "fallback_release": "sources",
+    "fallback_asset": "oppenheimer_scene1_h264.mp4",
+    "content_kind": "best scene",
+    "note": "BIB-12 demo: ref-match dialogue edit (talk first, then the drop + kick-cut montage) with the hook bar flush on top of the scene. Proven official Oppenheimer scene clip (English dialogue, done render 2026-11-23). If it fails, demos only swap to proven footage. no_publish: never Buffer/YouTube.",
     "dialogue_edit": true
   }
 ]

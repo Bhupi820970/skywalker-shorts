@@ -1249,6 +1249,28 @@ def _spoken_lines(transcript: dict | None) -> list[dict]:
     return merged
 
 
+def _clean_span(ordered: list[dict], a: float, b: float, s0: float, e0: float,
+                gap_tol: float = 0.12) -> tuple[float, float] | None:
+    """Clamp [s0, e0] to the clean (non-skipped) scene coverage around the spoken words [a, b].
+
+    The played window never leaves the clean segment that holds the first word; None if that
+    segment misses more than 15% of the spoken words (the line would be cut off)."""
+    iv = sorted((float(x["start"]), float(x["end"])) for x in ordered if not x.get("skip"))
+    merged: list[list[float]] = []
+    for lo, hi in iv:
+        if merged and lo <= merged[-1][1] + gap_tol:
+            merged[-1][1] = max(merged[-1][1], hi)
+        else:
+            merged.append([lo, hi])
+    for lo, hi in merged:
+        if lo - gap_tol <= a < hi:
+            covered = min(b, hi) - max(a, lo)
+            if covered < 0.85 * max(0.01, b - a) - 1e-6:
+                return None
+            return max(s0, lo), min(e0, hi)
+    return None
+
+
 def act1_candidates(scenes: list[dict], transcript: dict | None) -> list[dict]:
     """Spoken lines that can be shown as clean footage. A line may run across trailer cuts as long as every
     scene it touches is clean (no card/logo/black), because act 1 plays the original continuous footage."""
@@ -1274,6 +1296,14 @@ def act1_candidates(scenes: list[dict], transcript: dict | None) -> list[dict]:
             e0 = min(e0, max(float(x["end"]) for x in inner))
         if e0 - s0 < 1.1:
             e0 = s0 + 1.1
+        # The line plays continuous source footage, so every frame of it must sit inside a
+        # clean scene. Holes punched by auto_qc (burned-in text), edge-guard trims and skipped
+        # cards are gaps in that coverage: a line over a gap would replay the dirty frames on
+        # every re-slice (runs 45424884518 / 45429384201 failed auto_qc 3x on the same 8 frames).
+        span = _clean_span(ordered, a, b, s0, e0)
+        if span is None:
+            continue
+        s0, e0 = span
         if e0 - s0 < 0.8 or e0 - s0 > 7.0:
             continue
         sc = next((x for x in touch if float(x["start"]) - 0.02 <= max(s0, a) < float(x["end"])), touch[0])
@@ -3924,8 +3954,16 @@ def apply_qc_blacklist(scenes: list[dict], edl: list[dict], blacklist: list[dict
             t0, t1 = float(it["t0"]), float(it["t1"])
             if t0 - 0.08 <= t < t1 + 0.08:
                 vis = max(0.01, float(it.get("visible") or (t1 - t0)))
-                src_t = float(it.get("src_start") or 0) + (t - t0)
-                punches.setdefault(it["scene"], []).append(float(src_t))
+                speed = float(it.get("speed") or 1.0) or 1.0
+                src_t = float(it.get("src_start") or 0) + (t - t0) * speed
+                # A dialogue (act-1) item can run across several source scenes: punch the
+                # scene that really contains this source frame, not just the first one.
+                sid = it["scene"]
+                holder = next((s for s in scenes if not s.get("skip")
+                               and float(s["start"]) - 0.02 <= src_t < float(s["end"]) + 0.02), None)
+                if holder is not None:
+                    sid = holder.get("id")
+                punches.setdefault(sid, []).append(float(src_t))
     marked = 0
     extras = []
     by_id = {s.get("id"): s for s in scenes}

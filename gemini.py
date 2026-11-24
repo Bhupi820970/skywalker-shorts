@@ -5,9 +5,12 @@
 - On 429 / quota / 503 for a key, try the next model, then the next key.
   The last key (and model) that worked is tried first on the next call.
   Missing or empty keys are skipped.
-- Per-video budget: at most GEMINI_MAX_CALLS (default 5) logical calls and
-  GEMINI_MAX_HTTP (default 10) HTTP requests, tracked in a small JSON file
-  (SKY_GEMINI_BUDGET_FILE) so every attempt/process of one render shares it.
+- On 429 the key cools ~60s (next key, same model); on 503 the model cools ~40s for
+  every key (next model). When everything is cooling the call waits it out (backoff).
+- Per-video budget, tracked in a small JSON file (SKY_GEMINI_BUDGET_FILE) shared by every
+  attempt/process of one render, split into pools so a logo-scan storm can never starve
+  the creative calls or QC: main (GEMINI_MAX_CALLS 5 / GEMINI_MAX_HTTP 16), logo
+  (GEMINI_LOGO_MAX_*), qc (GEMINI_QC_MAX_*); one call is capped at GEMINI_CALL_MAX_HTTP (10).
 - Every helper returns None on any failure; callers fall back to heuristics.
 """
 from __future__ import annotations
@@ -189,103 +192,192 @@ def _text_from_response(d: dict) -> str:
     return "".join(p.get("text", "") for p in d["candidates"][0]["content"]["parts"]).strip()
 
 
+# Budget pools. The dense logo scan and the QC verdict are hard safety gates, so they
+# get their OWN counters: a 429/503 storm during the logo scan can no longer eat the
+# creative budget (scene pick / hook / ref-match plan) or the QC call. Run
+# 45429384201 burned 81 HTTP requests on logo_scenes, so every later call said
+# "http budget exhausted" and the render shipped without Gemini planning or QC.
+POOLS = {
+    # pool: (calls env, calls default, http env, http default)
+    "main": ("GEMINI_MAX_CALLS", 5, "GEMINI_MAX_HTTP", 16),
+    "logo": ("GEMINI_LOGO_MAX_CALLS", 30, "GEMINI_LOGO_MAX_HTTP", 90),
+    "qc": ("GEMINI_QC_MAX_CALLS", 4, "GEMINI_QC_MAX_HTTP", 24),
+}
+COOL_KEY_S = 60.0     # 429 on a key: per-minute quota, rest that key ~1 min
+COOL_MODEL_S = 40.0   # 503 on a model: server overload is model-wide, not per key
+COOL_PAIR_S = 45.0    # timeout / bad JSON on one key+model
+
+
+def _pool(purpose: str) -> str:
+    p = purpose or ""
+    if p.startswith("logo"):
+        return "logo"
+    if p == "qc":
+        return "qc"
+    return "main"
+
+
+def _pool_counters(pool: str) -> tuple[str, str]:
+    return ("calls", "http") if pool == "main" else (f"{pool}_calls", f"{pool}_http")
+
+
+def _pool_caps(pool: str) -> tuple[int, int]:
+    ce, cd, he, hd = POOLS[pool]
+    return int(os.environ.get(ce, str(cd))), int(os.environ.get(he, str(hd)))
+
+
+def _cool(b: dict, kind: str, name: str, secs: float) -> None:
+    m = b.setdefault(kind, {})
+    m[name] = max(float(m.get(name) or 0), time.time() + secs)
+
+
+def _cooling(b: dict, kind: str, name: str, now: float | None = None) -> float:
+    """Seconds left on a cooldown (0 if free)."""
+    now = time.time() if now is None else now
+    return max(0.0, float((b.get(kind) or {}).get(name) or 0) - now)
+
+
+def _attempt_order(b: dict) -> list[tuple[str, str, str]]:
+    """(key_env, key_value, model) pairs to try: last-good first, cooled keys/models last.
+
+    429 cools a KEY (move to the next key, same good model); 503 cools a MODEL for every key
+    (move to the next model instead of hammering the overloaded one on all 7 keys)."""
+    now = time.time()
+    keys = _ordered_keys()
+    models = _ordered_models()
+    pairs = []
+    for mi, model in enumerate(models):
+        for ki, (name, key) in enumerate(keys):
+            wait = max(_cooling(b, "cool_keys", name, now), _cooling(b, "cool_models", model, now),
+                       _cooling(b, "cool_pairs", f"{name}|{model}", now))
+            # free pairs first; within free: walk keys on the best model before dropping to a worse model
+            pairs.append((wait > 0, wait, mi, ki, name, key, model))
+    pairs.sort(key=lambda p: (p[0], p[1] if p[0] else 0, p[2], p[3]))
+    return [(p[4], p[5], p[6]) for p in pairs]
+
+
+def _log(purpose: str, model: str, slot: str, **kw) -> None:
+    b = _budget()
+    b.setdefault("log", []).append({"purpose": purpose, "model": model, "key": slot, **kw})
+    _save_budget(b)
+
+
 def generate_json(prompt: str, images: list | None = None, *, purpose: str = "",
                   temperature: float = 0.6, timeout: float = 90.0) -> dict | list | None:
-    """One logical call. Returns parsed JSON or None (never raises)."""
+    """One logical call. Returns parsed JSON or None (never raises).
+
+    Budgets are per pool (main / logo / qc). One logical call is also capped
+    (GEMINI_CALL_MAX_HTTP, default 10) so a single 429/503 storm cannot drain the pool.
+    """
     if not available():
         return None
+    pool = _pool(purpose)
+    ck, hk = _pool_counters(pool)
+    mx_calls, mx_http = _pool_caps(pool)
+    per_call = int(os.environ.get("GEMINI_CALL_MAX_HTTP", "10"))
     b = _budget()
-    mx_calls = int(os.environ.get("GEMINI_MAX_CALLS", "5"))
-    mx_http = int(os.environ.get("GEMINI_MAX_HTTP", "16"))
-    # Logo guard is a hard safety check: never starved by the per-video budget.
-    if purpose.startswith("logo"):
-        mx_calls = mx_http = 10 ** 6
-    if b.get("calls", 0) >= mx_calls:
+    if b.get(ck, 0) >= mx_calls:
         if purpose == "qc" and int(b.get("qc_retry") or 0) > 0:
             b["qc_retry"] = int(b.get("qc_retry") or 0) - 1
             _save_budget(b)
             print(f"  gemini[qc]: reserved retry after budget; rotating key")
         else:
-            print(f"  gemini[{purpose}]: budget exhausted ({mx_calls} calls); using heuristics")
+            print(f"  gemini[{purpose}]: budget exhausted ({mx_calls} {pool} calls); using heuristics")
             return None
     parts = [{"text": prompt}] + [_img_part(p) for p in (images or []) if p and Path(p).exists()]
     body = json.dumps({
         "contents": [{"role": "user", "parts": parts}],
         "generationConfig": {"responseMimeType": "application/json", "temperature": temperature},
     }).encode()
-    b["calls"] = b.get("calls", 0) + 1
+    b[ck] = b.get(ck, 0) + 1
     _save_budget(b)
-    delay = 4.0
     deadline = time.time() + float(os.environ.get("GEMINI_DEADLINE_S", "300"))
-    for name, key in _ordered_keys():
+    sent = 0
+    dead_keys: set[str] = set()   # auth failures: never retried in this call
+    gone_models: set[str] = set()  # 404: model not served
+    tried: set[tuple[str, str]] = set()
+    while sent < per_call:
+        b = _budget()
+        order = [(n, k, m) for n, k, m in _attempt_order(b)
+                 if n not in dead_keys and m not in gone_models]
+        if not order:
+            print(f"  gemini[{purpose}]: no key/model left; using heuristics")
+            return None
+        # Prefer a pair not tried yet in this call; once all are tried, re-use the
+        # one whose cooldown ends first (after waiting it out = real backoff).
+        fresh = [x for x in order if (x[0], x[2]) not in tried]
+        name, key, model = (fresh or order)[0]
+        wait = max(_cooling(b, "cool_keys", name), _cooling(b, "cool_models", model),
+                   _cooling(b, "cool_pairs", f"{name}|{model}"))
+        if wait > 0:
+            if time.time() + wait > deadline:
+                print(f"  gemini[{purpose}]: every key/model cooling down past the deadline; using heuristics")
+                return None
+            print(f"  gemini[{purpose}]: all keys/models cooling; backoff {wait:.0f}s")
+            time.sleep(min(wait, 60.0))
+        if time.time() > deadline:
+            print(f"  gemini[{purpose}]: deadline reached; using heuristics")
+            return None
+        b = _budget()
+        if b.get(hk, 0) >= mx_http:
+            print(f"  gemini[{purpose}]: {pool} http budget exhausted")
+            return None
+        b[hk] = b.get(hk, 0) + 1
+        _save_budget(b)
+        sent += 1
+        tried.add((name, model))
         slot = _key_slot(name)
-        for model in _ordered_models():
-            for _try in range(2):
-                if time.time() > deadline:
-                    print(f"  gemini[{purpose}]: deadline reached; using heuristics")
-                    return None
+        t0 = time.time()
+        result = _post(model, key, body, timeout)
+        kind = result[0]
+        if kind == "ok":
+            try:
+                txt = _text_from_response(result[1])
+                if txt.startswith("```"):
+                    txt = txt.strip("`").split("\n", 1)[-1].rsplit("```", 1)[0]
+                out = json.loads(txt)
+            except Exception as e:
+                kind, result = "err", ("err", type(e).__name__)
+            else:
                 b = _budget()
-                if b.get("http", 0) >= mx_http:
-                    print(f"  gemini[{purpose}]: http budget exhausted")
-                    return None
-                b["http"] = b.get("http", 0) + 1
+                b["good_model"] = model
+                b["good_key"] = name  # env name only, never the secret
                 _save_budget(b)
-                t0 = time.time()
-                result = _post(model, key, body, timeout)
-                kind = result[0]
-                if kind == "ok":
-                    try:
-                        txt = _text_from_response(result[1])
-                        if txt.startswith("```"):
-                            txt = txt.strip("`").split("\n", 1)[-1].rsplit("```", 1)[0]
-                        out = json.loads(txt)
-                    except Exception as e:
-                        result = ("err", type(e).__name__)
-                        kind = "err"
-                    else:
-                        b = _budget()
-                        b["good_model"] = model
-                        b["good_key"] = name  # env name only, never the secret
-                        b.setdefault("log", []).append({
-                            "purpose": purpose, "model": model, "key": slot,
-                            "s": round(time.time() - t0, 1), "ok": True,
-                        })
-                        _save_budget(b)
-                        print(f"  gemini[{purpose}]: ok via {slot}/{model} in {time.time() - t0:.1f}s")
-                        return out
-                    # parse failed: fall through to retry/backoff
-                if kind == "http":
-                    code, raw = result[1], result[2]
-                    msg = f"HTTP {code}"
-                    if code == 400:
-                        print(f"  gemini[{purpose}]: {msg} (request); giving up")
-                        return None
-                    if code in (401, 403) and not _quota_error(code, raw):
-                        print(f"  gemini[{purpose}]: {slot} {msg} (auth); next key")
-                        b = _budget()
-                        b.setdefault("log", []).append({"purpose": purpose, "model": model, "key": slot, "err": msg})
-                        _save_budget(b)
-                        model = None  # leave inner loops
-                        break
-                    if code == 404:
-                        break  # model gone; next model, same key
-                    if _quota_error(code, raw):
-                        b = _budget()
-                        b.setdefault("log", []).append({"purpose": purpose, "model": model, "key": slot, "err": msg})
-                        _save_budget(b)
-                        print(f"  gemini[{purpose}]: {slot}/{model} rate-limited ({msg}); next model/key")
-                        time.sleep(2)
-                        break  # next model; after models, next key
-                else:
-                    msg = result[1]
-                b = _budget()
-                b.setdefault("log", []).append({"purpose": purpose, "model": model, "key": slot, "err": msg})
-                _save_budget(b)
-                print(f"  gemini[{purpose}]: {slot}/{model} failed ({msg}); backoff {delay:.0f}s")
-                time.sleep(delay)
-                delay = min(delay * 2, 30)
-            if model is None:
-                break  # auth failure: next key
+                _log(purpose, model, slot, s=round(time.time() - t0, 1), ok=True)
+                print(f"  gemini[{purpose}]: ok via {slot}/{model} in {time.time() - t0:.1f}s")
+                return out
+        if kind == "http":
+            code, raw = result[1], result[2]
+            msg = f"HTTP {code}"
+            _log(purpose, model, slot, err=msg)
+            if code == 400:
+                print(f"  gemini[{purpose}]: {msg} (request); giving up")
+                return None
+            b = _budget()
+            if code in (401, 403) and not _quota_error(code, raw):
+                print(f"  gemini[{purpose}]: {slot} {msg} (auth); next key")
+                dead_keys.add(name)
+                continue
+            if code == 404:
+                gone_models.add(model)
+                continue
+            if code == 503:
+                _cool(b, "cool_models", model, COOL_MODEL_S)
+                print(f"  gemini[{purpose}]: {slot}/{model} overloaded ({msg}); next model")
+            else:  # 429 / quota 403: this key is out of quota for now
+                _cool(b, "cool_keys", name, COOL_KEY_S)
+                print(f"  gemini[{purpose}]: {slot}/{model} rate-limited ({msg}); next key")
+            _save_budget(b)
+            time.sleep(1.0)
+            continue
+        msg = result[1]
+        _log(purpose, model, slot, err=msg)
+        b = _budget()
+        _cool(b, "cool_pairs", f"{name}|{model}", COOL_PAIR_S)
+        _save_budget(b)
+        print(f"  gemini[{purpose}]: {slot}/{model} failed ({msg}); next key/model")
+        time.sleep(1.0)
+    print(f"  gemini[{purpose}]: {per_call} requests for one call without an answer; using heuristics")
     return None
 
 

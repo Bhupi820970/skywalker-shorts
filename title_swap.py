@@ -776,8 +776,33 @@ def same_format_candidates(item: dict, *, exclude: set[str] | None = None,
     return out
 
 
+def proven_demo_title(item: dict, *, exclude: set[str] | None = None,
+                      root: Path | None = None) -> dict | None:
+    """Demo swap target: footage with a recent DONE render (proven clean shots), same format first.
+
+    Demos never post, so a recently used title is fine. A random same-format title is not:
+    demo-v14/v15 swapped Superman (trailer-only) -> Lazarus (Adult Swim bug) / KGF (no clips)
+    -> Bleach (14.9-17.2s of clean shots) and never produced a video."""
+    blocked = set(exclude or []) | item_keys(item)
+    blocked |= {re.sub(r"[^a-z0-9]+", "", x) for x in blocked}
+    cands = [c for c in _load_pool(root) if not (item_keys(c) & blocked)]
+    cands = _release_filter(cands, root)
+    health = release_clip_health(root)
+    proven = [c for c in cands if (health.get(title_slug(c)) or {}).get("ok", 0) > 0]
+    fmt = item_format(item, root=root)
+    proven.sort(key=lambda c: (item_format(c, root=root) != fmt,
+                               -(health.get(title_slug(c)) or {}).get("ok", 0),
+                               (health.get(title_slug(c)) or {}).get("bad", 0),
+                               -len(c.get("scene_assets") or [])))
+    return proven[0] if proven else None
+
+
 def next_eligible_title(item: dict, *, exclude: set[str] | None = None,
                         root: Path | None = None) -> dict | None:
+    if item.get("demo"):
+        p = proven_demo_title(item, exclude=exclude, root=root)
+        if p:
+            return p
     cands = same_format_candidates(item, exclude=exclude, root=root)
     if cands and sourcing.release_only():
         return _spread_pick(cands, item, root)
