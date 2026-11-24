@@ -314,5 +314,15 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-dandadanevil-04",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "publish_via": "youtube",
+  "yt_video_id": "8-GO1ffrIXk",
+  "yt_uploaded_at": "2026-11-24 08:30 IST",
+  "yt_privacy": "private",
+  "yt_publish_at": "2026-11-24T09:00:00+05:30",
+  "yt_status": "scheduled",
+  "youtube_url": "https://youtube.com/shorts/8-GO1ffrIXk",
+  "buffer_post_id": "yt:8-GO1ffrIXk",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-24T03:30:00.000Z"
 }
