@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-24T12:51:50Z",
-  "last_upload_at": "2026-11-23T16:07:07Z"
+  "last_run_at": "2026-11-24T12:51:58Z",
+  "last_upload_at": "2026-11-24T12:51:58Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -89,6 +89,7 @@
   "yt:afE7WD2raMw",
   "yt:aiCMXJ4zKWA",
   "yt:aoi11BdfpoM",
+  "yt:b2l8sz4TAY4",
   "yt:cbft6JWPkpA",
   "yt:chjVPTdBel8",
   "yt:ckEUVyKanhw",
@@ -104,6 +105,7 @@
   "yt:hNg1ksFeyv0",
   "yt:hQDyX9sOe04",
   "yt:iAIBF2ngbWY",
+  "yt:iiwOVqGtZj4",
   "yt:jeQYEIQ6eHw",
   "yt:kaMB6Rw8XzA",
   "yt:l5ZiW3mCuE4",
@@ -1555,6 +1557,26 @@
    "kbps": 1569,
    "by": "box",
    "at": "2026-11-23T16:07:07Z"
+  },
+  {
+   "asset": "dandadan_scene1_h264.mp4",
+   "id": "yt:iiwOVqGtZj4",
+   "title": "Okarun's Full Throttle | DAN DA DAN | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "by": "box",
+   "at": "2026-11-23T16:18:45Z"
+  },
+  {
+   "asset": "dandadanevil_scene3_h264.mp4",
+   "id": "yt:b2l8sz4TAY4",
+   "title": "Rematch! Okarun vs Evil Eye | DAN DA DAN Season 2 | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "by": "box",
+   "at": "2026-11-23T17:13:25Z"
   }
  ],
  "github": {
