@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24 18:50 IST",
+ "generated_at": "2026-11-24 19:56 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
@@ -112,45 +112,6 @@
     "bollywood"
    ],
    "market": "IN"
-  },
-  {
-   "slug": "weatheringwithyou",
-   "slot": "2026-11-25T13:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261125-1330-weatheringwithyou",
-   "pillar": "romance",
-   "words": "WEATHERING WITH YOU",
-   "scene_types": [
-    "romantic",
-    "emotional",
-    "confession"
-   ],
-   "search_queries": [
-    "WEATHERING WITH YOU romantic scene",
-    "WEATHERING WITH YOU emotional scene",
-    "WEATHERING WITH YOU official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
-   "missing_assets": [],
-   "on_release": [
-    "weatheringwithyou_scene1_h264.mp4"
-   ],
-   "hook": "He chose her over the sky",
-   "title": "He chose her over the sky | Weathering With You | #edit",
-   "tags": [
-    "weatheringwithyou",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "hina",
-    "hodaka"
-   ],
-   "market": "US/UK"
   },
   {
    "slug": "haikyuudumpster",
@@ -1136,46 +1097,6 @@
     "shorts",
     "trending",
     "kafka"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "lazarus",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-lazarus",
-   "pillar": "anime",
-   "words": "LAZARUS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "LAZARUS fight scene official clip",
-    "LAZARUS best scene official clip",
-    "LAZARUS official clip"
-   ],
-   "official_channels": [
-    "Adult Swim",
-    "Adult Swim Europe",
-    "MAPPA CHANNEL"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
-   "missing_assets": [],
-   "on_release": [
-    "lazarus_scene3_h264.mp4"
-   ],
-   "hook": "Axel has thirty days to run",
-   "title": "Axel has thirty days to run | Lazarus | #edit",
-   "tags": [
-    "lazarus",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "axel"
    ],
    "market": "US/UK"
   },

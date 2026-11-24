@@ -1,11 +1,16 @@
 {
-  "at": "2026-11-24 18:50 IST",
+  "at": "2026-11-24 19:56 IST",
   "slots_checked": 9,
-  "ready": [],
+  "ready": [
+    {
+      "slot": "2026-11-24T22:30:00+05:30",
+      "id": "20261124-2230-cyberpunk2077",
+      "how": "done"
+    }
+  ],
   "short": [
     "2026-11-24T18:30:00+05:30",
     "2026-11-24T20:30:00+05:30",
-    "2026-11-24T22:30:00+05:30",
     "2026-11-25T06:30:00+05:30",
     "2026-11-25T09:00:00+05:30",
     "2026-11-25T11:30:00+05:30",
@@ -14,7 +19,6 @@
     "2026-11-25T18:30:00+05:30"
   ],
   "need_render": [
-    "20261124-2230-cyberpunk2077",
     "20261125-0630-dandadan2",
     "20261125-0900-pathaan",
     "20261125-1130-dandadan",
@@ -141,10 +145,10 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 5,
-  "stock_pending": 25,
+  "stock_pending": 24,
   "stock_used": 38,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": false
 }
