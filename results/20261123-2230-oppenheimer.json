@@ -269,5 +269,6 @@
   "buffer_post_id": "yt:3-4_i9Z0VvQ",
   "buffer_status": "sent",
   "buffer_due_at": "2026-11-24T05:18:23.000Z",
-  "buffer_posted_at": "2026-11-24T05:18:23.000Z"
+  "buffer_posted_at": "2026-11-24T05:18:23.000Z",
+  "yt_checked_public": true
 }
