@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24 22:15 IST",
+ "generated_at": "2026-11-24 22:58 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
@@ -458,6 +458,47 @@
     "trending",
     "maomao",
     "jinshi"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "bleachtybw",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-bleachtybw",
+   "pillar": "anime",
+   "words": "BLEACH",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "BLEACH fight scene official clip",
+    "BLEACH best scene official clip",
+    "BLEACH official clip"
+   ],
+   "official_channels": [
+    "vizmedia",
+    "『BLEACH』アニメ公式チャンネル",
+    "『BLEACH』アニメ公式チャンネル and 2 more",
+    "アニプレックス チャンネル"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=4Gti6YqvMzE",
+   "missing_assets": [],
+   "on_release": [
+    "bleachtybw_scene3_h264.mp4"
+   ],
+   "hook": "Ichigo was born for this war",
+   "title": "Ichigo was born for this war | Bleach | #edit",
+   "tags": [
+    "bleachtybw",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "ichigo"
    ],
    "market": "US/UK"
   },
