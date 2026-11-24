@@ -1342,5 +1342,49 @@
     "edit_mode": "music_only",
     "topic_slug": "weatheringwithyou",
     "caption_style": "none"
+  },
+  {
+    "id": "demo-v12-fx-action",
+    "pillar": "anime",
+    "edit_format": "action",
+    "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+    "template": "whitebar",
+    "hook": "He walked into the cursed house",
+    "words": "DAN DA DAN",
+    "title": "He walked into the cursed house | Dan Da Dan | #edit",
+    "description": "He walked into the cursed house. From official Dan Da Dan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan",
+    "tags": [
+      "dandadan",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending"
+    ],
+    "target_dur": 26,
+    "status": "queued",
+    "market": "US/UK",
+    "content_kind": "best scene",
+    "fallback_mp4": [
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+    ],
+    "sources": [
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+    ],
+    "fallback_release": "sources",
+    "fallback_asset": "dandadan_scene1_h264.mp4",
+    "official_channels": [
+      "Crunchyroll",
+      "Netflix Anime"
+    ],
+    "no_publish": true,
+    "demo": true,
+    "music_genre": "action",
+    "edit_mode": "music_only",
+    "note": "Demo of the riyio look port (natural grade, exposure QC, soft drop flash, drop SFX, sound energy). no_publish: never Buffer/YouTube."
   }
 ]

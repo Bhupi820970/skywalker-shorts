@@ -24,7 +24,7 @@ jobs:
       - name: Unit tests (light)
         env:
           SKY_RELEASE_ONLY: "0"  # unit tests cover box-side sourcing too; release-only has its own tests
-        run: python3 -m pytest -q tests/test_release_only.py tests/test_hook_text.py tests/test_publish.py tests/test_backup_slots.py tests/test_backup_stock.py tests/test_slots.py tests/test_sourcing.py tests/test_perf_captions.py tests/test_render_guards.py tests/test_overlay_guard.py tests/test_layout.py tests/test_music_denylist.py tests/test_music_window.py tests/test_letterbox.py tests/test_pacing.py tests/test_submit_link.py tests/test_discover_links.py tests/test_story_captions.py tests/test_box_service.py tests/test_health_check.py tests/test_slot_guardian.py tests/test_yt_upload.py tests/test_buffer_repeat_limit.py tests/test_buffer_error.py tests/test_non_music.py tests/test_footage_title_guard.py
+        run: python3 -m pytest -q tests/test_release_only.py tests/test_hook_text.py tests/test_publish.py tests/test_backup_slots.py tests/test_backup_stock.py tests/test_slots.py tests/test_sourcing.py tests/test_perf_captions.py tests/test_render_guards.py tests/test_overlay_guard.py tests/test_layout.py tests/test_music_denylist.py tests/test_music_window.py tests/test_letterbox.py tests/test_pacing.py tests/test_submit_link.py tests/test_discover_links.py tests/test_story_captions.py tests/test_box_service.py tests/test_health_check.py tests/test_slot_guardian.py tests/test_yt_upload.py tests/test_buffer_repeat_limit.py tests/test_buffer_error.py tests/test_non_music.py tests/test_footage_title_guard.py tests/test_sky_fx.py
       - name: Queue hooks are English and ids unique
         run: |
           python3 - <<'PY'

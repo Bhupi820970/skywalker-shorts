@@ -10,7 +10,7 @@ Default template (caption-bar, from the "Rocket knew something" style):
   below the bar with no gap. The bar never covers any part of the frame.
   Bar + frame form one block, centered vertically on a black canvas.
   Never crop the source.
-- Moody/desaturated cinematic grade, stabilized, no Ken Burns.
+- Natural bright cinematic grade (sky_fx.GRADE, exposure ~source, light grain), stabilized, no Ken Burns.
 - No text is burned onto the footage itself.
 - HARD: never include studio/distributor logo intros (Netflix N, Warner,
   Lionsgate, Marvel, etc.), title cards, rating cards, 'coming soon'/date
@@ -2231,6 +2231,18 @@ def template_work() -> Path:
 
 
 def cinematic_grade(template: str | None = None) -> str:
+    # BiBi Nov 24 2026: the old moody grades (contrast 1.12-1.18 + negative brightness + black-crush curves)
+    # made scenes much darker than the source. All templates now use the riyio natural bright grade
+    # (sky_fx.GRADE, exposure within ~2% of the source, light grain). Old strings stay as the fallback.
+    try:
+        import sky_fx
+        return sky_fx.GRADE
+    except Exception:
+        pass
+    return _legacy_grade(template)
+
+
+def _legacy_grade(template: str | None = None) -> str:
     t = template or TEMPLATE
     if t == "depthtext":
         # Teal shadows, orange highlights, slightly crushed blacks.
@@ -2686,6 +2698,14 @@ def render_postcard_check(dst: Path, hook: str | None = None, src: Path | None =
     canvas.save(dst)
     print(f"Postcard check frame {dst} ({canvas.size[0]}x{canvas.size[1]})")
     return dst, note
+
+
+def _fill_brightness() -> float:
+    try:
+        import sky_fx
+        return float(sky_fx.FILL_BRIGHTNESS)
+    except Exception:
+        return -0.14
 
 
 def footage_geometry(mw: int, mh: int) -> dict:
@@ -3404,6 +3424,11 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
               overlay_text: bool = OVERLAY_TEXT, src: Path | None = None,
               edl: list[dict] | None = None) -> Path:
     """Mux audio + whitebar hook. music_only = song only; two_act = dialogue then song."""
+    try:   # energy edits: soft 60% / 2-frame flash + light RGB split on the plate at the drop (fail-safe)
+        import sky_fx
+        silent = sky_fx.apply_drop_video_fx(silent, DROP_T, FPS)
+    except Exception as e:
+        print(f"  drop fx skipped: {e}")
     bed = WORK / "bed.wav"
     prepare_bed(music, dur, bed)
     audio = None
@@ -3413,6 +3438,11 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     if audio is None:
         audio = bed
     audio = _loudnorm_final(Path(audio), dur)
+    try:   # generated hit + whoosh on the drop (fail-safe: keeps the normalised song on error)
+        import sky_fx
+        audio = sky_fx.apply_drop_sfx(Path(audio), DROP_T, WORK)
+    except Exception as e:
+        print(f"  drop sfx skipped: {e}")
     enc = [
         "-c:v", "libx264", "-preset", "fast", "-crf", "17",
         "-pix_fmt", "yuv420p", "-r", str(FPS),
@@ -3594,7 +3624,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         f"[0:v]split=2[fg][bgraw];"
         f"[bgraw]scale={W}:{H}:force_original_aspect_ratio=increase,"
         f"crop={W}:{H},gblur=sigma=36:steps=3,"
-        f"eq=brightness=-0.14:saturation=0.80:contrast=0.95,setsar=1[bg];"
+        f"eq=brightness={_fill_brightness()}:saturation=0.80:contrast=0.95,setsar=1[bg];"
         f"[fg]scale={lay['plate_w']}:{lay['plate_h']}:flags=lanczos,setsar=1[plate];"
         f"[bg][plate]overlay={lay['plate_x']}:{lay['plate_y']}:format=auto[vid];"
         f"[2:v]format=rgb24,scale={W}:{lay['bar_h']}[bar];"
@@ -4046,6 +4076,35 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
                                   "luma": round(st["luma"], 1)})
                 break  # one hit per shot is enough
     checks["no_logo"] = {"ok": not logo_hits, "shots_flagged": len(logo_hits), "flags": logo_hits[:8]}
+    # 7. Exposure (BiBi Nov 24): the plate must not be clearly darker than the same source frames.
+    try:
+        import sky_fx
+        ow, oh = [int(x) for x in subprocess.check_output(
+            ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+             "-of", "csv=p=0", str(out)], text=True).strip().split(",")[:2]]
+        k = ow / float(W)
+        px, py = int(int(lay.get("plate_x", 0)) * k), int(int(lay.get("plate_y", 0)) * k)
+        pw_, ph_ = int(int(lay["plate_w"]) * k), int(int(lay["plate_h"]) * k)
+        pairs = []
+        for it in body:
+            if it.get("ramp") or abs(float(it.get("speed") or 1.0) - 1.0) > 1e-3:
+                continue
+            vis = float(it.get("visible") or 0)
+            t_out = float(it.get("t0") or 0) + 0.5 * vis
+            if vis < 0.4 or t_out < 1.2 or (DROP_T is not None and abs(t_out - DROP_T) < 0.5):
+                continue
+            fo, fs = _frame_rgb(out, t_out), _frame_rgb(mezz, float(it.get("src_start") or 0) + 0.5 * vis)
+            if fo is None or fs is None:
+                continue
+            plate = fo[py:py + ph_, px:px + pw_]
+            if plate.size == 0:
+                continue
+            pairs.append((round(float(plate.mean()), 2), round(float(fs.mean()), 2)))
+            if len(pairs) >= 10:
+                break
+        checks["exposure"] = sky_fx.exposure_check(pairs)
+    except Exception as e:
+        checks["exposure"] = {"ok": True, "skipped": f"{type(e).__name__}: {str(e)[:120]}"}
     # Hard rules (no_crop, caption/layout, no_logo) are never relaxed.
     for k, v in checks.items():
         if not v.get("ok"):
@@ -4406,6 +4465,11 @@ def main():
         scenes = detect_scenes(mezz)
         print(f"  {len(scenes)} raw scenes")
         scenes = score_scenes(mezz, scenes)
+        try:   # energy by sound (speech ignored) + static-shot penalty -> spectacle; no-op on any error
+            import sky_fx
+            sky_fx.apply_sound_energy(scenes, src)
+        except Exception as e:
+            print(f"  sound energy skipped: {e}")
         kept = [s for s in scenes if not s.get("skip")]
         print(f"  {len(kept)} usable scenes")
         scored_path.write_text(json.dumps(scenes, indent=2))
