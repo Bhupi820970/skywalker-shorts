@@ -1,0 +1,471 @@
+{
+  "id": "20261124-1830-topgunmaverick",
+  "status": "retry_queued",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-24 11:56 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45332462893",
+  "slot": "2026-11-24T18:30:00+05:30",
+  "title": "Why Bheem unleashed the wild beasts 💀 | Bheem palace entry | #edit",
+  "hook": "Why Bheem unleashed the wild beasts",
+  "description": "Why Bheem unleashed the wild beasts. From official Rrr clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #rrr #jrntr #ramcharan",
+  "tags": [
+    "rrr",
+    "jrntr",
+    "ramcharan",
+    "ssrajamouli",
+    "southedit",
+    "tollywood"
+  ],
+  "queue_meta": {
+    "hook": "Why Bheem unleashed the wild beasts",
+    "title": "Why Bheem unleashed the wild beasts 💀 | Bheem palace entry | #edit",
+    "description": "Why Bheem unleashed the wild beasts. From official Rrr clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #rrr #jrntr #ramcharan",
+    "tags": [
+      "rrr",
+      "jrntr",
+      "ramcharan",
+      "ssrajamouli",
+      "southedit",
+      "tollywood"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 32.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 9.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 8.0,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 5.3,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 8.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 3.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 21.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 18.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 23.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 16.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 16.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 66.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 18.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 5.9,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "RRR",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "topgunmaverick",
+      "from_words": "TOP GUN MAVERICK",
+      "to": "kgf",
+      "to_words": "KGF CHAPTER 2",
+      "reason": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'WHY MAVERICK IS'\", \"2.54s burned-in text 'WHY MAVERICK IS'\", \"3.04s burned-in text 'WHY MAVERICK IS'\", \"4.04s burned-in text 'THE GREATEST PILOT'\", \"4.54s burned-in text 'THE GREATEST PILOT'\"]}"
+    },
+    {
+      "from": "kgf",
+      "from_words": "KGF CHAPTER 2",
+      "to": "rrr",
+      "to_words": "RRR",
+      "reason": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output"
+    }
+  ],
+  "swapped_from": "kgf",
+  "swapped_to": "rrr",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261124-1830-topgunmaverick",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-1830-topgunmaverick/render-20261124-1830-topgunmaverick.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": null,
+  "energy": false,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene1_h264.mp4",
+  "music": "pr_montagembailo.mp3",
+  "music_credit": "Song: repsaj - MONTAGEM BAILÃO\nOfficial link: https://www.youtube.com/watch?v=yHcHGyg-mY0",
+  "description_final": "Why Bheem unleashed the wild beasts. From official Rrr clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #rrr #jrntr #ramcharan\n\nMusic:\nSong: repsaj - MONTAGEM BAILÃO\nOfficial link: https://www.youtube.com/watch?v=yHcHGyg-mY0",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-1830-topgunmaverick/render-20261124-1830-topgunmaverick-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 562,
+    "bar_h": 114,
+    "plate_y": 676,
+    "video_y": 676,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 568,
+    "region_h": 1806,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "story_captions": {
+      "pattern": "P03",
+      "name": "Beside-lower",
+      "count": 2
+    },
+    "story_caption_boxes": [
+      {
+        "t0": 1.37,
+        "t1": 2.299,
+        "box": [
+          563,
+          1138,
+          490,
+          63
+        ],
+        "text": "Why Bheem unleashed",
+        "faces": [
+          [
+            188,
+            677,
+            330,
+            394
+          ]
+        ]
+      },
+      {
+        "t0": 2.763,
+        "t1": 3.692,
+        "box": [
+          466,
+          1018,
+          350,
+          63
+        ],
+        "text": "the wild beasts",
+        "faces": [
+          [
+            336,
+            881,
+            93,
+            135
+          ]
+        ]
+      }
+    ],
+    "caption_y": 1272,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 80,
+      "src_start": 104.021,
+      "dur": 1.5
+    },
+    {
+      "id": 99,
+      "src_start": 142.726,
+      "dur": 1.67
+    },
+    {
+      "id": 56,
+      "src_start": 72.531,
+      "dur": 1.5
+    },
+    {
+      "id": 96,
+      "src_start": 136.511,
+      "dur": 1.503
+    },
+    {
+      "id": 23,
+      "src_start": 25.567,
+      "dur": 1.503
+    },
+    {
+      "id": 28,
+      "src_start": 32.491,
+      "dur": 1.462
+    },
+    {
+      "id": 90,
+      "src_start": 122.623,
+      "dur": 1.543
+    },
+    {
+      "id": 94,
+      "src_start": 132.237,
+      "dur": 1.732
+    },
+    {
+      "id": 106,
+      "src_start": 154.885,
+      "dur": 2.0
+    },
+    {
+      "id": 37,
+      "src_start": 43.335,
+      "dur": 0.669
+    },
+    {
+      "id": 19,
+      "src_start": 21.146,
+      "dur": 1.003
+    },
+    {
+      "id": 67,
+      "src_start": 88.964,
+      "dur": 1.336
+    },
+    {
+      "id": 75,
+      "src_start": 97.597,
+      "dur": 0.796
+    },
+    {
+      "id": 9,
+      "src_start": 10.135,
+      "dur": 0.669
+    },
+    {
+      "id": 85,
+      "src_start": 115.49,
+      "dur": 1.211
+    },
+    {
+      "id": 63,
+      "src_start": 84.334,
+      "dur": 1.211
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'WHY MAVERICK IS'\", \"2.54s burned-in text 'WHY MAVERICK IS'\", \"3.04s burned-in text 'WHY MAVERICK IS'\", \"4.04s burned-in text 'THE GREATEST PILOT'\", \"4.54s burned-in text 'THE GREATEST PILOT'\"]}",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene1_h264.mp4",
+      "music": "pr_montagemguerreiroslowed.mp3",
+      "qc_status": "pass"
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene1_h264.mp4",
+      "music": "pr_montagembailo.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene1_h264.mp4",
+      "music": "pr_montagembailo.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false,
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene1_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'WHY MAVERICK IS'\", \"2.54s burned-in text 'WHY MAVERICK IS'\", \"3.04s burned-in text 'WHY MAVERICK IS'\", \"4.04s burned-in text 'THE GREATEST PILOT'\", \"4.54s burned-in text 'THE GREATEST PILOT'\"]}",
+      "at": "2026-11-24 11:14 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
+      "at": "2026-11-24 11:34 IST"
+    }
+  ]
+}
