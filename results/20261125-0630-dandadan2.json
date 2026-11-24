@@ -1,14 +1,17 @@
 {
   "id": "20261125-0630-dandadan2",
-  "status": "retry_queued",
-  "detail": "all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.715, 'edge_corr_median': 0.766, 'shift_px_median': 5.22, 'pairs': 6}",
-  "at": "2026-11-25 00:36 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45448889171",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): only 9.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-25 02:26 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45472290700",
   "slot": "2026-11-25T06:30:00+05:30",
-  "title": "Momo never lets him go | Dandadan | #edit",
-  "hook": "Momo never lets him go",
-  "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+  "title": "Okarun could not look away from Momo #dandadan #okarun #romance",
+  "hook": "His eyes gave him away",
+  "description": "His eyes gave him away. Okarun finds himself completely flustered as Momo unexpectedly steps into his world. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #okarun #romance #shorts #edit",
   "tags": [
+    "dandadan",
+    "okarun",
+    "romance",
     "dandadan2",
     "anime",
     "animeedit",
@@ -17,24 +20,58 @@
     "trending",
     "momo"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Momo never lets him go",
+    "title": "Momo never lets him go | Dandadan | #edit",
+    "description": "Momo never lets him go. From official Dandadan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadan2",
+    "tags": [
+      "dandadan2",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "momo"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "Emotional Observation",
+  "title_candidates": [
+    {
+      "title": "Okarun could not look away from Momo",
+      "click_score": 93.0
+    },
+    {
+      "title": "Okarun did not expect this from Momo",
+      "click_score": 91.0
+    },
+    {
+      "title": "Momo noticed him before anyone else did",
+      "click_score": 89.0
+    },
+    {
+      "title": "He never expected her to stand up for him",
+      "click_score": 87.0
+    },
+    {
+      "title": "The moment Okarun completely lost his focus",
+      "click_score": 84.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 59.2,
+      "s": 34.1,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 21.0,
+      "s": 48.7,
       "ok": true
     },
     {
@@ -45,243 +82,190 @@
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 113.7,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
       "key": "key3",
       "err": "HTTP 429"
     },
     {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 10.4,
+      "ok": true
+    },
+    {
       "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
       "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 12.6,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 20.7,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 19.8,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
+      "key": "key5",
       "s": 17.6,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
+      "purpose": "hook",
       "model": "gemini-3.5-flash",
       "key": "key5",
       "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 503"
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key5",
-      "err": "HTTP 503"
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key5",
-      "err": "HTTP 503"
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
       "model": "gemini-3.5-flash",
       "key": "key6",
-      "s": 20.2,
+      "s": 20.4,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 38.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 30.3,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key6",
-      "s": 7.3,
+      "s": 22.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 20.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 19.9,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 27.2,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 16.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 22.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 25.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 10.4,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 24.1,
       "ok": true
     }
   ],
@@ -294,34 +278,34 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.715, 'edge_corr_median': 0.766, 'shift_px_median': 5.22, 'pairs': 6}",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 9.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
       "music": "pr_ytsearch1francislailovestorythemeinstrum.mp3",
       "qc_status": null
     }
   ],
-  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.715, 'edge_corr_median': 0.766, 'shift_px_median': 5.22, 'pairs': 6}",
+  "last_error": "pipeline/QA failed (exit 1): only 9.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
   "source_attempts": [
     {
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
-      "at": "2026-11-24 23:40 IST"
+      "error": "publish gate failed: logo scan: {\"final\": [\"1.54s burned-in text overlay\", \"2.04s burned-in text overlay\", \"3.04s burned-in text overlay\", \"3.54s burned-in text overlay\", \"4.54s burned-in text overlay\", \"5.04s burned-in text overlay\", \"6.54s burned-in text overlay\", \"7.04s burned-in text overlay\"]}",
+      "at": "2026-11-25 01:43 IST"
     },
     {
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene3_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.813, 'edge_corr_median': 0.891, 'shift_px_median': 7.56, 'pairs': 6}",
-      "at": "2026-11-25 00:08 IST"
+      "error": "publish gate failed: logo scan: {\"final\": [\"1.54s burned-in text caption 'HIS EYES GAVE'\", \"2.04s burned-in text caption 'HIS EYES GAVE'\", \"3.04s burned-in text caption 'HIM AWAY'\", \"3.54s burned-in text caption 'HIM AWAY'\", \"4.54s burned-in text caption 'MOMO NEVER LETS'\", \"5.04s burned-in text cap",
+      "at": "2026-11-25 02:14 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.715, 'edge_corr_median': 0.766, 'shift_px_median': 5.22, 'pairs': 6}",
-      "at": "2026-11-25 00:36 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 9.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-25 02:26 IST"
     }
   ]
 }
