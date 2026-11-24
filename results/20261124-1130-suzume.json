@@ -1,9 +1,9 @@
 {
   "id": "20261124-1130-suzume",
-  "status": "retry_queued",
-  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
-  "at": "2026-11-24 12:51 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45336821344",
+  "status": "failed",
+  "detail": "gemini QC reject on retry: logo seen: Netflix N / SUBSCRIBE card, DAN DA DAN SEASON 2 text; Contains Netflix N / SUBSCRIBE intro card at 00:00; Contains DAN DA DAN SEASON 2 watermark/corner text in frame",
+  "at": "2026-11-24 16:38 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45381020159",
   "slot": "2026-11-24T11:30:00+05:30",
   "title": "The moment Okarun looked at Momo #dandadan #okarun #romance",
   "hook": "His eyes gave everything away",
@@ -20,222 +20,18 @@
     "trending",
     "momo"
   ],
-  "queue_meta": {
-    "hook": "His eyes gave everything away",
-    "title": "The moment Okarun looked at Momo #dandadan #okarun #romance",
-    "description": "His eyes gave everything away. Okarun gets completely flustered while watching Momo at the cafe. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #okarun #romance #shorts #edit",
-    "tags": [
-      "dandadan",
-      "okarun",
-      "romance",
-      "dandadan2",
-      "anime",
-      "animeedit",
-      "edit",
-      "shorts",
-      "trending",
-      "momo"
-    ]
-  },
-  "gemini_meta": true,
-  "hook_source": "queue",
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
   "hook_style": null,
   "title_candidates": null,
   "gemini_calls": [
     {
       "purpose": "qc",
       "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-flash-latest",
-      "key": "key5",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-flash-latest",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key5",
-      "s": 26.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.1-flash-lite",
       "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "s": 88.6,
+      "s": 18.3,
       "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key5",
-      "s": 14.1,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key5",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key5",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key5",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
     }
   ],
   "backup_item": null,
@@ -255,8 +51,31 @@
   ],
   "swapped_from": "suzume",
   "swapped_to": "dandadan2",
+  "auto_retries": 3,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "music": "pr_ytsearch1henrymancinimoonriverinstrument.mp3",
+      "qc_status": "skipped"
+    },
+    {
+      "attempt": "qc_retry",
+      "ok": false,
+      "error": "gemini QC fail",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
+      "music": "pr_ytsearch1henrymancinimoonriverinstrument.mp3"
+    }
+  ],
+  "last_error": "gemini QC reject",
+  "qc_rejected": true,
+  "qc_status": "fail",
   "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261124-1130-suzume",
   "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-1130-suzume/render-20261124-1130-suzume.mp4",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-1130-suzume/render-20261124-1130-suzume-cover.jpg",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -264,14 +83,11 @@
     "no_shake": true,
     "no_logo": true
   },
-  "drop_t": null,
   "energy": false,
   "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
   "music": "pr_ytsearch1henrymancinimoonriverinstrument.mp3",
   "music_credit": "Song: Cláudio Borges - Moon River (instrumental) - Henry Mancini\nOfficial link: ytsearch1:Henry Mancini Moon River instrumental",
   "description_final": "His eyes gave everything away. Okarun gets completely flustered while watching Momo at the cafe. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #okarun #romance #shorts #edit\n\nMusic:\nSong: Cláudio Borges - Moon River (instrumental) - Henry Mancini\nOfficial link: ytsearch1:Henry Mancini Moon River instrumental",
-  "no_publish": false,
-  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-1130-suzume/render-20261124-1130-suzume-cover.jpg",
   "gate": {
     "ok": false,
     "failures": [
@@ -279,6 +95,59 @@
     ],
     "gemini_qc": "skipped (unavailable/budget)"
   },
+  "no_publish": false,
+  "scenes_picked": [
+    {
+      "id": 35,
+      "src_start": 81.735,
+      "dur": 2.5
+    },
+    {
+      "id": 26001,
+      "src_start": 53.352,
+      "dur": 2.5
+    },
+    {
+      "id": 36,
+      "src_start": 91.758,
+      "dur": 2.5
+    },
+    {
+      "id": 50,
+      "src_start": 143.601,
+      "dur": 2.5
+    },
+    {
+      "id": 46,
+      "src_start": 116.825,
+      "dur": 3.0
+    },
+    {
+      "id": 55,
+      "src_start": 160.994,
+      "dur": 2.5
+    },
+    {
+      "id": 16,
+      "src_start": 38.038,
+      "dur": 0.919
+    },
+    {
+      "id": 40,
+      "src_start": 106.356,
+      "dur": 1.948
+    },
+    {
+      "id": 12,
+      "src_start": 28.57,
+      "dur": 1.858
+    },
+    {
+      "id": 31,
+      "src_start": 76.493,
+      "dur": 1.503
+    }
+  ],
   "layout": {
     "bar_y": 530,
     "bar_h": 126,
@@ -352,73 +221,5 @@
     "edit_mode": "music_only",
     "edit_format": "love",
     "blur_fill": true
-  },
-  "scenes_picked": [
-    {
-      "id": 35,
-      "src_start": 81.735,
-      "dur": 2.5
-    },
-    {
-      "id": 26001,
-      "src_start": 53.352,
-      "dur": 2.5
-    },
-    {
-      "id": 36,
-      "src_start": 91.758,
-      "dur": 2.5
-    },
-    {
-      "id": 50,
-      "src_start": 143.601,
-      "dur": 2.5
-    },
-    {
-      "id": 46,
-      "src_start": 116.825,
-      "dur": 3.0
-    },
-    {
-      "id": 55,
-      "src_start": 160.994,
-      "dur": 2.5
-    },
-    {
-      "id": 16,
-      "src_start": 38.038,
-      "dur": 0.919
-    },
-    {
-      "id": 40,
-      "src_start": 106.356,
-      "dur": 1.948
-    },
-    {
-      "id": 12,
-      "src_start": 28.57,
-      "dur": 1.858
-    },
-    {
-      "id": 31,
-      "src_start": 76.493,
-      "dur": 1.503
-    }
-  ],
-  "qc_status": "skipped",
-  "auto_retries": 2,
-  "max_auto_retries": 1,
-  "attempts": [
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "gemini QC skipped",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan2_scene2_h264.mp4",
-      "music": "pr_ytsearch1henrymancinimoonriverinstrument.mp3",
-      "qc_status": "skipped"
-    }
-  ],
-  "last_error": "gemini QC skipped",
-  "qc_pending": true,
-  "logo_pending": false
+  }
 }

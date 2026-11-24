@@ -1,0 +1,326 @@
+{
+  "id": "20261124-2030-princessmononoke",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok",
+  "at": "2026-11-24 17:02 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45381020159",
+  "slot": "2026-11-24T20:30:00+05:30",
+  "title": "Why everyone in Iron Town feared Ashitaka #princessmononoke #ashitaka #anime",
+  "hook": "Nobody could stop his demonic strength",
+  "description": "Nobody could stop his demonic strength. Ashitaka uses the terrifying power of his cursed arm to break up the duel between San and Lady Eboshi before carrying San away from Iron Town. From the official Princess Mononoke trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#princessmononoke #ashitaka #anime #shorts #edit",
+  "tags": [
+    "princessmononoke",
+    "ashitaka",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "san"
+  ],
+  "queue_meta": {
+    "hook": "San would die for the forest",
+    "title": "San would die for the forest | Princess Mononoke | #edit",
+    "description": "San would die for the forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke",
+    "tags": [
+      "princessmononoke",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "ashitaka",
+      "san"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Why everyone in Iron Town feared Ashitaka",
+      "click_score": 94.0
+    },
+    {
+      "title": "Ashitaka stopping this fight was peak cinema",
+      "click_score": 91.0
+    },
+    {
+      "title": "Nobody expected Ashitaka to carry her out alive",
+      "click_score": 88.0
+    },
+    {
+      "title": "The moment Lady Eboshi saw his cursed strength",
+      "click_score": 85.0
+    },
+    {
+      "title": "San did not expect Ashitaka to do this",
+      "click_score": 82.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 31.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 22.2,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 29.5,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 54.0,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 15.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 80.5,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "PRINCESS MONONOKE",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+      "music": "pr_montagemmizukijapanesefunkzirectxzxvn.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261124-2030-princessmononoke",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-2030-princessmononoke/render-20261124-2030-princessmononoke.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true
+  },
+  "drop_t": 3.228,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+  "music": "pr_montagemmizukijapanesefunkzirectxzxvn.mp3",
+  "music_credit": "Song: Phonk Time - MONTAGEM MIZUKI (JAPANESE FUNK) - ZIRECT x ZXVN\nOfficial link: https://www.youtube.com/watch?v=B_JXN8OIsp4",
+  "description_final": "Nobody could stop his demonic strength. Ashitaka uses the terrifying power of his cursed arm to break up the duel between San and Lady Eboshi before carrying San away from Iron Town. From the official Princess Mononoke trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#princessmononoke #ashitaka #anime #shorts #edit\n\nMusic:\nSong: Phonk Time - MONTAGEM MIZUKI (JAPANESE FUNK) - ZIRECT x ZXVN\nOfficial link: https://www.youtube.com/watch?v=B_JXN8OIsp4",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-2030-princessmononoke/render-20261124-2030-princessmononoke-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 23.852,
+      "audio": true
+    },
+    "lufs": -14.3,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.9,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 49,
+      "masked_rows": [
+        [
+          0.224,
+          0.3417
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 9.5,
+        "title": 9.5,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 9.8
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 430,
+    "bar_h": 226,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1694,
+    "block_h": 1920,
+    "drop_t": 3.228,
+    "energy": true,
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 23,
+      "src_start": 54.805,
+      "dur": 1.5,
+      "gemini_score": 10.0,
+      "reason": "gemini score 10.0"
+    },
+    {
+      "id": 26,
+      "src_start": 70.737,
+      "dur": 1.728,
+      "gemini_score": 9.5,
+      "reason": "gemini score 9.5"
+    },
+    {
+      "id": 28,
+      "src_start": 77.744,
+      "dur": 1.5,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 20,
+      "src_start": 48.298,
+      "dur": 1.728,
+      "gemini_score": 9.5,
+      "reason": "gemini score 9.5"
+    },
+    {
+      "id": 14,
+      "src_start": 30.197,
+      "dur": 1.858,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 10,
+      "src_start": 21.647,
+      "dur": 2.0,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 4,
+      "src_start": 5.756,
+      "dur": 1.669,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 12,
+      "src_start": 26.401,
+      "dur": 1.5,
+      "gemini_score": 9.5,
+      "reason": "gemini score 9.5"
+    },
+    {
+      "id": 25,
+      "src_start": 61.812,
+      "dur": 2.192,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 16,
+      "src_start": 41.625,
+      "dur": 2.322,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 5,
+      "src_start": 10.677,
+      "dur": 1.462,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 31,
+      "src_start": 84.876,
+      "dur": 0.919,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    }
+  ],
+  "qc_status": "pass"
+}
