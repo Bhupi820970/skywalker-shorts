@@ -1,9 +1,9 @@
 {
   "id": "20261124-2230-cyberpunk2077",
-  "status": "retry_queued",
-  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
-  "at": "2026-11-24 18:12 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45383330335",
+  "status": "done",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render) (QC retry pass)",
+  "at": "2026-11-24 18:53 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45402310737",
   "slot": "2026-11-24T22:30:00+05:30",
   "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
   "hook": "Why David could not stop the cyberpsychosis",
@@ -17,123 +17,25 @@
     "netflix",
     "anime"
   ],
-  "queue_meta": {
-    "hook": "Why David could not stop the cyberpsychosis",
-    "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
-    "description": "Why David could not stop the cyberpsychosis. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #cyberpunk #edgerunners #davidmartinez",
-    "tags": [
-      "cyberpunk",
-      "edgerunners",
-      "davidmartinez",
-      "animeedit",
-      "phonk",
-      "netflix",
-      "anime"
-    ]
-  },
-  "gemini_meta": true,
-  "hook_source": "queue",
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
   "hook_style": null,
   "title_candidates": null,
   "gemini_calls": [
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 72.2,
+      "key": "key4",
+      "s": 37.8,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 25.2,
+      "key": "key4",
+      "s": 55.4,
       "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 27.7,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 503"
     }
   ],
   "backup_item": null,
@@ -145,8 +47,30 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
+  "auto_retries": 1,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene1_h264.mp4",
+      "music": "pr_turan2astxrzxguss.mp3",
+      "qc_status": "skipped"
+    },
+    {
+      "attempt": "qc_retry",
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene1_h264.mp4",
+      "music": "pr_turan2astxrzxguss.mp3"
+    }
+  ],
+  "last_error": null,
+  "qc_status": "pass",
   "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261124-2230-cyberpunk2077",
   "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-2230-cyberpunk2077/render-20261124-2230-cyberpunk2077.mp4",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-2230-cyberpunk2077/render-20261124-2230-cyberpunk2077-cover.jpg",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -160,34 +84,42 @@
   "music": "pr_turan2astxrzxguss.mp3",
   "music_credit": "Song: Phonk Time - TURAN 2 - ASTXR, zxguss\nOfficial link: https://www.youtube.com/watch?v=lBmpcDd9Yk0",
   "description_final": "Why David could not stop the cyberpsychosis. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #cyberpunk #edgerunners #davidmartinez\n\nMusic:\nSong: Phonk Time - TURAN 2 - ASTXR, zxguss\nOfficial link: https://www.youtube.com/watch?v=lBmpcDd9Yk0",
-  "no_publish": false,
-  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261124-2230-cyberpunk2077/render-20261124-2230-cyberpunk2077-cover.jpg",
   "gate": {
-    "ok": false,
-    "failures": [
-      "gemini QC skipped (unavailable/budget)"
-    ],
-    "gemini_qc": "skipped (unavailable/budget)"
+    "ok": true,
+    "failures": [],
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 48,
+      "masked_rows": [
+        [
+          0.2229,
+          0.3417
+        ]
+      ]
+    },
+    "logo_verdict": true
   },
-  "layout": {
-    "bar_y": 428,
-    "bar_h": 228,
-    "plate_y": 656,
-    "video_y": 656,
-    "plate_x": 0,
-    "plate_w": 1080,
-    "plate_h": 608,
-    "region_h": 1692,
-    "block_h": 1920,
-    "drop_t": 2.99,
-    "energy": true,
-    "caption_y": 1292,
-    "captions": [],
-    "speech_windows": [],
-    "edit_mode": "music_only",
-    "edit_format": "action",
-    "blur_fill": true
-  },
+  "no_publish": false,
   "scenes_picked": [
     {
       "id": 26,
@@ -260,20 +192,23 @@
       "dur": 1.295
     }
   ],
-  "qc_status": "skipped",
-  "auto_retries": 0,
-  "max_auto_retries": 1,
-  "attempts": [
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "gemini QC skipped",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene1_h264.mp4",
-      "music": "pr_turan2astxrzxguss.mp3",
-      "qc_status": "skipped"
-    }
-  ],
-  "last_error": "gemini QC skipped",
-  "qc_pending": true,
-  "logo_pending": false
+  "layout": {
+    "bar_y": 428,
+    "bar_h": 228,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1692,
+    "block_h": 1920,
+    "drop_t": 2.99,
+    "energy": true,
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  }
 }
