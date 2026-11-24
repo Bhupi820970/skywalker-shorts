@@ -1,6 +1,6 @@
 {
- "date": "2026-11-23",
- "at": "2026-11-23 18:22 IST",
+ "date": "2026-11-24",
+ "at": "2026-11-24 19:18 IST",
  "channel_id": "UCZQHU7LI-1EyLqU7fJz_q-g",
  "sources": [
   "youtube_api",
@@ -9,23 +9,22 @@
  "errors": {},
  "channel": {
   "subscribers": 49,
-  "channel_views": 146646
+  "channel_views": 169977
  },
  "totals": {
-  "videos": 78,
-  "views": 169049,
-  "likes": 4359,
-  "comments": 56
+  "videos": 81,
+  "views": 173421,
+  "likes": 4454,
+  "comments": 55
  },
  "crossed_1000": [
-  "lMlZfGS6_0A",
-  "JQGOukoBahY"
+  "8-GO1ffrIXk"
  ],
  "videos": {
   "VyUAy0H8R0s": {
    "title": "Trump as Morpheus pulls Nvidia CEO Jensen Huang into the Matrix  #trump #jensenhuang #nvidia #matrix",
    "published": "2026-11-14T06:50:58Z",
-   "views": 24471,
+   "views": 24475,
    "likes": 467,
    "comments": 18,
    "duration": "PT43S",
@@ -34,8 +33,8 @@
   "xutgmhqLhn0": {
    "title": "Why Jinshi cannot stop watching her 💀 | Maomao and Jinshi | #edit",
    "published": "2026-11-13T12:02:35Z",
-   "views": 20668,
-   "likes": 1608,
+   "views": 20711,
+   "likes": 1609,
    "comments": 7,
    "duration": "PT29S",
    "buffer_post_id": "6af5e4e7981d02dd98febbfa",
@@ -47,9 +46,9 @@
   "PbsTjKRfan4": {
    "title": "Jinx finally loses her mind #arcane #jinx #leagueoflegends",
    "published": "2026-11-21T17:00:37Z",
-   "views": 12700,
-   "likes": 547,
-   "comments": 3,
+   "views": 13465,
+   "likes": 572,
+   "comments": 2,
    "duration": "PT26S",
    "buffer_post_id": "6b01ce9fdb2e8eb48792eb87",
    "queue_id": "20261120-0900-onepieceegghead",
@@ -60,7 +59,7 @@
   "vfi6eCOvnwE": {
    "title": "The reason why Haymitch was never the same after this 💀 | Haymitch enters the Quarter Quell | #edit",
    "published": "2026-11-11T09:09:46Z",
-   "views": 12256,
+   "views": 12317,
    "likes": 193,
    "comments": 0,
    "duration": "PT29S",
@@ -78,7 +77,7 @@
   "Yu4WM3oxj8Q": {
    "title": "Glen Powell's aura in Twisters is unreal #twisters #glenpowell #action",
    "published": "2026-11-16T06:00:30Z",
-   "views": 5263,
+   "views": 5274,
    "likes": 92,
    "comments": 0,
    "duration": "PT25S",
@@ -91,7 +90,7 @@
   "eIWVcX6oGE4": {
    "title": "Gru entering the scene is peak comedy #despicableme #gru #animation",
    "published": "2026-11-14T07:11:37Z",
-   "views": 5181,
+   "views": 5185,
    "likes": 53,
    "comments": 0,
    "duration": "PT25S",
@@ -104,8 +103,8 @@
   "1-5sw90XdI4": {
    "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
    "published": "2026-11-22T01:00:21Z",
-   "views": 4812,
-   "likes": 91,
+   "views": 5014,
+   "likes": 95,
    "comments": 2,
    "duration": "PT23S",
    "buffer_post_id": "6b023f21e7dc4a5b194a7ef4",
@@ -117,8 +116,8 @@
   "hABWzjYbohA": {
    "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
    "published": "2026-11-18T12:01:50Z",
-   "views": 4014,
-   "likes": 63,
+   "views": 4059,
+   "likes": 64,
    "comments": 2,
    "duration": "PT26S",
    "buffer_post_id": "6afd49c1fac814181369fc22",
@@ -130,7 +129,7 @@
   "ULaEabA-XPo": {
    "title": "The reason why SRK's Jawan still hits different 💀 | Shah Rukh Khan takes on the system | #edit",
    "published": "2026-11-12T17:01:40Z",
-   "views": 3921,
+   "views": 3922,
    "likes": 67,
    "comments": 1,
    "duration": "PT26S",
@@ -143,8 +142,8 @@
   "ONYVzVxUyzQ": {
    "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
    "published": "2026-11-20T13:01:30Z",
-   "views": 2638,
-   "likes": 36,
+   "views": 2801,
+   "likes": 38,
    "comments": 0,
    "duration": "PT25S",
    "buffer_post_id": "6b0027d039116a845dce2123",
@@ -152,6 +151,19 @@
    "slot": "2026-11-20T18:30:00+05:30",
    "music": "sw_aura1hourauramusicplayli.mp3",
    "hook": "David wanted to be a legend"
+  },
+  "lMlZfGS6_0A": {
+   "title": "Why Okarun cannot look away from Momo #dandadan #momoayase #romance",
+   "published": "2026-11-22T10:30:07Z",
+   "views": 2073,
+   "likes": 57,
+   "comments": 0,
+   "duration": "PT25S",
+   "buffer_post_id": "6b02c46e74a306ffb7795410",
+   "queue_id": "20261122-1600-mushokutensei2",
+   "slot": "2026-11-22T16:00:00+05:30",
+   "music": "pr_ytsearch1joehisaishionesummersdaypiano.mp3",
+   "hook": "They found each other"
   },
   "C4L6mVRSSCY": {
    "title": "Godzilla Minus Zero broke the box office 💀 | Godzilla scene | #edit",
@@ -165,7 +177,7 @@
   "g5NjXbAl2l8": {
    "title": "Okarun finally loses control of his power #dandadan #okarun #anime",
    "published": "2026-11-17T03:30:48Z",
-   "views": 1623,
+   "views": 1631,
    "likes": 21,
    "comments": 0,
    "duration": "PT26S",
@@ -175,23 +187,19 @@
    "music": "sw_aura1hourauramusicplayli.mp3",
    "hook": "Okarun finally unleashes his true power"
   },
-  "lMlZfGS6_0A": {
-   "title": "Why Okarun cannot look away from Momo #dandadan #momoayase #romance",
-   "published": "2026-11-22T10:30:07Z",
-   "views": 1515,
-   "likes": 45,
+  "W02G9J-vYI0": {
+   "title": "When the maid cafe order gets weird #dandadan #okarun #anime",
+   "published": "2026-11-21T13:07:51Z",
+   "views": 1479,
+   "likes": 53,
    "comments": 0,
-   "duration": "PT25S",
-   "buffer_post_id": "6b02c46e74a306ffb7795410",
-   "queue_id": "20261122-1600-mushokutensei2",
-   "slot": "2026-11-22T16:00:00+05:30",
-   "music": "pr_ytsearch1joehisaishionesummersdaypiano.mp3",
-   "hook": "They found each other"
+   "duration": "PT26S",
+   "buffer_post_id": "6b015df0dd205ed779d171f7"
   },
   "eFJMbtdTjSg": {
    "title": "Why Okarun cannot stop watching her #dandadan #okarun #anime",
    "published": "2026-11-17T15:02:00Z",
-   "views": 1440,
+   "views": 1441,
    "likes": 31,
    "comments": 0,
    "duration": "PT26S",
@@ -201,20 +209,11 @@
    "music": "sw_phnk2.mp3",
    "hook": "Why Okarun cannot stop watching her"
   },
-  "W02G9J-vYI0": {
-   "title": "When the maid cafe order gets weird #dandadan #okarun #anime",
-   "published": "2026-11-21T13:07:51Z",
-   "views": 1424,
-   "likes": 51,
-   "comments": 0,
-   "duration": "PT26S",
-   "buffer_post_id": "6b015df0dd205ed779d171f7"
-  },
   "uFsHVdf_XHI": {
    "title": "Ranbir makes them regret everything #animal #ranbirkapoor #bollywood",
    "published": "2026-11-18T07:00:37Z",
-   "views": 1408,
-   "likes": 27,
+   "views": 1418,
+   "likes": 28,
    "comments": 0,
    "duration": "PT25S",
    "buffer_post_id": "6afd49c0ec7ce5264371eded",
@@ -226,7 +225,7 @@
   "KnvhRe-t4Do": {
    "title": "Ethan Hunt's final mission goes wrong #missionimpossible #tomcruise #action",
    "published": "2026-11-14T15:01:01Z",
-   "views": 1292,
+   "views": 1294,
    "likes": 13,
    "comments": 0,
    "duration": "PT23S",
@@ -239,7 +238,7 @@
   "juY7iO94aGQ": {
    "title": "Watch the last two seconds | War 2 #war2 #hrithikroshan #movieedit",
    "published": "2026-11-13T07:00:46Z",
-   "views": 1263,
+   "views": 1265,
    "likes": 19,
    "comments": 0,
    "duration": "PT24S",
@@ -252,7 +251,7 @@
   "gXYqwZ-PHoQ": {
    "title": "The moment Okarun unleashed his full power in Dan Da Dan #dandadan #okarun #animeedit",
    "published": "2026-11-17T07:01:03Z",
-   "views": 1260,
+   "views": 1261,
    "likes": 23,
    "comments": 1,
    "duration": "PT26S",
@@ -278,7 +277,7 @@
   "g65ITxlKvpw": {
    "title": "The reason why Paul Atreides became the villain 💀 | Emperor Paul's final war | #edit",
    "published": "2026-11-12T12:31:33Z",
-   "views": 1219,
+   "views": 1220,
    "likes": 19,
    "comments": 0,
    "duration": "PT29S",
@@ -300,7 +299,7 @@
   "6DjQ5Q4g-fA": {
    "title": "The reason why Greg Focker can never relax 💀 | Greg meets the new in-laws | #edit",
    "published": "2026-11-11T12:32:52Z",
-   "views": 1206,
+   "views": 1211,
    "likes": 19,
    "comments": 0,
    "duration": "PT29S",
@@ -319,19 +318,10 @@
    "music": "sw_murderinmymind.mp3",
    "hook": "The prey never sees it coming"
   },
-  "WtrpBcJKayI": {
-   "title": "The reason why Peddi playground ka hero ban gaya 💀 | Ram Charan as the crossover athlete | #edit",
-   "published": "2026-11-11T07:46:47Z",
-   "views": 1158,
-   "likes": 12,
-   "comments": 0,
-   "duration": "PT36S",
-   "buffer_post_id": "6af580b52ca9eef7ed4cf2f7"
-  },
   "Y6NLSv1Q3UE": {
    "title": "Why Higuruma could not look away #jujutsukaisen #higuruma #anime",
    "published": "2026-11-21T15:00:02Z",
-   "views": 1156,
+   "views": 1170,
    "likes": 25,
    "comments": 1,
    "duration": "PT22S",
@@ -340,6 +330,28 @@
    "slot": "2026-11-21T20:30:00+05:30",
    "music": "pr_ytsearch1henrymancinimoonriverinstrument.mp3",
    "hook": "He never wanted to fight"
+  },
+  "7kkhNNOipPo": {
+   "title": "Nobody expected Ranvijay to show up like this #animal #ranbirkapoor #bollywood",
+   "published": "2026-11-18T15:02:37Z",
+   "views": 1158,
+   "likes": 29,
+   "comments": 0,
+   "duration": "PT25S",
+   "buffer_post_id": "6afd66463c888574260c1ef8",
+   "queue_id": "20261118-2030-bleachtybw",
+   "slot": "2026-11-18T20:30:00+05:30",
+   "music": "sw_passobemsolto.mp3",
+   "hook": "Nobody expected him to enter like this"
+  },
+  "WtrpBcJKayI": {
+   "title": "The reason why Peddi playground ka hero ban gaya 💀 | Ram Charan as the crossover athlete | #edit",
+   "published": "2026-11-11T07:46:47Z",
+   "views": 1158,
+   "likes": 12,
+   "comments": 0,
+   "duration": "PT36S",
+   "buffer_post_id": "6af580b52ca9eef7ed4cf2f7"
   },
   "2cJd9tRGBCA": {
    "title": "You Don't Argue With This Guy | CONCESSIONS",
@@ -362,19 +374,6 @@
    "slot": "2026-11-13T13:30:00+05:30",
    "music": "sw_interworldrapturephonk.mp3",
    "hook": "Judy Hopps is going undercover"
-  },
-  "7kkhNNOipPo": {
-   "title": "Nobody expected Ranvijay to show up like this #animal #ranbirkapoor #bollywood",
-   "published": "2026-11-18T15:02:37Z",
-   "views": 1152,
-   "likes": 29,
-   "comments": 0,
-   "duration": "PT25S",
-   "buffer_post_id": "6afd66463c888574260c1ef8",
-   "queue_id": "20261118-2030-bleachtybw",
-   "slot": "2026-11-18T20:30:00+05:30",
-   "music": "sw_passobemsolto.mp3",
-   "hook": "Nobody expected him to enter like this"
   },
   "Z7x3LuGWSgY": {
    "title": "A Japanese Movie Just Broke a 22-Year US Box Office Record",
@@ -401,7 +400,7 @@
   "ZBUGFVhmgzs": {
    "title": "Paul Atreides was never meant to survive #dune #paulatreides #scifi",
    "published": "2026-11-14T08:00:46Z",
-   "views": 1143,
+   "views": 1144,
    "likes": 19,
    "comments": 0,
    "duration": "PT23S",
@@ -410,6 +409,15 @@
    "slot": "2026-11-14T13:30:00+05:30",
    "music": "sw_aura1hourauramusicplayli.mp3",
    "hook": "Paul Atreides returns for revenge"
+  },
+  "AmFgdmFJ1KA": {
+   "title": "The reason why Salman ki Maatrubhumi sabko hit karti hai 💀 | The soldier who never backs down |#edit",
+   "published": "2026-11-11T17:37:23Z",
+   "views": 1138,
+   "likes": 21,
+   "comments": 1,
+   "duration": "PT31S",
+   "buffer_post_id": "6af580b52ca9eef7ed4cf2fb"
   },
   "iMaWKD9yRAM": {
    "title": "Varang's aura in this scene is terrifying #avatar #varang #scifi",
@@ -424,37 +432,19 @@
    "music": "sw_interworldrapturephonk.mp3",
    "hook": "They chose hate over peace"
   },
-  "AmFgdmFJ1KA": {
-   "title": "The reason why Salman ki Maatrubhumi sabko hit karti hai 💀 | The soldier who never backs down |#edit",
-   "published": "2026-11-11T17:37:23Z",
-   "views": 1133,
-   "likes": 21,
-   "comments": 1,
-   "duration": "PT31S",
-   "buffer_post_id": "6af580b52ca9eef7ed4cf2fb"
-  },
   "en8JT8zt2LA": {
    "title": "David losing his mind in traffic #cyberpunkedgerunners #davidmartinez #anime",
    "published": "2026-11-19T08:00:51Z",
-   "views": 1127,
+   "views": 1128,
    "likes": 9,
    "comments": 0,
    "duration": "PT26S",
    "buffer_post_id": "6afea37bf6b6aa0cd4ae0042"
   },
-  "Sdwc3bUnqpU": {
-   "title": "The reason why he chose to become a plant 💀 | Fool Night | #edit",
-   "published": "2026-11-10T07:25:41Z",
-   "views": 1127,
-   "likes": 12,
-   "comments": 3,
-   "duration": "PT27S",
-   "buffer_post_id": "6af580b52ca9eef7ed4cf307"
-  },
   "1W5keha_iEs": {
    "title": "David did not expect this from Lucy #cyberpunkedgerunners #davidmartinez #animeedit",
    "published": "2026-11-17T06:00:47Z",
-   "views": 1126,
+   "views": 1128,
    "likes": 19,
    "comments": 0,
    "duration": "PT26S",
@@ -463,6 +453,15 @@
    "slot": "2026-11-17T11:30:00+05:30",
    "music": "sw_metamorphosis.mp3",
    "hook": "David finally reached his limit"
+  },
+  "Sdwc3bUnqpU": {
+   "title": "The reason why he chose to become a plant 💀 | Fool Night | #edit",
+   "published": "2026-11-10T07:25:41Z",
+   "views": 1128,
+   "likes": 12,
+   "comments": 3,
+   "duration": "PT27S",
+   "buffer_post_id": "6af580b52ca9eef7ed4cf307"
   },
   "cKsLjKeGC74": {
    "title": "Glen Powell is not holding back in this scene #therunningman #glenpowell #scifi",
@@ -477,10 +476,23 @@
    "music": "sw_murderinmymind.mp3",
    "hook": "They turned survival into a game"
   },
+  "dA64X3MLp00": {
+   "title": "Ranvijay walked in and changed everything #animal #ranbirkapoor #bollywood",
+   "published": "2026-11-18T01:02:38Z",
+   "views": 1091,
+   "likes": 12,
+   "comments": 0,
+   "duration": "PT25S",
+   "buffer_post_id": "6afcf9119f3765f6ab1fc3f2",
+   "queue_id": "20261118-0630-spyxfamily3",
+   "slot": "2026-11-18T06:30:00+05:30",
+   "music": "sw_lilwardenssecretsecretse2.mp3",
+   "hook": "He came to end the meeting"
+  },
   "gaJcYNEGj7U": {
    "title": "Nobody expected Axel to be this calm #lazarus #axel #anime",
    "published": "2026-11-17T10:30:53Z",
-   "views": 1089,
+   "views": 1091,
    "likes": 14,
    "comments": 0,
    "duration": "PT25S",
@@ -493,7 +505,7 @@
   "Cw7NwzKJYbQ": {
    "title": "The moment Rain realized they were trapped #alienromulus #caileespaeny #horror",
    "published": "2026-11-15T13:40:37Z",
-   "views": 1086,
+   "views": 1087,
    "likes": 16,
    "comments": 0,
    "duration": "PT22S",
@@ -503,23 +515,10 @@
    "music": "sw_memoryreboot.mp3",
    "hook": "This station was never abandoned"
   },
-  "dA64X3MLp00": {
-   "title": "Ranvijay walked in and changed everything #animal #ranbirkapoor #bollywood",
-   "published": "2026-11-18T01:02:38Z",
-   "views": 1084,
-   "likes": 12,
-   "comments": 0,
-   "duration": "PT25S",
-   "buffer_post_id": "6afcf9119f3765f6ab1fc3f2",
-   "queue_id": "20261118-0630-spyxfamily3",
-   "slot": "2026-11-18T06:30:00+05:30",
-   "music": "sw_lilwardenssecretsecretse2.mp3",
-   "hook": "He came to end the meeting"
-  },
   "nm5UY6pHCeE": {
    "title": "Ares aura in Tron Ares is unreal #tronares #jaredleto #scifi",
    "published": "2026-11-16T03:30:51Z",
-   "views": 1083,
+   "views": 1085,
    "likes": 20,
    "comments": 0,
    "duration": "PT25S",
@@ -545,7 +544,7 @@
   "MarQuhrNkeY": {
    "title": "When Ashwatthama finally reveals his power #kalki2898ad #ashwatthama #scifi",
    "published": "2026-11-14T12:01:17Z",
-   "views": 1074,
+   "views": 1075,
    "likes": 10,
    "comments": 0,
    "duration": "PT29S",
@@ -554,6 +553,19 @@
    "slot": "2026-11-14T17:30:00+05:30",
    "music": "sw_pkonkbetapkonkphenomenon.mp3",
    "hook": "Ashwatthama confronts the city of Kashi"
+  },
+  "ED6n83bj56Q": {
+   "title": "Housefull 5 cast is pure madness #housefull5 #bollywood #comedy",
+   "published": "2026-11-16T07:01:06Z",
+   "views": 1068,
+   "likes": 9,
+   "comments": 0,
+   "duration": "PT26S",
+   "buffer_post_id": "6afa6cb5ff465c57daca1c96",
+   "queue_id": "20261116-1230-housefull5",
+   "slot": "2026-11-16T12:30:00+05:30",
+   "music": "sw_goofyahhphonkfullversion.mp3",
+   "hook": "When the chaos finally hits"
   },
   "LAC1WIvBZe0": {
    "title": "Hutch Mansell aura in this scene is unreal #nobody2 #hutchmansell #action",
@@ -568,23 +580,10 @@
    "music": "sw_closeeyes.mp3",
    "hook": "Hutch Mansell is done hiding"
   },
-  "ED6n83bj56Q": {
-   "title": "Housefull 5 cast is pure madness #housefull5 #bollywood #comedy",
-   "published": "2026-11-16T07:01:06Z",
-   "views": 1066,
-   "likes": 9,
-   "comments": 0,
-   "duration": "PT26S",
-   "buffer_post_id": "6afa6cb5ff465c57daca1c96",
-   "queue_id": "20261116-1230-housefull5",
-   "slot": "2026-11-16T12:30:00+05:30",
-   "music": "sw_goofyahhphonkfullversion.mp3",
-   "hook": "When the chaos finally hits"
-  },
   "vVwVaygZ6zw": {
    "title": "Axel has thirty days to run | Lazarus | #edit",
    "published": "2026-11-18T08:01:17Z",
-   "views": 1052,
+   "views": 1057,
    "likes": 9,
    "comments": 2,
    "duration": "PT25S",
@@ -594,23 +593,10 @@
    "music": null,
    "hook": "Axel has thirty days to run"
   },
-  "X5utIT9zn6M": {
-   "title": "Thalaivar Rajinikanth's aura in Coolie is unreal #coolie #rajinikanth #thalaivar",
-   "published": "2026-11-14T17:01:36Z",
-   "views": 1051,
-   "likes": 9,
-   "comments": 0,
-   "duration": "PT26S",
-   "buffer_post_id": "6af830fb81e1228421f9ff97",
-   "queue_id": "20261114-2230-rajinikanth",
-   "slot": "2026-11-14T22:30:00+05:30",
-   "music": "sw_interworldrapturephonk.mp3",
-   "hook": "Hiding secrets that burn without a trace"
-  },
   "f6Iv91Vku54": {
    "title": "Axel admitting his bad habit mid escape | Lazarus #lazarus #axel #animeedit",
    "published": "2026-11-18T17:02:48Z",
-   "views": 1048,
+   "views": 1052,
    "likes": 21,
    "comments": 2,
    "duration": "PT25S",
@@ -619,6 +605,19 @@
    "slot": "2026-11-18T22:30:00+05:30",
    "music": "sw_reasonablebailefunk.mp3",
    "hook": "He admitted his bad habit mid escape"
+  },
+  "X5utIT9zn6M": {
+   "title": "Thalaivar Rajinikanth's aura in Coolie is unreal #coolie #rajinikanth #thalaivar",
+   "published": "2026-11-14T17:01:36Z",
+   "views": 1052,
+   "likes": 9,
+   "comments": 0,
+   "duration": "PT26S",
+   "buffer_post_id": "6af830fb81e1228421f9ff97",
+   "queue_id": "20261114-2230-rajinikanth",
+   "slot": "2026-11-14T22:30:00+05:30",
+   "music": "sw_interworldrapturephonk.mp3",
+   "hook": "Hiding secrets that burn without a trace"
   },
   "S8KPiIoYKRM": {
    "title": "The reason why Cliff Booth never walks away 💀 | Cliff Booth is back in 1977 | #edit",
@@ -636,7 +635,7 @@
   "EP8nrla749A": {
    "title": "Why Hodaka cannot stop watching her #weatheringwithyou #hina #anime",
    "published": "2026-11-20T17:02:56Z",
-   "views": 1040,
+   "views": 1039,
    "likes": 23,
    "comments": 0,
    "duration": "PT25S",
@@ -698,6 +697,32 @@
    "music": "sw_goofyahhphonkfullversion.mp3",
    "hook": "Logan finally met his match"
   },
+  "8-GO1ffrIXk": {
+   "title": "Evil Eye backstory in Dan Da Dan hits different #dandadan #evileye #anime",
+   "published": "2026-11-24T03:30:37Z",
+   "views": 1032,
+   "likes": 23,
+   "comments": 0,
+   "duration": "PT26S",
+   "buffer_post_id": "6b05055984c869d8a828cdcd",
+   "queue_id": "20261124-0900-dandadanevil",
+   "slot": "2026-11-24T09:00:00+05:30",
+   "music": "pr_7fva1p4g1xk.mp3",
+   "hook": "They locked a child in darkness"
+  },
+  "JvOSI6pQn-U": {
+   "title": "Ranbir Kapoor enters the room and changes everything #animal #ranbirkapoor #bollywood",
+   "published": "2026-11-18T03:30:45Z",
+   "views": 1030,
+   "likes": 8,
+   "comments": 0,
+   "duration": "PT24S",
+   "buffer_post_id": "6afcb4a0ca5f4f8df9cfeb3b",
+   "queue_id": "20261118-0900-vinlandsaga2",
+   "slot": "2026-11-18T09:00:00+05:30",
+   "music": "sw_phonkmusicarchiveultimat2.mp3",
+   "hook": "He does not play by rules"
+  },
   "MKp5KlB06Dw": {
    "title": "The moment Logan realized his world was gone #deadpool #wolverine #marvel",
    "published": "2026-11-15T13:02:04Z",
@@ -711,18 +736,18 @@
    "music": "sw_moonwalktokiodriftphonkh.mp3",
    "hook": "Deadpool tried saving a broken Logan"
   },
-  "JvOSI6pQn-U": {
-   "title": "Ranbir Kapoor enters the room and changes everything #animal #ranbirkapoor #bollywood",
-   "published": "2026-11-18T03:30:45Z",
-   "views": 1028,
-   "likes": 8,
-   "comments": 0,
-   "duration": "PT24S",
-   "buffer_post_id": "6afcb4a0ca5f4f8df9cfeb3b",
-   "queue_id": "20261118-0900-vinlandsaga2",
-   "slot": "2026-11-18T09:00:00+05:30",
-   "music": "sw_phonkmusicarchiveultimat2.mp3",
-   "hook": "He does not play by rules"
+  "JQGOukoBahY": {
+   "title": "She put her whole mind into a beaver in Pixar Hoppers #hoppers #pixar #animation",
+   "published": "2026-11-16T04:30:56Z",
+   "views": 1024,
+   "likes": 17,
+   "comments": 6,
+   "duration": "PT25S",
+   "buffer_post_id": "6afa6cb4d7e5fee63896cf21",
+   "queue_id": "20261115-1600-hoppers",
+   "slot": "2026-11-16T10:00:00+05:30",
+   "music": "sw_goofyahhphonkfullversion.mp3",
+   "hook": "Putting a human mind inside a beaver"
   },
   "nppV_7Clcxc": {
    "title": "Furiosa is not asking for permission #furiosa #madmax #action",
@@ -740,7 +765,7 @@
   "2FfOgsno8hY": {
    "title": "The moment Elphaba chose her own path #wicked #elphaba #fantasy",
    "published": "2026-11-17T08:01:44Z",
-   "views": 1016,
+   "views": 1017,
    "likes": 15,
    "comments": 0,
    "duration": "PT25S",
@@ -749,19 +774,6 @@
    "slot": "2026-11-17T13:30:00+05:30",
    "music": "sw_sramotamemphisphonkarchi.mp3",
    "hook": "Elphaba finally broke her silence"
-  },
-  "JQGOukoBahY": {
-   "title": "She put her whole mind into a beaver in Pixar Hoppers #hoppers #pixar #animation",
-   "published": "2026-11-16T04:30:56Z",
-   "views": 1014,
-   "likes": 17,
-   "comments": 6,
-   "duration": "PT25S",
-   "buffer_post_id": "6afa6cb4d7e5fee63896cf21",
-   "queue_id": "20261115-1600-hoppers",
-   "slot": "2026-11-16T10:00:00+05:30",
-   "music": "sw_goofyahhphonkfullversion.mp3",
-   "hook": "Putting a human mind inside a beaver"
   },
   "j_uM53VRcqc": {
    "title": "Johnny Cage did not sign up for this #mortalkombat #johnnycage #action",
@@ -792,7 +804,7 @@
   "9aGlUg4M9Iw": {
    "title": "Ranbir Kapoor walking in to end them #animal #ranbirkapoor #bollywood",
    "published": "2026-11-18T13:19:09Z",
-   "views": 975,
+   "views": 978,
    "likes": 16,
    "comments": 0,
    "duration": "PT24S",
@@ -811,10 +823,23 @@
    "duration": "PT32S",
    "buffer_post_id": "6af580b52ca9eef7ed4cf2ff"
   },
+  "zp-8Tv3rVmk": {
+   "title": "Violet waking up only to remember him #violetevergarden #violet #romance",
+   "published": "2026-11-24T01:00:39Z",
+   "views": 942,
+   "likes": 20,
+   "comments": 0,
+   "duration": "PT25S",
+   "buffer_post_id": "6b04e205c5d40b06ac31ae4a",
+   "queue_id": "20261124-0630-violetevergarden",
+   "slot": "2026-11-24T06:30:00+05:30",
+   "music": "sw_basscrusaderz.mp3",
+   "hook": "She woke up searching for him"
+  },
   "iqSNV0dDNfA": {
    "title": "Nobody expected this level of dominance #animal #ranbirkapoor #bollywood",
    "published": "2026-11-18T10:30:35Z",
-   "views": 928,
+   "views": 929,
    "likes": 14,
    "comments": 0,
    "duration": "PT25S",
@@ -827,7 +852,7 @@
   "TW-9EobIW9U": {
    "title": "Ranvijay makes a scene for milk #animal #ranbirkapoor #bollywood",
    "published": "2026-11-18T08:48:36Z",
-   "views": 917,
+   "views": 921,
    "likes": 10,
    "comments": 0,
    "duration": "PT25S",
@@ -840,7 +865,7 @@
   "ZiVz6pGFNr4": {
    "title": "Ranvijay Singh ends the meeting #animal #ranbirkapoor #action",
    "published": "2026-11-19T01:11:38Z",
-   "views": 813,
+   "views": 816,
    "likes": 8,
    "comments": 0,
    "duration": "PT25S",
@@ -853,7 +878,7 @@
   "62xoH80wh9M": {
    "title": "Robert De Niro Has Something To Say | MUSK",
    "published": "2026-11-15T10:25:54Z",
-   "views": 749,
+   "views": 750,
    "likes": 5,
    "comments": 2,
    "duration": "PT34S",
@@ -862,7 +887,7 @@
   "2hD-EGEWOqc": {
    "title": "Why Ashitaka cannot let her go #princessmononoke #ashitaka #ghibli",
    "published": "2026-11-22T05:58:32Z",
-   "views": 435,
+   "views": 447,
    "likes": 2,
    "comments": 0,
    "duration": "PT25S",
@@ -875,7 +900,7 @@
   "Z1hjyneotRo": {
    "title": "Nobody suspected Pushpa was this dangerous #pushpa2 #alluarjun #tollywood",
    "published": "2026-11-16T17:04:43Z",
-   "views": 415,
+   "views": 419,
    "likes": 5,
    "comments": 0,
    "duration": "PT25S",
@@ -894,22 +919,35 @@
    "duration": "PT26S",
    "buffer_post_id": "6afb23d91870373806a888a4"
   },
+  "3-4_i9Z0VvQ": {
+   "title": "Why he regrets his creation 💀 | The Trinity Test | #edit",
+   "published": "2026-11-24T05:18:50Z",
+   "views": 351,
+   "likes": 2,
+   "comments": 0,
+   "duration": "PT25S",
+   "buffer_post_id": "6b051eb5b9887ab818235b72",
+   "queue_id": "20261123-2230-oppenheimer",
+   "slot": "2026-11-23T22:30:00+05:30",
+   "music": "pr_montagemunknown.mp3",
+   "hook": "Why he regrets his creation"
+  },
   "ieltf77ofiA": {
    "title": "Vice City Doesn't Forgive | GTA 6 Edit",
    "published": "2026-11-18T17:49:01Z",
-   "views": 63,
-   "likes": 1,
+   "views": 69,
+   "likes": 2,
    "comments": 1,
    "duration": "PT53S"
   },
   "watch": {
    "title": "Vice City Doesn't Forgive | GTA 6 Edit",
    "published": "2026-11-18T17:49:01.000Z",
-   "views": 63,
-   "likes": 1,
+   "views": 67,
+   "likes": 2,
    "comments": 1,
    "buffer_post_id": "6afde54da6f473a92c82eb7e",
-   "metrics_at": "2026-11-23T07:21:20.106Z"
+   "metrics_at": "2026-11-24T08:48:44.547Z"
   },
   "bCAwRahh2_Q": {
    "title": "Godzilla Minus Zero broke the box office 💀 | Godzilla scene | #edit",
