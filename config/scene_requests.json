@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24 22:01 IST",
+ "generated_at": "2026-11-24 22:14 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
@@ -1135,6 +1135,44 @@
     "shorts",
     "trending",
     "kafka"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "lazarus",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-lazarus",
+   "pillar": "anime",
+   "words": "LAZARUS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "LAZARUS fight scene official clip",
+    "LAZARUS best scene official clip",
+    "LAZARUS official clip"
+   ],
+   "official_channels": [
+    "Adult Swim",
+    "Adult Swim Europe",
+    "MAPPA CHANNEL"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Axel has thirty days to run",
+   "title": "Axel has thirty days to run | Lazarus | #edit",
+   "tags": [
+    "lazarus",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "axel"
    ],
    "market": "US/UK"
   },
