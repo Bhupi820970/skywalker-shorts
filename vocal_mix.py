@@ -243,6 +243,11 @@ def mix_two_act(dialogue_bed: Path, song: Path, dst: Path, dur: float, T: float,
 BED_SPEECH_DB = float(os.environ.get("SKY_BED_SPEECH_DB", "-24"))   # song intro / drone under a spoken line
 BED_GAP_DB = float(os.environ.get("SKY_BED_GAP_DB", "-13"))         # between lines (still clearly a bed)
 DRONE_DB = -30.0
+# ref1 / ref2 (100 ms RMS: speech p90 vs gaps p10): the bed sits ~7-12 dB under the voices and comes up ~6 dB
+# between lines -> the bed gain is solved per video so the voice is DLG_VOICE_OVER_BED_DB over it.
+DLG_VOICE_OVER_BED_DB = float(os.environ.get("SKY_DLG_SMR_DB", "12"))
+DLG_GAP_LIFT_DB = 6.0
+DLG_MIN_SMR_DB = 9.0
 
 
 def drone(n: int, sr: int = SR) -> np.ndarray:
@@ -285,7 +290,18 @@ def mix_dialogue_drop(dialogue_bed: Path, song: Path, dst: Path, dur: float, T: 
         seg = full[max(0, pre_start):d]
         bed[nT - len(seg):] = seg[:nT]
         bed += drone(nT)
-        tgt = np.where(win[:nT] > 0, 10 ** (BED_SPEECH_DB / 20), 10 ** (BED_GAP_DB / 20)).astype(np.float32)
+        g_sp, g_gap = BED_SPEECH_DB, BED_GAP_DB
+        try:   # solve the bed level so the voice sits DLG_VOICE_OVER_BED_DB over it (ref ~7-12 dB)
+            sp_m = win[:nT] > 0
+            if sp_m.any():
+                v_rms = float(np.sqrt((voice[:nT][sp_m] ** 2).mean()))
+                b_rms = float(np.sqrt((bed[sp_m] ** 2).mean()))
+                if v_rms > 1e-5 and b_rms > 1e-6:
+                    g_sp = float(np.clip(db(v_rms) - DLG_VOICE_OVER_BED_DB - db(b_rms), -36.0, -4.0))
+                    g_gap = min(0.0, g_sp + DLG_GAP_LIFT_DB)
+        except Exception:
+            g_sp, g_gap = BED_SPEECH_DB, BED_GAP_DB
+        tgt = np.where(win[:nT] > 0, 10 ** (g_sp / 20), 10 ** (g_gap / 20)).astype(np.float32)
         g = _smooth_gain(tgt)
         fi = min(nT, int(1.0 * SR))
         g[:fi] *= np.linspace(0, 1, fi, dtype=np.float32)
@@ -318,6 +334,7 @@ def mix_dialogue_drop(dialogue_bed: Path, song: Path, dst: Path, dur: float, T: 
         "voice_in_act2_dbfs": rms_db(voice[nT:]),
         "act2_song_dbfs": rms_db(song_full[nT:]),
         "speech_segments": len(speech_out or []),
+        "bed_gain_db": round(g_sp, 1) if nT else None,
     }
     (work / "audio_check.json").write_text(json.dumps(res))
     print(f"  dialogue-drop mix: {res}")
@@ -362,14 +379,14 @@ def check_errors(res: dict | None, speech_expected: bool) -> list[str]:
         errs = []
         if res.get("act1_voice_dbfs", -99) < -35:
             errs.append(f"act-1 dialogue too quiet ({res.get('act1_voice_dbfs')} dBFS)")
-        if res.get("voice_over_bed_db", 99) < MIN_SMR_DB:
-            errs.append(f"bed not ducked enough under the dialogue ({res.get('voice_over_bed_db')} dB < {MIN_SMR_DB})")
+        if res.get("voice_over_bed_db", 99) < DLG_MIN_SMR_DB:
+            errs.append(f"bed not ducked enough under the dialogue ({res.get('voice_over_bed_db')} dB < {DLG_MIN_SMR_DB})")
         if res.get("voice_in_act2_dbfs", -99) > -50:
             errs.append(f"dialogue audio leaks into the song act ({res.get('voice_in_act2_dbfs')} dBFS)")
         if res.get("act2_song_dbfs", -99) < -30:
             errs.append(f"act-2 song too quiet ({res.get('act2_song_dbfs')} dBFS)")
-        if not (0.25 <= float(res.get("act1_frac") or 0) <= 0.80):
-            errs.append(f"act split {res.get('act1_frac')} outside 25-80% of the video")
+        if not (0.25 <= float(res.get("act1_frac") or 0) <= 0.92):
+            errs.append(f"act split {res.get('act1_frac')} outside 25-92% of the video")
         return errs
     if res and res.get("mode") == "two_act":
         errs = []

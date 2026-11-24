@@ -194,6 +194,9 @@ jobs:
           SKY_CHUNKED: "auto"
           SKY_FFMPEG_THREADS: "2"
           SKY_NO_PUBLISH: ${{ needs.plan.outputs.no_publish == '1' && '1' || '0' }}
+          # BiBi's ONE switch: repo variable SKY_DIALOGUE_EDIT=1 -> dialogue-first ref edits for every item with
+          # usable dialogue (song-only fallback). Unset/empty = per-item "dialogue_edit" flag only.
+          SKY_DIALOGUE_EDIT: ${{ vars.SKY_DIALOGUE_EDIT }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
           GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}

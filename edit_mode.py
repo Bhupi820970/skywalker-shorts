@@ -19,13 +19,18 @@ def item_mode_bucket(item_id: str) -> int:
 
 
 def dialogue_edit_wanted(item: dict | None, env: str | None = None) -> bool:
-    """Opt-in exception (BiBi, Nov 24 2026: "skywalker ko riyo ki trh"): a queue item with "dialogue_edit": true
-    is rendered as a riyio-style dialogue edit (dialogue -> silence + drop -> beat-cut montage, captions).
-    SKY_DIALOGUE_EDIT=1|0 overrides. Everything else stays song-only."""
-    if env in ("0", "1"):
-        return env == "1"
+    """Dialogue-first ref edit (BiBi Nov 24 2026: "same as reference: starting m bolne ka, baad m edit wala").
+    ONE switch: SKY_DIALOGUE_EDIT=1 makes it the default for every item (the pipeline falls back to the song-only
+    edit when the source has no usable dialogue); an item can still opt out with "dialogue_edit": false.
+    SKY_DIALOGUE_EDIT=0 turns it off everywhere. Unset: only items with "dialogue_edit": true."""
     v = (item or {}).get("dialogue_edit")
-    return (v.strip().lower() in ("1", "true", "yes")) if isinstance(v, str) else bool(v)
+    flag = None if v is None else ((v.strip().lower() in ("1", "true", "yes")) if isinstance(v, str) else bool(v))
+    env = (env or "").strip()
+    if env == "0":
+        return False
+    if env == "1":
+        return flag is not False
+    return bool(flag)
 
 
 def default_edit_mode(item_id: str, fmt: str | None = None) -> str:

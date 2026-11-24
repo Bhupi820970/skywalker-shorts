@@ -144,6 +144,6 @@ def test_sound_energy_folds_into_spectacle_and_penalises_static():
 def test_pipeline_wiring():
     src = (ROOT / "pipeline.py").read_text()
     assert "sky_fx.apply_sound_energy(scenes, src)" in src
-    assert "sky_fx.apply_plate_fx(silent, DROP_T, FPS, mplan)" in src  # drop flash + motion in one pass
+    assert "sky_fx.apply_plate_fx(silent, DROP_T, FPS, mplan" in src  # drop flash + motion in one pass
     assert "sky_fx.apply_drop_sfx(Path(audio), DROP_T, WORK" in src
     assert "return sky_fx.GRADE" in src and "eq=brightness={_fill_brightness()}" in src

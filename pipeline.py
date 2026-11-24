@@ -101,7 +101,10 @@ DROP_T = None              # output time of the music drop / reveal (set by appl
 # Opt-in riyio-style dialogue edit (BiBi Nov 24 2026): dialogue act (~20-40s) -> silence + drop -> beat-cut montage,
 # reference captions under the speaker. Only queue items with "dialogue_edit": true (or SKY_DIALOGUE_EDIT=1).
 DIALOGUE_EDIT = False
-DLG_ACT1_FRAC, DLG_ACT1_MAX_FRAC, DLG_ACT1_MIN_S = 0.55, 0.70, 10.0
+DLG_ACT1_FRAC, DLG_ACT1_MAX_FRAC, DLG_ACT1_MIN_S = 0.68, 0.85, 10.0   # ref1 0.91, ref2 0.61 of the runtime
+DLG_DEFAULT_TOTAL = 46.0   # dialogue edits run like the refs (46-60 s) unless the item asks for more than 32 s
+SONG_TARGET_DUR = None     # song-only body target, used when a dialogue edit falls back (no usable dialogue)
+DLG_SHOT_MIN, DLG_SHOT_MAX = 0.28, 0.65   # ref montage shots 0.13-0.63 s (median ~0.45 s), every cut on a kick
 DLG_MAX_TOTAL = 58.0
 PILLAR_MOOD = {"anime": "anime", "movie": "movie", "celeb": "anime", "romance": "romance", "funny": "funny"}
 # No fixed opening/ending time lock: the best story scenes may come from
@@ -1355,11 +1358,20 @@ def plan_two_act(scenes: list[dict], music: dict, target: float, transcript: dic
     step = 2 if 2 * ibi >= 0.85 else 4
     if step * ibi > 3.2:
         step = 1
+    if DIALOGUE_EDIT:
+        # ref1/ref2 montage: a cut on every kick, shots 0.13-0.63 s (median ~0.45 s), no long hero shots
+        step = max(1, int(round(0.45 / max(ibi, 0.1))))
+        while step > 1 and step * ibi > DLG_SHOT_MAX:
+            step -= 1
+        while step * ibi < DLG_SHOT_MIN:
+            step += 1
     used_ranges = [(c["a"], c["a"] + c["vis"]) for c in act1]
     used_scenes = [s for s in scenes if any(s["id"] == c["scene"] for c in act1)]
     used_ids = set(c["scene"] for c in act1)
-    gem2 = set((json.loads((WORK / "arrangement.json").read_text()).get("act2") or [])
-               if (WORK / "arrangement.json").exists() else [])
+    gem2_list = list((json.loads((WORK / "arrangement.json").read_text()).get("act2") or [])
+                     if (WORK / "arrangement.json").exists() else [])
+    gem2 = set(gem2_list)
+    gem2_rank = {k: i for i, k in enumerate(gem2_list)}   # Gemini's montage hero shots, best first
     slots = [(c["vis"], next(s for s in scenes if s["id"] == c["scene"]), c["a"], 1) for c in act1]
     body = float(target)
     t, k, prev = T, 0, None
@@ -1373,8 +1385,11 @@ def plan_two_act(scenes: list[dict], music: dict, target: float, transcript: dic
         hero_ok = any(float(s["dur"]) >= HERO_SHOT_MIN + 0.04 and s["id"] not in used_ids
                       and float(s.get("speech") or 0) <= 0.18 for s in usable)
         # 1-2 hero shots (2-4s) once a little act-2 footage is in, snapped to the grid.
-        want_hero = (heroes < MAX_HERO_SHOTS and hero_ok and t >= T + 0.12 * max(0.1, body - T))
-        if want_hero:
+        want_hero = (heroes < MAX_HERO_SHOTS and hero_ok and t >= T + 0.12 * max(0.1, body - T)
+                     and not DIALOGUE_EDIT)
+        if DIALOGUE_EDIT:
+            vis = max(DLG_SHOT_MIN, min(vis, 2 * DLG_SHOT_MAX, remaining))
+        elif want_hero:
             hero_beats = 6 if step <= 2 else 3
             nxt_h = min(len(grid) - 1, k + max(step, hero_beats))
             hvis = float(grid[nxt_h] - t) if nxt_h > k else max(HERO_SHOT_MIN, vis)
@@ -1389,7 +1404,7 @@ def plan_two_act(scenes: list[dict], music: dict, target: float, transcript: dic
             vis = max(FLASH_SHOT_MIN, min(vis, FLASH_SHOT_MAX, remaining))
         else:
             vis = max(MIN_SHOT_LEN, min(max(vis, MIN_SHOT_LEN), HERO_SHOT_MAX, remaining))
-        if remaining - vis < 0.6:
+        if remaining - vis < (DLG_SHOT_MIN if DIALOGUE_EDIT else 0.6):
             vis = remaining
         best, best_key = None, -1e9
         for s in usable:
@@ -1403,8 +1418,9 @@ def plan_two_act(scenes: list[dict], music: dict, target: float, transcript: dic
             key = (float(s.get("spectacle") or 0) + 8.0 * (float(s.get("gemini") or 5) - 5)
                    + 0.3 * float(s.get("motion") or 0) - 1.5 * float(s.get("speech") or 0)
                    - 40.0 * float(s.get("skin") or 0))
-            if f"{float(s['start']):.2f}-{float(s['end']):.2f}" in gem2:
-                key += 60.0
+            _k2 = f"{float(s['start']):.2f}-{float(s['end']):.2f}"
+            if _k2 in gem2:
+                key += 60.0 + (max(0.0, 30.0 - gem2_rank.get(_k2, 30)) if DIALOGUE_EDIT else 0.0)
             if prev is not None and abs(float(s["start"]) - float(prev["end"])) < 0.08:
                 key -= 90.0
             if key > best_key:
@@ -1457,6 +1473,18 @@ def _set_two_act_drop(edl: list[dict] | None) -> None:
         print(f"  two-act drop at {DROP_T:.2f}s")
     elif DIALOGUE_EDIT and not ENERGY:
         DROP_T = None
+
+
+def _dialogue_fallback() -> float:
+    """No usable dialogue in this source: the item becomes the normal song-only edit (32 s rules, song-only QC)."""
+    global DIALOGUE_EDIT, EDIT_MODE, ACT1_FRAC, ACT1_MAX_FRAC, ACT1_MIN_S, MAX_TOTAL_DUR, TARGET_DUR
+    DIALOGUE_EDIT = False
+    EDIT_MODE = "music_only"
+    MAX_TOTAL_DUR = 32.0
+    if SONG_TARGET_DUR:
+        TARGET_DUR = float(SONG_TARGET_DUR)
+    print(f"  dialogue edit -> song-only fallback (body target {TARGET_DUR:.1f}s)")
+    return TARGET_DUR
 
 
 def is_two_act(edl: list[dict] | None) -> bool:
@@ -1560,6 +1588,8 @@ def plan_edit(scenes: list[dict], music: dict, target: float = TARGET_DUR,
         if two:
             return two
         print("  two-act: not enough clean dialogue; falling back to music-only")
+        if DIALOGUE_EDIT:
+            target = _dialogue_fallback()
 
     # Fill the whole target with unique live shots (aim about 20–28s). An end-card still
     # is only added later if we still have a unique unused frame.
@@ -3377,6 +3407,12 @@ def _reference_captions(edl: list[dict], tr: dict, lay: dict, video: Path, music
         kept, dropped = sky_lyrics.filter_words(ws, T, 0.0, None, {"title": _song_title(music)})
         if dropped:
             print(f"  caption guard dropped: {dropped[:12]}")
+        try:   # Gemini's caption plan (accent words + colours, typewriter vs pop per line); rules fill the gaps
+            _plan = json.loads((WORK / "arrangement.json").read_text()).get("caption_plan") or []
+            n_pl = dialogue_caps.apply_caption_plan(kept, _plan)
+            print(f"  caption plan from gemini: {n_pl}/{len(kept)} word(s) on planned lines")
+        except Exception as e:
+            print(f"  caption plan skipped ({type(e).__name__}); rule-based accents")
         why = sky_lyrics.lyric_reasons(kept, 0.0, check_quote=False)
         if why or len(kept) < 3:
             print(f"  reference captions skipped: {why or 'too few spoken words'}")
@@ -3564,7 +3600,8 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         import sky_fx
         mplan = sky_fx.motion_plan(edl or [], DROP_T, _beats_out(music, edl),
                                    punches=bool(DROP_T is not None and (ENERGY or is_two_act(edl))))
-        silent = sky_fx.apply_plate_fx(silent, DROP_T, FPS, mplan)
+        silent = sky_fx.apply_plate_fx(silent, DROP_T, FPS, mplan,
+                                       ref_flash=bool(DIALOGUE_EDIT and is_two_act(edl)))
         if Path(silent).stem.endswith("_fx"):
             (WORK / "motion_fx.json").write_text(json.dumps(mplan))
     except Exception as e:
@@ -4217,7 +4254,9 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
     checks["audio"] = {"ok": mv is not None and mv > audio_lim, "mean_volume_db": mv, "limit_db": audio_lim}
     # 5. no shake: high-frequency jitter of global motion inside shots
     jit = []
-    shake_items = [it for it in body if not (mplan and _sfx.in_punch(float(it["t0"]) + 0.4, mplan, pad=0.3))]
+    _push0 = {round(float(a), 2) for a, _ in ((mplan or {}).get("pushes") or [])}
+    shake_items = [it for it in body if not (mplan and (_sfx.in_punch(float(it["t0"]) + 0.4, mplan, pad=0.3)
+                                                         or round(float(it["t0"]), 2) in _push0))]
     for it in shake_items[:8]:
         if it["visible"] < 1.0 or it.get("drop") or it.get("ramp"):
             continue
@@ -4419,7 +4458,7 @@ def main():
     args = ap.parse_args()
     global END_STILL, ENERGY, RELAX, ALT_SCENES, MEZZ_FOR_SHAKE, TRAILER_OPEN_SKIP, TRAILER_END_SKIP, OUT_RES
     global EDIT_MODE, FORCED_EDIT_MODE, EDIT_FORMAT
-    global DIALOGUE_EDIT, ACT1_FRAC, ACT1_MAX_FRAC, ACT1_MIN_S
+    global DIALOGUE_EDIT, ACT1_FRAC, ACT1_MAX_FRAC, ACT1_MIN_S, SONG_TARGET_DUR
     global MIN_SHOT_LEN, HERO_SHOT_MIN, HERO_SHOT_MAX, MAX_FLASH_SHOTS, MAX_HERO_SHOTS
     ENERGY = bool(args.energy or (args.pillar or "").lower() in ("anime", "movie"))
     EDIT_FORMAT = "action"
@@ -4494,7 +4533,11 @@ def main():
     # so plan the body short enough that body + end still lands <= 32s.
     # MIN_UNIQUE_DUR (20s) is only the lower clamp on that body target, not a 25s retry gate.
     MAX_TOTAL_DUR = DLG_MAX_TOTAL if DIALOGUE_EDIT else 32.0
-    TARGET_DUR = max(MIN_UNIQUE_DUR + 0.5, min(TARGET_DUR, MAX_TOTAL_DUR) - END_CARD - 1.5)
+    _raw_target = float(TARGET_DUR)
+    SONG_TARGET_DUR = max(MIN_UNIQUE_DUR + 0.5, min(_raw_target, 32.0) - END_CARD - 1.5)
+    if DIALOGUE_EDIT and _raw_target <= 32.0:
+        _raw_target = DLG_DEFAULT_TOTAL       # live items say 26 s (song-only rule); ref dialogue edits run 46-60 s
+    TARGET_DUR = max(MIN_UNIQUE_DUR + 0.5, min(_raw_target, MAX_TOTAL_DUR) - END_CARD - 1.5)
     print(f"  body target {TARGET_DUR:.1f}s (+{END_CARD:.1f}s end still, cap {MAX_TOTAL_DUR:.0f}s)")
     PLATE_H_TARGET = even(args.plate_h) if args.plate_h else 0
     STABILIZE = not args.no_stabilize
@@ -4719,7 +4762,8 @@ def main():
         except Exception:
             songs = []
         ranks = sky_ai.rank_scenes(mezz, scenes, transcript, HOOK_TEXT, WORK, cache=cache, lines=a1_lines,
-                                   act1_target=ACT1_FRAC * (TARGET_DUR + END_CARD), mode=EDIT_MODE,
+                                   act1_target=ACT1_FRAC * (TARGET_DUR + END_CARD),
+                                   mode=("dialogue_drop" if DIALOGUE_EDIT and EDIT_MODE == "two_act" else EDIT_MODE),
                                    songs=songs)
         if ranks and isinstance(ranks.get("_arrangement"), dict):
             arr = ranks.pop("_arrangement")

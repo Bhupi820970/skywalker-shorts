@@ -86,6 +86,52 @@ def hook_errors(hook: str, avoid: list[str]) -> list[str]:
     return errs
 
 
+# ------------------------------------------------------------------ savage hook (BiBi Nov 24: like ref1 "Money Really Talks")
+SAVAGE_EXAMPLES = ["Money Really Talks", "Winter Came For Them", "He Owns This Room", "Nobody Leaves This Table",
+                   "Power Never Asks Twice", "She Already Knew Everything"]
+SAVAGE_SOFT = re.compile(r"(?i)\b(why|how|watch|scene|moment|edit|clip|trailer|look at|wait for|you won'?t believe|"
+                         r"just|really cool|amazing|epic|insane)\b")
+
+
+def savage_hook_errors(hook: str, avoid: list[str] | None = None) -> list[str]:
+    """Savage bar line = every normal hook rule (hook_errors: 3-7 words, English, no banned templates / openers,
+    no profanity) PLUS 3-5 words, a statement (no question / ellipsis / exclamation spam), no soft filler words."""
+    errs = list(hook_errors(hook, avoid or []))
+    words = (hook or "").replace('"', " ").split()
+    if not (3 <= len(words) <= 5):
+        errs.append(f"savage hook needs 3-5 words (has {len(words)})")
+    if re.search(r"[?]|\.\.|!!", hook or ""):
+        errs.append("savage hook is a flat statement (no question / ellipsis)")
+    if SAVAGE_SOFT.search(hook or ""):
+        errs.append("savage hook has a soft / generic word")
+    return errs
+
+
+def savage_wanted(edl: list | None) -> bool:
+    """Dialogue edits (and every item once BiBi's SKY_DIALOGUE_EDIT=1 switch is on) get the savage bar line."""
+    if os.environ.get("SKY_DIALOGUE_EDIT", "").strip() == "1":
+        return True
+    return any(e.get("act") == 1 for e in (edl or []))
+
+
+def pick_savage_hook(cands: list[str], avoid: list[str]) -> str | None:
+    for h in cands:
+        h = " ".join(str(h or "").split()).strip(" .")
+        if h and not savage_hook_errors(h, avoid):
+            return h
+    return None
+
+
+def _savage_note(savage: bool) -> str:
+    if not savage:
+        return ""
+    return ("THIS IS A DIALOGUE EDIT: the hook must be SAVAGE like the reference edit's bar line \"Money Really Talks\": "
+            "3-5 words, a cold flat statement with attitude (power, threat or the reveal of THIS scene), Title Case, "
+            "no question, no 'watch' / 'why' / 'this scene' / 'moment', no praise. Examples of the tone (do not copy "
+            "them, write one for THIS scene): " + "; ".join(f'"{x}"' for x in SAVAGE_EXAMPLES) + ". "
+            "Also give hook_alts = 3 more savage options for this scene.")
+
+
 def _clip_dialogue(edl: list, transcript: dict) -> list[str]:
     lines = []
     words = transcript.get("words") or []
@@ -224,7 +270,8 @@ def clip_hook_meta(mezz: Path, edl: list, transcript: dict, work: Path, iid: str
     if cache.exists():
         try:
             c = json.loads(cache.read_text())
-            if c.get("hook") and not hook_errors(c["hook"], avoid):
+            if (c.get("hook") and not hook_errors(c["hook"], avoid)
+                    and not (savage_wanted(edl) and savage_hook_errors(c["hook"], avoid))):
                 print("  gemini[hook]: cached")
                 return c
         except Exception:
@@ -243,6 +290,7 @@ def clip_hook_meta(mezz: Path, edl: list, transcript: dict, work: Path, iid: str
         frames.append(f)
     sheet = _tile(frames, work / "gem_hook_sheet.jpg")
     film = film_name(item)
+    savage = savage_wanted(edl)
     out = None
     if sheet:
         format_note = ""
@@ -273,6 +321,7 @@ FORBIDDEN: "The reason why...", "<Name>'s aura in this scene is ...", repeating 
 generic templates, emoji, hashtags, Hindi/Hinglish words.
 Do NOT start with any of these openers (used recently): {avoid}.
 {format_note}
+{_savage_note(savage)}
 Then write 5 DIFFERENT title candidates for this Short and rank them by click potential like the top movie/anime
 edit channels (character-focused, emotional, curiosity): styles like "Why <character> cannot stop watching her",
 "<Character> entering the scene is peak ...", "Watch the last two seconds", "Nobody suspected <character> was this dangerous",
@@ -281,11 +330,19 @@ character/actor or film, never "The reason why", never "aura in this scene is", 
 Give each a click_score 0-100 (honest: would a scroller tap it?). Also a one-sentence English description line about
 this exact moment, and 3 relevant lowercase hashtags (film, character/actor, genre; no '#').
 Return JSON: {{"hook": str, "titles": [{{"title": str, "click_score": n}}, ...5], "line": str,
-"hashtags": [str, str, str], "style": str}}"""
+"hashtags": [str, str, str], "style": str{', "hook_alts": [str, str, str]' if savage else ''}}}"""
         out = gemini.generate_json(prompt, [sheet], purpose="hook", temperature=0.9)
     meta = None
     if isinstance(out, dict):
         hook = " ".join(str(out.get("hook") or "").split()).strip(" .")
+        if savage:
+            alts = [x for x in (out.get("hook_alts") or []) if isinstance(x, str)]
+            sv = pick_savage_hook([hook] + alts, avoid)
+            if sv:
+                hook = sv
+                print(f"  savage hook: {hook!r}")
+            else:
+                print(f"  savage hook candidates failed the savage check; normal hook rules apply: {hook!r}")
         cands = []
         for c in (out.get("titles") or []):
             if isinstance(c, dict) and c.get("title"):
@@ -403,7 +460,7 @@ date/"coming soon" card, rating card, credits, or on-screen text/typography rath
 Return JSON: {{"shots": [{{"i": int, "score": number, "card": bool}}], "act1": [line ids in play order],
 "act2": [shot indexes for the hype part, best first], "iconic_hook": bool,
 "song": "exact file name from the library", "song_alts": ["backup file", "backup file"],
-"song_drop": seconds into the chosen song where the drop should hit (one of its highs) or null}}"""
+"song_drop": seconds into the chosen song where the drop should hit (one of its highs) or null{_dialogue_json(mode)}}}"""
     out = gemini.generate_json(prompt, [sheet], purpose="scenes", temperature=0.2)
     if not isinstance(out, dict) or not isinstance(out.get("shots"), list):
         return None
@@ -450,6 +507,8 @@ Return JSON: {{"shots": [{{"i": int, "score": number, "card": bool}}], "act1": [
             arr["act2"].append(f"{float(s2['start']):.2f}-{float(s2['end']):.2f}")
         except Exception:
             pass
+    if mode == "dialogue_drop":
+        parse_dialogue_plan(out, spoken, arr)
     ranks["_arrangement"] = arr
     if cache:
         cache.write_text(json.dumps({"key": key, "ranks": ranks}))
@@ -461,6 +520,8 @@ def _arrangement_brief(lines: list[dict] | None, act1_target: float, mode: str =
         f'L{l["id"]}: {float(l["start"]):.1f}-{float(l["end"]):.1f}s "{l["text"][:90]}"'
         for l in (lines or [])[:40]
     )
+    if mode == "dialogue_drop" and lines:
+        return dialogue_ref_brief(lines, act1_target)
     if mode != "two_act":
         extra = ""
         if ls:
@@ -490,6 +551,92 @@ Candidate spoken lines (id: source time, text):
 act1 = 1-4 line ids in the order they should play (total about {act1_target:.0f}s of speech, story order usually best).
 act2 = 8-14 shot indexes from the contact sheet with the strongest action/visuals/reveals (no talking heads), best first.
 iconic_hook = true only if the opening line itself is a genuinely iconic hook."""
+
+# ------------------------------------------------------------------ dialogue edit plan (BiBi Nov 24: refs decide)
+CAP_COLORS = ("gold", "green", "red", "blue", "pink", "orange", "white")
+CAP_REVEALS = ("pop", "typewriter")
+
+
+def dialogue_ref_brief(lines: list[dict] | None, act1_target: float) -> str:
+    """The two reference edits broken down for Gemini; it chooses scenes, punch line, montage and caption accents."""
+    if not lines:
+        return ""
+    ls = "\n".join(f'L{l["id"]}: {float(l["start"]):.1f}-{float(l["end"]):.1f}s "{l["text"][:110]}"'
+                   for l in (lines or [])[:40])
+    return f"""
+This Short is a DIALOGUE EDIT made exactly like two reference edits the owner loves:
+- REF 1 ("Money Really Talks", 60 s): one continuous, tense, slow-burn conversation (0-54 s): a man reads a
+  woman (power / money / control). Shots 1-4 s, straight cuts on speaker changes, a dark ducked bed under crisp
+  voices. The last line is a short PUNCH line ("...you have a lot of money"); the beat drops exactly on it, then a
+  5 s montage of the same man (0.2-0.6 s shots, every cut on a kick, flash, zoom, shake).
+- REF 2 (Game of Thrones, 46 s): Walder Frey's threat speech, then Arya's REVEAL "Winter came for House Frey"
+  (0-28 s, slow, quiet, menacing). The drop lands on the reveal line, then a 14 s kick-cut montage of the Stark
+  story (heroes, swords, iconic faces), then a short outro.
+What they share: ONE scene of 2-3 characters, a power / threat / reveal exchange that builds tension slowly (no
+action, no shouting crowd, no narration, no song lyrics), every line a complete thought, story order, ending on the
+strongest short line (the PUNCH line, 2-8 words) - the drop hits right after it.
+Candidate spoken lines (id: source time, text):
+{ls}
+act1 = 2-8 line ids in play order (about {act1_target:.0f}s of speech) from ONE tense exchange, the punch line LAST.
+punch_line = the id of that last line.
+act2 = 12-30 montage hero shot indexes from the contact sheet (the same title: iconic faces, heroes, action,
+reveals, no talking heads, no cards), best first; the first one hits on the drop.
+captions = one entry per act1 line: {{"line": id, "reveal": "typewriter" for slow dramatic / menacing / reveal
+lines (and usually the punch line) or "pop" for normal talk, "accent": [{{"word": a word from that line,
+"color": "gold"|"green"|"red"|"blue"|"pink"|"orange"}}]}}. Accent only the 1-2 words that carry the meaning, coloured
+by meaning: money / riches / power -> green or gold, violence / death / threat -> red, hero names / cold / calm ->
+blue, love / loss -> pink. Fillers (the, you, a, is...) are never accents; a line may have no accent."""
+
+
+def _dialogue_json(mode: str) -> str:
+    if mode != "dialogue_drop":
+        return ""
+    return (',\n"punch_line": line id, "captions": [{"line": id, "reveal": "pop"|"typewriter", '
+            '"accent": [{"word": str, "color": str}]}]')
+
+
+def parse_dialogue_plan(out: dict, lines: list[dict] | None, arr: dict) -> dict:
+    """Validate Gemini's dialogue plan into arr (punch line last in act 1, caption plan keyed by source time).
+    Anything invalid is dropped; the caption code falls back to its own rules for lines without a plan."""
+    by_id = {int(l["id"]): l for l in (lines or []) if "id" in l}
+    try:
+        pl = int(out.get("punch_line"))
+    except Exception:
+        pl = None
+    if pl is not None and pl in by_id:
+        arr["punch_line"] = pl
+        if pl in arr.get("act1", []):
+            arr["act1"] = [x for x in arr["act1"] if x != pl] + [pl]
+    plan = []
+    for c in out.get("captions") or []:
+        if not isinstance(c, dict):
+            continue
+        try:
+            lid = int(str(c.get("line")).lstrip("Ll"))
+        except Exception:
+            continue
+        if lid not in by_id or (arr.get("act1") and lid not in arr["act1"]):
+            continue
+        line = by_id[lid]
+        words = {re.sub(r"[^a-z0-9']", "", w.lower()).replace("'", "") for w in str(line["text"]).split()}
+        reveal = str(c.get("reveal") or "").strip().lower()
+        reveal = reveal if reveal in CAP_REVEALS else None
+        acc = []
+        for a in (c.get("accent") or [])[:3]:
+            if not isinstance(a, dict):
+                continue
+            w = re.sub(r"[^a-z0-9']", "", str(a.get("word") or "").lower()).replace("'", "")
+            col = str(a.get("color") or "").strip().lower()
+            if w and w in words and col in CAP_COLORS and len(w) >= 2:
+                acc.append({"word": w, "color": col})
+        if reveal is None and not acc:
+            continue
+        plan.append({"line": lid, "src": [float(line["start"]), float(line["end"])],
+                     "reveal": reveal or "pop", "accent": acc})
+    if plan:
+        arr["caption_plan"] = plan
+    return arr
+
 
 def _song_brief(songs: list[dict] | None) -> str:
     if not songs:
@@ -673,13 +820,16 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
         expected = (
             "Expected: a tight WHITE bar with black italic English hook text in its own band at the TOP, directly ABOVE "
             "(never over) the full landscape movie frame, picture vertically centered with blur above and below. "
-            "This is a DIALOGUE edit (approved style): ACT 1 (the first ~45-70%) is one dialogue scene - the characters' "
-            "original voices crystal clear, with the song's dark intro / an ambient drone very quiet under the lines. "
-            "Serif captions (white with a coloured glow, key words bigger in an accent colour, 1-4 words, popping in) "
-            "sit inside the picture centred under the speaker's chin, never covering a face, and show EXACTLY what the "
-            "characters say, word by word in sync. Then about half a second of silence with a rising sub-bass, the "
-            "beat drops (soft flash) and a fast beat-cut montage of the same title plays with the song at full level, "
-            "no dialogue and no captions until the end. Do not reject for having dialogue or captions."
+            "This is a DIALOGUE edit (approved style): ACT 1 (the first ~60-85%) is one dialogue scene - the characters' "
+            "original voices crystal clear, with the song's dark intro / an ambient drone quietly under the lines "
+            "(about 12 dB under the voices, a little louder between lines). Captions in ALL CAPS: bold wide-spaced "
+            "sans for normal lines and a Trajan-like serif typed in letter by letter for dramatic lines, white with a "
+            "soft glow and meaning words in an accent colour (some outline-only), 1-5 words, popping in, centred "
+            "inside the picture just under the speaker's chin, never covering a face, showing EXACTLY what the "
+            "characters say, word by word in sync. Then a split-second of silence after a rising sub-bass, the beat "
+            "drops on a white flash and a very fast montage of the same title (a cut on every kick, ~0.3-0.6 s shots, "
+            "each pushing in with motion blur, a shake on the hits) plays with the song at full level, no dialogue "
+            "and no captions until the end. Do not reject for having dialogue, captions or fast cuts."
         )
         speech_crit = ("speech_clarity (every spoken line clear over the quiet bed; low if the bed buries the voices or "
                        "a voice leaks into the montage after the drop)")
@@ -716,9 +866,10 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
     if mode == "dialogue_drop":
         cap_ok = " except the intended dialogue captions under the speaker"
     # BiBi Nov 24 ref-edit techniques: intended style, not defects
-    expected += (" Intended style effects (never a defect): a slow ~5% push-in on dialogue / slow shots, quick zoom "
-                 "punches with a light shake and a tiny colour split on montage beats, and a short silence with a "
-                 "rising sub-bass right before the drop.")
+    expected += (" Intended style effects (never a defect): a slow push-in (up to ~5%) on dialogue / slow shots, "
+                 "quick zoom pushes with motion blur, a short shake on the hits, a tiny colour split and single-frame "
+                 "light flashes on montage beats, and a split-second of silence with a rising sub-bass right before "
+                 "the drop.")
     prompt = f"""You are the final quality judge for a YouTube Short (vertical 9:16, {dur:.1f}s) before it is published.
 You get the finished video itself (watch it AND listen to it) plus an image of 8 frames sampled across it.
 {expected}

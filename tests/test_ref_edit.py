@@ -34,8 +34,9 @@ def test_motion_plan_slow_zoom_and_tasteful_punches():
     edl = _edl([2.5, 3.0, 2.0, 0.6, 0.6, 0.6, 2.4, 0.5, 0.5, 0.5, 0.5, 3.0], act1=3)
     drop = 7.5
     plan = sky_fx.motion_plan(edl, drop, beats_out=[drop + 0.5 * k for k in range(30)])
-    assert (0.0, 2.5) in plan["zooms"] and (2.5, 5.5) in plan["zooms"]     # every dialogue clip pushes in
+    assert (0.0, 2.5) in plan["zooms"] and (2.5, 5.5) in plan["zooms"]     # every dialogue clip creeps in
     assert any(a >= drop for a, b in plan["zooms"])                         # long montage shot too
+    assert (7.5, 8.1) in plan["pushes"] and all(b - a <= sky_fx.PUSH_MAX_S for a, b in plan["pushes"])
     assert all(b - a >= sky_fx.SLOW_ZOOM_MIN_S for a, b in plan["zooms"])
     p = plan["punches"]
     assert p[0] == drop and 3 <= len(p) <= sky_fx.PUNCH_MAX
@@ -48,13 +49,13 @@ def test_motion_plan_slow_zoom_and_tasteful_punches():
 def test_zoom_curve_matches_ffmpeg_expression():
     plan = {"zooms": [(0.0, 2.0)], "punches": [3.0]}
     assert sky_fx.zoom_at(0.0, plan) == pytest.approx(1.0)
-    assert sky_fx.zoom_at(1.0, plan) == pytest.approx(1.0 + sky_fx.SLOW_ZOOM / 2)
+    assert sky_fx.zoom_at(1.0, plan) == pytest.approx(1.0 + sky_fx.SLOW_ZOOM_RATE * 2.0 / 2)   # ref ~1 %/s
     assert sky_fx.zoom_at(3.0 + sky_fx.PUNCH_S / 2, plan) == pytest.approx(1.0 + sky_fx.PUNCH_Z)
     assert sky_fx.zoom_at(3.0 + sky_fx.PUNCH_S + 0.01, plan) == pytest.approx(1.0)
     assert sky_fx.in_punch(3.1, plan) and not sky_fx.in_punch(2.5, plan)
     f = sky_fx.motion_filter(plan, 640, 360)
     assert "eval=frame" in f and "crop=640:360" in f and "rgbashift" in f and "clip(" in f
-    assert sky_fx.PUNCH_Z == 0.08 and sky_fx.SLOW_ZOOM == 0.05
+    assert sky_fx.PUNCH_Z == 0.08 and sky_fx.SLOW_ZOOM == 0.05 and sky_fx.SLOW_ZOOM_RATE == 0.012
 
 
 def _frames(path, w, h):
@@ -103,9 +104,10 @@ def test_riser_rises():
 
 
 def test_pre_drop_window_never_cuts_a_word():
-    assert sky_fx.pre_drop_window(10.0) == (9.5, 10.0)
-    assert sky_fx.pre_drop_window(10.0, speech_end=9.7) == (9.74, 10.0)
-    assert sky_fx.pre_drop_window(10.0, speech_end=9.95) is None             # no room: keep the word
+    assert sky_fx.pre_drop_window(10.0) == (9.8, 10.0)                       # split-second (ref1 ~0.1-0.2 s)
+    assert sky_fx.pre_drop_window(10.0, speech_end=9.5) == (9.8, 10.0)
+    assert sky_fx.pre_drop_window(10.0, speech_end=9.7) == (9.8, 10.0)
+    assert sky_fx.pre_drop_window(10.0, speech_end=9.84) is None             # no room: keep the word
     assert sky_fx.pre_drop_window(0.6) is None
 
 
@@ -119,10 +121,10 @@ def test_pre_drop_audio(tmp_path):
     x = sky_fx._read_f32(out)[:, 0]
     sr = 48000
     rms = lambda t0, t1: float(np.sqrt((x[int(t0 * sr):int(t1 * sr)] ** 2).mean()))
-    assert rms(3.52, 3.98) < 1e-4                                            # full silence before the drop
+    assert rms(3.81, 3.99) < 1e-4                                            # total silence right before the drop
     src = sky_fx._read_f32(a)[:, 0]
     assert rms(4.05, 4.5) == pytest.approx(float(np.sqrt((src[int(4.05 * sr):int(4.5 * sr)] ** 2).mean())), rel=0.05)
-    assert rms(3.0, 3.48) > rms(1.0, 1.48)                                   # riser swells into the gap
+    assert rms(3.3, 3.78) > rms(1.0, 1.48)                                   # riser swells into the gap
     assert sky_fx.apply_pre_drop_audio(a, None, tmp_path) == a
     assert sky_fx.apply_pre_drop_audio(tmp_path / "missing.wav", 4.0, tmp_path) == tmp_path / "missing.wav"
     assert "[2:a]" not in sky_fx.sfx_mix_filter(4.0, whoosh=False)          # no whoosh inside the silence
@@ -136,19 +138,20 @@ LAY = {"plate_x": 0, "plate_y": 656, "plate_w": 1080, "plate_h": 608}
 
 def test_caption_groups_and_meaning_colours():
     g = DC.group_words(WORDS, 10.0)
-    assert all(1 <= len(x) <= 4 for x in g)
+    assert all(1 <= len(x) <= DC.MAX_WORDS <= 5 for x in g)
     assert [w["word"] for w in g[0]] == ["Nice", "to", "meet", "you,"]
     assert DC.accent_for("kill", 0) == DC.RED and DC.accent_for("love", 0) == DC.PINK
     assert DC.accent_for("king", 0) == DC.GOLD and DC.accent_for("winter", 0) == DC.BLUE
     st = DC.style_group(g[-1], 3, is_last=True)
-    assert st[-1]["punch"] and st[-1]["size"] == DC.SIZE_PUNCH > DC.SIZE_KEY > DC.SIZE_FILLER
+    assert st[-1]["punch"] and st[-1]["drama"] and st[-1]["size"] == DC.SIZE_DRAMA > DC.SIZE_TALK
+    assert len({it["size"] for it in st}) == 1                               # one size per line (refs)
     assert all(it["col"] == DC.WHITE for it in st if not it["key"])
 
 
 def test_caption_placement_under_chin_never_on_face():
     face = (452, 719, 287, 417)
     (x, y, w, h), zone = DC.place(400, 90, LAY, [face])
-    assert zone == "chin" and y >= face[1] + face[3] and abs(x + w / 2 - (face[0] + face[2] / 2)) < 2
+    assert zone == "chin" and y >= face[1] + face[3] and abs(x + w / 2 - 540) < 2    # centred like the refs
     assert y + h <= LAY["plate_y"] + LAY["plate_h"]
     big = (300, 700, 480, 560)                                                # face fills the picture
     (x, y, w, h), zone = DC.place(400, 90, LAY, [big])
@@ -160,8 +163,8 @@ def test_caption_placement_under_chin_never_on_face():
 def test_build_writes_reference_ass(tmp_path):
     res = DC.build(WORDS, 6.0, LAY, lambda t: [(452, 700, 200, 260)], tmp_path / "lowerthirds.ass")
     txt = (tmp_path / "lowerthirds.ass").read_text()
-    assert "Playfair Display" in txt and r"\fscx120\fscy120\t(0,200,\fscx100\fscy100)" in txt and r"\blur" in txt
-    assert txt.count("Dialogue:") == len(res["boxes"]) >= 3
+    assert "Montserrat Bold" in txt and "Cinzel Bold" in txt and r"\fscx120\fscy120\t(0,200,\fscx100\fscy100)" in txt
+    assert txt.count("Dialogue:") == 2 * len(res["boxes"]) and len(res["boxes"]) >= 3   # glow layer + crisp layer
     assert all(b["t1"] <= 6.0 for b in res["boxes"]) and not DC.qa(res["boxes"], LAY)
     assert "KING" in res["text"]
     bad = [{"box": [1000, 700, 300, 80], "text": "x", "faces": []}]
@@ -210,7 +213,8 @@ def test_dialogue_drop_mix(tmp_path, monkeypatch):
     speech = [(k * 2.0, k * 2.0 + 1.2) for k in range(2)]
     res = VM.mix_dialogue_drop(tmp_path / "dial.wav", tmp_path / "song.wav", tmp_path / "mix.wav", 8.0, 4.0, 12.0,
                                speech, tmp_path)
-    assert res["mode"] == "dialogue_drop" and res["voice_over_bed_db"] >= VM.MIN_SMR_DB
+    assert res["mode"] == "dialogue_drop" and res["voice_over_bed_db"] == pytest.approx(VM.DLG_VOICE_OVER_BED_DB, abs=2.5)
+    assert res["voice_over_bed_db"] >= VM.DLG_MIN_SMR_DB
     assert res["voice_in_act2_dbfs"] < -50 and res["act2_song_dbfs"] > -30
     assert res["bed_under_voice_dbfs"] > -60                                 # the bed is there, just quiet
     assert not VM.check_errors(res, True)
@@ -240,9 +244,9 @@ def test_qc_gate_and_auto_qc_know_dialogue_edits():
 
 
 def test_pipeline_wiring():
-    for s in ("sky_fx.apply_plate_fx(silent, DROP_T, FPS, mplan)", "sky_fx.apply_pre_drop_audio(",
+    for s in ("sky_fx.apply_plate_fx(silent, DROP_T, FPS, mplan", "sky_fx.apply_pre_drop_audio(",
               "whoosh=not pre_drop", "_mix_dialogue_drop(music, dur, src, edl)", "_reference_captions(edl, tr, lay",
               "_set_two_act_drop(edl)", "_sfx.zoom_at(t_out, mplan)", "_sfx.in_punch(", "DLG_ACT1_FRAC",
               'layout["edit_mode"] = "dialogue_drop"', "MAX_TOTAL_DUR = DLG_MAX_TOTAL if DIALOGUE_EDIT else 32.0"):
         assert s in PIPE, s
-    assert "DLG_ACT1_FRAC, DLG_ACT1_MAX_FRAC, DLG_ACT1_MIN_S = 0.55, 0.70, 10.0" in PIPE
+    assert "DLG_ACT1_FRAC, DLG_ACT1_MAX_FRAC, DLG_ACT1_MIN_S = 0.68, 0.85, 10.0" in PIPE

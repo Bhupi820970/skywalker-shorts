@@ -53,12 +53,34 @@ def flash_filter(drop_t: float, fps: int, opacity: float = FLASH_OPACITY, frames
     return ",".join(parts)
 
 
+REF_FLASH_PEAK, REF_FLASH_IN, REF_FLASH_OUT = 0.8, 0.15, 0.35   # ref1/ref2 drop: ramps up ~0.15 s, ~80 % white, fades ~0.35 s
+
+
+def ref_flash_filter(drop_t: float, fps: int) -> str:
+    """Dialogue edits: the refs' drop flash - white builds over REF_FLASH_IN before the drop, peaks on it and fades
+    over REF_FLASH_OUT (one drawbox per frame, enable on the frame number)."""
+    n0 = int(round(float(drop_t) * fps))
+    nin, nout = max(1, int(round(REF_FLASH_IN * fps))), max(1, int(round(REF_FLASH_OUT * fps)))
+    parts = []
+    for k in range(-nin, nout + 1):
+        if k < 0:
+            a = REF_FLASH_PEAK * (1 + k / nin) ** 2
+        else:
+            a = REF_FLASH_PEAK * (1 - k / nout) ** 1.6
+        a = round(a, 3)
+        if a <= 0.01 or n0 + k < 0:
+            continue
+        parts.append(f"drawbox=x=0:y=0:w=iw:h=ih:color=white@{a}:t=fill:enable='eq(n,{n0 + k})'")
+    return ",".join(parts) or "null"
+
+
 def rgb_split_filter(drop_t: float, dur: float = RGB_SPLIT_S) -> str:
     return f"{RGB_SPLIT}:enable='between(t,{drop_t:.4f},{drop_t + dur:.4f})'"
 
 
-def drop_video_filter(drop_t: float, fps: int) -> str:
-    return f"{rgb_split_filter(drop_t)},{flash_filter(drop_t, fps)},format=yuv420p"
+def drop_video_filter(drop_t: float, fps: int, ref_flash: bool = False) -> str:
+    fl = ref_flash_filter(drop_t, fps) if ref_flash else flash_filter(drop_t, fps)
+    return f"{rgb_split_filter(drop_t)},{fl},format=yuv420p"
 
 
 def _run(cmd, timeout=600):
@@ -233,31 +255,47 @@ def have_ffmpeg() -> bool:
 
 
 # ---------------------------------------------------------------- motion (ref1/ref2: the screen is never still)
-# BiBi Nov 24 ("skywalker ko riyo ki trh"): slow 100->105% push-in on dialogue / static / long clips, and on montage
-# beats after the drop a quick zoom punch (1.0 -> 1.08 -> 1.0) with a light shake and a 2-frame RGB split.
+# BiBi Nov 24 ("skywalker ko riyo ki trh", then "ek ek baariki dekh kr vasa kr"). Measured on ref1/ref2 (ORB affine
+# between consecutive frames, 360 px wide):
+#  - dialogue shots creep in ~0.6-1.2 %/s  -> SLOW_ZOOM_RATE 1.2 %/s, capped at 5 % per clip;
+#  - montage shots after the drop: ease-out push-in ~+8-10 % in the first ~0.15 s, then a ~15-25 %/s creep, and an
+#    accelerating zoom into the next cut (~+8-10 % in the last ~0.1 s, motion-blurred)  -> PUSH_*;
+#  - shake on the hits: 2-3 % of the width for ~0.2-0.3 s  -> SHAKE_FRAC (fits inside the push margin);
+#  - RGB split: R-B offset measured < 0.6 px at 1080 -> barely visible, kept tiny (1 px, 2 frames);
+#  - kick flashes: 1-frame ~+40 luma (~25 % white) on some montage cuts -> every 2nd hit.
 # One extra plate pass (same pass as the drop flash), plate only: the white hook bar is never touched.
-SLOW_ZOOM = 0.05
+SLOW_ZOOM = 0.05                 # cap per clip
+SLOW_ZOOM_RATE = 0.012           # per second
 SLOW_ZOOM_MIN_S = 1.0
-PUNCH_Z = 0.08
+PUNCH_Z = 0.08                   # zoom bump on beats inside a longer shot (1.0 -> 1.08 -> 1.0)
 PUNCH_S = 0.24
 PUNCH_MIN_GAP = 0.45
-PUNCH_MAX = 24
-SHAKE_PX = 5.0
+PUNCH_MAX = 40
+PUSH_MAX_S = 1.25                # montage shots up to this length get the ref push
+PUSH_BASE, PUSH_A, PUSH_TAU, PUSH_RATE = 0.04, 0.08, 0.06, 0.15
+PRE_A, PRE_S = 0.08, 0.10        # zoom into the next cut
+SHAKE_FRAC = 0.016               # of the plate width, decaying over PUNCH_S
+SHAKE_PX = 5.0                   # (old fixed value, kept for reference)
 PUNCH_RGB_S = 0.07
-PUNCH_RGB = "rgbashift=rh=-3:bh=3"
+PUNCH_RGB = "rgbashift=rh=-1:bh=1"
+KICK_FLASH = 0.25
+BLUR_S = 0.10                    # motion blur (3-frame tmix) on the push start and the zoom into the cut
 
 
 def motion_plan(edl: list[dict], drop_t=None, beats_out=None, punches: bool = True) -> dict:
-    """{'zooms': [(t0, t1)], 'punches': [t]} on the output timeline.
-    zooms: every clip >= 1 s before the drop (dialogue / build-up), every act-1 clip and every long (>= 1.5 s,
-    hero / static) clip after it. punches: cuts after the drop (they are beat-snapped) + strong beats inside long
-    montage shots, at least 0.45 s apart, at most 24 - never every frame."""
+    """{'zooms': [(t0, t1)], 'pushes': [(t0, t1)], 'punches': [t]} on the output timeline.
+    zooms: slow creep on every clip >= 1 s before the drop (dialogue / build-up), every act-1 clip and every long
+    clip after it. pushes: the ref montage zoom on every short shot after the drop. punches: the drop, cuts after
+    it (beat-snapped) and strong beats inside longer shots, at least 0.45 s apart, at most PUNCH_MAX."""
     items = [it for it in (edl or []) if it.get("scene") != "end"]
-    zooms, cuts = [], []
+    zooms, pushes, cuts = [], [], []
     d = None if drop_t is None else float(drop_t)
     for it in items:
         t0, t1 = float(it["t0"]), float(it["t1"])
-        if t1 - t0 >= SLOW_ZOOM_MIN_S and (d is None or t0 < d - 0.05 or it.get("act") == 1 or t1 - t0 >= 1.5):
+        post = d is not None and t0 >= d - 0.02 and it.get("act") != 1
+        if post and punches and t1 - t0 <= PUSH_MAX_S:
+            pushes.append((round(t0, 3), round(t1, 3)))
+        elif t1 - t0 >= SLOW_ZOOM_MIN_S and (d is None or t0 < d - 0.05 or it.get("act") == 1 or t1 - t0 >= 1.5):
             zooms.append((round(t0, 3), round(t1, 3)))
         if d is not None and t0 >= d - 0.02:
             cuts.append(t0)
@@ -270,27 +308,41 @@ def motion_plan(edl: list[dict], drop_t=None, beats_out=None, punches: bool = Tr
             if t > end - PUNCH_S:
                 continue
             gap = PUNCH_MIN_GAP if t in cut_set else 2 * PUNCH_MIN_GAP   # beats inside a shot: every other beat
-            if pts and t - pts[-1] < gap:
+            if pts and t - pts[-1] < gap - 1e-6:
                 continue
             if t not in cut_set and any(abs(t - c) < gap for c in cut_set):
                 continue
             pts.append(t)
             if len(pts) >= PUNCH_MAX:
                 break
-    return {"zooms": zooms, "punches": pts}
+    return {"zooms": zooms, "pushes": pushes, "punches": pts}
+
+
+def _push_starts(plan: dict) -> set:
+    return {round(float(a), 3) for a, _ in plan.get("pushes") or []}
+
+
+def _zoom_terms(plan: dict) -> list[str]:
+    parts = [f"between(t\\,{a:.3f}\\,{b - 0.0005:.4f})*{min(SLOW_ZOOM, SLOW_ZOOM_RATE * (b - a)):.4f}*(t-{a:.3f})/{max(0.05, b - a):.3f}"
+             for a, b in plan.get("zooms") or []]
+    for a, b in plan.get("pushes") or []:
+        ps = max(a, b - PRE_S)
+        parts.append(f"between(t\\,{a:.3f}\\,{b - 0.0005:.4f})*({PUSH_BASE}+{PUSH_A}*(1-exp(-(t-{a:.3f})/{PUSH_TAU}))"
+                     f"+{PUSH_RATE}*(t-{a:.3f})+{PRE_A}*pow(max(0\\,(t-{ps:.3f})/{PRE_S})\\,2))")
+    ps_set = _push_starts(plan)
+    parts += [f"between(t\\,{p:.3f}\\,{p + PUNCH_S:.3f})*{PUNCH_Z}*sin(PI*(t-{p:.3f})/{PUNCH_S})"
+              for p in plan.get("punches") or [] if round(p, 3) not in ps_set]
+    return parts
 
 
 def _zoom_expr(plan: dict) -> str:
-    parts = [f"between(t\\,{a:.3f}\\,{b:.3f})*{SLOW_ZOOM}*(t-{a:.3f})/{max(0.05, b - a):.3f}"
-             for a, b in plan.get("zooms") or []]
-    parts += [f"between(t\\,{p:.3f}\\,{p + PUNCH_S:.3f})*{PUNCH_Z}*sin(PI*(t-{p:.3f})/{PUNCH_S})"
-              for p in plan.get("punches") or []]
-    return "1" + "".join("+" + x for x in parts)
+    return "1" + "".join("+" + x for x in _zoom_terms(plan))
 
 
-def _shake_expr(plan: dict, axis: str) -> str:
+def _shake_expr(plan: dict, axis: str, w: int = 1080) -> str:
     f, ph = (23, "sin") if axis == "x" else (17, "cos")
-    parts = [f"between(t\\,{p:.3f}\\,{p + PUNCH_S:.3f})*{SHAKE_PX}*{ph}(2*PI*{f}*(t-{p:.3f}))*(1-(t-{p:.3f})/{PUNCH_S})"
+    amp = round(SHAKE_FRAC * w, 2)
+    parts = [f"between(t\\,{p:.3f}\\,{p + PUNCH_S:.3f})*{amp}*{ph}(2*PI*{f}*(t-{p:.3f}))*(1-(t-{p:.3f})/{PUNCH_S})"
              for p in plan.get("punches") or []]
     return "+".join(parts) if parts else "0"
 
@@ -301,28 +353,53 @@ def zoom_at(t: float, plan: dict | None) -> float:
         return 1.0
     z = 1.0
     for a, b in plan.get("zooms") or []:
-        if a <= t <= b:
-            z += SLOW_ZOOM * (t - a) / max(0.05, b - a)
+        if a <= t <= b - 0.0005:
+            z += min(SLOW_ZOOM, SLOW_ZOOM_RATE * (b - a)) * (t - a) / max(0.05, b - a)
+    for a, b in plan.get("pushes") or []:
+        if a <= t <= b - 0.0005:
+            ps = max(a, b - PRE_S)
+            z += (PUSH_BASE + PUSH_A * (1 - float(np.exp(-(t - a) / PUSH_TAU))) + PUSH_RATE * (t - a)
+                  + PRE_A * max(0.0, (t - ps) / PRE_S) ** 2)
+    ps_set = _push_starts(plan)
     for p in plan.get("punches") or []:
-        if p <= t <= p + PUNCH_S:
+        if p <= t <= p + PUNCH_S and round(p, 3) not in ps_set:
             z += PUNCH_Z * float(np.sin(np.pi * (t - p) / PUNCH_S))
     return z
 
 
 def in_punch(t: float, plan: dict | None, pad: float = 0.08) -> bool:
-    return any(p - pad <= t <= p + PUNCH_S + pad for p in (plan or {}).get("punches") or [])
+    """True inside a hit (shake / RGB / kick flash) or the motion-blurred zoom into a cut."""
+    plan = plan or {}
+    if any(p - pad <= t <= p + PUNCH_S + pad for p in plan.get("punches") or []):
+        return True
+    return any(b - PRE_S - pad <= t <= b + pad for _, b in plan.get("pushes") or [])
+
+
+def blur_windows(plan: dict) -> list[tuple[float, float]]:
+    win = [(a, a + BLUR_S) for a, _ in plan.get("pushes") or []]
+    win += [(max(a, b - PRE_S), b) for a, b in plan.get("pushes") or []]
+    return win
 
 
 def motion_filter(plan: dict, w: int, h: int) -> str:
-    """scale (per-frame zoom) + centred crop back to w x h (+ shake) + 2-frame RGB split on each punch."""
+    """scale (per-frame zoom) + centred crop back to w x h (+ shake) + motion blur on the zoom ramps + tiny RGB split
+    and a 1-frame kick flash on the hits."""
     z = _zoom_expr(plan)
     f = (f"scale=w='2*trunc({w}*({z})/2)':h='2*trunc({h}*({z})/2)':eval=frame:flags=bicubic,"
-         f"crop={w}:{h}:x='clip((in_w-{w})/2+({_shake_expr(plan, 'x')})\\,0\\,in_w-{w})'"
-         f":y='clip((in_h-{h})/2+({_shake_expr(plan, 'y')})\\,0\\,in_h-{h})',setsar=1")
+         f"crop={w}:{h}:x='clip((in_w-{w})/2+({_shake_expr(plan, 'x', w)})\\,0\\,in_w-{w})'"
+         f":y='clip((in_h-{h})/2+({_shake_expr(plan, 'y', w)})\\,0\\,in_h-{h})',setsar=1")
+    bw = blur_windows(plan)
+    if bw:
+        en = "+".join(f"between(t\\,{a:.3f}\\,{b:.3f})" for a, b in bw)
+        f += f",tmix=frames=3:weights='1 2 1':enable='{en}'"
     pp = plan.get("punches") or []
     if pp:
         en = "+".join(f"between(t\\,{p:.3f}\\,{p + PUNCH_RGB_S:.3f})" for p in pp)
         f += f",{PUNCH_RGB}:enable='{en}'"
+        kf = [p for i, p in enumerate(pp) if i % 2 == 1]
+        if kf:
+            en = "+".join(f"between(t\\,{p:.3f}\\,{p + 0.034:.3f})" for p in kf)
+            f += f",drawbox=x=0:y=0:w=iw:h=ih:color=white@{KICK_FLASH}:t=fill:enable='{en}'"
     return f
 
 
@@ -333,17 +410,17 @@ def _probe_wh(path: Path) -> tuple[int, int]:
     return w, h
 
 
-def apply_plate_fx(silent: Path, drop_t, fps: int, plan: dict | None = None) -> Path:
+def apply_plate_fx(silent: Path, drop_t, fps: int, plan: dict | None = None, ref_flash: bool = False) -> Path:
     """ONE pass over the plate: motion (slow zoom + beat punches) then the soft drop flash / RGB split.
     Falls back to the drop-only pass, then to the untouched plate, on any error."""
-    if not plan or not (plan.get("zooms") or plan.get("punches")):
+    if not plan or not (plan.get("zooms") or plan.get("punches") or plan.get("pushes")):
         return apply_drop_video_fx(silent, drop_t, fps)
     try:
         silent = Path(silent)
         w, h = _probe_wh(silent)
         vf = motion_filter(plan, w, h)
         if drop_t is not None:
-            vf += "," + drop_video_filter(float(drop_t), fps)
+            vf += "," + drop_video_filter(float(drop_t), fps, ref_flash)
         else:
             vf += ",format=yuv420p"
         out = silent.with_name(silent.stem + "_fx.mp4")
@@ -352,6 +429,7 @@ def apply_plate_fx(silent: Path, drop_t, fps: int, plan: dict | None = None) -> 
               "-an", "-video_track_timescale", str(fps * 256), str(out)], timeout=1200)
         if out.exists() and out.stat().st_size > 1000:
             print(f"  plate fx: slow zoom on {len(plan.get('zooms') or [])} clip(s), "
+                  f"montage push on {len(plan.get('pushes') or [])} shot(s), "
                   f"{len(plan.get('punches') or [])} beat punch(es)"
                   + (f", drop flash @ {float(drop_t):.2f}s" if drop_t is not None else ""), flush=True)
             return out
@@ -361,8 +439,8 @@ def apply_plate_fx(silent: Path, drop_t, fps: int, plan: dict | None = None) -> 
 
 
 # ---------------------------------------------------------------- pre-drop silence + sub-bass riser
-PRE_DROP_SILENCE = 0.5
-RISER_S = 1.6
+PRE_DROP_SILENCE = 0.2        # ref1: a split-second (~0.1-0.2 s) bass drop-out right before the drop
+RISER_S = 1.2                 # ref2: the sub band rises ~+18 dB over the last ~1.2 s
 RISER_GAIN = 0.32
 MIN_SILENCE = 0.15
 
