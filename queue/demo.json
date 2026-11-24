@@ -1446,5 +1446,35 @@
     "content_kind": "trailer",
     "note": "Demo of the ref-matched dialogue edit (measured on ref1/ref2): Gemini-planned tense dialogue ending on a punch line, savage hook bar, Montserrat/Cinzel captions with Gemini accents, split-second silence + riser, ref flash, kick-cut montage with push-in + motion blur. no_publish: never Buffer/YouTube.",
     "dialogue_edit": true
+  },
+  {
+    "id": "demo-v15-hookonscene",
+    "pillar": "movie",
+    "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
+    "fallback_mp4": [
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "He never stopped saving them",
+    "words": "SUPERMAN",
+    "title": "He never stopped saving them | Superman | #edit",
+    "description": "DEMO (not published). He never stopped saving them. From the official Superman trailer. Edit by Skywalker.\nSource: official trailer (https://www.youtube.com/watch?v=Ox8ZLF6cGM0). All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #superman #dc",
+    "tags": [
+      "superman",
+      "dc",
+      "edit",
+      "shorts",
+      "test"
+    ],
+    "target_dur": 45,
+    "status": "queued",
+    "market": "US/UK",
+    "demo": true,
+    "no_publish": true,
+    "fallback_release": "sources",
+    "fallback_asset": "superman_trailer_h264.mp4",
+    "content_kind": "trailer",
+    "note": "Demo of the hook bar flush to the top edge of the scene (David / cyberpsychosis look): blur fill above the white italic hook bar and below the uncropped plate, no gap and no grey top band. no_publish: never Buffer/YouTube.",
+    "dialogue_edit": true
   }
 ]

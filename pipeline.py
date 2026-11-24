@@ -46,7 +46,7 @@ import cv2
 import librosa
 import numpy as np
 import overlay_guard
-from layout import whitebar_layout
+from layout import whitebar_layout, geometry_ok, compose_whitebar_frame
 from letterbox import (
     LB_BAR_MAX_MEAN, LB_BAR_P90, LB_CONTENT_LUMA,
     letterbox_bars_are_black, letterbox_content_span, no_crop_alignment_ok,
@@ -78,10 +78,11 @@ def _fonts_dir() -> Path:
 FONTS = _fonts_dir()
 W, H = 1080, 1920
 FPS = 30            # output / mux frame rate (auto_qc requires >= 30)
-# Caption-bar template: white hook bar is a band at the top of the
-# 1080x1920 master. The uncropped frame is scaled to fit under it and
-# vertically centered in the frame. Blur fills leftover space above and
-# below the picture. The bar never covers the picture. Never crop the source.
+# Caption-bar template: the uncropped frame is scaled to fit under the
+# white hook bar and vertically centered. The bar sits flush on the top
+# edge of the picture (not stuck at y=0 with a gap). Blur fills leftover
+# space above the bar and below the picture. The bar never covers the
+# picture. Never crop the source.
 BAR_PAD_Y = 30             # padding above and below the hook text
 SEP_H = 2                  # 2px hairline at the bottom of the bar (no gap)
 # BAR_H is computed from the text; this is only a fallback estimate
@@ -3687,8 +3688,9 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         print("Muxing postcard chrome + uncropped landscape + dialogue/music…")
         run(cmd)
         return out
-    # whitebar: hook bar is its own band at the top. The plate is scaled to
-    # fit under it, vertically centered in the frame, and never cropped.
+    # whitebar: hook bar sits flush on the top edge of the centered plate
+    # (David / cyberpsychosis look). The plate is never cropped. Blur fills
+    # the space above the bar and below the plate — never a grey top band.
     bar = WORK / "caption_bar.png"
     if not bar.exists():
         draw_caption_bar(bar, hook_lines())
@@ -3838,7 +3840,7 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     layout["blur_fill"] = True
     (WORK / "layout.json").write_text(json.dumps(layout, default=str))
     print(
-        f"Muxing stacked whitebar (bar {lay['bar_h']}px at y=0, "
+        f"Muxing stacked whitebar (bar {lay['bar_h']}px flush at y={lay['bar_y']}, "
         f"plate {lay['plate_w']}x{lay['plate_h']} centered at y={lay['plate_y']}) + dialogue/music…"
     )
     cmd = [
@@ -4143,15 +4145,11 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
     bar_bottom = int(lay["bar_y"]) + int(lay["bar_h"])
     no_overlap = plate_y >= bar_bottom
     fits = plate_y + int(lay["plate_h"]) <= H
-    ideal = (H - int(lay["plate_h"])) // 2
-    ideal = ideal - (ideal % 2)
-    room = ideal >= bar_bottom and ideal + int(lay["plate_h"]) <= H
-    centered = (not room) or abs(plate_y - ideal) <= 2
     geo_ok = (
         abs(ar_src - ar_plate) / ar_src < 0.01
         and 2 <= int(lay["plate_w"]) <= W
-        and int(lay["bar_y"]) + int(lay["bar_h"]) <= plate_y
-        and no_overlap and fits and centered
+        and geometry_ok(lay)
+        and no_overlap and fits
     )
     # letterbox rows removed must be black on well-lit frames, not on one fade
     lb_ok = True
@@ -4238,9 +4236,10 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
         barr = o[lay["bar_y"]:lay["bar_y"] + lay["bar_h"], :]
         white = float((barr > 235).mean()) if barr.size else 0.0
         ink = float((barr < 60).mean()) if barr.size else 0.0
-        cap_ok = white > 0.6 and 0.01 < ink < 0.4 and int(lay["plate_y"]) >= int(lay["bar_y"]) + int(lay["bar_h"])
+        flush = int(lay["plate_y"]) == int(lay["bar_y"]) + int(lay["bar_h"])
+        cap_ok = white > 0.6 and 0.01 < ink < 0.4 and flush
         checks["caption"] = {"ok": cap_ok, "white_frac": round(white, 3), "ink_frac": round(ink, 3),
-                             "bar_y": lay["bar_y"], "bar_h": lay["bar_h"]}
+                             "bar_y": lay["bar_y"], "bar_h": lay["bar_h"], "flush": flush}
     else:
         checks["caption"] = {"ok": False}
     # 4. audio present and audible
@@ -4595,13 +4594,10 @@ def main():
             ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             foot = Image.open(tmp).convert("RGB")
             bar_im = Image.open(WORK / "caption_bar.png").convert("RGB")
-            lay = whitebar_layout(foot.size[1], bar_im.size[1], foot.size[0])
-            canvas = Image.new("RGB", (W, H), (0, 0, 0))
-            canvas.paste(bar_im.resize((W, lay["bar_h"])), (0, lay["bar_y"]))
-            canvas.paste(foot.resize((lay["plate_w"], lay["plate_h"])), (lay["plate_x"], lay["plate_y"]))
+            canvas, lay = compose_whitebar_frame(foot, bar_im, brightness=_fill_brightness())
             dst.parent.mkdir(parents=True, exist_ok=True)
             canvas.save(dst)
-            print("Whitebar check frame", dst)
+            print("Whitebar check frame", dst, f"bar flush at y={lay['bar_y']}")
         else:
             raise SystemExit("--check-frame for depthtext needs a rendered sample; use the main path")
         return 0

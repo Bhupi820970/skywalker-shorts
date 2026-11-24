@@ -1,8 +1,10 @@
 """White-hook-bar geometry for the 1080x1920 master (published at 2160x3840).
 
-The bar is its own band at the top and never overlaps the picture. The
-uncropped plate is scaled to fit under the bar, then vertically centered in
-the full frame. Leftover space above and below the plate is letterbox or blur.
+The uncropped plate is scaled to fit under the hook bar, then vertically
+centered in the full frame. The white hook bar is flush with the top edge of
+that plate (no gap, no overlap, not stuck at y=0 when there is room above).
+Leftover space above the bar and below the plate is a blurred copy of the
+footage, never a plain grey or solid white band. Never crop the picture.
 """
 from __future__ import annotations
 
@@ -15,7 +17,7 @@ def even(n: int) -> int:
 
 
 def whitebar_layout(plate_h: int, bar_h: int, plate_w: int | None = None) -> dict:
-    """Bar at y=0. Uncropped plate centered in the frame, never under the bar."""
+    """Uncropped plate centered in the frame; white hook bar flush to its top edge."""
     pw0 = int(plate_w or W)
     ph0 = max(2, int(plate_h))
     bar_h = int(bar_h)
@@ -60,3 +62,84 @@ def whitebar_layout(plate_h: int, bar_h: int, plate_w: int | None = None) -> dic
         "region_h": region_h,
         "block_h": bar_h + region_h,
     }
+
+
+def bar_touches_plate(lay: dict) -> bool:
+    """True when the white hook bar shares an edge with the plate (no gap)."""
+    try:
+        return int(lay["bar_y"]) + int(lay["bar_h"]) == int(lay["plate_y"])
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def geometry_ok(lay: dict) -> bool:
+    """Uncropped plate is in frame, centered when it fits, hook bar flush to it.
+
+    The Interstellar-style failure (bar stuck at the top of the 9:16 canvas
+    with a blur gap before the picture) must not pass.
+    """
+    try:
+        bar_y, bar_h = int(lay["bar_y"]), int(lay["bar_h"])
+        plate_y = int(lay.get("plate_y", lay.get("video_y")))
+        pw, ph = int(lay["plate_w"]), int(lay["plate_h"])
+        px = int(lay.get("plate_x") or 0)
+    except (KeyError, TypeError, ValueError):
+        return False
+    if bar_h < 2 or ph < 2 or pw < 2 or bar_y < 0 or px < 0:
+        return False
+    if px + pw > W or plate_y + ph > H:
+        return False
+    if bar_y + bar_h != plate_y:
+        return False
+    ideal = even((H - ph) // 2)
+    room = ideal >= bar_h and ideal + ph <= H
+    if room and abs(plate_y - ideal) > 2:
+        return False
+    return True
+
+
+def compose_whitebar_frame(plate, bar, *, brightness: float = -0.14,
+                           saturation: float = 0.80, contrast: float = 0.95,
+                           blur_radius: float = 36):
+    """One 1080x1920 frame: blur-fill canvas, uncropped plate, hook bar flush on top.
+
+    Matches the mux look (David / cyberpsychosis Short): blurred footage above
+    the bar and below the plate, a solid white hook bar touching the picture,
+    the picture itself never cropped or covered by the bar.
+    """
+    from PIL import Image, ImageEnhance, ImageFilter
+
+    plate = plate.convert("RGB")
+    bar = bar.convert("RGB")
+    lay = whitebar_layout(plate.size[1], bar.size[1], plate.size[0])
+    pw0, ph0 = plate.size
+    cover = max(W / float(max(pw0, 1)), H / float(max(ph0, 1)))
+    bw = max(W, int(round(pw0 * cover)))
+    bh = max(H, int(round(ph0 * cover)))
+    bg = plate.resize((bw, bh), Image.Resampling.LANCZOS)
+    left = max(0, (bw - W) // 2)
+    top = max(0, (bh - H) // 2)
+    bg = bg.crop((left, top, left + W, top + H))
+    if bg.size != (W, H):
+        bg = bg.resize((W, H), Image.Resampling.LANCZOS)
+    bg = bg.filter(ImageFilter.GaussianBlur(radius=float(blur_radius)))
+    # ffmpeg eq=brightness: add this fraction of full scale, then sat/contrast.
+    if brightness:
+        arr_shift = int(round(float(brightness) * 255))
+        if arr_shift:
+            from PIL import ImageChops, Image as _Im
+            if arr_shift < 0:
+                bg = ImageChops.subtract(bg, _Im.new("RGB", bg.size, (-arr_shift,) * 3))
+            else:
+                bg = ImageChops.add(bg, _Im.new("RGB", bg.size, (arr_shift,) * 3))
+    if saturation != 1.0:
+        bg = ImageEnhance.Color(bg).enhance(float(saturation))
+    if contrast != 1.0:
+        bg = ImageEnhance.Contrast(bg).enhance(float(contrast))
+    canvas = bg.convert("RGB")
+    plate_f = plate.resize((lay["plate_w"], lay["plate_h"]), Image.Resampling.LANCZOS)
+    canvas.paste(plate_f, (lay["plate_x"], lay["plate_y"]))
+    bar_f = bar.resize((W, lay["bar_h"]), Image.Resampling.LANCZOS)
+    canvas.paste(bar_f, (0, lay["bar_y"]))
+    return canvas, lay
+
