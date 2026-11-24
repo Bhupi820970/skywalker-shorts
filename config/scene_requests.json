@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24 23:02 IST",
+ "generated_at": "2026-11-24 23:39 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
@@ -364,7 +364,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "suzume_scene2_h264.mp4"
+   ],
    "hook": "She kept walking back",
    "title": "She kept walking back | Suzume | #edit",
    "tags": [
@@ -458,47 +460,6 @@
     "trending",
     "maomao",
     "jinshi"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "bleachtybw",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-bleachtybw",
-   "pillar": "anime",
-   "words": "BLEACH",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "BLEACH fight scene official clip",
-    "BLEACH best scene official clip",
-    "BLEACH official clip"
-   ],
-   "official_channels": [
-    "vizmedia",
-    "『BLEACH』アニメ公式チャンネル",
-    "『BLEACH』アニメ公式チャンネル and 2 more",
-    "アニプレックス チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=4Gti6YqvMzE",
-   "missing_assets": [],
-   "on_release": [
-    "bleachtybw_scene3_h264.mp4"
-   ],
-   "hook": "Ichigo was born for this war",
-   "title": "Ichigo was born for this war | Bleach | #edit",
-   "tags": [
-    "bleachtybw",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "ichigo"
    ],
    "market": "US/UK"
   },
@@ -1176,44 +1137,6 @@
     "shorts",
     "trending",
     "kafka"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "lazarus",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-lazarus",
-   "pillar": "anime",
-   "words": "LAZARUS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "LAZARUS fight scene official clip",
-    "LAZARUS best scene official clip",
-    "LAZARUS official clip"
-   ],
-   "official_channels": [
-    "Adult Swim",
-    "Adult Swim Europe",
-    "MAPPA CHANNEL"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Axel has thirty days to run",
-   "title": "Axel has thirty days to run | Lazarus | #edit",
-   "tags": [
-    "lazarus",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "axel"
    ],
    "market": "US/UK"
   },
