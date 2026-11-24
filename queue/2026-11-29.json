@@ -1,0 +1,173 @@
+[
+ {
+  "id": "20261129-0630-taarezameenpar",
+  "slot": "2026-11-29T06:30:00+05:30",
+  "pillar": "romance",
+  "source_url": "https://www.youtube.com/watch?v=1oiRkOT4Z_4",
+  "template": "whitebar",
+  "hook": "Why he felt so alone",
+  "words": "TAARE ZAMEEN PAR",
+  "title": "Why he felt so alone 💀 | The painting scene | #edit",
+  "description": "Why he felt so alone. From official Taare Zameen Par clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #taarezameenpar #ishaan #bollywood",
+  "tags": [
+   "taarezameenpar",
+   "ishaan",
+   "bollywood",
+   "edit",
+   "phonk",
+   "emotional",
+   "aura"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "edit_format": "love",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene4_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene4_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "taarezameenpar_scene1_h264.mp4"
+ },
+ {
+  "id": "20261129-0900-oppenheimer",
+  "slot": "2026-11-29T09:00:00+05:30",
+  "pillar": "hollywood",
+  "source_url": "https://www.youtube.com/watch?v=MeIk9ap1u_E",
+  "template": "whitebar",
+  "hook": "Why he regrets his creation",
+  "words": "OPPENHEIMER",
+  "title": "Why he regrets his creation 💀 | The Trinity Test | #edit",
+  "description": "Why he regrets his creation. From official Oppenheimer clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #oppenheimer #nolan #hollywood",
+  "tags": [
+   "oppenheimer",
+   "nolan",
+   "hollywood",
+   "cillianmurphy",
+   "edit",
+   "phonk",
+   "aura"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/oppenheimer_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "oppenheimer_scene1_h264.mp4"
+ },
+ {
+  "id": "20261129-1330-gangsofwasseypur",
+  "slot": "2026-11-29T13:30:00+05:30",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=5oRczmZ6dGU",
+  "template": "whitebar",
+  "hook": "Why Faizal is a menace",
+  "words": "GANGS OF WASSEYPUR",
+  "title": "Why Faizal is a menace 💀 | The legend enters | #edit",
+  "description": "Why Faizal is a menace. From official Gangs Of Wasseypur clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gangsofwasseypur #faizalkhan #bollywood",
+  "tags": [
+   "gangsofwasseypur",
+   "faizalkhan",
+   "bollywood",
+   "edit",
+   "phonk",
+   "aura",
+   "classic"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gangsofwasseypur_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gangsofwasseypur_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "gangsofwasseypur_scene1_h264.mp4"
+ },
+ {
+  "id": "20261129-1830-jujutsukaisencullinggame",
+  "slot": "2026-11-29T18:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
+  "template": "whitebar",
+  "hook": "Yuji has nothing left to lose",
+  "words": "JUJUTSU KAISEN",
+  "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+  "description": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame",
+  "tags": [
+   "jujutsukaisencullinggame",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "yuji"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "jujutsukaisencullinggame_scene1_h264.mp4"
+ },
+ {
+  "id": "20261129-2230-vikram",
+  "slot": "2026-11-29T22:30:00+05:30",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=0Z_mA7n5zIA",
+  "template": "whitebar",
+  "hook": "Why he is the legend",
+  "words": "VIKRAM",
+  "title": "Why he is the legend 💀 | Vikram returns | #edit",
+  "description": "Why he is the legend. From official Vikram clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vikram #kamalhaasan #south",
+  "tags": [
+   "vikram",
+   "kamalhaasan",
+   "south",
+   "edit",
+   "phonk",
+   "aura",
+   "action"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "vikram_scene1_h264.mp4"
+ }
+]
