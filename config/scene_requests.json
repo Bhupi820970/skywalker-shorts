@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24 11:26 IST",
+ "generated_at": "2026-11-24 16:50 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
@@ -63,9 +63,7 @@
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=IXbnzEHZDPg",
    "missing_assets": [],
-   "on_release": [
-    "topgunmaverick_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Why Maverick is the greatest pilot",
    "title": "Why Maverick is the greatest pilot | The final training run | #edit",
    "tags": [
@@ -348,6 +346,119 @@
    "market": "US/UK"
   },
   {
+   "slug": "boyandheron",
+   "slot": "2026-11-26T11:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261126-1130-boyandheron",
+   "pillar": "anime",
+   "words": "THE BOY AND THE HERON",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "THE BOY AND THE HERON fight scene official clip",
+    "THE BOY AND THE HERON best scene official clip",
+    "THE BOY AND THE HERON official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
+   "missing_assets": [],
+   "on_release": [
+    "boyandheron_scene1_h264.mp4"
+   ],
+   "hook": "The heron knew his secret",
+   "title": "The heron knew his secret | The Boy and the Heron | #edit",
+   "tags": [
+    "boyandheron",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "mahito"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "arcane2",
+   "slot": "2026-11-26T13:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261126-1330-arcane2",
+   "pillar": "anime",
+   "words": "ARCANE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ARCANE fight scene official clip",
+    "ARCANE best scene official clip",
+    "ARCANE official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Still Watching Netflix"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+   "missing_assets": [],
+   "on_release": [
+    "arcane2_scene2_h264.mp4"
+   ],
+   "hook": "Jinx never wanted this war",
+   "title": "Jinx never wanted this war | Arcane | #edit",
+   "tags": [
+    "arcane2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "jinx"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dragonballdaima",
+   "slot": "2026-11-26T16:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261126-1600-dragonballdaima",
+   "pillar": "anime",
+   "words": "DRAGON BALL DAIMA",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DRAGON BALL DAIMA fight scene official clip",
+    "DRAGON BALL DAIMA best scene official clip",
+    "DRAGON BALL DAIMA official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Goku got small, not weak",
+   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+   "tags": [
+    "dragonballdaima",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "goku"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "aotfinal",
    "slot": "9999",
    "for": "backup_pool",
@@ -431,45 +542,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "arcane2",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-arcane2",
-   "pillar": "anime",
-   "words": "ARCANE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ARCANE fight scene official clip",
-    "ARCANE best scene official clip",
-    "ARCANE official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Still Watching Netflix"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-   "missing_assets": [],
-   "on_release": [
-    "arcane2_scene2_h264.mp4"
-   ],
-   "hook": "Jinx never wanted this war",
-   "title": "Jinx never wanted this war | Arcane | #edit",
-   "tags": [
-    "arcane2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "jinx"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "bluelock2",
    "slot": "9999",
    "for": "backup_pool",
@@ -543,44 +615,6 @@
     "animeedit",
     "anime",
     "football"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "boyandheron",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-boyandheron",
-   "pillar": "anime",
-   "words": "THE BOY AND THE HERON",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "THE BOY AND THE HERON fight scene official clip",
-    "THE BOY AND THE HERON best scene official clip",
-    "THE BOY AND THE HERON official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
-   "missing_assets": [],
-   "on_release": [
-    "boyandheron_scene1_h264.mp4"
-   ],
-   "hook": "The heron knew his secret",
-   "title": "The heron knew his secret | The Boy and the Heron | #edit",
-   "tags": [
-    "boyandheron",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "mahito"
    ],
    "market": "US/UK"
   },
@@ -703,42 +737,6 @@
     "shorts",
     "trending",
     "gohan"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "dragonballdaima",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-dragonballdaima",
-   "pillar": "anime",
-   "words": "DRAGON BALL DAIMA",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DRAGON BALL DAIMA fight scene official clip",
-    "DRAGON BALL DAIMA best scene official clip",
-    "DRAGON BALL DAIMA official clip"
-   ],
-   "official_channels": [
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Goku got small, not weak",
-   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
-   "tags": [
-    "dragonballdaima",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "goku"
    ],
    "market": "US/UK"
   },
@@ -1379,45 +1377,6 @@
     "shorts",
     "trending",
     "deku"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "mononoke",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-mononoke",
-   "pillar": "anime",
-   "words": "MONONOKE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "MONONOKE fight scene official clip",
-    "MONONOKE best scene official clip",
-    "MONONOKE official clip"
-   ],
-   "official_channels": [
-    "Netflix Anime",
-    "Netflix Philippines"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=xpJWvpumgxs",
-   "missing_assets": [],
-   "on_release": [
-    "mononoke_scene2_h264.mp4"
-   ],
-   "hook": "The Medicine Seller sees everything",
-   "title": "The Medicine Seller sees everything | Mononoke | #edit",
-   "tags": [
-    "mononoke",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "medicineseller"
    ],
    "market": "US/UK"
   },
