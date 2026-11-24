@@ -591,7 +591,10 @@ def subtitle_text(work: Path) -> str:
 
 
 def qc_audio_mode(ac_mode: str = "", layout_mode: str = "", edit_format: str = "") -> str:
-    """Which QC audio rule to apply. Owner rule: no dialogue anywhere, so always song-only."""
+    """Which QC audio rule to apply. Owner rule: no dialogue anywhere, so song-only - except the opt-in riyio-style
+    dialogue edit (BiBi Nov 24 2026), which is judged as a dialogue -> drop -> montage edit."""
+    if "dialogue_drop" in (ac_mode, layout_mode):
+        return "dialogue_drop"
     return "music_only"
 
 
@@ -666,6 +669,24 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
         cap_crit = ("captions (10 if there are no dialogue subtitles — they are not used in song-only edits; "
                     "low only if leftover or garbled subs appear)")
         reject_bits = "logo/title card, cropped picture, leftover trailer voice under the song, non-English hook/title, a different film"
+    elif mode == "dialogue_drop":
+        expected = (
+            "Expected: a tight WHITE bar with black italic English hook text in its own band at the TOP, directly ABOVE "
+            "(never over) the full landscape movie frame, picture vertically centered with blur above and below. "
+            "This is a DIALOGUE edit (approved style): ACT 1 (the first ~45-70%) is one dialogue scene - the characters' "
+            "original voices crystal clear, with the song's dark intro / an ambient drone very quiet under the lines. "
+            "Serif captions (white with a coloured glow, key words bigger in an accent colour, 1-4 words, popping in) "
+            "sit inside the picture centred under the speaker's chin, never covering a face, and show EXACTLY what the "
+            "characters say, word by word in sync. Then about half a second of silence with a rising sub-bass, the "
+            "beat drops (soft flash) and a fast beat-cut montage of the same title plays with the song at full level, "
+            "no dialogue and no captions until the end. Do not reject for having dialogue or captions."
+        )
+        speech_crit = ("speech_clarity (every spoken line clear over the quiet bed; low if the bed buries the voices or "
+                       "a voice leaks into the montage after the drop)")
+        cap_crit = ("captions (10 = they match the spoken words and are in sync; 0 if they show song lyrics / sung "
+                    "words, garbage, or words nobody says)")
+        reject_bits = ("logo/title card, cropped picture, muddy/inaudible dialogue, captions that are song lyrics or do "
+                       "not match the dialogue, captions covering a face, non-English hook/title, a different film")
     elif mode == "dialogue_bed":
         expected = (
             "Expected: a tight WHITE bar with black italic English hook text sitting directly ABOVE (never over) the full, uncropped "
@@ -692,6 +713,12 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
         cap_crit = "captions (subtitles real dialogue and in sync)"
         reject_bits = "logo/title card, cropped picture, muddy/inaudible dialogue, garbage captions, non-English hook/title, a different film"
     cap_ok = " except the intended neon story captions" if story_caps else ""
+    if mode == "dialogue_drop":
+        cap_ok = " except the intended dialogue captions under the speaker"
+    # BiBi Nov 24 ref-edit techniques: intended style, not defects
+    expected += (" Intended style effects (never a defect): a slow ~5% push-in on dialogue / slow shots, quick zoom "
+                 "punches with a light shake and a tiny colour split on montage beats, and a short silence with a "
+                 "rising sub-bass right before the drop.")
     prompt = f"""You are the final quality judge for a YouTube Short (vertical 9:16, {dur:.1f}s) before it is published.
 You get the finished video itself (watch it AND listen to it) plus an image of 8 frames sampled across it.
 {expected}
@@ -716,7 +743,9 @@ channel watermark, show-title text - in ANY frame means clean_footage <= 2 and r
 post_worthy (overall: would a top edit channel post this as is?).
 Set reject=true for any clear hard failure ({reject_bits}) or if it is simply not post-worthy.
 Return JSON: {{"scores": {{"hook": n, "title": n, "speech_clarity": n, "shake": n, "crop": n, "length": n,
-"layout": n, "clean_footage": n, "captions": n, "post_worthy": n}}, "logos_seen": [str], "reject": bool, "reasons": [str]}}
+"layout": n, "clean_footage": n, "captions": n, "post_worthy": n}}, "logos_seen": [str], "reject": bool, "reasons": [str],
+"captions_are_lyrics": bool}}
+captions_are_lyrics = true only if burned captions show song lyrics / sung words instead of what a character says.
 logos_seen lists every logo/watermark/corner bug/brand text you saw anywhere (empty list if none)."""
     media = [p for p in (proxy, sheet) if p]
     out = gemini.generate_json(prompt, media, purpose="qc", temperature=0.1, timeout=150.0)
@@ -737,6 +766,9 @@ logos_seen lists every logo/watermark/corner bug/brand text you saw anywhere (em
         skip = {"captions"}
     elif mode == "dialogue_bed":
         skip = set()
+    elif mode == "dialogue_drop":
+        skip = set()
+        hard["captions"] = 5
     else:
         skip = set()
     low = [k for k, v in scores.items() if k not in skip and v < hard.get(k, 4)]
@@ -746,6 +778,10 @@ logos_seen lists every logo/watermark/corner bug/brand text you saw anywhere (em
     reasons = [str(r)[:200] for r in (out.get("reasons") or [])][:6]
     if logos or logo_mentioned(reasons):
         low.append("logo")
+    lyr = out.get("captions_are_lyrics")
+    if (lyr.strip().lower() == "true") if isinstance(lyr, str) else bool(lyr):
+        low.append("captions_lyrics")
+        reasons = ["captions show song lyrics, not the character's dialogue"] + reasons
     reject = bool(out.get("reject")) or bool(low)
     if logos:
         reasons = [f"logo seen: {', '.join(logos)[:160]}"] + reasons

@@ -101,16 +101,20 @@ def make_sfx(dir_: Path) -> tuple[Path, Path]:
     return hit, whoosh
 
 
-def sfx_mix_filter(drop_t: float) -> str:
-    """[0]=song mix, [1]=hit at the drop, [2]=whoosh ending on the drop."""
+def sfx_mix_filter(drop_t: float, whoosh: bool = True) -> str:
+    """[0]=song mix, [1]=hit at the drop, [2]=whoosh ending on the drop (left out when the pre-drop silence is
+    used: that half second must stay silent)."""
     hd = max(0, int(round(drop_t * 1000)))
     wd = max(0, int(round((drop_t - 0.42) * 1000)))
+    if not whoosh:
+        return (f"[1:a]volume={HIT_GAIN},adelay={hd}|{hd}[h];"
+                f"[0:a][h]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]")
     return (f"[1:a]volume={HIT_GAIN},adelay={hd}|{hd}[h];"
             f"[2:a]volume={WHOOSH_GAIN},adelay={wd}|{wd}[w];"
             f"[0:a][h][w]amix=inputs=3:duration=first:normalize=0,alimiter=limit=0.95[a]")
 
 
-def apply_drop_sfx(audio: Path, drop_t, work: Path) -> Path:
+def apply_drop_sfx(audio: Path, drop_t, work: Path, whoosh: bool = True) -> Path:
     """Hit + whoosh on the drop mixed into the final song bed. Returns `audio` unchanged on error."""
     if drop_t is None:
         return audio
@@ -119,10 +123,10 @@ def apply_drop_sfx(audio: Path, drop_t, work: Path) -> Path:
         hit, whoosh = make_sfx(Path(work) / "sfx")
         out = audio.with_name(audio.stem + "_sfx.wav")
         _run(["ffmpeg", "-y", "-i", str(audio), "-i", str(hit), "-i", str(whoosh),
-              "-filter_complex", sfx_mix_filter(float(drop_t)), "-map", "[a]", "-ar", "48000", "-ac", "2",
+              "-filter_complex", sfx_mix_filter(float(drop_t), whoosh), "-map", "[a]", "-ar", "48000", "-ac", "2",
               str(out)], timeout=180)
         if out.exists() and out.stat().st_size > 1000:
-            print(f"  drop sfx: hit + whoosh @ {float(drop_t):.2f}s", flush=True)
+            print(f"  drop sfx: hit{' + whoosh' if whoosh else ''} @ {float(drop_t):.2f}s", flush=True)
             return out
     except Exception as e:
         print(f"  drop sfx skipped ({type(e).__name__}: {str(e)[:160]})", flush=True)
@@ -226,3 +230,220 @@ def exposure_check(pairs: list[tuple[float, float]], min_samples: int = 4) -> di
 
 def have_ffmpeg() -> bool:
     return shutil.which("ffmpeg") is not None
+
+
+# ---------------------------------------------------------------- motion (ref1/ref2: the screen is never still)
+# BiBi Nov 24 ("skywalker ko riyo ki trh"): slow 100->105% push-in on dialogue / static / long clips, and on montage
+# beats after the drop a quick zoom punch (1.0 -> 1.08 -> 1.0) with a light shake and a 2-frame RGB split.
+# One extra plate pass (same pass as the drop flash), plate only: the white hook bar is never touched.
+SLOW_ZOOM = 0.05
+SLOW_ZOOM_MIN_S = 1.0
+PUNCH_Z = 0.08
+PUNCH_S = 0.24
+PUNCH_MIN_GAP = 0.45
+PUNCH_MAX = 24
+SHAKE_PX = 5.0
+PUNCH_RGB_S = 0.07
+PUNCH_RGB = "rgbashift=rh=-3:bh=3"
+
+
+def motion_plan(edl: list[dict], drop_t=None, beats_out=None, punches: bool = True) -> dict:
+    """{'zooms': [(t0, t1)], 'punches': [t]} on the output timeline.
+    zooms: every clip >= 1 s before the drop (dialogue / build-up), every act-1 clip and every long (>= 1.5 s,
+    hero / static) clip after it. punches: cuts after the drop (they are beat-snapped) + strong beats inside long
+    montage shots, at least 0.45 s apart, at most 24 - never every frame."""
+    items = [it for it in (edl or []) if it.get("scene") != "end"]
+    zooms, cuts = [], []
+    d = None if drop_t is None else float(drop_t)
+    for it in items:
+        t0, t1 = float(it["t0"]), float(it["t1"])
+        if t1 - t0 >= SLOW_ZOOM_MIN_S and (d is None or t0 < d - 0.05 or it.get("act") == 1 or t1 - t0 >= 1.5):
+            zooms.append((round(t0, 3), round(t1, 3)))
+        if d is not None and t0 >= d - 0.02:
+            cuts.append(t0)
+    pts: list[float] = []
+    if punches and d is not None:
+        cut_set = set([round(d, 3)] + [round(t, 3) for t in cuts])
+        cand = sorted(cut_set | {round(float(b), 3) for b in (beats_out or []) if float(b) > d})
+        end = max([float(it["t1"]) for it in items] or [0.0])
+        for t in cand:
+            if t > end - PUNCH_S:
+                continue
+            gap = PUNCH_MIN_GAP if t in cut_set else 2 * PUNCH_MIN_GAP   # beats inside a shot: every other beat
+            if pts and t - pts[-1] < gap:
+                continue
+            if t not in cut_set and any(abs(t - c) < gap for c in cut_set):
+                continue
+            pts.append(t)
+            if len(pts) >= PUNCH_MAX:
+                break
+    return {"zooms": zooms, "punches": pts}
+
+
+def _zoom_expr(plan: dict) -> str:
+    parts = [f"between(t\\,{a:.3f}\\,{b:.3f})*{SLOW_ZOOM}*(t-{a:.3f})/{max(0.05, b - a):.3f}"
+             for a, b in plan.get("zooms") or []]
+    parts += [f"between(t\\,{p:.3f}\\,{p + PUNCH_S:.3f})*{PUNCH_Z}*sin(PI*(t-{p:.3f})/{PUNCH_S})"
+              for p in plan.get("punches") or []]
+    return "1" + "".join("+" + x for x in parts)
+
+
+def _shake_expr(plan: dict, axis: str) -> str:
+    f, ph = (23, "sin") if axis == "x" else (17, "cos")
+    parts = [f"between(t\\,{p:.3f}\\,{p + PUNCH_S:.3f})*{SHAKE_PX}*{ph}(2*PI*{f}*(t-{p:.3f}))*(1-(t-{p:.3f})/{PUNCH_S})"
+             for p in plan.get("punches") or []]
+    return "+".join(parts) if parts else "0"
+
+
+def zoom_at(t: float, plan: dict | None) -> float:
+    """Python twin of the ffmpeg zoom expression (QA compares the source frame zoomed the same way)."""
+    if not plan:
+        return 1.0
+    z = 1.0
+    for a, b in plan.get("zooms") or []:
+        if a <= t <= b:
+            z += SLOW_ZOOM * (t - a) / max(0.05, b - a)
+    for p in plan.get("punches") or []:
+        if p <= t <= p + PUNCH_S:
+            z += PUNCH_Z * float(np.sin(np.pi * (t - p) / PUNCH_S))
+    return z
+
+
+def in_punch(t: float, plan: dict | None, pad: float = 0.08) -> bool:
+    return any(p - pad <= t <= p + PUNCH_S + pad for p in (plan or {}).get("punches") or [])
+
+
+def motion_filter(plan: dict, w: int, h: int) -> str:
+    """scale (per-frame zoom) + centred crop back to w x h (+ shake) + 2-frame RGB split on each punch."""
+    z = _zoom_expr(plan)
+    f = (f"scale=w='2*trunc({w}*({z})/2)':h='2*trunc({h}*({z})/2)':eval=frame:flags=bicubic,"
+         f"crop={w}:{h}:x='clip((in_w-{w})/2+({_shake_expr(plan, 'x')})\\,0\\,in_w-{w})'"
+         f":y='clip((in_h-{h})/2+({_shake_expr(plan, 'y')})\\,0\\,in_h-{h})',setsar=1")
+    pp = plan.get("punches") or []
+    if pp:
+        en = "+".join(f"between(t\\,{p:.3f}\\,{p + PUNCH_RGB_S:.3f})" for p in pp)
+        f += f",{PUNCH_RGB}:enable='{en}'"
+    return f
+
+
+def _probe_wh(path: Path) -> tuple[int, int]:
+    r = _run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+              "-of", "csv=p=0", str(path)], timeout=60)
+    w, h = [int(x) for x in r.stdout.strip().split(",")[:2]]
+    return w, h
+
+
+def apply_plate_fx(silent: Path, drop_t, fps: int, plan: dict | None = None) -> Path:
+    """ONE pass over the plate: motion (slow zoom + beat punches) then the soft drop flash / RGB split.
+    Falls back to the drop-only pass, then to the untouched plate, on any error."""
+    if not plan or not (plan.get("zooms") or plan.get("punches")):
+        return apply_drop_video_fx(silent, drop_t, fps)
+    try:
+        silent = Path(silent)
+        w, h = _probe_wh(silent)
+        vf = motion_filter(plan, w, h)
+        if drop_t is not None:
+            vf += "," + drop_video_filter(float(drop_t), fps)
+        else:
+            vf += ",format=yuv420p"
+        out = silent.with_name(silent.stem + "_fx.mp4")
+        _run(["ffmpeg", "-y", "-i", str(silent), "-vf", vf,
+              "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", "-r", str(fps),
+              "-an", "-video_track_timescale", str(fps * 256), str(out)], timeout=1200)
+        if out.exists() and out.stat().st_size > 1000:
+            print(f"  plate fx: slow zoom on {len(plan.get('zooms') or [])} clip(s), "
+                  f"{len(plan.get('punches') or [])} beat punch(es)"
+                  + (f", drop flash @ {float(drop_t):.2f}s" if drop_t is not None else ""), flush=True)
+            return out
+    except Exception as e:
+        print(f"  plate motion fx skipped ({type(e).__name__}: {str(e)[:160]}); drop fx only", flush=True)
+    return apply_drop_video_fx(silent, drop_t, fps)
+
+
+# ---------------------------------------------------------------- pre-drop silence + sub-bass riser
+PRE_DROP_SILENCE = 0.5
+RISER_S = 1.6
+RISER_GAIN = 0.32
+MIN_SILENCE = 0.15
+
+
+def _read_f32(path: Path, sr: int = 48000) -> np.ndarray:
+    r = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-f", "f32le", "-ac", "2", "-ar", str(sr), "-"],
+                       capture_output=True, timeout=300)
+    if r.returncode != 0:
+        raise RuntimeError(r.stderr.decode(errors="ignore")[-300:])
+    return np.frombuffer(r.stdout, np.float32).reshape(-1, 2).copy()
+
+
+def _write_f32(path: Path, x: np.ndarray, sr: int = 48000) -> None:
+    r = subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ac", "2", "-ar", str(sr), "-i", "-",
+                        "-c:a", "pcm_s16le", str(path)], input=np.ascontiguousarray(x, np.float32).tobytes(),
+                       capture_output=True, timeout=300)
+    if r.returncode != 0:
+        raise RuntimeError(r.stderr.decode(errors="ignore")[-300:])
+
+
+def riser(dur: float, sr: int = 48000, seed: int = 7) -> np.ndarray:
+    """Generated sub-bass riser: 35 -> 95 Hz sine sweep + a soft airy noise swell, rising in level."""
+    n = max(1, int(dur * sr))
+    t = np.arange(n) / sr
+    f = 35.0 + 60.0 * (t / dur) ** 2
+    phase = 2 * np.pi * np.cumsum(f) / sr
+    env = (t / dur) ** 2
+    sub = np.sin(phase) * env
+    rng = np.random.default_rng(seed)
+    nz = rng.standard_normal(n)
+    nz = nz - np.convolve(nz, np.ones(24) / 24, mode="same")      # crude high-pass: airy swell
+    sw = nz * (t / dur) ** 3 * 0.18
+    y = (0.85 * sub + sw).astype(np.float32)
+    fo = min(n, int(0.012 * sr))
+    if fo:
+        y[-fo:] *= np.linspace(1, 0, fo, dtype=np.float32)
+    return np.stack([y, y], axis=1) * RISER_GAIN
+
+
+def pre_drop_window(drop_t: float, speech_end: float | None = None,
+                    silence_s: float = PRE_DROP_SILENCE) -> tuple[float, float] | None:
+    """(silence_start, drop_t). With dialogue, the silence never cuts a word: it starts after the last word."""
+    ss = drop_t - silence_s
+    if speech_end is not None:
+        ss = max(ss, float(speech_end) + 0.04)
+    if drop_t - ss < MIN_SILENCE or ss < RISER_S * 0.5:
+        return None
+    return round(ss, 3), round(float(drop_t), 3)
+
+
+def apply_pre_drop_audio(audio: Path, drop_t, work: Path, speech_end: float | None = None) -> Path:
+    """Riser into ~0.5 s of full silence right before the drop. Returns `audio` unchanged on error / no drop."""
+    if drop_t is None:
+        return audio
+    try:
+        audio = Path(audio)
+        win = pre_drop_window(float(drop_t), speech_end)
+        if not win:
+            print("  pre-drop silence skipped (no room before the drop)", flush=True)
+            return audio
+        ss, dt = win
+        sr = 48000
+        x = _read_f32(audio, sr)
+        a, b = int(ss * sr), int(dt * sr)
+        if b >= len(x) - 10:
+            return audio
+        r = riser(min(RISER_S, ss), sr)
+        r0 = max(0, a - len(r))
+        x[r0:a] += r[len(r) - (a - r0):]
+        g = np.ones(len(x), np.float32)
+        ramp = int(0.012 * sr)
+        g[max(0, a - ramp):a] = np.linspace(1, 0, a - max(0, a - ramp), dtype=np.float32)
+        g[a:b] = 0.0
+        x *= g[:, None]
+        peak = float(np.abs(x).max() or 1.0)
+        if peak > 0.98:
+            x *= 0.98 / peak
+        out = audio.with_name(audio.stem + "_predrop.wav")
+        _write_f32(out, x, sr)
+        print(f"  pre-drop: sub-bass riser {min(RISER_S, ss):.1f}s + silence {ss:.2f}-{dt:.2f}s", flush=True)
+        return out
+    except Exception as e:
+        print(f"  pre-drop silence skipped ({type(e).__name__}: {str(e)[:160]})", flush=True)
+    return audio

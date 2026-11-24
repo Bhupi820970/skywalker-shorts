@@ -98,6 +98,11 @@ from edit_mode import choose_edit_mode, default_edit_mode, item_mode_bucket  # n
 EDIT_MODE = "music_only"   # music_only | two_act
 FORCED_EDIT_MODE = False
 DROP_T = None              # output time of the music drop / reveal (set by apply_energy)
+# Opt-in riyio-style dialogue edit (BiBi Nov 24 2026): dialogue act (~20-40s) -> silence + drop -> beat-cut montage,
+# reference captions under the speaker. Only queue items with "dialogue_edit": true (or SKY_DIALOGUE_EDIT=1).
+DIALOGUE_EDIT = False
+DLG_ACT1_FRAC, DLG_ACT1_MAX_FRAC, DLG_ACT1_MIN_S = 0.55, 0.70, 10.0
+DLG_MAX_TOTAL = 58.0
 PILLAR_MOOD = {"anime": "anime", "movie": "movie", "celeb": "anime", "romance": "romance", "funny": "funny"}
 # No fixed opening/ending time lock: the best story scenes may come from
 # anywhere in the trailer. Logo/title/dark/red cards are still rejected
@@ -1324,6 +1329,17 @@ def plan_two_act(scenes: list[dict], music: dict, target: float, transcript: dic
     import similarity as sim
     total = float(target) + END_CARD
     act1 = choose_act1(scenes, transcript, total)
+    if DIALOGUE_EDIT and act1:
+        try:   # riyio lyrics guard: act 1 must be a character talking, never a sung song in the source
+            import sky_lyrics
+            act1 = [c for c in act1 if not sky_lyrics.LYRIC_MARK.search(c["text"])]
+            ws = [{"word": w, "s": 0.0, "e": 0.1} for c in act1 for w in c["text"].split()]
+            why = sky_lyrics.lyric_reasons(ws, 0.0, check_quote=False)
+            if why:
+                print(f"  dialogue edit: act-1 lines look like song lyrics ({why}); song-only edit instead")
+                return None
+        except Exception as e:
+            print(f"  lyrics guard skipped: {e}")
     a1 = sum(c["vis"] for c in act1)
     if a1 < ACT1_MIN_S:
         print(f"  two-act: only {a1:.1f}s of clean dialogue lines; classic edit")
@@ -1431,6 +1447,16 @@ def plan_two_act(scenes: list[dict], music: dict, target: float, transcript: dic
         pass
     _require_min_duration(acc)
     return edl
+
+
+def _set_two_act_drop(edl: list[dict] | None) -> None:
+    """Two-act edits: the drop (flash, hit, pre-drop silence) lands where the dialogue act ends."""
+    global DROP_T
+    if is_two_act(edl):
+        DROP_T = act1_end(edl)
+        print(f"  two-act drop at {DROP_T:.2f}s")
+    elif DIALOGUE_EDIT and not ENERGY:
+        DROP_T = None
 
 
 def is_two_act(edl: list[dict] | None) -> bool:
@@ -2896,6 +2922,7 @@ SCREEN_ROUNDS = 4  # cheap clip-level re-slices before stitch/mux
 def _replan(scenes: list[dict], music: dict, transcript: dict | None) -> list[dict]:
     edl = plan_edit(scenes, music, TARGET_DUR, transcript=transcript)
     edl = finalize_edl_for_template(edl, music, TARGET_DUR)
+    _set_two_act_drop(edl)
     if ENERGY and not is_two_act(edl):
         edl = apply_energy(edl, scenes, music)
         edl = repair_unique_edl(edl, scenes, transcript)
@@ -2994,7 +3021,7 @@ def render_screened(mezz: Path, edl: list[dict], scenes: list[dict], music: dict
             paths.pop()
         if not hits:
             print(f"  screen round {rnd}: all clips clean")
-            return _cap_total(edl, paths)
+            return _cap_total(edl, paths, cap=(DLG_MAX_TOTAL if DIALOGUE_EDIT else 32.0))
         for h in hits[:12]:
             print(f"  screen hit t={h['t']:.2f}s scene {h['scene']}: {','.join(h['reasons'])}")
         if rnd >= SCREEN_ROUNDS:
@@ -3319,6 +3346,112 @@ def _mix_two_act(music: dict, dur: float, src: Path | None, edl: list[dict]) -> 
         return None
 
 
+def _song_title(music: dict) -> str:
+    try:
+        import music_lib
+        name = Path(music["path"]).name
+        for s_ in music_lib.catalog(AE) or []:
+            if isinstance(s_, dict) and Path(str(s_.get("file") or s_.get("path") or "")).name == name:
+                return str(s_.get("title") or "")
+    except Exception:
+        pass
+    try:
+        return Path(music["path"]).stem.replace("_", " ").replace("-", " ")
+    except Exception:
+        return ""
+
+
+def _reference_captions(edl: list[dict], tr: dict, lay: dict, video: Path, music: dict) -> dict | None:
+    """riyio ref captions for the dialogue act (fail-safe -> None = old lower-thirds). Character words only:
+    sky_lyrics drops sung / music-marked / song-title words and anything after the drop; a lyric-looking act
+    gets no captions at all (and Gemini QC also checks the caption text)."""
+    try:
+        import dialogue as dmod
+        import dialogue_caps
+        import sky_lyrics
+        import story_captions
+        T = act1_end(edl)
+        mw = dmod.map_words_to_output(edl, tr.get("words") or [])
+        mw = [w for w in mw if float(w["t1"]) <= T + 0.05 and float(w.get("prob") or 1.0) >= dmod.MIN_WORD_PROB]
+        ws = [dict(w, s=float(w["t0"]), e=float(w["t1"])) for w in mw]
+        kept, dropped = sky_lyrics.filter_words(ws, T, 0.0, None, {"title": _song_title(music)})
+        if dropped:
+            print(f"  caption guard dropped: {dropped[:12]}")
+        why = sky_lyrics.lyric_reasons(kept, 0.0, check_quote=False)
+        if why or len(kept) < 3:
+            print(f"  reference captions skipped: {why or 'too few spoken words'}")
+            return None
+        cache: dict = {}
+
+        def faces_at(t):
+            k = round(t, 1)
+            if k not in cache:
+                cache[k] = story_captions.detect_faces(video, t, lay)
+            return cache[k]
+        res = dialogue_caps.build(kept, T, lay, faces_at, WORK / "lowerthirds.ass")
+        if res:
+            bad = dialogue_caps.qa(res["boxes"], lay)
+            if bad:
+                print(f"  reference captions QA notes: {bad[:3]}")
+        return res
+    except Exception as e:
+        print(f"  reference captions skipped ({type(e).__name__}: {e}); lower-thirds instead")
+        return None
+
+
+def _beats_out(music: dict, edl: list[dict] | None) -> list[float]:
+    """Song beats on the output timeline (for beat punches). Song-only: bed starts at music['start'];
+    two-act: the song starts at its drop at the end of act 1."""
+    try:
+        beats = [float(b) for b in (music.get("abs_beats") or [])]
+        if is_two_act(edl):
+            T, d = act1_end(edl), float(music.get("drop_abs") or music.get("start") or 0.0)
+            return [round(T + b - d, 3) for b in beats if b >= d]
+        st = float(music.get("start") or 0.0)
+        return [round(b - st, 3) for b in beats if b >= st]
+    except Exception:
+        return []
+
+
+def _last_speech_end(drop_t) -> float | None:
+    """End of the last spoken window before the drop (output time), so the pre-drop silence never cuts a word."""
+    try:
+        sw = json.loads((WORK / "speech_windows.json").read_text()).get("output") or []
+        ends = [float(b) for a, b in sw if drop_t is not None and float(a) < float(drop_t)]
+        return max(ends) if ends else None
+    except Exception:
+        return None
+
+
+def _mix_dialogue_drop(music: dict, dur: float, src: Path | None, edl: list[dict]) -> Path | None:
+    """Dialogue edit audio (fail-safe -> None = song-only): act 1 voices (Demucs) over the song's intro leading into
+    its drop + a quiet drone, auto-ducked under every line; act 2 = the song from its drop at full level."""
+    try:
+        import dialogue as dmod
+        import vocal_mix
+        T = act1_end(edl)
+        dial = WORK / "dialogue.wav"
+        (WORK / "audio_check.json").unlink(missing_ok=True)
+        if not src or not dmod.extract_dialogue_wav(Path(src), edl, dial):
+            print("  dialogue-drop mix: source has no audio; song-only")
+            return None
+        d = float(music.get("drop_abs") or music.get("start") or 0.0)
+        tr = {}
+        tp = WORK / "transcript.json"
+        if tp.exists():
+            tr = json.loads(tp.read_text())
+        src_windows = dmod.speech_windows_from_transcript(tr) or dmod.vad_windows(Path(src))
+        speech_out = [(a, min(b, T)) for a, b in dmod.map_windows_to_output(edl, src_windows) if a < T - 0.1]
+        (WORK / "speech_windows.json").write_text(json.dumps({"source": src_windows, "output": speech_out}))
+        mixed = WORK / "mixed.wav"
+        vocal_mix.mix_dialogue_drop(dial, Path(music["path"]), mixed, dur, T, d, speech_out, WORK)
+        return mixed if mixed.exists() and mixed.stat().st_size > 1000 else None
+    except Exception as e:
+        print(f"  dialogue-drop mix failed ({e}); song-only")
+        (WORK / "audio_check.json").unlink(missing_ok=True)
+        return None
+
+
 def _mix_music_only(music: dict, dur: float, bed: Path) -> Path | None:
     """Song bed only: no trailer dialogue, music, or SFX."""
     try:
@@ -3424,23 +3557,45 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
               overlay_text: bool = OVERLAY_TEXT, src: Path | None = None,
               edl: list[dict] | None = None) -> Path:
     """Mux audio + whitebar hook. music_only = song only; two_act = dialogue then song."""
-    try:   # energy edits: soft 60% / 2-frame flash + light RGB split on the plate at the drop (fail-safe)
+    # ONE plate pass (fail-safe): slow 100->105% push-in on dialogue / slow clips, zoom punch + light shake +
+    # 2-frame RGB split on montage beats after the drop, soft 60% / 2-frame flash at the drop. Plate only.
+    (WORK / "motion_fx.json").unlink(missing_ok=True)
+    try:
         import sky_fx
-        silent = sky_fx.apply_drop_video_fx(silent, DROP_T, FPS)
+        mplan = sky_fx.motion_plan(edl or [], DROP_T, _beats_out(music, edl),
+                                   punches=bool(DROP_T is not None and (ENERGY or is_two_act(edl))))
+        silent = sky_fx.apply_plate_fx(silent, DROP_T, FPS, mplan)
+        if Path(silent).stem.endswith("_fx"):
+            (WORK / "motion_fx.json").write_text(json.dumps(mplan))
     except Exception as e:
-        print(f"  drop fx skipped: {e}")
+        print(f"  plate fx skipped: {e}")
     bed = WORK / "bed.wav"
     prepare_bed(music, dur, bed)
     audio = None
-    # Owner rule: NO dialogue anywhere (action, love, gta6...). Source audio is
-    # dropped completely; only our song plays. Never fall back to source audio.
-    audio = _mix_music_only(music, dur, bed)
+    dialogue_mix = False
+    if DIALOGUE_EDIT and is_two_act(edl):
+        # opt-in riyio-style dialogue edit: voices + heavily ducked song intro / drone, full song from the drop
+        audio = _mix_dialogue_drop(music, dur, src, edl)
+        dialogue_mix = audio is not None
+    if audio is None:
+        # Owner rule: NO dialogue anywhere (action, love, gta6...). Source audio is
+        # dropped completely; only our song plays. Never fall back to source audio.
+        audio = _mix_music_only(music, dur, bed)
     if audio is None:
         audio = bed
     audio = _loudnorm_final(Path(audio), dur)
-    try:   # generated hit + whoosh on the drop (fail-safe: keeps the normalised song on error)
+    pre_drop = False
+    try:   # ~0.5 s of full silence right before the drop, a generated sub-bass riser leading into it
         import sky_fx
-        audio = sky_fx.apply_drop_sfx(Path(audio), DROP_T, WORK)
+        speech_end = _last_speech_end(DROP_T) if dialogue_mix else None
+        a2 = sky_fx.apply_pre_drop_audio(Path(audio), DROP_T, WORK, speech_end=speech_end)
+        pre_drop = Path(a2) != Path(audio)
+        audio = a2
+    except Exception as e:
+        print(f"  pre-drop silence skipped: {e}")
+    try:   # generated hit (+ whoosh unless the pre-drop silence is there) on the drop
+        import sky_fx
+        audio = sky_fx.apply_drop_sfx(Path(audio), DROP_T, WORK, whoosh=not pre_drop)
     except Exception as e:
         print(f"  drop sfx skipped: {e}")
     enc = [
@@ -3544,6 +3699,11 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
                 mapped = [w for w in mapped if float(w.get("t1") or 0) <= T + 0.05]
                 speech_out = [(a, min(b, T)) for a, b in speech_out if a < T - 0.1]
             cues = dmod.caption_cues(mapped)
+        dlg_caps = None
+        if dialogue_mix and edl and tr.get("words"):
+            dlg_caps = _reference_captions(edl, tr, lay, Path(silent), music)
+            if dlg_caps:
+                cues = []          # no lower-thirds: the reference captions sit on the picture under the speaker
         caps = capmod.generate_lines(HOOK_TEXT, globals().get("DEPTH_WORDS") or "", float(dur),
                                      dialogue=cues)
         ass_lt = WORK / "lowerthirds.ass"
@@ -3566,6 +3726,12 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
                 style=cap_style, plate_y=int(lay["plate_y"]), plate_h=int(lay["plate_h"]),
                 letter_spacing=cap_sp, keyword_highlight=cap_kw,
             )
+        if dlg_caps:
+            story_ass = WORK / "lowerthirds.ass"
+            layout["story_caption_boxes"] = dlg_caps["boxes"]      # auto_qc masks intended captions
+            layout["dialogue_captions"] = {"count": len(dlg_caps["boxes"]), "text": dlg_caps["text"][:1500],
+                                           "style": "riyio ref glow (Playfair)"}
+            print(f"  reference dialogue captions: {len(dlg_caps['boxes'])} groups under the speaker")
         if is_music_only(edl) and not caps:
             # Optional pro-edit neon story captions (~1 in 3 videos): our story beats on the music, never lyrics.
             try:
@@ -3604,6 +3770,8 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
             speech_out = []
         layout["speech_windows"] = speech_out
         layout["edit_mode"] = "music_only" if is_music_only(edl) else ("two_act" if is_two_act(edl) else EDIT_MODE)
+        if dialogue_mix:
+            layout["edit_mode"] = "dialogue_drop"
         layout["edit_format"] = globals().get("EDIT_FORMAT") or "action"
         (WORK / "layout.json").write_text(json.dumps(layout, default=str))
         (WORK / "subtitles.json").write_text(json.dumps(caps, indent=2, ensure_ascii=False))
@@ -3919,6 +4087,15 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
         return {"checks": {}, "issues": ["layout.json missing"], "layout": {}}
     lay = json.loads(layp.read_text())
     checks, issues = {}, []
+    # intended ref-edit motion (sky_fx plate pass): QA compares the source frame zoomed the same way and skips
+    # the short beat-punch windows, so the hard no-crop / no-shake rules still judge the footage itself
+    mplan = None
+    try:
+        mp_ = WORK / "motion_fx.json"
+        mplan = json.loads(mp_.read_text()) if mp_.exists() else None
+    except Exception:
+        mplan = None
+    import sky_fx as _sfx
     # 1. geometry: plate is the FULL letterbox-free source scaled to 1080 wide
     mw, mh = _mezz_size(mezz)
     sw, sh = [int(x) for x in subprocess.check_output(
@@ -3974,6 +4151,8 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
         t_out = float(it["t0"]) + dt
         if DROP_T is not None and abs(t_out - DROP_T) < 0.5:
             continue
+        if mplan and _sfx.in_punch(t_out, mplan):
+            continue
         speed = float(it.get("speed") or 1.0) or 1.0
         t_src = float(it.get("src_start") or 0) + dt * speed
         o = _frame(out, t_out)
@@ -3985,7 +4164,13 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
         plate = o[lay["plate_y"]:lay["plate_y"] + lay["plate_h"], px:px + pw_]
         if plate.size == 0:
             continue
-        mm = np.array(Image.fromarray(m.astype(np.uint8)).resize((plate.shape[1], plate.shape[0])), dtype=np.float32)
+        mim = Image.fromarray(m.astype(np.uint8))
+        zq = _sfx.zoom_at(t_out, mplan) if mplan else 1.0
+        if zq > 1.0005:   # the intended slow push-in: centre-crop the source by the same zoom
+            mw_, mh_ = mim.size
+            cw_, ch_ = mw_ / zq, mh_ / zq
+            mim = mim.crop((int((mw_ - cw_) / 2), int((mh_ - ch_) / 2), int((mw_ + cw_) / 2), int((mh_ + ch_) / 2)))
+        mm = np.array(mim.resize((plate.shape[1], plate.shape[0])), dtype=np.float32)
         c = _corr(plate[::4, ::4], mm[::4, ::4])
         # border ring (outer 48px on every side): a crop/zoom would misalign it
         if plate.shape[0] > 96 and plate.shape[1] > 96:
@@ -4032,7 +4217,8 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
     checks["audio"] = {"ok": mv is not None and mv > audio_lim, "mean_volume_db": mv, "limit_db": audio_lim}
     # 5. no shake: high-frequency jitter of global motion inside shots
     jit = []
-    for it in body[:8]:
+    shake_items = [it for it in body if not (mplan and _sfx.in_punch(float(it["t0"]) + 0.4, mplan, pad=0.3))]
+    for it in shake_items[:8]:
         if it["visible"] < 1.0 or it.get("drop") or it.get("ramp"):
             continue
         t0 = it["t0"] + 0.15
@@ -4092,6 +4278,8 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
             vis = float(it.get("visible") or 0)
             t_out = float(it.get("t0") or 0) + 0.5 * vis
             if vis < 0.4 or t_out < 1.2 or (DROP_T is not None and abs(t_out - DROP_T) < 0.5):
+                continue
+            if mplan and _sfx.in_punch(t_out, mplan):
                 continue
             fo, fs = _frame_rgb(out, t_out), _frame_rgb(mezz, float(it.get("src_start") or 0) + 0.5 * vis)
             if fo is None or fs is None:
@@ -4231,6 +4419,7 @@ def main():
     args = ap.parse_args()
     global END_STILL, ENERGY, RELAX, ALT_SCENES, MEZZ_FOR_SHAKE, TRAILER_OPEN_SKIP, TRAILER_END_SKIP, OUT_RES
     global EDIT_MODE, FORCED_EDIT_MODE, EDIT_FORMAT
+    global DIALOGUE_EDIT, ACT1_FRAC, ACT1_MAX_FRAC, ACT1_MIN_S
     global MIN_SHOT_LEN, HERO_SHOT_MIN, HERO_SHOT_MAX, MAX_FLASH_SHOTS, MAX_HERO_SHOTS
     ENERGY = bool(args.energy or (args.pillar or "").lower() in ("anime", "movie"))
     EDIT_FORMAT = "action"
@@ -4264,6 +4453,20 @@ def main():
     ov = (args.edit_mode or os.environ.get("SKY_EDIT_MODE") or "").strip().lower()
     FORCED_EDIT_MODE = ov in ("music_only", "two_act", "dialogue_bed")
     EDIT_MODE = choose_edit_mode(args.item_id, ov or None, fmt=EDIT_FORMAT)  # always music_only
+    try:
+        import edit_mode as _em
+        _ib = {}
+        _ip = os.environ.get("SKY_ITEM_JSON")
+        if _ip and Path(_ip).exists():
+            _ib = json.loads(Path(_ip).read_text()).get("item") or {}
+        DIALOGUE_EDIT = _em.dialogue_edit_wanted(_ib, os.environ.get("SKY_DIALOGUE_EDIT"))
+    except Exception as e:
+        print(f"  dialogue-edit check skipped: {e}")
+        DIALOGUE_EDIT = False
+    if DIALOGUE_EDIT:
+        EDIT_MODE = "two_act"
+        ACT1_FRAC, ACT1_MAX_FRAC, ACT1_MIN_S = DLG_ACT1_FRAC, DLG_ACT1_MAX_FRAC, DLG_ACT1_MIN_S
+        print("  DIALOGUE EDIT (riyio style): dialogue act -> silence + drop -> beat-cut montage, ref captions")
     os.environ["SKY_EDIT_FORMAT"] = EDIT_FORMAT
     print(f"  edit mode: {EDIT_MODE}" + (" (forced)" if FORCED_EDIT_MODE else f" (format={EDIT_FORMAT})"))
     RELAX = bool(args.relax)
@@ -4290,7 +4493,7 @@ def main():
     # The planner overshoots its body target by ~1-3s on beat snapping (Peddi came out 35.8s),
     # so plan the body short enough that body + end still lands <= 32s.
     # MIN_UNIQUE_DUR (20s) is only the lower clamp on that body target, not a 25s retry gate.
-    MAX_TOTAL_DUR = 32.0
+    MAX_TOTAL_DUR = DLG_MAX_TOTAL if DIALOGUE_EDIT else 32.0
     TARGET_DUR = max(MIN_UNIQUE_DUR + 0.5, min(TARGET_DUR, MAX_TOTAL_DUR) - END_CARD - 1.5)
     print(f"  body target {TARGET_DUR:.1f}s (+{END_CARD:.1f}s end still, cap {MAX_TOTAL_DUR:.0f}s)")
     PLATE_H_TARGET = even(args.plate_h) if args.plate_h else 0
@@ -4571,6 +4774,7 @@ def main():
     print("=== 4. Plan edit ===")
     edl = plan_edit(scenes, music, TARGET_DUR, transcript=transcript)
     edl = finalize_edl_for_template(edl, music, TARGET_DUR)
+    _set_two_act_drop(edl)
     if ENERGY and not is_two_act(edl):
         edl = apply_energy(edl, scenes, music)
         edl = repair_unique_edl(edl, scenes, transcript)
@@ -4663,7 +4867,8 @@ def main():
         try:
             edl = plan_edit(scenes, music, TARGET_DUR, transcript=transcript if "transcript" in dir() else None)
             edl = finalize_edl_for_template(edl, music, TARGET_DUR)
-            if ENERGY:
+            _set_two_act_drop(edl)
+            if ENERGY and not is_two_act(edl):
                 edl = apply_energy(edl, scenes, music)
                 edl = repair_unique_edl(edl, scenes, transcript if "transcript" in dir() else None)
                 acc_rs = float(edl[-1]["t1"]) if edl else 0.0

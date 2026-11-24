@@ -15,6 +15,7 @@ import hook_text
 import sky_ai
 
 MIN_DUR, MAX_DUR = 18.0, 32.6
+DIALOGUE_MAX_DUR = 58.6     # opt-in riyio-style dialogue edits (20-40s dialogue + drop + montage), BiBi Nov 24
 LUFS_MIN, LUFS_MAX = -30.0, -5.0
 
 
@@ -59,8 +60,15 @@ def run_gate(final: Path, *, qa_obj: dict, checks: dict, item: dict, work: Path 
     want = (2160, 3840) if out_res == 2160 else (1080, 1920)
     if (pr["w"], pr["h"]) != want:
         fails.append(f"resolution {pr['w']}x{pr['h']} != {want[0]}x{want[1]}")
-    if not (MIN_DUR <= pr["dur"] <= MAX_DUR):
-        fails.append(f"duration {pr['dur']:.2f}s outside {MIN_DUR:.0f}-32s")
+    lay_mode = str((layout or {}).get("edit_mode") or "")
+    if not lay_mode and work:
+        try:
+            lay_mode = str(json.loads((Path(work) / "layout.json").read_text()).get("edit_mode") or "")
+        except Exception:
+            lay_mode = ""
+    max_dur = DIALOGUE_MAX_DUR if lay_mode == "dialogue_drop" else MAX_DUR
+    if not (MIN_DUR <= pr["dur"] <= max_dur):
+        fails.append(f"duration {pr['dur']:.2f}s outside {MIN_DUR:.0f}-{max_dur:.0f}s")
     if not pr["audio"]:
         fails.append("no audio stream")
     else:

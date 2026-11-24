@@ -239,6 +239,91 @@ def mix_two_act(dialogue_bed: Path, song: Path, dst: Path, dur: float, T: float,
     return res
 
 
+# ---------------------------------------------------------------- dialogue edit (BiBi Nov 24: "riyo ki trh")
+BED_SPEECH_DB = float(os.environ.get("SKY_BED_SPEECH_DB", "-24"))   # song intro / drone under a spoken line
+BED_GAP_DB = float(os.environ.get("SKY_BED_GAP_DB", "-13"))         # between lines (still clearly a bed)
+DRONE_DB = -30.0
+
+
+def drone(n: int, sr: int = SR) -> np.ndarray:
+    """Dark ambient drone (generated, no licence): low A + fifth with a slow swell."""
+    t = np.arange(n) / sr
+    y = (np.sin(2 * np.pi * 55 * t) + 0.6 * np.sin(2 * np.pi * 82.5 * t) + 0.25 * np.sin(2 * np.pi * 110.3 * t))
+    y *= 0.6 + 0.4 * np.sin(2 * np.pi * 0.11 * t) ** 2
+    y = (y / 1.85 * 10 ** (DRONE_DB / 20)).astype(np.float32)
+    return np.stack([y, y], axis=1)
+
+
+def mix_dialogue_drop(dialogue_bed: Path, song: Path, dst: Path, dur: float, T: float, drop_abs: float,
+                      speech_out, work: Path) -> dict:
+    """Dialogue edit: ACT 1 [0, T) = the characters' voices (Demucs stem) over the song's own intro leading into
+    its drop (plus a quiet generated drone), auto-ducked to BED_SPEECH_DB under every line and BED_GAP_DB between
+    lines. ACT 2 [T, end) = the song from its drop at full level, no voices. The drop lands exactly at T."""
+    work = Path(work)
+    n, nT = int(dur * SR), int(T * SR)
+    a1 = work / "act1_dialogue.wav"
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(dialogue_bed), "-t", f"{T + 0.3:.3f}", str(a1)], check=True)
+    voc_path = work / "vocals.wav"
+    isolated = separate_vocals(a1, voc_path)
+    voice = _read(voc_path if isolated else a1)
+    voice = np.pad(voice, ((0, max(0, n - len(voice))), (0, 0)))[:n]
+    f = int(0.08 * SR)
+    voice[nT:] = 0
+    if nT > f:
+        voice[nT - f:nT] *= np.linspace(1, 0, f, dtype=np.float32)[:, None]
+    win = _mask(n, speech_out)
+    act = (win[:nT] > 0) & (_env(voice[:nT]) > 10 ** (-45 / 20)) if nT else np.zeros(0, bool)
+    if act.any():
+        vrms = float(np.sqrt((voice[:nT][act] ** 2).mean()))
+        voice *= min(8.0, 10 ** ((VOICE_RMS_DB + 3) / 20) / max(vrms, 1e-6))
+    # the song from (drop - T) so its drop hits at T; silence pad if the intro is shorter than act 1
+    full = _read(song)
+    d = int(max(0.0, drop_abs) * SR)
+    pre_start = d - nT
+    bed = np.zeros((nT, 2), np.float32)
+    if nT:
+        seg = full[max(0, pre_start):d]
+        bed[nT - len(seg):] = seg[:nT]
+        bed += drone(nT)
+        tgt = np.where(win[:nT] > 0, 10 ** (BED_SPEECH_DB / 20), 10 ** (BED_GAP_DB / 20)).astype(np.float32)
+        g = _smooth_gain(tgt)
+        fi = min(nT, int(1.0 * SR))
+        g[:fi] *= np.linspace(0, 1, fi, dtype=np.float32)
+        bed *= g[:, None]
+    song_full = np.zeros((n, 2), dtype=np.float32)
+    m = full[d: d + max(0, n - nT)] * 10 ** (min(0.0, MUSIC_DB + 2) / 20)
+    song_full[nT:nT + len(m)] = m
+    song_full[:nT] = bed
+    out = voice + song_full
+    peak = float(np.abs(out).max() or 1)
+    if peak > 0.97:
+        s = 0.97 / peak
+        out, voice, song_full = out * s, voice * s, song_full * s
+    _write(dst, out)
+
+    def rms_db(x):
+        return round(db(float(np.sqrt((x ** 2).mean()))) if len(x) else -99.0, 1)
+
+    sp = (win[:nT] > 0) if nT else np.zeros(0, bool)
+    v_db = rms_db(voice[:nT][sp]) if sp.any() else rms_db(voice[:nT])
+    b_db = rms_db(song_full[:nT][sp]) if sp.any() else rms_db(song_full[:nT])
+    res = {
+        "mode": "dialogue_drop",
+        "isolated": bool(isolated),
+        "act1_end": round(T, 2),
+        "act1_frac": round(T / max(dur, 1e-6), 3),
+        "act1_voice_dbfs": v_db,
+        "bed_under_voice_dbfs": b_db,
+        "voice_over_bed_db": round(v_db - b_db, 1),
+        "voice_in_act2_dbfs": rms_db(voice[nT:]),
+        "act2_song_dbfs": rms_db(song_full[nT:]),
+        "speech_segments": len(speech_out or []),
+    }
+    (work / "audio_check.json").write_text(json.dumps(res))
+    print(f"  dialogue-drop mix: {res}")
+    return res
+
+
 def mix_music_only(song: Path, dst: Path, dur: float, work: Path) -> dict:
     """Song at full level from t=0. No trailer audio (no dialogue, no trailer music/SFX)."""
     work = Path(work)
@@ -272,6 +357,19 @@ def check_errors(res: dict | None, speech_expected: bool) -> list[str]:
         errs = []
         if res.get("act2_song_dbfs", -99) < -30:
             errs.append(f"music-only song too quiet ({res.get('act2_song_dbfs')} dBFS)")
+        return errs
+    if res and res.get("mode") == "dialogue_drop":
+        errs = []
+        if res.get("act1_voice_dbfs", -99) < -35:
+            errs.append(f"act-1 dialogue too quiet ({res.get('act1_voice_dbfs')} dBFS)")
+        if res.get("voice_over_bed_db", 99) < MIN_SMR_DB:
+            errs.append(f"bed not ducked enough under the dialogue ({res.get('voice_over_bed_db')} dB < {MIN_SMR_DB})")
+        if res.get("voice_in_act2_dbfs", -99) > -50:
+            errs.append(f"dialogue audio leaks into the song act ({res.get('voice_in_act2_dbfs')} dBFS)")
+        if res.get("act2_song_dbfs", -99) < -30:
+            errs.append(f"act-2 song too quiet ({res.get('act2_song_dbfs')} dBFS)")
+        if not (0.25 <= float(res.get("act1_frac") or 0) <= 0.80):
+            errs.append(f"act split {res.get('act1_frac')} outside 25-80% of the video")
         return errs
     if res and res.get("mode") == "two_act":
         errs = []

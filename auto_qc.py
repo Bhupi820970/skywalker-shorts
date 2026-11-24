@@ -406,6 +406,13 @@ def check(path: Path, layout: dict | None = None, caption_y: int = 1420) -> dict
     # Relax the old "captions must appear somewhere" rule when we know there is no speech.
     if (not cap_cues) and (not speech_wins):
         issues[:] = [x for x in issues if x != "lower-third captions not visible"]
+    if (layout or {}).get("edit_mode") == "dialogue_drop" and (layout or {}).get("dialogue_captions"):
+        # riyio-style dialogue captions live on the picture under the speaker (story_caption_boxes), not as
+        # lower-thirds at caption_y: the lower-third visibility checks do not apply; audibility still does.
+        issues[:] = [x for x in issues
+                     if x != "lower-third captions not visible"
+                     and not str(x).startswith("dialogue subtitles missing")
+                     and not str(x).startswith("speech detected")]
     if (layout or {}).get("edit_mode") == "music_only":
         issues[:] = [x for x in issues
                      if x != "lower-third captions not visible"
