@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24 07:55 IST",
+ "generated_at": "2026-11-24 09:55 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
@@ -267,6 +267,44 @@
     "shorts",
     "trending",
     "coco"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "onepunchman3",
+   "slot": "2026-11-26T09:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261126-0900-onepunchman3",
+   "pillar": "anime",
+   "words": "ONE PUNCH MAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ONE PUNCH MAN fight scene official clip",
+    "ONE PUNCH MAN best scene official clip",
+    "ONE PUNCH MAN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll India",
+    "Netflix Anime",
+    "vizmedia"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Saitama ends fights in one hit",
+   "title": "Saitama ends fights in one hit | One Punch Man | #edit",
+   "tags": [
+    "onepunchman3",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "saitama"
    ],
    "market": "US/UK"
   },
@@ -1387,44 +1425,6 @@
     "shorts",
     "trending",
     "luffy"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "onepunchman3",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-onepunchman3",
-   "pillar": "anime",
-   "words": "ONE PUNCH MAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ONE PUNCH MAN fight scene official clip",
-    "ONE PUNCH MAN best scene official clip",
-    "ONE PUNCH MAN official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll India",
-    "Netflix Anime",
-    "vizmedia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Saitama ends fights in one hit",
-   "title": "Saitama ends fights in one hit | One Punch Man | #edit",
-   "tags": [
-    "onepunchman3",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "saitama"
    ],
    "market": "US/UK"
   },
