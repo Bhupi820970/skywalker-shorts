@@ -128,7 +128,7 @@ def env(monkeypatch, tmp_path):
     monkeypatch.setattr(yt, "REPO", tmp_path)
     for k, v in ENV.items():
         monkeypatch.setenv(k, v)
-    for k in ("DRY_RUN", "IDS", "BUFFER_API_KEY", "GITHUB_OUTPUT"):
+    for k in ("DRY_RUN", "IDS", "FORCE", "BUFFER_API_KEY", "GITHUB_OUTPUT"):
         monkeypatch.delenv(k, raising=False)
     monkeypatch.setattr(yt, "access_token", lambda: "tok")
     monkeypatch.setattr(yt, "my_channel", lambda tok: {"snippet": {"title": "Skywalker"}})
@@ -243,6 +243,17 @@ def test_title_already_on_channel_not_reuploaded(env, monkeypatch):
 def test_missed_slot_not_uploaded(env):
     env["write"](_result("i", _now() - timedelta(hours=8), "Why Luffy laughed"))
     assert yt.main([]) == 1 and env["uploads"] == []
+
+
+def test_force_skips_late_guard_only_for_listed_ids(env, monkeypatch):
+    env["write"](_result("late1", _now() - timedelta(hours=8), "Why Luffy laughed"))
+    env["write"](_result("late2", _now() - timedelta(hours=8), "Why Zoro stayed"))
+    monkeypatch.setenv("FORCE", "1")
+    assert yt.main([]) == 1 and env["uploads"] == []  # force without ids still blocked
+    monkeypatch.setenv("IDS", "late1")
+    assert yt.main([]) == 0
+    assert len(env["uploads"]) == 1 and env["read"]("late1")["yt_video_id"]
+    assert "yt_video_id" not in env["read"]("late2")
 
 
 def test_demo_and_unassigned_stock_never_uploaded(env):

@@ -11,7 +11,8 @@ errors, the result is marked buffer_status=dead so later publish runs skip it an
 green. Render status stays done (never re-render, never delete YouTube videos).
 
 Env: BUFFER_API_KEY (secret; never printed). DRY_RUN=1 prints what would be posted.
-IDS=comma list limits to those ids. Exit 1 if a createPost failed for a new post.
+IDS=comma list limits to those ids. FORCE=1 skips the late-slot guard only for ids listed in IDS.
+Exit 1 if a createPost failed for a new post.
 """
 import glob, json, os, sys, urllib.error, urllib.request
 from datetime import datetime, timedelta, timezone
@@ -31,6 +32,7 @@ CFG = json.loads((REPO / "config" / "publish.json").read_text())
 CH, ORG = CFG["buffer_channel_id"], CFG["buffer_org_id"]
 DRY = os.environ.get("DRY_RUN") == "1"
 ONLY = {x.strip() for x in os.environ.get("IDS", "").split(",") if x.strip()}
+FORCE = os.environ.get("FORCE") == "1"
 
 
 def gql(query, variables=None):
@@ -548,7 +550,7 @@ def main():
             save(p, r); changed.append(iid)
             continue
         win_h = limit_defer_h if r.get("limit_deferred") else late_h
-        if slot < now - timedelta(hours=win_h):
+        if slot < now - timedelta(hours=win_h) and not (FORCE and ONLY and iid in ONLY):
             print(f"{iid}: slot {r['slot']} is more than {win_h}h past and not posted - needs a manual decision")
             failed.append(f"{iid}: missed slot not auto-posted (>{win_h}h late)")
             continue

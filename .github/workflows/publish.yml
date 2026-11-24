@@ -20,6 +20,10 @@ on:
         description: "Print what would be posted, post nothing"
         type: boolean
         default: false
+      force:
+        description: "Skip the >6h late-slot guard, only for ids listed in the ids input"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -48,6 +52,7 @@ jobs:
           SKY_YT_REFRESH_TOKEN: ${{ secrets.SKY_YT_REFRESH_TOKEN }}
           IDS: ${{ github.event.inputs.ids }}
           DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+          FORCE: ${{ github.event.inputs.force == 'true' && '1' || '0' }}
         run: |
           git pull --ff-only -q || true
           if [ -n "$SKY_YT_CLIENT_ID" ] && [ -n "$SKY_YT_CLIENT_SECRET" ] && [ -n "$SKY_YT_REFRESH_TOKEN" ]; then

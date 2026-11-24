@@ -17,7 +17,7 @@ SKY_YT_REFRESH_TOKEN secrets exist (Buffer's free plan caps Shorts at 2 per 24h)
   marks the result publish-dead (render stays done, nothing is deleted).
 
 Env: SKY_YT_CLIENT_ID, SKY_YT_CLIENT_SECRET, SKY_YT_REFRESH_TOKEN (secrets; never printed).
-Optional BUFFER_API_KEY (only read, for the repeat guard). DRY_RUN=1, IDS=comma list.
+Optional BUFFER_API_KEY (only read, for the repeat guard). DRY_RUN=1, IDS=comma list. FORCE=1 skips the late-slot guard only for ids listed in IDS.
 `--auth-check` prints only the channel title and handle.
 """
 import glob, json, os, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
@@ -406,6 +406,7 @@ def main(argv=None):
         return video_status(os.environ.get("VIDEO_IDS", "").split(","))
     dry = os.environ.get("DRY_RUN") == "1"
     only = {x.strip() for x in os.environ.get("IDS", "").split(",") if x.strip()}
+    force = os.environ.get("FORCE") == "1"
     now = datetime.now(IST)
     start = datetime.fromisoformat(CFG["post_from_slot"])
     late_h = float(CFG.get("late_post_hours") or 6)
@@ -464,7 +465,7 @@ def main(argv=None):
             continue
         slot = datetime.fromisoformat(r["slot"])
         win_h = limit_defer_h if r.get("limit_deferred") else late_h
-        if slot < now - timedelta(hours=win_h):
+        if slot < now - timedelta(hours=win_h) and not (force and only and iid in only):
             print(f"{iid}: slot {r['slot']} is more than {win_h}h past and not posted - needs a manual decision")
             failed.append(f"{iid}: missed slot not auto-posted (>{win_h}h late)")
             continue
