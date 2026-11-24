@@ -1,51 +1,10 @@
 {
- "generated_at": "2026-11-25 01:09 IST",
+ "generated_at": "2026-11-25 02:52 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "princessmononoke",
-   "slot": "2026-11-24T20:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261124-2030-princessmononoke",
-   "pillar": "anime",
-   "words": "PRINCESS MONONOKE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "PRINCESS MONONOKE fight scene official clip",
-    "PRINCESS MONONOKE best scene official clip",
-    "PRINCESS MONONOKE official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll Store Australia",
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
-   "missing_assets": [],
-   "on_release": [
-    "princessmononoke_scene1_h264.mp4"
-   ],
-   "hook": "San would die for the forest",
-   "title": "San would die for the forest | Princess Mononoke | #edit",
-   "tags": [
-    "princessmononoke",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "ashitaka",
-    "san"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "pathaan",
    "slot": "2026-11-25T09:00:00+05:30",
@@ -78,45 +37,6 @@
     "bollywood"
    ],
    "market": "IN"
-  },
-  {
-   "slug": "dandadan",
-   "slot": "2026-11-25T11:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261125-1130-dandadan",
-   "pillar": "anime",
-   "words": "DAN DA DAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DAN DA DAN fight scene official clip",
-    "DAN DA DAN best scene official clip",
-    "DAN DA DAN official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
-   "missing_assets": [],
-   "on_release": [
-    "dandadan_scene2_h264.mp4"
-   ],
-   "hook": "Okarun was never ready for this",
-   "title": "Okarun was never ready for this | Dandadan | #edit",
-   "tags": [
-    "dandadan",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "okarun"
-   ],
-   "market": "US/UK"
   },
   {
    "slug": "haikyuudumpster",
@@ -1147,6 +1067,44 @@
    "market": "US/UK"
   },
   {
+   "slug": "lazarus",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-lazarus",
+   "pillar": "anime",
+   "words": "LAZARUS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "LAZARUS fight scene official clip",
+    "LAZARUS best scene official clip",
+    "LAZARUS official clip"
+   ],
+   "official_channels": [
+    "Adult Swim",
+    "Adult Swim Europe",
+    "MAPPA CHANNEL"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=1VUqQqUlSv4",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Axel has thirty days to run",
+   "title": "Axel has thirty days to run | Lazarus | #edit",
+   "tags": [
+    "lazarus",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "axel"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "mashle",
    "slot": "9999",
    "for": "backup_pool",
@@ -1391,6 +1349,47 @@
     "trending",
     "aqua",
     "ruby"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "princessmononoke",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-princessmononoke",
+   "pillar": "anime",
+   "words": "PRINCESS MONONOKE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "PRINCESS MONONOKE fight scene official clip",
+    "PRINCESS MONONOKE best scene official clip",
+    "PRINCESS MONONOKE official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll Store Australia",
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
+   "missing_assets": [],
+   "on_release": [
+    "princessmononoke_scene1_h264.mp4"
+   ],
+   "hook": "San would die for the forest",
+   "title": "San would die for the forest | Princess Mononoke | #edit",
+   "tags": [
+    "princessmononoke",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "ashitaka",
+    "san"
    ],
    "market": "US/UK"
   },
