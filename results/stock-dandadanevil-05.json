@@ -1,0 +1,253 @@
+{
+  "id": "stock-dandadanevil-05",
+  "status": "retry_queued",
+  "detail": "all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 15.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-24 11:08 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45326361185",
+  "slot": null,
+  "title": "Nobody expected Okarun to become this dangerous #dandadan #okarun #anime",
+  "hook": "The Evil Eye is finally unleashed",
+  "description": "The Evil Eye is finally unleashed. A look at the terrifying transformation sequence where Okarun is consumed by the power of the Evil Eye. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #okarun #anime #shorts #edit",
+  "tags": [
+    "dandadan",
+    "okarun",
+    "anime",
+    "dandadanevil",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Evil Eye was a lonely kid",
+    "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+    "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+    "tags": [
+      "dandadanevil",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "okarun"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Nobody expected Okarun to become this dangerous",
+      "click_score": 92.0
+    },
+    {
+      "title": "Okarun turns into the ultimate nightmare",
+      "click_score": 88.0
+    },
+    {
+      "title": "Witness the awakening of the Evil Eye",
+      "click_score": 85.0
+    },
+    {
+      "title": "The moment Okarun lost all control",
+      "click_score": 82.0
+    },
+    {
+      "title": "Okarun is not human anymore",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 21.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.8,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.9,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 5.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 11.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 7.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 13.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 15.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 4.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.6,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-dandadanevil",
+  "stock": true,
+  "stock_topic": "backup-dandadanevil",
+  "spare": true,
+  "words": "DAN DA DAN",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 15.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "music": "pr_semescapar.mp3",
+      "qc_status": null
+    }
+  ],
+  "last_error": "pipeline/QA failed (exit 1): only 15.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"2.04s burned-in text 'THE EVIL EYE'\", \"2.54s burned-in text 'THE EVIL EYE'\", \"3.54s burned-in text 'IS FINALLY UNLEASHED'\", \"4.04s burned-in text 'IS FINALLY UNLEASHED'\", \"5.04s burned-in text 'EVIL EYE WAS'\", \"5.54s burned-in text 'EVIL EYE WAS'\", \"7.04s ",
+      "at": "2026-11-24 10:19 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.769, 'edge_corr_median': 0.887, 'shift_px_median': 4.69, 'pairs': 6}",
+      "at": "2026-11-24 10:39 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.855, 'edge_corr_median': 0.919, 'shift_px_median': 3.13, 'pairs': 6}; only 17.9s of unique clean shots (nee",
+      "at": "2026-11-24 11:00 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 15.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-24 11:08 IST"
+    }
+  ]
+}
