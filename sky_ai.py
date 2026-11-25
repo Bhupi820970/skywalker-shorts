@@ -270,7 +270,8 @@ def clip_hook_meta(mezz: Path, edl: list, transcript: dict, work: Path, iid: str
     if cache.exists():
         try:
             c = json.loads(cache.read_text())
-            if (c.get("hook") and not hook_errors(c["hook"], avoid)
+            same_footage = str(c.get("_words") or "") in ("", str(item.get("words") or ""))
+            if (same_footage and c.get("hook") and not hook_errors(c["hook"], avoid)
                     and not (savage_wanted(edl) and savage_hook_errors(c["hook"], avoid))):
                 print("  gemini[hook]: cached")
                 return c
@@ -373,7 +374,7 @@ Return JSON: {{"hook": str, "titles": [{{"title": str, "click_score": n}}, ...5]
     if not meta:
         meta = queue_hook_meta(item, dialogue, avoid)
     if meta.get("source") == "gemini":  # a fallback is never cached: the next attempt asks Gemini again (budget allowing)
-        cache.write_text(json.dumps(meta, ensure_ascii=False))
+        cache.write_text(json.dumps(dict(meta, _words=str(item.get("words") or "")), ensure_ascii=False))
     return meta
 
 

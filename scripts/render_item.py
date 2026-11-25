@@ -1059,6 +1059,11 @@ JOB_T0 = time.monotonic()
 JOB_BUDGET_S = float(os.environ.get("SKY_JOB_BUDGET_MIN", "115")) * 60.0
 HARD_CAP_S = float(os.environ.get("SKY_HARD_CAP_MIN", "138")) * 60.0
 MAX_SOURCES_PER_JOB = int(os.environ.get("SKY_MAX_SOURCES", "12"))
+if (item or {}).get("demo") and not os.environ.get("SKY_MAX_SOURCES"):
+    # Demos fail fast: the queued footage plus at most two proven swaps (~20-28 min each with
+    # stabilise), so one demo job ends well inside the runner's life instead of looping 4-5
+    # sources until the runner is reclaimed (demo-v16 died at 88 min on its 5th source).
+    MAX_SOURCES_PER_JOB = int(os.environ.get("SKY_DEMO_MAX_SOURCES", "3"))
 SOURCES_RENDERED = 0
 SOURCE_EST_S = [480.0]  # running max of one source render (download+stabilize+cut+QA)
 LAST_INFO = {}
@@ -1126,6 +1131,18 @@ def _refresh_item_context():
     ctx.write_text(json.dumps({"item": item, "avoid_openers": AVOID_OPENERS,
                                "trends": gemini.load_trends(REPO)}, ensure_ascii=False))
     os.environ["SKY_ITEM_JSON"] = str(ctx)
+    # The hook / scene-pick caches describe the OLD footage. demo-v16 swapped Oppenheimer ->
+    # Mononoke and reused the cached "Zero Is Never Zero" hook, so Gemini QC rejected a clean
+    # render for "title says Oppenheimer, footage is Mononoke".
+    drop_footage_caches()
+
+
+def drop_footage_caches():
+    for name in (f"gemini_hook_{iid}.json", f"gemini_scenes_{iid}.json"):
+        try:
+            (OUT / name).unlink(missing_ok=True)
+        except Exception:
+            pass
 
 
 def _try_title_swap(reason, tried) -> bool:

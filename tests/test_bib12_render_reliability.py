@@ -184,3 +184,35 @@ def test_demo_swaps_only_to_proven_footage(tmp_path):
             "sources": ["https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/superman_trailer_h264.mp4"]}
     nxt = title_swap.next_eligible_title(item, root=tmp_path)
     assert nxt and title_swap.title_slug(nxt) == "oppenheimer"
+
+
+# ---------------------------------------------------------------- demo-v16 (Oppenheimer -> Mononoke hook reuse)
+
+def test_cached_hook_is_ignored_after_a_title_swap(monkeypatch, tmp_path):
+    import sky_ai
+    ctx = tmp_path / "item.json"
+    ctx.write_text(json.dumps({"item": {"id": "demo-x", "words": "PRINCESS MONONOKE", "hook": "x"},
+                               "avoid_openers": [], "trends": {}}))
+    monkeypatch.setenv("SKY_ITEM_JSON", str(ctx))
+    monkeypatch.setenv("SKY_ROOT", str(tmp_path))
+    (tmp_path / "gemini_hook_demo-x.json").write_text(json.dumps(
+        {"hook": "Zero Is Never Zero", "title": "t", "source": "gemini", "_words": "OPPENHEIMER"}))
+    called = {}
+
+    def stop(*a, **k):
+        called["fresh"] = True
+        raise RuntimeError("fresh hook requested")
+
+    monkeypatch.setattr(sky_ai, "_clip_dialogue", stop)
+    import pytest
+    with pytest.raises(RuntimeError):
+        sky_ai.clip_hook_meta(tmp_path / "m.mp4", [], {}, tmp_path, "demo-x")
+    assert called.get("fresh")
+    # same footage -> the cache is still used (one Gemini call per job)
+    (tmp_path / "gemini_hook_demo-x.json").write_text(json.dumps(
+        {"hook": "She fights for the forest", "title": "t", "source": "gemini", "_words": "PRINCESS MONONOKE"}))
+    called.clear()
+    monkeypatch.setattr(sky_ai, "hook_errors", lambda *a: [])
+    monkeypatch.setattr(sky_ai, "savage_wanted", lambda *a: False)
+    out = sky_ai.clip_hook_meta(tmp_path / "m.mp4", [], {}, tmp_path, "demo-x")
+    assert out["hook"] == "She fights for the forest" and not called

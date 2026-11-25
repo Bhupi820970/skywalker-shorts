@@ -3939,6 +3939,9 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
 # ---------------------------------------------------------------------------
 # 7. QA
 # ---------------------------------------------------------------------------
+_NO_CROP_FRAME_OFFSETS = (0, -1, 1, -2, 2)   # source frames around the mapped time (QA no_crop)
+
+
 def apply_qc_blacklist(scenes: list[dict], edl: list[dict], blacklist: list[dict]) -> int:
     """Punch out only the failing slice of a source scene, then re-slice.
 
@@ -4210,6 +4213,15 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
             lb_ok = False
     # 2. edge check: compare output plate vs source frame at matching times
     corrs, edges, shifts = [], [], []
+    try:
+        _num, _den = subprocess.check_output(
+            ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=avg_frame_rate",
+             "-of", "csv=p=0", str(mezz)], text=True).strip().split("/")[:2]
+        src_fps = float(_num) / max(1.0, float(_den or 1))
+    except Exception:
+        src_fps = 24.0
+    if not (5.0 <= src_fps <= 120.0):
+        src_fps = 24.0
     body = [it for it in edl if it.get("scene") != "end"]
     for j, it in enumerate(body):
         prev = body[j - 1] if j else None
@@ -4229,22 +4241,35 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
         speed = float(it.get("speed") or 1.0) or 1.0
         t_src = float(it.get("src_start") or 0) + dt * speed
         o = _frame(out, t_out)
-        m = _frame(mezz, t_src)
-        if o is None or m is None:
+        if o is None:
             continue
         px = int(lay.get("plate_x") or 0)
         pw_ = int(lay.get("plate_w") or o.shape[1])
         plate = o[lay["plate_y"]:lay["plate_y"] + lay["plate_h"], px:px + pw_]
         if plate.size == 0:
             continue
-        mim = Image.fromarray(m.astype(np.uint8))
         zq = _sfx.zoom_at(t_out, mplan) if mplan else 1.0
-        if zq > 1.0005:   # the intended slow push-in: centre-crop the source by the same zoom
-            mw_, mh_ = mim.size
-            cw_, ch_ = mw_ / zq, mh_ / zq
-            mim = mim.crop((int((mw_ - cw_) / 2), int((mh_ - ch_) / 2), int((mw_ + cw_) / 2), int((mh_ + ch_) / 2)))
-        mm = np.array(mim.resize((plate.shape[1], plate.shape[0])), dtype=np.float32)
-        c = _corr(plate[::4, ::4], mm[::4, ::4])
+        # Seek/fps rounding can land the output frame 1-2 source frames off. On moving live-action
+        # (Oppenheimer, Edgerunners) that alone read as a 4-13 px "shift" and failed clean,
+        # uncropped renders (demo-v16). Compare against the best-matching nearby source frame:
+        # a real crop/zoom still mismatches at every offset.
+        best = None
+        for k in _NO_CROP_FRAME_OFFSETS:
+            m = _frame(mezz, max(0.0, t_src + k / max(1.0, src_fps)))
+            if m is None:
+                continue
+            mim = Image.fromarray(m.astype(np.uint8))
+            if zq > 1.0005:   # the intended slow push-in: centre-crop the source by the same zoom
+                mw_, mh_ = mim.size
+                cw_, ch_ = mw_ / zq, mh_ / zq
+                mim = mim.crop((int((mw_ - cw_) / 2), int((mh_ - ch_) / 2), int((mw_ + cw_) / 2), int((mh_ + ch_) / 2)))
+            mk = np.array(mim.resize((plate.shape[1], plate.shape[0])), dtype=np.float32)
+            ck = _corr(plate[::4, ::4], mk[::4, ::4])
+            if best is None or ck > best[0]:
+                best = (ck, mk)
+        if best is None:
+            continue
+        c, mm = best
         # border ring (outer 48px on every side): a crop/zoom would misalign it
         if plate.shape[0] > 96 and plate.shape[1] > 96:
             ring = np.ones(plate.shape, bool)

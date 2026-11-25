@@ -1503,7 +1503,7 @@
       "test"
     ],
     "target_dur": 45,
-    "status": "queued",
+    "status": "retired",
     "market": "US/UK",
     "demo": true,
     "no_publish": true,
@@ -1511,6 +1511,41 @@
     "fallback_asset": "oppenheimer_scene1_h264.mp4",
     "content_kind": "best scene",
     "note": "BIB-12 demo: ref-match dialogue edit (talk first, then the drop + kick-cut montage) with the hook bar flush on top of the scene. Proven official Oppenheimer scene clip (English dialogue, done render 2026-11-23). If it fails, demos only swap to proven footage. no_publish: never Buffer/YouTube.",
+    "dialogue_edit": true,
+    "retired_reason": "Run 45456244932: Oppenheimer failed QA no_crop (frame-timing shift, fixed), the swap to Mononoke reused the Oppenheimer hook (QC title mismatch, fixed), runner reclaimed at 88 min on the 5th source. Replaced by demo-v17-refmatch."
+  },
+  {
+    "id": "demo-v17-refmatch",
+    "pillar": "anime",
+    "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
+    "sources": [
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4"
+    ],
+    "fallback_mp4": [
+      "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4"
+    ],
+    "template": "whitebar",
+    "hook": "San kills for this forest",
+    "words": "PRINCESS MONONOKE",
+    "title": "San kills for this forest | Princess Mononoke | #edit",
+    "description": "DEMO (not published). San kills for this forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke",
+    "tags": [
+      "princessmononoke",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "test"
+    ],
+    "target_dur": 45,
+    "status": "queued",
+    "market": "US/UK",
+    "demo": true,
+    "no_publish": true,
+    "fallback_release": "sources",
+    "fallback_asset": "princessmononoke_scene1_h264.mp4",
+    "content_kind": "best scene",
+    "note": "BIB-12 demo v17: ref-match dialogue edit (talk first, then drop + kick-cut montage), hook bar flush on the scene. princessmononoke_scene1 passed every QA check in run 45456244932 (22s English dialogue act); only the stale Oppenheimer hook failed QC. no_publish: never Buffer/YouTube.",
     "dialogue_edit": true
   }
 ]
