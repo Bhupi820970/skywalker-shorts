@@ -332,5 +332,8 @@
       "reason": "gemini score 6.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "yt_fail_count": 1,
+  "yt_error": "HTTP Error 503: Service Unavailable",
+  "yt_status": "error"
 }
