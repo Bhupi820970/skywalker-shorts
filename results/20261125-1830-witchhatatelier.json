@@ -420,5 +420,17 @@
       "error": "pipeline/QA failed (exit 1): only 9.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 8.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "at": "2026-11-25 18:04 IST"
     }
-  ]
+  ],
+  "asset_sha256": "da57ee05877b388631e69e36ced15b19f28b01ae4b2e39d147e4b6f000542fba",
+  "publish_via": "youtube",
+  "yt_video_id": "FcrJeua9yDk",
+  "yt_uploaded_at": "2026-11-25 20:32 IST",
+  "yt_privacy": "public",
+  "yt_publish_at": "2026-11-25T20:32:35.354749+05:30",
+  "yt_status": "public",
+  "youtube_url": "https://youtube.com/shorts/FcrJeua9yDk",
+  "buffer_post_id": "yt:FcrJeua9yDk",
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-25T15:02:35.000Z",
+  "buffer_posted_at": "2026-11-25T15:02:35.000Z"
 }

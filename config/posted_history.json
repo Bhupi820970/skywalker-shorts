@@ -738,6 +738,18 @@
         "clip:weatheringwithyou_scene2_h264.mp4",
         "clip:weatheringwithyou_scene3_h264.mp4"
       ]
+    },
+    {
+      "id": "20261125-1830-witchhatatelier",
+      "at": "2026-11-25 20:32 IST",
+      "slot": "2026-11-25T18:30:00+05:30",
+      "title": "The moment Ashitaka stopped an entire war #princessmononoke #ashitaka #ghibli",
+      "youtube_url": "https://youtube.com/shorts/FcrJeua9yDk",
+      "keys": [
+        "asset:render-20261125-1830-witchhatatelier.mp4",
+        "clip:mononoke_scene1_h264.mp4",
+        "sha:da57ee05877b388631e69e36ced15b19f28b01ae4b2e39d147e4b6f000542fba"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."
