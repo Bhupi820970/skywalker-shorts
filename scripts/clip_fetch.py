@@ -156,7 +156,7 @@ def search(req: dict, youtube: bool) -> list[dict]:
     n_first = len(found)
     for q in scene_q:
         for pfx in prefixes:
-            r = run(["yt-dlp", "--flat-playlist", "-J", "--no-warnings", f"{pfx}:{q}"], timeout=90)
+            r = run(["yt-dlp", "--flat-playlist", "-J", "--no-warnings", *js_runtime_args(), *browser_cookie_args(), f"{pfx}:{q}"], timeout=90)
             if r.returncode != 0:
                 continue
             try:
@@ -227,12 +227,25 @@ def browser_cookie_args() -> list[str]:
     return ["--cookies-from-browser", b]
 
 
+def js_runtime_args() -> list[str]:
+    """Box only: SKY_YTDLP_JS_RUNTIME (e.g. deno:/home/box/.deno/bin/deno) so yt-dlp can
+    solve YouTube n-challenges and select 1080p+ formats. Safe no-op when unset."""
+    r = (os.environ.get("SKY_YTDLP_JS_RUNTIME") or "").strip()
+    if not r:
+        p = Path("/home/box/.deno/bin/deno")
+        if p.is_file() and os.access(p, os.X_OK):
+            r = f"deno:{p}"
+    if not r or r.startswith("-") or any(ch in r for ch in ";|&`$\n"):
+        return []
+    return ["--js-runtimes", r]
+
+
 def download(url: str, dest: Path) -> bool:
     for f in WORK.glob(dest.stem + "*"):
         f.unlink(missing_ok=True)
     cmd = ["yt-dlp", "--no-playlist", "--remote-components", "ejs:github", "-f", FMT, "-S", SORT,
            "--merge-output-format", "mp4", "-o", str(dest), "--no-warnings", "--no-part",
-           *browser_cookie_args(), url]
+           *js_runtime_args(), *browser_cookie_args(), url]
     r = run(cmd, timeout=900)
     ok = r.returncode == 0 and dest.exists() and dest.stat().st_size > 1_000_000
     if not ok and RATE_LIMIT.search((r.stderr or "") + (r.stdout or "")):

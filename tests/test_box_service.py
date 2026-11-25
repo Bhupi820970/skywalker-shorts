@@ -36,6 +36,16 @@ def test_browser_auth_is_opt_in(monkeypatch):
     assert bs.browser_args() == ["--cookies-from-browser", "chrome:/home/box/chrome-profile/Default"]
 
 
+def test_js_runtime_is_opt_in(monkeypatch, tmp_path):
+    monkeypatch.delenv("SKY_YTDLP_JS_RUNTIME", raising=False)
+    monkeypatch.setattr(bs.os, "access", lambda *a, **k: False)
+    assert bs.js_runtime_args() == []
+    monkeypatch.setenv("SKY_YTDLP_JS_RUNTIME", "deno:/x;rm -rf /")
+    assert bs.js_runtime_args() == []
+    monkeypatch.setenv("SKY_YTDLP_JS_RUNTIME", "deno:/home/box/.deno/bin/deno")
+    assert bs.js_runtime_args() == ["--js-runtimes", "deno:/home/box/.deno/bin/deno"]
+
+
 def test_dispatch_off_by_default(monkeypatch):
     monkeypatch.delenv("SKY_BOX_DISPATCH", raising=False)
     called = []

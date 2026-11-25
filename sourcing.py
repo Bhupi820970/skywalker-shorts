@@ -879,6 +879,18 @@ def _browser_cookie_args() -> list[str]:
     return ["--cookies-from-browser", b]
 
 
+def js_runtime_args() -> list[str]:
+    """Box only: SKY_YTDLP_JS_RUNTIME (e.g. deno:/home/box/.deno/bin/deno) so yt-dlp can
+    solve YouTube n-challenges and select 1080p+ formats. Safe no-op when unset."""
+    r = (os.environ.get("SKY_YTDLP_JS_RUNTIME") or "").strip()
+    if not r:
+        p = Path("/home/box/.deno/bin/deno")
+        if p.is_file() and os.access(p, os.X_OK):
+            r = f"deno:{p}"
+    if not r or r.startswith("-") or any(ch in r for ch in ";|&`$\n"):
+        return []
+    return ["--js-runtimes", r]
+
 
 # Cap each official source so long Arcane-style clips cannot blow the job timeout.
 # A 20-32s Short only needs a few minutes of clean scenes, not a full episode.
@@ -1171,7 +1183,7 @@ def _run_ytdlp(url: str, dest: Path, *, max_s: float, allow_youtube: bool,
     ]
     if sections:
         cmd += ["--download-sections", f"*0-{int(max_s)}", "--force-keyframes-at-cuts"]
-    cmd += _cookies_args() + [url]
+    cmd += js_runtime_args() + _cookies_args() + [url]
     try:
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
     except Exception as e:

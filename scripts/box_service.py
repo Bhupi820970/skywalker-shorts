@@ -20,7 +20,7 @@ fan re-uploads); no piracy, no DRM / paid OTT rips. Every new clip is checked by
 Gemini keys are present, Gemini looks at keyframes (logo / watermark / burned subtitles / HUD / quality /
 trailer card) exactly like pro-edit's vet().
 
-Auth: SKY_YTDLP_BROWSER (e.g. chrome:/home/box/chrome-profile/Default) lets yt-dlp read the box browser's
+Auth: SKY_YTDLP_BROWSER (e.g. chrome:/home/box/chrome-profile/Fork-2) lets yt-dlp read the box browser's
 own YouTube / X login for downloads only. Cookies are never copied, committed, uploaded or logged.
 Idempotent: every step compares the release asset list with what is needed; restart-safe (flock).
 
@@ -143,6 +143,19 @@ def browser_args() -> list[str]:
     return ["--cookies-from-browser", b]
 
 
+def js_runtime_args() -> list[str]:
+    """Box only: SKY_YTDLP_JS_RUNTIME (e.g. deno:/home/box/.deno/bin/deno) so yt-dlp can
+    solve YouTube n-challenges and select 1080p+ formats. Safe no-op when unset."""
+    r = (os.environ.get("SKY_YTDLP_JS_RUNTIME") or "").strip()
+    if not r:
+        p = Path("/home/box/.deno/bin/deno")
+        if p.is_file() and os.access(p, os.X_OK):
+            r = f"deno:{p}"
+    if not r or r.startswith("-") or any(ch in r for ch in ";|&`$\n"):
+        return []
+    return ["--js-runtimes", r]
+
+
 def release_assets(tag: str) -> dict[str, int]:
     r = gh("api", "--paginate", f"repos/{GH_REPO}/releases/tags/{tag}", "-q", ".assets[] | [.name, .size] | @tsv",
            timeout=180)
@@ -226,7 +239,7 @@ def probe(p: Path) -> dict:
 
 def url_meta(url: str) -> dict | None:
     r = run(["yt-dlp", "-J", "--no-warnings", "--no-playlist", "--skip-download", "--remote-components",
-             "ejs:github", *browser_args(), url], timeout=120)
+             "ejs:github", *js_runtime_args(), *browser_args(), url], timeout=120)
     if r.returncode != 0:
         return None
     try:
@@ -283,7 +296,7 @@ def download_clip(url: str, dest: Path) -> bool:
     fmt = "bv*[height>=1080][height<=2160]+ba/b[height>=1080][height<=2160]"
     r = run(["yt-dlp", "--no-playlist", "--remote-components", "ejs:github", "-f", fmt,
              "-S", "res:2160,vcodec:h264,vcodec:vp9,acodec:m4a", "--merge-output-format", "mp4",
-             "-o", str(dest), "--no-warnings", "--no-part", "--retries", "3", *browser_args(), url], timeout=1800)
+             "-o", str(dest), "--no-warnings", "--no-part", "--retries", "3", *js_runtime_args(), *browser_args(), url], timeout=1800)
     return r.returncode == 0 and dest.exists() and dest.stat().st_size > 1_000_000
 
 
@@ -685,7 +698,7 @@ def restore_track(t: dict) -> tuple[Path | None, dict]:
     if t.get("source_url") and URL_OK.match(t["source_url"]):
         base = WORK / Path(fname).stem
         r = run(["yt-dlp", "-f", "bestaudio/best", "-x", "--audio-format", "mp3", "--audio-quality", "160K",
-                 "--no-playlist", "--no-warnings", *browser_args(), "-o", str(base) + ".%(ext)s", t["source_url"]],
+                 "--no-playlist", "--no-warnings", *js_runtime_args(), *browser_args(), "-o", str(base) + ".%(ext)s", t["source_url"]],
                 timeout=900)
         mp3 = base.with_suffix(".mp3")
         if r.returncode == 0 and mp3.exists():
@@ -909,7 +922,7 @@ def cycle(only: str = "") -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cmd", choices=["cycle", "sync", "status", "clips", "links", "music", "requests", "dispatch"])
+    ap.add_argument("cmd", choices=["cycle", "sync", "status", "clips", "links", "music", "refill", "requests", "dispatch"])
     a = ap.parse_args()
     if a.cmd == "sync":
         log("sync: " + sync_code())
