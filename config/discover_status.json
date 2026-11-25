@@ -3,85 +3,13 @@
   "queued_ids": [],
   "skipped": [
     {
-      "slug": "mobpsycho100percent",
-      "url": "https://www.youtube.com/watch?v=aT_P7R2ebsQ",
-      "channel": "Crunchyroll",
-      "title": "Mob Goes ???% | Mob Psycho 100 II",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "MOB PSYCHO 100 MOB GOES 100 PERCENT",
-      "hook": "Why Mob tried to suppress his power"
-    },
-    {
-      "slug": "mobpsycho100percent",
-      "url": "https://www.youtube.com/watch?v=SSV2KUMf3aQ",
-      "channel": "Crunchyroll",
-      "title": "My Animosity | Mob Psycho 100",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "MOB PSYCHO 100 MOB GOES 100 PERCENT",
-      "hook": "Why Mob tried to suppress his power"
-    },
-    {
-      "slug": "mobpsycho100percent",
-      "url": "https://www.youtube.com/watch?v=NYQEjOMNmgw",
-      "channel": "Crunchyroll",
-      "title": "Mob vs Dimple | Mob Psycho 100",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "MOB PSYCHO 100 MOB GOES 100 PERCENT",
-      "hook": "Why Mob tried to suppress his power"
-    },
-    {
-      "slug": "hxhgonpitou",
-      "url": "https://www.youtube.com/watch?v=zA6WNlpFyvE",
-      "channel": "Netflix Anime",
-      "title": "Gon Loses It | Hunter X Hunter | Clip | Netflix Anime",
+      "slug": "gta6",
+      "url": "https://www.youtube.com/watch?v=_yl5ELcmugI",
+      "channel": "Rockstar Games",
+      "title": "Grand Theft Auto VI: Out Now",
       "skip": "youtube_bot_check",
-      "words": "HUNTER X HUNTER GON TRANSFORMATION",
-      "hook": "Why Gon sacrificed everything for revenge"
-    },
-    {
-      "slug": "hxhgonpitou",
-      "url": "https://www.youtube.com/watch?v=prWR7FXMUDM",
-      "channel": "Crunchyroll",
-      "title": "Gon vs Neferpitou | Hunter X Hunter",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "HUNTER X HUNTER GON TRANSFORMATION",
-      "hook": "Why Gon sacrificed everything for revenge"
-    },
-    {
-      "slug": "hxhgonpitou",
-      "url": "https://www.youtube.com/watch?v=PKWRQLTUxpA",
-      "channel": "Crunchyroll",
-      "title": "Gon Loses It! | Hunter X Hunter",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "HUNTER X HUNTER GON TRANSFORMATION",
-      "hook": "Why Gon sacrificed everything for revenge"
-    },
-    {
-      "slug": "hxhgonpitou",
-      "url": "https://www.youtube.com/watch?v=XL2PiVNYD_Y",
-      "channel": "Crunchyroll",
-      "title": "I'll Use Everything | Hunter X Hunter",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "HUNTER X HUNTER GON TRANSFORMATION",
-      "hook": "Why Gon sacrificed everything for revenge"
-    },
-    {
-      "slug": "darkknightjoker",
-      "url": "https://www.youtube.com/watch?v=co2bs_OjLG8",
-      "channel": "DC",
-      "title": "The Dark Knight - Batman INTERROGATES The Joker | MOVIE CLIP | DC​",
-      "skip": "youtube_bot_check",
-      "words": "THE DARK KNIGHT JOKER INTERROGATION",
-      "hook": "Why Joker wanted Batman to hit him"
-    },
-    {
-      "slug": "darkknightjoker",
-      "url": "https://www.youtube.com/watch?v=SIYkhb2NjfE",
-      "channel": "Movieclips",
-      "title": "The Dark Knight (2008) - Some Men Just Want to Watch the World Burn Scene | Movieclips",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "THE DARK KNIGHT JOKER INTERROGATION",
-      "hook": "Why Joker wanted Batman to hit him"
+      "words": "GRAND THEFT AUTO VI",
+      "hook": "The map just opened"
     },
     {
       "slug": "bridgerton",
@@ -91,27 +19,170 @@
       "skip": "youtube_bot_check",
       "words": "BRIDGERTON",
       "hook": "She already knew"
+    },
+    {
+      "slug": "bridgerton",
+      "url": "https://www.youtube.com/watch?v=eKhh9VerYms",
+      "channel": "Netflix",
+      "title": "Bridgerton Season 3 | Official Clip | Netflix",
+      "skip": "youtube_bot_check",
+      "words": "BRIDGERTON",
+      "hook": "She already knew"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=cZAw8qxn0ZE",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “City Of Stars”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=RiGU83Y4xcQ",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Play The Set List”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=NMmJQdRZRpg",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Callback”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=7CVfTd-_qbc",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - Another Day of Sun Scene (1/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=_8w9rOpV3gc",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - A Lovely Night Scene (5/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=b65C_muXajk",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - I'm Not Good Enough Scene (9/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=cmkZeTX5fq0",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - Someone in the Crowd Scene (2/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=DOmIpiTMs2w",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - I Ran Scene (4/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=KzjW7Uxz9Ew",
+      "channel": "Prime Video",
+      "title": "Conrad Tells Belly He Still Loves Her | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss"
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=D35O7FE7IbM",
+      "channel": "Prime Video",
+      "title": "Conrad Finds Out Jeremiah Cheated on Belly | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss"
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=k-ZbYlEdMd4",
+      "channel": "Prime Video",
+      "title": "Jeremiah and Belly Call Off The Wedding | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss"
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=K8gBwJu5X1A",
+      "channel": "Prime Video",
+      "title": "Conrad Tells Belly She’s Heartless | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss"
+    },
+    {
+      "slug": "oneday",
+      "url": "https://www.youtube.com/watch?v=3NXhUW4IAHg",
+      "channel": "Netflix",
+      "title": "One Day at a Time | Elena's Story | Netflix",
+      "skip": "youtube_bot_check",
+      "words": "ONE DAY",
+      "hook": "They kept missing it"
+    },
+    {
+      "slug": "oneday",
+      "url": "https://www.youtube.com/watch?v=P0SDm32mXyo",
+      "channel": "Netflix",
+      "title": "One Day at a Time | 360° Experience | Netflix",
+      "skip": "youtube_bot_check",
+      "words": "ONE DAY",
+      "hook": "They kept missing it"
+    },
+    {
+      "slug": "crazyrichasians",
+      "url": "https://www.youtube.com/watch?v=2odn_xMxuXM",
+      "channel": "MOVIE CLIPS",
+      "title": "Crazy Rich Asians - The New Lady of the House (Opening Scene)",
+      "skip": "youtube_bot_check",
+      "words": "CRAZY RICH ASIANS",
+      "hook": "The room went quiet"
+    },
+    {
+      "slug": "crazyrichasians",
+      "url": "https://www.youtube.com/watch?v=xqMXREVvGR8",
+      "channel": "Movieclips",
+      "title": "Crazy Rich Asians (2018) - She's Lying Scene (7/9) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "CRAZY RICH ASIANS",
+      "hook": "The room went quiet"
     }
   ],
   "needs_box_sample": [
     {
-      "slug": "hxhgonpitou",
-      "url": "https://www.youtube.com/watch?v=zA6WNlpFyvE",
-      "channel": "Netflix Anime",
-      "title": "Gon Loses It | Hunter X Hunter | Clip | Netflix Anime",
+      "slug": "gta6",
+      "url": "https://www.youtube.com/watch?v=_yl5ELcmugI",
+      "channel": "Rockstar Games",
+      "title": "Grand Theft Auto VI: Out Now",
       "skip": "youtube_bot_check",
-      "words": "HUNTER X HUNTER GON TRANSFORMATION",
-      "hook": "Why Gon sacrificed everything for revenge",
-      "official": true
-    },
-    {
-      "slug": "darkknightjoker",
-      "url": "https://www.youtube.com/watch?v=co2bs_OjLG8",
-      "channel": "DC",
-      "title": "The Dark Knight - Batman INTERROGATES The Joker | MOVIE CLIP | DC​",
-      "skip": "youtube_bot_check",
-      "words": "THE DARK KNIGHT JOKER INTERROGATION",
-      "hook": "Why Joker wanted Batman to hit him",
+      "words": "GRAND THEFT AUTO VI",
+      "hook": "The map just opened",
       "official": true
     },
     {
@@ -123,6 +194,116 @@
       "words": "BRIDGERTON",
       "hook": "She already knew",
       "official": true
+    },
+    {
+      "slug": "bridgerton",
+      "url": "https://www.youtube.com/watch?v=eKhh9VerYms",
+      "channel": "Netflix",
+      "title": "Bridgerton Season 3 | Official Clip | Netflix",
+      "skip": "youtube_bot_check",
+      "words": "BRIDGERTON",
+      "hook": "She already knew",
+      "official": true
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=cZAw8qxn0ZE",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “City Of Stars”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it",
+      "official": true
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=RiGU83Y4xcQ",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Play The Set List”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it",
+      "official": true
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=NMmJQdRZRpg",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Callback”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it",
+      "official": true
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=KzjW7Uxz9Ew",
+      "channel": "Prime Video",
+      "title": "Conrad Tells Belly He Still Loves Her | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss",
+      "official": true
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=D35O7FE7IbM",
+      "channel": "Prime Video",
+      "title": "Conrad Finds Out Jeremiah Cheated on Belly | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss",
+      "official": true
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=k-ZbYlEdMd4",
+      "channel": "Prime Video",
+      "title": "Jeremiah and Belly Call Off The Wedding | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss",
+      "official": true
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=K8gBwJu5X1A",
+      "channel": "Prime Video",
+      "title": "Conrad Tells Belly She’s Heartless | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss",
+      "official": true
+    },
+    {
+      "slug": "oneday",
+      "url": "https://www.youtube.com/watch?v=3NXhUW4IAHg",
+      "channel": "Netflix",
+      "title": "One Day at a Time | Elena's Story | Netflix",
+      "skip": "youtube_bot_check",
+      "words": "ONE DAY",
+      "hook": "They kept missing it",
+      "official": true
+    },
+    {
+      "slug": "oneday",
+      "url": "https://www.youtube.com/watch?v=P0SDm32mXyo",
+      "channel": "Netflix",
+      "title": "One Day at a Time | 360° Experience | Netflix",
+      "skip": "youtube_bot_check",
+      "words": "ONE DAY",
+      "hook": "They kept missing it",
+      "official": true
+    },
+    {
+      "slug": "crazyrichasians",
+      "url": "https://www.youtube.com/watch?v=2odn_xMxuXM",
+      "channel": "MOVIE CLIPS",
+      "title": "Crazy Rich Asians - The New Lady of the House (Opening Scene)",
+      "skip": "youtube_bot_check",
+      "words": "CRAZY RICH ASIANS",
+      "hook": "The room went quiet",
+      "official": true
     }
   ],
   "dry_run": false,
@@ -132,5 +313,5 @@
     "x_below_1080": 0,
     "x_unknown": 0
   },
-  "last_run_at": "2026-11-24 20:47 IST"
+  "last_run_at": "2026-11-25 20:25 IST"
 }
