@@ -104,6 +104,40 @@
   "fallback_asset": "princessmononoke_scene1_h264.mp4"
  },
  {
+  "id": "20261129-1600-dandadanevil",
+  "slot": "2026-11-29T16:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
+  "template": "whitebar",
+  "hook": "Evil Eye was a lonely kid",
+  "words": "DAN DA DAN",
+  "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+  "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+  "tags": [
+   "dandadanevil",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "okarun"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dandadanevil_scene1_h264.mp4"
+ },
+ {
   "id": "20261129-1830-animal",
   "slot": "2026-11-29T18:30:00+05:30",
   "pillar": "bollywood",

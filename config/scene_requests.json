@@ -1,10 +1,49 @@
 {
- "generated_at": "2026-11-25 15:58 IST",
+ "generated_at": "2026-11-25 17:49 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
  "max_clips_per_title": 3,
  "requests": [
+  {
+   "slug": "weatheringwithyou",
+   "slot": "2026-11-25T13:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261125-1330-weatheringwithyou",
+   "pillar": "romance",
+   "words": "WEATHERING WITH YOU",
+   "scene_types": [
+    "romantic",
+    "emotional",
+    "confession"
+   ],
+   "search_queries": [
+    "WEATHERING WITH YOU romantic scene",
+    "WEATHERING WITH YOU emotional scene",
+    "WEATHERING WITH YOU official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+   "missing_assets": [],
+   "on_release": [
+    "weatheringwithyou_scene1_h264.mp4"
+   ],
+   "hook": "He chose her over the sky",
+   "title": "He chose her over the sky | Weathering With You | #edit",
+   "tags": [
+    "weatheringwithyou",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "hina",
+    "hodaka"
+   ],
+   "market": "US/UK"
+  },
   {
    "slug": "haikyuudumpster",
    "slot": "2026-11-25T16:00:00+05:30",
@@ -84,198 +123,10 @@
    "market": "US/UK"
   },
   {
-   "slug": "dandadanevil",
-   "slot": "2026-11-25T20:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261125-2030-dandadanevil",
-   "pillar": "anime",
-   "words": "DAN DA DAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DAN DA DAN fight scene official clip",
-    "DAN DA DAN best scene official clip",
-    "DAN DA DAN official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
-   "missing_assets": [],
-   "on_release": [
-    "dandadanevil_scene1_h264.mp4"
-   ],
-   "hook": "Evil Eye was a lonely kid",
-   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
-   "tags": [
-    "dandadanevil",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "okarun"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "onepunchman3",
-   "slot": "2026-11-26T09:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261126-0900-onepunchman3",
-   "pillar": "anime",
-   "words": "ONE PUNCH MAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ONE PUNCH MAN fight scene official clip",
-    "ONE PUNCH MAN best scene official clip",
-    "ONE PUNCH MAN official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll India",
-    "Netflix Anime",
-    "vizmedia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Saitama ends fights in one hit",
-   "title": "Saitama ends fights in one hit | One Punch Man | #edit",
-   "tags": [
-    "onepunchman3",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "saitama"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "boyandheron",
-   "slot": "2026-11-26T11:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261126-1130-boyandheron",
-   "pillar": "anime",
-   "words": "THE BOY AND THE HERON",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "THE BOY AND THE HERON fight scene official clip",
-    "THE BOY AND THE HERON best scene official clip",
-    "THE BOY AND THE HERON official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "The heron knew his secret",
-   "title": "The heron knew his secret | The Boy and the Heron | #edit",
-   "tags": [
-    "boyandheron",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "mahito"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "arcane2",
-   "slot": "2026-11-26T13:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261126-1330-arcane2",
-   "pillar": "anime",
-   "words": "ARCANE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ARCANE fight scene official clip",
-    "ARCANE best scene official clip",
-    "ARCANE official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Still Watching Netflix"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-   "missing_assets": [],
-   "on_release": [
-    "arcane2_scene2_h264.mp4"
-   ],
-   "hook": "Jinx never wanted this war",
-   "title": "Jinx never wanted this war | Arcane | #edit",
-   "tags": [
-    "arcane2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "jinx"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "dragonballdaima",
-   "slot": "2026-11-26T16:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261126-1600-dragonballdaima",
-   "pillar": "anime",
-   "words": "DRAGON BALL DAIMA",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DRAGON BALL DAIMA fight scene official clip",
-    "DRAGON BALL DAIMA best scene official clip",
-    "DRAGON BALL DAIMA official clip"
-   ],
-   "official_channels": [
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Goku got small, not weak",
-   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
-   "tags": [
-    "dragonballdaima",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "goku"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "suzume",
-   "slot": "2026-11-26T20:30:00+05:30",
+   "slot": "2026-11-26T06:30:00+05:30",
    "for": "slot",
-   "item_id": "20261126-2030-suzume",
+   "item_id": "20261126-0630-suzume",
    "pillar": "romance",
    "words": "SUZUME",
    "scene_types": [
@@ -312,49 +163,10 @@
    "market": "US/UK"
   },
   {
-   "slug": "cyberpunkedgerunners",
-   "slot": "2026-11-27T11:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261127-1130-cyberpunkedgerunners",
-   "pillar": "anime",
-   "words": "CYBERPUNK",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "CYBERPUNK fight scene official clip",
-    "CYBERPUNK best scene official clip",
-    "CYBERPUNK official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
-   "missing_assets": [],
-   "on_release": [
-    "cyberpunkedgerunners_scene1_h264.mp4"
-   ],
-   "hook": "David paid for the legendary life",
-   "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
-   "tags": [
-    "cyberpunkedgerunners",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "david"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "mashle",
-   "slot": "2026-11-27T13:30:00+05:30",
+   "slot": "2026-11-26T11:30:00+05:30",
    "for": "slot",
-   "item_id": "20261127-1330-mashle",
+   "item_id": "20261126-1130-mashle",
    "pillar": "anime",
    "words": "MASHLE",
    "scene_types": [
@@ -387,6 +199,187 @@
     "shorts",
     "trending",
     "mash"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "jjkgojovstoji",
+   "slot": "2026-11-26T16:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261126-1600-jjkgojovstoji",
+   "pillar": "anime",
+   "words": "JUJUTSU KAISEN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "JUJUTSU KAISEN fight scene official clip",
+    "JUJUTSU KAISEN best scene official clip",
+    "JUJUTSU KAISEN official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
+   "missing_assets": [],
+   "on_release": [
+    "jjkgojovstoji_scene1_h264.mp4"
+   ],
+   "hook": "Why Toji could not break Gojo",
+   "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
+   "tags": [
+    "jujutsukaisen",
+    "gojosatoru",
+    "tojifushiguro",
+    "jjk",
+    "animeedit",
+    "anime",
+    "gojo"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "johnwick",
+   "slot": "2026-11-26T18:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261126-1830-johnwick",
+   "pillar": "hollywood",
+   "words": "JOHN WICK",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "JOHN WICK fight scene official clip",
+    "JOHN WICK best scene official clip",
+    "JOHN WICK official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=01nJH1Mek6I",
+   "missing_assets": [],
+   "on_release": [
+    "johnwick_scene1_h264.mp4"
+   ],
+   "hook": "The nightclub did not survive him",
+   "title": "The nightclub did not survive him | John Wick | #edit",
+   "tags": [
+    "johnwick",
+    "keanureeves",
+    "action",
+    "hollywood",
+    "johnwickedit",
+    "movieclips"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "taarezameenpar",
+   "slot": "2026-11-27T06:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261127-0630-taarezameenpar",
+   "pillar": "romance",
+   "words": "TAARE ZAMEEN PAR",
+   "scene_types": [
+    "romantic",
+    "emotional",
+    "confession"
+   ],
+   "search_queries": [
+    "TAARE ZAMEEN PAR romantic scene",
+    "TAARE ZAMEEN PAR emotional scene",
+    "TAARE ZAMEEN PAR official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=1oiRkOT4Z_4",
+   "missing_assets": [],
+   "on_release": [
+    "taarezameenpar_scene4_h264.mp4"
+   ],
+   "hook": "The painting said what he could not",
+   "title": "The painting said what he could not | Taare Zameen Par | #edit",
+   "tags": [
+    "taarezameenpar",
+    "ishaan",
+    "bollywood",
+    "edit",
+    "phonk",
+    "emotional",
+    "aura"
+   ],
+   "market": "IN"
+  },
+  {
+   "slug": "onepunchman3",
+   "slot": "2026-11-27T09:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261127-0900-onepunchman3",
+   "pillar": "anime",
+   "words": "ONE PUNCH MAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ONE PUNCH MAN fight scene official clip",
+    "ONE PUNCH MAN best scene official clip",
+    "ONE PUNCH MAN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll India",
+    "Netflix Anime",
+    "vizmedia"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Saitama ends fights in one hit",
+   "title": "Saitama ends fights in one hit | One Punch Man | #edit",
+   "tags": [
+    "onepunchman3",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "saitama"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "boyandheron",
+   "slot": "2026-11-27T13:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261127-1330-boyandheron",
+   "pillar": "anime",
+   "words": "THE BOY AND THE HERON",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "THE BOY AND THE HERON fight scene official clip",
+    "THE BOY AND THE HERON best scene official clip",
+    "THE BOY AND THE HERON official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "The heron knew his secret",
+   "title": "The heron knew his secret | The Boy and the Heron | #edit",
+   "tags": [
+    "boyandheron",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "mahito"
    ],
    "market": "US/UK"
   },
@@ -474,6 +467,86 @@
    "market": "US/UK"
   },
   {
+   "slug": "arcane2",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-arcane2",
+   "pillar": "anime",
+   "words": "ARCANE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ARCANE fight scene official clip",
+    "ARCANE best scene official clip",
+    "ARCANE official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Still Watching Netflix"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+   "missing_assets": [],
+   "on_release": [
+    "arcane2_scene2_h264.mp4"
+   ],
+   "hook": "Jinx never wanted this war",
+   "title": "Jinx never wanted this war | Arcane | #edit",
+   "tags": [
+    "arcane2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "jinx"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "bleachtybw",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-bleachtybw",
+   "pillar": "anime",
+   "words": "BLEACH",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "BLEACH fight scene official clip",
+    "BLEACH best scene official clip",
+    "BLEACH official clip"
+   ],
+   "official_channels": [
+    "vizmedia",
+    "『BLEACH』アニメ公式チャンネル",
+    "『BLEACH』アニメ公式チャンネル and 2 more",
+    "アニプレックス チャンネル"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=4Gti6YqvMzE",
+   "missing_assets": [],
+   "on_release": [
+    "bleachtybw_scene2_h264.mp4"
+   ],
+   "hook": "Ichigo was born for this war",
+   "title": "Ichigo was born for this war | Bleach | #edit",
+   "tags": [
+    "bleachtybw",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "ichigo"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "bluelock2",
    "slot": "9999",
    "for": "backup_pool",
@@ -551,6 +624,86 @@
    "market": "US/UK"
   },
   {
+   "slug": "cyberpunkedgerunners",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-cyberpunkedgerunners",
+   "pillar": "anime",
+   "words": "EDGERUNNERS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "EDGERUNNERS fight scene official clip",
+    "EDGERUNNERS best scene official clip",
+    "EDGERUNNERS official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+   "missing_assets": [],
+   "on_release": [
+    "cyberpunkedgerunners_scene1_h264.mp4"
+   ],
+   "hook": "David wanted to be a legend",
+   "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
+   "tags": [
+    "cyberpunkedgerunners",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dandadanevil",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dandadanevil",
+   "pillar": "anime",
+   "words": "DAN DA DAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DAN DA DAN fight scene official clip",
+    "DAN DA DAN best scene official clip",
+    "DAN DA DAN official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
+   "missing_assets": [
+    "dandadanevil_scene2_h264.mp4"
+   ],
+   "on_release": [
+    "dandadanevil_scene1_h264.mp4"
+   ],
+   "hook": "Evil Eye was a lonely kid",
+   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+   "tags": [
+    "dandadanevil",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "dbsuperhero",
    "slot": "9999",
    "for": "backup_pool",
@@ -588,6 +741,42 @@
     "shorts",
     "trending",
     "gohan"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dragonballdaima",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dragonballdaima",
+   "pillar": "anime",
+   "words": "DRAGON BALL DAIMA",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DRAGON BALL DAIMA fight scene official clip",
+    "DRAGON BALL DAIMA best scene official clip",
+    "DRAGON BALL DAIMA official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Goku got small, not weak",
+   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+   "tags": [
+    "dragonballdaima",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "goku"
    ],
    "market": "US/UK"
   },
@@ -906,42 +1095,6 @@
     "shorts",
     "trending",
     "yuta"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "jjkgojovstoji",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-jjkgojovstoji",
-   "pillar": "anime",
-   "words": "JUJUTSU KAISEN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "JUJUTSU KAISEN fight scene official clip",
-    "JUJUTSU KAISEN best scene official clip",
-    "JUJUTSU KAISEN official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
-   "missing_assets": [],
-   "on_release": [
-    "jjkgojovstoji_scene1_h264.mp4"
-   ],
-   "hook": "Why Toji could not break Gojo",
-   "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
-   "tags": [
-    "jujutsukaisen",
-    "gojosatoru",
-    "tojifushiguro",
-    "jjk",
-    "animeedit",
-    "anime",
-    "gojo"
    ],
    "market": "US/UK"
   },

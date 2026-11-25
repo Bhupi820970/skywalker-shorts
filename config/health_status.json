@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-25 15:58 IST",
-  "slots_checked": 8,
+  "at": "2026-11-25 17:49 IST",
+  "slots_checked": 9,
   "ready": [],
   "short": [
     "2026-11-25T16:00:00+05:30",
@@ -10,16 +10,16 @@
     "2026-11-26T06:30:00+05:30",
     "2026-11-26T09:00:00+05:30",
     "2026-11-26T11:30:00+05:30",
-    "2026-11-26T13:30:00+05:30"
+    "2026-11-26T13:30:00+05:30",
+    "2026-11-26T16:00:00+05:30"
   ],
   "need_render": [
     "20261125-1830-witchhatatelier",
-    "20261125-2030-dandadanevil",
     "20261125-2230-spiritedaway",
-    "20261126-0630-bluegiant",
-    "20261126-0900-onepunchman3",
-    "20261126-1130-boyandheron",
-    "20261126-1330-arcane2"
+    "20261126-0630-suzume",
+    "20261126-0900-kgf",
+    "20261126-1130-mashle",
+    "20261126-1330-dhoom2"
   ],
   "backup_pool_size": 52,
   "backup_pool_preuploaded": 52,
@@ -53,9 +53,11 @@
     "20261114-1730-kalki2898ad",
     "stock-twisters-02",
     "20261115-1830-deadpool3",
+    "20261125-1600-stock-dandadanevil",
     "20261114-1330-dune2",
     "stock-despicableme4-01",
     "stock-dune2-02",
+    "stock-weatheringwithyou-22",
     "20261116-1130-twisters",
     "stock-mortalkombat2-02",
     "20261115-2230-sololeveling",
@@ -106,6 +108,7 @@
     "stock-firforce3-01",
     "stock-tronares-04",
     "stock-weatheringwithyou-06",
+    "stock-weatheringwithyou-23",
     "stock-toystory5-01",
     "stock-hellsparadise-01",
     "20261117-1330-wickedforgood",
@@ -144,9 +147,9 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 6,
-  "stock_pending": 15,
-  "stock_used": 40,
+  "stock_ready": 0,
+  "stock_pending": 14,
+  "stock_used": 41,
   "stock_target": 30,
   "stock_need_refill": true,
   "stock_assigned": [],
