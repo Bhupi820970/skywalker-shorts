@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-25 05:35 IST",
-  "slots_checked": 8,
+  "at": "2026-11-25 06:38 IST",
+  "slots_checked": 9,
   "ready": [],
   "short": [
     "2026-11-25T06:30:00+05:30",
@@ -10,7 +10,8 @@
     "2026-11-25T16:00:00+05:30",
     "2026-11-25T18:30:00+05:30",
     "2026-11-25T20:30:00+05:30",
-    "2026-11-25T22:30:00+05:30"
+    "2026-11-25T22:30:00+05:30",
+    "2026-11-26T06:30:00+05:30"
   ],
   "need_render": [
     "20261125-1130-dandadan",
@@ -18,7 +19,8 @@
     "20261125-1600-haikyuudumpster",
     "20261125-1830-witchhatatelier",
     "20261125-2030-dandadanevil",
-    "20261125-2230-spiritedaway"
+    "20261125-2230-spiritedaway",
+    "20261126-0630-bluegiant"
   ],
   "backup_pool_size": 52,
   "backup_pool_preuploaded": 52,
@@ -42,6 +44,7 @@
     "20261119-1130-boyandheron",
     "stock-weatheringwithyou-13",
     "20261122-2030-weatheringwithyou",
+    "20261125-0630-dandadanevil",
     "stock-superman-02",
     "20261122-1330-suzume",
     "stock-kalki2898ad-02",
@@ -139,11 +142,11 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 6,
+  "stock_ready": 5,
   "stock_pending": 24,
-  "stock_used": 38,
+  "stock_used": 39,
   "stock_target": 30,
-  "stock_need_refill": false,
+  "stock_need_refill": true,
   "stock_assigned": [],
   "ok": false
 }
