@@ -1,48 +1,10 @@
 {
- "generated_at": "2026-11-26 01:38 IST",
+ "generated_at": "2026-11-26 05:13 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 101,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "spiritedaway",
-   "slot": "2026-11-25T22:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261125-2230-spiritedaway",
-   "pillar": "anime",
-   "words": "SPIRITED AWAY",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SPIRITED AWAY fight scene official clip",
-    "SPIRITED AWAY best scene official clip",
-    "SPIRITED AWAY official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll Store Australia",
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Chihiro had to forget her name",
-   "title": "Chihiro had to forget her name | Spirited Away | #edit",
-   "tags": [
-    "spiritedaway",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "chihiro"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "suzume",
    "slot": "2026-11-26T06:30:00+05:30",
@@ -1620,6 +1582,44 @@
     "trending",
     "jinwoo",
     "sungjinwoo"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "spiritedaway",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-spiritedaway",
+   "pillar": "anime",
+   "words": "SPIRITED AWAY",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "SPIRITED AWAY fight scene official clip",
+    "SPIRITED AWAY best scene official clip",
+    "SPIRITED AWAY official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll Store Australia",
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Chihiro had to forget her name",
+   "title": "Chihiro had to forget her name | Spirited Away | #edit",
+   "tags": [
+    "spiritedaway",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "chihiro"
    ],
    "market": "US/UK"
   },
