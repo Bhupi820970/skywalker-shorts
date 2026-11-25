@@ -1,14 +1,17 @@
 {
   "id": "20261125-1830-witchhatatelier",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: gemini QC reject: The hook and title refer to 'The Medicine Seller' (from the anime series Mononoke), but the footage shown is from Studio Ghibli's film Princess Mononoke (featuring Ashitaka and Lady Eboshi).",
-  "at": "2026-11-25 15:15 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45575222196",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok (title auto-swap to MONONOKE)",
+  "at": "2026-11-25 18:31 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45612563227",
   "slot": "2026-11-25T18:30:00+05:30",
-  "title": "The Medicine Seller sees everything | Mononoke | #edit",
-  "hook": "The Medicine Seller sees everything",
-  "description": "The Medicine Seller sees everything. From official Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mononoke",
+  "title": "The moment Ashitaka stopped an entire war #princessmononoke #ashitaka #ghibli",
+  "hook": "He Stopped Both Swords",
+  "description": "He Stopped Both Swords. Ashitaka steps directly into the duel between San and Lady Eboshi to physically hold back both fighters with cursed strength. From the official Mononoke trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#princessmononoke #ashitaka #ghibli #shorts #edit",
   "tags": [
+    "princessmononoke",
+    "ashitaka",
+    "ghibli",
     "mononoke",
     "anime",
     "animeedit",
@@ -32,43 +35,36 @@
     ]
   },
   "gemini_meta": true,
-  "hook_source": "queue",
-  "hook_style": null,
-  "title_candidates": null,
+  "hook_source": "gemini",
+  "hook_style": "savage statement",
+  "title_candidates": [
+    {
+      "title": "The moment Ashitaka stopped an entire war",
+      "click_score": 95.0
+    },
+    {
+      "title": "Lady Eboshi did not expect Ashitaka to do this",
+      "click_score": 91.0
+    },
+    {
+      "title": "San was not ready for Ashitaka's real strength",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watching Ashitaka step between them hits different",
+      "click_score": 85.0
+    },
+    {
+      "title": "Nobody in Iron Town expected him to move",
+      "click_score": 82.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 12.9,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 30.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 11.7,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 11.5,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 7.7,
+      "s": 11.1,
       "ok": true
     },
     {
@@ -81,103 +77,106 @@
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key2",
-      "s": 10.8,
+      "s": 7.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 11.0,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 37.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 16.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 9.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 8.3,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 14.3,
       "ok": true
     },
     {
       "purpose": "hook",
       "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 6.0,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 7.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 4.4,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 7.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 23.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 6.4,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 4.9,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 16.0,
+      "key": "key5",
+      "s": 7.8,
       "ok": true
     },
     {
       "purpose": "qc",
       "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 37.7,
+      "key": "key5",
+      "s": 39.1,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 6.0,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 39.0,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "s": 17.5,
+      "key": "key5",
+      "s": 24.5,
       "ok": true
     }
   ],
@@ -191,74 +190,235 @@
     {
       "from": "witchhatatelier",
       "from_words": "WITCH HAT ATELIER",
-      "to": "kaiju8s2",
-      "to_words": "KAIJU NO. 8",
-      "reason": "pipeline/QA failed (exit 1): only 8.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+      "to": "kgf",
+      "to_words": "KGF CHAPTER 2",
+      "reason": "pipeline/QA failed (exit 1): only 9.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
     },
     {
-      "from": "kaiju8s2",
-      "from_words": "KAIJU NO. 8",
+      "from": "kgf",
+      "from_words": "KGF CHAPTER 2",
       "to": "mononoke",
       "to_words": "MONONOKE",
-      "reason": "pipeline/QA failed (exit 1): only 14.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+      "reason": "pipeline/QA failed (exit 1): only 9.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 8.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
     }
   ],
-  "swapped_from": "kaiju8s2",
+  "swapped_from": "kgf",
   "swapped_to": "mononoke",
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 8.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "error": "pipeline/QA failed (exit 1): only 9.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene2_h264.mp4",
-      "music": "pr_gl6beebcuu.mp3",
+      "music": "pr_tacnqyvpl1s.mp3",
       "qc_status": null
     },
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 14.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene2_h264.mp4",
-      "music": "pr_montagemodorijapanesefunk.mp3",
+      "error": "pipeline/QA failed (exit 1): only 9.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 8.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene2_h264.mp4",
+      "music": "pr_tacnqyvpl1s.mp3",
       "qc_status": null
     },
     {
       "attempt": 1,
-      "ok": false,
-      "error": "gemini QC reject: The hook and title refer to 'The Medicine Seller' (from the anime series Mononoke), but the footage shown is from Studio Ghibli's film Princess Mononoke (featuring Ashitaka and Lady Eboshi).",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene2_h264.mp4",
-      "music": "pr_montagemfinal.mp3",
-      "qc_status": "fail"
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene1_h264.mp4",
+      "music": "pr_montagemguerreiroslowed.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "gemini QC reject: The hook and title refer to 'The Medicine Seller' (from the anime series Mononoke), but the footage shown is from Studio Ghibli's film Princess Mononoke (featuring Ashitaka and Lady Eboshi).",
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261125-1830-witchhatatelier",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261125-1830-witchhatatelier/render-20261125-1830-witchhatatelier.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 16.834,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene1_h264.mp4",
+  "music": "pr_montagemguerreiroslowed.mp3",
+  "music_credit": "Song: Avenxir - MONTAGEM GUERREIRO (Slowed)\nOfficial link: https://www.youtube.com/watch?v=vJA3bHNjX0M",
+  "description_final": "He Stopped Both Swords. Ashitaka steps directly into the duel between San and Lady Eboshi to physically hold back both fighters with cursed strength. From the official Mononoke trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#princessmononoke #ashitaka #ghibli #shorts #edit\n\nMusic:\nSong: Avenxir - MONTAGEM GUERREIRO (Slowed)\nOfficial link: https://www.youtube.com/watch?v=vJA3bHNjX0M",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261125-1830-witchhatatelier/render-20261125-1830-witchhatatelier-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 26.133333,
+      "audio": true
+    },
+    "lufs": -14.1,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -17.2,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 54,
+      "masked_rows": [
+        [
+          0.274,
+          0.3448
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 526,
+    "bar_h": 136,
+    "plate_y": 662,
+    "video_y": 662,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 594,
+    "region_h": 1784,
+    "block_h": 1920,
+    "drop_t": 16.834,
+    "energy": true,
+    "caption_y": 1284,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 60,
+      "src_start": 120.375,
+      "dur": 1.5,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 62,
+      "src_start": 128.875,
+      "dur": 2.169,
+      "gemini_score": 8.6,
+      "reason": "gemini score 8.6"
+    },
+    {
+      "id": 64,
+      "src_start": 144.833,
+      "dur": 1.649,
+      "gemini_score": 9.6,
+      "reason": "gemini score 9.6"
+    },
+    {
+      "id": 61,
+      "src_start": 124.875,
+      "dur": 1.718,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
+    },
+    {
+      "id": 58,
+      "src_start": 115.333,
+      "dur": 2.461,
+      "gemini_score": 7.1,
+      "reason": "gemini score 7.1"
+    },
+    {
+      "id": 49,
+      "src_start": 86.417,
+      "dur": 2.252,
+      "gemini_score": 8.8,
+      "reason": "gemini score 8.8"
+    },
+    {
+      "id": 47,
+      "src_start": 80.75,
+      "dur": 2.02,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 43,
+      "src_start": 72.792,
+      "dur": 3.065,
+      "gemini_score": 6.2,
+      "reason": "gemini score 6.2"
+    },
+    {
+      "id": 63,
+      "src_start": 140.792,
+      "dur": 1.5,
+      "gemini_score": 6.4,
+      "reason": "gemini score 6.4"
+    },
+    {
+      "id": 53,
+      "src_start": 95.583,
+      "dur": 1.565,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
+    },
+    {
+      "id": 67,
+      "src_start": 151.958,
+      "dur": 0.918,
+      "gemini_score": 7.4,
+      "reason": "gemini score 7.4"
+    },
+    {
+      "id": 51,
+      "src_start": 92.292,
+      "dur": 1.127,
+      "gemini_score": 7.8,
+      "reason": "gemini score 7.8"
+    }
+  ],
+  "qc_status": "pass",
   "source_attempts": [
     {
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene2_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 8.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-25 13:57 IST"
+      "error": "pipeline/QA failed (exit 1): only 9.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-25 17:57 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene1_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3840, 2160], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.774, 'edge_corr_median': 0.62, 'shift_px_median': 4.11, 'pairs': 6}",
-      "at": "2026-11-25 14:24 IST"
-    },
-    {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kaiju8s2_scene2_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 14.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-25 14:34 IST"
-    },
-    {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene1_h264.mp4",
-      "error": "gemini QC reject: Hook text and title reference 'The Medicine Seller', but the footage is from Studio Ghibli's Princess Mononoke featuring Ashitaka and San.",
-      "at": "2026-11-25 14:59 IST"
-    },
-    {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene2_h264.mp4",
-      "error": "gemini QC reject: The hook and title refer to 'The Medicine Seller' (from the anime series Mononoke), but the footage shown is from Studio Ghibli's film Princess Mononoke (featuring Ashitaka and Lady Eboshi).",
-      "at": "2026-11-25 15:15 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/witchhatatelier_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 9.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 8.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-25 18:04 IST"
     }
   ]
 }
