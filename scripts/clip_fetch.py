@@ -32,6 +32,13 @@ SORT = "res:2160,vcodec:vp9,acodec:m4a"  # highest res <=4K; avoid AV1 when VP9/
 TRAILER = re.compile(r"\b(trailer|teaser|promo|tv spot)\b", re.I)
 JUNK = re.compile(r"(#shorts|\bedit\b|amv|status|whatsapp|4k\s*edit|compilation|scene pack|clip pack|"
                   r"hindi dubbed|1080p60 fan|slowed|reverb|lyrics|reaction|explained|recap|review)", re.I)
+# Never fetch sexual / fan-service content or full episodes (piracy).
+NSFW = re.compile(r"(nsfw|hentai|ecchi|fan ?service|lewd|sexy|nude|naked|bikini|lingerie|18\+|uncensored|erotic|"
+                  r"full movie|full episode|torrent|leaked)", re.I)
+ENGLISH = re.compile(r"(english|\beng\b|\bdub\b|dubbed)", re.I)
+RATE_LIMIT = re.compile(r"(HTTP Error 429|Too Many Requests|confirm you.re not a bot|rate.?limit)", re.I)
+_RL = {"hits": 0}
+RL_MAX = int(os.environ.get("CLIP_RATE_LIMIT_MAX", "3"))
 
 
 def log(msg: str) -> None:
@@ -139,7 +146,7 @@ def search(req: dict, youtube: bool) -> list[dict]:
                                                      "official_channels": req.get("official_channels") or []},
                                                     limit=4):
             t = e.get("title") or ""
-            if not e.get("url") or e["url"] in seen or TRAILER.search(t) or JUNK.search(t):
+            if not e.get("url") or e["url"] in seen or TRAILER.search(t) or JUNK.search(t) or NSFW.search(t):
                 continue
             seen.add(e["url"])
             found.append({"id": e.get("id") or f"x:{e['url']}", "url": e["url"], "title": t[:200],
@@ -162,7 +169,8 @@ def search(req: dict, youtube: bool) -> list[dict]:
                 if not vid or vid in seen:
                     continue
                 seen.add(vid)
-                if sourcing._BAD_TITLE.search(title) or sourcing._WATERMARK_HINT.search(title) or JUNK.search(title):
+                if sourcing._BAD_TITLE.search(title) or sourcing._WATERMARK_HINT.search(title) or JUNK.search(title) \
+                        or NSFW.search(title):
                     continue
                 if TRAILER.search(title) or sourcing.is_trailer_source(title):
                     continue  # never download trailers/teasers
@@ -179,7 +187,9 @@ def search(req: dict, youtube: bool) -> list[dict]:
                 found.append({"id": f"{pfx[:2]}:{vid}", "url": url, "title": title, "kind": "scene",
                               "channel": ch})
     head, rest = found[:n_first], found[n_first:]
-    rest.sort(key=lambda c: sourcing.channel_preference(c.get("channel") or ""))
+    eng = bool(req.get("prefer_english"))
+    rest.sort(key=lambda c: (sourcing.channel_preference(c.get("channel") or ""),
+                             0 if not eng or ENGLISH.search(c.get("title") or "") else 1))
     return head + rest
 
 
@@ -224,7 +234,32 @@ def download(url: str, dest: Path) -> bool:
            "--merge-output-format", "mp4", "-o", str(dest), "--no-warnings", "--no-part",
            *browser_cookie_args(), url]
     r = run(cmd, timeout=900)
-    return r.returncode == 0 and dest.exists() and dest.stat().st_size > 1_000_000
+    ok = r.returncode == 0 and dest.exists() and dest.stat().st_size > 1_000_000
+    if not ok and RATE_LIMIT.search((r.stderr or "") + (r.stdout or "")):
+        _RL["hits"] += 1  # YouTube/X throttled this IP: stop hammering (it only gets worse)
+    elif ok:
+        _RL["hits"] = 0
+    return ok
+
+
+def rate_limited() -> bool:
+    return _RL["hits"] >= RL_MAX
+
+
+def fresh_scene_count(slug: str, have: set[str], blocked: set[str] | None) -> int:
+    """Scene clips of this title on the release that were never posted (posted_history)."""
+    mine = [x for x in have if x.startswith(f"{slug}_scene")]
+    if blocked is None:
+        return len(mine)
+    return sum(1 for x in mine if x.lower() not in blocked)
+
+
+def posted_blocked() -> set[str] | None:
+    try:
+        import posted_history
+        return {c.lower() for c in posted_history.blocked_clips(REPO, reserved=True)}
+    except Exception:
+        return None
 
 
 def release_assets() -> set[str]:
@@ -265,6 +300,7 @@ def apply_records(records: list[dict], who: str, requests_done: list[str]) -> No
             t.setdefault("scene_assets", []).append(rec["asset"])
         t["content_kind"] = "best scene"
     CATALOG.write_text(json.dumps(cat, indent=2, ensure_ascii=False) + "\n")
+    register_pool([r for r in records if (r.get("req") or {}).get("refill")], by)
     st = json.loads(STATUS.read_text()) if STATUS.exists() else {}
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     s = st.setdefault(who, {})
@@ -277,6 +313,45 @@ def apply_records(records: list[dict], who: str, requests_done: list[str]) -> No
     STATUS.write_text(json.dumps(st, indent=1, ensure_ascii=False) + "\n")
 
 
+POOL = REPO / "config" / "backup_pool.json"
+REL_URL = f"https://github.com/{GH_REPO}/releases/download/sources/"
+
+
+def register_pool(records: list[dict], topics: dict) -> None:
+    """Refill clips also feed backup stock: add/extend the backup-<slug> pool topic."""
+    if not records:
+        return
+    try:
+        pool = json.loads(POOL.read_text())
+    except Exception:
+        pool = {"items": []}
+    items = pool.setdefault("items", [])
+    by = {b.get("id"): b for b in items}
+    for rec in records:
+        asset = rec.get("asset") or ""
+        if not asset or sourcing.is_trailer_source(asset):
+            continue
+        slug = rec["req"]["slug"]
+        t = topics.get(slug) or {}
+        b = by.get(f"backup-{slug}")
+        if b is None:
+            b = {"id": f"backup-{slug}", "pillar": t.get("pillar") or rec["req"].get("pillar") or "anime",
+                 "source_url": rec.get("url") or t.get("source_url") or "", "fallback_mp4": [], "template": "whitebar",
+                 "hook": t.get("hook") or rec["req"].get("hook") or "", "words": t.get("words") or rec["req"].get("words") or slug.upper(),
+                 "title": t.get("title") or rec["req"].get("title") or "", "description": t.get("description") or "",
+                 "tags": t.get("tags") or [slug, "edit", "shorts"], "target_dur": 26,
+                 "market": t.get("market") or "US/UK", "fallback_release": "sources", "fallback_asset": asset,
+                 "content_kind": "best scene", "scene_assets": [], "added_by": "footage_refill"}
+            items.append(b)
+            by[b["id"]] = b
+        if asset not in (b.get("scene_assets") or []):
+            b.setdefault("scene_assets", []).append(asset)
+        url = REL_URL + asset
+        if url not in (b.get("fallback_mp4") or []):
+            b.setdefault("fallback_mp4", []).append(url)
+    POOL.write_text(json.dumps(pool, indent=2, ensure_ascii=False) + "\n")
+
+
 def commit(records, who, done, push: bool) -> None:
     if not push:
         apply_records(records, who, done)
@@ -285,7 +360,7 @@ def commit(records, who, done, push: bool) -> None:
         run(["git", "fetch", "-q", "origin", "main"], timeout=120)
         run(["git", "reset", "-q", "--hard", "origin/main"], timeout=60)
         apply_records(records, who, done)
-        run(["git", "add", str(CATALOG), str(STATUS)])
+        run(["git", "add", str(CATALOG), str(STATUS), str(POOL)])
         msg = f"clips({who}): +{len(records)} official clip(s) " + ",".join(sorted({r['req']['slug'] for r in records}))[:120]
         c = run(["git", "-c", "user.name=skywalker-clips", "-c", "user.email=actions@users.noreply.github.com",
                  "commit", "-q", "-m", msg])
@@ -322,14 +397,19 @@ def main() -> int:
     st = json.loads(STATUS.read_text()) if STATUS.exists() else {}
     done_ids = set(st.get("done_ids") or [])
     have = retry(release_assets, 3, 5) or set()
+    blocked = posted_blocked()
     WORK.mkdir(parents=True, exist_ok=True)
     total, fails = 0, 0
     for req in reqs:
         slug = req.get("slug")
         if not slug:
             continue
-        if sum(1 for x in have if x.startswith(f"{slug}_scene")) >= per:
-            log(f"{slug}: already has {per}+ scene clips on the release; request done")
+        if rate_limited():
+            log(f"{slug}: source rate-limited ({_RL['hits']} throttled downloads); stopping this run")
+            break
+        # Count only UNPOSTED clips: a title whose clips were all posted needs new scenes.
+        if fresh_scene_count(slug, have, blocked) >= per:
+            log(f"{slug}: already has {per}+ unposted scene clips on the release; request done")
             continue
         try:
             cands = retry(lambda: search(req, not a.no_youtube) or None, 2, 10) or []
@@ -339,7 +419,7 @@ def main() -> int:
             continue
         got, records, scenes = 0, [], 0
         for c in cands:
-            if got >= per:
+            if got >= per or rate_limited():
                 break
             if c["id"] in done_ids or is_denied_clip(c.get("id") or "", c.get("url") or ""):
                 continue

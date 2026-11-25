@@ -181,7 +181,8 @@ def sync_code() -> str:
         return "up to date"
     git("reset", "-q", "--hard", "origin/main")
     files = ["scripts/box_service.py", "scripts/clip_fetch.py", "sourcing.py", "music_lib.py",
-             "overlay_guard.py", "scripts/ingest_music.py", "scripts/submit_link.py", "gemini.py"]
+             "overlay_guard.py", "scripts/ingest_music.py", "scripts/submit_link.py", "gemini.py",
+             "posted_history.py", "title_swap.py"]
     bad = [f for f in files if (REPO / f).exists() and run([sys.executable, "-m", "py_compile", f]).returncode != 0]
     if bad:
         git("reset", "-q", "--hard", old)
@@ -624,6 +625,22 @@ def record_status(done: list[dict]) -> None:
     commit_push(["config/clip_fetch_status.json"], f"clips(box): restored {len(done)} official scene clip(s)")
 
 
+def step_refill(st: dict) -> None:
+    """Footage refill (config/refill_requests.json from refill.yml): fresh scenes of winning titles.
+    clip_fetch stops early when YouTube/X throttle this box, so a 429 never turns into a hammering loop."""
+    p = REPO / "config" / "refill_requests.json"
+    try:
+        reqs = json.loads(p.read_text()).get("requests") or []
+    except Exception:
+        reqs = []
+    if not reqs:
+        return
+    env = dict(os.environ, CLIP_WORK=str(WORK / "refill"), CLIP_REQUESTS_FILE=str(p))
+    r = run([sys.executable, "scripts/clip_fetch.py", "--per-title", "4"], timeout=3 * 3600, env=env)
+    for line in (r.stdout or "").splitlines()[-30:]:
+        log("refill> " + line[-200:])
+
+
 def step_requests(st: dict) -> None:
     """Gemini's daily clip requests (config/clip_requests.json from clips.yml) -> YouTube/X on the box."""
     env = dict(os.environ, CLIP_WORK=str(WORK / "requests"))
@@ -872,6 +889,7 @@ def cycle(only: str = "") -> int:
         ("links", 0, lambda: step_links(st)),
         ("clips", 1200, lambda: log(f"clips: {step_clips(st, tick)}")),
         ("music", 3600, lambda: log(f"music: {step_music(st, tick)}")),
+        ("refill", 2 * 3600, lambda: step_refill(st)),
         ("requests", 6 * 3600, lambda: step_requests(st)),
     ]
     for name, every, fn in steps:

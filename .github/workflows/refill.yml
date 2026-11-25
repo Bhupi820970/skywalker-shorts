@@ -1,0 +1,104 @@
+name: refill
+
+# Automatic footage refill (no human in the loop). Every 6h:
+#  1. count UNPOSTED clean official scene clips (posted_history-aware) vs ~7 days of slots + 10 backup topics;
+#  2. below that, ask Gemini (1-2 calls, own budget; seeds of our winning titles on 429/timeout) for
+#     more scenes of what wins (love anime, Arcane, Cyberpunk, JJK...) and trending titles;
+#  3. GitHub fetches what it can (official X posts / non-YouTube hosts) with the same gates as
+#     clip_fetch (official channels only, no trailers, >=1080p, logo/overlay gate, no NSFW);
+#     the box service fetches the YouTube ones from config/refill_requests.json every 2h;
+#  4. new clips get new scene ids (<slug>_sceneN) and land in topic_catalog + backup_pool, which
+#     fill_queue / backup_stock (health.yml) use on their next pass.
+# Never renders, never publishes, no push trigger, own concurrency group: cannot cancel a live render.
+on:
+  schedule:
+    - cron: "41 0,6,12,18 * * *"   # 06:11, 12:11, 18:11, 00:11 IST (off render :20/:50 and health crons)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Plan + fetch even when fresh footage is above the threshold"
+        type: boolean
+        default: false
+      max_titles:
+        description: "Max titles to request this run"
+        required: false
+        default: "12"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: footage-refill
+  cancel-in-progress: false
+
+jobs:
+  refill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ffmpeg + yt-dlp
+        timeout-minutes: 8
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q -U "yt-dlp[default]" curl_cffi numpy
+      - name: Plan (inventory + Gemini / seed requests)
+        id: plan
+        timeout-minutes: 6
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+          GEMINI_API_KEY_6: ${{ secrets.GEMINI_API_KEY_6 }}
+          GEMINI_API_KEY_7: ${{ secrets.GEMINI_API_KEY_7 }}
+          GEMINI_MAX_CALLS: "2"
+          GEMINI_MAX_HTTP: "8"
+          GEMINI_CALL_MAX_HTTP: "6"
+          SKY_GEMINI_BUDGET_FILE: /tmp/gemini_refill_budget.json
+          FORCE: ${{ github.event.inputs.force == 'true' && '1' || '0' }}
+          MAX_TITLES: ${{ github.event.inputs.max_titles || '12' }}
+        run: |
+          ARGS=(plan --max-titles "$MAX_TITLES")
+          [ "$FORCE" = "1" ] && ARGS+=(--force)
+          timeout 300 python3 scripts/footage_refill.py "${ARGS[@]}"
+      - name: Commit plan (box picks it up within 2h)
+        if: always()
+        run: |
+          git config user.name "skywalker-refill"
+          git config user.email "actions@users.noreply.github.com"
+          git add config/refill_requests.json config/refill_status.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "refill: plan $(date -u +%FT%H%MZ)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep $((i*7)); done
+      - name: Fetch official clips on GitHub (X / non-YouTube; YouTube is left to the box)
+        if: steps.plan.outputs.need == '1'
+        timeout-minutes: 45
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CLIP_REQUESTS_FILE: config/refill_requests.json
+          CLIP_WORK: /tmp/sky_refill
+          CLIP_RATE_LIMIT_MAX: "3"
+        run: |
+          timeout 2580 python3 scripts/clip_fetch.py --no-youtube --per-title 3 || echo "::warning::refill fetch ended early (box will retry)"
+      - name: Summary
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json
+          try:
+              s = json.load(open("config/refill_status.json"))
+          except Exception:
+              s = {}
+          print(f"fresh clips {s.get('fresh_clips')} (~{s.get('fresh_videos')} videos) vs threshold {s.get('threshold_videos')}; "
+                f"deficit {s.get('deficit_videos')}; source {s.get('source')}; requests {s.get('requests')}")
+          PY
