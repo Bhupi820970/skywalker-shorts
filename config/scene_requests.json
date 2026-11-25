@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25 10:11 IST",
+ "generated_at": "2026-11-25 13:49 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
@@ -306,6 +306,85 @@
    "market": "US/UK"
   },
   {
+   "slug": "cyberpunkedgerunners",
+   "slot": "2026-11-27T11:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261127-1130-cyberpunkedgerunners",
+   "pillar": "anime",
+   "words": "CYBERPUNK",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "CYBERPUNK fight scene official clip",
+    "CYBERPUNK best scene official clip",
+    "CYBERPUNK official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+   "missing_assets": [],
+   "on_release": [
+    "cyberpunkedgerunners_scene1_h264.mp4"
+   ],
+   "hook": "David paid for the legendary life",
+   "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
+   "tags": [
+    "cyberpunkedgerunners",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "mashle",
+   "slot": "2026-11-27T13:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261127-1330-mashle",
+   "pillar": "anime",
+   "words": "MASHLE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "MASHLE fight scene official clip",
+    "MASHLE best scene official clip",
+    "MASHLE official clip"
+   ],
+   "official_channels": [
+    "Aniplex USA",
+    "Aniplex USA and Sony",
+    "Crunchyroll"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
+   "missing_assets": [],
+   "on_release": [
+    "mashle_scene1_h264.mp4"
+   ],
+   "hook": "Mash breaks magic with muscles",
+   "title": "Mash breaks magic with muscles | Mashle | #edit",
+   "tags": [
+    "mashle",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "mash"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "aotfinal",
    "slot": "9999",
    "for": "backup_pool",
@@ -462,45 +541,6 @@
     "animeedit",
     "anime",
     "football"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "cyberpunkedgerunners",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-cyberpunkedgerunners",
-   "pillar": "anime",
-   "words": "EDGERUNNERS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "EDGERUNNERS fight scene official clip",
-    "EDGERUNNERS best scene official clip",
-    "EDGERUNNERS official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
-   "missing_assets": [],
-   "on_release": [
-    "cyberpunkedgerunners_scene1_h264.mp4"
-   ],
-   "hook": "David wanted to be a legend",
-   "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
-   "tags": [
-    "cyberpunkedgerunners",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "david"
    ],
    "market": "US/UK"
   },
@@ -1050,6 +1090,7 @@
     "kaiju8s2_scene3_h264.mp4"
    ],
    "on_release": [
+    "kaiju8s2_scene1_h264.mp4",
     "kaiju8s2_scene2_h264.mp4"
    ],
    "hook": "Kafka cannot control it anymore",
@@ -1100,49 +1141,6 @@
     "shorts",
     "trending",
     "axel"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "mashle",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-mashle",
-   "pillar": "anime",
-   "words": "MASHLE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "MASHLE fight scene official clip",
-    "MASHLE best scene official clip",
-    "MASHLE official clip"
-   ],
-   "official_channels": [
-    "Aniplex USA",
-    "Aniplex USA and Sony",
-    "Crunchyroll"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
-   "missing_assets": [
-    "mashle_scene2_h264.mp4",
-    "mashle_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "mashle_scene1_h264.mp4"
-   ],
-   "hook": "Mash breaks magic with muscles",
-   "title": "Mash breaks magic with muscles | Mashle | #edit",
-   "tags": [
-    "mashle",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "mash"
    ],
    "market": "US/UK"
   },
