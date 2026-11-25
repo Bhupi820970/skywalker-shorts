@@ -675,6 +675,9 @@ def _entry_status(ent: dict, root: Path, now: datetime) -> str:
             dt = datetime.strptime(at.replace(" IST", ""), "%Y-%m-%d %H:%M").replace(tzinfo=IST)
             if now - dt < timedelta(hours=PENDING_HOURS):
                 return "pending"
+            # Timed-out pending with no result must not stay "pending".
+            # Otherwise ready+pending sits at the target and refill never runs.
+            return "failed"
         except Exception:
             return "pending"
     return ent.get("status") or "pending"

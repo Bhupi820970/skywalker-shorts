@@ -580,3 +580,69 @@ def test_plan_prioritizes_upcoming_over_stale_past(tmp_path, monkeypatch, capsys
     assert "20261120-1330-" in text
     assert "20261119-1730-" not in text
     assert "20261119-2230-" not in text
+
+
+def test_stale_pending_does_not_block_refill(tmp_path, monkeypatch):
+    """Pending older than PENDING_HOURS must not count toward the target."""
+    root = _root(tmp_path, monkeypatch)
+    now = datetime(2026, 11, 25, 11, 0, tzinfo=IST)
+    items = []
+    for i in range(5):
+        iid = f"stock-zootopia2-{i+1:02d}"
+        _write(root / "results" / f"{iid}.json", _ready_result(iid, stock_topic="backup-zootopia2"))
+        items.append({"id": iid, "slug": "zootopia2", "topic_id": "backup-zootopia2",
+                      "status": "ready", "asset_url": _ready_result(iid)["asset_url"]})
+    # 25 stale pending used to make ready+pending look like the target of 30.
+    for i in range(25):
+        items.append({
+            "id": f"stock-superman-{i+1:02d}",
+            "slug": "superman",
+            "topic_id": "backup-superman",
+            "status": "pending",
+            "queued_at": "2026-11-16 02:24 IST",
+        })
+    # One still in-flight pending should keep counting.
+    items.append({
+        "id": "stock-kalki2898ad-01",
+        "slug": "kalki2898ad",
+        "topic_id": "backup-kalki2898ad",
+        "status": "pending",
+        "queued_at": "2026-11-25 10:11 IST",
+    })
+    _write(root / "config" / "backup_stock.json", {
+        "target": 30, "refill_at": 5, "max_refill_per_run": 2, "items": items
+    })
+    summary = backup_stock.status_summary(root, now)
+    assert summary["ready"] == 5
+    assert summary["pending"] == 1
+    assert summary["need_refill"] is True
+    ids = backup_stock.next_refill_ids(root, limit=2, now=now)
+    assert len(ids) == 2
+    assert "stock-superman-01" not in ids
+    assert "stock-kalki2898ad-01" not in ids
+
+
+def test_fresh_pending_still_counts_toward_target(tmp_path, monkeypatch):
+    root = _root(tmp_path, monkeypatch)
+    now = datetime(2026, 11, 25, 11, 0, tzinfo=IST)
+    items = []
+    for i in range(5):
+        iid = f"stock-zootopia2-{i+1:02d}"
+        _write(root / "results" / f"{iid}.json", _ready_result(iid, stock_topic="backup-zootopia2"))
+        items.append({"id": iid, "slug": "zootopia2", "topic_id": "backup-zootopia2",
+                      "status": "ready", "asset_url": _ready_result(iid)["asset_url"]})
+    for i in range(25):
+        items.append({
+            "id": f"stock-superman-{i+1:02d}",
+            "slug": "superman",
+            "topic_id": "backup-superman",
+            "status": "pending",
+            "queued_at": "2026-11-25 10:00 IST",
+        })
+    _write(root / "config" / "backup_stock.json", {
+        "target": 30, "refill_at": 5, "max_refill_per_run": 2, "items": items
+    })
+    summary = backup_stock.status_summary(root, now)
+    assert summary["pending"] == 25
+    assert summary["need_refill"] is False
+    assert backup_stock.next_refill_ids(root, limit=2, now=now) == []
