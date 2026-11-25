@@ -1,0 +1,294 @@
+{
+  "id": "20261125-1600-haikyuudumpster",
+  "status": "retry_queued",
+  "detail": "all 4 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering; only 14.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-25 10:09 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45535046278",
+  "slot": "2026-11-25T16:00:00+05:30",
+  "title": "Ichigo was born for this war | Bleach | #edit",
+  "hook": "Ichigo was born for this war",
+  "description": "Ichigo was born for this war. From official Bleach clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bleachtybw",
+  "tags": [
+    "bleachtybw",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "ichigo"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 8.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 10.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 12.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 6.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 9.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 4.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 4.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 3.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 8.7,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 4.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 4.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 26.5,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 4.0,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "BLEACH",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "haikyuudumpster",
+      "from_words": "HAIKYU",
+      "to": "lazarus",
+      "to_words": "LAZARUS",
+      "reason": "download failed: quarantined 1 clip(s) that keep failing the logo/scene filter: haikyuudumpster_scene1_h264.mp4"
+    },
+    {
+      "from": "lazarus",
+      "from_words": "LAZARUS",
+      "to": "kgf",
+      "to_words": "KGF CHAPTER 2",
+      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
+    },
+    {
+      "from": "kgf",
+      "from_words": "KGF CHAPTER 2",
+      "to": "bleachtybw",
+      "to_words": "BLEACH",
+      "reason": "download failed: quarantined 1 clip(s) that keep failing the logo/scene filter: haikyuudumpster_scene1_h264.mp4"
+    }
+  ],
+  "swapped_from": "kgf",
+  "swapped_to": "bleachtybw",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: quarantined 1 clip(s) that keep failing the logo/scene filter: haikyuudumpster_scene1_h264.mp4",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+      "music": "pr_batidaofunksuperslowedzxkaixrezcazexmcka.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: quarantined 1 clip(s) that keep failing the logo/scene filter: haikyuudumpster_scene1_h264.mp4",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering; only 14.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachtybw_scene2_h264.mp4",
+      "music": "pr_gl6beebcuu.mp3",
+      "qc_status": null
+    }
+  ],
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering; only 14.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-25 08:38 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/lazarus_scene3_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-25 08:58 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [2880, 2160], 'letterbox_free': [1080, 810], 'plate': [1080, 810], 'letterbox_rows_black': True, 'frame_corr_median': 0.874, 'edge_corr_median': 0.864, 'shift_px_median': 5.86, 'pairs': 6}; QA no_shake failed: {'ok': False, 'jit",
+      "at": "2026-11-25 09:32 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachtybw_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering; only 14.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-25 10:09 IST"
+    }
+  ]
+}
