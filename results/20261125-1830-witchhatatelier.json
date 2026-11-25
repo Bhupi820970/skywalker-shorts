@@ -432,5 +432,6 @@
   "buffer_post_id": "yt:FcrJeua9yDk",
   "buffer_status": "sent",
   "buffer_due_at": "2026-11-25T15:02:35.000Z",
-  "buffer_posted_at": "2026-11-25T15:02:35.000Z"
+  "buffer_posted_at": "2026-11-25T15:02:35.000Z",
+  "yt_checked_public": true
 }
