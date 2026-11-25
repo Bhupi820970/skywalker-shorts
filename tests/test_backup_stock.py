@@ -617,7 +617,9 @@ def test_stale_pending_does_not_block_refill(tmp_path, monkeypatch):
     assert summary["pending"] == 1
     assert summary["need_refill"] is True
     ids = backup_stock.next_refill_ids(root, limit=2, now=now)
-    assert len(ids) == 2
+    # Stale superman pending no longer counts, so superman refills. Zootopia (5 ready)
+    # and kalki (1 in flight) already hold a copy of their scenes: one per topic.
+    assert ids == ["stock-superman-26"]
     assert "stock-superman-01" not in ids
     assert "stock-kalki2898ad-01" not in ids
 

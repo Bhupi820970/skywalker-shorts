@@ -155,6 +155,12 @@ def main():
         # backup-<slug>@YYYYMMDD-HHMM and stock-<slug>-<nn> are not queue ids;
         # render_item expands both.
         pick = [i for i in force_ids if i in items or "@" in i or i.startswith("stock-")]
+        # A queue item replaced/retired after the dispatch (e.g. it would repeat footage
+        # already on the channel) must not render from the stale id list.
+        gone = [i for i in pick if (items.get(i) or {}).get("status") in ("replaced", "retired", "cancelled")]
+        if gone:
+            print(f"skip replaced/retired ids: {gone}", file=sys.stderr)
+        pick = [i for i in pick if i not in gone]
     elif backups_only:
         pass  # only the backup rule below should add ids
     else:

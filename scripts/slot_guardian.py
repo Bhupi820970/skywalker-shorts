@@ -143,6 +143,10 @@ def pick_evergreen(root: Path, day: str, now: datetime,
         if src and not backup_stock.must_not_publish(src):
             return ent
     titles, assets = posted_keys(root, posts)
+    import posted_history
+    rows = backup_stock.iter_results(root)
+    hist = posted_history.index(root, rows)
+    held = posted_history.reserved_clips([r for r in rows if r.get("assigned_from_stock")])
     # Broader last resort: any unused ready stock, even same-day topic,
     # as long as the video itself has never been posted.
     for e in backup_stock.ready_entries(man):
@@ -158,6 +162,9 @@ def pick_evergreen(root: Path, day: str, now: datetime,
         if title and title in titles:
             continue
         if url and url in assets:
+            continue
+        # Never a source scene / video already on the channel or waiting in another slot.
+        if posted_history.conflict(src, hist) or set(posted_history.result_clips(src)) & held:
             continue
         try:
             import sourcing

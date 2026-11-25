@@ -22,6 +22,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 sys.path.insert(0, str(REPO / "scripts"))
 import backup_stock  # noqa: E402
+import posted_history  # noqa: E402
 import hook_text  # noqa: E402
 import sky_ai  # noqa: E402
 import slot_times  # noqa: E402
@@ -353,11 +354,15 @@ def posted_index(all_r, posts):
     return idx
 
 
-SOURCE_REPEAT_H = 72
+def repeat_of(r, idx, when=None, hist=None):
+    """Reason string if r would re-post a hook or any source scene / video file that already went out.
 
-
-def repeat_of(r, idx, when=None):
-    """Reason string if r would re-post a hook (any time) or source clip (72h) that already went out."""
+    All time, not a 72h window: 20261117 and 20261124 both posted dandadanevil_scene1.
+    `hist` is posted_history.index() (durable history file + posted results)."""
+    if hist is not None:
+        why = posted_history.conflict(r, hist)
+        if why:
+            return why
     me, mine = r.get("id"), r.get("buffer_post_id")
     k = backup_stock.hook_key(r.get("title") or r.get("hook") or "")
     src = str(r.get("source") or "")
@@ -370,9 +375,8 @@ def repeat_of(r, idx, when=None):
             continue
         if k and e["key"] == k:
             return f"same hook already posted ({e['id'] or e['post']}): {k!r}"
-        if src and e["source"] == src and e["sent"] and e["when"] and when \
-                and abs((when - e["when"]).total_seconds()) < SOURCE_REPEAT_H * 3600:
-            return f"same source clip posted <{SOURCE_REPEAT_H}h ago ({e['id']})"
+        if src and posted_history.clip_name(e["source"]) == posted_history.clip_name(src):
+            return f"same source scene already posted ({e['id']}): {posted_history.clip_name(src)}"
     return None
 
 
@@ -420,6 +424,7 @@ def main():
     daily_limit = int(CFG.get("buffer_daily_limit") or 0)
     posts = None
     idx = None
+    hist = {}
     failed, changed = [], []
     rows = []
     for p in sorted(glob.glob(str(REPO / "results" / "*.json"))):
@@ -452,11 +457,12 @@ def main():
             posts = channel_posts()
         if idx is None:
             idx = posted_index(all_r, posts)
+            hist = posted_history.index(REPO, all_r)
         byid = {x["id"]: x for x in posts}
         # Repeat guard: never schedule a hook (or source clip) that already went out.
         cur = byid.get(r.get("buffer_post_id") or "") or {}
         if (cur.get("status") or r.get("buffer_status")) != "sent":
-            why = repeat_of(r, idx)
+            why = repeat_of(r, idx, hist=hist)
             if why:
                 block_repeat(p, r, why, now, changed, cur)
                 idx[:] = [e for e in idx if e["id"] != iid and not (cur and e["post"] == cur.get("id"))]
@@ -586,6 +592,12 @@ def main():
                       "metadata": {"title": r["title"]}})
         idx.append({"key": backup_stock.hook_key(r["title"]), "when": slot, "id": iid, "post": post["id"],
                     "sent": False, "source": str(r.get("source") or "")})
+        for k in posted_history.keys_of(r):
+            hist.setdefault(k, iid)
+        try:
+            posted_history.record(r, REPO, now=now)
+        except Exception as e:
+            print(f"{iid}: posted history not written: {e}")
         print(f"{iid}: Buffer post {post['id']} status={post.get('status')} dueAt={post.get('dueAt')}")
     out = os.environ.get("GITHUB_OUTPUT")
     if out:

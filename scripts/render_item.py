@@ -114,6 +114,19 @@ import sourcing
 import title_swap
 import edit_format
 
+import posted_history
+
+# Never re-use a scene clip that is already in a posted Short (all time). Stock renders also
+# skip clips held by another ready / assigned stock video, so backup stock stays diverse.
+try:
+    BLOCKED_SOURCES = posted_history.blocked_clips(
+        REPO, exclude_ids={iid}, reserved=bool(item.get("stock")))
+except Exception as _e:  # history unreadable: publish-time guard still blocks repeats
+    print(f"::warning::posted history unavailable: {_e}", flush=True)
+    BLOCKED_SOURCES = set()
+if BLOCKED_SOURCES:
+    print(f"posted-history: {len(BLOCKED_SOURCES)} scene clip(s) already posted/reserved are skipped", flush=True)
+
 os.environ.setdefault("SKY_GEMINI_BUDGET_FILE", str(OUT / f"gemini_budget_{iid}.json"))
 QUEUE_META = {k: item.get(k) for k in ("hook", "title", "description", "tags")}
 GEMINI_META = None
@@ -520,8 +533,12 @@ def download_source(src, force_fallback=False, skip=None):
     5 same-title scene clips. Trailers/teasers are never used.
     """
     errors = []
-    skip = set(skip or [])
+    skip = set(skip or []) | set(BLOCKED_SOURCES)
     used, berr = download_scene_bundle(src, skip=skip)
+    if not used and BLOCKED_SOURCES and any(
+            posted_history.clip_name(u) in BLOCKED_SOURCES for u in sourcing.item_scene_urls(item)):
+        berr = list(berr) + ["no unused official source left for this topic "
+                             "(scene clips already posted on the channel)"]
     errors.extend(berr)
     if used and not _is_skipped(used, skip) and not sourcing.is_trailer_source(used):
         if sourcing.source_matches_topic(item, used) or not sourcing.source_topic_slug(used):
@@ -623,7 +640,13 @@ def publish(final, fw, fh, up, used, qa, credit, qa_obj):
             uploaded.write_bytes(cover.read_bytes())
         subprocess.run(["gh", "release", "upload", tag, str(uploaded), "--clobber"], check=False)
         cover_url = f"https://github.com/{repo}/releases/download/{tag}/{cover_name}"
+    try:
+        _sha = posted_history.sha256_file(final)
+    except Exception:
+        _sha = None
     out = dict(
+        source_bundle=[posted_history.clip_name(u) for u in (LAST_BUNDLE or [used]) if u],
+        asset_sha256=_sha,
         release_url=f"https://github.com/{repo}/releases/tag/{tag}",
         asset_url=f"https://github.com/{repo}/releases/download/{tag}/{asset_name}",
         qa=qa, drop_t=qa_obj.get("drop_t"), energy=qa_obj.get("energy"), source=used,

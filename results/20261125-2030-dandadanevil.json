@@ -1,7 +1,7 @@
 {
   "id": "20261125-2030-dandadanevil",
-  "status": "retry_queued",
-  "detail": "all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+  "status": "failed",
+  "detail": "replaced: would repeat Evil Eye footage already on the channel; 20:30 now renders 20261125-2030-leomovie (was: all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors)",
   "at": "2026-11-25 15:04 IST",
   "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45575222196",
   "slot": "2026-11-25T20:30:00+05:30",
@@ -188,7 +188,7 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -212,5 +212,9 @@
       "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
       "at": "2026-11-25 15:04 IST"
     }
-  ]
+  ],
+  "retired": true,
+  "replaced_by": "20261125-2030-leomovie",
+  "publish_blocked": "repeat: Evil Eye scene clips already posted (20261117-0900-dandadanevil, 20261124-0900-dandadanevil); slot moved to 20261125-2030-leomovie",
+  "publish_blocked_at": "2026-11-25 16:45 IST"
 }

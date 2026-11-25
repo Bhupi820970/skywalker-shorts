@@ -133,6 +133,9 @@ def release_backed_pool(pool: list[dict]) -> list[dict]:
     try:
         import title_swap
         assets = title_swap.usable_release_assets(assets, _repo())
+        # A topic whose scene clips are all already posted (or inside other unposted
+        # stock) can only produce a repeat: never refill from it.
+        assets = title_swap.unposted_release_assets(assets, _repo(), reserved=True)
     except Exception:
         pass
     counted = [(release_clip_count(b, assets), b) for b in pool]
@@ -713,8 +716,40 @@ def sync(root: Path | None = None, now: datetime | None = None) -> dict:
         ent["status"] = _entry_status(ent, root, now)
     man["items"] = sorted(by_id.values(), key=lambda e: e.get("id") or "")
     _apply_retirements(man, root, now)
+    mark_duplicate_scenes(man, root)
     save_manifest(man, root)
     return man
+
+
+def mark_duplicate_scenes(man: dict, root: Path) -> list[str]:
+    """Ready stock must be diverse and never a repeat.
+
+    A ready entry is marked `dup_scene` (video kept, never assigned) when any of its scene
+    clips / its mp4 is already posted, already sits in a slot waiting to post, or another
+    earlier ready entry holds the same clip. At most one ready item per source scene."""
+    import posted_history
+    rows = iter_results(root)
+    by_id = {r.get("id"): r for r in rows}
+    hist = posted_history.index(root, rows)
+    held = posted_history.reserved_clips(
+        [r for r in rows if r.get("assigned_from_stock")])
+    marked = []
+    for e in man.get("items") or []:
+        if e.get("status") != "ready":
+            continue
+        r = by_id.get(e.get("id")) or {}
+        clips = set(posted_history.result_clips(r))
+        why = posted_history.conflict(r, hist)
+        if not why and clips & held:
+            why = "same source scene already assigned to a slot: " + ", ".join(sorted(clips & held))
+        if why:
+            e["status"] = "dup_scene"
+            e["dup_reason"] = why[:300]
+            marked.append(e.get("id"))
+            continue
+        e.pop("dup_reason", None)
+        held |= clips
+    return marked
 
 
 def ready_entries(man: dict) -> list[dict]:
@@ -732,9 +767,12 @@ def has_ready_stock(root: Path | None = None) -> bool:
         r = read_result(root, iid)
         if is_ready_result(r) and not (r or {}).get("stock_used") and not (r or {}).get("assigned_slot"):
             return True
+    status = {e.get("id"): e.get("status") for e in man.get("items") or []}
     for r in iter_results(root):
         if not parse_stock_id(r.get("id") or ""):
             continue
+        if status.get(r.get("id")) not in (None, "ready"):
+            continue  # dup_scene / used / failed per the manifest
         if is_ready_result(r) and not r.get("stock_used") and not r.get("assigned_slot"):
             return True
     return False
@@ -755,11 +793,18 @@ def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
     used |= recent_slugs
     posted = posted_hook_keys(root)
     recent_hooks = {hook_key(t) for t in recent_titles}
+    import posted_history
+    rows = iter_results(root)
+    hist = posted_history.index(root, rows)
+    held = posted_history.reserved_clips([r for r in rows if r.get("assigned_from_stock")])
 
     def conflicts(e: dict) -> bool:
         if (e.get("slug") or "") in used:
             return True
         src = read_result(root, e.get("id") or "") or {}
+        # Never the same source scene / video that is already posted or waiting in a slot.
+        if posted_history.conflict(src, hist) or set(posted_history.result_clips(src)) & held:
+            return True
         try:
             import sourcing
             if sourcing.is_trailer_result(src) or sourcing.is_trailer_source(str(src.get("source") or "")):
@@ -998,6 +1043,10 @@ def next_refill_ids(root: Path | None = None, limit: int | None = None,
         i += 1
         slug = pool_slug(b)
         if slug in blocked:
+            continue
+        # Each render merges all free clips of the topic: a second ready/pending copy
+        # of the same topic would be the same source scenes again.
+        if counts.get(slug, 0) >= 1:
             continue
         n = max_n.get(slug, 0) + 1
         iid = f"stock-{slug}-{n:02d}"

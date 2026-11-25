@@ -227,7 +227,7 @@
    "okarun"
   ],
   "target_dur": 26,
-  "status": "queued",
+  "status": "replaced",
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
@@ -237,7 +237,45 @@
    "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "dandadanevil_scene1_h264.mp4"
+  "fallback_asset": "dandadanevil_scene1_h264.mp4",
+  "replaced_by": "20261125-2030-leomovie",
+  "replaced_reason": "repeat: every Dan Da Dan Evil Eye scene clip (scene1, scene3) is already on the channel (20261117-0900-dandadanevil, 20261124-0900-dandadanevil)"
+ },
+ {
+  "id": "20261125-2030-leomovie",
+  "slot": "2026-11-25T20:30:00+05:30",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=TtX8DNALc3I",
+  "template": "whitebar",
+  "hook": "The cafe already knew who he was",
+  "words": "LEO",
+  "title": "The cafe already knew who he was | Leo | #edit",
+  "description": "Why Leo hid his true identity. From official Leo clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #leo #thalapathyvijay #lokeshkanagaraj",
+  "tags": [
+   "leo",
+   "thalapathyvijay",
+   "lokeshkanagaraj",
+   "southcinema",
+   "leoedit",
+   "kollywood"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "leomovie_scene1_h264.mp4",
+  "replaces": "20261125-2030-dandadanevil"
  },
  {
   "id": "20261125-2230-spiritedaway",

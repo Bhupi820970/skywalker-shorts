@@ -59,6 +59,8 @@ def _no_health(monkeypatch, health=None, block=None):
     monkeypatch.setattr(title_swap, "release_clip_health", lambda root=None, **k: dict(health or {}))
     monkeypatch.setattr(title_swap, "release_title_blocklist", lambda root=None: dict(block or {}))
     monkeypatch.setattr(title_swap, "used_today_slugs", lambda item, root=None: set())
+    # The real repo's posted history must not leak into these synthetic pools.
+    monkeypatch.setattr(title_swap, "unposted_release_assets", lambda assets, root=None, **k: assets)
 
 
 def test_backup_title_uses_existing_release_clips(monkeypatch):

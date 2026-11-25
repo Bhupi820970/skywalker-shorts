@@ -29,6 +29,7 @@ sys.path.insert(0, str(REPO))
 sys.path.insert(0, str(REPO / "scripts"))
 import backup_stock  # noqa: E402
 import buffer_post as bp  # noqa: E402
+import posted_history  # noqa: E402
 
 IST = bp.IST
 CFG = bp.CFG
@@ -258,6 +259,10 @@ def resumable_upload(tok, path, body, notify=True):
 
 # ---------------------------------------------------------------- ledger
 
+class _Repeat(Exception):
+    """The downloaded bytes / clips are already on the channel."""
+
+
 def record_upload(r, video, publish_at, now):
     vid = video["id"]
     st = (video.get("status") or {})
@@ -434,6 +439,7 @@ def main(argv=None):
         except Exception as e:
             print(f"(Buffer posts not read for the repeat guard: {str(e)[:120]})")
     idx = bp.posted_index(all_r, posts)
+    hist = posted_history.index(REPO, all_r)
     quota_hit = None
     for p, r in rows:
         iid = r.get("id")
@@ -446,7 +452,7 @@ def main(argv=None):
         if backup_stock.slot_post_conflicts(r, all_r):
             print(f"{iid}: slot already covered by another result; not posting")
             continue
-        why = bp.repeat_of(r, idx)
+        why = bp.repeat_of(r, idx, hist=hist)
         if why:
             bp.block_repeat(p, r, why, now, changed)
             idx[:] = [e for e in idx if e["id"] != iid]
@@ -481,7 +487,18 @@ def main(argv=None):
         try:
             with tempfile.TemporaryDirectory() as td:
                 f = download(r["asset_url"], os.path.join(td, "v.mp4"))
+                try:
+                    sha = posted_history.sha256_file(f)
+                except OSError:
+                    sha = None
+                why = posted_history.conflict(r, hist, sha=sha)
+                if why:
+                    raise _Repeat(why)
+                r["asset_sha256"] = sha
                 video = resumable_upload(tok, f, video_body(r, publish_at))
+        except _Repeat as e:
+            bp.block_repeat(p, r, str(e), now, changed)
+            continue
         except QuotaError as e:
             quota_hit = str(e)
             warns.append(f"{iid}: {e} - re-queued, will retry next run")
@@ -498,6 +515,12 @@ def main(argv=None):
         move_failed_buffer_post(r)
         record_upload(r, video, publish_at, now)
         bp.save(p, r); changed.append(iid)
+        for k in posted_history.keys_of(r):
+            hist.setdefault(k, iid)
+        try:
+            posted_history.record(r, REPO, now=now)
+        except Exception as e:
+            warns.append(f"{iid}: posted history not written: {e}")
         posts.append({"id": "yt:" + video["id"], "status": "sent", "metadata": {"title": r["title"]}})
         idx.append({"key": backup_stock.hook_key(r["title"]), "when": slot, "id": iid, "post": "yt:" + video["id"],
                     "sent": False, "source": str(r.get("source") or "")})

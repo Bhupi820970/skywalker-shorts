@@ -718,6 +718,20 @@ def usable_release_assets(assets: set[str] | None, root: Path | None = None) -> 
     return {a for a in assets if a not in bad and not any(a.startswith(f"{s}_scene") for s in block)}
 
 
+def unposted_release_assets(assets: set[str] | None, root: Path | None = None, *,
+                            reserved: bool = False) -> set[str] | None:
+    """Release clips never posted on the channel (posted_history), optionally minus clips
+    held by ready / assigned stock. A clip that is already in a posted Short is never reused."""
+    if assets is None:
+        return None
+    try:
+        import posted_history
+        gone = posted_history.blocked_clips(root, reserved=reserved)
+    except Exception:
+        return set(assets)
+    return {a for a in assets if posted_history.clip_name(a) not in gone}
+
+
 def clips_known_bad(slug: str, health: dict, blocklist: dict) -> bool:
     """Blocklisted, or >=2 recent filter failures and never a successful render."""
     k = re.sub(r"[^a-z0-9]+", "", (slug or "").lower())
@@ -740,6 +754,8 @@ def _release_filter(cands: list[dict], root: Path | None = None) -> list[dict]:
     assets = usable_release_assets(sourcing.release_source_assets(), root)
     if assets is None:
         return cands
+    # Never swap to footage that is already on the channel (same source scene = repeat).
+    assets = unposted_release_assets(assets, root)
     out = [c2 for c2 in (with_release_clips(c, assets) for c in cands) if c2]
     # A fallback must be footage that actually passes the filter: drop titles whose
     # release clips are logo-burned (blocklist) or keep failing the scene filter.
