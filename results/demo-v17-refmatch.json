@@ -1,9 +1,9 @@
 {
   "id": "demo-v17-refmatch",
-  "status": "retry_queued",
-  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
-  "at": "2026-11-25 08:13 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45531181496",
+  "status": "failed",
+  "detail": "gemini QC reject on retry: Movie dialogue audio is mixed in over the first 22 seconds, violating the song-only edit requirement.; Burned-in dialogue subtitles are present on the footage during character speech.",
+  "at": "2026-11-25 08:15 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45535002824",
   "slot": null,
   "title": "San kills for this forest | Princess Mononoke | #edit",
   "hook": "San kills for this forest",
@@ -16,359 +16,18 @@
     "shorts",
     "test"
   ],
-  "queue_meta": {
-    "hook": "San kills for this forest",
-    "title": "San kills for this forest | Princess Mononoke | #edit",
-    "description": "DEMO (not published). San kills for this forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke",
-    "tags": [
-      "princessmononoke",
-      "anime",
-      "animeedit",
-      "edit",
-      "shorts",
-      "test"
-    ]
-  },
-  "gemini_meta": true,
-  "hook_source": "queue",
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
   "hook_style": null,
   "title_candidates": null,
   "gemini_calls": [
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
       "purpose": "qc",
       "model": "gemini-3.5-flash",
       "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
+      "s": 27.8,
+      "ok": true
     }
   ],
   "backup_item": null,
@@ -380,8 +39,31 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
+  "auto_retries": 1,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+      "music": "pr_montagemsantafe2.mp3",
+      "qc_status": "skipped"
+    },
+    {
+      "attempt": "qc_retry",
+      "ok": false,
+      "error": "gemini QC fail",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+      "music": "pr_montagemsantafe2.mp3"
+    }
+  ],
+  "last_error": "gemini QC reject",
+  "qc_rejected": true,
+  "qc_status": "fail",
   "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/test-renders",
   "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/test-renders/test-demo-v17-refmatch.mp4",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/test-renders/test-demo-v17-refmatch-cover.jpg",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -396,8 +78,6 @@
   "music": "pr_montagemsantafe2.mp3",
   "music_credit": "Song: qaraqshy - Topic - MONTAGEM SANTA FE 2\nOfficial link: https://www.youtube.com/watch?v=31mfKG8uOm8",
   "description_final": "DEMO (not published). San kills for this forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke\n\nMusic:\nSong: qaraqshy - Topic - MONTAGEM SANTA FE 2\nOfficial link: https://www.youtube.com/watch?v=31mfKG8uOm8",
-  "no_publish": true,
-  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/test-renders/test-demo-v17-refmatch-cover.jpg",
   "gate": {
     "ok": false,
     "failures": [
@@ -405,6 +85,84 @@
     ],
     "gemini_qc": "skipped (unavailable/budget)"
   },
+  "no_publish": true,
+  "scenes_picked": [
+    {
+      "id": 7,
+      "src_start": 15.17,
+      "dur": 2.62
+    },
+    {
+      "id": 10,
+      "src_start": 21.71,
+      "dur": 2.06
+    },
+    {
+      "id": 14,
+      "src_start": 31.7,
+      "dur": 1.76
+    },
+    {
+      "id": 14,
+      "src_start": 35.64,
+      "dur": 3.44
+    },
+    {
+      "id": 16,
+      "src_start": 41.7,
+      "dur": 3.08
+    },
+    {
+      "id": 23,
+      "src_start": 55.39,
+      "dur": 2.42
+    },
+    {
+      "id": 25,
+      "src_start": 63.21,
+      "dur": 2.06
+    },
+    {
+      "id": 26,
+      "src_start": 70.88,
+      "dur": 2.94
+    },
+    {
+      "id": 29,
+      "src_start": 80.38,
+      "dur": 1.84
+    },
+    {
+      "id": 31,
+      "src_start": 85.007,
+      "dur": 0.697
+    },
+    {
+      "id": 20,
+      "src_start": 49.576,
+      "dur": 0.697
+    },
+    {
+      "id": 4,
+      "src_start": 7.811,
+      "dur": 0.813
+    },
+    {
+      "id": 3,
+      "src_start": 4.672,
+      "dur": 0.789
+    },
+    {
+      "id": 5,
+      "src_start": 11.08,
+      "dur": 0.697
+    },
+    {
+      "id": 12,
+      "src_start": 27.116,
+      "dur": 0.697
+    }
+  ],
   "layout": {
     "bar_y": 534,
     "bar_h": 122,
@@ -1544,98 +1302,5 @@
     "edit_mode": "dialogue_drop",
     "edit_format": "action",
     "blur_fill": true
-  },
-  "scenes_picked": [
-    {
-      "id": 7,
-      "src_start": 15.17,
-      "dur": 2.62
-    },
-    {
-      "id": 10,
-      "src_start": 21.71,
-      "dur": 2.06
-    },
-    {
-      "id": 14,
-      "src_start": 31.7,
-      "dur": 1.76
-    },
-    {
-      "id": 14,
-      "src_start": 35.64,
-      "dur": 3.44
-    },
-    {
-      "id": 16,
-      "src_start": 41.7,
-      "dur": 3.08
-    },
-    {
-      "id": 23,
-      "src_start": 55.39,
-      "dur": 2.42
-    },
-    {
-      "id": 25,
-      "src_start": 63.21,
-      "dur": 2.06
-    },
-    {
-      "id": 26,
-      "src_start": 70.88,
-      "dur": 2.94
-    },
-    {
-      "id": 29,
-      "src_start": 80.38,
-      "dur": 1.84
-    },
-    {
-      "id": 31,
-      "src_start": 85.007,
-      "dur": 0.697
-    },
-    {
-      "id": 20,
-      "src_start": 49.576,
-      "dur": 0.697
-    },
-    {
-      "id": 4,
-      "src_start": 7.811,
-      "dur": 0.813
-    },
-    {
-      "id": 3,
-      "src_start": 4.672,
-      "dur": 0.789
-    },
-    {
-      "id": 5,
-      "src_start": 11.08,
-      "dur": 0.697
-    },
-    {
-      "id": 12,
-      "src_start": 27.116,
-      "dur": 0.697
-    }
-  ],
-  "qc_status": "skipped",
-  "auto_retries": 0,
-  "max_auto_retries": 1,
-  "attempts": [
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "gemini QC skipped",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
-      "music": "pr_montagemsantafe2.mp3",
-      "qc_status": "skipped"
-    }
-  ],
-  "last_error": "gemini QC skipped",
-  "qc_pending": true,
-  "logo_pending": false
+  }
 }
