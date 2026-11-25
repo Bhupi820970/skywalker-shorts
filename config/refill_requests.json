@@ -1,42 +1,187 @@
 {
- "generated_at": "2026-11-25 16:58 IST",
+ "generated_at": "2026-11-26 03:29 IST",
  "max_clips_per_title": 4,
  "min_height": 1080,
- "deficit_videos": 45,
+ "deficit_videos": 46,
  "requests": [
   {
    "slug": "apothecarydiaries",
    "pillar": "anime",
-   "words": "THE APOTHECARY DIARIES",
+   "words": "APOTHECARY DIARIES",
    "characters": [
     "Maomao",
     "Jinshi"
    ],
    "scene_types": [
     "romance",
-    "comedy"
+    "emotional"
    ],
    "search_queries": [
-    "The Apothecary Diaries Jinshi Maomao scene clip Crunchyroll",
-    "The Apothecary Diaries official clip Crunchyroll Collection",
-    "The Apothecary Diaries English dub clip Crunchyroll"
+    "The Apothecary Diaries clip english dub",
+    "Apothecary Diaries Maomao Jinshi scene",
+    "Apothecary Diaries official clip"
    ],
    "official_channels": [
-    "Crunchyroll"
+    "TOHO animation",
+    "Netflix Anime"
    ],
    "links": [],
-   "hook": "Why did Jinshi react this way to Maomao",
-   "title": "Why did Jinshi react this way to Maomao | The Apothecary Diaries | #edit",
+   "hook": "Why Jinshi cannot stop watching her",
+   "title": "Why Jinshi cannot stop watching her | Apothecary Diaries | #edit",
    "tags": [
     "apothecarydiaries",
-    "maomao",
-    "jinshi",
     "anime",
-    "animedub",
-    "romance"
+    "edit",
+    "shorts"
    ],
    "market": "US/UK",
    "refill": true,
+   "category": "anime",
+   "prefer_english": true,
+   "known_topic": false
+  },
+  {
+   "slug": "dune",
+   "pillar": "anime",
+   "words": "DUNE",
+   "characters": [
+    "Paul Atreides",
+    "Chani"
+   ],
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "Dune Part Two official clip",
+    "Dune Part Two Paul sandworm ride clip"
+   ],
+   "official_channels": [
+    "Warner Bros. Pictures",
+    "Movieclips"
+   ],
+   "links": [],
+   "hook": "Why Paul stopped being human",
+   "title": "Why Paul stopped being human | Dune | #edit",
+   "tags": [
+    "dune",
+    "anime",
+    "edit",
+    "shorts"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "movie",
+   "prefer_english": true,
+   "known_topic": false
+  },
+  {
+   "slug": "zootopia",
+   "pillar": "anime",
+   "words": "ZOOTOPIA",
+   "characters": [
+    "Judy",
+    "Nick"
+   ],
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "Zootopia official clip Disney",
+    "Zootopia 2 official clip"
+   ],
+   "official_channels": [
+    "Walt Disney Animation Studios",
+    "Disney+"
+   ],
+   "links": [],
+   "hook": "Why Nick never trusted anyone",
+   "title": "Why Nick never trusted anyone | Zootopia | #edit",
+   "tags": [
+    "zootopia",
+    "anime",
+    "edit",
+    "shorts"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "cartoon",
+   "prefer_english": true,
+   "known_topic": false
+  },
+  {
+   "slug": "eldenring",
+   "pillar": "anime",
+   "words": "ELDEN RING",
+   "characters": [
+    "Tarnished",
+    "Malenia"
+   ],
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ELDEN RING official gameplay",
+    "ELDEN RING Shadow of the Erdtree official gameplay reveal"
+   ],
+   "official_channels": [
+    "ELDEN RING",
+    "BANDAI NAMCO Entertainment America"
+   ],
+   "links": [],
+   "hook": "Why nobody beats Malenia first try",
+   "title": "Why nobody beats Malenia first try | Elden Ring | #edit",
+   "tags": [
+    "eldenring",
+    "anime",
+    "edit",
+    "shorts"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "game",
+   "prefer_english": true,
+   "known_topic": false
+  },
+  {
+   "slug": "strangerthings",
+   "pillar": "anime",
+   "words": "STRANGER THINGS",
+   "characters": [
+    "Eleven",
+    "Max",
+    "Vecna"
+   ],
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "Stranger Things official clip Netflix",
+    "Stranger Things Max Running Up That Hill scene clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Stranger Things"
+   ],
+   "links": [],
+   "hook": "Why Vecna wanted Max",
+   "title": "Why Vecna wanted Max | Stranger Things | #edit",
+   "tags": [
+    "strangerthings",
+    "anime",
+    "edit",
+    "shorts"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "tv",
    "prefer_english": true,
    "known_topic": false
   },
@@ -45,7 +190,7 @@
    "pillar": "anime",
    "words": "CYBERPUNK EDGERUNNERS",
    "characters": [
-    "David Martinez",
+    "David",
     "Lucy"
    ],
    "scene_types": [
@@ -53,67 +198,67 @@
     "emotional"
    ],
    "search_queries": [
-    "Cyberpunk Edgerunners David Lucy moon scene clip Netflix Anime",
-    "Cyberpunk Edgerunners official scene clip Netflix Anime",
-    "Cyberpunk Edgerunners English dub clip Netflix"
+    "Cyberpunk Edgerunners clip netflix anime",
+    "Cyberpunk Edgerunners David Lucy scene",
+    "Cyberpunk Edgerunners english dub clip"
    ],
    "official_channels": [
     "Netflix Anime",
     "Netflix"
    ],
    "links": [],
-   "hook": "Why Lucy wanted to go to the moon",
+   "hook": "David wanted to be a legend",
    "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
    "tags": [
     "cyberpunkedgerunners",
-    "david",
-    "lucy",
     "anime",
-    "netflixanime",
-    "cyberpunk"
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david"
    ],
    "market": "US/UK",
    "refill": true,
+   "category": "anime",
    "prefer_english": true,
    "known_topic": true
   },
   {
-   "slug": "dandadanevil",
+   "slug": "interstellar",
    "pillar": "anime",
-   "words": "DANDADAN",
+   "words": "INTERSTELLAR",
    "characters": [
-    "Momo Ayase",
-    "Ken Okarun"
+    "Cooper",
+    "Murph"
    ],
    "scene_types": [
-    "romance",
     "fight",
-    "comedy"
+    "emotional",
+    "aura"
    ],
    "search_queries": [
-    "Dandadan Momo Okarun rescue clip Crunchyroll",
-    "Dandadan official scene clip Crunchyroll Collection",
-    "Dandadan English dub clip Netflix Anime"
+    "Interstellar official clip",
+    "Interstellar Cooper messages scene clip"
    ],
    "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime"
+    "Paramount Pictures",
+    "Movieclips"
    ],
    "links": [],
-   "hook": "Why Momo saved Okarun from the spirit",
-   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+   "hook": "Why Cooper could not look away",
+   "title": "Why Cooper could not look away | Interstellar | #edit",
    "tags": [
-    "dandadan",
-    "momo",
-    "okarun",
+    "interstellar",
     "anime",
-    "animedub",
-    "crunchyroll"
+    "edit",
+    "shorts"
    ],
    "market": "US/UK",
    "refill": true,
+   "category": "movie",
    "prefer_english": true,
-   "known_topic": true
+   "known_topic": false
   },
   {
    "slug": "arcane",
@@ -121,330 +266,184 @@
    "words": "ARCANE",
    "characters": [
     "Jinx",
-    "Vi"
+    "Vi",
+    "Caitlyn"
    ],
    "scene_types": [
+    "fight",
     "emotional",
     "aura"
    ],
    "search_queries": [
-    "Arcane Jinx flare scene clip League of Legends",
-    "Arcane Vi Jinx reunite scene clip Netflix",
-    "Arcane official scene clip League of Legends"
+    "Arcane Jinx scene clip netflix",
+    "Arcane Vi Caitlyn scene clip",
+    "Arcane season 2 clip netflix",
+    "Arcane Jinx Silco scene official"
    ],
    "official_channels": [
-    "League of Legends",
+    "Netflix",
+    "League of Legends"
+   ],
+   "links": [],
+   "hook": "Jinx finally loses her mind",
+   "title": "Jinx finally loses her mind | Arcane | #edit",
+   "tags": [
+    "arcane",
+    "anime",
+    "edit",
+    "shorts"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "cartoon",
+   "prefer_english": true,
+   "known_topic": false
+  },
+  {
+   "slug": "gta5",
+   "pillar": "anime",
+   "words": "GTA V",
+   "characters": [
+    "Trevor",
+    "Michael",
+    "Franklin"
+   ],
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "Grand Theft Auto V official gameplay video Rockstar Games",
+    "Grand Theft Auto Online official gameplay Rockstar Games"
+   ],
+   "official_channels": [
+    "Rockstar Games"
+   ],
+   "links": [],
+   "hook": "Why Trevor scares even Michael",
+   "title": "Why Trevor scares even Michael | Gta V | #edit",
+   "tags": [
+    "gta5",
+    "anime",
+    "edit",
+    "shorts"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "game",
+   "prefer_english": true,
+   "known_topic": false
+  },
+  {
+   "slug": "wednesday",
+   "pillar": "anime",
+   "words": "WEDNESDAY",
+   "characters": [
+    "Wednesday",
+    "Enid"
+   ],
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "Wednesday official clip Netflix",
+    "Wednesday dance scene clip Netflix"
+   ],
+   "official_channels": [
     "Netflix"
    ],
    "links": [],
-   "hook": "Why Jinx lit the signal flare for Vi",
-   "title": "Why Jinx lit the signal flare for Vi | Arcane | #edit",
+   "hook": "Why Wednesday never smiles",
+   "title": "Why Wednesday never smiles | Wednesday | #edit",
    "tags": [
-    "arcane",
-    "jinx",
-    "vi",
-    "leagueoflegends",
-    "netflix",
-    "animation"
+    "wednesday",
+    "anime",
+    "edit",
+    "shorts"
    ],
    "market": "US/UK",
    "refill": true,
+   "category": "tv",
    "prefer_english": true,
    "known_topic": false
   },
   {
-   "slug": "yourname",
+   "slug": "dandadan",
    "pillar": "anime",
-   "words": "YOUR NAME",
+   "words": "DAN DA DAN",
    "characters": [
-    "Taki Tachibana",
-    "Mitsuha Miyamizu"
+    "Okarun",
+    "Momo"
    ],
    "scene_types": [
     "romance",
     "emotional"
    ],
    "search_queries": [
-    "Your Name twilight katawaredoki scene clip Crunchyroll",
-    "Your Name Taki Mitsuha official clip GKIDS Films",
-    "Your Name English dub clip Crunchyroll Store"
+    "DAN DA DAN clip netflix anime",
+    "DAN DA DAN Okarun Momo scene english dub",
+    "DAN DA DAN Turbo Granny clip",
+    "DAN DA DAN season 2 clip netflix anime"
    ],
    "official_channels": [
-    "Crunchyroll",
-    "GKIDS Films"
+    "Netflix Anime"
    ],
    "links": [],
-   "hook": "Why they forgot each other during twilight hour",
-   "title": "He forgot her name again | Your Name | #edit",
+   "hook": "Why Okarun cannot look away from her",
+   "title": "Okarun was never ready for this | Dandadan | #edit",
    "tags": [
-    "yourname",
-    "taki",
-    "mitsuha",
+    "dandadan",
     "anime",
-    "makotoshinkai",
-    "romance"
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
    ],
    "market": "US/UK",
    "refill": true,
+   "category": "anime",
    "prefer_english": true,
    "known_topic": true
   },
   {
-   "slug": "twisters",
+   "slug": "topgunmaverick",
    "pillar": "hollywood",
-   "words": "TWISTERS",
+   "words": "TOP GUN MAVERICK",
    "characters": [
-    "Tyler Owens",
-    "Kate Carter"
-   ],
-   "scene_types": [
-    "aura",
-    "fight"
-   ],
-   "search_queries": [
-    "Twisters tornado rodeo scene clip Universal Pictures",
-    "Twisters Tyler Owens entry clip Warner Bros",
-    "Twisters official movie clip Movieclips"
-   ],
-   "official_channels": [
-    "Universal Pictures",
-    "Warner Bros. Pictures",
-    "Movieclips"
-   ],
-   "links": [],
-   "hook": "Why Tyler drove directly into the tornado",
-   "title": "The sky turned against them | Twisters | #edit",
-   "tags": [
-    "twisters",
-    "glenpowell",
-    "twistersmovie",
-    "hollywood",
-    "action",
-    "movieclips"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "prefer_english": true,
-   "known_topic": true
-  },
-  {
-   "slug": "shahrukhkhan",
-   "pillar": "bollywood",
-   "words": "JAWAN",
-   "characters": [
-    "Vikram Rathore",
-    "Azad"
-   ],
-   "scene_types": [
-    "aura",
-    "fight"
-   ],
-   "search_queries": [
-    "Jawan Vikram Rathore hospital fight scene clip Red Chillies Entertainment",
-    "Jawan SRK belt action scene clip Red Chillies Entertainment",
-    "Jawan official scene clip Red Chillies Entertainment"
-   ],
-   "official_channels": [
-    "Netflix Anime",
-    "Netflix",
-    "TOHO animation"
-   ],
-   "links": [],
-   "hook": "Why Vikram Rathore came back from death",
-   "title": "Why Vikram Rathore came back from death | Jawan | #edit",
-   "tags": [
-    "jawan",
-    "srk",
-    "shahrukhkhan",
-    "bollywood",
-    "action",
-    "redchillies"
-   ],
-   "market": "IN",
-   "refill": true,
-   "prefer_english": true,
-   "known_topic": false
-  },
-  {
-   "slug": "sololeveling",
-   "pillar": "anime",
-   "words": "SOLO LEVELING",
-   "characters": [
-    "Sung Jinwoo",
-    "Igris"
+    "Maverick",
+    "Rooster"
    ],
    "scene_types": [
     "fight",
+    "emotional",
     "aura"
    ],
    "search_queries": [
-    "Solo Leveling Sung Jinwoo Arise scene clip Crunchyroll",
-    "Solo Leveling Igris fight scene clip Crunchyroll Collection",
-    "Solo Leveling English dub official clip Crunchyroll"
+    "Top Gun Maverick official clip",
+    "Top Gun Maverick dogfight clip Paramount"
    ],
    "official_channels": [
-    "Crunchyroll"
+    "Paramount Pictures"
    ],
    "links": [],
-   "hook": "Why Jinwoo said arise to the knight",
-   "title": "Why Jinwoo said arise to the knight | Solo Leveling | #edit",
+   "hook": "Why Maverick broke every rule",
+   "title": "Why Maverick is the greatest pilot | The final training run | #edit",
    "tags": [
-    "sololeveling",
-    "sungjinwoo",
-    "arise",
-    "anime",
-    "animedub",
-    "crunchyroll"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "prefer_english": true,
-   "known_topic": false
-  },
-  {
-   "slug": "chainsawman",
-   "pillar": "anime",
-   "words": "CHAINSAW MAN",
-   "characters": [
-    "Denji",
-    "Makima"
-   ],
-   "scene_types": [
-    "aura",
-    "emotional"
-   ],
-   "search_queries": [
-    "Chainsaw Man Makima temple scene clip Crunchyroll",
-    "Chainsaw Man official scene clip Crunchyroll Collection",
-    "Chainsaw Man English dub clip Crunchyroll"
-   ],
-   "official_channels": [
-    "Crunchyroll"
-   ],
-   "links": [],
-   "hook": "Why Makima used her mysterious power here",
-   "title": "Why Makima used her mysterious power here | Chainsaw Man | #edit",
-   "tags": [
-    "chainsawman",
-    "denji",
-    "makima",
-    "anime",
-    "animedub",
-    "crunchyroll"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "prefer_english": true,
-   "known_topic": false
-  },
-  {
-   "slug": "spiderverse",
-   "pillar": "hollywood",
-   "words": "ACROSS THE SPIDER-VERSE",
-   "characters": [
-    "Miles Morales",
-    "Gwen Stacy"
-   ],
-   "scene_types": [
-    "romance",
-    "aura"
-   ],
-   "search_queries": [
-    "Across the Spider-Verse bank clock tower clip Sony Pictures Entertainment",
-    "Across the Spider-Verse Miles Gwen upside down scene clip Movieclips",
-    "Spider-Verse official scene clip Sony Pictures Entertainment"
-   ],
-   "official_channels": [
-    "Sony Pictures Entertainment",
-    "Movieclips"
-   ],
-   "links": [],
-   "hook": "Why Gwen sat upside down with Miles",
-   "title": "Why Gwen sat upside down with Miles | Across The Spider-Verse | #edit",
-   "tags": [
-    "spiderverse",
-    "milesmorales",
-    "gwenstacy",
-    "hollywood",
-    "animation",
-    "sonypictures"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "prefer_english": true,
-   "known_topic": false
-  },
-  {
-   "slug": "dune2",
-   "pillar": "hollywood",
-   "words": "DUNE PART TWO",
-   "characters": [
-    "Paul Atreides",
-    "Chani"
-   ],
-   "scene_types": [
-    "aura",
-    "fight"
-   ],
-   "search_queries": [
-    "Dune Part Two Paul riding sandworm scene clip Warner Bros",
-    "Dune 2 Paul speech Fremen council clip Warner Bros Pictures",
-    "Dune Part Two official scene clip Movieclips"
-   ],
-   "official_channels": [
-    "Warner Bros. Pictures",
-    "Movieclips"
-   ],
-   "links": [],
-   "hook": "Why Paul Atreides challenged the entire council",
-   "title": "Paul Atreides became something else | the desert answers | #edit",
-   "tags": [
-    "dune2",
-    "paulatreides",
-    "timotheechalamet",
-    "hollywood",
-    "warnerbros",
+    "topgun",
+    "maverick",
+    "tomcruise",
+    "movieedit",
+    "phonk",
+    "aviation",
     "action"
    ],
    "market": "US/UK",
    "refill": true,
-   "prefer_english": true,
-   "known_topic": true
-  },
-  {
-   "slug": "rrr",
-   "pillar": "south",
-   "words": "RRR",
-   "characters": [
-    "Komaram Bheem",
-    "Alluri Sitarama Raju"
-   ],
-   "scene_types": [
-    "fight",
-    "aura"
-   ],
-   "search_queries": [
-    "RRR Bheem animal entry scene clip DVV Entertainment",
-    "RRR Raju Bheem fight scene clip Movieclips",
-    "RRR official action scene clip Netflix"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Movieclips"
-   ],
-   "links": [],
-   "hook": "Why Bheem unleashed wild animals inside palace",
-   "title": "Why Bheem unleashed the wild beasts 💀 | Bheem palace entry | #edit",
-   "tags": [
-    "rrr",
-    "bheem",
-    "raju",
-    "south",
-    "tollywood",
-    "action"
-   ],
-   "market": "IN",
-   "refill": true,
+   "category": "movie",
    "prefer_english": true,
    "known_topic": true
   }
