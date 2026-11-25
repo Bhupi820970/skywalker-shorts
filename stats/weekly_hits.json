@@ -1,63 +1,63 @@
 {
-  "week_of": "2026-11-18",
-  "through": "2026-11-24",
-  "at": "2026-11-24 19:18 IST",
+  "week_of": "2026-11-19",
+  "through": "2026-11-25",
+  "at": "2026-11-25 18:30 IST",
   "lookback_days": 7,
-  "median_views": 1052.0,
-  "n": 27,
+  "median_views": 1095.0,
+  "n": 20,
   "top_titles": [
     {
       "name": "arcane",
-      "views": 13465.0,
-      "likes": 572.0,
+      "views": 13728.0,
+      "likes": 584.0,
       "title": "Jinx finally loses her mind #arcane #jinx #leagueoflegends",
       "slug": "arcane"
     },
     {
       "name": "dandadan",
-      "views": 5014.0,
-      "likes": 95.0,
+      "views": 5154.0,
+      "likes": 96.0,
       "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
       "slug": "dandadan"
     },
     {
-      "name": "princessmononoke",
-      "views": 4059.0,
-      "likes": 64.0,
-      "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
-      "slug": "princessmononoke"
-    },
-    {
       "name": "cyberpunkedgerunners",
-      "views": 2801.0,
+      "views": 2813.0,
       "likes": 38.0,
       "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
       "slug": "cyberpunkedgerunners"
     },
     {
-      "name": "animal",
-      "views": 1418.0,
-      "likes": 28.0,
-      "title": "Ranbir makes them regret everything #animal #ranbirkapoor #bollywood",
-      "slug": "animal"
+      "name": "cyberpunk",
+      "views": 1672.0,
+      "likes": 23.0,
+      "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
+      "slug": "cyberpunk"
     },
     {
       "name": "jujutsukaisen",
-      "views": 1170.0,
-      "likes": 25.0,
+      "views": 1182.0,
+      "likes": 27.0,
       "title": "Why Higuruma could not look away #jujutsukaisen #higuruma #anime",
       "slug": "jujutsukaisen"
     },
     {
+      "name": "animal",
+      "views": 1168.0,
+      "likes": 30.0,
+      "title": "Nobody expected Ranvijay to show up like this #animal #ranbirkapoor #bollywood",
+      "slug": "animal"
+    },
+    {
       "name": "lazarus",
-      "views": 1057.0,
-      "likes": 9.0,
-      "title": "Axel has thirty days to run | Lazarus | #edit",
+      "views": 1052.0,
+      "likes": 21.0,
+      "title": "Axel admitting his bad habit mid escape | Lazarus #lazarus #axel #animeedit",
       "slug": "lazarus"
     },
     {
       "name": "weatheringwithyou",
-      "views": 1039.0,
+      "views": 1048.0,
       "likes": 23.0,
       "title": "Why Hodaka cannot stop watching her #weatheringwithyou #hina #anime",
       "slug": "weatheringwithyou"
@@ -66,149 +66,149 @@
   "top_hooks": [
     {
       "name": "Jinx finally loses her mind",
-      "views": 13465.0,
-      "likes": 572.0,
+      "views": 13728.0,
+      "likes": 584.0,
       "title": "Jinx finally loses her mind #arcane #jinx #leagueoflegends",
       "slug": "arcane"
     },
     {
       "name": "They realized it together",
-      "views": 5014.0,
-      "likes": 95.0,
+      "views": 5154.0,
+      "likes": 96.0,
       "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
       "slug": "dandadan"
     },
     {
-      "name": "Ashitaka walked through an entire army",
-      "views": 4059.0,
-      "likes": 64.0,
-      "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
-      "slug": "princessmononoke"
-    },
-    {
       "name": "David wanted to be a legend",
-      "views": 2801.0,
+      "views": 2813.0,
       "likes": 38.0,
       "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
       "slug": "cyberpunkedgerunners"
     },
     {
       "name": "They found each other",
-      "views": 2073.0,
-      "likes": 57.0,
+      "views": 2139.0,
+      "likes": 60.0,
       "title": "Why Okarun cannot look away from Momo #dandadan #momoayase #romance",
       "slug": "dandadan"
     },
     {
+      "name": "Why David could not stop the cyberpsychosis",
+      "views": 1672.0,
+      "likes": 23.0,
+      "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
+      "slug": "cyberpunk"
+    },
+    {
       "name": "Okarun is struggling with this order",
-      "views": 1479.0,
-      "likes": 53.0,
+      "views": 1600.0,
+      "likes": 60.0,
       "title": "When the maid cafe order gets weird #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
-      "name": "Why Okarun cannot stop watching her",
-      "views": 1441.0,
-      "likes": 31.0,
-      "title": "Why Okarun cannot stop watching her #dandadan #okarun #anime",
-      "slug": "dandadan"
+      "name": "He never wanted to fight",
+      "views": 1182.0,
+      "likes": 27.0,
+      "title": "Why Higuruma could not look away #jujutsukaisen #higuruma #anime",
+      "slug": "jujutsukaisen"
     },
     {
-      "name": "Ranbir faces his father's enemies",
-      "views": 1418.0,
-      "likes": 28.0,
-      "title": "Ranbir makes them regret everything #animal #ranbirkapoor #bollywood",
+      "name": "Nobody expected him to enter like this",
+      "views": 1168.0,
+      "likes": 30.0,
+      "title": "Nobody expected Ranvijay to show up like this #animal #ranbirkapoor #bollywood",
       "slug": "animal"
     }
   ],
   "top_songs": [
     {
       "name": "pr_edw864ulya.mp3",
-      "views": 13465.0,
-      "likes": 572.0,
+      "views": 13728.0,
+      "likes": 584.0,
       "title": "Jinx finally loses her mind #arcane #jinx #leagueoflegends",
       "slug": "arcane"
     },
     {
       "name": "sw_powergloveplaybackvinylr.mp3",
-      "views": 5014.0,
-      "likes": 95.0,
+      "views": 5154.0,
+      "likes": 96.0,
       "title": "Why Okarun cannot look away from her #dandadan #anime #okarun",
       "slug": "dandadan"
     },
     {
-      "name": "sw_sentemaisoverslowed.mp3",
-      "views": 4059.0,
-      "likes": 64.0,
-      "title": "Ashitaka walking through an army carrying San #princessmononoke #ashitaka #animeedit",
-      "slug": "princessmononoke"
-    },
-    {
       "name": "sw_aura1hourauramusicplayli.mp3",
-      "views": 2801.0,
+      "views": 2813.0,
       "likes": 38.0,
       "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
       "slug": "cyberpunkedgerunners"
     },
     {
       "name": "pr_ytsearch1joehisaishionesummersdaypiano.mp3",
-      "views": 2073.0,
-      "likes": 57.0,
+      "views": 2139.0,
+      "likes": 60.0,
       "title": "Why Okarun cannot look away from Momo #dandadan #momoayase #romance",
       "slug": "dandadan"
     },
     {
+      "name": "pr_turan2astxrzxguss.mp3",
+      "views": 1672.0,
+      "likes": 23.0,
+      "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
+      "slug": "cyberpunk"
+    },
+    {
       "name": "pr_gl6beebcuu.mp3",
-      "views": 1479.0,
-      "likes": 53.0,
+      "views": 1600.0,
+      "likes": 60.0,
       "title": "When the maid cafe order gets weird #dandadan #okarun #anime",
       "slug": "dandadan"
     },
     {
-      "name": "sw_phnk2.mp3",
-      "views": 1441.0,
-      "likes": 31.0,
-      "title": "Why Okarun cannot stop watching her #dandadan #okarun #anime",
-      "slug": "dandadan"
-    },
-    {
       "name": "pr_ytsearch1henrymancinimoonriverinstrument.mp3",
-      "views": 1170.0,
-      "likes": 25.0,
+      "views": 1182.0,
+      "likes": 27.0,
       "title": "Why Higuruma could not look away #jujutsukaisen #higuruma #anime",
       "slug": "jujutsukaisen"
+    },
+    {
+      "name": "sw_passobemsolto.mp3",
+      "views": 1168.0,
+      "likes": 30.0,
+      "title": "Nobody expected Ranvijay to show up like this #animal #ranbirkapoor #bollywood",
+      "slug": "animal"
     }
   ],
   "weights": {
     "titles": {
-      "arcane": 11.7307,
-      "dandadan": 10.1177,
-      "princessmononoke": 9.77,
-      "cyberpunkedgerunners": 9.2203,
-      "animal": 8.4363,
-      "jujutsukaisen": 8.2059,
-      "lazarus": 7.77,
-      "weatheringwithyou": 8.0593
+      "arcane": 11.7573,
+      "dandadan": 10.1489,
+      "cyberpunkedgerunners": 9.2246,
+      "cyberpunk": 8.5347,
+      "jujutsukaisen": 8.2421,
+      "animal": 8.2658,
+      "lazarus": 8.0413,
+      "weatheringwithyou": 8.0679
     },
     "hooks": {
-      "Jinx finally loses her mind": 11.7307,
-      "They realized it together": 10.1177,
-      "Ashitaka walked through an entire army": 9.77,
-      "David wanted to be a legend": 9.2203,
-      "They found each other": 9.0584,
-      "Okarun is struggling with this order": 8.6959,
-      "Why Okarun cannot stop watching her": 8.4868,
-      "Ranbir faces his father's enemies": 8.4363
+      "Jinx finally loses her mind": 11.7573,
+      "They realized it together": 10.1489,
+      "David wanted to be a legend": 9.2246,
+      "They found each other": 9.1074,
+      "Why David could not stop the cyberpsychosis": 8.5347,
+      "Okarun is struggling with this order": 8.8172,
+      "He never wanted to fight": 8.2421,
+      "Nobody expected him to enter like this": 8.2658
     },
     "songs": {
-      "pr_edw864ulya.mp3": 11.7307,
-      "sw_powergloveplaybackvinylr.mp3": 10.1177,
-      "sw_sentemaisoverslowed.mp3": 9.77,
-      "sw_aura1hourauramusicplayli.mp3": 9.2203,
-      "pr_ytsearch1joehisaishionesummersdaypiano.mp3": 9.0584,
-      "pr_gl6beebcuu.mp3": 8.6959,
-      "sw_phnk2.mp3": 8.4868,
-      "pr_ytsearch1henrymancinimoonriverinstrument.mp3": 8.2059
+      "pr_edw864ulya.mp3": 11.7573,
+      "sw_powergloveplaybackvinylr.mp3": 10.1489,
+      "sw_aura1hourauramusicplayli.mp3": 9.2246,
+      "pr_ytsearch1joehisaishionesummersdaypiano.mp3": 9.1074,
+      "pr_turan2astxrzxguss.mp3": 8.5347,
+      "pr_gl6beebcuu.mp3": 8.8172,
+      "pr_ytsearch1henrymancinimoonriverinstrument.mp3": 8.2421,
+      "sw_passobemsolto.mp3": 8.2658
     }
   }
 }

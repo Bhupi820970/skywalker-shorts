@@ -69,6 +69,60 @@
   "fallback_asset": "oppenheimer_scene1_h264.mp4"
  },
  {
+  "id": "20261129-1130-animal",
+  "slot": "2026-11-29T11:30:00+05:30",
+  "pillar": "bollywood",
+  "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
+  "alt_source_urls": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4"
+  ],
+  "scene_assets": [
+   "animal_scene2_h264.mp4",
+   "animal_scene3_h264.mp4",
+   "animal_scene4_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "animal_scene2_h264.mp4",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene4_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene4_h264.mp4"
+  ],
+  "template": "whitebar",
+  "hook": "Why he is the villain",
+  "words": "ANIMAL",
+  "title": "Why he is the villain | ANIMAL | #edit",
+  "description": "Why he is the villain. Official scene clip. Edit by Skywalker.",
+  "tags": [
+   "animal",
+   "ranbirkapoor",
+   "bollywood",
+   "edit",
+   "phonk",
+   "aura",
+   "action",
+   "part3"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "link_request": true,
+  "demo": false,
+  "no_publish": false,
+  "series_part": 3,
+  "series_parent": "20261118-1230-jjk0",
+  "series_slug": "animal",
+  "avoid_sources": [
+   "animal_scene1_h264.mp4"
+  ]
+ },
+ {
   "id": "20261129-1330-princessmononoke",
   "slot": "2026-11-29T13:30:00+05:30",
   "pillar": "anime",
@@ -189,6 +243,57 @@
   "series_slug": "animal",
   "avoid_sources": [
    "animal_scene1_h264.mp4"
+  ]
+ },
+ {
+  "id": "20261129-2030-dandadanevil",
+  "slot": "2026-11-29T20:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+  "alt_source_urls": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4"
+  ],
+  "scene_assets": [
+   "dandadanevil_scene2_h264.mp4",
+   "dandadanevil_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dandadanevil_scene2_h264.mp4",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene3_h264.mp4"
+  ],
+  "template": "whitebar",
+  "hook": "Evil Eye was a lonely kid",
+  "words": "DAN DA DAN",
+  "title": "Evil Eye was a lonely kid | DAN DA DAN | #edit",
+  "description": "Evil Eye was a lonely kid. Official scene clip. Edit by Skywalker.",
+  "tags": [
+   "dandadanevil",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "okarun",
+   "part2"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "link_request": true,
+  "demo": false,
+  "no_publish": false,
+  "series_part": 2,
+  "series_parent": "20261124-0900-dandadanevil",
+  "series_slug": "dandadanevil",
+  "avoid_sources": [
+   "dandadanevil_scene1_h264.mp4"
   ]
  },
  {
