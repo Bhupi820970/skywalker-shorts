@@ -381,5 +381,7 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-dandadanevil-08",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "publish_blocked": "repeat: same source clip posted <72h ago (20261124-0900-dandadanevil)",
+  "publish_blocked_at": "2026-11-25 06:31 IST"
 }
