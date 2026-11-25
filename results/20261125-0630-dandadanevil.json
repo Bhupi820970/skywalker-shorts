@@ -1,0 +1,385 @@
+{
+  "id": "20261125-0630-dandadanevil",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok (assigned from stock-dandadanevil-08)",
+  "at": "2026-11-25 06:30 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45456391594",
+  "slot": "2026-11-25T06:30:00+05:30",
+  "title": "Nobody expected Evil Eye to have this backstory #dandadan #evileye #animeedit",
+  "hook": "He was sacrificed to create a monster",
+  "description": "He was sacrificed to create a monster. A dramatic look into the tragic sacrifice that created the terrifying Evil Eye in Dan Da Dan. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #evileye #animeedit #shorts #edit",
+  "tags": [
+    "dandadan",
+    "evileye",
+    "animeedit",
+    "dandadanevil",
+    "anime",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
+  ],
+  "queue_meta": {
+    "hook": "Evil Eye was a lonely kid",
+    "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+    "description": "Evil Eye was a lonely kid. From official Dan Da Dan Evil Eye clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dandadanevil",
+    "tags": [
+      "dandadanevil",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "okarun"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "curiosity gap",
+  "title_candidates": [
+    {
+      "title": "Nobody expected Evil Eye to have this backstory",
+      "click_score": 94.0
+    },
+    {
+      "title": "Evil Eye's origins were darker than anyone knew",
+      "click_score": 91.0
+    },
+    {
+      "title": "The moment Evil Eye became the ultimate threat",
+      "click_score": 89.0
+    },
+    {
+      "title": "Okarun had no idea who he was really fighting",
+      "click_score": 88.0
+    },
+    {
+      "title": "Dan Da Dan revealed the terrifying truth about Evil Eye",
+      "click_score": 86.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 42.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 37.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 26.5,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key5",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key5",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 37.0,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 36.4,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 7.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 8.8,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-dandadanevil",
+  "stock": true,
+  "stock_topic": "backup-dandadanevil",
+  "spare": true,
+  "words": "DAN DA DAN",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+      "music": "pr_edw864ulya.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dandadanevil-08.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 3.413,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene1_h264.mp4",
+  "music": "pr_edw864ulya.mp3",
+  "music_credit": "Song: Phonk Time - HEAVENLY JUMPSTYLE (Tiktok Version) - TWXNY x Sxilwix x INNXCENCE\nOfficial link: https://www.youtube.com/watch?v=EDw86_4uLyA",
+  "description_final": "He was sacrificed to create a monster. A dramatic look into the tragic sacrifice that created the terrifying Evil Eye in Dan Da Dan. From the official Dan Da Dan trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dandadan #evileye #animeedit #shorts #edit\n\nMusic:\nSong: Phonk Time - HEAVENLY JUMPSTYLE (Tiktok Version) - TWXNY x Sxilwix x INNXCENCE\nOfficial link: https://www.youtube.com/watch?v=EDw86_4uLyA",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dandadanevil-08-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.685,
+      "audio": true
+    },
+    "lufs": -14.1,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.4,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 53,
+      "masked_rows": [
+        [
+          0.2448,
+          0.3417
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 470,
+    "bar_h": 186,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1734,
+    "block_h": 1920,
+    "drop_t": 3.413,
+    "energy": true,
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 42,
+      "src_start": 137.721,
+      "dur": 1.5,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 11,
+      "src_start": 40.707,
+      "dur": 1.913,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 23001,
+      "src_start": 83.35,
+      "dur": 1.533,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 27,
+      "src_start": 96.68,
+      "dur": 1.556,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 21,
+      "src_start": 68.193,
+      "dur": 2.067,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 13,
+      "src_start": 47.923,
+      "dur": 2.09,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 2,
+      "src_start": 8.967,
+      "dur": 1.556,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 22,
+      "src_start": 73.865,
+      "dur": 1.556,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 25,
+      "src_start": 90.257,
+      "dur": 2.577,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
+    },
+    {
+      "id": 18,
+      "src_start": 61.395,
+      "dur": 1.5,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
+    },
+    {
+      "id": 6,
+      "src_start": 22.898,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 10,
+      "src_start": 36.995,
+      "dur": 1.5,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 8,
+      "src_start": 29.071,
+      "dur": 1.253,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
+    }
+  ],
+  "qc_status": "pass",
+  "stock_id": "stock-dandadanevil-08",
+  "assigned_from_stock": true
+}

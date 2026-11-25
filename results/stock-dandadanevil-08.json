@@ -379,5 +379,9 @@
       "reason": "gemini score 6.5"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "stock_used": true,
+  "assigned_slot": "2026-11-25T06:30:00+05:30",
+  "assigned_result": "20261125-0630-dandadanevil",
+  "used_at": "2026-11-25 06:30 IST"
 }
