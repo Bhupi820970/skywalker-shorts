@@ -1,0 +1,1641 @@
+{
+  "id": "demo-v17-refmatch",
+  "status": "retry_queued",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-25 08:13 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45531181496",
+  "slot": null,
+  "title": "San kills for this forest | Princess Mononoke | #edit",
+  "hook": "San kills for this forest",
+  "description": "DEMO (not published). San kills for this forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke",
+  "tags": [
+    "princessmononoke",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "test"
+  ],
+  "queue_meta": {
+    "hook": "San kills for this forest",
+    "title": "San kills for this forest | Princess Mononoke | #edit",
+    "description": "DEMO (not published). San kills for this forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke",
+    "tags": [
+      "princessmononoke",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "test"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "PRINCESS MONONOKE",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/test-renders",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/test-renders/test-demo-v17-refmatch.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 22.22,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+  "music": "pr_montagemsantafe2.mp3",
+  "music_credit": "Song: qaraqshy - Topic - MONTAGEM SANTA FE 2\nOfficial link: https://www.youtube.com/watch?v=31mfKG8uOm8",
+  "description_final": "DEMO (not published). San kills for this forest. From official Princess Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #princessmononoke\n\nMusic:\nSong: qaraqshy - Topic - MONTAGEM SANTA FE 2\nOfficial link: https://www.youtube.com/watch?v=31mfKG8uOm8",
+  "no_publish": true,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/test-renders/test-demo-v17-refmatch-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 534,
+    "bar_h": 122,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1798,
+    "block_h": 1920,
+    "drop_t": 22.22,
+    "energy": true,
+    "story_caption_boxes": [
+      {
+        "t0": 0.18,
+        "t1": 1.14,
+        "box": [
+          273,
+          1170,
+          534,
+          62
+        ],
+        "zone": "chin",
+        "text": "STAY YOUR HAND",
+        "faces": [
+          [
+            5,
+            1071,
+            59,
+            91
+          ],
+          [
+            91,
+            1087,
+            44,
+            50
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 1.14,
+        "t1": 1.86,
+        "box": [
+          258,
+          1170,
+          564,
+          62
+        ],
+        "zone": "chin",
+        "text": "THE GIRL'S LIFE IS",
+        "faces": [
+          [
+            7,
+            1076,
+            57,
+            90
+          ],
+          [
+            88,
+            1086,
+            37,
+            45
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 1.86,
+        "t1": 2.78,
+        "box": [
+          369,
+          1170,
+          342,
+          62
+        ],
+        "zone": "chin",
+        "text": "NOW MINE",
+        "faces": [
+          [
+            11,
+            1089,
+            59,
+            87
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 2.78,
+        "t1": 3.54,
+        "box": [
+          261,
+          941,
+          558,
+          62
+        ],
+        "zone": "mid",
+        "text": "THERE'S A DEMON",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 3.54,
+        "t1": 4.813,
+        "box": [
+          307,
+          1095,
+          466,
+          62
+        ],
+        "zone": "chin",
+        "text": "INSIDE OF YOU",
+        "faces": [
+          [
+            438,
+            863,
+            179,
+            211
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 4.813,
+        "t1": 5.573,
+        "box": [
+          203,
+          885,
+          673,
+          62
+        ],
+        "zone": "chin",
+        "text": "THIS IS WHAT HATRED",
+        "faces": [
+          [
+            271,
+            1117,
+            52,
+            71
+          ],
+          [
+            703,
+            712,
+            89,
+            132
+          ],
+          [
+            457,
+            745,
+            95,
+            128
+          ],
+          [
+            28,
+            1096,
+            53,
+            63
+          ],
+          [
+            103,
+            1130,
+            39,
+            48
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 5.573,
+        "t1": 6.213,
+        "box": [
+          353,
+          891,
+          374,
+          62
+        ],
+        "zone": "chin",
+        "text": "LOOKS LIKE",
+        "faces": [
+          [
+            709,
+            711,
+            90,
+            135
+          ],
+          [
+            460,
+            754,
+            98,
+            125
+          ],
+          [
+            274,
+            1120,
+            50,
+            74
+          ],
+          [
+            168,
+            1124,
+            47,
+            59
+          ],
+          [
+            339,
+            1141,
+            39,
+            53
+          ],
+          [
+            926,
+            1118,
+            46,
+            60
+          ],
+          [
+            999,
+            1106,
+            60,
+            77
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 6.213,
+        "t1": 7.847,
+        "box": [
+          251,
+          941,
+          578,
+          62
+        ],
+        "zone": "mid",
+        "text": "THIS IT'S ME ALIVE",
+        "faces": [
+          [
+            991,
+            1092,
+            61,
+            85
+          ],
+          [
+            685,
+            705,
+            93,
+            121
+          ],
+          [
+            270,
+            1117,
+            54,
+            74
+          ],
+          [
+            399,
+            762,
+            94,
+            118
+          ],
+          [
+            337,
+            1141,
+            35,
+            41
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 7.847,
+        "t1": 8.927,
+        "box": [
+          170,
+          895,
+          739,
+          62
+        ],
+        "zone": "chin",
+        "text": "AND VERY SOON NOW IT",
+        "faces": [
+          [
+            409,
+            752,
+            99,
+            130
+          ],
+          [
+            1008,
+            1099,
+            60,
+            80
+          ],
+          [
+            713,
+            699,
+            97,
+            117
+          ],
+          [
+            275,
+            1118,
+            58,
+            87
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 8.927,
+        "t1": 9.98,
+        "box": [
+          543,
+          834,
+          501,
+          80
+        ],
+        "zone": "chin_off",
+        "text": "WILL KILL ME",
+        "faces": [
+          [
+            291,
+            1117,
+            56,
+            86
+          ],
+          [
+            1032,
+            1100,
+            53,
+            92
+          ],
+          [
+            435,
+            758,
+            94,
+            118
+          ],
+          [
+            748,
+            695,
+            92,
+            127
+          ],
+          [
+            957,
+            1126,
+            49,
+            58
+          ],
+          [
+            361,
+            1144,
+            32,
+            38
+          ]
+        ],
+        "style": "RefSerif"
+      },
+      {
+        "t0": 9.98,
+        "t1": 10.54,
+        "box": [
+          317,
+          941,
+          445,
+          62
+        ],
+        "zone": "mid",
+        "text": "I'M GETTING A",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 10.54,
+        "t1": 11.18,
+        "box": [
+          271,
+          941,
+          538,
+          62
+        ],
+        "zone": "mid",
+        "text": "LITTLE BORED OF",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 11.18,
+        "t1": 11.82,
+        "box": [
+          306,
+          941,
+          467,
+          62
+        ],
+        "zone": "mid",
+        "text": "THIS CURSE OF",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 11.82,
+        "t1": 12.2,
+        "box": [
+          425,
+          1079,
+          230,
+          62
+        ],
+        "zone": "chin",
+        "text": "YOURS",
+        "faces": [
+          [
+            395,
+            727,
+            253,
+            320
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 12.2,
+        "t1": 13.047,
+        "box": [
+          378,
+          941,
+          323,
+          62
+        ],
+        "zone": "mid",
+        "text": "ASHITAKA",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 13.047,
+        "t1": 14.027,
+        "box": [
+          207,
+          1023,
+          666,
+          62
+        ],
+        "zone": "chin",
+        "text": "SOMEONE COME HERE",
+        "faces": [
+          [
+            22,
+            1107,
+            48,
+            69
+          ],
+          [
+            95,
+            1138,
+            44,
+            57
+          ],
+          [
+            527,
+            900,
+            97,
+            112
+          ],
+          [
+            1016,
+            1090,
+            47,
+            60
+          ],
+          [
+            145,
+            1134,
+            45,
+            54
+          ],
+          [
+            936,
+            1107,
+            42,
+            63
+          ],
+          [
+            1042,
+            1132,
+            43,
+            73
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 14.027,
+        "t1": 14.767,
+        "box": [
+          220,
+          1019,
+          640,
+          62
+        ],
+        "zone": "chin",
+        "text": "AND TAKE HER FROM",
+        "faces": [
+          [
+            24,
+            1112,
+            47,
+            65
+          ],
+          [
+            95,
+            1143,
+            48,
+            61
+          ],
+          [
+            146,
+            1139,
+            48,
+            60
+          ],
+          [
+            537,
+            890,
+            97,
+            118
+          ],
+          [
+            948,
+            1115,
+            39,
+            57
+          ],
+          [
+            1026,
+            1093,
+            46,
+            55
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 14.767,
+        "t1": 15.447,
+        "box": [
+          478,
+          1024,
+          123,
+          61
+        ],
+        "zone": "chin",
+        "text": "ME",
+        "faces": [
+          [
+            23,
+            1119,
+            53,
+            72
+          ],
+          [
+            98,
+            1152,
+            47,
+            59
+          ],
+          [
+            149,
+            1145,
+            48,
+            61
+          ],
+          [
+            546,
+            899,
+            95,
+            114
+          ],
+          [
+            961,
+            1120,
+            34,
+            54
+          ],
+          [
+            1032,
+            1095,
+            46,
+            65
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 15.447,
+        "t1": 16.347,
+        "box": [
+          318,
+          1111,
+          443,
+          62
+        ],
+        "zone": "low",
+        "text": "DON'T WORRY",
+        "faces": [
+          [
+            -3,
+            1006,
+            53,
+            85
+          ],
+          [
+            90,
+            984,
+            55,
+            81
+          ],
+          [
+            416,
+            976,
+            75,
+            89
+          ],
+          [
+            824,
+            833,
+            78,
+            115
+          ],
+          [
+            649,
+            841,
+            52,
+            111
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 16.347,
+        "t1": 16.727,
+        "box": [
+          361,
+          1070,
+          357,
+          62
+        ],
+        "zone": "chin",
+        "text": "SHE'S JUST",
+        "faces": [
+          [
+            0,
+            1003,
+            43,
+            89
+          ],
+          [
+            86,
+            984,
+            52,
+            83
+          ],
+          [
+            914,
+            839,
+            66,
+            111
+          ],
+          [
+            446,
+            970,
+            81,
+            91
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 16.727,
+        "t1": 17.48,
+        "box": [
+          387,
+          1076,
+          305,
+          62
+        ],
+        "zone": "chin",
+        "text": "STUNNED",
+        "faces": [
+          [
+            -1,
+            1006,
+            52,
+            91
+          ],
+          [
+            1020,
+            977,
+            57,
+            90
+          ],
+          [
+            93,
+            985,
+            50,
+            92
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 17.48,
+        "t1": 18.34,
+        "box": [
+          365,
+          971,
+          349,
+          62
+        ],
+        "zone": "chin",
+        "text": "AS FOR ME",
+        "faces": [
+          [
+            77,
+            1005,
+            56,
+            91
+          ],
+          [
+            520,
+            814,
+            115,
+            143
+          ],
+          [
+            921,
+            991,
+            58,
+            84
+          ],
+          [
+            882,
+            965,
+            57,
+            84
+          ],
+          [
+            1003,
+            1004,
+            48,
+            57
+          ],
+          [
+            27,
+            1020,
+            46,
+            58
+          ],
+          [
+            258,
+            1025,
+            50,
+            62
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 18.34,
+        "t1": 18.96,
+        "box": [
+          346,
+          975,
+          388,
+          62
+        ],
+        "zone": "chin",
+        "text": "I'M LEAVING",
+        "faces": [
+          [
+            929,
+            998,
+            55,
+            77
+          ],
+          [
+            255,
+            1028,
+            61,
+            83
+          ],
+          [
+            115,
+            1013,
+            56,
+            89
+          ],
+          [
+            529,
+            813,
+            114,
+            148
+          ],
+          [
+            26,
+            1026,
+            37,
+            48
+          ],
+          [
+            820,
+            995,
+            57,
+            88
+          ],
+          [
+            1011,
+            1012,
+            45,
+            53
+          ],
+          [
+            81,
+            1004,
+            43,
+            66
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 18.96,
+        "t1": 19.52,
+        "box": [
+          228,
+          1111,
+          624,
+          62
+        ],
+        "zone": "low",
+        "text": "AND I'M TAKING THE",
+        "faces": [
+          [
+            936,
+            998,
+            58,
+            81
+          ],
+          [
+            115,
+            1014,
+            55,
+            92
+          ],
+          [
+            259,
+            1029,
+            60,
+            83
+          ],
+          [
+            534,
+            817,
+            115,
+            148
+          ],
+          [
+            27,
+            1029,
+            37,
+            48
+          ],
+          [
+            1018,
+            1013,
+            45,
+            52
+          ],
+          [
+            826,
+            998,
+            56,
+            86
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 19.52,
+        "t1": 20.413,
+        "box": [
+          363,
+          971,
+          353,
+          62
+        ],
+        "zone": "chin",
+        "text": "WOLF GIRL",
+        "faces": [
+          [
+            97,
+            1004,
+            71,
+            91
+          ],
+          [
+            252,
+            1034,
+            61,
+            81
+          ],
+          [
+            848,
+            1003,
+            59,
+            86
+          ],
+          [
+            925,
+            1001,
+            55,
+            74
+          ],
+          [
+            540,
+            815,
+            110,
+            142
+          ],
+          [
+            1033,
+            961,
+            51,
+            95
+          ],
+          [
+            19,
+            1029,
+            42,
+            56
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 20.413,
+        "t1": 21.173,
+        "box": [
+          439,
+          1111,
+          202,
+          62
+        ],
+        "zone": "low",
+        "text": "MOVE",
+        "faces": [
+          [
+            377,
+            750,
+            67,
+            85
+          ],
+          [
+            138,
+            789,
+            98,
+            134
+          ],
+          [
+            784,
+            767,
+            108,
+            135
+          ],
+          [
+            963,
+            707,
+            95,
+            123
+          ],
+          [
+            2,
+            792,
+            63,
+            101
+          ],
+          [
+            57,
+            737,
+            69,
+            92
+          ],
+          [
+            291,
+            720,
+            73,
+            94
+          ],
+          [
+            647,
+            712,
+            37,
+            44
+          ],
+          [
+            297,
+            820,
+            72,
+            98
+          ],
+          [
+            555,
+            839,
+            100,
+            134
+          ],
+          [
+            697,
+            728,
+            29,
+            36
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 21.173,
+        "t1": 22.067,
+        "box": [
+          325,
+          917,
+          429,
+          80
+        ],
+        "zone": "chin",
+        "text": "AND I FIRE!",
+        "faces": [
+          [
+            379,
+            749,
+            69,
+            85
+          ],
+          [
+            138,
+            795,
+            97,
+            128
+          ],
+          [
+            -2,
+            793,
+            70,
+            107
+          ],
+          [
+            972,
+            703,
+            96,
+            129
+          ],
+          [
+            292,
+            720,
+            73,
+            96
+          ],
+          [
+            793,
+            767,
+            108,
+            137
+          ],
+          [
+            65,
+            742,
+            63,
+            88
+          ],
+          [
+            651,
+            712,
+            38,
+            46
+          ],
+          [
+            297,
+            821,
+            73,
+            92
+          ]
+        ],
+        "style": "RefSerif"
+      }
+    ],
+    "dialogue_captions": {
+      "count": 27,
+      "text": "STAY YOUR HAND / THE GIRL'S LIFE IS / NOW MINE / THERE'S A DEMON / INSIDE OF YOU / THIS IS WHAT HATRED / LOOKS LIKE / THIS IT'S ME ALIVE / AND VERY SOON NOW IT / WILL KILL ME / I'M GETTING A / LITTLE BORED OF / THIS CURSE OF / YOURS / ASHITAKA / SOMEONE COME HERE / AND TAKE HER FROM / ME / DON'T WORRY / SHE'S JUST / STUNNED / AS FOR ME / I'M LEAVING / AND I'M TAKING THE / WOLF GIRL / MOVE / AND I FIRE!",
+      "style": "riyio ref glow (Playfair)"
+    },
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows_uncaptioned": [
+      [
+        0.0,
+        2.4
+      ],
+      [
+        2.6,
+        6.366
+      ],
+      [
+        6.487,
+        12.867
+      ],
+      [
+        12.987,
+        15.067
+      ],
+      [
+        15.387,
+        17.3
+      ],
+      [
+        17.42,
+        20.02
+      ],
+      [
+        20.353,
+        21.853
+      ]
+    ],
+    "speech_windows": [],
+    "edit_mode": "dialogue_drop",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 7,
+      "src_start": 15.17,
+      "dur": 2.62
+    },
+    {
+      "id": 10,
+      "src_start": 21.71,
+      "dur": 2.06
+    },
+    {
+      "id": 14,
+      "src_start": 31.7,
+      "dur": 1.76
+    },
+    {
+      "id": 14,
+      "src_start": 35.64,
+      "dur": 3.44
+    },
+    {
+      "id": 16,
+      "src_start": 41.7,
+      "dur": 3.08
+    },
+    {
+      "id": 23,
+      "src_start": 55.39,
+      "dur": 2.42
+    },
+    {
+      "id": 25,
+      "src_start": 63.21,
+      "dur": 2.06
+    },
+    {
+      "id": 26,
+      "src_start": 70.88,
+      "dur": 2.94
+    },
+    {
+      "id": 29,
+      "src_start": 80.38,
+      "dur": 1.84
+    },
+    {
+      "id": 31,
+      "src_start": 85.007,
+      "dur": 0.697
+    },
+    {
+      "id": 20,
+      "src_start": 49.576,
+      "dur": 0.697
+    },
+    {
+      "id": 4,
+      "src_start": 7.811,
+      "dur": 0.813
+    },
+    {
+      "id": 3,
+      "src_start": 4.672,
+      "dur": 0.789
+    },
+    {
+      "id": 5,
+      "src_start": 11.08,
+      "dur": 0.697
+    },
+    {
+      "id": 12,
+      "src_start": 27.116,
+      "dur": 0.697
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/princessmononoke_scene1_h264.mp4",
+      "music": "pr_montagemsantafe2.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false
+}
