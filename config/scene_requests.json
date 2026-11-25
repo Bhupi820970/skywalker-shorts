@@ -1,48 +1,10 @@
 {
- "generated_at": "2026-11-26 00:19 IST",
+ "generated_at": "2026-11-26 01:28 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 101,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "witchhatatelier",
-   "slot": "2026-11-25T18:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261125-1830-witchhatatelier",
-   "pillar": "anime",
-   "words": "WITCH HAT ATELIER",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "WITCH HAT ATELIER fight scene official clip",
-    "WITCH HAT ATELIER best scene official clip",
-    "WITCH HAT ATELIER official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "TVアニメ「とんがり帽子のアトリエ」公式 and 2 more"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Coco drew her first spell",
-   "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
-   "tags": [
-    "witchhatatelier",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "coco"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "spiritedaway",
    "slot": "2026-11-25T22:30:00+05:30",
@@ -1297,6 +1259,45 @@
    "market": "US/UK"
   },
   {
+   "slug": "mononoke",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-mononoke",
+   "pillar": "anime",
+   "words": "MONONOKE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "MONONOKE fight scene official clip",
+    "MONONOKE best scene official clip",
+    "MONONOKE official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime",
+    "Netflix Philippines"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=xpJWvpumgxs",
+   "missing_assets": [],
+   "on_release": [
+    "mononoke_scene1_h264.mp4"
+   ],
+   "hook": "The Medicine Seller sees everything",
+   "title": "The Medicine Seller sees everything | Mononoke | #edit",
+   "tags": [
+    "mononoke",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "medicineseller"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "mushokutensei2",
    "slot": "9999",
    "for": "backup_pool",
@@ -1903,6 +1904,47 @@
     "shorts",
     "trending",
     "sakura"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "witchhatatelier",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-witchhatatelier",
+   "pillar": "anime",
+   "words": "WITCH HAT ATELIER",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "WITCH HAT ATELIER fight scene official clip",
+    "WITCH HAT ATELIER best scene official clip",
+    "WITCH HAT ATELIER official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "TVアニメ「とんがり帽子のアトリエ」公式 and 2 more"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
+   "missing_assets": [
+    "witchhatatelier_scene1_h264.mp4",
+    "witchhatatelier_scene3_h264.mp4"
+   ],
+   "on_release": [],
+   "hook": "Coco drew her first spell",
+   "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
+   "tags": [
+    "witchhatatelier",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "coco"
    ],
    "market": "US/UK"
   },
