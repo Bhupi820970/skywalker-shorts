@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-25T11:25:41Z",
-  "last_upload_at": "2026-11-24T12:51:58Z"
+  "last_run_at": "2026-11-25T17:07:42Z",
+  "last_upload_at": "2026-11-25T17:07:42Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -30,6 +30,7 @@
   "yt:AXbeD92Ty50",
   "yt:B0pIISs-o8w",
   "yt:BU--ttm4nYs",
+  "yt:CFjI21M9wZs",
   "yt:DDAHHPGcLzo",
   "yt:DIefkYvjq6E",
   "yt:EovTf8Mydo4",
@@ -1577,6 +1578,17 @@
    "res": "1920x1080",
    "by": "box",
    "at": "2026-11-23T17:13:25Z"
+  },
+  {
+   "asset": "kaiju8s2_scene3_h264.mp4",
+   "id": "yt:CFjI21M9wZs",
+   "title": "“Kaiju No. 8” Opening Theme Animation｜'ABYSS' by YUNGBLUD",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 15613,
+   "by": "box",
+   "at": "2026-11-25T17:07:42Z"
   }
  ],
  "github": {
