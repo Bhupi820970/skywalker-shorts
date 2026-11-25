@@ -1,207 +1,7 @@
 [
  {
-  "id": "20261126-0630-bluegiant",
+  "id": "20261126-0630-suzume",
   "slot": "2026-11-26T06:30:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=KaB7tTJ2T5o",
-  "template": "whitebar",
-  "hook": "His saxophone hits like thunder",
-  "words": "BLUE GIANT",
-  "title": "His saxophone hits like thunder | Blue Giant | #edit",
-  "description": "His saxophone hits like thunder. From official Blue Giant clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bluegiant",
-  "tags": [
-   "bluegiant",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "dai"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "bluegiant_scene1_h264.mp4"
- },
- {
-  "id": "20261126-0900-onepunchman3",
-  "slot": "2026-11-26T09:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
-  "template": "whitebar",
-  "hook": "Saitama ends fights in one hit",
-  "words": "ONE PUNCH MAN",
-  "title": "Saitama ends fights in one hit | One Punch Man | #edit",
-  "description": "Saitama ends fights in one hit. From official One Punch Man clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #onepunchman3",
-  "tags": [
-   "onepunchman3",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "saitama"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/onepunchman3_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/onepunchman3_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "onepunchman3_scene1_h264.mp4"
- },
- {
-  "id": "20261126-1130-boyandheron",
-  "slot": "2026-11-26T11:30:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
-  "template": "whitebar",
-  "hook": "The heron knew his secret",
-  "words": "THE BOY AND THE HERON",
-  "title": "The heron knew his secret | The Boy and the Heron | #edit",
-  "description": "The heron knew his secret. From official The Boy and the Heron clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #boyandheron",
-  "tags": [
-   "boyandheron",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "mahito"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "boyandheron_scene1_h264.mp4"
- },
- {
-  "id": "20261126-1330-arcane2",
-  "slot": "2026-11-26T13:30:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-  "template": "whitebar",
-  "hook": "Jinx never wanted this war",
-  "words": "ARCANE",
-  "title": "Jinx never wanted this war | Arcane | #edit",
-  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane2",
-  "tags": [
-   "arcane2",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "jinx"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "arcane2_scene3_h264.mp4"
- },
- {
-  "id": "20261126-1600-dragonballdaima",
-  "slot": "2026-11-26T16:00:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
-  "template": "whitebar",
-  "hook": "Goku got small, not weak",
-  "words": "DRAGON BALL DAIMA",
-  "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
-  "description": "Goku got small, not weak. From official Dragon Ball Daima clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dragonballdaima",
-  "tags": [
-   "dragonballdaima",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "goku"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "dragonballdaima_scene1_h264.mp4"
- },
- {
-  "id": "20261126-1830-weatheringwithyou",
-  "slot": "2026-11-26T18:30:00+05:30",
-  "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
-  "template": "whitebar",
-  "hook": "The sky followed them",
-  "words": "WEATHERING WITH YOU",
-  "title": "The sky followed them | Weathering With You | #edit",
-  "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
-  "tags": [
-   "weatheringwithyou",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "hina",
-   "hodaka"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "romance scene",
-  "edit_format": "love",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "weatheringwithyou_scene1_h264.mp4"
- },
- {
-  "id": "20261126-2030-suzume",
-  "slot": "2026-11-26T20:30:00+05:30",
   "pillar": "romance",
   "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
   "template": "whitebar",
@@ -237,20 +37,86 @@
   "fallback_asset": "suzume_scene1_h264.mp4"
  },
  {
-  "id": "20261126-2230-don2",
-  "slot": "2026-11-26T22:30:00+05:30",
-  "pillar": "bollywood",
-  "source_url": "https://www.youtube.com/watch?v=Q4Tr7giZaXM",
+  "id": "20261126-0900-kgf",
+  "slot": "2026-11-26T09:00:00+05:30",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=HYfycqyIuEk",
   "template": "whitebar",
-  "hook": "Don let them think they had won",
-  "words": "DON 2",
-  "title": "Don let them think they had won | Don 2 | #edit",
-  "description": "Why Don surrendered himself to police. From official Don 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #don2 #shahrukhkhan #srk",
+  "hook": "Rocky walked in and took the city",
+  "words": "KGF",
+  "title": "Rocky walked in and took the city | KGF | #edit",
+  "description": "Why Rocky owns the city. From official Kgf Chapter 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #kgf2 #rockybhai #south",
   "tags": [
-   "don2",
-   "shahrukhkhan",
-   "srk",
-   "don",
+   "kgf2",
+   "rockybhai",
+   "south",
+   "edit",
+   "phonk",
+   "aura",
+   "action"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "kgf_scene1_h264.mp4"
+ },
+ {
+  "id": "20261126-1130-mashle",
+  "slot": "2026-11-26T11:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
+  "template": "whitebar",
+  "hook": "Mash breaks magic with muscles",
+  "words": "MASHLE",
+  "title": "Mash breaks magic with muscles | Mashle | #edit",
+  "description": "Mash breaks magic with muscles. From official Mashle clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mashle",
+  "tags": [
+   "mashle",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "mash"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mashle_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mashle_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "mashle_scene1_h264.mp4"
+ },
+ {
+  "id": "20261126-1330-dhoom2",
+  "slot": "2026-11-26T13:30:00+05:30",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=fmKWuAVt1vI",
+  "template": "whitebar",
+  "hook": "He walked off the train in a new face",
+  "words": "DHOOM 2",
+  "title": "He walked off the train in a new face | Dhoom 2 | #edit",
+  "description": "Why Mr A never got caught. From official Dhoom 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dhoom2 #hrithikroshan #mra",
+  "tags": [
+   "dhoom2",
+   "hrithikroshan",
+   "mra",
+   "yrf",
    "bollywoodedit",
    "bollywood"
   ],
@@ -259,14 +125,135 @@
   "market": "IN",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene2_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene2_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "don2_scene1_h264.mp4"
+  "fallback_asset": "dhoom2_scene1_h264.mp4"
+ },
+ {
+  "id": "20261126-1600-jjkgojovstoji",
+  "slot": "2026-11-26T16:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
+  "template": "whitebar",
+  "hook": "Why Toji could not break Gojo",
+  "words": "JUJUTSU KAISEN",
+  "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
+  "description": "Why Toji could not break Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jujutsukaisen #gojosatoru #tojifushiguro",
+  "tags": [
+   "jujutsukaisen",
+   "gojosatoru",
+   "tojifushiguro",
+   "jjk",
+   "animeedit",
+   "anime",
+   "gojo"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene"
+ },
+ {
+  "id": "20261126-1830-johnwick",
+  "slot": "2026-11-26T18:30:00+05:30",
+  "pillar": "hollywood",
+  "source_url": "https://www.youtube.com/watch?v=01nJH1Mek6I",
+  "template": "whitebar",
+  "hook": "The nightclub did not survive him",
+  "words": "JOHN WICK",
+  "title": "The nightclub did not survive him | John Wick | #edit",
+  "description": "Why everyone feared the Baba Yaga. From official John Wick clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #johnwick #keanureeves #action",
+  "tags": [
+   "johnwick",
+   "keanureeves",
+   "action",
+   "hollywood",
+   "johnwickedit",
+   "movieclips"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/johnwick_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/johnwick_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "johnwick_scene1_h264.mp4"
+ },
+ {
+  "id": "20261126-2030-bluegiant",
+  "slot": "2026-11-26T20:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=KaB7tTJ2T5o",
+  "template": "whitebar",
+  "hook": "His saxophone hits like thunder",
+  "words": "BLUE GIANT",
+  "title": "His saxophone hits like thunder | Blue Giant | #edit",
+  "description": "His saxophone hits like thunder. From official Blue Giant clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bluegiant",
+  "tags": [
+   "bluegiant",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "dai"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bluegiant_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "bluegiant_scene1_h264.mp4"
+ },
+ {
+  "id": "20261126-2230-warmovie",
+  "slot": "2026-11-26T22:30:00+05:30",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=-RuSqMYcQK0",
+  "template": "whitebar",
+  "hook": "Kabir entered and the fight was already over",
+  "words": "WAR",
+  "title": "Kabir entered and the fight was already over | War | #edit",
+  "description": "Why Kabir was unmatched in battle. From official War clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #war #hrithikroshan #tigerseghal",
+  "tags": [
+   "war",
+   "hrithikroshan",
+   "tigerseghal",
+   "yrf",
+   "bollywood",
+   "waredit",
+   "action"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "warmovie_scene1_h264.mp4"
  }
 ]

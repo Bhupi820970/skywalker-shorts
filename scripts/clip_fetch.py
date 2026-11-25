@@ -292,6 +292,8 @@ def apply_records(records: list[dict], who: str, requests_done: list[str]) -> No
                                 + " ".join("#" + x for x in ["edit", "shorts"] + tags[:3]),
                  "tags": tags, "market": req.get("market", "US/UK"), "source_url": rec["url"],
                  "scene_assets": [], "content_kind": "best scene", "added_by": f"clip_fetch:{who}"}
+            if req.get("category"):
+                t["category"] = req["category"]
             items.append(t)
             by[t["slug"]] = t
         if rec["kind"] == "trailer" or sourcing.is_trailer_source(rec.get("asset") or rec.get("title") or ""):
@@ -342,6 +344,8 @@ def register_pool(records: list[dict], topics: dict) -> None:
                  "tags": t.get("tags") or [slug, "edit", "shorts"], "target_dur": 26,
                  "market": t.get("market") or "US/UK", "fallback_release": "sources", "fallback_asset": asset,
                  "content_kind": "best scene", "scene_assets": [], "added_by": "footage_refill"}
+            if t.get("category") or rec["req"].get("category"):
+                b["category"] = t.get("category") or rec["req"].get("category")
             items.append(b)
             by[b["id"]] = b
         if asset not in (b.get("scene_assets") or []):

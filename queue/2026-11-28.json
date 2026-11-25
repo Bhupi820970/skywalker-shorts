@@ -1,193 +1,7 @@
 [
  {
-  "id": "20261128-0630-dhoom2",
+  "id": "20261128-0630-rrr",
   "slot": "2026-11-28T06:30:00+05:30",
-  "pillar": "bollywood",
-  "source_url": "https://www.youtube.com/watch?v=fmKWuAVt1vI",
-  "template": "whitebar",
-  "hook": "He walked off the train in a new face",
-  "words": "DHOOM 2",
-  "title": "He walked off the train in a new face | Dhoom 2 | #edit",
-  "description": "Why Mr A never got caught. From official Dhoom 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dhoom2 #hrithikroshan #mra",
-  "tags": [
-   "dhoom2",
-   "hrithikroshan",
-   "mra",
-   "yrf",
-   "bollywoodedit",
-   "bollywood"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "IN",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene2_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene2_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "dhoom2_scene1_h264.mp4"
- },
- {
-  "id": "20261128-0900-johnwick",
-  "slot": "2026-11-28T09:00:00+05:30",
-  "pillar": "hollywood",
-  "source_url": "https://www.youtube.com/watch?v=01nJH1Mek6I",
-  "template": "whitebar",
-  "hook": "The nightclub did not survive him",
-  "words": "JOHN WICK",
-  "title": "The nightclub did not survive him | John Wick | #edit",
-  "description": "Why everyone feared the Baba Yaga. From official John Wick clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #johnwick #keanureeves #action",
-  "tags": [
-   "johnwick",
-   "keanureeves",
-   "action",
-   "hollywood",
-   "johnwickedit",
-   "movieclips"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/johnwick_scene1_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/johnwick_scene1_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "johnwick_scene1_h264.mp4"
- },
- {
-  "id": "20261128-1130-animal",
-  "slot": "2026-11-28T11:30:00+05:30",
-  "pillar": "bollywood",
-  "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
-  "alt_source_urls": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4"
-  ],
-  "scene_assets": [
-   "animal_scene2_h264.mp4",
-   "animal_scene3_h264.mp4",
-   "animal_scene4_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "animal_scene2_h264.mp4",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene4_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene4_h264.mp4"
-  ],
-  "template": "whitebar",
-  "hook": "He stopped pretending he was the good son",
-  "words": "ANIMAL",
-  "title": "He stopped pretending he was the good son | Animal | #edit",
-  "description": "Why he is the villain. Official scene clip. Edit by Skywalker.",
-  "tags": [
-   "animal",
-   "ranbirkapoor",
-   "bollywood",
-   "edit",
-   "phonk",
-   "aura",
-   "action",
-   "part2"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "link_request": true,
-  "demo": false,
-  "no_publish": false,
-  "series_part": 2,
-  "series_parent": "20261118-1230-jjk0",
-  "series_slug": "animal",
-  "avoid_sources": [
-   "animal_scene1_h264.mp4"
-  ]
- },
- {
-  "id": "20261128-1330-leomovie",
-  "slot": "2026-11-28T13:30:00+05:30",
-  "pillar": "south",
-  "source_url": "https://www.youtube.com/watch?v=TtX8DNALc3I",
-  "template": "whitebar",
-  "hook": "The cafe already knew who he was",
-  "words": "LEO",
-  "title": "The cafe already knew who he was | Leo | #edit",
-  "description": "Why Leo hid his true identity. From official Leo clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #leo #thalapathyvijay #lokeshkanagaraj",
-  "tags": [
-   "leo",
-   "thalapathyvijay",
-   "lokeshkanagaraj",
-   "southcinema",
-   "leoedit",
-   "kollywood"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "IN",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "leomovie_scene1_h264.mp4"
- },
- {
-  "id": "20261128-1600-jjk0",
-  "slot": "2026-11-28T16:00:00+05:30",
-  "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
-  "template": "whitebar",
-  "hook": "Yuta only fights for her",
-  "words": "JUJUTSU KAISEN 0",
-  "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
-  "description": "Yuta only fights for her. From official Jujutsu Kaisen 0 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jjk0",
-  "tags": [
-   "jjk0",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "yuta"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "edit_format": "love",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk0_scene2_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "jjk0_scene2_h264.mp4"
- },
- {
-  "id": "20261128-1830-rrr",
-  "slot": "2026-11-28T18:30:00+05:30",
   "pillar": "south",
   "source_url": "https://www.youtube.com/watch?v=DDAHHPGcLzo",
   "template": "whitebar",
@@ -223,77 +37,126 @@
   "fallback_asset": "rrr_scene1_h264.mp4"
  },
  {
-  "id": "20261128-2030-animal",
-  "slot": "2026-11-28T20:30:00+05:30",
-  "pillar": "bollywood",
-  "source_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4",
-  "alt_source_urls": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4"
-  ],
-  "scene_assets": [
-   "animal_scene3_h264.mp4",
-   "animal_scene4_h264.mp4",
-   "animal_scene5_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "animal_scene3_h264.mp4",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene4_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene5_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene3_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene4_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/animal_scene5_h264.mp4"
-  ],
+  "id": "20261128-0900-dragonballdaima",
+  "slot": "2026-11-28T09:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
   "template": "whitebar",
-  "hook": "This is the part they left out",
-  "words": "ANIMAL",
-  "title": "This is the part they left out | ANIMAL | #edit",
-  "description": "This is the part they left out. Official scene clip. Edit by Skywalker.",
+  "hook": "Goku got small, not weak",
+  "words": "DRAGON BALL DAIMA",
+  "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+  "description": "Goku got small, not weak. From official Dragon Ball Daima clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dragonballdaima",
   "tags": [
-   "animal",
-   "ranbirkapoor",
-   "bollywood",
+   "dragonballdaima",
+   "anime",
+   "animeedit",
    "edit",
-   "phonk",
-   "aura",
-   "action",
-   "part3"
+   "shorts",
+   "trending",
+   "goku"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
-  "link_request": true,
-  "demo": false,
-  "no_publish": false,
-  "series_part": 3,
-  "series_parent": "20261118-1230-jjk0",
-  "series_slug": "animal",
-  "avoid_sources": [
-   "animal_scene1_h264.mp4",
-   "animal_scene2_h264.mp4"
-  ]
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dragonballdaima_scene1_h264.mp4"
  },
  {
-  "id": "20261128-2230-warmovie",
-  "slot": "2026-11-28T22:30:00+05:30",
+  "id": "20261128-1130-gangsofwasseypur",
+  "slot": "2026-11-28T11:30:00+05:30",
   "pillar": "bollywood",
-  "source_url": "https://www.youtube.com/watch?v=-RuSqMYcQK0",
+  "source_url": "https://www.youtube.com/watch?v=5oRczmZ6dGU",
   "template": "whitebar",
-  "hook": "Kabir entered and the fight was already over",
-  "words": "WAR",
-  "title": "Kabir entered and the fight was already over | War | #edit",
-  "description": "Why Kabir was unmatched in battle. From official War clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #war #hrithikroshan #tigerseghal",
+  "hook": "Faizal walked in like the town already knew",
+  "words": "GANGS OF WASSEYPUR",
+  "title": "Faizal walked in like the town already knew | Gangs of Wasseypur | #edit",
+  "description": "Why Faizal is a menace. From official Gangs Of Wasseypur clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gangsofwasseypur #faizalkhan #bollywood",
   "tags": [
-   "war",
-   "hrithikroshan",
-   "tigerseghal",
-   "yrf",
+   "gangsofwasseypur",
+   "faizalkhan",
    "bollywood",
-   "waredit",
+   "edit",
+   "phonk",
+   "aura",
+   "classic"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gangsofwasseypur_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gangsofwasseypur_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "gangsofwasseypur_scene1_h264.mp4"
+ },
+ {
+  "id": "20261128-1330-weatheringwithyou",
+  "slot": "2026-11-28T13:30:00+05:30",
+  "pillar": "romance",
+  "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+  "template": "whitebar",
+  "hook": "The sky followed them",
+  "words": "WEATHERING WITH YOU",
+  "title": "The sky followed them | Weathering With You | #edit",
+  "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
+  "tags": [
+   "weatheringwithyou",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "hina",
+   "hodaka"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "romance scene",
+  "edit_format": "love",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "weatheringwithyou_scene1_h264.mp4"
+ },
+ {
+  "id": "20261128-1600-vikram",
+  "slot": "2026-11-28T16:00:00+05:30",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=0Z_mA7n5zIA",
+  "template": "whitebar",
+  "hook": "Vikram came back to finish the job",
+  "words": "VIKRAM",
+  "title": "Vikram came back to finish the job | Vikram | #edit",
+  "description": "Why he is the legend. From official Vikram clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #vikram #kamalhaasan #south",
+  "tags": [
+   "vikram",
+   "kamalhaasan",
+   "south",
+   "edit",
+   "phonk",
+   "aura",
    "action"
   ],
   "target_dur": 26,
@@ -301,14 +164,117 @@
   "market": "IN",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene2_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vikram_scene2_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "warmovie_scene1_h264.mp4"
+  "fallback_asset": "vikram_scene1_h264.mp4"
+ },
+ {
+  "id": "20261128-1830-cyberpunkedgerunners",
+  "slot": "2026-11-28T18:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+  "template": "whitebar",
+  "hook": "David paid for the legendary life",
+  "words": "CYBERPUNK",
+  "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
+  "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
+  "tags": [
+   "cyberpunkedgerunners",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "david"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "cyberpunkedgerunners_scene1_h264.mp4"
+ },
+ {
+  "id": "20261128-2030-leomovie",
+  "slot": "2026-11-28T20:30:00+05:30",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=TtX8DNALc3I",
+  "template": "whitebar",
+  "hook": "The cafe already knew who he was",
+  "words": "LEO",
+  "title": "The cafe already knew who he was | Leo | #edit",
+  "description": "Why Leo hid his true identity. From official Leo clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #leo #thalapathyvijay #lokeshkanagaraj",
+  "tags": [
+   "leo",
+   "thalapathyvijay",
+   "lokeshkanagaraj",
+   "southcinema",
+   "leoedit",
+   "kollywood"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "leomovie_scene1_h264.mp4"
+ },
+ {
+  "id": "20261128-2230-haikyuudumpster",
+  "slot": "2026-11-28T22:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
+  "template": "whitebar",
+  "hook": "The rematch everyone waited for",
+  "words": "HAIKYU",
+  "title": "The rematch everyone waited for | Haikyu | #edit",
+  "description": "The rematch everyone waited for. From official Haikyu clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #haikyuudumpster",
+  "tags": [
+   "haikyuudumpster",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "hinata"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/haikyuudumpster_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "haikyuudumpster_scene1_h264.mp4"
  }
 ]

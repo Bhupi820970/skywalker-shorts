@@ -51,7 +51,11 @@ TRAILER = re.compile(r"\b(trailer|teaser|promo|tv spot)\b", re.I)
 # filtered later by clip_fetch.official_set anyway.
 EXTRA_OFFICIAL = ["Netflix Anime", "Netflix", "TOHO animation", "TOHO", "Aniplex USA", "GKIDS Films",
                   "League of Legends", "Sony Pictures Animation", "Warner Bros. Japan Anime",
-                  "Adult Swim", "Movieclips", "Prime Video", "Disney+", "Marvel Entertainment"]
+                  "Adult Swim", "Movieclips", "Prime Video", "Disney+", "Marvel Entertainment",
+                  "Rockstar Games", "PlayStation", "CD PROJEKT RED", "Cyberpunk 2077", "ELDEN RING",
+                  "BANDAI NAMCO Entertainment America", "Xbox", "Santa Monica Studio", "Insomniac Games",
+                  "Walt Disney Animation Studios", "DreamWorks Animation", "Illumination", "Netflix Animation",
+                  "Stranger Things", "Warner Bros. Pictures", "Paramount Pictures", "Universal Pictures"]
 
 # What wins on @Skywalker-k3i (growth review 22-25 Nov): love/romance anime, Arcane, Cyberpunk,
 # JJK, Apothecary Diaries. Used as Gemini context and as the no-Gemini fallback.
@@ -98,7 +102,59 @@ WINNER_SEEDS = [
     {"slug": "weatheringwithyou", "words": "WEATHERING WITH YOU", "characters": ["Hodaka", "Hina"],
      "kind": "love", "official_channels": ["GKIDS Films", "TOHO"], "hook": "Why Hodaka chose her over the sky",
      "search_queries": ["Weathering With You official clip english", "Weathering With You Hodaka Hina scene"]},
+    # --- video games (official gameplay / cinematics from the publisher; trailers stay blocked)
+    {"slug": "cyberpunk2077", "category": "game", "words": "CYBERPUNK 2077", "characters": ["V", "Johnny Silverhand"],
+     "kind": "action", "official_channels": ["Cyberpunk 2077", "CD PROJEKT RED"], "hook": "Why Johnny never left V's head",
+     "search_queries": ["Cyberpunk 2077 official gameplay", "Cyberpunk 2077 Phantom Liberty official cinematic",
+                        "Cyberpunk 2077 Johnny Silverhand official cinematic"]},
+    {"slug": "eldenring", "category": "game", "words": "ELDEN RING", "characters": ["Tarnished", "Malenia"],
+     "kind": "action", "official_channels": ["ELDEN RING", "BANDAI NAMCO Entertainment America"],
+     "hook": "Why nobody beats Malenia first try",
+     "search_queries": ["ELDEN RING official gameplay", "ELDEN RING Shadow of the Erdtree official gameplay reveal"]},
+    {"slug": "gta5", "category": "game", "words": "GTA V", "characters": ["Trevor", "Michael", "Franklin"],
+     "kind": "action", "official_channels": ["Rockstar Games"], "hook": "Why Trevor scares even Michael",
+     "search_queries": ["Grand Theft Auto V official gameplay video Rockstar Games",
+                        "Grand Theft Auto Online official gameplay Rockstar Games"]},
+    {"slug": "godofwar", "category": "game", "words": "GOD OF WAR", "characters": ["Kratos", "Atreus"],
+     "kind": "emotional", "official_channels": ["PlayStation", "Santa Monica Studio"], "hook": "Why Kratos finally said son",
+     "search_queries": ["God of War Ragnarok official gameplay PlayStation", "God of War Ragnarok story cinematic PlayStation"]},
+    {"slug": "spiderman2game", "category": "game", "words": "MARVEL'S SPIDER-MAN 2", "characters": ["Peter", "Miles", "Venom"],
+     "kind": "action", "official_channels": ["PlayStation", "Insomniac Games"], "hook": "Why Peter could not stop Venom",
+     "search_queries": ["Marvel's Spider-Man 2 official gameplay PlayStation", "Marvel's Spider-Man 2 gameplay reveal"]},
+    # --- cartoons / western animation
+    {"slug": "spiderverse", "category": "cartoon", "words": "SPIDER-VERSE", "characters": ["Miles", "Gwen", "Miguel"],
+     "kind": "action", "official_channels": ["Sony Pictures Entertainment", "Sony Pictures Animation"],
+     "hook": "Why Miles refused to follow the canon",
+     "search_queries": ["Across the Spider-Verse official clip", "Spider-Man Into the Spider-Verse official clip Sony Pictures"]},
+    {"slug": "kungfupanda", "category": "cartoon", "words": "KUNG FU PANDA", "characters": ["Po", "Tai Lung"],
+     "kind": "action", "official_channels": ["DreamWorks Animation", "Universal Pictures"], "hook": "Why Tai Lung feared Po",
+     "search_queries": ["Kung Fu Panda official clip DreamWorks", "Kung Fu Panda Po vs Tai Lung clip"]},
+    {"slug": "zootopia", "category": "cartoon", "words": "ZOOTOPIA", "characters": ["Judy", "Nick"],
+     "kind": "comedy", "official_channels": ["Walt Disney Animation Studios", "Disney+"], "hook": "Why Nick never trusted anyone",
+     "search_queries": ["Zootopia official clip Disney", "Zootopia 2 official clip"]},
+    # --- movies
+    {"slug": "dune", "category": "movie", "words": "DUNE", "characters": ["Paul Atreides", "Chani"],
+     "kind": "action", "official_channels": ["Warner Bros. Pictures", "Movieclips"], "hook": "Why Paul stopped being human",
+     "search_queries": ["Dune Part Two official clip", "Dune Part Two Paul sandworm ride clip"]},
+    {"slug": "interstellar", "category": "movie", "words": "INTERSTELLAR", "characters": ["Cooper", "Murph"],
+     "kind": "emotional", "official_channels": ["Paramount Pictures", "Movieclips"], "hook": "Why Cooper could not look away",
+     "search_queries": ["Interstellar official clip", "Interstellar Cooper messages scene clip"]},
+    {"slug": "topgunmaverick", "category": "movie", "words": "TOP GUN MAVERICK", "characters": ["Maverick", "Rooster"],
+     "kind": "action", "official_channels": ["Paramount Pictures"], "hook": "Why Maverick broke every rule",
+     "search_queries": ["Top Gun Maverick official clip", "Top Gun Maverick dogfight clip Paramount"]},
+    # --- web series / TV
+    {"slug": "strangerthings", "category": "tv", "words": "STRANGER THINGS", "characters": ["Eleven", "Max", "Vecna"],
+     "kind": "emotional", "official_channels": ["Netflix", "Stranger Things"], "hook": "Why Vecna wanted Max",
+     "search_queries": ["Stranger Things official clip Netflix", "Stranger Things Max Running Up That Hill scene clip"]},
+    {"slug": "wednesday", "category": "tv", "words": "WEDNESDAY", "characters": ["Wednesday", "Enid"],
+     "kind": "comedy", "official_channels": ["Netflix"], "hook": "Why Wednesday never smiles",
+     "search_queries": ["Wednesday official clip Netflix", "Wednesday dance scene clip Netflix"]},
+    {"slug": "squidgame", "category": "tv", "words": "SQUID GAME", "characters": ["Gi-hun", "Front Man"],
+     "kind": "emotional", "official_channels": ["Netflix"], "hook": "Why Gi-hun went back in",
+     "search_queries": ["Squid Game official clip Netflix", "Squid Game season 2 clip Netflix"]},
 ]
+for _s in WINNER_SEEDS:
+    _s.setdefault("category", "cartoon" if _s["slug"] == "arcane" else "anime")
 
 
 def now_ist() -> datetime:
@@ -238,7 +294,29 @@ def clean_request(r: dict, allowed: list[str], catalog: dict[str, dict]) -> dict
            "title": str(r.get("title") or t.get("title") or f"{hook} | {words.title()} | #edit")[:100],
            "tags": [slugify(x) for x in (r.get("tags") or t.get("tags") or [slug, "anime", "edit", "shorts"])][:8],
            "market": r.get("market") or t.get("market") or "US/UK", "refill": True,
+           "category": _cat(r, t, slug),
            "prefer_english": True, "known_topic": slug in catalog}
+    return out
+
+
+def _cat(r: dict, t: dict, slug: str) -> str:
+    import variety
+    c = str(r.get("category") or "").lower()
+    return c if c in variety.CATEGORIES else variety.category({**t, **r, "slug": slug})
+
+
+def balance(reqs: list[dict], n: int) -> list[dict]:
+    """Round-robin over categories (anime, movie, cartoon, game, tv) so one kind never floods the queue."""
+    import variety
+    by: dict[str, list[dict]] = defaultdict(list)
+    for r in reqs:
+        by[r.get("category") or "movie"].append(r)
+    order = ["anime", "movie", "cartoon", "game", "tv"]
+    out: list[dict] = []
+    while len(out) < n and any(by[c] for c in order):
+        for c in order:
+            if by[c] and len(out) < n:
+                out.append(by[c].pop(0))
     return out
 
 
@@ -261,11 +339,13 @@ Unposted clips left per topic: {json.dumps(inv)[:800]}
 What wins: love/romance anime (Dandadan Okarun/Momo, Apothecary Diaries Jinshi/Maomao, Your Name), Arcane (Jinx),
 Cyberpunk Edgerunners (David/Lucy), JJK, scene-specific curiosity hooks. Trend notes: {json.dumps(trends.get('our_insights') or trends.get('hook_styles') or '')[:800]}
 
-Return JSON {{"requests": [...]}} with {n} items: ~60% MORE DIFFERENT SCENES of the winners above, ~40% trending
-titles with the same vibe. Rules: OFFICIAL studio/distributor uploads only (Netflix, Netflix Anime, TOHO animation,
+Return JSON {{"requests": [...]}} with {n} items as a BALANCED MIX of categories: anime, movie, cartoon (western
+animation like Spider-Verse / Arcane), video game (official publisher gameplay or story cinematics: GTA, Cyberpunk 2077,
+Elden Ring, God of War...), and web series / TV. Within each category: more DIFFERENT SCENES of our winners first,
+then trending titles with the same vibe. Never the same franchise twice. Rules: OFFICIAL studio/distributor uploads only (Netflix, Netflix Anime, TOHO animation,
 Aniplex USA, GKIDS Films, League of Legends, Movieclips, ...), never fan re-uploads, never trailers/teasers, never
 full episodes, nothing sexual or fan-service. Prefer clips with clear ENGLISH dialogue (English dub or English-language).
-Each item: {{"slug": lowercase a-z0-9 (reuse the winner slug for more scenes of a winner), "pillar": "anime"|"hollywood"|"bollywood"|"south",
+Each item: {{"category": "anime"|"movie"|"cartoon"|"game"|"tv", "slug": lowercase a-z0-9 (reuse the winner slug for more scenes of a winner), "pillar": "anime"|"hollywood"|"bollywood"|"south",
 "words": display title in caps, "characters": [...], "scene_types": subset of ["romance","emotional","fight","aura","comedy"],
 "search_queries": [3-5 YouTube search strings for official scene clips, include "clip" and the official channel name],
 "official_channels": [exact official channel names], "links": [official X post URLs https://x.com/<handle>/status/<id> ONLY if certain, else []],
@@ -316,15 +396,17 @@ def build_plan(root: Path, assets: set[str] | None, *, force: bool = False, max_
     raw = gemini_requests(root, wins, inv, deficit, n) if use_gemini else []
     status["source"] = "gemini" if raw else "seeds"
     raw = raw + seed_requests(wins, inv)  # seeds always backfill (and cover Gemini 429)
-    out, seen = [], set()
+    import variety
+    cleaned, seen, seen_fr = [], set(), set()
     for r in raw:
         c = clean_request(r, allowed, catalog)
-        if not c or c["slug"] in seen:
+        if not c or c["slug"] in seen or variety.franchise(c["slug"]) in seen_fr:
             continue
         seen.add(c["slug"])
-        out.append(c)
-        if len(out) >= n:
-            break
+        seen_fr.add(variety.franchise(c["slug"]))
+        cleaned.append(c)
+    out = balance(cleaned, n)
+    status["categories"] = dict(Counter(r["category"] for r in out))
     status["requests"] = [r["slug"] for r in out]
     status["doc"] = {"generated_at": status["at"], "max_clips_per_title": 4, "min_height": 1080,
                      "deficit_videos": deficit, "requests": out}

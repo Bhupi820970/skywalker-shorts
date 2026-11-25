@@ -19,7 +19,8 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=dSDpoobO6yM",
       "fallback_asset": "fnaf2_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "movie"
     },
     {
       "slug": "jurassicworldrebirth",
@@ -38,7 +39,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=jan5CFWs9ic",
-      "fallback_asset": "jurassicworldrebirth_trailer_h264.mp4"
+      "fallback_asset": "jurassicworldrebirth_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "missionimpossible",
@@ -57,7 +59,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=fsQgc9pCyDU",
-      "fallback_asset": "missionimpossible_trailer_h264.mp4"
+      "fallback_asset": "missionimpossible_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "gladiator2",
@@ -76,7 +79,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=JY7_-dzWK40",
-      "fallback_asset": "gladiator2_trailer_h264.mp4"
+      "fallback_asset": "gladiator2_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "venom3",
@@ -95,7 +99,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=__2bjWbetsA",
-      "fallback_asset": "venom3_trailer_h264.mp4"
+      "fallback_asset": "venom3_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "deadpool3",
@@ -114,7 +119,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=73_1biulkYk",
-      "fallback_asset": "deadpool3_trailer_h264.mp4"
+      "fallback_asset": "deadpool3_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "dune2",
@@ -133,7 +139,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=Way9Dexny3w",
-      "fallback_asset": "dune2_trailer_h264.mp4"
+      "fallback_asset": "dune2_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "alienromulus",
@@ -152,7 +159,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=x0XDEhP4MQs",
-      "fallback_asset": "alienromulus_trailer_h264.mp4"
+      "fallback_asset": "alienromulus_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "twisters",
@@ -171,7 +179,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=jufrkwWbAy0",
-      "fallback_asset": "twisters_trailer_h264.mp4"
+      "fallback_asset": "twisters_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "furiosa",
@@ -190,7 +199,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=XJ55q4YikzA",
-      "fallback_asset": "furiosa_trailer_h264.mp4"
+      "fallback_asset": "furiosa_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "civilwar",
@@ -209,7 +219,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=aDyQxtg0V2w",
-      "fallback_asset": "civilwar_trailer_h264.mp4"
+      "fallback_asset": "civilwar_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "superman",
@@ -227,7 +238,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
-      "fallback_asset": "superman_trailer_h264.mp4"
+      "fallback_asset": "superman_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "zootopia2",
@@ -246,7 +258,8 @@
       ],
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=5AwtptT8X8k",
-      "fallback_asset": "zootopia2_trailer_h264.mp4"
+      "fallback_asset": "zootopia2_trailer_h264.mp4",
+      "category": "cartoon"
     },
     {
       "slug": "kalki2898ad",
@@ -264,7 +277,8 @@
       ],
       "market": "IN",
       "source_url": "https://www.youtube.com/watch?v=kQDd1AhGIHk",
-      "fallback_asset": "kalki2898ad_trailer_h264.mp4"
+      "fallback_asset": "kalki2898ad_trailer_h264.mp4",
+      "category": "movie"
     },
     {
       "slug": "demonslayer",
@@ -283,7 +297,8 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=wyiadjaRhAs",
       "fallback_asset": "demonslayer_trailer_h264.mp4",
-      "content_kind": "fight scene"
+      "content_kind": "fight scene",
+      "category": "anime"
     },
     {
       "slug": "blackclover",
@@ -302,7 +317,8 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=BoX4f5xO4lE",
       "fallback_asset": "blackclover_trailer_h264.mp4",
-      "content_kind": "fight scene"
+      "content_kind": "fight scene",
+      "category": "anime"
     },
     {
       "slug": "sololeveling2",
@@ -329,7 +345,8 @@
         "sololeveling2_scene3_h264.mp4"
       ],
       "fallback_asset": "sololeveling2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "demonslayerinfinitycastle",
@@ -351,7 +368,8 @@
       "source_url": "https://www.youtube.com/watch?v=x7uLutVRBfI",
       "scene_assets": [],
       "fallback_asset": "demonslayerinfinitycastle_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "anime"
     },
     {
       "slug": "demonslayerhashira",
@@ -373,7 +391,8 @@
       "source_url": "https://www.youtube.com/watch?v=rq1tllAUS1I",
       "scene_assets": [],
       "fallback_asset": "demonslayerhashira_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "anime"
     },
     {
       "slug": "jujutsukaisen",
@@ -395,7 +414,8 @@
       "source_url": "https://www.youtube.com/watch?v=Pm-wNmS9RGI",
       "scene_assets": [],
       "fallback_asset": "jujutsukaisen_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "anime"
     },
     {
       "slug": "jujutsukaisencullinggame",
@@ -420,7 +440,8 @@
         "jujutsukaisencullinggame_scene2_h264.mp4"
       ],
       "fallback_asset": "jujutsukaisencullinggame_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "jjk0",
@@ -445,7 +466,8 @@
         "jjk0_scene2_h264.mp4"
       ],
       "fallback_asset": "jjk0_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "chainsawmanreze",
@@ -467,7 +489,8 @@
       "source_url": "https://www.youtube.com/watch?v=tAzAhDNdehs",
       "scene_assets": [],
       "fallback_asset": "chainsawmanreze_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "anime"
     },
     {
       "slug": "frieren",
@@ -493,7 +516,8 @@
         "frieren_scene3_h264.mp4"
       ],
       "fallback_asset": "frieren_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "frieren2",
@@ -519,7 +543,8 @@
         "frieren2_scene3_h264.mp4"
       ],
       "fallback_asset": "frieren2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "dandadan",
@@ -545,7 +570,8 @@
         "dandadan_scene3_h264.mp4"
       ],
       "fallback_asset": "dandadan_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "dandadan2",
@@ -571,7 +597,8 @@
         "dandadan2_scene3_h264.mp4"
       ],
       "fallback_asset": "dandadan2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "kaiju8",
@@ -597,7 +624,8 @@
         "kaiju8_scene3_h264.mp4"
       ],
       "fallback_asset": "kaiju8_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "kaiju8s2",
@@ -623,7 +651,8 @@
         "kaiju8s2_scene3_h264.mp4"
       ],
       "fallback_asset": "kaiju8s2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "sakamotodays",
@@ -649,7 +678,8 @@
         "sakamotodays_scene3_h264.mp4"
       ],
       "fallback_asset": "sakamotodays_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "apothecarydiaries2",
@@ -676,7 +706,8 @@
         "apothecarydiaries2_scene3_h264.mp4"
       ],
       "fallback_asset": "apothecarydiaries2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "onepieceegghead",
@@ -702,7 +733,8 @@
         "onepieceegghead_scene3_h264.mp4"
       ],
       "fallback_asset": "onepieceegghead_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "onepiecered",
@@ -725,7 +757,8 @@
       "source_url": "https://www.youtube.com/watch?v=AmTUaFdTETc",
       "scene_assets": [],
       "fallback_asset": "onepiecered_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "anime"
     },
     {
       "slug": "spyxfamily3",
@@ -752,7 +785,8 @@
         "spyxfamily3_scene3_h264.mp4"
       ],
       "fallback_asset": "spyxfamily3_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "spyxfamilycodewhite",
@@ -778,7 +812,8 @@
         "spyxfamilycodewhite_scene3_h264.mp4"
       ],
       "fallback_asset": "spyxfamilycodewhite_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "yourname",
@@ -802,7 +837,8 @@
         "yourname_scene1_h264.mp4"
       ],
       "fallback_asset": "yourname_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "suzume",
@@ -828,7 +864,8 @@
         "suzume_scene3_h264.mp4"
       ],
       "fallback_asset": "suzume_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "weatheringwithyou",
@@ -854,7 +891,8 @@
         "weatheringwithyou_scene2_h264.mp4",
         "weatheringwithyou_scene3_h264.mp4"
       ],
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "aotlastattack",
@@ -876,7 +914,8 @@
       "source_url": "https://www.youtube.com/watch?v=3xNH23QkNpk",
       "scene_assets": [],
       "fallback_asset": "aotlastattack_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "anime"
     },
     {
       "slug": "aotfinal",
@@ -900,7 +939,8 @@
         "aotfinal_scene1_h264.mp4"
       ],
       "fallback_asset": "aotfinal_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "haikyuudumpster",
@@ -924,7 +964,8 @@
         "haikyuudumpster_scene1_h264.mp4"
       ],
       "fallback_asset": "haikyuudumpster_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "mhayourenext",
@@ -948,7 +989,8 @@
         "mhayourenext_scene1_h264.mp4",
         "mhayourenext_scene2_h264.mp4"
       ],
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "mhafinal",
@@ -974,7 +1016,8 @@
         "mhafinal_scene3_h264.mp4"
       ],
       "fallback_asset": "mhafinal_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "bluelock2",
@@ -1000,7 +1043,8 @@
         "bluelock2_scene3_h264.mp4"
       ],
       "fallback_asset": "bluelock2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "vinlandsaga2",
@@ -1026,7 +1070,8 @@
         "vinlandsaga2_scene3_h264.mp4"
       ],
       "fallback_asset": "vinlandsaga2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "bleachtybw",
@@ -1052,7 +1097,8 @@
         "bleachtybw_scene3_h264.mp4"
       ],
       "fallback_asset": "bleachtybw_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "dragonballdaima",
@@ -1076,7 +1122,8 @@
         "dragonballdaima_scene1_h264.mp4",
         "dragonballdaima_scene2_h264.mp4"
       ],
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "dbsuperhero",
@@ -1101,7 +1148,8 @@
         "dbsuperhero_scene2_h264.mp4"
       ],
       "fallback_asset": "dbsuperhero_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "firstslamdunk",
@@ -1125,7 +1173,8 @@
         "firstslamdunk_scene1_h264.mp4"
       ],
       "fallback_asset": "firstslamdunk_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "boyandheron",
@@ -1148,7 +1197,8 @@
       "scene_assets": [
         "boyandheron_scene1_h264.mp4"
       ],
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "hellsparadise",
@@ -1171,7 +1221,8 @@
       "scene_assets": [
         "hellsparadise_scene1_h264.mp4"
       ],
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "windbreaker",
@@ -1196,7 +1247,8 @@
         "windbreaker_scene2_h264.mp4",
         "windbreaker_scene3_h264.mp4"
       ],
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "gachiakuta",
@@ -1222,7 +1274,8 @@
         "gachiakuta_scene3_h264.mp4"
       ],
       "fallback_asset": "gachiakuta_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "cyberpunkedgerunners",
@@ -1248,7 +1301,8 @@
         "cyberpunkedgerunners_scene3_h264.mp4"
       ],
       "fallback_asset": "cyberpunkedgerunners_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "arcane2",
@@ -1274,7 +1328,8 @@
         "arcane2_scene3_h264.mp4"
       ],
       "fallback_asset": "arcane2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "cartoon"
     },
     {
       "slug": "onepunchman3",
@@ -1298,7 +1353,8 @@
         "onepunchman3_scene1_h264.mp4"
       ],
       "fallback_asset": "onepunchman3_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "drstone",
@@ -1324,7 +1380,8 @@
         "drstone_scene3_h264.mp4"
       ],
       "fallback_asset": "drstone_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "rezero3",
@@ -1350,7 +1407,8 @@
         "rezero3_scene3_h264.mp4"
       ],
       "fallback_asset": "rezero3_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "mushokutensei2",
@@ -1376,7 +1434,8 @@
         "mushokutensei2_scene3_h264.mp4"
       ],
       "fallback_asset": "mushokutensei2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "lookback",
@@ -1398,7 +1457,8 @@
       "source_url": "https://www.youtube.com/watch?v=ILBDFlYMGAY",
       "scene_assets": [],
       "fallback_asset": "lookback_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "anime"
     },
     {
       "slug": "firforce3",
@@ -1424,7 +1484,8 @@
         "firforce3_scene3_h264.mp4"
       ],
       "fallback_asset": "firforce3_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "tokyorevengers",
@@ -1446,7 +1507,8 @@
       "source_url": "https://www.youtube.com/watch?v=Fwyc8XhXVSA",
       "scene_assets": [],
       "fallback_asset": "tokyorevengers_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "anime"
     },
     {
       "slug": "undeadunluck",
@@ -1471,7 +1533,8 @@
         "undeadunluck_scene2_h264.mp4"
       ],
       "fallback_asset": "undeadunluck_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "mashle",
@@ -1497,7 +1560,8 @@
         "mashle_scene3_h264.mp4"
       ],
       "fallback_asset": "mashle_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "shangrilafrontier",
@@ -1523,7 +1587,8 @@
         "shangrilafrontier_scene3_h264.mp4"
       ],
       "fallback_asset": "shangrilafrontier_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "bluegiant",
@@ -1548,7 +1613,8 @@
         "bluegiant_scene2_h264.mp4"
       ],
       "fallback_asset": "bluegiant_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "summerhikarudied",
@@ -1570,7 +1636,8 @@
       "source_url": "https://www.youtube.com/watch?v=dhihVoP_6gw",
       "scene_assets": [],
       "fallback_asset": "summerhikarudied_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "anime"
     },
     {
       "slug": "witchhatatelier",
@@ -1596,7 +1663,8 @@
         "witchhatatelier_scene3_h264.mp4"
       ],
       "fallback_asset": "witchhatatelier_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "lazarus",
@@ -1622,7 +1690,8 @@
         "lazarus_scene3_h264.mp4"
       ],
       "fallback_asset": "lazarus_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "castlevanianocturne",
@@ -1644,7 +1713,8 @@
       "source_url": "https://www.youtube.com/watch?v=_afpwpbKPs0",
       "scene_assets": [],
       "fallback_asset": "castlevanianocturne_trailer_h264.mp4",
-      "content_kind": "trailer"
+      "content_kind": "trailer",
+      "category": "cartoon"
     },
     {
       "slug": "spiritedaway",
@@ -1669,7 +1739,8 @@
         "spiritedaway_scene2_h264.mp4"
       ],
       "fallback_asset": "spiritedaway_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "princessmononoke",
@@ -1695,7 +1766,8 @@
         "princessmononoke_scene2_h264.mp4"
       ],
       "fallback_asset": "princessmononoke_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "mononoke",
@@ -1721,7 +1793,8 @@
         "mononoke_scene3_h264.mp4"
       ],
       "fallback_asset": "mononoke_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "dandadanevil",
@@ -1747,7 +1820,8 @@
         "dandadanevil_scene3_h264.mp4"
       ],
       "fallback_asset": "dandadanevil_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "oshinoko2",
@@ -1773,7 +1847,8 @@
         "oshinoko2_scene2_h264.mp4"
       ],
       "fallback_asset": "oshinoko2_trailer_h264.mp4",
-      "content_kind": "best scene"
+      "content_kind": "best scene",
+      "category": "anime"
     },
     {
       "slug": "jjkgojovstoji",
@@ -1804,7 +1879,8 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
-      "fallback_asset": "jjkgojovstoji_trailer_h264.mp4"
+      "fallback_asset": "jjkgojovstoji_trailer_h264.mp4",
+      "category": "anime"
     },
     {
       "slug": "vinlandsagathorfinn",
@@ -1836,7 +1912,8 @@
       },
       "unusable_urls": [
         "https://www.youtube.com/watch?v=yWBA876qftM"
-      ]
+      ],
+      "category": "anime"
     },
     {
       "slug": "mobpsycho100per",
@@ -1858,7 +1935,8 @@
       "scene_assets": [],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
-      "fallback_asset": "mobpsycho100per_trailer_h264.mp4"
+      "fallback_asset": "mobpsycho100per_trailer_h264.mp4",
+      "category": "anime"
     },
     {
       "slug": "bluelockisagi",
@@ -1890,7 +1968,8 @@
         "https://www.youtube.com/watch?v=ckEUVyKanhw"
       ],
       "usable": false,
-      "reason": "logo/watermark"
+      "reason": "logo/watermark",
+      "category": "anime"
     },
     {
       "slug": "oppenheimer",
@@ -1914,7 +1993,8 @@
         "oppenheimer_scene1_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "animal",
@@ -1945,7 +2025,8 @@
         "animal_scene8_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "kgf",
@@ -1971,7 +2052,8 @@
         "kgf_scene3_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "vikram",
@@ -1997,7 +2079,8 @@
         "vikram_scene3_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "gangsofwasseypur",
@@ -2023,7 +2106,8 @@
         "gangsofwasseypur_scene3_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "taarezameenpar",
@@ -2050,7 +2134,8 @@
         "taarezameenpar_scene4_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "cyberpunk2077",
@@ -2075,7 +2160,8 @@
         "cyberpunk2077_scene2_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "game"
     },
     {
       "slug": "violetevergarden",
@@ -2101,7 +2187,8 @@
         "violetevergarden_scene3_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "anime"
     },
     {
       "slug": "topgunmaverick",
@@ -2125,7 +2212,8 @@
         "topgunmaverick_scene1_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "thebatman",
@@ -2155,7 +2243,8 @@
       "unusable_assets": {
         "thebatman_scene1_h264.mp4": "unofficial re-upload channel (MovieClipsHD); restored by mistake 2026-11-20, replace with an official clip",
         "thebatman_scene3_h264.mp4": "unofficial re-upload channel (MrSam Movie Clips); restored by mistake 2026-11-20, replace with an official clip"
-      }
+      },
+      "category": "movie"
     },
     {
       "slug": "fighther",
@@ -2182,7 +2271,8 @@
         "fighther_scene4_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "kgf2",
@@ -2207,7 +2297,8 @@
         "kgf2_scene2_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "thedarkknight",
@@ -2232,7 +2323,8 @@
         "thedarkknight_scene3_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "pathaan",
@@ -2258,7 +2350,8 @@
         "pathaan_scene4_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "don2",
@@ -2282,7 +2375,8 @@
         "don2_scene2_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "dhoom2",
@@ -2308,7 +2402,8 @@
         "dhoom2_scene4_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "rrr",
@@ -2334,7 +2429,8 @@
         "rrr_scene4_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "warmovie",
@@ -2360,7 +2456,8 @@
         "warmovie_scene3_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "leomovie",
@@ -2385,7 +2482,8 @@
         "leomovie_scene3_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     },
     {
       "slug": "johnwick",
@@ -2408,7 +2506,8 @@
         "johnwick_scene1_h264.mp4"
       ],
       "content_kind": "best scene",
-      "added_by": "clip_fetch:box"
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     }
   ]
 }

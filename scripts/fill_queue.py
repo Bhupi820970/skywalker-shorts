@@ -20,6 +20,7 @@ import sourcing  # noqa: E402
 import perf  # noqa: E402
 import slot_times  # noqa: E402
 import backup_stock  # noqa: E402
+import variety  # noqa: E402
 
 IST = timezone(timedelta(hours=5, minutes=30))
 GH = "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources"
@@ -243,6 +244,18 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
         if not pool:
             return 0
 
+    # Variety (BiBi 25 Nov): never the same franchise twice a day, avoid it for ~3 days, and
+    # rotate categories (movie / game / cartoon / anime / tv) so neighbour slots differ.
+    vcat = variety.load_catalog(REPO)
+    try:
+        vctx = variety.context(REPO, datetime.fromisoformat(day + "T12:00:00+05:30"), catalog=vcat)
+    except Exception:
+        vctx = []
+    cur = {"dt": None}
+
+    def vpen(t: dict) -> float:
+        return variety.topic_penalty(t, cur["dt"], vctx, vcat)
+
     def next_topic(love_n, gta_n, start_i, day_slugs):
         # Fill love / GTA quotas first when matching topics remain.
         want = None
@@ -255,6 +268,7 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
         elif gta_n < quotas.get("gta6_max", 0):
             want = "gta6"
         n = len(pool)
+        best = None
         for k in range(n):
             t = pool[(start_i + k) % n]
             if t["slug"] in day_slugs:
@@ -272,13 +286,21 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
                 continue
             if not want and kind == "gta6" and gta_n >= quotas.get("gta6_max", 0):
                 continue
-            return t, start_i + k + 1
-        # Fallback: any unused topic
+            p = vpen(t)
+            if p == variety.FORBIDDEN:
+                continue
+            if best is None or p < best[0]:
+                best = (p, t, start_i + k + 1)
+            if p == 0:
+                break
+        if best:
+            return best[1], best[2]
+        # Fallback: any unused topic whose franchise is not already on this day
         for k in range(n):
             t = pool[(start_i + k) % n]
-            if t["slug"] not in day_slugs:
+            if t["slug"] not in day_slugs and vpen(t) != variety.FORBIDDEN:
                 return t, start_i + k + 1
-        return pool[start_i % n], start_i + 1
+        return None, start_i + 1
 
     pi = 0
     love_n = sum(1 for it in items if (it.get("pillar") or "").lower() in ("romance", "love")
@@ -291,8 +313,9 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
         day_slugs = {"-".join(it["id"].split("-")[2:]) for it in items if it.get("id")}
         item = None
         tries = 0
+        cur["dt"] = variety.parse_slot(iso)
         topic, pi = next_topic(love_n, gta_n, pi, day_slugs)
-        while tries < len(pool):
+        while topic is not None and tries < len(pool):
             cand = _make_item(day, hhmm, topic, have)
             hook_n = _norm_text(cand.get("hook") or "")
             title_n = _norm_text((cand.get("title") or "").split("#")[0])
@@ -311,6 +334,8 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
         if item is None:
             continue
         items.append(item)
+        vctx.append({"id": item["id"], "dt": cur["dt"], "franchise": variety.franchise(topic),
+                     "category": variety.category(topic, vcat)})
         used.add(topic["slug"])
         hook_n = _norm_text(item.get("hook") or "")
         if hook_n:

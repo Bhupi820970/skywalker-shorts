@@ -783,12 +783,14 @@ def pending_entries(man: dict) -> list[dict]:
 
 
 def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
-               buffer_posts: list | None = None) -> dict | None:
+               buffer_posts: list | None = None, slot_s: str | None = None) -> dict | None:
     ready = ready_entries(man)
     if not ready:
         return None
     now = now or now_ist()
     used = topics_used_on_day(root, day)
+    import variety
+    used_fr = {variety.franchise(s) for s in used}  # dandadanevil blocks dandadan2 the same day
     recent_titles, recent_slugs = recent_titles_and_topics(root, now, buffer_posts=buffer_posts)
     used |= recent_slugs
     posted = posted_hook_keys(root)
@@ -799,7 +801,7 @@ def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
     held = posted_history.reserved_clips([r for r in rows if r.get("assigned_from_stock")])
 
     def conflicts(e: dict) -> bool:
-        if (e.get("slug") or "") in used:
+        if (e.get("slug") or "") in used or variety.franchise(e.get("slug") or e.get("id") or "") in used_fr:
             return True
         src = read_result(root, e.get("id") or "") or {}
         # Never the same source scene / video that is already posted or waiting in a slot.
@@ -830,6 +832,17 @@ def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
         return bool(hk and (hk in posted or hk in recent_hooks))
 
     prefer = [e for e in ready if not conflicts(e)]
+    # Variety: different category from the neighbour slots, franchise not within ~3 days.
+    dt = variety.parse_slot(slot_s) if slot_s else None
+    if dt and len(prefer) > 1:
+        try:
+            cat = variety.load_catalog(root)
+            code = dt.astimezone(variety.IST).strftime("%Y%m%d-%H%M")
+            ctx = [c for c in variety.context(root, dt, catalog=cat) if not c["id"].startswith(code)]
+            prefer.sort(key=lambda e: variety.topic_penalty({"slug": e.get("slug") or "", "id": e.get("id") or ""},
+                                                            dt, ctx, cat))
+        except Exception:
+            pass
     # Never fall back to a title/topic Buffer would swallow (same-title miss).
     return prefer[0] if prefer else None
 
@@ -847,7 +860,7 @@ def assign_to_slot(root: Path, slot_s: str, now: datetime | None = None) -> dict
         code = slot.strftime("%Y%m%d-%H%M")
     except Exception:
         return None
-    ent = pick_stock(man, root, day, now=now)
+    ent = pick_stock(man, root, day, now=now, slot_s=slot_s)
     if not ent:
         return None
     stock_id = ent["id"]

@@ -1,45 +1,78 @@
 [
  {
-  "id": "20261127-0630-fighther",
+  "id": "20261127-0630-taarezameenpar",
   "slot": "2026-11-27T06:30:00+05:30",
-  "pillar": "bollywood",
-  "source_url": "https://www.youtube.com/watch?v=eifvzpMt_lE",
+  "pillar": "romance",
+  "source_url": "https://www.youtube.com/watch?v=1oiRkOT4Z_4",
   "template": "whitebar",
-  "hook": "Hrithik took the fight into the air",
-  "words": "FIGHTER",
-  "title": "Hrithik took the fight into the air | Fighter | #edit",
-  "description": "Why he dominates the sky. From official Fighter clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #fighter #hrithikroshan #bollywood",
+  "hook": "The painting said what he could not",
+  "words": "TAARE ZAMEEN PAR",
+  "title": "The painting said what he could not | Taare Zameen Par | #edit",
+  "description": "Why he felt so alone. From official Taare Zameen Par clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #taarezameenpar #ishaan #bollywood",
   "tags": [
-   "fighter",
-   "hrithikroshan",
+   "taarezameenpar",
+   "ishaan",
    "bollywood",
-   "movieedit",
+   "edit",
    "phonk",
-   "action",
-   "edit"
+   "emotional",
+   "aura"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "IN",
   "content_kind": "best scene",
+  "edit_format": "love",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene3_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene4_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene4_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene3_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene4_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/taarezameenpar_scene4_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "fighther_scene1_h264.mp4"
+  "fallback_asset": "taarezameenpar_scene1_h264.mp4"
  },
  {
-  "id": "20261127-0900-thebatman",
+  "id": "20261127-0900-onepunchman3",
   "slot": "2026-11-27T09:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
+  "template": "whitebar",
+  "hook": "Saitama ends fights in one hit",
+  "words": "ONE PUNCH MAN",
+  "title": "Saitama ends fights in one hit | One Punch Man | #edit",
+  "description": "Saitama ends fights in one hit. From official One Punch Man clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #onepunchman3",
+  "tags": [
+   "onepunchman3",
+   "anime",
+   "animeedit",
+   "edit",
+   "shorts",
+   "trending",
+   "saitama"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/onepunchman3_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/onepunchman3_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "onepunchman3_scene1_h264.mp4"
+ },
+ {
+  "id": "20261127-1130-thebatman",
+  "slot": "2026-11-27T11:30:00+05:30",
   "pillar": "hollywood",
   "source_url": "https://www.youtube.com/watch?v=GGZdoD7gYnE",
   "template": "whitebar",
@@ -70,106 +103,69 @@
   "fallback_asset": "thebatman_scene2_h264.mp4"
  },
  {
-  "id": "20261127-1130-cyberpunkedgerunners",
-  "slot": "2026-11-27T11:30:00+05:30",
-  "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
-  "template": "whitebar",
-  "hook": "David paid for the legendary life",
-  "words": "CYBERPUNK",
-  "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
-  "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
-  "tags": [
-   "cyberpunkedgerunners",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "david"
-  ],
-  "target_dur": 26,
-  "status": "queued",
-  "market": "US/UK",
-  "content_kind": "best scene",
-  "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
-  ],
-  "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
-  ],
-  "fallback_release": "sources",
-  "fallback_asset": "cyberpunkedgerunners_scene1_h264.mp4"
- },
- {
-  "id": "20261127-1330-mashle",
+  "id": "20261127-1330-boyandheron",
   "slot": "2026-11-27T13:30:00+05:30",
   "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
+  "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
   "template": "whitebar",
-  "hook": "Mash breaks magic with muscles",
-  "words": "MASHLE",
-  "title": "Mash breaks magic with muscles | Mashle | #edit",
-  "description": "Mash breaks magic with muscles. From official Mashle clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mashle",
+  "hook": "The heron knew his secret",
+  "words": "THE BOY AND THE HERON",
+  "title": "The heron knew his secret | The Boy and the Heron | #edit",
+  "description": "The heron knew his secret. From official The Boy and the Heron clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #boyandheron",
   "tags": [
-   "mashle",
+   "boyandheron",
    "anime",
    "animeedit",
    "edit",
    "shorts",
    "trending",
-   "mash"
+   "mahito"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mashle_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mashle_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene1_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "mashle_scene1_h264.mp4"
+  "fallback_asset": "boyandheron_scene1_h264.mp4"
  },
  {
-  "id": "20261127-1600-kgf",
+  "id": "20261127-1600-don2",
   "slot": "2026-11-27T16:00:00+05:30",
-  "pillar": "south",
-  "source_url": "https://www.youtube.com/watch?v=HYfycqyIuEk",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=Q4Tr7giZaXM",
   "template": "whitebar",
-  "hook": "Rocky walked in and took the city",
-  "words": "KGF",
-  "title": "Rocky walked in and took the city | KGF | #edit",
-  "description": "Why Rocky owns the city. From official Kgf Chapter 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #kgf2 #rockybhai #south",
+  "hook": "Don let them think they had won",
+  "words": "DON 2",
+  "title": "Don let them think they had won | Don 2 | #edit",
+  "description": "Why Don surrendered himself to police. From official Don 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #don2 #shahrukhkhan #srk",
   "tags": [
-   "kgf2",
-   "rockybhai",
-   "south",
-   "edit",
-   "phonk",
-   "aura",
-   "action"
+   "don2",
+   "shahrukhkhan",
+   "srk",
+   "don",
+   "bollywoodedit",
+   "bollywood"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "IN",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene2_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/kgf_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/don2_scene2_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "kgf_scene1_h264.mp4"
+  "fallback_asset": "don2_scene1_h264.mp4"
  },
  {
   "id": "20261127-1830-violetevergarden",
@@ -207,78 +203,73 @@
   "fallback_asset": "violetevergarden_scene2_h264.mp4"
  },
  {
-  "id": "20261127-2030-suzume",
+  "id": "20261127-2030-fighther",
   "slot": "2026-11-27T20:30:00+05:30",
-  "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=eifvzpMt_lE",
   "template": "whitebar",
-  "hook": "The door would not stay closed",
-  "words": "SUZUME",
-  "title": "The door would not stay closed | Suzume | #edit",
-  "description": "She keeps closing doors alone. From official Suzume clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #suzume",
+  "hook": "Hrithik took the fight into the air",
+  "words": "FIGHTER",
+  "title": "Hrithik took the fight into the air | Fighter | #edit",
+  "description": "Why he dominates the sky. From official Fighter clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #fighter #hrithikroshan #bollywood",
   "tags": [
-   "suzume",
-   "anime",
-   "animeedit",
-   "edit",
-   "shorts",
-   "trending",
-   "suzume"
+   "fighter",
+   "hrithikroshan",
+   "bollywood",
+   "movieedit",
+   "phonk",
+   "action",
+   "edit"
   ],
   "target_dur": 26,
   "status": "queued",
-  "market": "US/UK",
-  "content_kind": "romance scene",
-  "edit_format": "love",
+  "market": "IN",
+  "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene4_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene4_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "suzume_scene1_h264.mp4"
+  "fallback_asset": "fighther_scene1_h264.mp4"
  },
  {
-  "id": "20261127-2230-weatheringwithyou",
+  "id": "20261127-2230-arcane2",
   "slot": "2026-11-27T22:30:00+05:30",
-  "pillar": "romance",
-  "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
   "template": "whitebar",
-  "hook": "He stayed when the sky fell",
-  "words": "WEATHERING WITH YOU",
-  "title": "He stayed when the sky fell | Weathering With You | #edit",
-  "description": "He chose her over the sky. From official Weathering With You clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #weatheringwithyou",
+  "hook": "Jinx never wanted this war",
+  "words": "ARCANE",
+  "title": "Jinx never wanted this war | Arcane | #edit",
+  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane2",
   "tags": [
-   "weatheringwithyou",
+   "arcane2",
    "anime",
    "animeedit",
    "edit",
    "shorts",
    "trending",
-   "hina",
-   "hodaka"
+   "jinx"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
-  "content_kind": "romance scene",
-  "edit_format": "love",
+  "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/weatheringwithyou_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane2_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "weatheringwithyou_scene1_h264.mp4"
+  "fallback_asset": "arcane2_scene3_h264.mp4"
  }
 ]

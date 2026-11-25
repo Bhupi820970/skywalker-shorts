@@ -789,6 +789,8 @@ def same_format_candidates(item: dict, *, exclude: set[str] | None = None,
         release = sum(1 for u in urls if "releases/download/sources" in (u or "") or (u or "").endswith(".mp4"))
         return (release, len(urls))
     out.sort(key=score, reverse=True)
+    vkey = variety_ranker(item, root)
+    out.sort(key=vkey)  # stable: variety first, then release clips
     return out
 
 
@@ -842,6 +844,8 @@ def next_fallback_item(item: dict, *, exclude: set[str] | None = None,
         # Proven footage first (a recent done render), then >=2 clips (a 1-clip title
         # rarely has 18s of unique clean shots), then not-recent, then most clips.
         return _spread_pick(rest, item, root, health=health, recent=recent)
+    if rest:
+        rest.sort(key=variety_ranker(item, root))
     return rest[0] if rest else None
 
 
@@ -856,15 +860,49 @@ def _spread_pick(cands: list[dict], item: dict, root: Path | None, *, health: di
     health = release_clip_health(root) if health is None else health
     recent = set(recent or ())
     today = used_today_slugs(item, root)
+    vkey = variety_ranker(item, root)
 
     def tier_key(c: dict) -> tuple:
-        return (_clip_rank(c, health)[0], bool(item_keys(c) & today), len(c.get("scene_assets") or []) < 2)
+        v = vkey(c)
+        # Variety first: a franchise already on this IST day is the last resort (BiBi 25 Nov).
+        return (v[0], _clip_rank(c, health)[0], bool(item_keys(c) & today), len(c.get("scene_assets") or []) < 2, v[1])
 
     ordered = sorted(cands, key=lambda c: tier_key(c) + (bool(item_keys(c) & recent),
                                                          -len(c.get("scene_assets") or [])))
     k0 = tier_key(ordered[0])
     tier = [c for c in ordered if tier_key(c) == k0]
     return tier[_slot_spread_index(item) % len(tier)]
+
+
+def variety_ranker(item: dict, root: Path | None = None):
+    """c -> (same franchise already on this day?, variety penalty bucket) for this item's slot."""
+    try:
+        import variety
+        root = Path(root) if root else REPO
+        dt = variety.slot_of(item)
+        if dt is None:
+            return lambda c: (False, 0)
+        cat = variety.load_catalog(root)
+        ctx = variety.context(root, dt, exclude_ids={str(item.get("id") or "")}, catalog=cat)
+        seen_ids = {c["id"] for c in ctx}
+        for r in (root / "results").glob(f"{dt.astimezone(IST):%Y%m%d}-*.json"):
+            if r.stem == str(item.get("id") or "") or r.stem in seen_ids:
+                continue
+            try:
+                rr = json.loads(r.read_text())
+            except Exception:
+                continue
+            if rr.get("status") in ("done", "rendering") or rr.get("assigned_from_stock"):
+                ctx.append({"id": r.stem, "dt": variety.slot_of(rr) or dt,
+                            "franchise": variety.franchise(_result_footage_slug(rr)),
+                            "category": variety.category({"slug": _result_footage_slug(rr)}, cat)})
+
+        def key(c: dict) -> tuple:
+            p = variety.topic_penalty({**c, "slug": title_slug(c)}, dt, ctx, cat)
+            return (p == variety.FORBIDDEN, 0 if p == variety.FORBIDDEN else int(p // 10))
+        return key
+    except Exception:
+        return lambda c: (False, 0)
 
 
 def _slot_spread_index(item: dict) -> int:
