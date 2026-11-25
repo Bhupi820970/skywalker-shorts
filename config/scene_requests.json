@@ -1,48 +1,10 @@
 {
- "generated_at": "2026-11-25 20:39 IST",
+ "generated_at": "2026-11-26 00:19 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 99,
+ "release_scene_clips": 101,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "haikyuudumpster",
-   "slot": "2026-11-25T16:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261125-1600-haikyuudumpster",
-   "pillar": "anime",
-   "words": "HAIKYU",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "HAIKYU fight scene official clip",
-    "HAIKYU best scene official clip",
-    "HAIKYU official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Sony Pictures New Zealand Official",
-    "TOHO animation チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "The rematch everyone waited for",
-   "title": "The rematch everyone waited for | Haikyu | #edit",
-   "tags": [
-    "haikyuudumpster",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "hinata"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "witchhatatelier",
    "slot": "2026-11-25T18:30:00+05:30",
@@ -381,6 +343,45 @@
    "market": "US/UK"
   },
   {
+   "slug": "arcane2",
+   "slot": "2026-11-27T22:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261127-2230-arcane2",
+   "pillar": "anime",
+   "words": "ARCANE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ARCANE fight scene official clip",
+    "ARCANE best scene official clip",
+    "ARCANE official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Still Watching Netflix"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+   "missing_assets": [],
+   "on_release": [
+    "arcane2_scene2_h264.mp4"
+   ],
+   "hook": "Jinx never wanted this war",
+   "title": "Jinx never wanted this war | Arcane | #edit",
+   "tags": [
+    "arcane2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "jinx"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "aotfinal",
    "slot": "9999",
    "for": "backup_pool",
@@ -460,45 +461,6 @@
     "trending",
     "maomao",
     "jinshi"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "arcane2",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-arcane2",
-   "pillar": "anime",
-   "words": "ARCANE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ARCANE fight scene official clip",
-    "ARCANE best scene official clip",
-    "ARCANE official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Still Watching Netflix"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-   "missing_assets": [],
-   "on_release": [
-    "arcane2_scene2_h264.mp4"
-   ],
-   "hook": "Jinx never wanted this war",
-   "title": "Jinx never wanted this war | Arcane | #edit",
-   "tags": [
-    "arcane2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "jinx"
    ],
    "market": "US/UK"
   },
@@ -619,6 +581,45 @@
    "market": "US/UK"
   },
   {
+   "slug": "dandadan",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dandadan",
+   "pillar": "anime",
+   "words": "DAN DA DAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DAN DA DAN fight scene official clip",
+    "DAN DA DAN best scene official clip",
+    "DAN DA DAN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+   "missing_assets": [],
+   "on_release": [
+    "dandadan_scene2_h264.mp4"
+   ],
+   "hook": "Okarun was never ready for this",
+   "title": "Okarun was never ready for this | Dandadan | #edit",
+   "tags": [
+    "dandadan",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "dandadanevil",
    "slot": "9999",
    "for": "backup_pool",
@@ -722,7 +723,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "dragonballdaima_scene3_h264.mp4"
+   ],
    "hook": "Goku got small, not weak",
    "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
    "tags": [
@@ -979,6 +982,44 @@
    "market": "US/UK"
   },
   {
+   "slug": "haikyuudumpster",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-haikyuudumpster",
+   "pillar": "anime",
+   "words": "HAIKYU",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "HAIKYU fight scene official clip",
+    "HAIKYU best scene official clip",
+    "HAIKYU official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Sony Pictures New Zealand Official",
+    "TOHO animation チャンネル"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "The rematch everyone waited for",
+   "title": "The rematch everyone waited for | Haikyu | #edit",
+   "tags": [
+    "haikyuudumpster",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "hinata"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "hellsparadise",
    "slot": "9999",
    "for": "backup_pool",
@@ -1127,49 +1168,6 @@
    "title": "Kafka hides a monster inside | Kaiju No. 8 | #edit",
    "tags": [
     "kaiju8",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "kafka"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "kaiju8s2",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-kaiju8s2",
-   "pillar": "anime",
-   "words": "KAIJU NO. 8",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "KAIJU NO. 8 fight scene official clip",
-    "KAIJU NO. 8 best scene official clip",
-    "KAIJU NO. 8 official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll India",
-    "TOHO animation チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=gd2pP8LgWVo",
-   "missing_assets": [
-    "kaiju8s2_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "kaiju8s2_scene1_h264.mp4",
-    "kaiju8s2_scene2_h264.mp4"
-   ],
-   "hook": "Kafka cannot control it anymore",
-   "title": "Kafka cannot control it anymore | Kaiju No. 8 | #edit",
-   "tags": [
-    "kaiju8s2",
     "anime",
     "animeedit",
     "edit",
