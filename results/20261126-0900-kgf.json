@@ -1,0 +1,422 @@
+{
+  "id": "20261126-0900-kgf",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (title auto-swap to BLEACH)",
+  "at": "2026-11-26 02:15 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45690476662",
+  "slot": "2026-11-26T09:00:00+05:30",
+  "title": "Nobody suspected Uryu was this dangerous #bleach #ichigo #animeedit",
+  "hook": "He Never Came To Negotiate",
+  "description": "He Never Came To Negotiate. Ichigo and his allies confront powerful rivals as tensions peak in classic Bleach moments. From the official Bleach trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#bleach #ichigo #animeedit #shorts #edit",
+  "tags": [
+    "bleach",
+    "ichigo",
+    "animeedit",
+    "bleachtybw",
+    "anime",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "Ichigo was born for this war",
+    "title": "Ichigo was born for this war | Bleach | #edit",
+    "description": "Ichigo was born for this war. From official Bleach clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #bleachtybw",
+    "tags": [
+      "bleachtybw",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "ichigo"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "bold savage statement",
+  "title_candidates": [
+    {
+      "title": "Nobody suspected Uryu was this dangerous",
+      "click_score": 94.0
+    },
+    {
+      "title": "Ichigo entering the scene is peak Bleach",
+      "click_score": 90.0
+    },
+    {
+      "title": "The moment Ichigo proved them all wrong",
+      "click_score": 86.0
+    },
+    {
+      "title": "Ichigo did not expect this move from Uryu",
+      "click_score": 83.0
+    },
+    {
+      "title": "Watch the last two seconds for Ichigo",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 32.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 37.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 22.0,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key5",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 30.8,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 18.3,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 53.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 51.7,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "BLEACH",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "kgf",
+      "from_words": "KGF",
+      "to": "bleachtybw",
+      "to_words": "BLEACH",
+      "reason": "download failed: no official scene clips for this topic"
+    }
+  ],
+  "swapped_from": "kgf",
+  "swapped_to": "bleachtybw",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: no official scene clips for this topic",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4",
+      "music": "pr_fp0uwqgravy.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261126-0900-kgf",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261126-0900-kgf/render-20261126-0900-kgf.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 15.848,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachtybw_scene1_h264.mp4",
+  "music": "pr_fp0uwqgravy.mp3",
+  "music_credit": "Song: Phonk Time - MONTAGEM NADA - ZXVN\nOfficial link: https://www.youtube.com/watch?v=Fp0UWqgRavY",
+  "description_final": "He Never Came To Negotiate. Ichigo and his allies confront powerful rivals as tensions peak in classic Bleach moments. From the official Bleach trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#bleach #ichigo #animeedit #shorts #edit\n\nMusic:\nSong: Phonk Time - MONTAGEM NADA - ZXVN\nOfficial link: https://www.youtube.com/watch?v=Fp0UWqgRavY",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261126-0900-kgf/render-20261126-0900-kgf-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.7,
+      "audio": true
+    },
+    "lufs": -13.8,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -15.9,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 53,
+      "masked_rows": [
+        [
+          0.2198,
+          0.2885
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 9.0,
+        "title": 9.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 422,
+    "bar_h": 132,
+    "plate_y": 554,
+    "video_y": 554,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 810,
+    "region_h": 1788,
+    "block_h": 1920,
+    "drop_t": 15.848,
+    "energy": true,
+    "caption_y": 1392,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 42,
+      "src_start": 154.417,
+      "dur": 1.5,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 13,
+      "src_start": 42.9,
+      "dur": 1.704,
+      "gemini_score": 9.5,
+      "reason": "gemini score 9.5"
+    },
+    {
+      "id": 8,
+      "src_start": 23.25,
+      "dur": 1.5,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 21,
+      "src_start": 68.65,
+      "dur": 1.751,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 24,
+      "src_start": 74.25,
+      "dur": 1.834,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 16,
+      "src_start": 60.583,
+      "dur": 1.81,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
+    },
+    {
+      "id": 35,
+      "src_start": 116.733,
+      "dur": 2.0,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 15,
+      "src_start": 48.967,
+      "dur": 1.856,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
+    },
+    {
+      "id": 28,
+      "src_start": 87.667,
+      "dur": 1.893,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 37,
+      "src_start": 127.833,
+      "dur": 1.777,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 33,
+      "src_start": 108.717,
+      "dur": 2.39,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 40001,
+      "src_start": 147.706,
+      "dur": 1.5,
+      "gemini_score": 5.5,
+      "reason": "gemini score 5.5"
+    },
+    {
+      "id": 29,
+      "src_start": 92.833,
+      "dur": 0.584,
+      "gemini_score": 5.5,
+      "reason": "gemini score 5.5"
+    }
+  ],
+  "qc_status": "pass"
+}
