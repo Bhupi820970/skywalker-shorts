@@ -1,49 +1,10 @@
 {
- "generated_at": "2026-11-25 17:49 IST",
+ "generated_at": "2026-11-25 20:32 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "weatheringwithyou",
-   "slot": "2026-11-25T13:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261125-1330-weatheringwithyou",
-   "pillar": "romance",
-   "words": "WEATHERING WITH YOU",
-   "scene_types": [
-    "romantic",
-    "emotional",
-    "confession"
-   ],
-   "search_queries": [
-    "WEATHERING WITH YOU romantic scene",
-    "WEATHERING WITH YOU emotional scene",
-    "WEATHERING WITH YOU official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
-   "missing_assets": [],
-   "on_release": [
-    "weatheringwithyou_scene1_h264.mp4"
-   ],
-   "hook": "He chose her over the sky",
-   "title": "He chose her over the sky | Weathering With You | #edit",
-   "tags": [
-    "weatheringwithyou",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "hina",
-    "hodaka"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "haikyuudumpster",
    "slot": "2026-11-25T16:00:00+05:30",
@@ -106,9 +67,7 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
    "missing_assets": [],
-   "on_release": [
-    "witchhatatelier_scene2_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Coco drew her first spell",
    "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
    "tags": [
@@ -119,6 +78,44 @@
     "shorts",
     "trending",
     "coco"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "spiritedaway",
+   "slot": "2026-11-25T22:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261125-2230-spiritedaway",
+   "pillar": "anime",
+   "words": "SPIRITED AWAY",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "SPIRITED AWAY fight scene official clip",
+    "SPIRITED AWAY best scene official clip",
+    "SPIRITED AWAY official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll Store Australia",
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Chihiro had to forget her name",
+   "title": "Chihiro had to forget her name | Spirited Away | #edit",
+   "tags": [
+    "spiritedaway",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "chihiro"
    ],
    "market": "US/UK"
   },
@@ -502,47 +499,6 @@
     "shorts",
     "trending",
     "jinx"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "bleachtybw",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-bleachtybw",
-   "pillar": "anime",
-   "words": "BLEACH",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "BLEACH fight scene official clip",
-    "BLEACH best scene official clip",
-    "BLEACH official clip"
-   ],
-   "official_channels": [
-    "vizmedia",
-    "『BLEACH』アニメ公式チャンネル",
-    "『BLEACH』アニメ公式チャンネル and 2 more",
-    "アニプレックス チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=4Gti6YqvMzE",
-   "missing_assets": [],
-   "on_release": [
-    "bleachtybw_scene2_h264.mp4"
-   ],
-   "hook": "Ichigo was born for this war",
-   "title": "Ichigo was born for this war | Bleach | #edit",
-   "tags": [
-    "bleachtybw",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "ichigo"
    ],
    "market": "US/UK"
   },
@@ -1206,7 +1162,10 @@
    "missing_assets": [
     "kaiju8s2_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "kaiju8s2_scene1_h264.mp4",
+    "kaiju8s2_scene2_h264.mp4"
+   ],
    "hook": "Kafka cannot control it anymore",
    "title": "Kafka cannot control it anymore | Kaiju No. 8 | #edit",
    "tags": [
@@ -1866,6 +1825,45 @@
     "vinland",
     "anime",
     "ihavenoenemies"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "weatheringwithyou",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-weatheringwithyou",
+   "pillar": "anime",
+   "words": "WEATHERING WITH YOU",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "WEATHERING WITH YOU fight scene official clip",
+    "WEATHERING WITH YOU best scene official clip",
+    "WEATHERING WITH YOU official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
+   "missing_assets": [],
+   "on_release": [
+    "weatheringwithyou_scene1_h264.mp4"
+   ],
+   "hook": "He chose her over the sky",
+   "title": "He chose her over the sky | Weathering With You | #edit",
+   "tags": [
+    "weatheringwithyou",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "hina",
+    "hodaka"
    ],
    "market": "US/UK"
   },
