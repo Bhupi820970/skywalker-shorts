@@ -1,43 +1,10 @@
 {
- "generated_at": "2026-11-25 13:49 IST",
+ "generated_at": "2026-11-25 15:25 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 99,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "pathaan",
-   "slot": "2026-11-25T09:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261125-0900-pathaan",
-   "pillar": "bollywood",
-   "words": "PATHAAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "PATHAAN fight scene official clip",
-    "PATHAAN best scene official clip",
-    "PATHAAN official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=hQDyX9sOe04",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Jim chose the wrong side",
-   "title": "Jim chose the wrong side | Pathaan | #edit",
-   "tags": [
-    "pathaan",
-    "shahrukhkhan",
-    "srk",
-    "yrf",
-    "bollywoodedit",
-    "bollywood"
-   ],
-   "market": "IN"
-  },
   {
    "slug": "haikyuudumpster",
    "slot": "2026-11-25T16:00:00+05:30",
@@ -113,6 +80,45 @@
     "shorts",
     "trending",
     "coco"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dandadanevil",
+   "slot": "2026-11-25T20:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261125-2030-dandadanevil",
+   "pillar": "anime",
+   "words": "DAN DA DAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DAN DA DAN fight scene official clip",
+    "DAN DA DAN best scene official clip",
+    "DAN DA DAN official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
+   "missing_assets": [],
+   "on_release": [
+    "dandadanevil_scene1_h264.mp4"
+   ],
+   "hook": "Evil Eye was a lonely kid",
+   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+   "tags": [
+    "dandadanevil",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
    ],
    "market": "US/UK"
   },
@@ -541,48 +547,6 @@
     "animeedit",
     "anime",
     "football"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "dandadanevil",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-dandadanevil",
-   "pillar": "anime",
-   "words": "DAN DA DAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DAN DA DAN fight scene official clip",
-    "DAN DA DAN best scene official clip",
-    "DAN DA DAN official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
-   "missing_assets": [
-    "dandadanevil_scene2_h264.mp4"
-   ],
-   "on_release": [
-    "dandadanevil_scene1_h264.mp4",
-    "dandadanevil_scene3_h264.mp4"
-   ],
-   "hook": "Evil Eye was a lonely kid",
-   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
-   "tags": [
-    "dandadanevil",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "okarun"
    ],
    "market": "US/UK"
   },
@@ -1089,10 +1053,7 @@
    "missing_assets": [
     "kaiju8s2_scene3_h264.mp4"
    ],
-   "on_release": [
-    "kaiju8s2_scene1_h264.mp4",
-    "kaiju8s2_scene2_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Kafka cannot control it anymore",
    "title": "Kafka cannot control it anymore | Kaiju No. 8 | #edit",
    "tags": [

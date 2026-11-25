@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-25 13:49 IST",
+  "at": "2026-11-25 15:25 IST",
   "slots_checked": 9,
   "ready": [
     {
@@ -37,6 +37,7 @@
     "stock-suzume-01",
     "stock-dragonballdaima-03",
     "stock-deadpool3-03",
+    "stock-dandadanevil-11",
     "stock-boyandheron-01",
     "20261114-1130-despicableme4",
     "stock-weatheringwithyou-14",
@@ -148,8 +149,8 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 6,
-  "stock_pending": 12,
+  "stock_ready": 7,
+  "stock_pending": 13,
   "stock_used": 39,
   "stock_target": 30,
   "stock_need_refill": true,
