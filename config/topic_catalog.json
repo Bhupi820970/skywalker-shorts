@@ -2650,6 +2650,30 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "category": "tv"
+    },
+    {
+      "slug": "deathnote",
+      "pillar": "anime",
+      "words": "DEATH NOTE",
+      "hook": "Why Light thought he outsmarted everyone",
+      "title": "Why Light thought he outsmarted everyone | Light potato chip scene | #edit",
+      "description": "Why Light thought he outsmarted everyone. From official Death Note clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #deathnote #lightyagami #llawliet",
+      "tags": [
+        "deathnote",
+        "lightyagami",
+        "llawliet",
+        "animeedit",
+        "kira",
+        "deathnoteedit",
+        "psychological"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=Z1mcQ6CzXo8",
+      "scene_assets": [
+        "deathnote_scene1_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
