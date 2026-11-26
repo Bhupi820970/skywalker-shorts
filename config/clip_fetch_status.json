@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T11:56:54Z",
-  "last_upload_at": "2026-11-26T11:56:54Z"
+  "last_run_at": "2026-11-26T11:58:48Z",
+  "last_upload_at": "2026-11-26T11:58:48Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -164,6 +164,7 @@
   "yt:xPJLyIFyF50",
   "yt:xlrj36cAzj4",
   "yt:xpJWvpumgxs",
+  "yt:yVvafJ0Skx0",
   "yt:yWBA876qftM",
   "yt:zBrkG3aeWCc"
  ],
@@ -2037,6 +2038,17 @@
    "kbps": 16149,
    "by": "box",
    "at": "2026-11-26T11:56:54Z"
+  },
+  {
+   "asset": "strangerthings_scene4_h264.mp4",
+   "id": "yt:yVvafJ0Skx0",
+   "title": "Eleven Vs Vecna | Kate Bush - Running Up That Hill Remix | Stranger Things | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1610,
+   "by": "box",
+   "at": "2026-11-26T11:58:48Z"
   }
  ],
  "github": {
