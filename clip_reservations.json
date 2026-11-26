@@ -284,10 +284,11 @@
    "video": "20261114-1600-furiosa"
   },
   "gladiatormaximus_scene1_h264.mp4": {
-   "at": "2026-11-26T17:36:29+00:00",
+   "at": "2026-11-26T18:01:26+00:00",
    "owner": "45860075527-1-20261126-2230-topgunmaverick",
    "platform": "render",
-   "state": "reserved"
+   "state": "used",
+   "video": "20261126-2230-topgunmaverick"
   },
   "hoppers_trailer_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
@@ -530,10 +531,11 @@
    "video": "20261113-2230-superman"
   },
   "topgunmaverick_scene2_h264.mp4": {
-   "at": "2026-11-26T17:36:32+00:00",
+   "at": "2026-11-26T18:01:26+00:00",
    "owner": "45860075527-1-20261126-2230-topgunmaverick",
    "platform": "render",
-   "state": "reserved"
+   "state": "used",
+   "video": "20261126-2230-topgunmaverick"
   },
   "toystory5_trailer_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
