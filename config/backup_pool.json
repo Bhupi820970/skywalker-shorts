@@ -1829,7 +1829,10 @@
         "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene1_h264.mp4",
         "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene2_h264.mp4",
         "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene3_h264.mp4",
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene4_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene4_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene5_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene6_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene7_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "Why Vecna wanted Max",
@@ -1851,7 +1854,10 @@
         "strangerthings_scene1_h264.mp4",
         "strangerthings_scene2_h264.mp4",
         "strangerthings_scene3_h264.mp4",
-        "strangerthings_scene4_h264.mp4"
+        "strangerthings_scene4_h264.mp4",
+        "strangerthings_scene5_h264.mp4",
+        "strangerthings_scene6_h264.mp4",
+        "strangerthings_scene7_h264.mp4"
       ],
       "added_by": "footage_refill",
       "category": "tv"

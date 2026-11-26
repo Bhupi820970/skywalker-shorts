@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T17:06:17Z",
-  "last_upload_at": "2026-11-26T17:06:17Z"
+  "last_run_at": "2026-11-26T17:17:37Z",
+  "last_upload_at": "2026-11-26T17:17:37Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -44,6 +44,7 @@
   "yt:DDAHHPGcLzo",
   "yt:DIefkYvjq6E",
   "yt:Dey2_shAaWI",
+  "yt:E4ScPro8YcI",
   "yt:EKuVC2aVdI8",
   "yt:EovTf8Mydo4",
   "yt:Ev0FRl7IRkU",
@@ -130,6 +131,7 @@
   "yt:aiCMXJ4zKWA",
   "yt:aoi11BdfpoM",
   "yt:b2l8sz4TAY4",
+  "yt:bV0RAcuG2Ao",
   "yt:c8o3ATfaS6w",
   "yt:cbft6JWPkpA",
   "yt:chjVPTdBel8",
@@ -148,6 +150,7 @@
   "yt:gPECYXOC9z4",
   "yt:gavPKwaMFyc",
   "yt:golG9lmaR_U",
+  "yt:gwnnpurSMyU",
   "yt:hNg1ksFeyv0",
   "yt:hQDyX9sOe04",
   "yt:iAIBF2ngbWY",
@@ -2361,6 +2364,39 @@
    "kbps": 2329,
    "by": "box",
    "at": "2026-11-26T17:06:17Z"
+  },
+  {
+   "asset": "strangerthings_scene5_h264.mp4",
+   "id": "yt:bV0RAcuG2Ao",
+   "title": "Max’s Song (Full Scene) | Kate Bush - Running Up That Hill | Stranger Things | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1554,
+   "by": "box",
+   "at": "2026-11-26T17:17:37Z"
+  },
+  {
+   "asset": "strangerthings_scene6_h264.mp4",
+   "id": "yt:E4ScPro8YcI",
+   "title": "Eddie Munson's Upside Down Guitar GOD Scene - Master of Puppets | Stranger Things | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1470,
+   "by": "box",
+   "at": "2026-11-26T17:17:37Z"
+  },
+  {
+   "asset": "strangerthings_scene7_h264.mp4",
+   "id": "yt:gwnnpurSMyU",
+   "title": "Stranger Things | Dear Billy",
+   "channel": "Netflix Philippines",
+   "kind": "scene",
+   "res": "1080x1920",
+   "kbps": 1805,
+   "by": "box",
+   "at": "2026-11-26T17:17:37Z"
   }
  ],
  "github": {
