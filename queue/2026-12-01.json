@@ -1,0 +1,98 @@
+[
+ {
+  "id": "20261201-0630-wednesday",
+  "slot": "2026-12-01T06:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=NakTu_VZxJ0",
+  "template": "whitebar",
+  "hook": "Why Wednesday never smiles",
+  "words": "WEDNESDAY",
+  "title": "Why Wednesday never smiles | Wednesday | #edit",
+  "description": "Why Wednesday never smiles. From official Wednesday clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #wednesday #anime #edit",
+  "tags": [
+   "wednesday",
+   "anime",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "wednesday_scene1_h264.mp4"
+ },
+ {
+  "id": "20261201-1330-pushpa",
+  "slot": "2026-12-01T13:30:00+05:30",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=T6IVOvy1KZo",
+  "template": "whitebar",
+  "hook": "Why Pushpa Raj never bowed down",
+  "words": "PUSHPA THE RISE",
+  "title": "Why Pushpa Raj never bowed down | Pushpa Raj police station scene | #edit",
+  "description": "Why Pushpa Raj never bowed down. From official Pushpa The Rise clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #pushpa #alluarjun #pushparaj",
+  "tags": [
+   "pushpa",
+   "alluarjun",
+   "pushparaj",
+   "southedit",
+   "telugumovies",
+   "mythrimoviemakers",
+   "massedit"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/pushpa_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/pushpa_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/pushpa_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/pushpa_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "pushpa_scene1_h264.mp4"
+ },
+ {
+  "id": "20261201-2230-zootopia",
+  "slot": "2026-12-01T22:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=Kw3935PH01E",
+  "template": "whitebar",
+  "hook": "Why Nick never trusted anyone",
+  "words": "ZOOTOPIA",
+  "title": "Why Nick never trusted anyone | Zootopia | #edit",
+  "description": "Why Nick never trusted anyone. From official Zootopia clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #zootopia #anime #edit",
+  "tags": [
+   "zootopia",
+   "anime",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/zootopia_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/zootopia_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "zootopia_scene1_h264.mp4"
+ }
+]

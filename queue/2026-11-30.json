@@ -34,6 +34,200 @@
   "fallback_asset": "jujutsukaisencullinggame_scene1_h264.mp4"
  },
  {
+  "id": "20261130-0900-dune",
+  "slot": "2026-11-30T09:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=2HSKZhb3J_M",
+  "template": "whitebar",
+  "hook": "Why Paul stopped being human",
+  "words": "DUNE",
+  "title": "Why Paul stopped being human | Dune | #edit",
+  "description": "Why Paul stopped being human. From official Dune clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dune #anime #edit",
+  "tags": [
+   "dune",
+   "anime",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "dune_scene1_h264.mp4"
+ },
+ {
+  "id": "20261130-1130-strangerthings",
+  "slot": "2026-11-30T11:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=ermJ-iPg9xA",
+  "template": "whitebar",
+  "hook": "Why Vecna wanted Max",
+  "words": "STRANGER THINGS",
+  "title": "Why Vecna wanted Max | Stranger Things | #edit",
+  "description": "Why Vecna wanted Max. From official Stranger Things clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #strangerthings #anime #edit",
+  "tags": [
+   "strangerthings",
+   "anime",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene3_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene3_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "strangerthings_scene1_h264.mp4"
+ },
+ {
+  "id": "20261130-1330-deathnote",
+  "slot": "2026-11-30T13:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=Z1mcQ6CzXo8",
+  "template": "whitebar",
+  "hook": "Why Light thought he outsmarted everyone",
+  "words": "DEATH NOTE",
+  "title": "Why Light thought he outsmarted everyone | Light potato chip scene | #edit",
+  "description": "Why Light thought he outsmarted everyone. From official Death Note clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #deathnote #lightyagami #llawliet",
+  "tags": [
+   "deathnote",
+   "lightyagami",
+   "llawliet",
+   "animeedit",
+   "kira",
+   "deathnoteedit",
+   "psychological"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/deathnote_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/deathnote_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "deathnote_scene1_h264.mp4"
+ },
+ {
+  "id": "20261130-1600-shershaah",
+  "slot": "2026-11-30T16:00:00+05:30",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=PDtrzr-LtIc",
+  "template": "whitebar",
+  "hook": "Why Vikram Batra feared no enemy",
+  "words": "SHERSHAAH",
+  "title": "Why Vikram Batra feared no enemy | Captain Vikram Batra battle | #edit",
+  "description": "Why Vikram Batra feared no enemy. From official Shershaah clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #shershaah #sidharthmalhotra #vikrambatra",
+  "tags": [
+   "shershaah",
+   "sidharthmalhotra",
+   "vikrambatra",
+   "bollywoodedit",
+   "indianarmy",
+   "bollywood",
+   "patriotism"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shershaah_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shershaah_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shershaah_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shershaah_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "shershaah_scene1_h264.mp4"
+ },
+ {
+  "id": "20261130-1830-arcane",
+  "slot": "2026-11-30T18:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=ZVTDEZvFU6k",
+  "template": "whitebar",
+  "hook": "Jinx finally loses her mind",
+  "words": "ARCANE",
+  "title": "Jinx finally loses her mind | Arcane | #edit",
+  "description": "Jinx finally loses her mind. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #arcane #anime #edit",
+  "tags": [
+   "arcane",
+   "anime",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "arcane_scene1_h264.mp4"
+ },
+ {
+  "id": "20261130-2030-gta5",
+  "slot": "2026-11-30T20:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=N-xHcvug3WI",
+  "template": "whitebar",
+  "hook": "Why Trevor scares even Michael",
+  "words": "GTA V",
+  "title": "Why Trevor scares even Michael | Gta V | #edit",
+  "description": "Why Trevor scares even Michael. From official Gta V clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gta5 #anime #edit",
+  "tags": [
+   "gta5",
+   "anime",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene4_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene4_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "gta5_scene1_h264.mp4"
+ },
+ {
   "id": "20261130-2230-cyberpunk2077",
   "slot": "2026-11-30T22:30:00+05:30",
   "pillar": "anime",
