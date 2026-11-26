@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T17:22:05Z",
-  "last_upload_at": "2026-11-26T17:22:05Z"
+  "last_run_at": "2026-11-26T17:29:02Z",
+  "last_upload_at": "2026-11-26T17:29:02Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -39,6 +39,7 @@
   "yt:ARIlzBXdzvo",
   "yt:AXbeD92Ty50",
   "yt:B0pIISs-o8w",
+  "yt:B479Wc72Bsc",
   "yt:BU--ttm4nYs",
   "yt:CFjI21M9wZs",
   "yt:DDAHHPGcLzo",
@@ -72,6 +73,7 @@
   "yt:KaB7tTJ2T5o",
   "yt:Kw3935PH01E",
   "yt:LIRxNpQ8Hqg",
+  "yt:LQ4EcIUTqj4",
   "yt:Lbmsv1tcgf8",
   "yt:LmWrEpYpUec",
   "yt:LtAkyPyUhgY",
@@ -107,6 +109,7 @@
   "yt:VofN1x93TG0",
   "yt:VwwZU7YgC6A",
   "yt:WGXmDsOwW4k",
+  "yt:X5npfFNjrgU",
   "yt:XnseVYTF8_0",
   "yt:XxFyjEtUock",
   "yt:Y9XqnjKXgTs",
@@ -165,6 +168,7 @@
   "yt:l5ZiW3mCuE4",
   "yt:laROLKDI3jM",
   "yt:mSXxPBQmPAw",
+  "yt:ms8jkPQ5cvM",
   "yt:nBks1vcJQvk",
   "yt:oL75W3ubBgQ",
   "yt:olEGtoYs_8A",
@@ -2409,6 +2413,50 @@
    "kbps": 2105,
    "by": "box",
    "at": "2026-11-26T17:22:05Z"
+  },
+  {
+   "asset": "wednesday_scene4_h264.mp4",
+   "id": "yt:LQ4EcIUTqj4",
+   "title": "Merlina | Escena del baile | Netflix",
+   "channel": "Netflix Latinoamérica",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2966,
+   "by": "box",
+   "at": "2026-11-26T17:29:02Z"
+  },
+  {
+   "asset": "wednesday_scene5_h264.mp4",
+   "id": "yt:X5npfFNjrgU",
+   "title": "Wednesday Seems Different... | Wednesday: Season 2 | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2009,
+   "by": "box",
+   "at": "2026-11-26T17:29:02Z"
+  },
+  {
+   "asset": "wednesday_scene6_h264.mp4",
+   "id": "yt:B479Wc72Bsc",
+   "title": "Wednesday Releases Thing In New York | Netflix",
+   "channel": "Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2087,
+   "by": "box",
+   "at": "2026-11-26T17:29:02Z"
+  },
+  {
+   "asset": "wednesday_scene7_h264.mp4",
+   "id": "yt:ms8jkPQ5cvM",
+   "title": "Agnes y Enid bailan The Dead Dance | Miércoles | Netflix España",
+   "channel": "Netflix España",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2019,
+   "by": "box",
+   "at": "2026-11-26T17:29:02Z"
   }
  ],
  "github": {
