@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26 05:13 IST",
+ "generated_at": "2026-11-26 06:19 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 101,
@@ -69,9 +69,7 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
    "missing_assets": [],
-   "on_release": [
-    "mashle_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Mash breaks magic with muscles",
    "title": "Mash breaks magic with muscles | Mashle | #edit",
    "tags": [
