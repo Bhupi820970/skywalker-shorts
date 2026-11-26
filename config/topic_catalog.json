@@ -2508,6 +2508,29 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "category": "movie"
+    },
+    {
+      "slug": "dune",
+      "pillar": "anime",
+      "words": "DUNE",
+      "hook": "Why Paul stopped being human",
+      "title": "Why Paul stopped being human | Dune | #edit",
+      "description": "Why Paul stopped being human. From official Dune clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dune #anime #edit",
+      "tags": [
+        "dune",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=2HSKZhb3J_M",
+      "scene_assets": [
+        "dune_scene1_h264.mp4",
+        "dune_scene2_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "category": "movie"
     }
   ]
 }

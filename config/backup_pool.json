@@ -1758,6 +1758,37 @@
         "yourname_scene1_h264.mp4"
       ],
       "category": "anime"
+    },
+    {
+      "id": "backup-dune",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=2HSKZhb3J_M",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Paul stopped being human",
+      "words": "DUNE",
+      "title": "Why Paul stopped being human | Dune | #edit",
+      "description": "Why Paul stopped being human. From official Dune clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dune #anime #edit",
+      "tags": [
+        "dune",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "dune_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "dune_scene1_h264.mp4",
+        "dune_scene2_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "movie"
     }
   ]
 }
