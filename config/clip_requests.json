@@ -1,504 +1,352 @@
 {
- "generated_at": "2026-11-25 18:21 IST",
+ "generated_at": "2026-11-26 18:00 IST",
  "max_clips_per_title": 5,
  "min_height": 1080,
  "requests": [
   {
-   "slug": "demonslayer",
+   "slug": "blackcloverasta",
    "pillar": "anime",
-   "words": "DEMON SLAYER",
+   "words": "BLACK CLOVER",
    "characters": [
-    "Tengen Uzui",
-    "Gyutaro"
+    "Asta"
    ],
    "scene_types": [
     "fight",
-    "aura",
-    "entrance"
+    "aura"
    ],
    "search_queries": [
-    "Demon Slayer Tengen vs Gyutaro fight scene official clip",
-    "Demon Slayer Sound Hashira entrance clip HD",
-    "Kimetsu no Yaiba Tengen Gyutaro climax scene clip"
+    "Black Clover Asta anti magic scene",
+    "Asta vs Ladros fight official",
+    "Asta Black Bull squad entrance",
+    "Black Clover official clip"
    ],
    "official_channels": [
-    "Aniplex USA",
-    "TOHO animation",
-    "Sony Pictures Entertainment"
-   ],
-   "hook": "Why Tengen refused to back down",
-   "title": "Why Tengen refused to back down | Tengen vs Gyutaro fight | #edit",
-   "tags": [
-    "#demonslayer",
-    "#tengenuzui",
-    "#gyutaro",
-    "#kimetsunoyaiba",
-    "#animeedit",
-    "#demonslayeredit",
-    "#soundhashira"
-   ],
-   "market": "US/UK",
-   "known_topic": true
-  },
-  {
-   "slug": "mobpsycho100",
-   "pillar": "anime",
-   "words": "MOB PSYCHO 100",
-   "characters": [
-    "Shigeo Kageyama",
-    "Toichiro Suzuki"
-   ],
-   "scene_types": [
-    "fight",
-    "aura",
-    "emotional"
-   ],
-   "search_queries": [
-    "Mob Psycho 100 Mob 100 percent fight scene clip",
-    "Mob Psycho 100 Mob vs Suzuki official clip HD",
-    "Mob Psycho 100 Shigeo rage scene clip"
-   ],
-   "official_channels": [
-    "Warner Bros. Japan Anime",
+    "Netflix",
     "Netflix Anime"
    ],
-   "hook": "Why Mob lost total control here",
-   "title": "Why Mob lost total control here | Mob reaches 100 percent | #edit",
+   "hook": "Why Asta keeps breaking his limits",
+   "title": "Why Asta keeps breaking his limits 💀 | Asta vs Ladros | #edit",
    "tags": [
-    "#mobpsycho100",
-    "#shigeokageyama",
-    "#mob100",
-    "#animeedit",
-    "#mobpsycho",
-    "#anime",
-    "#psychic"
+    "blackclover",
+    "asta",
+    "animeedit",
+    "shonen",
+    "anime",
+    "animetiktok",
+    "blackbulls"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "deathnote",
+   "slug": "bleachaizen",
    "pillar": "anime",
-   "words": "DEATH NOTE",
+   "words": "BLEACH",
    "characters": [
-    "Light Yagami",
-    "L Lawliet"
+    "Aizen"
    ],
    "scene_types": [
     "aura",
-    "emotional",
     "entrance"
    ],
    "search_queries": [
-    "Death Note Light potato chip scene clip",
-    "Death Note L meets Light scene official clip",
-    "Death Note Light confession scene clip HD"
+    "Aizen chair scene official",
+    "Sosuke Aizen entrance scene",
+    "Aizen vs captains scene",
+    "Bleach Thousand Year Blood War scene"
    ],
    "official_channels": [
-    "VIZ Media",
+    "Netflix",
     "Netflix Anime"
    ],
-   "hook": "Why Light thought he outsmarted everyone",
-   "title": "Why Light thought he outsmarted everyone | Light potato chip scene | #edit",
+   "hook": "Why Aizen is the ultimate villain",
+   "title": "Why Aizen is the ultimate villain 💀 | Aizen arrives | #edit",
    "tags": [
-    "#deathnote",
-    "#lightyagami",
-    "#llawliet",
-    "#animeedit",
-    "#kira",
-    "#deathnoteedit",
-    "#psychological"
+    "bleach",
+    "aizen",
+    "bleachtybw",
+    "anime",
+    "aura",
+    "villain",
+    "animeedit"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "hunterxhunter",
+   "slug": "hxhkillua",
    "pillar": "anime",
    "words": "HUNTER X HUNTER",
    "characters": [
-    "Isaac Netero",
-    "Meruem"
+    "Killua"
    ],
    "scene_types": [
     "fight",
-    "aura",
-    "emotional"
+    "aura"
    ],
    "search_queries": [
-    "Hunter x Hunter Netero vs Meruem fight scene clip",
-    "Hunter x Hunter Netero Zero Hand scene official clip",
-    "Hunter x Hunter Chimera Ant King fight clip HD"
+    "Killua vs Sub official clip",
+    "Killua lightning speed scene",
+    "Killua assassin mode scene",
+    "HxH official scene"
    ],
    "official_channels": [
-    "VIZ Media",
+    "Netflix",
     "Netflix Anime"
    ],
-   "hook": "Why Netero smiles at the King",
-   "title": "Why Netero smiles at the King | Netero vs Meruem fight | #edit",
+   "hook": "Why Killua is a cold assassin",
+   "title": "Why Killua is a cold assassin 💀 | Killua aura | #edit",
    "tags": [
-    "#hunterxhunter",
-    "#netero",
-    "#meruem",
-    "#hxh",
-    "#animeedit",
-    "#hunterxhunteredit",
-    "#chimeraant"
+    "hxh",
+    "killua",
+    "hunterxhunter",
+    "anime",
+    "assassin",
+    "animeedit",
+    "killuazoldyck"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "narutoshippuden",
+   "slug": "mobpsychoreigen",
    "pillar": "anime",
-   "words": "NARUTO SHIPPUDEN",
+   "words": "MOB PSYCHO 100",
    "characters": [
-    "Madara Uchiha"
+    "Reigen"
+   ],
+   "scene_types": [
+    "comedy",
+    "aura"
+   ],
+   "search_queries": [
+    "Reigen Arataka speech scene",
+    "Reigen salt splash scene",
+    "Mob Psycho 100 official clip",
+    "Reigen funny moments"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "hook": "Why Reigen is the greatest mentor",
+   "title": "Why Reigen is the greatest mentor 💀 | Reigen speech | #edit",
+   "tags": [
+    "mobpsycho100",
+    "reigen",
+    "anime",
+    "comedy",
+    "master",
+    "animeedit",
+    "psychic"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "interstellarcooper",
+   "pillar": "hollywood",
+   "words": "INTERSTELLAR",
+   "characters": [
+    "Cooper"
+   ],
+   "scene_types": [
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "Interstellar docking scene",
+    "Cooper enters black hole scene",
+    "Interstellar official clip",
+    "Interstellar movie scene"
+   ],
+   "official_channels": [
+    "Warner Bros. Pictures",
+    "IMDb"
+   ],
+   "hook": "Why Cooper never gave up hope",
+   "title": "Why Cooper never gave up hope 💀 | Docking sequence | #edit",
+   "tags": [
+    "interstellar",
+    "cooper",
+    "nolan",
+    "scifi",
+    "movieedit",
+    "space",
+    "cinema"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "gladiatormaximus",
+   "pillar": "hollywood",
+   "words": "GLADIATOR",
+   "characters": [
+    "Maximus"
    ],
    "scene_types": [
     "fight",
-    "aura",
-    "entrance"
+    "aura"
    ],
    "search_queries": [
-    "Naruto Shippuden Madara vs Shinobi Alliance fight scene clip",
-    "Madara Uchiha entrance official clip HD",
-    "Madara drops meteor scene clip"
-   ],
-   "official_channels": [
-    "VIZ Media",
-    "Bandai Namco Entertainment"
-   ],
-   "hook": "Why Madara fought an army alone",
-   "title": "Why Madara fought an army alone | Madara vs Allied Shinobi Forces | #edit",
-   "tags": [
-    "#narutoshippuden",
-    "#madarauchiha",
-    "#madara",
-    "#naruto",
-    "#animeedit",
-    "#narutoedit",
-    "#shinobi"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "thedarkknight",
-   "pillar": "hollywood",
-   "words": "THE DARK KNIGHT",
-   "characters": [
-    "The Joker",
-    "Batman"
-   ],
-   "scene_types": [
-    "aura",
-    "emotional",
-    "entrance"
-   ],
-   "search_queries": [
-    "The Dark Knight Joker interrogation scene clip HD",
-    "The Dark Knight Joker pencil trick scene official clip",
-    "The Dark Knight Batman meets Joker clip"
-   ],
-   "official_channels": [
-    "Warner Bros. Entertainment",
-    "Movieclips"
-   ],
-   "hook": "Why Joker never feared Batman here",
-   "title": "Why Joker never feared Batman here | Joker interrogation scene | #edit",
-   "tags": [
-    "#thedarkknight",
-    "#joker",
-    "#batman",
-    "#heathledger",
-    "#christianbale",
-    "#movieedit",
-    "#dc"
-   ],
-   "market": "US/UK",
-   "known_topic": true
-  },
-  {
-   "slug": "fightclub",
-   "pillar": "hollywood",
-   "words": "FIGHT CLUB",
-   "characters": [
-    "Tyler Durden",
-    "The Narrator"
-   ],
-   "scene_types": [
-    "aura",
-    "emotional",
-    "entrance"
-   ],
-   "search_queries": [
-    "Fight Club Tyler Durden speech scene clip",
-    "Fight Club first fight scene official clip HD",
-    "Fight Club ending scene clip"
-   ],
-   "official_channels": [
-    "Movieclips",
-    "20th Century Studios"
-   ],
-   "hook": "Why Tyler Durden controlled his mind",
-   "title": "Why Tyler Durden controlled his mind | Tyler Durden speech scene | #edit",
-   "tags": [
-    "#fightclub",
-    "#tylerdurden",
-    "#bradpitt",
-    "#edwardnorton",
-    "#movieedit",
-    "#cinema",
-    "#fightclubedit"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "whiplash",
-   "pillar": "hollywood",
-   "words": "WHIPLASH",
-   "characters": [
-    "Andrew Neiman",
-    "Terence Fletcher"
-   ],
-   "scene_types": [
-    "aura",
-    "emotional",
-    "fight"
-   ],
-   "search_queries": [
-    "Whiplash final drum solo scene clip HD",
-    "Whiplash Fletcher not quite my tempo scene official clip",
-    "Whiplash Andrew drum rehearsal scene clip"
-   ],
-   "official_channels": [
-    "Sony Pictures Classics",
-    "Movieclips"
-   ],
-   "hook": "Why Fletcher pushed him past limits",
-   "title": "Why Fletcher pushed him past limits | Caravan final drum solo | #edit",
-   "tags": [
-    "#whiplash",
-    "#jksimmons",
-    "#mileseller",
-    "#whiplashedit",
-    "#movieedit",
-    "#drummer",
-    "#cinema"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "inglouriousbasterds",
-   "pillar": "hollywood",
-   "words": "INGLOURIOUS BASTERDS",
-   "characters": [
-    "Hans Landa",
-    "Perrier LaPadite"
-   ],
-   "scene_types": [
-    "aura",
-    "emotional",
-    "entrance"
-   ],
-   "search_queries": [
-    "Inglourious Basterds opening scene clip HD",
-    "Hans Landa milk scene official clip",
-    "Inglourious Basterds Hans Landa interrogation clip"
+    "Maximus arena entrance scene",
+    "Gladiator fight official clip",
+    "Are you not entertained scene",
+    "Gladiator movie scene"
    ],
    "official_channels": [
     "Universal Pictures",
     "Movieclips"
    ],
-   "hook": "Why Hans Landa terrified this farmer",
-   "title": "Why Hans Landa terrified this farmer | Hans Landa opening scene | #edit",
+   "hook": "Why Maximus is the greatest gladiator",
+   "title": "Why Maximus is the greatest gladiator 💀 | Are you not entertained | #edit",
    "tags": [
-    "#inglouriousbasterds",
-    "#hanslanda",
-    "#christophwaltz",
-    "#tarantino",
-    "#movieedit",
-    "#cinematography",
-    "#hollywood"
+    "gladiator",
+    "maximus",
+    "rome",
+    "history",
+    "movieedit",
+    "action",
+    "epic"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "agneepath",
-   "pillar": "bollywood",
-   "words": "AGNEEPATH",
+   "slug": "pulpvincent",
+   "pillar": "hollywood",
+   "words": "PULP FICTION",
    "characters": [
-    "Vijay Chauhan",
-    "Kancha Cheena"
+    "Vincent Vega"
    ],
    "scene_types": [
-    "fight",
     "aura",
-    "entrance"
+    "comedy"
    ],
    "search_queries": [
-    "Agneepath Vijay Chauhan entrance scene clip HD",
-    "Agneepath Hrithik Roshan fight scene official clip",
-    "Agneepath Hrithik vs Sanjay Dutt climax scene clip"
+    "Vincent Vega dance scene",
+    "Pulp Fiction diner scene",
+    "Pulp Fiction official clip",
+    "Vincent and Jules scene"
    ],
    "official_channels": [
-    "Dharma Productions"
+    "Miramax",
+    "Movieclips"
    ],
-   "hook": "Why Vijay returned to Mandwa alone",
-   "title": "Why Vijay returned to Mandwa alone | Vijay Chauhan climax fight | #edit",
+   "hook": "Why Vincent Vega defines the 90s",
+   "title": "Why Vincent Vega defines the 90s 💀 | Dance scene | #edit",
    "tags": [
-    "#agneepath",
-    "#hrithikroshan",
-    "#sanjaydutt",
-    "#vijaychauhan",
-    "#bollywoodedit",
-    "#bollywood",
-    "#massscene"
+    "pulpfiction",
+    "tarantino",
+    "vincentvega",
+    "90s",
+    "classic",
+    "movieedit",
+    "aura"
    ],
-   "market": "IN",
+   "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "shershaah",
-   "pillar": "bollywood",
-   "words": "SHERSHAAH",
+   "slug": "inceptioncobb",
+   "pillar": "hollywood",
+   "words": "INCEPTION",
    "characters": [
-    "Vikram Batra"
+    "Cobb"
+   ],
+   "scene_types": [
+    "aura",
+    "emotional"
+   ],
+   "search_queries": [
+    "Inception hallway fight scene",
+    "Cobb spinning top scene",
+    "Inception dream scene official",
+    "Inception movie scene"
+   ],
+   "official_channels": [
+    "Warner Bros. Pictures",
+    "Movieclips"
+   ],
+   "hook": "Why Cobb cannot distinguish the dream",
+   "title": "Why Cobb cannot distinguish the dream 💀 | Inception scene | #edit",
+   "tags": [
+    "inception",
+    "cobb",
+    "nolan",
+    "mindbending",
+    "movieedit",
+    "scifi",
+    "cinema"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "jawanazad",
+   "pillar": "bollywood",
+   "words": "JAWAN",
+   "characters": [
+    "Azad"
    ],
    "scene_types": [
     "fight",
-    "emotional",
     "aura"
    ],
    "search_queries": [
-    "Shershaah Captain Vikram Batra battle scene clip HD",
-    "Shershaah Yeh Dil Maange More scene official clip",
-    "Shershaah peak battle scene clip"
+    "Jawan metro fight scene",
+    "Shah Rukh Khan Jawan action",
+    "Jawan official clip",
+    "Azad Rathore scene"
    ],
    "official_channels": [
-    "Dharma Productions",
-    "Prime Video"
+    "Red Chillies Entertainment"
    ],
-   "hook": "Why Vikram Batra feared no enemy",
-   "title": "Why Vikram Batra feared no enemy | Captain Vikram Batra battle | #edit",
+   "hook": "Why Azad Rathore changed the game",
+   "title": "Why Azad Rathore changed the game 💀 | Metro fight | #edit",
    "tags": [
-    "#shershaah",
-    "#sidharthmalhotra",
-    "#vikrambatra",
-    "#bollywoodedit",
-    "#indianarmy",
-    "#bollywood",
-    "#patriotism"
+    "jawan",
+    "srk",
+    "shahrukhkhan",
+    "bollywood",
+    "action",
+    "mass",
+    "edit"
    ],
    "market": "IN",
    "known_topic": false
   },
   {
-   "slug": "padmaavat",
-   "pillar": "bollywood",
-   "words": "PADMAAVAT",
-   "characters": [
-    "Alauddin Khilji",
-    "Ratan Singh"
-   ],
-   "scene_types": [
-    "fight",
-    "aura",
-    "entrance"
-   ],
-   "search_queries": [
-    "Padmaavat Khilji battle entrance scene clip HD",
-    "Padmaavat Ranveer Singh fight scene official clip",
-    "Padmaavat Khilji vs Ratan Singh clip"
-   ],
-   "official_channels": [
-    "T-Series",
-    "Viacom18 Studios"
-   ],
-   "hook": "Why Khilji marched into battle unbothered",
-   "title": "Why Khilji marched into battle unbothered | Khilji battle scene | #edit",
-   "tags": [
-    "#padmaavat",
-    "#ranveersingh",
-    "#khilji",
-    "#bollywoodedit",
-    "#sanjayleelabhansali",
-    "#bollywood",
-    "#mass"
-   ],
-   "market": "IN",
-   "known_topic": false
-  },
-  {
-   "slug": "pushpa",
+   "slug": "salaardeva",
    "pillar": "south",
-   "words": "PUSHPA THE RISE",
+   "words": "SALAAR",
    "characters": [
-    "Pushpa Raj",
-    "Bhanwar Singh Shekhawat"
+    "Deva"
    ],
    "scene_types": [
     "fight",
-    "aura",
-    "entrance"
+    "aura"
    ],
    "search_queries": [
-    "Pushpa Raj police station scene clip HD",
-    "Pushpa Raj fight in forest official clip",
-    "Pushpa Raj vs Shekhawat climax scene clip"
+    "Salaar Deva entrance scene",
+    "Salaar fight scene official",
+    "Prabhas Salaar action",
+    "Salaar movie clip"
    ],
    "official_channels": [
-    "Mythri Movie Makers",
-    "T-Series"
+    "Hombale Films"
    ],
-   "hook": "Why Pushpa Raj never bowed down",
-   "title": "Why Pushpa Raj never bowed down | Pushpa Raj police station scene | #edit",
+   "hook": "Why Deva is the ultimate weapon",
+   "title": "Why Deva is the ultimate weapon 💀 | Deva enters | #edit",
    "tags": [
-    "#pushpa",
-    "#alluarjun",
-    "#pushparaj",
-    "#southedit",
-    "#telugumovies",
-    "#mythrimoviemakers",
-    "#massedit"
-   ],
-   "market": "IN",
-   "known_topic": false
-  },
-  {
-   "slug": "jailer",
-   "pillar": "south",
-   "words": "JAILER",
-   "characters": [
-    "Muthuvel Pandian"
-   ],
-   "scene_types": [
-    "aura",
-    "fight",
-    "entrance"
-   ],
-   "search_queries": [
-    "Jailer Rajinikanth climax scene clip HD",
-    "Jailer Muthuvel Pandian transformation scene official clip",
-    "Jailer Rajinikanth interval mass clip"
-   ],
-   "official_channels": [
-    "Sun Pictures"
-   ],
-   "hook": "Why Muthuvel Pandian kept his past secret",
-   "title": "Why Muthuvel Pandian kept his past secret | Muthuvel Pandian mass scene | #edit",
-   "tags": [
-    "#jailer",
-    "#rajinikanth",
-    "#thalaivar",
-    "#sunpictures",
-    "#tamiledit",
-    "#southedit",
-    "#massedit"
+    "salaar",
+    "prabhas",
+    "southindia",
+    "action",
+    "mass",
+    "edit",
+    "deva"
    ],
    "market": "IN",
    "known_topic": false
