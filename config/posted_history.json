@@ -750,6 +750,30 @@
         "clip:mononoke_scene1_h264.mp4",
         "sha:da57ee05877b388631e69e36ced15b19f28b01ae4b2e39d147e4b6f000542fba"
       ]
+    },
+    {
+      "id": "20261126-0630-suzume",
+      "at": "2026-11-26 06:19 IST",
+      "slot": "2026-11-26T06:30:00+05:30",
+      "title": "Mina never forgot the promise Kafka made #kaijunumber8 #kafka #romance",
+      "youtube_url": "https://youtube.com/shorts/RJusXGBmh98",
+      "keys": [
+        "asset:render-20261126-0630-suzume.mp4",
+        "clip:kaiju8s2_scene1_h264.mp4",
+        "sha:841171ab437aab9c6fac4596357ea9f17243f31f1c9662b4ce1a9864c339e66f"
+      ]
+    },
+    {
+      "id": "20261126-0900-kgf",
+      "at": "2026-11-26 06:19 IST",
+      "slot": "2026-11-26T09:00:00+05:30",
+      "title": "Nobody suspected Uryu was this dangerous #bleach #ichigo #animeedit",
+      "youtube_url": "https://youtube.com/shorts/Sm_Wr34n_zI",
+      "keys": [
+        "asset:render-20261126-0900-kgf.mp4",
+        "clip:bleachtybw_scene1_h264.mp4",
+        "sha:b6260746eac9b828111adad079268f002b540dbaa3d0d97b9e6da730f25bbbbb"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."

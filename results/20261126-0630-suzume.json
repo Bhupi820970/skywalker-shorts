@@ -498,5 +498,17 @@
       "error": "publish gate failed: logo scan: {\"final\": [\"0.54s burned-in subtitle 'STAY YOUR'\", \"1.04s burned-in subtitle 'STAY YOUR HAND'\", \"1.54s burned-in subtitle 'THE GIRL'S'\", \"2.04s burned-in subtitle 'NOW'\", \"2.54s burned-in subtitle 'NOW MINE'\", \"3.04s burned-in subtitle 'THERE'S'\", \"3.54s burned-in sub",
       "at": "2026-11-26 00:52 IST"
     }
-  ]
+  ],
+  "asset_sha256": "841171ab437aab9c6fac4596357ea9f17243f31f1c9662b4ce1a9864c339e66f",
+  "publish_via": "youtube",
+  "yt_video_id": "RJusXGBmh98",
+  "yt_uploaded_at": "2026-11-26 06:19 IST",
+  "yt_privacy": "public",
+  "yt_publish_at": "2026-11-26T06:19:31.867611+05:30",
+  "yt_status": "public",
+  "youtube_url": "https://youtube.com/shorts/RJusXGBmh98",
+  "buffer_post_id": "yt:RJusXGBmh98",
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-26T00:49:31.000Z",
+  "buffer_posted_at": "2026-11-26T00:49:31.000Z"
 }
