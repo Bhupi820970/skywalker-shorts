@@ -57,10 +57,11 @@
    "video": "20261120-0900-onepieceegghead"
   },
   "arcane_scene2_h264.mp4": {
-   "at": "2026-11-26T20:46:29+00:00",
+   "at": "2026-11-26T21:25:18+00:00",
    "owner": "45888690592-1-stock-jjk-02",
    "platform": "render",
-   "state": "reserved"
+   "state": "used",
+   "video": "stock-jjk-02"
   },
   "arcane_scene3_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
@@ -70,10 +71,11 @@
    "video": "stock-arcane-01"
   },
   "arcane_scene4_h264.mp4": {
-   "at": "2026-11-26T20:46:33+00:00",
+   "at": "2026-11-26T21:25:18+00:00",
    "owner": "45888690592-1-stock-jjk-02",
    "platform": "render",
-   "state": "reserved"
+   "state": "used",
+   "video": "stock-jjk-02"
   },
   "avatarfireandash_trailer_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
