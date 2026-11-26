@@ -2017,6 +2017,44 @@
       ],
       "added_by": "footage_refill",
       "category": "movie"
+    },
+    {
+      "id": "backup-cyberpunk2077",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=P39n86v-T7w",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene4_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene5_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene6_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why David could not stop the cyberpsychosis",
+      "words": "CYBERPUNK EDGERUNNERS",
+      "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
+      "description": "Why David could not stop the cyberpsychosis. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #cyberpunk #edgerunners #davidmartinez",
+      "tags": [
+        "cyberpunk",
+        "edgerunners",
+        "davidmartinez",
+        "animeedit",
+        "phonk",
+        "netflix",
+        "anime"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "cyberpunk2077_scene3_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "cyberpunk2077_scene3_h264.mp4",
+        "cyberpunk2077_scene4_h264.mp4",
+        "cyberpunk2077_scene5_h264.mp4",
+        "cyberpunk2077_scene6_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "game"
     }
   ]
 }

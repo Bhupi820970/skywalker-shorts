@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T11:50:32Z",
-  "last_upload_at": "2026-11-26T11:50:32Z"
+  "last_run_at": "2026-11-26T11:56:54Z",
+  "last_upload_at": "2026-11-26T11:56:54Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -12,6 +12,7 @@
   "yt:0Z_mA7n5zIA",
   "yt:1QZamgwEjiw",
   "yt:1VUqQqUlSv4",
+  "yt:1gvGn8NtIpE",
   "yt:1oiRkOT4Z_4",
   "yt:20hcTad8EWk",
   "yt:2HSKZhb3J_M",
@@ -67,6 +68,7 @@
   "yt:N-xHcvug3WI",
   "yt:NakTu_VZxJ0",
   "yt:OoEU8GnGlcU",
+  "yt:P39n86v-T7w",
   "yt:PDtrzr-LtIc",
   "yt:Pbu0f1JgzVw",
   "yt:Q4Tr7giZaXM",
@@ -153,6 +155,7 @@
   "yt:tIiipIHwTa4",
   "yt:tR4OVXK6tG8",
   "yt:tSukOsMkYnE",
+  "yt:u15tEo0wsQI",
   "yt:u5AXBGxKNHo",
   "yt:uNprGrZfkkQ",
   "yt:v9Nz7iDwDQM",
@@ -161,7 +164,8 @@
   "yt:xPJLyIFyF50",
   "yt:xlrj36cAzj4",
   "yt:xpJWvpumgxs",
-  "yt:yWBA876qftM"
+  "yt:yWBA876qftM",
+  "yt:zBrkG3aeWCc"
  ],
  "clips": [
   {
@@ -1989,6 +1993,50 @@
    "kbps": 2101,
    "by": "box",
    "at": "2026-11-26T11:50:32Z"
+  },
+  {
+   "asset": "cyberpunk2077_scene3_h264.mp4",
+   "id": "yt:P39n86v-T7w",
+   "title": "Cyberpunk 2077: Phantom Liberty – All In (feat. Idris Elba)",
+   "channel": "Cyberpunk 2077",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1541,
+   "by": "box",
+   "at": "2026-11-26T11:56:54Z"
+  },
+  {
+   "asset": "cyberpunk2077_scene4_h264.mp4",
+   "id": "yt:1gvGn8NtIpE",
+   "title": "Cyberpunk 2077: Ultimate Edition — City of Dreams",
+   "channel": "Cyberpunk 2077",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 10435,
+   "by": "box",
+   "at": "2026-11-26T11:56:54Z"
+  },
+  {
+   "asset": "cyberpunk2077_scene5_h264.mp4",
+   "id": "yt:u15tEo0wsQI",
+   "title": "Dawid Podsiadło, P.T. Adamczyk — Phantom Liberty (Official Cyberpunk 2077 Music Video)",
+   "channel": "Cyberpunk 2077",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 8620,
+   "by": "box",
+   "at": "2026-11-26T11:56:54Z"
+  },
+  {
+   "asset": "cyberpunk2077_scene6_h264.mp4",
+   "id": "yt:zBrkG3aeWCc",
+   "title": "Cyberpunk 2077: Phantom Liberty — New Ways to Play",
+   "channel": "Cyberpunk 2077",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 16149,
+   "by": "box",
+   "at": "2026-11-26T11:56:54Z"
   }
  ],
  "github": {
