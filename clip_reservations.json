@@ -528,16 +528,18 @@
    "video": "stock-strangerthings-01"
   },
   "strangerthings_scene2_h264.mp4": {
-   "at": "2026-11-26T21:55:05+00:00",
+   "at": "2026-11-26T22:56:40+00:00",
    "owner": "45901153671-1-20261127-0630-taarezameenpar",
    "platform": "render",
-   "state": "reserved"
+   "state": "used",
+   "video": "20261127-0630-taarezameenpar"
   },
   "strangerthings_scene3_h264.mp4": {
-   "at": "2026-11-26T21:55:08+00:00",
+   "at": "2026-11-26T22:56:40+00:00",
    "owner": "45901153671-1-20261127-0630-taarezameenpar",
    "platform": "render",
-   "state": "reserved"
+   "state": "used",
+   "video": "20261127-0630-taarezameenpar"
   },
   "superman_trailer_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
