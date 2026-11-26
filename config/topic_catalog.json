@@ -180,7 +180,11 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=jufrkwWbAy0",
       "fallback_asset": "twisters_trailer_h264.mp4",
-      "category": "movie"
+      "category": "movie",
+      "scene_assets": [
+        "twisters_scene1_h264.mp4"
+      ],
+      "content_kind": "best scene"
     },
     {
       "slug": "furiosa",

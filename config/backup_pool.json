@@ -1982,6 +1982,37 @@
       ],
       "added_by": "footage_refill",
       "category": "movie"
+    },
+    {
+      "id": "backup-twisters",
+      "pillar": "movie",
+      "source_url": "https://www.youtube.com/watch?v=0OzLbsNUKH4",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "The sky turned against them",
+      "words": "TWISTERS",
+      "title": "The sky turned against them | Twisters | #edit",
+      "description": "The sky turned against them. From the official Twisters trailer. Edit by Skywalker.\nSource: official trailer. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #twisters",
+      "tags": [
+        "twisters",
+        "glenpowell",
+        "action",
+        "edit",
+        "shorts",
+        "trending"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "twisters_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "twisters_scene1_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "movie"
     }
   ]
 }
