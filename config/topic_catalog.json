@@ -567,7 +567,8 @@
       "scene_assets": [
         "dandadan_scene1_h264.mp4",
         "dandadan_scene2_h264.mp4",
-        "dandadan_scene3_h264.mp4"
+        "dandadan_scene3_h264.mp4",
+        "dandadan_scene4_h264.mp4"
       ],
       "fallback_asset": "dandadan_trailer_h264.mp4",
       "content_kind": "best scene",

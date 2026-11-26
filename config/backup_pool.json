@@ -149,7 +149,8 @@
       "fallback_mp4": [
         "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene1_h264.mp4",
         "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene2_h264.mp4",
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene4_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "Okarun was never ready for this",
@@ -173,7 +174,8 @@
       "scene_assets": [
         "dandadan_scene1_h264.mp4",
         "dandadan_scene2_h264.mp4",
-        "dandadan_scene3_h264.mp4"
+        "dandadan_scene3_h264.mp4",
+        "dandadan_scene4_h264.mp4"
       ],
       "category": "anime"
     },
