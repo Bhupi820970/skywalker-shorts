@@ -182,7 +182,9 @@
       "fallback_asset": "twisters_trailer_h264.mp4",
       "category": "movie",
       "scene_assets": [
-        "twisters_scene1_h264.mp4"
+        "twisters_scene1_h264.mp4",
+        "twisters_scene2_h264.mp4",
+        "twisters_scene3_h264.mp4"
       ],
       "content_kind": "best scene"
     },

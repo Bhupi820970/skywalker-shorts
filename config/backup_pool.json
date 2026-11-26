@@ -1994,7 +1994,9 @@
       "pillar": "movie",
       "source_url": "https://www.youtube.com/watch?v=0OzLbsNUKH4",
       "fallback_mp4": [
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene1_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene3_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "The sky turned against them",
@@ -2015,7 +2017,9 @@
       "fallback_asset": "twisters_scene1_h264.mp4",
       "content_kind": "best scene",
       "scene_assets": [
-        "twisters_scene1_h264.mp4"
+        "twisters_scene1_h264.mp4",
+        "twisters_scene2_h264.mp4",
+        "twisters_scene3_h264.mp4"
       ],
       "added_by": "footage_refill",
       "category": "movie"
