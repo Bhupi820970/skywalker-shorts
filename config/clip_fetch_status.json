@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T16:22:54Z",
-  "last_upload_at": "2026-11-26T16:22:48Z"
+  "last_run_at": "2026-11-26T16:54:42Z",
+  "last_upload_at": "2026-11-26T16:54:42Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -45,6 +45,7 @@
   "yt:EKuVC2aVdI8",
   "yt:EovTf8Mydo4",
   "yt:Ev0FRl7IRkU",
+  "yt:Fn9gKhU_2_Q",
   "yt:FpR2IaKqF64",
   "yt:GGZdoD7gYnE",
   "yt:GPitD0-mkYA",
@@ -83,6 +84,7 @@
   "yt:Pbu0f1JgzVw",
   "yt:PcZii0OWtAE",
   "yt:PwxHvnK_sA0",
+  "yt:PzkEqhVByw4",
   "yt:Q4Tr7giZaXM",
   "yt:QeSym53bZYg",
   "yt:QnhcD_tnyA0",
@@ -2301,6 +2303,28 @@
    "kbps": 2295,
    "by": "box",
    "at": "2026-11-26T16:22:48Z"
+  },
+  {
+   "asset": "cyberpunkedgerunners_scene4_h264.mp4",
+   "id": "yt:PzkEqhVByw4",
+   "title": "Payback Time | Cyberpunk: Edgerunners | Clips | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1940,
+   "by": "box",
+   "at": "2026-11-26T16:54:42Z"
+  },
+  {
+   "asset": "cyberpunkedgerunners_scene5_h264.mp4",
+   "id": "yt:Fn9gKhU_2_Q",
+   "title": "Walk Through Night City! | Cyberpunk: Edgerunners | Clips | Netflix",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1937,
+   "by": "box",
+   "at": "2026-11-26T16:54:42Z"
   }
  ],
  "github": {
