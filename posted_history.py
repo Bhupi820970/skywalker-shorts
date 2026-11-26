@@ -183,13 +183,19 @@ def record(r: dict, root: Path | None = None, sha: str | None = None,
 def blocked_clips(root: Path | None = None, rows: list[dict] | None = None,
                   exclude_ids: set[str] | None = None, reserved: bool = True) -> set[str]:
     """Scene clips a new render must not use: posted ones, plus (reserved=True) clips
-    already inside a ready/assigned stock video that has not gone out yet."""
+    already inside a rendered video that has not gone out yet, and clips the clip ledger
+    marks used or reserved by a running render."""
     rows = rows if rows is not None else iter_results(root)
     exclude_ids = exclude_ids or set()
     out = {k[5:] for k, owner in index(root, rows).items()
            if k.startswith("clip:") and owner not in exclude_ids}
     if reserved:
         out |= reserved_clips(rows, exclude_ids, ready_ids=_ready_stock_ids(root))
+        try:   # atomic clip ledger (clip_reserve.py): used by a rendered Short, or held by a live render
+            import clip_reserve
+            out |= {k for k in clip_reserve.ledger_taken(exclude_videos=exclude_ids) if k.endswith(".mp4")}
+        except Exception:
+            pass
     return out
 
 
@@ -203,8 +209,9 @@ def _ready_stock_ids(root: Path | None = None) -> set[str] | None:
 
 def reserved_clips(rows: list[dict], exclude_ids: set[str] | None = None,
                    ready_ids: set[str] | None = None) -> set[str]:
-    """Clips held by unposted, publishable stock: ready stock (per the manifest when
-    `ready_ids` is given) and stock copies assigned to a slot that has not posted yet."""
+    """Clips held by unposted, publishable renders: ready stock (per the manifest when
+    `ready_ids` is given), stock copies assigned to a slot that has not posted yet, and
+    rendered queue Shorts still waiting for their slot."""
     exclude_ids = exclude_ids or set()
     out: set[str] = set()
     for r in rows:
@@ -215,9 +222,11 @@ def reserved_clips(rows: list[dict], exclude_ids: set[str] | None = None,
             continue
         if r.get("assigned_from_stock"):
             out |= set(result_clips(r))
-        elif iid.startswith("stock-") and not r.get("stock_used"):
-            if ready_ids is None or iid in ready_ids:
+        elif iid.startswith("stock-"):
+            if not r.get("stock_used") and (ready_ids is None or iid in ready_ids):
                 out |= set(result_clips(r))
+        else:   # rendered queue Short waiting for its slot: its clips are taken too
+            out |= set(result_clips(r))
     return out
 
 

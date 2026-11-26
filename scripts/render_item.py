@@ -116,16 +116,37 @@ import edit_format
 
 import posted_history
 
-# Never re-use a scene clip that is already in a posted Short (all time). Stock renders also
-# skip clips held by another ready / assigned stock video, so backup stock stays diverse.
+# Never re-use a scene clip that is already in a posted Short (all time), or held by another
+# rendered-but-unposted Short / ready stock video (every render, not only stock).
 try:
-    BLOCKED_SOURCES = posted_history.blocked_clips(
-        REPO, exclude_ids={iid}, reserved=bool(item.get("stock")))
+    BLOCKED_SOURCES = posted_history.blocked_clips(REPO, exclude_ids={iid}, reserved=True)
 except Exception as _e:  # history unreadable: publish-time guard still blocks repeats
     print(f"::warning::posted history unavailable: {_e}", flush=True)
     BLOCKED_SOURCES = set()
 if BLOCKED_SOURCES:
     print(f"posted-history: {len(BLOCKED_SOURCES)} scene clip(s) already posted/reserved are skipped", flush=True)
+
+# Atomic clip ledger (clip_reserve.py, branch clip-state): a clip is reserved the moment this render
+# picks it, so parallel matrix renders never share a clip; used for good once the Short renders,
+# released if it fails, stale reservations expire after 8 h. Ledger unreachable -> clip skipped.
+import clip_reserve
+RESERVE = clip_reserve.Reservations(
+    owner=f"{os.environ.get('GITHUB_RUN_ID', 'local')}-{os.environ.get('GITHUB_RUN_ATTEMPT', '1')}-{iid}",
+    platform="render", video=iid)
+BUNDLE_KEYS: list = []   # ledger keys of the clips in the last merged bundle
+
+
+def _settle_reservations(r: dict) -> None:
+    """Rendered (done, or uploaded and waiting on QC) -> its clips are used for good; else release."""
+    try:
+        rendered = r.get("status") == "done" or bool(r.get("qc_pending") and r.get("asset_url"))
+        if rendered:
+            keys = set(BUNDLE_KEYS) | {clip_reserve.base_id(c) for c in posted_history.result_clips(r)}
+            RESERVE.confirm(sorted(k for k in keys if k), video=iid)
+        RESERVE.release()
+    except Exception as e:  # posted_history still blocks the rendered result's clips
+        print(f"::warning::clip ledger update failed: {type(e).__name__}", flush=True)
+
 
 os.environ.setdefault("SKY_GEMINI_BUDGET_FILE", str(OUT / f"gemini_budget_{iid}.json"))
 QUEUE_META = {k: item.get(k) for k in ("hook", "title", "description", "tags")}
@@ -231,6 +252,7 @@ def write(status, detail, **extra):
         if prev.get(k) and k not in r:
             r[k] = prev[k]  # never lose the Buffer record (idempotency)
     (RES / f"{iid}.json").write_text(json.dumps(r, indent=2, ensure_ascii=False))
+    _settle_reservations(r)
     (OUT / "results").mkdir(exist_ok=True)  # artifact copy (backup ids differ from the matrix id)
     (OUT / "results" / f"{iid}.json").write_text(json.dumps(r, indent=2, ensure_ascii=False))
     print(json.dumps(r, indent=2, ensure_ascii=False))
@@ -464,6 +486,14 @@ def download_scene_bundle(src, skip=None):
             errors.append(f"release-only: {len(missing)} clip(s) not on the sources release yet (box fetches them)")
         urls = rel
     urls.sort(key=sourcing._rank_url)
+    # New attempt: give back the previous attempt's clips, then skip anything another render holds.
+    RESERVE.release()
+    BUNDLE_KEYS.clear()
+    taken = RESERVE.taken_ids()
+    held = [u for u in urls if clip_reserve.base_id(u) in taken]
+    if held:
+        errors.append(f"{len(held)} clip(s) already used or held by another render")
+        urls = [u for u in urls if u not in held]
     paths, useds = [], []
     for u in urls:
         if len(paths) >= MAX_SCENE_CLIPS:
@@ -473,6 +503,9 @@ def download_scene_bundle(src, skip=None):
             # github/release assets must match this title; search URLs are checked after download
             if "github.com" in (u or "") or (u or "").lower().endswith(".mp4"):
                 continue
+        if not RESERVE.reserve(u):
+            errors.append(f"clip not reservable (used, held elsewhere, or ledger down): {u}")
+            continue
         part = src.parent / f"{src.stem}_p{len(paths)+1}.mp4"
         part.unlink(missing_ok=True)
         ok, info = (False, "")
@@ -509,6 +542,7 @@ def download_scene_bundle(src, skip=None):
         print(f"  scene clip {len(paths)+1}: {info}", flush=True)
         paths.append(part)
         useds.append(info)
+        BUNDLE_KEYS.extend(k for k in {clip_reserve.base_id(u), clip_reserve.base_id(info)} if k)
         total_s = sum(sourcing._probe_duration(x) for x in paths)
         if total_s >= 210:
             print(f"  scene bundle cap reached ({total_s:.0f}s >= 210s); not adding more clips", flush=True)

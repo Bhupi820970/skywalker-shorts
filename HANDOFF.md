@@ -106,6 +106,20 @@ Repo variables: `SKY_AUTO_PUBLISH`, `SKY_DIALOGUE_EDIT`.
 | Music library | `music/library.json`, plus `config/music_blocklist.json` and `config/music_denylist.json` |
 | Stats / trends | `stats/`, `trends/` |
 
+## 4b. No clip repeats (clip ledger, 2026-11-26)
+- `clip_reserve.py` keeps `clip_reservations.json` on branch **`clip-state`** (clip names only, no media).
+  Every write goes through the GitHub contents API with the file sha, so it is a compare-and-swap;
+  a conflict is retried with backoff. Pushes to `clip-state` trigger no workflow (all push triggers are `main`).
+- `scripts/render_item.py` reserves each scene clip the moment it picks it (`download_scene_bundle`),
+  so the parallel matrix renders (max-parallel 4) can never share a clip. When the Short renders
+  (`done`, or uploaded and waiting on QC) its clips are marked `used` for good; on failure they are
+  released. A reservation older than 8 h (killed job) expires. If the ledger cannot be reached the clip
+  is skipped, never risked.
+- `posted_history.blocked_clips(reserved=True)` (every render, refill count, stock, clip fetch) also
+  treats ledger clips and clips of rendered-but-unposted Shorts as gone, so the fresh-clip count is honest.
+- Seeded with the 82 clips already in posted (67), rendered or stocked Shorts. Tests: `tests/test_clip_reserve.py`.
+- A re-render of the same video id may reuse its own clips; no other video can.
+
 ## 5. Setting up a new computer
 
 1. Install `git`, `python3`, `ffmpeg`, `gh` and `deno`. On macOS, also run `brew install coreutils`.
