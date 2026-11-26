@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-26 22:04 IST",
+ "generated_at": "2026-11-26 22:39 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 161,
+ "release_scene_clips": 167,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -269,41 +269,40 @@
    "market": "US/UK"
   },
   {
-   "slug": "cyberpunkedgerunners",
-   "slot": "2026-11-28T18:30:00+05:30",
+   "slug": "haikyuudumpster",
+   "slot": "2026-11-28T22:30:00+05:30",
    "for": "slot",
-   "item_id": "20261128-1830-cyberpunkedgerunners",
+   "item_id": "20261128-2230-haikyuudumpster",
    "pillar": "anime",
-   "words": "CYBERPUNK",
+   "words": "HAIKYU",
    "scene_types": [
     "fight",
     "emotional",
     "aura"
    ],
    "search_queries": [
-    "CYBERPUNK fight scene official clip",
-    "CYBERPUNK best scene official clip",
-    "CYBERPUNK official clip"
+    "HAIKYU fight scene official clip",
+    "HAIKYU best scene official clip",
+    "HAIKYU official clip"
    ],
    "official_channels": [
-    "Netflix",
-    "Netflix Anime"
+    "Crunchyroll",
+    "Sony Pictures New Zealand Official",
+    "TOHO animation チャンネル"
    ],
-   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+   "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
    "missing_assets": [],
-   "on_release": [
-    "cyberpunkedgerunners_scene1_h264.mp4"
-   ],
-   "hook": "David paid for the legendary life",
-   "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
+   "on_release": [],
+   "hook": "The rematch everyone waited for",
+   "title": "The rematch everyone waited for | Haikyu | #edit",
    "tags": [
-    "cyberpunkedgerunners",
+    "haikyuudumpster",
     "anime",
     "animeedit",
     "edit",
     "shorts",
     "trending",
-    "david"
+    "hinata"
    ],
    "market": "US/UK"
   },
@@ -829,44 +828,6 @@
     "shorts",
     "trending",
     "rudo"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "haikyuudumpster",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-haikyuudumpster",
-   "pillar": "anime",
-   "words": "HAIKYU",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "HAIKYU fight scene official clip",
-    "HAIKYU best scene official clip",
-    "HAIKYU official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Sony Pictures New Zealand Official",
-    "TOHO animation チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "The rematch everyone waited for",
-   "title": "The rematch everyone waited for | Haikyu | #edit",
-   "tags": [
-    "haikyuudumpster",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "hinata"
    ],
    "market": "US/UK"
   },
@@ -1786,41 +1747,6 @@
     "phonk",
     "aviation",
     "action"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "twisters",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-twisters",
-   "pillar": "movie",
-   "words": "TWISTERS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "TWISTERS fight scene official clip",
-    "TWISTERS best scene official clip",
-    "TWISTERS official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=0OzLbsNUKH4",
-   "missing_assets": [],
-   "on_release": [
-    "twisters_scene1_h264.mp4"
-   ],
-   "hook": "The sky turned against them",
-   "title": "The sky turned against them | Twisters | #edit",
-   "tags": [
-    "twisters",
-    "glenpowell",
-    "action",
-    "edit",
-    "shorts",
-    "trending"
    ],
    "market": "US/UK"
   },
