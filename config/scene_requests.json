@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27 01:37 IST",
+ "generated_at": "2026-11-27 03:23 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 177,
@@ -623,6 +623,39 @@
     "shorts",
     "trending",
     "senku"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dune",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dune",
+   "pillar": "anime",
+   "words": "DUNE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DUNE fight scene official clip",
+    "DUNE best scene official clip",
+    "DUNE official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=2HSKZhb3J_M",
+   "missing_assets": [],
+   "on_release": [
+    "dune_scene1_h264.mp4"
+   ],
+   "hook": "Why Paul stopped being human",
+   "title": "Why Paul stopped being human | Dune | #edit",
+   "tags": [
+    "dune",
+    "anime",
+    "edit",
+    "shorts"
    ],
    "market": "US/UK"
   },
