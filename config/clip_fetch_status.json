@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T15:18:06Z",
-  "last_upload_at": "2026-11-26T14:42:58Z"
+  "last_run_at": "2026-11-26T15:34:22Z",
+  "last_upload_at": "2026-11-26T15:34:22Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -25,6 +25,7 @@
   "yt:67iuJTI5KF4",
   "yt:67xJW8LhNoI",
   "yt:6LWoO3UIZSg",
+  "yt:6Oip8Ju3ZRQ",
   "yt:70NhEBzLKU8",
   "yt:7LzDcr20SHc",
   "yt:7M5mqAE1dv8",
@@ -105,6 +106,7 @@
   "yt:YuIR94VIC7k",
   "yt:YwgTPwxPZ9A",
   "yt:Z1mcQ6CzXo8",
+  "yt:Z2FKji5UeXU",
   "yt:ZRPgxFmaxoU",
   "yt:ZVTDEZvFU6k",
   "yt:Za4kyckczXI",
@@ -2157,6 +2159,28 @@
    "kbps": 1443,
    "by": "box",
    "at": "2026-11-26T14:42:58Z"
+  },
+  {
+   "asset": "gladiatormaximus_scene1_h264.mp4",
+   "id": "yt:Z2FKji5UeXU",
+   "title": "GLADIATOR Clip - \"Now We Are Free\" (2000)",
+   "channel": "JoBlo Movie Clips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1434,
+   "by": "box",
+   "at": "2026-11-26T15:34:22Z"
+  },
+  {
+   "asset": "gladiatormaximus_scene2_h264.mp4",
+   "id": "yt:6Oip8Ju3ZRQ",
+   "title": "Gladiator II (2024) - Denzel Washington's Macrinus Fights Paul Mescal's Lucius Scene | Movieclips",
+   "channel": "Movieclips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1887,
+   "by": "box",
+   "at": "2026-11-26T15:34:22Z"
   }
  ],
  "github": {
