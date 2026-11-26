@@ -1,20 +1,21 @@
 {
   "id": "20261126-2230-warmovie",
-  "status": "retry_queued",
-  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
-  "at": "2026-11-26 18:01 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45804524400",
+  "status": "failed",
+  "detail": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+  "at": "2026-11-26 22:38 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45852992181",
   "slot": "2026-11-26T22:30:00+05:30",
-  "title": "Why Mr A never got caught 💀 | Train disguise heist | #edit",
-  "hook": "Why Mr A never got caught",
-  "description": "Why Mr A never got caught. From official Dhoom 2 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dhoom2 #hrithikroshan #mra",
+  "title": "Kabir entered and the fight was already over | War | #edit",
+  "hook": "Kabir entered and the fight was already over",
+  "description": "Why Kabir was unmatched in battle. From official War clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #war #hrithikroshan #tigerseghal",
   "tags": [
-    "dhoom2",
+    "war",
     "hrithikroshan",
-    "mra",
+    "tigerseghal",
     "yrf",
-    "bollywoodedit",
-    "bollywood"
+    "bollywood",
+    "waredit",
+    "action"
   ],
   "queue_meta": null,
   "gemini_meta": false,
@@ -26,80 +27,13 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 101.0,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
@@ -110,256 +44,14 @@
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
       "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.7,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.2,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.8-flash",
-      "key": "key2",
+      "key": "key4",
       "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 6.4,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 117.4,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 9.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 22.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 6.8,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 63.0,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 34.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 3.6,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 7.2,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 7.4,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 2.5,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 2.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
@@ -370,29 +62,105 @@
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 7.2,
+      "key": "key4",
+      "s": 55.4,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 8.6,
+      "key": "key4",
+      "s": 23.4,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key3",
-      "s": 7.8,
+      "key": "key4",
+      "s": 99.2,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key4",
+      "s": 1.9,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
       "key": "key3",
-      "s": 2.7,
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key5",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 149.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 105.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 6.4,
       "ok": true
     }
   ],
@@ -400,20 +168,12 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "words": "DHOOM 2",
-  "edit_format": "action",
-  "title_swaps": [
-    {
-      "from": "warmovie",
-      "from_words": "WAR",
-      "to": "dhoom2",
-      "to_words": "DHOOM 2",
-      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
-    }
-  ],
-  "swapped_from": "warmovie",
-  "swapped_to": "dhoom2",
-  "auto_retries": 0,
+  "words": "WAR",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -421,49 +181,26 @@
       "ok": false,
       "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene3_h264.mp4",
-      "music": "pr_jgrzsombraycoraznphonk.mp3",
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene5_h264.mp4",
-      "music": "pr_jgrzsombraycoraznphonk.mp3",
+      "music": "pr_montagembailo.mp3",
       "qc_status": null
     }
   ],
-  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
+  "last_error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
   "source_attempts": [
     {
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene1_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 17.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; auto_qc: 1 frame(s) failed empty-dark/logo/text detectors; auto_qc: only 17.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publish",
-      "at": "2026-11-26 16:39 IST"
+      "error": "pipeline/QA failed (exit 1): only 1.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-26 21:41 IST"
     },
     {
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene2_h264.mp4",
       "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "at": "2026-11-26 16:59 IST"
+      "at": "2026-11-26 22:15 IST"
     },
     {
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/warmovie_scene3_h264.mp4",
       "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "at": "2026-11-26 17:14 IST"
-    },
-    {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene3_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 17.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; auto_qc: 1 frame(s) failed empty-dark/logo/text detectors; auto_qc: only 17.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publish",
-      "at": "2026-11-26 17:30 IST"
-    },
-    {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene4_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering; only 12.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-26 17:45 IST"
-    },
-    {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dhoom2_scene5_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "at": "2026-11-26 18:01 IST"
+      "at": "2026-11-26 22:38 IST"
     }
   ]
 }
