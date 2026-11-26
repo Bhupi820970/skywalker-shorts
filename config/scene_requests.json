@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26 08:32 IST",
+ "generated_at": "2026-11-26 11:25 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 101,
@@ -69,9 +69,7 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
    "missing_assets": [],
-   "on_release": [
-    "mashle_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Mash breaks magic with muscles",
    "title": "Mash breaks magic with muscles | Mashle | #edit",
    "tags": [
@@ -302,6 +300,44 @@
     "shorts",
     "trending",
     "jinx"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dragonballdaima",
+   "slot": "2026-11-28T09:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261128-0900-dragonballdaima",
+   "pillar": "anime",
+   "words": "DRAGON BALL DAIMA",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DRAGON BALL DAIMA fight scene official clip",
+    "DRAGON BALL DAIMA best scene official clip",
+    "DRAGON BALL DAIMA official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+   "missing_assets": [],
+   "on_release": [
+    "dragonballdaima_scene3_h264.mp4"
+   ],
+   "hook": "Goku got small, not weak",
+   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+   "tags": [
+    "dragonballdaima",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "goku"
    ],
    "market": "US/UK"
   },
@@ -661,44 +697,6 @@
     "shorts",
     "trending",
     "gohan"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "dragonballdaima",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-dragonballdaima",
-   "pillar": "anime",
-   "words": "DRAGON BALL DAIMA",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DRAGON BALL DAIMA fight scene official clip",
-    "DRAGON BALL DAIMA best scene official clip",
-    "DRAGON BALL DAIMA official clip"
-   ],
-   "official_channels": [
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
-   "missing_assets": [],
-   "on_release": [
-    "dragonballdaima_scene3_h264.mp4"
-   ],
-   "hook": "Goku got small, not weak",
-   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
-   "tags": [
-    "dragonballdaima",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "goku"
    ],
    "market": "US/UK"
   },
@@ -1131,6 +1129,46 @@
    "title": "Kafka hides a monster inside | Kaiju No. 8 | #edit",
    "tags": [
     "kaiju8",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "kafka"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "kaiju8s2",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-kaiju8s2",
+   "pillar": "anime",
+   "words": "KAIJU NO. 8",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "KAIJU NO. 8 fight scene official clip",
+    "KAIJU NO. 8 best scene official clip",
+    "KAIJU NO. 8 official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Crunchyroll India",
+    "TOHO animation チャンネル"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=gd2pP8LgWVo",
+   "missing_assets": [],
+   "on_release": [
+    "kaiju8s2_scene1_h264.mp4"
+   ],
+   "hook": "Kafka cannot control it anymore",
+   "title": "Kafka cannot control it anymore | Kaiju No. 8 | #edit",
+   "tags": [
+    "kaiju8s2",
     "anime",
     "animeedit",
     "edit",
