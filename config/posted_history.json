@@ -798,6 +798,18 @@
         "clip:gladiatormaximus_scene2_h264.mp4",
         "sha:6cf233e43e8727ff184a9f85f87b578aaa691060d885258005cd659809669b08"
       ]
+    },
+    {
+      "id": "20261126-2230-topgunmaverick",
+      "at": "2026-11-27 01:36 IST",
+      "slot": "2026-11-26T22:30:00+05:30",
+      "title": "Maximus Never Leaves A Witness #gladiator #maximus #epic",
+      "youtube_url": "https://youtube.com/shorts/gz57_Wn8dCo",
+      "keys": [
+        "asset:render-20261126-2230-topgunmaverick.mp4",
+        "clip:gladiatormaximus_scene1_h264.mp4",
+        "sha:a8333990e33efd3e0795116885dc7d96adc5363cc3d10bce99b07f818e42f0d4"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."

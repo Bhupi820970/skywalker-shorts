@@ -417,5 +417,17 @@
       "error": "gemini QC reject: logo seen: Behind-the-scenes footage of actors on a beach set (not from the film); The video contains behind-the-scenes footage of actors on a beach set, which is not from the film Gladiator and breaks the immersion/quality standard.; The edit mixes unrelated footage (Top Gun/beach",
       "at": "2026-11-26 23:06 IST"
     }
-  ]
+  ],
+  "asset_sha256": "a8333990e33efd3e0795116885dc7d96adc5363cc3d10bce99b07f818e42f0d4",
+  "publish_via": "youtube",
+  "yt_video_id": "gz57_Wn8dCo",
+  "yt_uploaded_at": "2026-11-27 01:36 IST",
+  "yt_privacy": "public",
+  "yt_publish_at": "2026-11-27T01:36:18.580253+05:30",
+  "yt_status": "public",
+  "youtube_url": "https://youtube.com/shorts/gz57_Wn8dCo",
+  "buffer_post_id": "yt:gz57_Wn8dCo",
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-26T20:06:18.000Z",
+  "buffer_posted_at": "2026-11-26T20:06:18.000Z"
 }
