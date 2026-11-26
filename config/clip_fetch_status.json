@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T15:34:22Z",
-  "last_upload_at": "2026-11-26T15:34:22Z"
+  "last_run_at": "2026-11-26T15:41:29Z",
+  "last_upload_at": "2026-11-26T15:41:29Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -140,6 +140,7 @@
   "yt:hNg1ksFeyv0",
   "yt:hQDyX9sOe04",
   "yt:iAIBF2ngbWY",
+  "yt:idV4GQRflHM",
   "yt:igNyLmTc7Po",
   "yt:iiwOVqGtZj4",
   "yt:j9EgOsPLRxc",
@@ -2181,6 +2182,17 @@
    "kbps": 1887,
    "by": "box",
    "at": "2026-11-26T15:34:22Z"
+  },
+  {
+   "asset": "pulpvincent_scene1_h264.mp4",
+   "id": "yt:idV4GQRflHM",
+   "title": "Pulp Fiction | 'The Bonnie Situation' (HD) - John Travolta, Quentin Tarantino | MIRAMAX",
+   "channel": "Miramax",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1336,
+   "by": "box",
+   "at": "2026-11-26T15:41:29Z"
   }
  ],
  "github": {
