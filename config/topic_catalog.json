@@ -2577,6 +2577,28 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "category": "tv"
+    },
+    {
+      "slug": "arcane",
+      "pillar": "anime",
+      "words": "ARCANE",
+      "hook": "Jinx finally loses her mind",
+      "title": "Jinx finally loses her mind | Arcane | #edit",
+      "description": "Jinx finally loses her mind. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #arcane #anime #edit",
+      "tags": [
+        "arcane",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=ZVTDEZvFU6k",
+      "scene_assets": [
+        "arcane_scene1_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "category": "cartoon"
     }
   ]
 }

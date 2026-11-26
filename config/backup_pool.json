@@ -1851,6 +1851,35 @@
       ],
       "added_by": "footage_refill",
       "category": "tv"
+    },
+    {
+      "id": "backup-arcane",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=ZVTDEZvFU6k",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Jinx finally loses her mind",
+      "words": "ARCANE",
+      "title": "Jinx finally loses her mind | Arcane | #edit",
+      "description": "Jinx finally loses her mind. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #arcane #anime #edit",
+      "tags": [
+        "arcane",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "arcane_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "arcane_scene1_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "cartoon"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T07:42:55Z",
-  "last_upload_at": "2026-11-26T07:42:55Z"
+  "last_run_at": "2026-11-26T07:50:18Z",
+  "last_upload_at": "2026-11-26T07:50:18Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -83,6 +83,7 @@
   "yt:YnLlX4x1lag",
   "yt:YuIR94VIC7k",
   "yt:YwgTPwxPZ9A",
+  "yt:ZVTDEZvFU6k",
   "yt:Za4kyckczXI",
   "yt:ZivADyFlILE",
   "yt:Zq4zTcIM0yQ",
@@ -1673,6 +1674,17 @@
    "kbps": 4255,
    "by": "box",
    "at": "2026-11-26T07:42:55Z"
+  },
+  {
+   "asset": "arcane_scene1_h264.mp4",
+   "id": "yt:ZVTDEZvFU6k",
+   "title": "Isha makes the ultimate sacrifice to save Jinx | Arcane: Season 2 | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2298,
+   "by": "box",
+   "at": "2026-11-26T07:50:18Z"
   }
  ],
  "github": {
