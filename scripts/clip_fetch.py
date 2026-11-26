@@ -26,7 +26,7 @@ STATUS = REPO / "config" / "clip_fetch_status.json"
 CATALOG = REPO / "config" / "topic_catalog.json"
 DENY = REPO / "config" / "clip_denylist.json"
 WORK = Path(os.environ.get("CLIP_WORK", "/tmp/sky_clips"))
-LOG = os.environ.get("CLIP_LOG")  # box: /workspace/skywalker-cron.log
+LOG = os.environ.get("CLIP_LOG")  # optional log file path
 FMT = "bv*[height>=1080][height<=2160]+ba/b[height>=1080][height<=2160]"
 SORT = "res:2160,vcodec:vp9,acodec:m4a"  # highest res <=4K; avoid AV1 when VP9/H264 exist
 TRAILER = re.compile(r"\b(trailer|teaser|promo|tv spot)\b", re.I)
@@ -228,11 +228,11 @@ def browser_cookie_args() -> list[str]:
 
 
 def js_runtime_args() -> list[str]:
-    """Box only: SKY_YTDLP_JS_RUNTIME (e.g. deno:/home/box/.deno/bin/deno) so yt-dlp can
+    """Box only: SKY_YTDLP_JS_RUNTIME (e.g. deno:$HOME/.deno/bin/deno) so yt-dlp can
     solve YouTube n-challenges and select 1080p+ formats. Safe no-op when unset."""
     r = (os.environ.get("SKY_YTDLP_JS_RUNTIME") or "").strip()
     if not r:
-        p = Path("/home/box/.deno/bin/deno")
+        p = Path.home() / ".deno" / "bin" / "deno"
         if p.is_file() and os.access(p, os.X_OK):
             r = f"deno:{p}"
     if not r or r.startswith("-") or any(ch in r for ch in ";|&`$\n"):

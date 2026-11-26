@@ -20,7 +20,7 @@ fan re-uploads); no piracy, no DRM / paid OTT rips. Every new clip is checked by
 Gemini keys are present, Gemini looks at keyframes (logo / watermark / burned subtitles / HUD / quality /
 trailer card) exactly like pro-edit's vet().
 
-Auth: SKY_YTDLP_BROWSER (e.g. chrome:/home/box/chrome-profile/Fork-2) lets yt-dlp read the box browser's
+Auth: SKY_YTDLP_BROWSER (e.g. chrome:$HOME/chrome-profile/Default) lets yt-dlp read the box browser's
 own YouTube / X login for downloads only. Cookies are never copied, committed, uploaded or logged.
 Idempotent: every step compares the release asset list with what is needed; restart-safe (flock).
 
@@ -50,7 +50,7 @@ sys.path.insert(0, str(REPO))
 sys.path.insert(0, str(REPO / "scripts"))
 
 GH_REPO = os.environ.get("SKY_GH_REPO", "Bhupi820970/skywalker-shorts")
-HOME = Path(os.environ.get("SKY_BOX_HOME", "/workspace/skywalker-box"))
+HOME = Path(os.environ.get("SKY_BOX_HOME") or Path(__file__).resolve().parents[2])  # default: folder holding the repo clone
 STATE = HOME / "state.json"
 LOGF = HOME / "box_service.log"
 WORK = HOME / "work"
@@ -144,11 +144,11 @@ def browser_args() -> list[str]:
 
 
 def js_runtime_args() -> list[str]:
-    """Box only: SKY_YTDLP_JS_RUNTIME (e.g. deno:/home/box/.deno/bin/deno) so yt-dlp can
+    """Box only: SKY_YTDLP_JS_RUNTIME (e.g. deno:$HOME/.deno/bin/deno) so yt-dlp can
     solve YouTube n-challenges and select 1080p+ formats. Safe no-op when unset."""
     r = (os.environ.get("SKY_YTDLP_JS_RUNTIME") or "").strip()
     if not r:
-        p = Path("/home/box/.deno/bin/deno")
+        p = Path.home() / ".deno" / "bin" / "deno"
         if p.is_file() and os.access(p, os.X_OK):
             r = f"deno:{p}"
     if not r or r.startswith("-") or any(ch in r for ch in ";|&`$\n"):

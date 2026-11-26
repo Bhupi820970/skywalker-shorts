@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Last-resort local render for a queue item.
-# Uses the box venv at /workspace/skywalker/.editvenv, runs pipeline.py,
+# Uses the venv in SKY_VENV, runs pipeline.py,
 # then lanczos-upscales to 2160x3840.
 #
 # Usage: scripts/local_render.sh <queue-id>
 # Optional env:
-#   SKY_VENV   python venv (default /workspace/skywalker/.editvenv)
+#   SKY_VENV   python venv (default $HOME/skywalker/.editvenv)
 #   SKY_OUT    output directory (default <repo>/out)
 set -euo pipefail
 
@@ -16,7 +16,7 @@ if [[ -z "$ID" ]]; then
   exit 2
 fi
 
-VENV="${SKY_VENV:-/workspace/skywalker/.editvenv}"
+VENV="${SKY_VENV:-$HOME/skywalker/.editvenv}"
 PY="$VENV/bin/python"
 if [[ ! -x "$PY" ]]; then
   echo "venv python not found at $PY" >&2

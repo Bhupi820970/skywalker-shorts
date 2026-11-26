@@ -30,7 +30,7 @@ Usage: `python pipeline.py --template whitebar|depthtext|postcard --out out.mp4 
 - `scripts/render_item.py` self-heals before any bot steps in: (1) normal yt-dlp + official fallbacks, (2) force the `sources` Release fallback mp4, (3) fallback + a different credited music track + alternate scene selection + relaxed *non-hard* thresholds. Hard rules are never relaxed: no-crop, tight whitebar layout, and no logo/title/dark cards. If all three attempts fail, `results/<id>.json` is `retry_queued` (run stays green) and `auto-retry.yml` re-dispatches the item once. Only after that last automatic attempt fails is the result `failed` and the workflow run red (that wakes BIBI). The failure reason is always in `results/<id>.json`.
 - `pipeline.py` skips the first ~7s and last ~10s of long trailers, and drops studio/distributor logo intros, title/rating/coming-soon/credit cards, and near-black empty filler. Only real story/character footage stays. A small corner watermark that is part of the original frame is kept (never cropped). QA samples every selected shot and fails the render if any is a logo/title/dark card.
 - 4K is a lanczos upscale of the 1080x1920 edit to 2160x3840. It does not invent detail.
-- Last-resort local fallback: `scripts/local_render.sh <queue-id>` (venv `/workspace/skywalker/.editvenv`).
+- Last-resort local fallback: `scripts/local_render.sh <queue-id>` (venv from `SKY_VENV`).
 
 ## Dialogue, subtitles, uniqueness
 - Original trailer audio is kept. When actors speak, dialogue is at ~1.3 volume and the music is ducked to ~0.22 (`sidechaincompress`, with a volume-envelope fallback). Non-speech shots keep music at ~0.65. A beat drop on the reveal is still allowed.

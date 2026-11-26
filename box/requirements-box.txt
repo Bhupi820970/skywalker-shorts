@@ -1,0 +1,8 @@
+# Python packages for the Skywalker box downloader (scripts/box_service.py, scripts/clip_fetch.py).
+# Rendering happens on GitHub Actions (requirements.txt), not on the box.
+yt-dlp
+numpy
+Pillow
+opencv-python-headless
+librosa
+soundfile
