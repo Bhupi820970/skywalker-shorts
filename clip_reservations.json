@@ -636,18 +636,6 @@
    "state": "used",
    "video": "20261120-2230-weatheringwithyou"
   },
-  "wednesday_scene1_h264.mp4": {
-   "at": "2026-11-26T21:54:58+00:00",
-   "owner": "45901164554-1-stock-wednesday-02",
-   "platform": "render",
-   "state": "reserved"
-  },
-  "wednesday_scene2_h264.mp4": {
-   "at": "2026-11-26T21:55:01+00:00",
-   "owner": "45901164554-1-stock-wednesday-02",
-   "platform": "render",
-   "state": "reserved"
-  },
   "werwulf_trailer_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
    "owner": "seed",
