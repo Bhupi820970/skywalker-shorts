@@ -2246,7 +2246,9 @@
       "scene_assets": [
         "thebatman_scene1_h264.mp4",
         "thebatman_scene2_h264.mp4",
-        "thebatman_scene3_h264.mp4"
+        "thebatman_scene3_h264.mp4",
+        "thebatman_scene4_h264.mp4",
+        "thebatman_scene5_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",

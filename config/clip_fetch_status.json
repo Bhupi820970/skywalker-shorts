@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T12:17:48Z",
-  "last_upload_at": "2026-11-26T12:17:48Z"
+  "last_run_at": "2026-11-26T12:20:51Z",
+  "last_upload_at": "2026-11-26T12:20:51Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -63,6 +63,7 @@
   "yt:KElCq5eCegE",
   "yt:KaB7tTJ2T5o",
   "yt:Kw3935PH01E",
+  "yt:LIRxNpQ8Hqg",
   "yt:Lbmsv1tcgf8",
   "yt:LmWrEpYpUec",
   "yt:LtAkyPyUhgY",
@@ -103,6 +104,7 @@
   "yt:YuIR94VIC7k",
   "yt:YwgTPwxPZ9A",
   "yt:Z1mcQ6CzXo8",
+  "yt:ZRPgxFmaxoU",
   "yt:ZVTDEZvFU6k",
   "yt:Za4kyckczXI",
   "yt:ZivADyFlILE",
@@ -2121,6 +2123,28 @@
    "kbps": 1503,
    "by": "box",
    "at": "2026-11-26T12:17:48Z"
+  },
+  {
+   "asset": "thebatman_scene4_h264.mp4",
+   "id": "yt:LIRxNpQ8Hqg",
+   "title": "The Batman (2022) 4K - Batman Fights Riddler's Goons | Movieclips",
+   "channel": "Movieclips",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 4902,
+   "by": "box",
+   "at": "2026-11-26T12:20:51Z"
+  },
+  {
+   "asset": "thebatman_scene5_h264.mp4",
+   "id": "yt:ZRPgxFmaxoU",
+   "title": "The Batman (2022) - I’m Vengeance [4K HDR - Dolby 5.1]",
+   "channel": "MaxMovieClips",
+   "kind": "scene",
+   "res": "3840x1608",
+   "kbps": 3467,
+   "by": "box",
+   "at": "2026-11-26T12:20:51Z"
   }
  ],
  "github": {
