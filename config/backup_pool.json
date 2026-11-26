@@ -2171,6 +2171,37 @@
       ],
       "added_by": "footage_refill",
       "category": "movie"
+    },
+    {
+      "id": "backup-shahrukhkhan",
+      "pillar": "bollywood",
+      "source_url": "https://www.youtube.com/watch?v=yjOEfazi9Mc",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shahrukhkhan_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why did the entire room freeze here?",
+      "words": "JAWAN",
+      "title": "Why did the entire room freeze here? | Jawan | #edit",
+      "description": "Why did the entire room freeze here?. From official Jawan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jawan #srk #shahrukhkhan",
+      "tags": [
+        "jawan",
+        "srk",
+        "shahrukhkhan",
+        "bollywood",
+        "massentry",
+        "cinemaedit"
+      ],
+      "target_dur": 26,
+      "market": "IN",
+      "fallback_release": "sources",
+      "fallback_asset": "shahrukhkhan_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "shahrukhkhan_scene1_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "movie"
     }
   ]
 }
