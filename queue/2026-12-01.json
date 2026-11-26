@@ -70,6 +70,44 @@
   "fallback_asset": "spiderverse_scene1_h264.mp4"
  },
  {
+  "id": "20261201-1130-salaardeva",
+  "slot": "2026-12-01T11:30:00+05:30",
+  "pillar": "south",
+  "source_url": "https://www.youtube.com/watch?v=UJTRunuVXhM",
+  "template": "whitebar",
+  "hook": "Why Deva is the ultimate weapon",
+  "words": "SALAAR",
+  "title": "Why Deva is the ultimate weapon 💀 | Deva enters | #edit",
+  "description": "Why Deva is the ultimate weapon. From official Salaar clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #salaar #prabhas #southindia",
+  "tags": [
+   "salaar",
+   "prabhas",
+   "southindia",
+   "action",
+   "mass",
+   "edit",
+   "deva"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/salaardeva_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/salaardeva_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/salaardeva_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/salaardeva_scene4_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/salaardeva_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/salaardeva_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/salaardeva_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/salaardeva_scene4_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "salaardeva_scene1_h264.mp4"
+ },
+ {
   "id": "20261201-1330-pushpa",
   "slot": "2026-12-01T13:30:00+05:30",
   "pillar": "south",
@@ -164,6 +202,44 @@
   ],
   "fallback_release": "sources",
   "fallback_asset": "twisters_scene1_h264.mp4"
+ },
+ {
+  "id": "20261201-2030-jawanazad",
+  "slot": "2026-12-01T20:30:00+05:30",
+  "pillar": "bollywood",
+  "source_url": "https://www.youtube.com/watch?v=stjZKBhQ3lg",
+  "template": "whitebar",
+  "hook": "Why Azad Rathore changed the game",
+  "words": "JAWAN",
+  "title": "Why Azad Rathore changed the game 💀 | Metro fight | #edit",
+  "description": "Why Azad Rathore changed the game. From official Jawan clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jawan #srk #shahrukhkhan",
+  "tags": [
+   "jawan",
+   "srk",
+   "shahrukhkhan",
+   "bollywood",
+   "action",
+   "mass",
+   "edit"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "IN",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jawanazad_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jawanazad_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jawanazad_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jawanazad_scene4_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jawanazad_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jawanazad_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jawanazad_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jawanazad_scene4_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "jawanazad_scene1_h264.mp4"
  },
  {
   "id": "20261201-2230-zootopia",

@@ -1,79 +1,10 @@
 {
- "generated_at": "2026-11-26 18:21 IST",
+ "generated_at": "2026-11-26 22:04 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 148,
+ "release_scene_clips": 161,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "dhoom2",
-   "slot": "2026-11-26T13:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261126-1330-dhoom2",
-   "pillar": "bollywood",
-   "words": "DHOOM 2",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DHOOM 2 fight scene official clip",
-    "DHOOM 2 best scene official clip",
-    "DHOOM 2 official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=fmKWuAVt1vI",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "He walked off the train in a new face",
-   "title": "He walked off the train in a new face | Dhoom 2 | #edit",
-   "tags": [
-    "dhoom2",
-    "hrithikroshan",
-    "mra",
-    "yrf",
-    "bollywoodedit",
-    "bollywood"
-   ],
-   "market": "IN"
-  },
-  {
-   "slug": "jjkgojovstoji",
-   "slot": "2026-11-26T16:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261126-1600-jjkgojovstoji",
-   "pillar": "anime",
-   "words": "JUJUTSU KAISEN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "JUJUTSU KAISEN fight scene official clip",
-    "JUJUTSU KAISEN best scene official clip",
-    "JUJUTSU KAISEN official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
-   "missing_assets": [],
-   "on_release": [
-    "jjkgojovstoji_scene1_h264.mp4"
-   ],
-   "hook": "Why Toji could not break Gojo",
-   "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
-   "tags": [
-    "jujutsukaisen",
-    "gojosatoru",
-    "tojifushiguro",
-    "jjk",
-    "animeedit",
-    "anime",
-    "gojo"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "johnwick",
    "slot": "2026-11-26T18:30:00+05:30",
@@ -205,7 +136,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "boyandheron_scene2_h264.mp4"
+   ],
    "hook": "The heron knew his secret",
    "title": "The heron knew his secret | The Boy and the Heron | #edit",
    "tags": [
@@ -336,40 +269,43 @@
    "market": "US/UK"
   },
   {
-   "slug": "vikram",
-   "slot": "2026-11-28T16:00:00+05:30",
+   "slug": "cyberpunkedgerunners",
+   "slot": "2026-11-28T18:30:00+05:30",
    "for": "slot",
-   "item_id": "20261128-1600-vikram",
-   "pillar": "south",
-   "words": "VIKRAM",
+   "item_id": "20261128-1830-cyberpunkedgerunners",
+   "pillar": "anime",
+   "words": "CYBERPUNK",
    "scene_types": [
     "fight",
     "emotional",
     "aura"
    ],
    "search_queries": [
-    "VIKRAM fight scene official clip",
-    "VIKRAM best scene official clip",
-    "VIKRAM official clip"
+    "CYBERPUNK fight scene official clip",
+    "CYBERPUNK best scene official clip",
+    "CYBERPUNK official clip"
    ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=0Z_mA7n5zIA",
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
    "missing_assets": [],
    "on_release": [
-    "vikram_scene1_h264.mp4"
+    "cyberpunkedgerunners_scene1_h264.mp4"
    ],
-   "hook": "Vikram came back to finish the job",
-   "title": "Vikram came back to finish the job | Vikram | #edit",
+   "hook": "David paid for the legendary life",
+   "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
    "tags": [
-    "vikram",
-    "kamalhaasan",
-    "south",
+    "cyberpunkedgerunners",
+    "anime",
+    "animeedit",
     "edit",
-    "phonk",
-    "aura",
-    "action"
+    "shorts",
+    "trending",
+    "david"
    ],
-   "market": "IN"
+   "market": "US/UK"
   },
   {
    "slug": "aotfinal",
@@ -569,45 +505,6 @@
     "animeedit",
     "anime",
     "football"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "cyberpunkedgerunners",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-cyberpunkedgerunners",
-   "pillar": "anime",
-   "words": "EDGERUNNERS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "EDGERUNNERS fight scene official clip",
-    "EDGERUNNERS best scene official clip",
-    "EDGERUNNERS official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
-   "missing_assets": [],
-   "on_release": [
-    "cyberpunkedgerunners_scene1_h264.mp4"
-   ],
-   "hook": "David wanted to be a legend",
-   "title": "David wanted to be a legend | Cyberpunk Edgerunners | #edit",
-   "tags": [
-    "cyberpunkedgerunners",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "david"
    ],
    "market": "US/UK"
   },
@@ -1046,6 +943,42 @@
     "shorts",
     "trending",
     "yuta"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "jjkgojovstoji",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-jjkgojovstoji",
+   "pillar": "anime",
+   "words": "JUJUTSU KAISEN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "JUJUTSU KAISEN fight scene official clip",
+    "JUJUTSU KAISEN best scene official clip",
+    "JUJUTSU KAISEN official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=7LzDcr20SHc",
+   "missing_assets": [],
+   "on_release": [
+    "jjkgojovstoji_scene1_h264.mp4"
+   ],
+   "hook": "Why Toji could not break Gojo",
+   "title": "Why Toji could not break Gojo 💀 | Gojo Awakening | #edit",
+   "tags": [
+    "jujutsukaisen",
+    "gojosatoru",
+    "tojifushiguro",
+    "jjk",
+    "animeedit",
+    "anime",
+    "gojo"
    ],
    "market": "US/UK"
   },
@@ -1766,10 +1699,7 @@
    "missing_assets": [
     "spyxfamilycodewhite_scene3_h264.mp4"
    ],
-   "on_release": [
-    "spyxfamilycodewhite_scene1_h264.mp4",
-    "spyxfamilycodewhite_scene2_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Loid almost blew his cover",
    "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
    "tags": [
