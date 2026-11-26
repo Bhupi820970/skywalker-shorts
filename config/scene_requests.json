@@ -1,10 +1,43 @@
 {
- "generated_at": "2026-11-26 17:47 IST",
+ "generated_at": "2026-11-26 18:21 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 145,
+ "release_scene_clips": 148,
  "max_clips_per_title": 3,
  "requests": [
+  {
+   "slug": "dhoom2",
+   "slot": "2026-11-26T13:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261126-1330-dhoom2",
+   "pillar": "bollywood",
+   "words": "DHOOM 2",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DHOOM 2 fight scene official clip",
+    "DHOOM 2 best scene official clip",
+    "DHOOM 2 official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=fmKWuAVt1vI",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "He walked off the train in a new face",
+   "title": "He walked off the train in a new face | Dhoom 2 | #edit",
+   "tags": [
+    "dhoom2",
+    "hrithikroshan",
+    "mra",
+    "yrf",
+    "bollywoodedit",
+    "bollywood"
+   ],
+   "market": "IN"
+  },
   {
    "slug": "jjkgojovstoji",
    "slot": "2026-11-26T16:00:00+05:30",
@@ -2020,6 +2053,44 @@
    "market": "US/UK"
   },
   {
+   "slug": "witchhatatelier",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-witchhatatelier",
+   "pillar": "anime",
+   "words": "WITCH HAT ATELIER",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "WITCH HAT ATELIER fight scene official clip",
+    "WITCH HAT ATELIER best scene official clip",
+    "WITCH HAT ATELIER official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "TVアニメ「とんがり帽子のアトリエ」公式 and 2 more"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Coco drew her first spell",
+   "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
+   "tags": [
+    "witchhatatelier",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "coco"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "yourname",
    "slot": "9999",
    "for": "backup_pool",
@@ -2081,9 +2152,7 @@
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=Kw3935PH01E",
    "missing_assets": [],
-   "on_release": [
-    "zootopia_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Why Nick never trusted anyone",
    "title": "Why Nick never trusted anyone | Zootopia | #edit",
    "tags": [

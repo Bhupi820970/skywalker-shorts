@@ -104,6 +104,37 @@
   "fallback_asset": "pushpa_scene1_h264.mp4"
  },
  {
+  "id": "20261201-1600-jjk",
+  "slot": "2026-12-01T16:00:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=5yb2N3pnztU",
+  "template": "whitebar",
+  "hook": "Why everyone feared Gojo",
+  "words": "JUJUTSU KAISEN",
+  "title": "Why everyone feared Gojo | Jujutsu Kaisen | #edit",
+  "description": "Why everyone feared Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jjk #anime #edit",
+  "tags": [
+   "jjk",
+   "anime",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "jjk_scene1_h264.mp4"
+ },
+ {
   "id": "20261201-1830-twisters",
   "slot": "2026-12-01T18:30:00+05:30",
   "pillar": "movie",

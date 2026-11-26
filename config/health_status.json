@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-26 17:47 IST",
-  "slots_checked": 9,
+  "at": "2026-11-26 18:21 IST",
+  "slots_checked": 8,
   "ready": [
     {
       "slot": "2026-11-26T18:30:00+05:30",
@@ -9,7 +9,6 @@
     }
   ],
   "short": [
-    "2026-11-26T16:00:00+05:30",
     "2026-11-26T20:30:00+05:30",
     "2026-11-26T22:30:00+05:30",
     "2026-11-27T06:30:00+05:30",
@@ -27,8 +26,8 @@
     "20261127-1330-boyandheron",
     "20261127-1600-don2"
   ],
-  "backup_pool_size": 62,
-  "backup_pool_preuploaded": 62,
+  "backup_pool_size": 64,
+  "backup_pool_preuploaded": 64,
   "spare_done": [
     "stock-missionimpossible-01",
     "20261114-2030-missionimpossible",
@@ -135,6 +134,7 @@
     "stock-zootopia2-01",
     "20261122-0900-dragonballdaima",
     "stock-kaiju8-01",
+    "stock-strangerthings-01",
     "stock-weatheringwithyou-01",
     "20261122-0900-cyberpunkedgerunners",
     "20261114-0900-deadpool3",
@@ -155,8 +155,8 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 1,
-  "stock_pending": 17,
+  "stock_ready": 2,
+  "stock_pending": 18,
   "stock_used": 41,
   "stock_target": 30,
   "stock_need_refill": true,
