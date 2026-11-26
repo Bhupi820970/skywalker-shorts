@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T17:29:02Z",
-  "last_upload_at": "2026-11-26T17:29:02Z"
+  "last_run_at": "2026-11-26T17:33:31Z",
+  "last_upload_at": "2026-11-26T17:33:31Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -42,6 +42,7 @@
   "yt:B479Wc72Bsc",
   "yt:BU--ttm4nYs",
   "yt:CFjI21M9wZs",
+  "yt:Cc4MnWO33F8",
   "yt:DDAHHPGcLzo",
   "yt:DIefkYvjq6E",
   "yt:Dey2_shAaWI",
@@ -105,6 +106,7 @@
   "yt:V9baXCr--yw",
   "yt:VAdGW7QDJiU",
   "yt:VAikfIsQyRM",
+  "yt:VEjVqXiiUNY",
   "yt:VVBziwNCHq8",
   "yt:VofN1x93TG0",
   "yt:VwwZU7YgC6A",
@@ -143,6 +145,7 @@
   "yt:dhzjwuWCWu4",
   "yt:dtJj0So2yq4",
   "yt:e5ctO_lhS8Y",
+  "yt:ealC2TsX6es",
   "yt:eifvzpMt_lE",
   "yt:ermJ-iPg9xA",
   "yt:exdsbFvhocI",
@@ -2457,6 +2460,39 @@
    "kbps": 2019,
    "by": "box",
    "at": "2026-11-26T17:29:02Z"
+  },
+  {
+   "asset": "jjk_scene3_h264.mp4",
+   "id": "yt:VEjVqXiiUNY",
+   "title": "JUJUTSU KAISEN: Execution -Shibuya Incident x The Culling Game Begins- Dec 5 Theaters (US & Canada)!",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1854,
+   "by": "box",
+   "at": "2026-11-26T17:33:31Z"
+  },
+  {
+   "asset": "jjk_scene4_h264.mp4",
+   "id": "yt:Cc4MnWO33F8",
+   "title": "『劇場版 呪術廻戦「渋谷事変 特別編集版」×「死滅回游 先行上映」』プロモーション映像｜11月7日よりIMAX同時上映！全世界、順次公開！",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1854,
+   "by": "box",
+   "at": "2026-11-26T17:33:31Z"
+  },
+  {
+   "asset": "jjk_scene5_h264.mp4",
+   "id": "yt:ealC2TsX6es",
+   "title": "Nanami vs. Spirits | Black Flash | Jujutsu Kaisen 0 | Prime Video India",
+   "channel": "Prime Video India",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2687,
+   "by": "box",
+   "at": "2026-11-26T17:33:31Z"
   }
  ],
  "github": {

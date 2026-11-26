@@ -2121,7 +2121,10 @@
       "source_url": "https://www.youtube.com/watch?v=5yb2N3pnztU",
       "fallback_mp4": [
         "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene1_h264.mp4",
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene2_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene4_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene5_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "Why everyone feared Gojo",
@@ -2141,7 +2144,10 @@
       "content_kind": "best scene",
       "scene_assets": [
         "jjk_scene1_h264.mp4",
-        "jjk_scene2_h264.mp4"
+        "jjk_scene2_h264.mp4",
+        "jjk_scene3_h264.mp4",
+        "jjk_scene4_h264.mp4",
+        "jjk_scene5_h264.mp4"
       ],
       "added_by": "footage_refill",
       "category": "anime"

@@ -2796,7 +2796,10 @@
       "source_url": "https://www.youtube.com/watch?v=5yb2N3pnztU",
       "scene_assets": [
         "jjk_scene1_h264.mp4",
-        "jjk_scene2_h264.mp4"
+        "jjk_scene2_h264.mp4",
+        "jjk_scene3_h264.mp4",
+        "jjk_scene4_h264.mp4",
+        "jjk_scene5_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
