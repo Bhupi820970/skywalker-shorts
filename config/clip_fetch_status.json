@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T08:11:26Z",
-  "last_upload_at": "2026-11-26T08:11:26Z"
+  "last_run_at": "2026-11-26T08:12:22Z",
+  "last_upload_at": "2026-11-26T08:12:22Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -53,6 +53,7 @@
   "yt:JJOX735mOnA",
   "yt:JKvNlvV6ZW4",
   "yt:K-pDN77Vkgg",
+  "yt:KElCq5eCegE",
   "yt:KaB7tTJ2T5o",
   "yt:Kw3935PH01E",
   "yt:Lbmsv1tcgf8",
@@ -1781,6 +1782,17 @@
    "kbps": 2487,
    "by": "box",
    "at": "2026-11-26T08:11:26Z"
+  },
+  {
+   "asset": "topgunmaverick_scene2_h264.mp4",
+   "id": "yt:KElCq5eCegE",
+   "title": "Top Gun: Maverick | Dogfight Football Clip (2022 Movie)",
+   "channel": "Paramount Pictures",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2370,
+   "by": "box",
+   "at": "2026-11-26T08:12:22Z"
   }
  ],
  "github": {

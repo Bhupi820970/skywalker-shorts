@@ -1950,6 +1950,38 @@
       ],
       "added_by": "footage_refill",
       "category": "tv"
+    },
+    {
+      "id": "backup-topgunmaverick",
+      "pillar": "hollywood",
+      "source_url": "https://www.youtube.com/watch?v=KElCq5eCegE",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Maverick is the greatest pilot",
+      "words": "TOP GUN MAVERICK",
+      "title": "Why Maverick is the greatest pilot | The final training run | #edit",
+      "description": "Why Maverick is the greatest pilot. From official Top Gun Maverick clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #topgun #maverick #tomcruise",
+      "tags": [
+        "topgun",
+        "maverick",
+        "tomcruise",
+        "movieedit",
+        "phonk",
+        "aviation",
+        "action"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "topgunmaverick_scene2_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "topgunmaverick_scene2_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "movie"
     }
   ]
 }

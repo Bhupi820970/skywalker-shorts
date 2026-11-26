@@ -2210,7 +2210,8 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=IXbnzEHZDPg",
       "scene_assets": [
-        "topgunmaverick_scene1_h264.mp4"
+        "topgunmaverick_scene1_h264.mp4",
+        "topgunmaverick_scene2_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
