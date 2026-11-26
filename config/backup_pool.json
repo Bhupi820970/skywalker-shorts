@@ -2057,6 +2057,43 @@
       ],
       "added_by": "footage_refill",
       "category": "game"
+    },
+    {
+      "id": "backup-spiderverse",
+      "pillar": "hollywood",
+      "source_url": "https://www.youtube.com/watch?v=GPitD0-mkYA",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene4_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why did every Spider-Man chase him here?",
+      "words": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
+      "title": "Why did every Spider-Man chase him here? | Spider-Man: Across The Spider-Verse | #edit",
+      "description": "Why did every Spider-Man chase him here?. From official Spider-Man: Across The Spider-Verse clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #spiderverse #milesmorales #spiderman",
+      "tags": [
+        "spiderverse",
+        "milesmorales",
+        "spiderman",
+        "animation",
+        "sony",
+        "spiderverseedit"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "spiderverse_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "spiderverse_scene1_h264.mp4",
+        "spiderverse_scene2_h264.mp4",
+        "spiderverse_scene3_h264.mp4",
+        "spiderverse_scene4_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "cartoon"
     }
   ]
 }

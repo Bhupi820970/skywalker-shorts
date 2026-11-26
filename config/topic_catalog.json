@@ -2736,6 +2736,33 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "spiderverse",
+      "pillar": "hollywood",
+      "words": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
+      "hook": "Why did every Spider-Man chase him here?",
+      "title": "Why did every Spider-Man chase him here? | Spider-Man: Across The Spider-Verse | #edit",
+      "description": "Why did every Spider-Man chase him here?. From official Spider-Man: Across The Spider-Verse clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #spiderverse #milesmorales #spiderman",
+      "tags": [
+        "spiderverse",
+        "milesmorales",
+        "spiderman",
+        "animation",
+        "sony",
+        "spiderverseedit"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=GPitD0-mkYA",
+      "scene_assets": [
+        "spiderverse_scene1_h264.mp4",
+        "spiderverse_scene2_h264.mp4",
+        "spiderverse_scene3_h264.mp4",
+        "spiderverse_scene4_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "category": "cartoon"
     }
   ]
 }

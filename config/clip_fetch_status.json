@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T11:58:48Z",
-  "last_upload_at": "2026-11-26T11:58:48Z"
+  "last_run_at": "2026-11-26T12:11:04Z",
+  "last_upload_at": "2026-11-26T12:11:04Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -32,6 +32,7 @@
   "yt:9QvzrledPxg",
   "yt:9vzlmyNNt70",
   "yt:A1dnxXrpN-o",
+  "yt:ARIlzBXdzvo",
   "yt:AXbeD92Ty50",
   "yt:B0pIISs-o8w",
   "yt:BU--ttm4nYs",
@@ -43,6 +44,7 @@
   "yt:Ev0FRl7IRkU",
   "yt:FpR2IaKqF64",
   "yt:GGZdoD7gYnE",
+  "yt:GPitD0-mkYA",
   "yt:HGCsAcFzaFw",
   "yt:HQjpvBYiC_8",
   "yt:HYfycqyIuEk",
@@ -65,8 +67,10 @@
   "yt:LtAkyPyUhgY",
   "yt:MeIk9ap1u_E",
   "yt:MgVkBzXOc8Q",
+  "yt:MokxwHbscQ8",
   "yt:N-xHcvug3WI",
   "yt:NakTu_VZxJ0",
+  "yt:OJixXuR7Xcc",
   "yt:OoEU8GnGlcU",
   "yt:P39n86v-T7w",
   "yt:PDtrzr-LtIc",
@@ -2049,6 +2053,50 @@
    "kbps": 1610,
    "by": "box",
    "at": "2026-11-26T11:58:48Z"
+  },
+  {
+   "asset": "spiderverse_scene1_h264.mp4",
+   "id": "yt:GPitD0-mkYA",
+   "title": "SPIDER-MAN: ACROSS THE SPIDER-VERSE Clip - Stop Spider-Man",
+   "channel": "Sony Pictures Entertainment",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1785,
+   "by": "box",
+   "at": "2026-11-26T12:11:04Z"
+  },
+  {
+   "asset": "spiderverse_scene2_h264.mp4",
+   "id": "yt:OJixXuR7Xcc",
+   "title": "Miles Morales \"Anyone Can Wear The Mask\" Ending Scene - Spider-Man: Into the Spider-Verse (2018)",
+   "channel": "TopMovieClips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1601,
+   "by": "box",
+   "at": "2026-11-26T12:11:04Z"
+  },
+  {
+   "asset": "spiderverse_scene3_h264.mp4",
+   "id": "yt:MokxwHbscQ8",
+   "title": "SPIDER-MAN: ACROSS THE SPIDER-VERSE Clip - Gwen & Miles",
+   "channel": "Sony Pictures Entertainment",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2475,
+   "by": "box",
+   "at": "2026-11-26T12:11:04Z"
+  },
+  {
+   "asset": "spiderverse_scene4_h264.mp4",
+   "id": "yt:ARIlzBXdzvo",
+   "title": "SPIDER-MAN: INTO THE SPIDER-VERSE Clip - Fight or Flight",
+   "channel": "Sony Pictures Entertainment",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2725,
+   "by": "box",
+   "at": "2026-11-26T12:11:04Z"
   }
  ],
  "github": {
