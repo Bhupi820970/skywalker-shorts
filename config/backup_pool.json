@@ -1859,7 +1859,9 @@
       "pillar": "anime",
       "source_url": "https://www.youtube.com/watch?v=ZVTDEZvFU6k",
       "fallback_mp4": [
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene1_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene3_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "Jinx finally loses her mind",
@@ -1878,7 +1880,9 @@
       "fallback_asset": "arcane_scene1_h264.mp4",
       "content_kind": "best scene",
       "scene_assets": [
-        "arcane_scene1_h264.mp4"
+        "arcane_scene1_h264.mp4",
+        "arcane_scene2_h264.mp4",
+        "arcane_scene3_h264.mp4"
       ],
       "added_by": "footage_refill",
       "category": "cartoon"

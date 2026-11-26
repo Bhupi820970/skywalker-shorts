@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T11:45:52Z",
-  "last_upload_at": "2026-11-26T11:45:52Z"
+  "last_run_at": "2026-11-26T11:50:32Z",
+  "last_upload_at": "2026-11-26T11:50:32Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -37,6 +37,7 @@
   "yt:CFjI21M9wZs",
   "yt:DDAHHPGcLzo",
   "yt:DIefkYvjq6E",
+  "yt:EKuVC2aVdI8",
   "yt:EovTf8Mydo4",
   "yt:Ev0FRl7IRkU",
   "yt:FpR2IaKqF64",
@@ -107,6 +108,7 @@
   "yt:aiCMXJ4zKWA",
   "yt:aoi11BdfpoM",
   "yt:b2l8sz4TAY4",
+  "yt:c8o3ATfaS6w",
   "yt:cbft6JWPkpA",
   "yt:chjVPTdBel8",
   "yt:ckEUVyKanhw",
@@ -1965,6 +1967,28 @@
    "kbps": 2149,
    "by": "box",
    "at": "2026-11-26T11:45:52Z"
+  },
+  {
+   "asset": "arcane_scene2_h264.mp4",
+   "id": "yt:c8o3ATfaS6w",
+   "title": "JINX vs EKKO, le combat mythique d’Arcane | Netflix France",
+   "channel": "Netflix France",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2023,
+   "by": "box",
+   "at": "2026-11-26T11:50:32Z"
+  },
+  {
+   "asset": "arcane_scene3_h264.mp4",
+   "id": "yt:EKuVC2aVdI8",
+   "title": "Jinx X Ekko | Arcane - Primeira Temporada | Netflix Brasil",
+   "channel": "Netflix Brasil",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2101,
+   "by": "box",
+   "at": "2026-11-26T11:50:32Z"
   }
  ],
  "github": {
