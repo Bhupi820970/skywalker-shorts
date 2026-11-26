@@ -502,24 +502,6 @@
    "state": "used",
    "video": "20261115-2230-sololeveling"
   },
-  "spiderverse_scene1_h264.mp4": {
-   "at": "2026-11-26T21:54:20+00:00",
-   "owner": "45901085936-1-stock-spiderverse-02",
-   "platform": "render",
-   "state": "reserved"
-  },
-  "spiderverse_scene2_h264.mp4": {
-   "at": "2026-11-26T21:54:23+00:00",
-   "owner": "45901085936-1-stock-spiderverse-02",
-   "platform": "render",
-   "state": "reserved"
-  },
-  "spiderverse_scene3_h264.mp4": {
-   "at": "2026-11-26T21:54:27+00:00",
-   "owner": "45901085936-1-stock-spiderverse-02",
-   "platform": "render",
-   "state": "reserved"
-  },
   "strangerthings_scene1_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
    "owner": "seed",
