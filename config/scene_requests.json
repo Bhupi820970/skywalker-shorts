@@ -1,50 +1,10 @@
 {
- "generated_at": "2026-11-26 16:17 IST",
+ "generated_at": "2026-11-26 17:47 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 132,
+ "release_scene_clips": 145,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "mashle",
-   "slot": "2026-11-26T11:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261126-1130-mashle",
-   "pillar": "anime",
-   "words": "MASHLE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "MASHLE fight scene official clip",
-    "MASHLE best scene official clip",
-    "MASHLE official clip"
-   ],
-   "official_channels": [
-    "Aniplex USA",
-    "Aniplex USA and Sony",
-    "Crunchyroll"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
-   "missing_assets": [],
-   "on_release": [
-    "mashle_scene1_h264.mp4"
-   ],
-   "hook": "Mash breaks magic with muscles",
-   "title": "Mash breaks magic with muscles | Mashle | #edit",
-   "tags": [
-    "mashle",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "mash"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "jjkgojovstoji",
    "slot": "2026-11-26T16:00:00+05:30",
@@ -458,39 +418,6 @@
     "trending",
     "maomao",
     "jinshi"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "arcane",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-arcane",
-   "pillar": "anime",
-   "words": "ARCANE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ARCANE fight scene official clip",
-    "ARCANE best scene official clip",
-    "ARCANE official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=ZVTDEZvFU6k",
-   "missing_assets": [],
-   "on_release": [
-    "arcane_scene1_h264.mp4"
-   ],
-   "hook": "Jinx finally loses her mind",
-   "title": "Jinx finally loses her mind | Arcane | #edit",
-   "tags": [
-    "arcane",
-    "anime",
-    "edit",
-    "shorts"
    ],
    "market": "US/UK"
   },
@@ -1210,6 +1137,49 @@
    "market": "US/UK"
   },
   {
+   "slug": "mashle",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-mashle",
+   "pillar": "anime",
+   "words": "MASHLE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "MASHLE fight scene official clip",
+    "MASHLE best scene official clip",
+    "MASHLE official clip"
+   ],
+   "official_channels": [
+    "Aniplex USA",
+    "Aniplex USA and Sony",
+    "Crunchyroll"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=_z6rvtx3tps",
+   "missing_assets": [
+    "mashle_scene2_h264.mp4",
+    "mashle_scene3_h264.mp4"
+   ],
+   "on_release": [
+    "mashle_scene1_h264.mp4"
+   ],
+   "hook": "Mash breaks magic with muscles",
+   "title": "Mash breaks magic with muscles | Mashle | #edit",
+   "tags": [
+    "mashle",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "mash"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "mhafinal",
    "slot": "9999",
    "for": "backup_pool",
@@ -1853,6 +1823,41 @@
     "phonk",
     "aviation",
     "action"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "twisters",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-twisters",
+   "pillar": "movie",
+   "words": "TWISTERS",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "TWISTERS fight scene official clip",
+    "TWISTERS best scene official clip",
+    "TWISTERS official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=0OzLbsNUKH4",
+   "missing_assets": [],
+   "on_release": [
+    "twisters_scene1_h264.mp4"
+   ],
+   "hook": "The sky turned against them",
+   "title": "The sky turned against them | Twisters | #edit",
+   "tags": [
+    "twisters",
+    "glenpowell",
+    "action",
+    "edit",
+    "shorts",
+    "trending"
    ],
    "market": "US/UK"
   },

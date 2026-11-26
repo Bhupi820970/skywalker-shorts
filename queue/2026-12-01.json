@@ -33,6 +33,43 @@
   "fallback_asset": "wednesday_scene1_h264.mp4"
  },
  {
+  "id": "20261201-0900-spiderverse",
+  "slot": "2026-12-01T09:00:00+05:30",
+  "pillar": "hollywood",
+  "source_url": "https://www.youtube.com/watch?v=GPitD0-mkYA",
+  "template": "whitebar",
+  "hook": "Why did every Spider-Man chase him here?",
+  "words": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
+  "title": "Why did every Spider-Man chase him here? | Spider-Man: Across The Spider-Verse | #edit",
+  "description": "Why did every Spider-Man chase him here?. From official Spider-Man: Across The Spider-Verse clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #spiderverse #milesmorales #spiderman",
+  "tags": [
+   "spiderverse",
+   "milesmorales",
+   "spiderman",
+   "animation",
+   "sony",
+   "spiderverseedit"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene4_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene4_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "spiderverse_scene1_h264.mp4"
+ },
+ {
   "id": "20261201-1330-pushpa",
   "slot": "2026-12-01T13:30:00+05:30",
   "pillar": "south",
@@ -65,6 +102,37 @@
   ],
   "fallback_release": "sources",
   "fallback_asset": "pushpa_scene1_h264.mp4"
+ },
+ {
+  "id": "20261201-1830-twisters",
+  "slot": "2026-12-01T18:30:00+05:30",
+  "pillar": "movie",
+  "source_url": "https://www.youtube.com/watch?v=jufrkwWbAy0",
+  "template": "whitebar",
+  "hook": "The sky turned against them",
+  "words": "TWISTERS",
+  "title": "The sky turned against them | Twisters | #edit",
+  "description": "The sky turned against them. From the official Twisters trailer. Edit by Skywalker.\nSource: official trailer. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #twisters",
+  "tags": [
+   "twisters",
+   "glenpowell",
+   "action",
+   "edit",
+   "shorts",
+   "trending"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene1_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene1_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "twisters_scene1_h264.mp4"
  },
  {
   "id": "20261201-2230-zootopia",
