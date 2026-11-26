@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T12:11:04Z",
-  "last_upload_at": "2026-11-26T12:11:04Z"
+  "last_run_at": "2026-11-26T12:17:48Z",
+  "last_upload_at": "2026-11-26T12:17:48Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -21,6 +21,7 @@
   "yt:3nwBwJiyQ_g",
   "yt:4ZkOJjwRYoQ",
   "yt:5oRczmZ6dGU",
+  "yt:5yb2N3pnztU",
   "yt:67iuJTI5KF4",
   "yt:67xJW8LhNoI",
   "yt:6LWoO3UIZSg",
@@ -136,6 +137,7 @@
   "yt:iAIBF2ngbWY",
   "yt:igNyLmTc7Po",
   "yt:iiwOVqGtZj4",
+  "yt:j9EgOsPLRxc",
   "yt:jeQYEIQ6eHw",
   "yt:kaMB6Rw8XzA",
   "yt:kcXgCtylzbA",
@@ -2097,6 +2099,28 @@
    "kbps": 2725,
    "by": "box",
    "at": "2026-11-26T12:11:04Z"
+  },
+  {
+   "asset": "jjk_scene1_h264.mp4",
+   "id": "yt:5yb2N3pnztU",
+   "title": "TVアニメ『呪術廻戦』第2期「渋谷事変」ノンクレジットOPムービー／OPテーマ：King Gnu「SPECIALZ」｜毎週木曜夜11時56分～MBS/TBS系列全国28局にて放送中!!",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 10657,
+   "by": "box",
+   "at": "2026-11-26T12:17:48Z"
+  },
+  {
+   "asset": "jjk_scene2_h264.mp4",
+   "id": "yt:j9EgOsPLRxc",
+   "title": "Jujutsu Kaisen in Concert is here. 🧨",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1503,
+   "by": "box",
+   "at": "2026-11-26T12:17:48Z"
   }
  ],
  "github": {

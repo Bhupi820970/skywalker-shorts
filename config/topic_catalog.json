@@ -2763,6 +2763,29 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "category": "cartoon"
+    },
+    {
+      "slug": "jjk",
+      "pillar": "anime",
+      "words": "JUJUTSU KAISEN",
+      "hook": "Why everyone feared Gojo",
+      "title": "Why everyone feared Gojo | Jujutsu Kaisen | #edit",
+      "description": "Why everyone feared Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jjk #anime #edit",
+      "tags": [
+        "jjk",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=5yb2N3pnztU",
+      "scene_assets": [
+        "jjk_scene1_h264.mp4",
+        "jjk_scene2_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "category": "anime"
     }
   ]
 }

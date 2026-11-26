@@ -2094,6 +2094,37 @@
       ],
       "added_by": "footage_refill",
       "category": "cartoon"
+    },
+    {
+      "id": "backup-jjk",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=5yb2N3pnztU",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jjk_scene2_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why everyone feared Gojo",
+      "words": "JUJUTSU KAISEN",
+      "title": "Why everyone feared Gojo | Jujutsu Kaisen | #edit",
+      "description": "Why everyone feared Gojo. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #jjk #anime #edit",
+      "tags": [
+        "jjk",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "jjk_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "jjk_scene1_h264.mp4",
+        "jjk_scene2_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "anime"
     }
   ]
 }
