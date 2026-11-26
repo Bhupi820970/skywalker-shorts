@@ -1,0 +1,1472 @@
+{
+  "id": "stock-gta5-02",
+  "status": "retry_queued",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-27 03:36 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45888690592",
+  "slot": null,
+  "title": "The moment GTA V changed gaming history forever #gtav #trevor #gta5",
+  "hook": "They Own San Andreas",
+  "description": "They Own San Andreas. A high-octane showcase of Los Santos featuring Michael, Franklin, and Trevor taking over the city. From the official Gta V trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#gtav #trevor #gta5 #shorts #edit",
+  "tags": [
+    "gtav",
+    "trevor",
+    "gta5",
+    "anime",
+    "edit",
+    "shorts"
+  ],
+  "queue_meta": {
+    "hook": "Why Trevor scares even Michael",
+    "title": "Why Trevor scares even Michael | Gta V | #edit",
+    "description": "Why Trevor scares even Michael. From official Gta V clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gta5 #anime #edit",
+    "tags": [
+      "gta5",
+      "anime",
+      "edit",
+      "shorts"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "teasing key dialogue / savage cold statement",
+  "title_candidates": [
+    {
+      "title": "The moment GTA V changed gaming history forever",
+      "click_score": 95.0
+    },
+    {
+      "title": "Nobody suspected Trevor was going to be this unhinged",
+      "click_score": 92.0
+    },
+    {
+      "title": "Why GTA V still hits different after all these years",
+      "click_score": 89.0
+    },
+    {
+      "title": "Michael did not expect Trevor to bring this much chaos",
+      "click_score": 86.0
+    },
+    {
+      "title": "Watch the last two seconds of this legendary trailer",
+      "click_score": 84.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "s": 83.3,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "s": 62.9,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key7",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key7",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 133.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key7",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "s": 115.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "s": 94.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key7",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key7",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key7",
+      "s": 69.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key7",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key7",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key7",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key7",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key7",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key7",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    }
+  ],
+  "backup_item": "backup-gta5",
+  "stock": true,
+  "stock_topic": "backup-gta5",
+  "spare": true,
+  "words": "GTA V",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-gta5-02.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 28.552,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene2_h264.mp4",
+  "music": "pr_sempressaslowed.mp3",
+  "music_credit": "Song: Phonk Time - SEM PRESSA (SLOWED)\nOfficial link: https://www.youtube.com/watch?v=S41oeKL7woE",
+  "description_final": "They Own San Andreas. A high-octane showcase of Los Santos featuring Michael, Franklin, and Trevor taking over the city. From the official Gta V trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#gtav #trevor #gta5 #shorts #edit\n\nMusic:\nSong: Phonk Time - SEM PRESSA (SLOWED)\nOfficial link: https://www.youtube.com/watch?v=S41oeKL7woE",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-gta5-02-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 520,
+    "bar_h": 136,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1784,
+    "block_h": 1920,
+    "drop_t": 28.552,
+    "energy": true,
+    "story_caption_boxes": [
+      {
+        "t0": 0.18,
+        "t1": 1.22,
+        "box": [
+          238,
+          941,
+          604,
+          62
+        ],
+        "zone": "mid",
+        "text": "WITH GRAND THEFT",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 1.22,
+        "t1": 2.38,
+        "box": [
+          326,
+          842,
+          427,
+          62
+        ],
+        "zone": "chin",
+        "text": "AUTO ONLINE",
+        "faces": [
+          [
+            572,
+            793,
+            30,
+            45
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 2.38,
+        "t1": 3.4,
+        "box": [
+          289,
+          941,
+          501,
+          62
+        ],
+        "zone": "mid",
+        "text": "JUST WHAT YOU",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 3.4,
+        "t1": 4.24,
+        "box": [
+          183,
+          941,
+          714,
+          62
+        ],
+        "zone": "mid",
+        "text": "CHOOSE TO DO IN THAT",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 4.24,
+        "t1": 6.167,
+        "box": [
+          214,
+          941,
+          651,
+          62
+        ],
+        "zone": "mid",
+        "text": "WORLD IS UP TO YOU",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 6.167,
+        "t1": 6.754,
+        "box": [
+          331,
+          883,
+          418,
+          62
+        ],
+        "zone": "chin",
+        "text": "WELCOME TO",
+        "faces": [
+          [
+            438,
+            801,
+            55,
+            75
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 6.754,
+        "t1": 7.88,
+        "box": [
+          378,
+          882,
+          324,
+          62
+        ],
+        "zone": "chin",
+        "text": "PARADISE",
+        "faces": [
+          [
+            497,
+            791,
+            61,
+            83
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 7.88,
+        "t1": 8.38,
+        "box": [
+          211,
+          874,
+          658,
+          62
+        ],
+        "zone": "chin",
+        "text": "YOU NEED TO BETTER",
+        "faces": [
+          [
+            399,
+            760,
+            83,
+            104
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 8.38,
+        "t1": 9.22,
+        "box": [
+          304,
+          874,
+          472,
+          62
+        ],
+        "zone": "chin",
+        "text": "REPRESENTATE",
+        "faces": [
+          [
+            441,
+            762,
+            78,
+            102
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 9.22,
+        "t1": 9.78,
+        "box": [
+          374,
+          871,
+          332,
+          62
+        ],
+        "zone": "chin",
+        "text": "YOURSELF",
+        "faces": [
+          [
+            402,
+            760,
+            79,
+            101
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 9.78,
+        "t1": 10.06,
+        "box": [
+          218,
+          944,
+          643,
+          62
+        ],
+        "zone": "chin",
+        "text": "YOU KNOW WHAT I'M",
+        "faces": [
+          [
+            337,
+            749,
+            89,
+            110
+          ],
+          [
+            729,
+            763,
+            115,
+            165
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 10.06,
+        "t1": 10.88,
+        "box": [
+          275,
+          953,
+          529,
+          62
+        ],
+        "zone": "chin",
+        "text": "TALKING ABOUT?",
+        "faces": [
+          [
+            308,
+            740,
+            86,
+            120
+          ],
+          [
+            724,
+            749,
+            68,
+            112
+          ],
+          [
+            727,
+            766,
+            130,
+            170
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 10.88,
+        "t1": 12.18,
+        "box": [
+          232,
+          941,
+          616,
+          62
+        ],
+        "zone": "mid",
+        "text": "OR BAND TOGETHER",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 12.18,
+        "t1": 13.513,
+        "box": [
+          246,
+          941,
+          588,
+          62
+        ],
+        "zone": "mid",
+        "text": "AND FORM A CREW",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 13.513,
+        "t1": 14.393,
+        "box": [
+          325,
+          804,
+          430,
+          62
+        ],
+        "zone": "chin",
+        "text": "THEIR OUTFIT",
+        "faces": [
+          [
+            472,
+            703,
+            76,
+            92
+          ],
+          [
+            705,
+            869,
+            30,
+            44
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 14.393,
+        "t1": 15.613,
+        "box": [
+          230,
+          910,
+          620,
+          62
+        ],
+        "zone": "chin",
+        "text": "WEAPON OF CHOICE",
+        "faces": [
+          [
+            352,
+            830,
+            61,
+            73
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 15.613,
+        "t1": 16.073,
+        "box": [
+          331,
+          941,
+          417,
+          62
+        ],
+        "zone": "mid",
+        "text": "OR FAVORITE",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 16.073,
+        "t1": 16.913,
+        "box": [
+          399,
+          941,
+          281,
+          62
+        ],
+        "zone": "mid",
+        "text": "VEHICLE",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 16.913,
+        "t1": 17.733,
+        "box": [
+          222,
+          941,
+          636,
+          62
+        ],
+        "zone": "mid",
+        "text": "EVERYTHING YOU DO",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 17.733,
+        "t1": 18.633,
+        "box": [
+          202,
+          941,
+          675,
+          62
+        ],
+        "zone": "mid",
+        "text": "HELPS YOU PROGRESS",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 18.633,
+        "t1": 19.733,
+        "box": [
+          204,
+          941,
+          672,
+          62
+        ],
+        "zone": "mid",
+        "text": "THROUGH THE WORLD",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 19.733,
+        "t1": 20.473,
+        "box": [
+          206,
+          915,
+          667,
+          62
+        ],
+        "zone": "chin",
+        "text": "INTRODUCING YOU TO",
+        "faces": [
+          [
+            753,
+            805,
+            86,
+            100
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 20.473,
+        "t1": 21.713,
+        "box": [
+          259,
+          932,
+          562,
+          62
+        ],
+        "zone": "chin",
+        "text": "NEW CHARACTERS",
+        "faces": [
+          [
+            644,
+            797,
+            103,
+            123
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 21.713,
+        "t1": 23.293,
+        "box": [
+          185,
+          941,
+          709,
+          62
+        ],
+        "zone": "mid",
+        "text": "REWARDS AND ALMOST",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 23.293,
+        "t1": 24.313,
+        "box": [
+          375,
+          941,
+          330,
+          62
+        ],
+        "zone": "mid",
+        "text": "LIMITLESS",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 24.313,
+        "t1": 25.193,
+        "box": [
+          244,
+          941,
+          591,
+          62
+        ],
+        "zone": "mid",
+        "text": "ROCKSTAR WILL BE",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 25.193,
+        "t1": 25.713,
+        "box": [
+          338,
+          941,
+          403,
+          62
+        ],
+        "zone": "mid",
+        "text": "CONSTANTLY",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 25.713,
+        "t1": 26.693,
+        "box": [
+          247,
+          941,
+          585,
+          62
+        ],
+        "zone": "mid",
+        "text": "DEVELOPING MORE",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 26.693,
+        "t1": 27.713,
+        "box": [
+          207,
+          941,
+          666,
+          62
+        ],
+        "zone": "mid",
+        "text": "CONTENT FOR YOU TO",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 27.713,
+        "t1": 28.4,
+        "box": [
+          410,
+          923,
+          259,
+          97
+        ],
+        "zone": "mid",
+        "text": "ENJOY",
+        "faces": [],
+        "style": "RefSerif"
+      }
+    ],
+    "dialogue_captions": {
+      "count": 30,
+      "text": "WITH GRAND THEFT / AUTO ONLINE / JUST WHAT YOU / CHOOSE TO DO IN THAT / WORLD IS UP TO YOU / WELCOME TO / PARADISE / YOU NEED TO BETTER / REPRESENTATE / YOURSELF / YOU KNOW WHAT I'M / TALKING ABOUT? / OR BAND TOGETHER / AND FORM A CREW / THEIR OUTFIT / WEAPON OF CHOICE / OR FAVORITE / VEHICLE / EVERYTHING YOU DO / HELPS YOU PROGRESS / THROUGH THE WORLD / INTRODUCING YOU TO / NEW CHARACTERS / REWARDS AND ALMOST / LIMITLESS / ROCKSTAR WILL BE / CONSTANTLY / DEVELOPING MORE / CONTENT FOR YOU TO / ENJOY",
+      "style": "riyio ref glow (Playfair)"
+    },
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows_uncaptioned": [
+      [
+        0.12,
+        2.2
+      ],
+      [
+        2.32,
+        5.96
+      ],
+      [
+        6.167,
+        7.514
+      ],
+      [
+        7.7,
+        10.48
+      ],
+      [
+        10.82,
+        13.12
+      ],
+      [
+        13.333,
+        16.533
+      ],
+      [
+        16.853,
+        21.533
+      ],
+      [
+        21.653,
+        24.133
+      ],
+      [
+        24.253,
+        28.4
+      ]
+    ],
+    "speech_windows": [],
+    "edit_mode": "dialogue_drop",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 1,
+      "src_start": 5.69,
+      "dur": 2.22
+    },
+    {
+      "id": 9,
+      "src_start": 16.43,
+      "dur": 3.98
+    },
+    {
+      "id": 14,
+      "src_start": 29.863,
+      "dur": 1.567
+    },
+    {
+      "id": 27,
+      "src_start": 59.1,
+      "dur": 3.0
+    },
+    {
+      "id": 34,
+      "src_start": 70.66,
+      "dur": 2.64
+    },
+    {
+      "id": 53,
+      "src_start": 97.55,
+      "dur": 3.42
+    },
+    {
+      "id": 67,
+      "src_start": 123.27,
+      "dur": 4.82
+    },
+    {
+      "id": 73,
+      "src_start": 132.83,
+      "dur": 2.605
+    },
+    {
+      "id": 77,
+      "src_start": 138.57,
+      "dur": 4.3
+    },
+    {
+      "id": 40,
+      "src_start": 79.159,
+      "dur": 0.441
+    },
+    {
+      "id": 6,
+      "src_start": 10.262,
+      "dur": 0.464
+    },
+    {
+      "id": 17,
+      "src_start": 34.669,
+      "dur": 0.464
+    },
+    {
+      "id": 20,
+      "src_start": 42.611,
+      "dur": 0.464
+    },
+    {
+      "id": 30,
+      "src_start": 64.738,
+      "dur": 0.488
+    },
+    {
+      "id": 22,
+      "src_start": 45.23,
+      "dur": 0.464
+    },
+    {
+      "id": 44,
+      "src_start": 84.375,
+      "dur": 0.418
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene2_h264.mp4",
+      "music": "pr_sempressaslowed.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false,
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene1_h264.mp4",
+      "error": "gemini QC reject: clean_footage",
+      "at": "2026-11-27 02:37 IST"
+    }
+  ]
+}
