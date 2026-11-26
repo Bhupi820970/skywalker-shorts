@@ -774,6 +774,18 @@
         "clip:bleachtybw_scene1_h264.mp4",
         "sha:b6260746eac9b828111adad079268f002b540dbaa3d0d97b9e6da730f25bbbbb"
       ]
+    },
+    {
+      "id": "20261126-1830-johnwick",
+      "at": "2026-11-26 12:19 IST",
+      "slot": "2026-11-26T18:30:00+05:30",
+      "title": "John Wick Reminds Them Who He Is #johnwick #keanureeves #action",
+      "youtube_url": "https://youtube.com/shorts/14QVNYdLNVM",
+      "keys": [
+        "asset:render-20261126-1830-johnwick.mp4",
+        "clip:johnwick_scene1_h264.mp4",
+        "sha:42420354bb45c8256589debb2e9f41469cd6d413db60b387252f2cdb377d8491"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."

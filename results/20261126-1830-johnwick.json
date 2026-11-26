@@ -358,5 +358,16 @@
       "reason": "gemini score 9.0"
     }
   ],
-  "qc_status": "pass"
+  "qc_status": "pass",
+  "asset_sha256": "42420354bb45c8256589debb2e9f41469cd6d413db60b387252f2cdb377d8491",
+  "publish_via": "youtube",
+  "yt_video_id": "14QVNYdLNVM",
+  "yt_uploaded_at": "2026-11-26 12:19 IST",
+  "yt_privacy": "private",
+  "yt_publish_at": "2026-11-26T18:30:00+05:30",
+  "yt_status": "scheduled",
+  "youtube_url": "https://youtube.com/shorts/14QVNYdLNVM",
+  "buffer_post_id": "yt:14QVNYdLNVM",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-26T13:00:00.000Z"
 }
