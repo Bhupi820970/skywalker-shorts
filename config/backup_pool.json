@@ -1880,6 +1880,41 @@
       ],
       "added_by": "footage_refill",
       "category": "cartoon"
+    },
+    {
+      "id": "backup-gta5",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=N-xHcvug3WI",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene4_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Trevor scares even Michael",
+      "words": "GTA V",
+      "title": "Why Trevor scares even Michael | Gta V | #edit",
+      "description": "Why Trevor scares even Michael. From official Gta V clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gta5 #anime #edit",
+      "tags": [
+        "gta5",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "gta5_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "gta5_scene1_h264.mp4",
+        "gta5_scene2_h264.mp4",
+        "gta5_scene3_h264.mp4",
+        "gta5_scene4_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "game"
     }
   ]
 }

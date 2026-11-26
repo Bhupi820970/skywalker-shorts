@@ -2599,6 +2599,31 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "category": "cartoon"
+    },
+    {
+      "slug": "gta5",
+      "pillar": "anime",
+      "words": "GTA V",
+      "hook": "Why Trevor scares even Michael",
+      "title": "Why Trevor scares even Michael | Gta V | #edit",
+      "description": "Why Trevor scares even Michael. From official Gta V clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gta5 #anime #edit",
+      "tags": [
+        "gta5",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=N-xHcvug3WI",
+      "scene_assets": [
+        "gta5_scene1_h264.mp4",
+        "gta5_scene2_h264.mp4",
+        "gta5_scene3_h264.mp4",
+        "gta5_scene4_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "category": "game"
     }
   ]
 }
