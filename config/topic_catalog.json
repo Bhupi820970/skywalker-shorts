@@ -1200,7 +1200,8 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
       "scene_assets": [
-        "boyandheron_scene1_h264.mp4"
+        "boyandheron_scene1_h264.mp4",
+        "boyandheron_scene2_h264.mp4"
       ],
       "content_kind": "best scene",
       "category": "anime"

@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T14:33:51Z",
-  "last_upload_at": "2026-11-26T12:20:51Z"
+  "last_run_at": "2026-11-26T14:42:58Z",
+  "last_upload_at": "2026-11-26T14:42:58Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -46,6 +46,7 @@
   "yt:FpR2IaKqF64",
   "yt:GGZdoD7gYnE",
   "yt:GPitD0-mkYA",
+  "yt:Guxx_KTm_6M",
   "yt:HGCsAcFzaFw",
   "yt:HQjpvBYiC_8",
   "yt:HYfycqyIuEk",
@@ -2145,6 +2146,17 @@
    "kbps": 3467,
    "by": "box",
    "at": "2026-11-26T12:20:51Z"
+  },
+  {
+   "asset": "boyandheron_scene2_h264.mp4",
+   "id": "yt:Guxx_KTm_6M",
+   "title": "Howl's Moving Castle | Multi-Audio Clip: Gather Around For Breakfast! | Netflix",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1443,
+   "by": "box",
+   "at": "2026-11-26T14:42:58Z"
   }
  ],
  "github": {
