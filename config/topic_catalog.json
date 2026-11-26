@@ -2624,6 +2624,30 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "category": "game"
+    },
+    {
+      "slug": "wednesday",
+      "pillar": "anime",
+      "words": "WEDNESDAY",
+      "hook": "Why Wednesday never smiles",
+      "title": "Why Wednesday never smiles | Wednesday | #edit",
+      "description": "Why Wednesday never smiles. From official Wednesday clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #wednesday #anime #edit",
+      "tags": [
+        "wednesday",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=NakTu_VZxJ0",
+      "scene_assets": [
+        "wednesday_scene1_h264.mp4",
+        "wednesday_scene2_h264.mp4",
+        "wednesday_scene3_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "category": "tv"
     }
   ]
 }

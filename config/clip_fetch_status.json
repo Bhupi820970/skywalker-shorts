@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T07:59:37Z",
-  "last_upload_at": "2026-11-26T07:59:37Z"
+  "last_run_at": "2026-11-26T08:02:32Z",
+  "last_upload_at": "2026-11-26T08:02:32Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -19,6 +19,7 @@
   "yt:3nwBwJiyQ_g",
   "yt:4ZkOJjwRYoQ",
   "yt:5oRczmZ6dGU",
+  "yt:67iuJTI5KF4",
   "yt:67xJW8LhNoI",
   "yt:6LWoO3UIZSg",
   "yt:70NhEBzLKU8",
@@ -59,6 +60,7 @@
   "yt:MeIk9ap1u_E",
   "yt:MgVkBzXOc8Q",
   "yt:N-xHcvug3WI",
+  "yt:NakTu_VZxJ0",
   "yt:OoEU8GnGlcU",
   "yt:Pbu0f1JgzVw",
   "yt:Q4Tr7giZaXM",
@@ -141,6 +143,7 @@
   "yt:votcOf5cYCM",
   "yt:w323iXW02G4",
   "yt:xPJLyIFyF50",
+  "yt:xlrj36cAzj4",
   "yt:xpJWvpumgxs",
   "yt:yWBA876qftM"
  ],
@@ -1733,6 +1736,39 @@
    "kbps": 17076,
    "by": "box",
    "at": "2026-11-26T07:59:37Z"
+  },
+  {
+   "asset": "wednesday_scene1_h264.mp4",
+   "id": "yt:NakTu_VZxJ0",
+   "title": "Wednesday Addams | Dance Scene | Netflix",
+   "channel": "Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1342,
+   "by": "box",
+   "at": "2026-11-26T08:02:32Z"
+  },
+  {
+   "asset": "wednesday_scene2_h264.mp4",
+   "id": "yt:xlrj36cAzj4",
+   "title": "The Dead Dance with Enid and Agnes | Wednesday: Season 2 | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1415,
+   "by": "box",
+   "at": "2026-11-26T08:02:32Z"
+  },
+  {
+   "asset": "wednesday_scene3_h264.mp4",
+   "id": "yt:67iuJTI5KF4",
+   "title": "The Dead Dance com Enid e Agnes | Wandinha | Netflix Brasil",
+   "channel": "Netflix Brasil",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2150,
+   "by": "box",
+   "at": "2026-11-26T08:02:32Z"
   }
  ],
  "github": {

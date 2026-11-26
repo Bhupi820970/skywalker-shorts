@@ -1915,6 +1915,39 @@
       ],
       "added_by": "footage_refill",
       "category": "game"
+    },
+    {
+      "id": "backup-wednesday",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=NakTu_VZxJ0",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Wednesday never smiles",
+      "words": "WEDNESDAY",
+      "title": "Why Wednesday never smiles | Wednesday | #edit",
+      "description": "Why Wednesday never smiles. From official Wednesday clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #wednesday #anime #edit",
+      "tags": [
+        "wednesday",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "wednesday_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "wednesday_scene1_h264.mp4",
+        "wednesday_scene2_h264.mp4",
+        "wednesday_scene3_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "tv"
     }
   ]
 }
