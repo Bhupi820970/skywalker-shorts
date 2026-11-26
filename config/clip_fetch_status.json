@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-25T17:07:42Z",
-  "last_upload_at": "2026-11-25T17:07:42Z"
+  "last_run_at": "2026-11-26T07:10:39Z",
+  "last_upload_at": "2026-11-26T07:10:39Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -78,6 +78,7 @@
   "yt:YJ8vvIAxcss",
   "yt:YR6UqlVdJFY",
   "yt:YRL74JmhVgk",
+  "yt:YnLlX4x1lag",
   "yt:YuIR94VIC7k",
   "yt:YwgTPwxPZ9A",
   "yt:Za4kyckczXI",
@@ -1589,6 +1590,17 @@
    "kbps": 15613,
    "by": "box",
    "at": "2026-11-25T17:07:42Z"
+  },
+  {
+   "asset": "spyxfamilycodewhite_scene2_h264.mp4",
+   "id": "yt:YnLlX4x1lag",
+   "title": "Loid vs Colonel Snidel | SPY x FAMILY CODE: White | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3065,
+   "by": "box",
+   "at": "2026-11-26T07:10:39Z"
   }
  ],
  "github": {
