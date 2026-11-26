@@ -236,12 +236,6 @@
    "state": "used",
    "video": "20261114-1130-despicableme4"
   },
-  "dhoom2_scene4_h264.mp4": {
-   "at": "2026-11-26T19:19:58+00:00",
-   "owner": "45865280484-1-stock-thebatman-01",
-   "platform": "render",
-   "state": "reserved"
-  },
   "dune2_trailer_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
    "owner": "seed",
@@ -493,12 +487,6 @@
    "platform": "seed-rendered",
    "state": "used",
    "video": "20261113-2230-superman"
-  },
-  "thebatman_scene5_h264.mp4": {
-   "at": "2026-11-26T19:20:02+00:00",
-   "owner": "45865280484-1-stock-thebatman-01",
-   "platform": "render",
-   "state": "reserved"
   },
   "topgunmaverick_scene2_h264.mp4": {
    "at": "2026-11-26T18:01:26+00:00",
