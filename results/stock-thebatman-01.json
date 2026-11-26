@@ -1,0 +1,398 @@
+{
+  "id": "stock-thebatman-01",
+  "status": "retry_queued",
+  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3840, 2160], 'letterbox_free': [1920, 804], 'plate': [1080, 452], 'letterbox_rows_black': True, 'frame_corr_median': 0.822, 'edge_corr_median': 0.913, 'shift_px_median': 3.4, 'pairs': 6}; auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+  "at": "2026-11-26 20:06 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45823570019",
+  "slot": null,
+  "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
+  "hook": "Loid almost blew his cover",
+  "description": "Loid almost blew his cover. From official Spy x Family Code White clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #spyxfamilycodewhite",
+  "tags": [
+    "spyxfamilycodewhite",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "anya"
+  ],
+  "queue_meta": {
+    "hook": "Loid almost blew his cover",
+    "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
+    "description": "Loid almost blew his cover. From official Spy x Family Code White clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #spyxfamilycodewhite",
+    "tags": [
+      "spyxfamilycodewhite",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "anya"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "savage flat statement",
+  "title_candidates": [
+    {
+      "title": "Batman Owns The Darkest Corners",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody Sees Batman Coming",
+      "click_score": 88.0
+    },
+    {
+      "title": "The Moment The Criminals Realize",
+      "click_score": 85.0
+    },
+    {
+      "title": "Batman Arrives To Hunt",
+      "click_score": 82.0
+    },
+    {
+      "title": "He Rules From The Rafters",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 16.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 10.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 3.5,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 5.2,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 2.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.6,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key5",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key5",
+      "s": 2.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key5",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 16.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.3,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.0,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-thebatman",
+  "stock": true,
+  "stock_topic": "backup-thebatman",
+  "spare": true,
+  "words": "SPY X FAMILY",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "thebatman",
+      "from_words": "THE BATMAN",
+      "to": "spyxfamilycodewhite",
+      "to_words": "SPY X FAMILY",
+      "reason": "pipeline/QA failed (exit 1): only 15.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "thebatman",
+  "swapped_to": "spyxfamilycodewhite",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 15.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene2_h264.mp4",
+      "music": "pr_jgrzsombraycoraznphonk.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3840, 2160], 'letterbox_free': [1920, 804], 'plate': [1080, 452], 'letterbox_rows_black': True, 'frame_corr_median': 0.822, 'edge_corr_median': 0.913, 'shift_px_median': 3.4, 'pairs': 6}; auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
+      "music": "pr_provocarmunh0desyr.mp3",
+      "qc_status": null
+    }
+  ],
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3840, 2160], 'letterbox_free': [1920, 804], 'plate': [1080, 452], 'letterbox_rows_black': True, 'frame_corr_median': 0.822, 'edge_corr_median': 0.913, 'shift_px_median': 3.4, 'pairs': 6}; auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"1.54s burned-in text 'SHADOWS'\", \"2.04s burned-in text 'SHADOWS'\", \"2.54s burned-in text 'SHADOWS'\", \"3.04s burned-in text 'FEAR'\", \"3.54s burned-in text 'FEAR'\", \"4.54s burned-in text 'HIM'\", \"5.04s burned-in text 'HIM'\", \"5.54s burned-in text 'HIM'\", \"6.",
+      "at": "2026-11-26 18:46 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene5_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 17.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; auto_qc: 11 frame(s) failed empty-dark/logo/text detectors; auto_qc: only 17.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publis",
+      "at": "2026-11-26 19:02 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 15.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-26 19:16 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 11.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-26 19:24 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 17.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; auto_qc: 11 frame(s) failed empty-dark/logo/text detectors; auto_qc: only 17.7s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publis",
+      "at": "2026-11-26 19:29 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 15.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 15.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-26 19:43 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3840, 2160], 'letterbox_free': [1920, 804], 'plate': [1080, 452], 'letterbox_rows_black': True, 'frame_corr_median': 0.822, 'edge_corr_median': 0.913, 'shift_px_median': 3.4, 'pairs': 6}; auto_qc: 1 frame(s) failed empty-dark/l",
+      "at": "2026-11-26 20:06 IST"
+    }
+  ]
+}
