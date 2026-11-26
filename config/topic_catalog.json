@@ -2615,7 +2615,8 @@
       "scene_assets": [
         "arcane_scene1_h264.mp4",
         "arcane_scene2_h264.mp4",
-        "arcane_scene3_h264.mp4"
+        "arcane_scene3_h264.mp4",
+        "arcane_scene4_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",

@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T17:00:05Z",
-  "last_upload_at": "2026-11-26T17:00:05Z"
+  "last_run_at": "2026-11-26T17:06:17Z",
+  "last_upload_at": "2026-11-26T17:06:17Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -177,6 +177,7 @@
   "yt:sM9Uqtia-Lo",
   "yt:snriHOhBzR4",
   "yt:stjZKBhQ3lg",
+  "yt:tHfiXfk8Cgo",
   "yt:tIiipIHwTa4",
   "yt:tR4OVXK6tG8",
   "yt:tSukOsMkYnE",
@@ -2349,6 +2350,17 @@
    "kbps": 1878,
    "by": "box",
    "at": "2026-11-26T17:00:05Z"
+  },
+  {
+   "asset": "arcane_scene4_h264.mp4",
+   "id": "yt:tHfiXfk8Cgo",
+   "title": "Top 3 Fight Scenes from Arcane | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2329,
+   "by": "box",
+   "at": "2026-11-26T17:06:17Z"
   }
  ],
  "github": {
