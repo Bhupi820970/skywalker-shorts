@@ -28,7 +28,14 @@ DENY = REPO / "config" / "clip_denylist.json"
 WORK = Path(os.environ.get("CLIP_WORK", "/tmp/sky_clips"))
 LOG = os.environ.get("CLIP_LOG")  # optional log file path
 FMT = "bv*[height>=1080][height<=2160]+ba/b[height>=1080][height<=2160]"
-SORT = "res:2160,vcodec:vp9,acodec:m4a"  # highest res <=4K; avoid AV1 when VP9/H264 exist
+# Highest res <=4K; at equal res prefer H.264 and then the highest bitrate. (26 Nov root cause: the old
+# "vcodec:vp9" sort picked ~1000 kbps VP9 1080p streams although 2500-3600 kbps H.264 1080p existed, and the
+# H.264-tuned bitrate gate then rejected 48 good official clips in one cycle.)
+SORT = "res:2160,vcodec:h264,tbr,acodec:m4a"
+# Bits needed for the same picture quality relative to H.264 (VP9/HEVC/AV1 compress better).
+CODEC_FACTOR = {"h264": 1.0, "avc1": 1.0, "hevc": 0.7, "h265": 0.7, "vp9": 0.65, "vp09": 0.65, "av1": 0.55, "av01": 0.55}
+SEARCH_N = int(os.environ.get("CLIP_SEARCH_N", "20"))  # YouTube results per query (was 10)
+SEARCH_PAUSE_S = float(os.environ.get("CLIP_SEARCH_PAUSE_S", "2"))  # pacing between searches
 TRAILER = re.compile(r"\b(trailer|teaser|promo|tv spot)\b", re.I)
 JUNK = re.compile(r"(#shorts|\bedit\b|amv|status|whatsapp|4k\s*edit|compilation|scene pack|clip pack|"
                   r"hindi dubbed|1080p60 fan|slowed|reverb|lyrics|reaction|explained|recap|review)", re.I)
@@ -126,7 +133,7 @@ def search(req: dict, youtube: bool) -> list[dict]:
     scene_q = [q for q in (req.get("search_queries") or []) if q and not TRAILER.search(q)][:6]
     if not scene_q:
         scene_q = [f"{words} {t} scene official clip" for t in (req.get("scene_types") or ["fight", "emotional", "aura"])]
-    prefixes = (["ytsearch10"] if youtube else []) + ["dmsearch5", "bilibilisearch3"]
+    prefixes = ([f"ytsearch{SEARCH_N}"] if youtube else []) + ["dmsearch5", "bilibilisearch3"]
     chans = official_set(req)
     found, seen = [], set()
     # 1) link mode: explicit official links in the request, X posts before YouTube.
@@ -156,6 +163,7 @@ def search(req: dict, youtube: bool) -> list[dict]:
     n_first = len(found)
     for q in scene_q:
         for pfx in prefixes:
+            time.sleep(SEARCH_PAUSE_S)  # pace searches so YouTube does not rate-limit the box
             r = run(["yt-dlp", "--flat-playlist", "-J", "--no-warnings", *js_runtime_args(), *browser_cookie_args(), f"{pfx}:{q}"], timeout=90)
             if r.returncode != 0:
                 continue
@@ -209,7 +217,8 @@ def quality_ok(m: dict) -> str | None:
     short = min(m["w"], m["h"])
     if short < 1080:
         return f"{m['w']}x{m['h']} below 1080p"
-    need = int(1300 * ((m["w"] * m["h"]) / 2_073_600) ** 0.75)
+    factor = CODEC_FACTOR.get(str(m.get("codec") or "").lower(), 1.0)
+    need = int(1300 * factor * ((m["w"] * m["h"]) / 2_073_600) ** 0.75)
     if m["kbps"] and m["kbps"] < need:
         return f"low bitrate {m['kbps']}kbps < {need}"
     if m["dur"] < 15:

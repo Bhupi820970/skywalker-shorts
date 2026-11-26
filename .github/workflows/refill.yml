@@ -1,6 +1,6 @@
 name: refill
 
-# Automatic footage refill (no human in the loop). Every 6h:
+# Automatic footage refill (no human in the loop). Every 2h (clip pool: refill at <=50 fresh clips, target ~100):
 #  1. count UNPOSTED clean official scene clips (posted_history-aware) vs ~7 days of slots + 10 backup topics;
 #  2. below that, ask Gemini (1-2 calls, own budget; seeds of our winning titles on 429/timeout) for
 #     more scenes of what wins (love anime, Arcane, Cyberpunk, JJK...) and trending titles;
@@ -12,7 +12,7 @@ name: refill
 # Never renders, never publishes, no push trigger, own concurrency group: cannot cancel a live render.
 on:
   schedule:
-    - cron: "41 0,6,12,18 * * *"   # 06:11, 12:11, 18:11, 00:11 IST (off render :20/:50 and health crons)
+    - cron: "41 */2 * * *"   # every 2 h at :11 IST (off render :20/:50 and health crons)
   workflow_dispatch:
     inputs:
       force:

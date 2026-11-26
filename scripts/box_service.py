@@ -295,9 +295,50 @@ def download_clip(url: str, dest: Path) -> bool:
         f.unlink(missing_ok=True)
     fmt = "bv*[height>=1080][height<=2160]+ba/b[height>=1080][height<=2160]"
     r = run(["yt-dlp", "--no-playlist", "--remote-components", "ejs:github", "-f", fmt,
-             "-S", "res:2160,vcodec:h264,vcodec:vp9,acodec:m4a", "--merge-output-format", "mp4",
-             "-o", str(dest), "--no-warnings", "--no-part", "--retries", "3", *js_runtime_args(), *browser_args(), url], timeout=1800)
-    return r.returncode == 0 and dest.exists() and dest.stat().st_size > 1_000_000
+             "-S", "res:2160,vcodec:h264,tbr,acodec:m4a", "--merge-output-format", "mp4",
+             "-o", str(dest), "--no-warnings", "--no-part", "--retries", "3", "--sleep-requests", "1",
+             *js_runtime_args(), *browser_args(), url], timeout=1800)
+    ok = r.returncode == 0 and dest.exists() and dest.stat().st_size > 1_000_000
+    if not ok:
+        DL_ERR["last"] = download_error(r.stderr or r.stdout or "")
+    return ok
+
+
+DL_ERR: dict = {"last": ""}
+_ERR_LINE = re.compile(r"ERROR:\s*(?:\[[^\]]+\]\s*)?(?:[\w-]{6,}:\s*)?(.{0,140})")
+
+
+def download_error(text: str) -> str:
+    """Short, safe reason from yt-dlp's last ERROR line (paths stripped; yt-dlp never prints login data)."""
+    hits = _ERR_LINE.findall(text or "")
+    if hits:
+        why = hits[-1]
+    else:
+        lines = [ln for ln in (text or "").strip().splitlines() if ln.strip()]
+        why = lines[-1] if lines else "unknown"
+    why = re.sub(r"(/[^\s]+)+", "<path>", why).strip()
+    return why[:140] or "unknown"
+
+
+# Reasons that will never change for this URL: stop retrying it every day and search for another official clip.
+PERMANENT = re.compile(r"(logo/subtitle-burn channel|no metadata \(private|trailer/teaser|not an official channel|"
+                       r"best is \d+p|Video unavailable|Private video|removed|copyright|not available in your country)", re.I)
+DEAD_DAYS = 14
+
+
+def mark_dead(st: dict, asset: str, why: str) -> None:
+    st.setdefault("dead_assets", {})[asset] = {"day": today(), "why": why[:120]}
+
+
+def is_dead(st: dict, asset: str) -> bool:
+    d = (st.get("dead_assets") or {}).get(asset)
+    if not d:
+        return False
+    try:
+        age = (datetime.strptime(today(), "%Y-%m-%d") - datetime.strptime(d["day"], "%Y-%m-%d")).days
+    except Exception:
+        return False
+    return age < DEAD_DAYS
 
 
 def gemini_vet(path: Path, title: str, channel: str) -> str | None:
@@ -495,6 +536,7 @@ def step_clips(st: dict, tick=lambda: None, limit: int = 0) -> dict:
     needs = [n for n in needed_clips() if n["asset"] not in have]
     idx = url_index()
     done, failed, search_slugs = [], [], {}
+    dead_skipped = 0
     WORK.mkdir(parents=True, exist_ok=True)
     reqs = scene_requests()
     log(f"clips: {len(needs)} needed scene clip(s) missing on the release; "
@@ -522,6 +564,12 @@ def step_clips(st: dict, tick=lambda: None, limit: int = 0) -> dict:
               break
           tick()
           a = n["asset"]
+          if is_dead(st, a):
+              # original URL can never be used (logo-burn channel / private / removed): only search for
+              # a replacement official clip of the title; do not count it as a fresh failure every cycle
+              search_slugs.setdefault(ASSET_RX.match(a).group(1), n["item"])
+              dead_skipped += 1
+              continue
           url = resolve_url(n, idx)
           if not url:
               search_slugs.setdefault(ASSET_RX.match(a).group(1), n["item"])
@@ -533,6 +581,8 @@ def step_clips(st: dict, tick=lambda: None, limit: int = 0) -> dict:
           if why:
               log(f"clips: {a}: skip {url} ({why})")
               count_try(st, a, why)
+              if PERMANENT.search(why):
+                  mark_dead(st, a, why)
               st.setdefault("bad_urls", {})[url] = why
               search_slugs.setdefault(ASSET_RX.match(a).group(1), n["item"])
               failed.append(a)
@@ -540,7 +590,11 @@ def step_clips(st: dict, tick=lambda: None, limit: int = 0) -> dict:
           dest = WORK / a
           try:
               if not download_clip(url, dest):
-                  count_try(st, a, "download failed")
+                  err = DL_ERR.get("last") or "download failed"
+                  log(f"clips: {a}: download failed {url} ({err})")
+                  count_try(st, a, f"download failed: {err}")
+                  if PERMANENT.search(err):
+                      mark_dead(st, a, err)
                   failed.append(a)
                   continue
               why = vet_file(dest, meta.get("title") or "", meta.get("channel") or meta.get("uploader") or "")
@@ -580,7 +634,8 @@ def step_clips(st: dict, tick=lambda: None, limit: int = 0) -> dict:
     if done:
         record_status(done)
     st["clips_summary"] = {"at": datetime.now(IST).strftime("%Y-%m-%d %H:%M IST"), "needed_missing": len(needs),
-                           "uploaded_now": len(done), "failed_now": len(failed), "search_titles": len(search_slugs),
+                           "uploaded_now": len(done), "failed_now": len(failed), "dead_skipped": dead_skipped,
+                           "search_titles": len(search_slugs),
                            "search_uploaded": searched}
     save_state(st)
     return st["clips_summary"]

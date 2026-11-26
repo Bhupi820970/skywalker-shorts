@@ -48,7 +48,7 @@ Run it on ONE computer only. Two boxes would download and commit the same clips 
 | File | Purpose |
 |---|---|
 | `box/env.sh` | Shared settings for both loop scripts, on Linux or macOS. It reads `box.env` as plain `KEY=value` lines (parsed, never executed) from the box home, or from `~/.config/skywalker/box.env`. The box home defaults to the folder that holds the repo clone. |
-| `box/box.env.example` | Template for `box.env`: the gh login folder, the browser profile for yt-dlp cookies, and deno. It holds no secrets. |
+| `box/box.env.example` | Template for `box.env`: the gh login folder, the browser profile with the YouTube browser login for yt-dlp, and deno. It holds no secrets. |
 | `box/setup_box.sh` | One-time setup: checks the tools, creates a venv in the box home, installs `box/requirements-box.txt`, and copies `box.env`. |
 | `box/requirements-box.txt` | Python packages for the box. Rendering uses `requirements.txt` on GitHub. |
 | `box/sky_oauth.py` | Gets a new YouTube refresh token for the Skywalker channel and stores `SKY_YT_CLIENT_ID`, `SKY_YT_CLIENT_SECRET` and `SKY_YT_REFRESH_TOKEN` as GitHub secrets. Values go to `gh secret set` over stdin and are never printed. Usage: `python3 box/sky_oauth.py url`, then `python3 box/sky_oauth.py exchange '<localhost URL>'`. It needs the Google "Desktop app" OAuth client JSON at `~/.config/skywalker/sky_oauth_client.json` (or `SKY_OAUTH_CLIENT`). Never commit that JSON. |
@@ -121,12 +121,25 @@ Repo variables: `SKY_AUTO_PUBLISH`, `SKY_DIALOGUE_EDIT`.
 
 ## 6. Known issues (2026-11-26)
 
-- **Clip fetching mostly failing.** At 20:48 IST: 66 clips needed, 65 failed, 0 uploaded.
-  - Causes seen in the log:
-    - the requested YouTube videos are private or removed ("no metadata");
-    - yt-dlp download failures for some anime titles;
-    - Gemini logo-vet timeouts.
-  - Renders keep using backup stock. The fix is fresher requests from `clips.yml` and `refill.yml`, and a working logged-in browser profile for yt-dlp.
+- **Clip fetching (fixed on 2026-11-26).** At 20:48 IST, 65 of 66 needed clips failed. The YouTube login and bot check were NOT the cause: the browser login worked, and downloads succeeded. There were two real causes.
+  1. **Wrong format pick plus a strict bitrate check.** The downloader preferred VP9 streams, about 1000 kbps at 1080p. The quality gate was tuned for H.264 (1300 kbps needed), so it threw away 48 good official 1080p clips in one cycle, even though 2500–3600 kbps H.264 1080p was available.
+     - Fix: pick the highest resolution, then H.264, then the highest bitrate.
+     - The bitrate gate now depends on the codec (VP9 needs 0.65×, AV1 0.55×, HEVC 0.7× of H.264).
+     - Tested on a clip that was rejected before: it now downloads at 1920x1080 H.264, 2496 kbps, and passes.
+  2. **Dead original links.** About 59 of the needed clips point at Crunchyroll uploads, which burn in a logo and subtitles, so our no-logo rule always skips them. A few others were private or removed. They were retried every cycle and counted as fresh failures.
+     - Fix: such clips are marked dead for 14 days (`dead_assets` in the box `state.json`), and the box only searches for another official clip of the title.
+     - Download errors are now logged with a short reason.
+     - YouTube search uses 20 results per query (was 10), with a pause between searches and between requests so the IP isn't throttled.
+- **Clip pool rule.** `refill.yml` now runs every 2 h. It asks for new titles as soon as fresh, unposted clips drop to **50 or below** (target about **100**; settings `REFILL_MIN_CLIPS` and `REFILL_TARGET_CLIPS`), on top of the old 7-days-of-slots rule.
+  - The box loop (every 5 min) fetches the requests.
+  - Errors are retried up to 3 times per clip per day.
+  - The watchdog restarts a dead loop every 10 min.
+- **Anime titles that only Crunchyroll uploads** can't be used under the no-logo rule. The refill swaps in titles from logo-free official channels (Netflix, Netflix Anime, TOHO animation, Aniplex USA, GKIDS, publishers).
+- **What a new box needs for YouTube:**
+  - a Chrome/Chromium profile signed in to YouTube (any normal account) and set in `box.env` as `SKY_YTDLP_BROWSER=chrome:<profile folder>`. yt-dlp reads it in place, and nothing from it is ever copied, logged or committed;
+  - `deno` (yt-dlp needs it for 1080p+ formats);
+  - an up-to-date yt-dlp: run `python3 -m pip install -U yt-dlp` weekly;
+  - a home or office internet connection (data-centre IPs get bot-checked).
 - **Music is fine:** all 377 library tracks are on the `music` release.
 - **Buffer limit:** the Buffer Free plan allows only **2 YouTube Shorts per 24 h**. Direct YouTube upload (`SKY_YT_*` secrets) avoids that limit. If uploads fail with an auth error, re-run `box/sky_oauth.py`.
 - **Render default path:** `pipeline.py` defaults `SKY_ROOT` to an old fixed path. Set `SKY_ROOT` when you render locally (`scripts/local_render.sh`).

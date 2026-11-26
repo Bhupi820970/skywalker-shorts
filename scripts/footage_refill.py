@@ -35,6 +35,10 @@ REQ_OUT = "config/refill_requests.json"
 STATUS_OUT = "config/refill_status.json"
 DAYS = int(os.environ.get("REFILL_DAYS", "7"))
 BACKUP_TOPICS = int(os.environ.get("REFILL_BACKUP_TOPICS", "10"))
+# Clip pool rule (BiBi 26 Nov): refill as soon as fresh usable clips drop to REFILL_MIN_CLIPS (50) or
+# below, and ask for enough titles to get back to ~REFILL_TARGET_CLIPS (100).
+MIN_CLIPS = int(os.environ.get("REFILL_MIN_CLIPS", "50"))
+TARGET_CLIPS = int(os.environ.get("REFILL_TARGET_CLIPS", "100"))
 CLIPS_PER_VIDEO = 2          # render merges same-topic clips; QA wants >=18 s unique shots
 MAX_TITLES = 12
 _SCENE = re.compile(r"^(?P<slug>[a-z0-9]+)_scene(?P<n>\d+)_h264\.mp4$")
@@ -377,9 +381,12 @@ def build_plan(root: Path, assets: set[str] | None, *, force: bool = False, max_
     need = threshold()
     queue = upcoming_queue(root, now=now)
     starving = sorted({_item_slug(it) for it in queue if _item_slug(it) and not inv.get(_item_slug(it).replace("-", ""))})
-    deficit = max(0, need - have)
+    fresh_n = sum(inv.values())
+    clip_deficit = max(0, TARGET_CLIPS - fresh_n) if fresh_n <= MIN_CLIPS else 0
+    deficit = max(0, need - have, -(-clip_deficit // CLIPS_PER_VIDEO))
     status = {"at": now.strftime("%Y-%m-%d %H:%M IST"), "fresh_clips": sum(inv.values()),
               "fresh_videos": have, "threshold_videos": need, "deficit_videos": deficit,
+              "min_clips": MIN_CLIPS, "target_clips": TARGET_CLIPS, "deficit_clips": clip_deficit,
               "days": DAYS, "backup_topics": BACKUP_TOPICS, "release_known": assets is not None,
               "queue_items_next_days": len(queue), "queue_topics_without_fresh_clips": starving[:40],
               "inventory": dict(sorted(inv.items(), key=lambda kv: -kv[1])), "requests": [], "source": "none"}

@@ -60,6 +60,7 @@ def test_gemini_429_falls_back_to_seeds(tmp_path, monkeypatch):
 def test_enough_footage_requests_nothing(tmp_path, monkeypatch):
     root = _root(tmp_path, [])
     monkeypatch.setattr(fr, "threshold", lambda *a, **k: 2)
+    monkeypatch.setattr(fr, "MIN_CLIPS", 4)   # clip-pool rule off for this video-rule test
     assets = {f"t{i}_scene{j}_h264.mp4" for i in range(3) for j in range(1, 3)}
     st = fr.build_plan(root, assets, use_gemini=False)
     assert st["deficit_videos"] == 0 and "doc" not in st
@@ -126,3 +127,21 @@ def test_refill_workflow_is_isolated_from_renders():
     y = (ROOT / ".github" / "workflows" / "refill.yml").read_text()
     assert "group: footage-refill" in y and "cancel-in-progress: false" in y
     assert "push:" not in y and "render" not in y.split("jobs:")[1].split("Summary")[0].replace("renders", "")
+
+
+
+def test_clip_pool_refills_at_50_or_below(tmp_path, monkeypatch):
+    root = _root(tmp_path, [])
+    monkeypatch.setattr(fr, "threshold", lambda *a, **k: 2)          # video rule satisfied
+    assets = {f"t{i}_scene{j}_h264.mp4" for i in range(25) for j in range(1, 3)}   # 50 fresh clips
+    st = fr.build_plan(root, assets, use_gemini=False)
+    assert st["fresh_clips"] == 50 and st["deficit_clips"] == 50
+    assert st["deficit_videos"] == 25 and st["requests"]
+
+
+def test_clip_pool_above_50_needs_nothing(tmp_path, monkeypatch):
+    root = _root(tmp_path, [])
+    monkeypatch.setattr(fr, "threshold", lambda *a, **k: 2)
+    assets = {f"t{i}_scene{j}_h264.mp4" for i in range(17) for j in range(1, 4)}   # 51 fresh clips
+    st = fr.build_plan(root, assets, use_gemini=False)
+    assert st["fresh_clips"] == 51 and st["deficit_clips"] == 0 and st["deficit_videos"] == 0

@@ -72,3 +72,31 @@ def test_library_has_no_banned_or_blocked_songs_in_picker():
         blob = (t.get("title", "") + " " + t.get("artist", "")).lower()
         if "goofy ahh" in blob or "godless" in blob or "187_notor1ous" in blob:
             assert music_lib.is_denied_track(t)
+
+
+def test_download_error_is_short_and_pathless():
+    import box_service as b
+    why = b.download_error("[youtube] x: Downloading\nERROR: [youtube] abcdefghijk: Video unavailable. This video is private")
+    assert why == "Video unavailable. This video is private"
+    assert "<path>" in b.download_error("ERROR: unable to open /home/someone/x/y.mp4")
+
+
+def test_permanent_reasons_mark_asset_dead_for_two_weeks(monkeypatch):
+    import box_service as b
+    st = {}
+    monkeypatch.setattr(b, "today", lambda: "2026-11-26")
+    assert b.PERMANENT.search("logo/subtitle-burn channel: Crunchyroll")
+    assert not b.PERMANENT.search("HTTP Error 429: Too Many Requests")
+    b.mark_dead(st, "x_scene1_h264.mp4", "logo/subtitle-burn channel: Crunchyroll")
+    assert b.is_dead(st, "x_scene1_h264.mp4")
+    monkeypatch.setattr(b, "today", lambda: "2026-12-11")
+    assert not b.is_dead(st, "x_scene1_h264.mp4")
+
+
+def test_quality_gate_is_codec_aware():
+    import clip_fetch as c
+    vp9 = {"w": 1920, "h": 1080, "codec": "vp9", "kbps": 968, "dur": 60}
+    h264_low = {"w": 1920, "h": 1080, "codec": "h264", "kbps": 968, "dur": 60}
+    assert c.quality_ok(vp9) is None
+    assert "low bitrate" in c.quality_ok(h264_low)
+    assert "vcodec:h264" in c.SORT and "tbr" in c.SORT
