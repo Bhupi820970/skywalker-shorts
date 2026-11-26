@@ -786,6 +786,18 @@
         "clip:johnwick_scene1_h264.mp4",
         "sha:42420354bb45c8256589debb2e9f41469cd6d413db60b387252f2cdb377d8491"
       ]
+    },
+    {
+      "id": "20261126-2030-bluegiant",
+      "at": "2026-11-26 22:39 IST",
+      "slot": "2026-11-26T20:30:00+05:30",
+      "title": "Maximus Accepts His Final Fate #gladiator #maximus #history",
+      "youtube_url": "https://youtube.com/shorts/BT6bHOm3CXQ",
+      "keys": [
+        "asset:render-20261126-2030-bluegiant.mp4",
+        "clip:gladiatormaximus_scene2_h264.mp4",
+        "sha:6cf233e43e8727ff184a9f85f87b578aaa691060d885258005cd659809669b08"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."

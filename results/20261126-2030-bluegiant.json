@@ -465,5 +465,17 @@
       "error": "pipeline/QA failed (exit 1): auto_qc: 2 near-duplicate shot pair(s) in the output",
       "at": "2026-11-26 21:51 IST"
     }
-  ]
+  ],
+  "asset_sha256": "6cf233e43e8727ff184a9f85f87b578aaa691060d885258005cd659809669b08",
+  "publish_via": "youtube",
+  "yt_video_id": "BT6bHOm3CXQ",
+  "yt_uploaded_at": "2026-11-26 22:39 IST",
+  "yt_privacy": "public",
+  "yt_publish_at": "2026-11-26T22:39:37.659699+05:30",
+  "yt_status": "public",
+  "youtube_url": "https://youtube.com/shorts/BT6bHOm3CXQ",
+  "buffer_post_id": "yt:BT6bHOm3CXQ",
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-26T17:09:37.000Z",
+  "buffer_posted_at": "2026-11-26T17:09:37.000Z"
 }
