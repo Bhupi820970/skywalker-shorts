@@ -2865,6 +2865,33 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "salaardeva",
+      "pillar": "south",
+      "words": "SALAAR",
+      "hook": "Why Deva is the ultimate weapon",
+      "title": "Why Deva is the ultimate weapon 💀 | Deva enters | #edit",
+      "description": "Why Deva is the ultimate weapon. From official Salaar clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #salaar #prabhas #southindia",
+      "tags": [
+        "salaar",
+        "prabhas",
+        "southindia",
+        "action",
+        "mass",
+        "edit",
+        "deva"
+      ],
+      "market": "IN",
+      "source_url": "https://www.youtube.com/watch?v=UJTRunuVXhM",
+      "scene_assets": [
+        "salaardeva_scene1_h264.mp4",
+        "salaardeva_scene2_h264.mp4",
+        "salaardeva_scene3_h264.mp4",
+        "salaardeva_scene4_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
