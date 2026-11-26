@@ -1,44 +1,43 @@
 {
- "generated_at": "2026-11-26 22:40 IST",
+ "generated_at": "2026-11-27 01:37 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 167,
+ "release_scene_clips": 177,
  "max_clips_per_title": 3,
  "requests": [
   {
-   "slug": "johnwick",
-   "slot": "2026-11-26T18:30:00+05:30",
+   "slug": "warmovie",
+   "slot": "2026-11-26T22:30:00+05:30",
    "for": "slot",
-   "item_id": "20261126-1830-johnwick",
-   "pillar": "hollywood",
-   "words": "JOHN WICK",
+   "item_id": "20261126-2230-warmovie",
+   "pillar": "bollywood",
+   "words": "WAR",
    "scene_types": [
     "fight",
     "emotional",
     "aura"
    ],
    "search_queries": [
-    "JOHN WICK fight scene official clip",
-    "JOHN WICK best scene official clip",
-    "JOHN WICK official clip"
+    "WAR fight scene official clip",
+    "WAR best scene official clip",
+    "WAR official clip"
    ],
    "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=01nJH1Mek6I",
+   "source_url": "https://www.youtube.com/watch?v=-RuSqMYcQK0",
    "missing_assets": [],
-   "on_release": [
-    "johnwick_scene1_h264.mp4"
-   ],
-   "hook": "The nightclub did not survive him",
-   "title": "The nightclub did not survive him | John Wick | #edit",
+   "on_release": [],
+   "hook": "Kabir entered and the fight was already over",
+   "title": "Kabir entered and the fight was already over | War | #edit",
    "tags": [
-    "johnwick",
-    "keanureeves",
-    "action",
-    "hollywood",
-    "johnwickedit",
-    "movieclips"
+    "war",
+    "hrithikroshan",
+    "tigerseghal",
+    "yrf",
+    "bollywood",
+    "waredit",
+    "action"
    ],
-   "market": "US/UK"
+   "market": "IN"
   },
   {
    "slug": "taarezameenpar",
@@ -60,9 +59,7 @@
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=1oiRkOT4Z_4",
    "missing_assets": [],
-   "on_release": [
-    "taarezameenpar_scene4_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "The painting said what he could not",
    "title": "The painting said what he could not | Taare Zameen Par | #edit",
    "tags": [
@@ -1471,6 +1468,41 @@
    "market": "US/UK"
   },
   {
+   "slug": "shahrukhkhan",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-shahrukhkhan",
+   "pillar": "bollywood",
+   "words": "JAWAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "JAWAN fight scene official clip",
+    "JAWAN best scene official clip",
+    "JAWAN official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=yjOEfazi9Mc",
+   "missing_assets": [],
+   "on_release": [
+    "shahrukhkhan_scene1_h264.mp4"
+   ],
+   "hook": "Why did the entire room freeze here?",
+   "title": "Why did the entire room freeze here? | Jawan | #edit",
+   "tags": [
+    "jawan",
+    "srk",
+    "shahrukhkhan",
+    "bollywood",
+    "massentry",
+    "cinemaedit"
+   ],
+   "market": "IN"
+  },
+  {
    "slug": "shangrilafrontier",
    "slot": "9999",
    "for": "backup_pool",
@@ -1660,7 +1692,10 @@
    "missing_assets": [
     "spyxfamilycodewhite_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "spyxfamilycodewhite_scene1_h264.mp4",
+    "spyxfamilycodewhite_scene2_h264.mp4"
+   ],
    "hook": "Loid almost blew his cover",
    "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
    "tags": [
@@ -1905,44 +1940,6 @@
     "shorts",
     "trending",
     "sakura"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "witchhatatelier",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-witchhatatelier",
-   "pillar": "anime",
-   "words": "WITCH HAT ATELIER",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "WITCH HAT ATELIER fight scene official clip",
-    "WITCH HAT ATELIER best scene official clip",
-    "WITCH HAT ATELIER official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "TVアニメ「とんがり帽子のアトリエ」公式 and 2 more"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Coco drew her first spell",
-   "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
-   "tags": [
-    "witchhatatelier",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "coco"
    ],
    "market": "US/UK"
   },
