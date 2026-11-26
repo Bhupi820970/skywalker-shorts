@@ -1789,6 +1789,35 @@
       ],
       "added_by": "footage_refill",
       "category": "movie"
+    },
+    {
+      "id": "backup-zootopia",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=Kw3935PH01E",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/zootopia_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Nick never trusted anyone",
+      "words": "ZOOTOPIA",
+      "title": "Why Nick never trusted anyone | Zootopia | #edit",
+      "description": "Why Nick never trusted anyone. From official Zootopia clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #zootopia #anime #edit",
+      "tags": [
+        "zootopia",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "zootopia_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "zootopia_scene1_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "cartoon"
     }
   ]
 }

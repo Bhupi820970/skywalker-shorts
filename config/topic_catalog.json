@@ -2531,6 +2531,28 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "category": "movie"
+    },
+    {
+      "slug": "zootopia",
+      "pillar": "anime",
+      "words": "ZOOTOPIA",
+      "hook": "Why Nick never trusted anyone",
+      "title": "Why Nick never trusted anyone | Zootopia | #edit",
+      "description": "Why Nick never trusted anyone. From official Zootopia clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #zootopia #anime #edit",
+      "tags": [
+        "zootopia",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=Kw3935PH01E",
+      "scene_assets": [
+        "zootopia_scene1_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "category": "cartoon"
     }
   ]
 }

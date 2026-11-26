@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T07:27:17Z",
-  "last_upload_at": "2026-11-26T07:27:17Z"
+  "last_run_at": "2026-11-26T07:32:34Z",
+  "last_upload_at": "2026-11-26T07:32:34Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -51,6 +51,7 @@
   "yt:JKvNlvV6ZW4",
   "yt:K-pDN77Vkgg",
   "yt:KaB7tTJ2T5o",
+  "yt:Kw3935PH01E",
   "yt:Lbmsv1tcgf8",
   "yt:LmWrEpYpUec",
   "yt:LtAkyPyUhgY",
@@ -1625,6 +1626,17 @@
    "kbps": 6240,
    "by": "box",
    "at": "2026-11-26T07:27:17Z"
+  },
+  {
+   "asset": "zootopia_scene1_h264.mp4",
+   "id": "yt:Kw3935PH01E",
+   "title": "Shakira - Zoo (From \"Zootopia 2\") Official Music Video",
+   "channel": "DisneyMusicVEVO",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3063,
+   "by": "box",
+   "at": "2026-11-26T07:32:34Z"
   }
  ],
  "github": {
