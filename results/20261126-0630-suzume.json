@@ -510,5 +510,6 @@
   "buffer_post_id": "yt:RJusXGBmh98",
   "buffer_status": "sent",
   "buffer_due_at": "2026-11-26T00:49:31.000Z",
-  "buffer_posted_at": "2026-11-26T00:49:31.000Z"
+  "buffer_posted_at": "2026-11-26T00:49:31.000Z",
+  "yt_checked_public": true
 }
