@@ -1818,6 +1818,39 @@
       ],
       "added_by": "footage_refill",
       "category": "cartoon"
+    },
+    {
+      "id": "backup-strangerthings",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=ermJ-iPg9xA",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene3_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Vecna wanted Max",
+      "words": "STRANGER THINGS",
+      "title": "Why Vecna wanted Max | Stranger Things | #edit",
+      "description": "Why Vecna wanted Max. From official Stranger Things clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #strangerthings #anime #edit",
+      "tags": [
+        "strangerthings",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "strangerthings_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "strangerthings_scene1_h264.mp4",
+        "strangerthings_scene2_h264.mp4",
+        "strangerthings_scene3_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "tv"
     }
   ]
 }

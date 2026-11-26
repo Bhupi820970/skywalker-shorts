@@ -2553,6 +2553,30 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "category": "cartoon"
+    },
+    {
+      "slug": "strangerthings",
+      "pillar": "anime",
+      "words": "STRANGER THINGS",
+      "hook": "Why Vecna wanted Max",
+      "title": "Why Vecna wanted Max | Stranger Things | #edit",
+      "description": "Why Vecna wanted Max. From official Stranger Things clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #strangerthings #anime #edit",
+      "tags": [
+        "strangerthings",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=ermJ-iPg9xA",
+      "scene_assets": [
+        "strangerthings_scene1_h264.mp4",
+        "strangerthings_scene2_h264.mp4",
+        "strangerthings_scene3_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "category": "tv"
     }
   ]
 }
