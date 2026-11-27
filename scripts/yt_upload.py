@@ -470,6 +470,11 @@ def main(argv=None):
             print(f"{iid}: slot already covered by another result; not posting")
             continue
         why = bp.repeat_of(r, idx, hist=hist)
+        if why and replacing:
+            # the repeat is this item's own earlier upload (the one being replaced / its private predecessor)
+            own = [x for x in (r.get("yt_video_id"), r.get("yt_prev_video_id")) if x]
+            if any(x in str(why) for x in own):
+                why = None
         if why:
             bp.block_repeat(p, r, why, now, changed)
             idx[:] = [e for e in idx if e["id"] != iid]
