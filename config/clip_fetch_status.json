@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T02:32:39Z",
-  "last_upload_at": "2026-11-27T02:32:34Z"
+  "last_run_at": "2026-11-27T02:46:02Z",
+  "last_upload_at": "2026-11-27T02:46:02Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -155,6 +155,7 @@
   "yt:ealC2TsX6es",
   "yt:eifvzpMt_lE",
   "yt:ermJ-iPg9xA",
+  "yt:esY9sJYQwvM",
   "yt:exdsbFvhocI",
   "yt:fPX0C-g5xpU",
   "yt:fS8SjwHwJyU",
@@ -2589,6 +2590,17 @@
    "kbps": 1350,
    "by": "box",
    "at": "2026-11-27T02:32:34Z"
+  },
+  {
+   "asset": "dbsuperhero_scene1_h264.mp4",
+   "id": "yt:esY9sJYQwvM",
+   "title": "Dragon Ball Super: Beerus | Tráiler oficial | Netflix",
+   "channel": "Netflix Latinoamérica",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2993,
+   "by": "box",
+   "at": "2026-11-27T02:46:02Z"
   }
  ],
  "github": {
