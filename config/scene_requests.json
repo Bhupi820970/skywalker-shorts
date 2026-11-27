@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-27 19:57 IST",
+ "generated_at": "2026-11-28 00:38 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 227,
+ "release_scene_clips": 242,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -68,7 +68,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=pl4a2eQUgpc",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "haikyuudumpster_scene1_h264.mp4"
+   ],
    "hook": "The rematch everyone waited for",
    "title": "The rematch everyone waited for | Haikyu | #edit",
    "tags": [
@@ -83,43 +85,42 @@
    "market": "US/UK"
   },
   {
-   "slug": "princessmononoke",
-   "slot": "2026-11-29T13:30:00+05:30",
+   "slug": "jjk0",
+   "slot": "2026-11-29T22:30:00+05:30",
    "for": "slot",
-   "item_id": "20261129-1330-princessmononoke",
-   "pillar": "anime",
-   "words": "PRINCESS MONONOKE",
+   "item_id": "20261129-2230-jjk0",
+   "pillar": "romance",
+   "words": "JUJUTSU KAISEN 0",
    "scene_types": [
-    "fight",
+    "romantic",
     "emotional",
-    "aura"
+    "confession"
    ],
    "search_queries": [
-    "PRINCESS MONONOKE fight scene official clip",
-    "PRINCESS MONONOKE best scene official clip",
-    "PRINCESS MONONOKE official clip"
+    "JUJUTSU KAISEN 0 romantic scene",
+    "JUJUTSU KAISEN 0 emotional scene",
+    "JUJUTSU KAISEN 0 official clip"
    ],
    "official_channels": [
+    "Crunchyroll",
     "Crunchyroll Store Australia",
-    "GKIDS Films",
-    "Netflix Anime"
+    "Prime Video India"
    ],
-   "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
+   "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
    "missing_assets": [],
    "on_release": [
-    "princessmononoke_scene1_h264.mp4"
+    "jjk0_scene2_h264.mp4"
    ],
-   "hook": "San would die for the forest",
-   "title": "San would die for the forest | Princess Mononoke | #edit",
+   "hook": "Yuta only fights for her",
+   "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
    "tags": [
-    "princessmononoke",
+    "jjk0",
     "anime",
     "animeedit",
     "edit",
     "shorts",
     "trending",
-    "ashitaka",
-    "san"
+    "yuta"
    ],
    "market": "US/UK"
   },
@@ -641,48 +642,6 @@
     "shorts",
     "trending",
     "gabimaru"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "jjk0",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-jjk0",
-   "pillar": "anime",
-   "words": "JUJUTSU KAISEN 0",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "JUJUTSU KAISEN 0 fight scene official clip",
-    "JUJUTSU KAISEN 0 best scene official clip",
-    "JUJUTSU KAISEN 0 official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll Store Australia",
-    "Prime Video India"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
-   "missing_assets": [
-    "jjk0_scene1_h264.mp4"
-   ],
-   "on_release": [
-    "jjk0_scene2_h264.mp4"
-   ],
-   "hook": "Yuta only fights for her",
-   "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
-   "tags": [
-    "jjk0",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "yuta"
    ],
    "market": "US/UK"
   },
@@ -1553,48 +1512,6 @@
     "vinland",
     "anime",
     "ihavenoenemies"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "yourname",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-yourname",
-   "pillar": "anime",
-   "words": "YOUR NAME",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "YOUR NAME fight scene official clip",
-    "YOUR NAME best scene official clip",
-    "YOUR NAME official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll India",
-    "GKIDS Films",
-    "TOHO animation",
-    "TOHO",
-    "CoMix Wave Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
-   "missing_assets": [],
-   "on_release": [
-    "yourname_scene2_h264.mp4"
-   ],
-   "hook": "He forgot her name again",
-   "title": "He forgot her name again | Your Name | #edit",
-   "tags": [
-    "yourname",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "taki"
    ],
    "market": "US/UK"
   },

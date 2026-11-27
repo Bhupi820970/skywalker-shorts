@@ -1,34 +1,29 @@
 {
-  "at": "2026-11-27 19:57 IST",
-  "slots_checked": 9,
-  "ready": [
-    {
-      "slot": "2026-11-27T22:30:00+05:30",
-      "id": "20261127-2230-arcane2",
-      "how": "done"
-    }
-  ],
+  "at": "2026-11-28 00:38 IST",
+  "slots_checked": 8,
+  "ready": [],
   "short": [
-    "2026-11-27T18:30:00+05:30",
-    "2026-11-27T20:30:00+05:30",
     "2026-11-28T06:30:00+05:30",
     "2026-11-28T09:00:00+05:30",
     "2026-11-28T11:30:00+05:30",
     "2026-11-28T13:30:00+05:30",
     "2026-11-28T16:00:00+05:30",
-    "2026-11-28T18:30:00+05:30"
+    "2026-11-28T18:30:00+05:30",
+    "2026-11-28T20:30:00+05:30",
+    "2026-11-28T22:30:00+05:30"
   ],
   "need_render": [
-    "20261127-2030-fighther",
     "20261128-0630-rrr",
     "20261128-0900-dragonballdaima",
     "20261128-1130-gangsofwasseypur",
     "20261128-1330-weatheringwithyou",
     "20261128-1600-vikram",
-    "20261128-1830-cyberpunkedgerunners"
+    "20261128-1830-cyberpunkedgerunners",
+    "20261128-2030-leomovie",
+    "20261128-2230-haikyuudumpster"
   ],
-  "backup_pool_size": 67,
-  "backup_pool_preuploaded": 67,
+  "backup_pool_size": 69,
+  "backup_pool_preuploaded": 69,
   "spare_done": [
     "stock-missionimpossible-01",
     "20261114-2030-missionimpossible",
