@@ -2305,7 +2305,8 @@
       "pillar": "movie",
       "source_url": "https://www.youtube.com/watch?v=bV1Unml2PuM",
       "fallback_mp4": [
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune2_scene1_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune2_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune2_scene2_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "Paul Atreides became something else",
@@ -2326,7 +2327,8 @@
       "fallback_asset": "dune2_scene1_h264.mp4",
       "content_kind": "best scene",
       "scene_assets": [
-        "dune2_scene1_h264.mp4"
+        "dune2_scene1_h264.mp4",
+        "dune2_scene2_h264.mp4"
       ],
       "added_by": "footage_refill",
       "category": "movie"

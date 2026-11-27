@@ -142,7 +142,8 @@
       "fallback_asset": "dune2_trailer_h264.mp4",
       "category": "movie",
       "scene_assets": [
-        "dune2_scene1_h264.mp4"
+        "dune2_scene1_h264.mp4",
+        "dune2_scene2_h264.mp4"
       ],
       "content_kind": "best scene"
     },
