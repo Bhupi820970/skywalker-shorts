@@ -601,6 +601,12 @@
    "state": "used",
    "video": "20261113-2230-superman"
   },
+  "thebatman_scene1_h264.mp4": {
+   "at": "2026-11-27T06:48:15+00:00",
+   "owner": "45948477078-1-20261127-1600-don2",
+   "platform": "render",
+   "state": "reserved"
+  },
   "thebatman_scene2_h264.mp4": {
    "at": "2026-11-26T22:57:55+00:00",
    "owner": "45901085936-1-stock-thebatman-02",
