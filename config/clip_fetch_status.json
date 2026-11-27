@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T17:13:09Z",
-  "last_upload_at": "2026-11-27T17:13:09Z"
+  "last_run_at": "2026-11-27T17:15:11Z",
+  "last_upload_at": "2026-11-27T17:15:11Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -48,6 +48,7 @@
   "yt:A1dnxXrpN-o",
   "yt:ARIlzBXdzvo",
   "yt:AXbeD92Ty50",
+  "yt:AhNYcpN1pEU",
   "yt:B0pIISs-o8w",
   "yt:B479Wc72Bsc",
   "yt:BEO2D_hhXDs",
@@ -164,6 +165,7 @@
   "yt:_grmduuECm4",
   "yt:_lmn16npMXw",
   "yt:_rs3OAp2SFM",
+  "yt:aEBp66VU3Ic",
   "yt:aLBVDoD7beU",
   "yt:aeLkBvyiRfg",
   "yt:afE7WD2raMw",
@@ -181,6 +183,7 @@
   "yt:dBof63VAfzU",
   "yt:dhzjwuWCWu4",
   "yt:dtJj0So2yq4",
+  "yt:dyDrodeIA7o",
   "yt:e5ctO_lhS8Y",
   "yt:eVUpfzISKxk",
   "yt:ealC2TsX6es",
@@ -231,6 +234,7 @@
   "yt:pcuH1H5-loY",
   "yt:pe14KCakHJs",
   "yt:ppOVLojanC8",
+  "yt:pyu-1cJiDls",
   "yt:r9oI7Kvqwsg",
   "yt:rFKSrOALWdw",
   "yt:rH8FCwzOdpI",
@@ -3153,6 +3157,50 @@
    "kbps": 1953,
    "by": "box",
    "at": "2026-11-27T17:13:09Z"
+  },
+  {
+   "asset": "dandadanevil_scene6_h264.mp4",
+   "id": "yt:pyu-1cJiDls",
+   "title": "Play Ball! | DAN DA DAN | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1397,
+   "by": "box",
+   "at": "2026-11-27T17:15:11Z"
+  },
+  {
+   "asset": "dandadanevil_scene7_h264.mp4",
+   "id": "yt:dyDrodeIA7o",
+   "title": "Abertura oficial de Dan Da Dan | Netflix Brasil",
+   "channel": "Netflix Brasil",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2901,
+   "by": "box",
+   "at": "2026-11-27T17:15:11Z"
+  },
+  {
+   "asset": "dandadanevil_scene8_h264.mp4",
+   "id": "yt:AhNYcpN1pEU",
+   "title": "DAN DA DAN Season 2 ED | Doukashiteru by WurtS | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1844,
+   "by": "box",
+   "at": "2026-11-27T17:15:11Z"
+  },
+  {
+   "asset": "dandadanevil_scene9_h264.mp4",
+   "id": "yt:aEBp66VU3Ic",
+   "title": "DAN DA DAN ED | TAIDADA by ZUTOMAYO | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1390,
+   "by": "box",
+   "at": "2026-11-27T17:15:11Z"
   }
  ],
  "github": {
