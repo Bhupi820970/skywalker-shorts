@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T07:27:36Z",
-  "last_upload_at": "2026-11-27T06:35:09Z"
+  "last_run_at": "2026-11-27T07:49:53Z",
+  "last_upload_at": "2026-11-27T07:49:53Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -75,6 +75,7 @@
   "yt:HtkYBLLx0Mc",
   "yt:Hv9scUWXzMg",
   "yt:HyFzn8JjmpA",
+  "yt:IDxFrIfaUbE",
   "yt:IXbnzEHZDPg",
   "yt:IkNsD9sSYzU",
   "yt:J2Bh68GTUOU",
@@ -93,6 +94,7 @@
   "yt:LeIskY_MDj0",
   "yt:LmWrEpYpUec",
   "yt:LtAkyPyUhgY",
+  "yt:M6VoEJdoHi8",
   "yt:MYY4fGzvAJY",
   "yt:MeIk9ap1u_E",
   "yt:MgVkBzXOc8Q",
@@ -100,6 +102,7 @@
   "yt:N-xHcvug3WI",
   "yt:NakTu_VZxJ0",
   "yt:OJixXuR7Xcc",
+  "yt:OifiVCnFKzM",
   "yt:OoEU8GnGlcU",
   "yt:OsIohljR4WY",
   "yt:P39n86v-T7w",
@@ -3021,6 +3024,39 @@
    "kbps": 2505,
    "by": "box",
    "at": "2026-11-27T06:35:09Z"
+  },
+  {
+   "asset": "cyberpunkedgerunners_scene6_h264.mp4",
+   "id": "yt:IDxFrIfaUbE",
+   "title": "Cyberpunk: Edgerunners 2 | Cyberpsycho | Sneak Peek | Netflix",
+   "channel": "Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1835,
+   "by": "box",
+   "at": "2026-11-27T07:49:53Z"
+  },
+  {
+   "asset": "cyberpunkedgerunners_scene7_h264.mp4",
+   "id": "yt:M6VoEJdoHi8",
+   "title": "David's Not All There | Cyberpunk: Edgerunners | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1515,
+   "by": "box",
+   "at": "2026-11-27T07:49:53Z"
+  },
+  {
+   "asset": "cyberpunkedgerunners_scene8_h264.mp4",
+   "id": "yt:OifiVCnFKzM",
+   "title": "Cyberpunk: Edgerunners | Opening Credits | Netflix",
+   "channel": "Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2463,
+   "by": "box",
+   "at": "2026-11-27T07:49:53Z"
   }
  ],
  "github": {

@@ -1313,7 +1313,10 @@
         "cyberpunkedgerunners_scene2_h264.mp4",
         "cyberpunkedgerunners_scene3_h264.mp4",
         "cyberpunkedgerunners_scene4_h264.mp4",
-        "cyberpunkedgerunners_scene5_h264.mp4"
+        "cyberpunkedgerunners_scene5_h264.mp4",
+        "cyberpunkedgerunners_scene6_h264.mp4",
+        "cyberpunkedgerunners_scene7_h264.mp4",
+        "cyberpunkedgerunners_scene8_h264.mp4"
       ],
       "fallback_asset": "cyberpunkedgerunners_trailer_h264.mp4",
       "content_kind": "best scene",
