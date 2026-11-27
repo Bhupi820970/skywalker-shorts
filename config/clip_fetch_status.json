@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T03:18:05Z",
-  "last_upload_at": "2026-11-27T03:18:05Z"
+  "last_run_at": "2026-11-27T03:21:24Z",
+  "last_upload_at": "2026-11-27T03:21:24Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -84,6 +84,7 @@
   "yt:LQ4EcIUTqj4",
   "yt:LZ1BhU8TZhA",
   "yt:Lbmsv1tcgf8",
+  "yt:LeIskY_MDj0",
   "yt:LmWrEpYpUec",
   "yt:LtAkyPyUhgY",
   "yt:MYY4fGzvAJY",
@@ -94,6 +95,7 @@
   "yt:NakTu_VZxJ0",
   "yt:OJixXuR7Xcc",
   "yt:OoEU8GnGlcU",
+  "yt:OsIohljR4WY",
   "yt:P39n86v-T7w",
   "yt:PDtrzr-LtIc",
   "yt:Pbu0f1JgzVw",
@@ -142,6 +144,7 @@
   "yt:Zq4zTcIM0yQ",
   "yt:_GFcWG0M-YM",
   "yt:_lmn16npMXw",
+  "yt:_rs3OAp2SFM",
   "yt:aLBVDoD7beU",
   "yt:aeLkBvyiRfg",
   "yt:afE7WD2raMw",
@@ -182,6 +185,7 @@
   "yt:j9EgOsPLRxc",
   "yt:jeQYEIQ6eHw",
   "yt:k8YiqM0Y-78",
+  "yt:kLzss5E20jM",
   "yt:kaMB6Rw8XzA",
   "yt:kcXgCtylzbA",
   "yt:l5ZiW3mCuE4",
@@ -2757,6 +2761,50 @@
    "kbps": 5643,
    "by": "box",
    "at": "2026-11-27T03:18:05Z"
+  },
+  {
+   "asset": "squidgame_scene1_h264.mp4",
+   "id": "yt:_rs3OAp2SFM",
+   "title": "It was all going well until... | Squid Game 2 | Netflix [ENG SUB]",
+   "channel": "Netflix K-Content",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1656,
+   "by": "box",
+   "at": "2026-11-27T03:21:24Z"
+  },
+  {
+   "asset": "squidgame_scene2_h264.mp4",
+   "id": "yt:kLzss5E20jM",
+   "title": "The MOST Dangerous Game Begins NOW 🔥 | Squid Game | Hindi Dub | Netflix India",
+   "channel": "Netflix India",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2048,
+   "by": "box",
+   "at": "2026-11-27T03:21:24Z"
+  },
+  {
+   "asset": "squidgame_scene3_h264.mp4",
+   "id": "yt:OsIohljR4WY",
+   "title": "Squid Game: Season 2 | You’re Invited | Netflix",
+   "channel": "Netflix",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 5606,
+   "by": "box",
+   "at": "2026-11-27T03:21:24Z"
+  },
+  {
+   "asset": "squidgame_scene4_h264.mp4",
+   "id": "yt:LeIskY_MDj0",
+   "title": "Hide & Seek Song Lyric Video | Squid Game: Season 3 | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1824,
+   "by": "box",
+   "at": "2026-11-27T03:21:24Z"
   }
  ],
  "github": {

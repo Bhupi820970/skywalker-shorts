@@ -2222,6 +2222,41 @@
       ],
       "added_by": "footage_refill",
       "category": "movie"
+    },
+    {
+      "id": "backup-squidgame",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=_rs3OAp2SFM",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene4_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Gi-hun went back in",
+      "words": "SQUID GAME",
+      "title": "Why Gi-hun went back in | Squid Game | #edit",
+      "description": "Why Gi-hun went back in. From official Squid Game clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #squidgame #anime #edit",
+      "tags": [
+        "squidgame",
+        "anime",
+        "edit",
+        "shorts"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "squidgame_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "squidgame_scene1_h264.mp4",
+        "squidgame_scene2_h264.mp4",
+        "squidgame_scene3_h264.mp4",
+        "squidgame_scene4_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "tv"
     }
   ]
 }
