@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T03:43:10Z",
-  "last_upload_at": "2026-11-27T03:43:10Z"
+  "last_run_at": "2026-11-27T05:10:01Z",
+  "last_upload_at": "2026-11-27T05:10:01Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -83,6 +83,7 @@
   "yt:KElCq5eCegE",
   "yt:KaB7tTJ2T5o",
   "yt:Kw3935PH01E",
+  "yt:L8-KC5YGw-o",
   "yt:LIRxNpQ8Hqg",
   "yt:LQ4EcIUTqj4",
   "yt:LZ1BhU8TZhA",
@@ -2937,6 +2938,17 @@
    "kbps": 2460,
    "by": "box",
    "at": "2026-11-27T03:43:10Z"
+  },
+  {
+   "asset": "oppenheimer_scene2_h264.mp4",
+   "id": "yt:L8-KC5YGw-o",
+   "title": "Oppenheimer | Opening Look",
+   "channel": "Universal Pictures Philippines",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1647,
+   "by": "box",
+   "at": "2026-11-27T05:10:01Z"
   }
  ],
  "github": {

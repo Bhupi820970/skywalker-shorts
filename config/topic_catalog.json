@@ -2010,7 +2010,8 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=MeIk9ap1u_E",
       "scene_assets": [
-        "oppenheimer_scene1_h264.mp4"
+        "oppenheimer_scene1_h264.mp4",
+        "oppenheimer_scene2_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
