@@ -1735,7 +1735,8 @@
       "pillar": "anime",
       "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
       "fallback_mp4": [
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/yourname_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/yourname_scene2_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "He forgot her name again",
@@ -1757,7 +1758,8 @@
       "fallback_asset": "yourname_scene1_h264.mp4",
       "content_kind": "best scene",
       "scene_assets": [
-        "yourname_scene1_h264.mp4"
+        "yourname_scene1_h264.mp4",
+        "yourname_scene2_h264.mp4"
       ],
       "category": "anime"
     },

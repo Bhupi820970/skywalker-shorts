@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T03:21:24Z",
-  "last_upload_at": "2026-11-27T03:21:24Z"
+  "last_run_at": "2026-11-27T03:22:03Z",
+  "last_upload_at": "2026-11-27T03:22:03Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -196,6 +196,7 @@
   "yt:nBks1vcJQvk",
   "yt:nzzkkwOoXSU",
   "yt:oL75W3ubBgQ",
+  "yt:oddK59XKKK0",
   "yt:ofRdPtkUmJ4",
   "yt:olEGtoYs_8A",
   "yt:ouKbrNiaPxo",
@@ -2805,6 +2806,17 @@
    "kbps": 1824,
    "by": "box",
    "at": "2026-11-27T03:21:24Z"
+  },
+  {
+   "asset": "yourname_scene2_h264.mp4",
+   "id": "yt:oddK59XKKK0",
+   "title": "Weathering With You [Official Clip, English Dub - GKIDS] - January 15",
+   "channel": "GKIDS Films",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1381,
+   "by": "box",
+   "at": "2026-11-27T03:22:03Z"
   }
  ],
  "github": {
