@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28 00:38 IST",
+ "generated_at": "2026-11-28 01:51 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 242,
@@ -322,6 +322,45 @@
     "animeedit",
     "anime",
     "football"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dandadan",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dandadan",
+   "pillar": "anime",
+   "words": "DAN DA DAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DAN DA DAN fight scene official clip",
+    "DAN DA DAN best scene official clip",
+    "DAN DA DAN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+   "missing_assets": [],
+   "on_release": [
+    "dandadan_scene3_h264.mp4"
+   ],
+   "hook": "Okarun was never ready for this",
+   "title": "Okarun was never ready for this | Dandadan | #edit",
+   "tags": [
+    "dandadan",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
    ],
    "market": "US/UK"
   },
