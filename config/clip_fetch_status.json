@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T17:20:49Z",
-  "last_upload_at": "2026-11-27T17:20:49Z"
+  "last_run_at": "2026-11-27T17:22:08Z",
+  "last_upload_at": "2026-11-27T17:22:08Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -208,6 +208,7 @@
   "yt:hQDyX9sOe04",
   "yt:hebYxhjgQL0",
   "yt:iAIBF2ngbWY",
+  "yt:iH_YJde1yps",
   "yt:idV4GQRflHM",
   "yt:igNyLmTc7Po",
   "yt:iiwOVqGtZj4",
@@ -263,6 +264,7 @@
   "yt:xpJWvpumgxs",
   "yt:yVvafJ0Skx0",
   "yt:yWBA876qftM",
+  "yt:yYAgBRO-aT8",
   "yt:yjOEfazi9Mc",
   "yt:zBrkG3aeWCc",
   "yt:zP7AGWiw8Uw",
@@ -3249,6 +3251,28 @@
    "kbps": 16302,
    "by": "box",
    "at": "2026-11-27T17:20:49Z"
+  },
+  {
+   "asset": "yourname_scene3_h264.mp4",
+   "id": "yt:yYAgBRO-aT8",
+   "title": "【荒木哲郎×SawanoHiroyuki[nZk]：Hata Motohiro】『COLORs』／TOHO animation ミュージックフィルムズ",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1906,
+   "by": "box",
+   "at": "2026-11-27T17:22:08Z"
+  },
+  {
+   "asset": "yourname_scene4_h264.mp4",
+   "id": "yt:iH_YJde1yps",
+   "title": "TVアニメ『ドロヘドロ』ノンクレジットオープニング映像 (K)NoW_NAME「Welcome トゥ 混沌(カオス)」",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2749,
+   "by": "box",
+   "at": "2026-11-27T17:22:08Z"
   }
  ],
  "github": {

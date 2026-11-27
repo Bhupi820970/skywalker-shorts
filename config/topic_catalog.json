@@ -849,7 +849,9 @@
       "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
       "scene_assets": [
         "yourname_scene1_h264.mp4",
-        "yourname_scene2_h264.mp4"
+        "yourname_scene2_h264.mp4",
+        "yourname_scene3_h264.mp4",
+        "yourname_scene4_h264.mp4"
       ],
       "fallback_asset": "yourname_trailer_h264.mp4",
       "content_kind": "best scene",
