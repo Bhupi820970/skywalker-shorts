@@ -1,352 +1,501 @@
 {
- "generated_at": "2026-11-26 18:00 IST",
+ "generated_at": "2026-11-27 17:45 IST",
  "max_clips_per_title": 5,
  "min_height": 1080,
  "requests": [
   {
-   "slug": "blackcloverasta",
+   "slug": "sololeveling",
    "pillar": "anime",
-   "words": "BLACK CLOVER",
+   "words": "SOLO LEVELING",
    "characters": [
-    "Asta"
+    "Sung Jinwoo"
    ],
    "scene_types": [
     "fight",
-    "aura"
+    "aura",
+    "entrance"
    ],
    "search_queries": [
-    "Black Clover Asta anti magic scene",
-    "Asta vs Ladros fight official",
-    "Asta Black Bull squad entrance",
-    "Black Clover official clip"
+    "Solo Leveling Sung Jinwoo fight clip",
+    "Solo Leveling I arise scene clip",
+    "Solo Leveling Jinwoo shadow army clip"
    ],
    "official_channels": [
-    "Netflix",
-    "Netflix Anime"
+    "Aniplex USA",
+    "Sony Pictures Entertainment"
    ],
-   "hook": "Why Asta keeps breaking his limits",
-   "title": "Why Asta keeps breaking his limits 💀 | Asta vs Ladros | #edit",
+   "hook": "Why Sung Jinwoo single handedly turned the tide",
+   "title": "Why Sung Jinwoo single handedly turned the tide | Sung Jinwoo shadow army | #edit",
    "tags": [
-    "blackclover",
-    "asta",
-    "animeedit",
-    "shonen",
+    "sololeveling",
+    "sungjinwoo",
     "anime",
-    "animetiktok",
-    "blackbulls"
+    "animedit",
+    "shadowmonarch",
+    "solo",
+    "leveling"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "bleachaizen",
+   "slug": "chainsawman",
    "pillar": "anime",
-   "words": "BLEACH",
+   "words": "CHAINSAW MAN",
    "characters": [
-    "Aizen"
+    "Denji",
+    "Makima"
    ],
    "scene_types": [
+    "fight",
     "aura",
     "entrance"
    ],
    "search_queries": [
-    "Aizen chair scene official",
-    "Sosuke Aizen entrance scene",
-    "Aizen vs captains scene",
-    "Bleach Thousand Year Blood War scene"
+    "Chainsaw Man Makima shrine scene clip",
+    "Chainsaw Man Denji fight scene clip",
+    "Chainsaw Man hotel fight scene clip"
    ],
    "official_channels": [
-    "Netflix",
-    "Netflix Anime"
+    "Sony Pictures Entertainment",
+    "MAPPA"
    ],
-   "hook": "Why Aizen is the ultimate villain",
-   "title": "Why Aizen is the ultimate villain 💀 | Aizen arrives | #edit",
+   "hook": "Why Makima commands total obedience",
+   "title": "Why Makima commands total obedience | Makima shrine scene | #edit",
    "tags": [
-    "bleach",
-    "aizen",
-    "bleachtybw",
+    "chainsawman",
+    "denji",
+    "makima",
     "anime",
-    "aura",
-    "villain",
+    "animedit",
+    "csm",
     "animeedit"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "hxhkillua",
+   "slug": "demonslayer",
    "pillar": "anime",
-   "words": "HUNTER X HUNTER",
+   "words": "DEMON SLAYER",
    "characters": [
-    "Killua"
+    "Kyojuro Rengoku",
+    "Akaza"
    ],
    "scene_types": [
     "fight",
-    "aura"
-   ],
-   "search_queries": [
-    "Killua vs Sub official clip",
-    "Killua lightning speed scene",
-    "Killua assassin mode scene",
-    "HxH official scene"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "hook": "Why Killua is a cold assassin",
-   "title": "Why Killua is a cold assassin 💀 | Killua aura | #edit",
-   "tags": [
-    "hxh",
-    "killua",
-    "hunterxhunter",
-    "anime",
-    "assassin",
-    "animeedit",
-    "killuazoldyck"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "mobpsychoreigen",
-   "pillar": "anime",
-   "words": "MOB PSYCHO 100",
-   "characters": [
-    "Reigen"
-   ],
-   "scene_types": [
-    "comedy",
-    "aura"
-   ],
-   "search_queries": [
-    "Reigen Arataka speech scene",
-    "Reigen salt splash scene",
-    "Mob Psycho 100 official clip",
-    "Reigen funny moments"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "hook": "Why Reigen is the greatest mentor",
-   "title": "Why Reigen is the greatest mentor 💀 | Reigen speech | #edit",
-   "tags": [
-    "mobpsycho100",
-    "reigen",
-    "anime",
-    "comedy",
-    "master",
-    "animeedit",
-    "psychic"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "interstellarcooper",
-   "pillar": "hollywood",
-   "words": "INTERSTELLAR",
-   "characters": [
-    "Cooper"
-   ],
-   "scene_types": [
     "emotional",
     "aura"
    ],
    "search_queries": [
-    "Interstellar docking scene",
-    "Cooper enters black hole scene",
-    "Interstellar official clip",
-    "Interstellar movie scene"
+    "Demon Slayer Rengoku vs Akaza fight clip",
+    "Demon Slayer Mugen Train Rengoku scene clip",
+    "Demon Slayer Rengoku final form clip"
    ],
    "official_channels": [
-    "Warner Bros. Pictures",
-    "IMDb"
+    "Aniplex USA",
+    "Sony Pictures Entertainment"
    ],
-   "hook": "Why Cooper never gave up hope",
-   "title": "Why Cooper never gave up hope 💀 | Docking sequence | #edit",
+   "hook": "Why Rengoku fought until his final breath",
+   "title": "Why Rengoku fought until his final breath | Rengoku vs Akaza | #edit",
    "tags": [
-    "interstellar",
-    "cooper",
-    "nolan",
-    "scifi",
-    "movieedit",
-    "space",
-    "cinema"
+    "demonslayer",
+    "rengoku",
+    "akaza",
+    "anime",
+    "kimetsunoyaiba",
+    "animeedit",
+    "mugentrain"
    ],
    "market": "US/UK",
-   "known_topic": false
+   "known_topic": true
   },
   {
-   "slug": "gladiatormaximus",
-   "pillar": "hollywood",
-   "words": "GLADIATOR",
+   "slug": "vinlandsaga",
+   "pillar": "anime",
+   "words": "VINLAND SAGA",
    "characters": [
-    "Maximus"
+    "Thorfinn",
+    "Askeladd"
    ],
    "scene_types": [
+    "emotional",
     "fight",
     "aura"
    ],
    "search_queries": [
-    "Maximus arena entrance scene",
-    "Gladiator fight official clip",
-    "Are you not entertained scene",
-    "Gladiator movie scene"
+    "Vinland Saga Askeladd final scene clip",
+    "Vinland Saga Thorfinn vs Askeladd fight clip",
+    "Vinland Saga Askeladd speech clip"
    ],
    "official_channels": [
-    "Universal Pictures",
-    "Movieclips"
+    "Netflix Anime",
+    "TOHO animation"
    ],
-   "hook": "Why Maximus is the greatest gladiator",
-   "title": "Why Maximus is the greatest gladiator 💀 | Are you not entertained | #edit",
+   "hook": "Why Askeladd gave Thorfinn one last lesson",
+   "title": "Why Askeladd gave Thorfinn one last lesson | Askeladd final moment | #edit",
    "tags": [
-    "gladiator",
-    "maximus",
-    "rome",
-    "history",
-    "movieedit",
-    "action",
-    "epic"
+    "vinlandsaga",
+    "thorfinn",
+    "askeladd",
+    "anime",
+    "animeedit",
+    "vikings",
+    "seinen"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "pulpvincent",
-   "pillar": "hollywood",
-   "words": "PULP FICTION",
+   "slug": "bleachthbw",
+   "pillar": "anime",
+   "words": "BLEACH THOUSAND YEAR BLOOD WAR",
    "characters": [
-    "Vincent Vega"
+    "Ichigo Kurosaki",
+    "Yhwach"
+   ],
+   "scene_types": [
+    "fight",
+    "entrance",
+    "aura"
+   ],
+   "search_queries": [
+    "Bleach Thousand Year Blood War Ichigo arrival clip",
+    "Bleach TYBW Ichigo Bankai scene clip",
+    "Bleach TYBW Yamamoto Bankai clip"
+   ],
+   "official_channels": [
+    "VIZ Media"
+   ],
+   "hook": "Why Ichigo unlocked his true power",
+   "title": "Why Ichigo unlocked his true power | Ichigo Bankai arrival | #edit",
+   "tags": [
+    "bleach",
+    "bleachtybw",
+    "ichigo",
+    "bankai",
+    "anime",
+    "animeedit",
+    "kurosaki"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "fightclub",
+   "pillar": "hollywood",
+   "words": "FIGHT CLUB",
+   "characters": [
+    "Tyler Durden",
+    "The Narrator"
    ],
    "scene_types": [
     "aura",
-    "comedy"
+    "entrance",
+    "emotional"
    ],
    "search_queries": [
-    "Vincent Vega dance scene",
-    "Pulp Fiction diner scene",
-    "Pulp Fiction official clip",
-    "Vincent and Jules scene"
+    "Fight Club Tyler Durden speech scene clip",
+    "Fight Club first rule scene clip",
+    "Fight Club end scene clip"
    ],
    "official_channels": [
-    "Miramax",
-    "Movieclips"
+    "Movieclips",
+    "20th Century Studios"
    ],
-   "hook": "Why Vincent Vega defines the 90s",
-   "title": "Why Vincent Vega defines the 90s 💀 | Dance scene | #edit",
+   "hook": "Why Tyler Durden became an icon",
+   "title": "Why Tyler Durden became an icon | Tyler Durden speech | #edit",
    "tags": [
-    "pulpfiction",
-    "tarantino",
-    "vincentvega",
-    "90s",
-    "classic",
+    "fightclub",
+    "tylerdurden",
+    "bradpitt",
+    "hollywood",
+    "cinematic",
     "movieedit",
-    "aura"
+    "sigma"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "inceptioncobb",
+   "slug": "thedarkknight",
    "pillar": "hollywood",
-   "words": "INCEPTION",
+   "words": "THE DARK KNIGHT",
    "characters": [
-    "Cobb"
+    "The Joker",
+    "Batman"
    ],
    "scene_types": [
+    "entrance",
     "aura",
     "emotional"
    ],
    "search_queries": [
-    "Inception hallway fight scene",
-    "Cobb spinning top scene",
-    "Inception dream scene official",
-    "Inception movie scene"
+    "The Dark Knight Joker interrogation scene clip",
+    "The Dark Knight Joker pencil trick scene clip",
+    "The Dark Knight Joker bank heist clip"
    ],
    "official_channels": [
     "Warner Bros. Pictures",
     "Movieclips"
    ],
-   "hook": "Why Cobb cannot distinguish the dream",
-   "title": "Why Cobb cannot distinguish the dream 💀 | Inception scene | #edit",
+   "hook": "Why Joker never feared the Batman",
+   "title": "Why Joker never feared the Batman | Joker interrogation scene | #edit",
    "tags": [
-    "inception",
-    "cobb",
-    "nolan",
-    "mindbending",
-    "movieedit",
-    "scifi",
-    "cinema"
+    "thedarkknight",
+    "joker",
+    "batman",
+    "heathledger",
+    "hollywood",
+    "movieclips",
+    "dc"
+   ],
+   "market": "US/UK",
+   "known_topic": true
+  },
+  {
+   "slug": "madmaxfuryroad",
+   "pillar": "hollywood",
+   "words": "MAD MAX FURY ROAD",
+   "characters": [
+    "Max Rockatansky",
+    "Imperator Furiosa"
+   ],
+   "scene_types": [
+    "fight",
+    "entrance",
+    "aura"
+   ],
+   "search_queries": [
+    "Mad Max Fury Road storm scene clip",
+    "Mad Max Fury Road Furiosa fight clip",
+    "Mad Max Fury Road chase scene clip"
+   ],
+   "official_channels": [
+    "Warner Bros. Pictures",
+    "Movieclips"
+   ],
+   "hook": "Why Furiosa never surrendered in the wasteland",
+   "title": "Why Furiosa never surrendered in the wasteland | Sandstorm chase scene | #edit",
+   "tags": [
+    "madmax",
+    "furyroad",
+    "tomhardy",
+    "charlizetheron",
+    "hollywood",
+    "action",
+    "movieedit"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "jawanazad",
-   "pillar": "bollywood",
-   "words": "JAWAN",
+   "slug": "whiplash",
+   "pillar": "hollywood",
+   "words": "WHIPLASH",
    "characters": [
-    "Azad"
+    "Andrew Neiman",
+    "Terence Fletcher"
+   ],
+   "scene_types": [
+    "emotional",
+    "aura",
+    "entrance"
+   ],
+   "search_queries": [
+    "Whiplash drum solo final scene clip",
+    "Whiplash Fletcher tempo scene clip",
+    "Whiplash Andrew drum practice clip"
+   ],
+   "official_channels": [
+    "Sony Pictures Classics",
+    "Movieclips"
+   ],
+   "hook": "Why Fletcher pushed Andrew past his limits",
+   "title": "Why Fletcher pushed Andrew past his limits | Final drum performance | #edit",
+   "tags": [
+    "whiplash",
+    "andrewneiman",
+    "jksimmons",
+    "milesteller",
+    "hollywood",
+    "cinematic",
+    "drama"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "bajiraomastani",
+   "pillar": "bollywood",
+   "words": "BAJIRAO MASTANI",
+   "characters": [
+    "Peshwa Bajirao"
    ],
    "scene_types": [
     "fight",
+    "entrance",
     "aura"
    ],
    "search_queries": [
-    "Jawan metro fight scene",
-    "Shah Rukh Khan Jawan action",
-    "Jawan official clip",
-    "Azad Rathore scene"
+    "Bajirao Mastani war entrance scene clip",
+    "Bajirao Mastani sword fight scene clip",
+    "Bajirao Mastani battle scene clip"
    ],
    "official_channels": [
-    "Red Chillies Entertainment"
+    "Eros Now",
+    "T-Series"
    ],
-   "hook": "Why Azad Rathore changed the game",
-   "title": "Why Azad Rathore changed the game 💀 | Metro fight | #edit",
+   "hook": "Why Bajirao never lost a single battle",
+   "title": "Why Bajirao never lost a single battle | Bajirao battlefield entrance | #edit",
    "tags": [
-    "jawan",
-    "srk",
-    "shahrukhkhan",
+    "bajiraomastani",
+    "ranveersingh",
     "bollywood",
-    "action",
-    "mass",
-    "edit"
+    "historical",
+    "indiancinema",
+    "massedit",
+    "bajirao"
    ],
    "market": "IN",
    "known_topic": false
   },
   {
-   "slug": "salaardeva",
-   "pillar": "south",
-   "words": "SALAAR",
+   "slug": "dhoom3",
+   "pillar": "bollywood",
+   "words": "DHOOM 3",
    "characters": [
-    "Deva"
+    "Sahir",
+    "Samar"
    ],
    "scene_types": [
-    "fight",
+    "entrance",
+    "aura",
+    "fight"
+   ],
+   "search_queries": [
+    "Dhoom 3 bike chase scene clip",
+    "Dhoom 3 Chicago heist clip",
+    "Dhoom 3 Aamir Khan bike transformation clip"
+   ],
+   "official_channels": [
+    "YRF"
+   ],
+   "hook": "Why Sahir pulled off the ultimate heist",
+   "title": "Why Sahir pulled off the ultimate heist | Chicago bike chase | #edit",
+   "tags": [
+    "dhoom3",
+    "aamirkhan",
+    "yrf",
+    "bollywood",
+    "action",
+    "massedit",
+    "chase"
+   ],
+   "market": "IN",
+   "known_topic": false
+  },
+  {
+   "slug": "omshantiom",
+   "pillar": "bollywood",
+   "words": "OM SHANTI OM",
+   "characters": [
+    "Om Kapoor",
+    "Shanti Priya"
+   ],
+   "scene_types": [
+    "emotional",
+    "entrance",
     "aura"
    ],
    "search_queries": [
-    "Salaar Deva entrance scene",
-    "Salaar fight scene official",
-    "Prabhas Salaar action",
-    "Salaar movie clip"
+    "Om Shanti Om fire scene clip",
+    "Om Shanti Om climax confrontation clip",
+    "Om Shanti Om awards speech scene clip"
+   ],
+   "official_channels": [
+    "Red Chillies Entertainment"
+   ],
+   "hook": "Why Om remembered his past life",
+   "title": "Why Om remembered his past life | Climax fire scene | #edit",
+   "tags": [
+    "omshantiom",
+    "srk",
+    "shahrukhkhan",
+    "redchillies",
+    "bollywood",
+    "drama",
+    "cinema"
+   ],
+   "market": "IN",
+   "known_topic": false
+  },
+  {
+   "slug": "baahubali2",
+   "pillar": "south",
+   "words": "BAAHUBALI 2 THE CONCLUSION",
+   "characters": [
+    "Amarendra Baahubali",
+    "Bhallaladeva"
+   ],
+   "scene_types": [
+    "entrance",
+    "aura",
+    "fight"
+   ],
+   "search_queries": [
+    "Baahubali 2 coronation entrance scene clip",
+    "Baahubali 2 battle fight scene clip",
+    "Baahubali 2 climax fight clip"
+   ],
+   "official_channels": [
+    "Dharma Productions",
+    "Arka Media Works"
+   ],
+   "hook": "Why Baahubali was loved by the entire kingdom",
+   "title": "Why Baahubali was loved by the entire kingdom | Baahubali coronation scene | #edit",
+   "tags": [
+    "baahubali",
+    "prabhas",
+    "southcinema",
+    "telugucinema",
+    "massedit",
+    "baahubali2",
+    "tollywood"
+   ],
+   "market": "IN",
+   "known_topic": false
+  },
+  {
+   "slug": "kgfchapter1",
+   "pillar": "south",
+   "words": "KGF CHAPTER 1",
+   "characters": [
+    "Rocky Bhai"
+   ],
+   "scene_types": [
+    "entrance",
+    "aura",
+    "fight"
+   ],
+   "search_queries": [
+    "KGF Chapter 1 Rocky entry scene clip",
+    "KGF Chapter 1 Garuda hammer scene clip",
+    "KGF Chapter 1 gold mine fight clip"
    ],
    "official_channels": [
     "Hombale Films"
    ],
-   "hook": "Why Deva is the ultimate weapon",
-   "title": "Why Deva is the ultimate weapon 💀 | Deva enters | #edit",
+   "hook": "Why Rocky took over the mine single handedly",
+   "title": "Why Rocky took over the mine single handedly | Rocky Garuda hammer scene | #edit",
    "tags": [
-    "salaar",
-    "prabhas",
-    "southindia",
-    "action",
-    "mass",
-    "edit",
-    "deva"
+    "kgf",
+    "rockybhai",
+    "yash",
+    "hombale",
+    "kannada",
+    "southcinema",
+    "massedit"
    ],
    "market": "IN",
    "known_topic": false
