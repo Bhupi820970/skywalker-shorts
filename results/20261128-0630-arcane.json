@@ -602,5 +602,16 @@
     }
   ],
   "stock_id": "stock-arcane-01",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "asset_sha256": "aa4b31fd9b9056bdd6e1c6cc5bf567040dd5c2ae20312e608ec70f93eb859339",
+  "publish_via": "youtube",
+  "yt_video_id": "xj8MC6p9IMc",
+  "yt_uploaded_at": "2026-11-28 04:24 IST",
+  "yt_privacy": "private",
+  "yt_publish_at": "2026-11-28T06:30:00+05:30",
+  "yt_status": "scheduled",
+  "youtube_url": "https://youtube.com/shorts/xj8MC6p9IMc",
+  "buffer_post_id": "yt:xj8MC6p9IMc",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-28T01:00:00.000Z"
 }

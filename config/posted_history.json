@@ -885,6 +885,18 @@
         "clip:windbreaker_scene2_h264.mp4",
         "sha:c5ad4400c9240a18dbf40b6ba58e77583f48ebdf80c1fd17e1858b21637e596a"
       ]
+    },
+    {
+      "id": "20261128-0630-arcane",
+      "at": "2026-11-28 04:24 IST",
+      "slot": "2026-11-28T06:30:00+05:30",
+      "title": "Jinx Finally Cracked Under The Pressure #arcane #jinx #animation",
+      "youtube_url": "https://youtube.com/shorts/xj8MC6p9IMc",
+      "keys": [
+        "asset:stock-arcane-01.mp4",
+        "clip:arcane_scene3_h264.mp4",
+        "sha:aa4b31fd9b9056bdd6e1c6cc5bf567040dd5c2ae20312e608ec70f93eb859339"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."
