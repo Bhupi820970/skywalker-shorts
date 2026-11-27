@@ -17,7 +17,7 @@ SKY_YT_REFRESH_TOKEN secrets exist (Buffer's free plan caps Shorts at 2 per 24h)
   marks the result publish-dead (render stays done, nothing is deleted).
 
 Env: SKY_YT_CLIENT_ID, SKY_YT_CLIENT_SECRET, SKY_YT_REFRESH_TOKEN (secrets; never printed).
-Optional BUFFER_API_KEY (only read, for the repeat guard). DRY_RUN=1, IDS=comma list. FORCE=1 skips the late-slot guard only for ids listed in IDS.
+Optional BUFFER_API_KEY (only read, for the repeat guard). DRY_RUN=1, IDS=comma list. FORCE=1 skips the late-slot guard only for ids listed in IDS. REPLACE=1 (with IDS) re-uploads those videos and sets the previous YouTube id to private (never deleted) so a fixed file can replace a scheduled one.
 `--auth-check` prints only the channel title and handle.
 """
 import glob, json, os, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
@@ -117,6 +117,20 @@ def api_get(tok, path, params):
     if code != 200:
         classify_http_error(code, body.decode(errors="replace"))
     return json.loads(body)
+
+
+def set_video_private(tok, video_id):
+    """Hide a previous upload. Never deletes the video."""
+    if not video_id:
+        return
+    url = f"{API}/videos?" + urllib.parse.urlencode({"part": "status"})
+    body = json.dumps({"id": video_id, "status": {"privacyStatus": "private"}}).encode()
+    req = urllib.request.Request(url, data=body, method="PUT",
+                                 headers={"Authorization": "Bearer " + tok,
+                                          "Content-Type": "application/json"})
+    code, _, raw = _open(req, 60)
+    if code not in (200, 201):
+        classify_http_error(code, raw.decode(errors="replace"))
 
 
 def my_channel(tok):
@@ -412,6 +426,7 @@ def main(argv=None):
     dry = os.environ.get("DRY_RUN") == "1"
     only = {x.strip() for x in os.environ.get("IDS", "").split(",") if x.strip()}
     force = os.environ.get("FORCE") == "1"
+    replace = os.environ.get("REPLACE") == "1"
     now = datetime.now(IST)
     start = datetime.fromisoformat(CFG["post_from_slot"])
     late_h = float(CFG.get("late_post_hours") or 6)
@@ -447,8 +462,10 @@ def main(argv=None):
             continue
         if not eligible(r, start, all_r):
             continue
-        if already_published(r):
+        replacing = bool(replace and only and iid in only and r.get("yt_video_id"))
+        if already_published(r) and not replacing:
             continue
+        prev_yt = r.get("yt_video_id") if replacing else None
         if backup_stock.slot_post_conflicts(r, all_r):
             print(f"{iid}: slot already covered by another result; not posting")
             continue
@@ -462,7 +479,9 @@ def main(argv=None):
             print(f"{iid}: NOT posting ({'; '.join(errs)})")
             continue
         dup = next((x for x in posts if (x.get("status") or "") in ("sent", "scheduled") and bp.norm((x.get("metadata") or {}).get("title")) == bp.norm(r["title"])), None)
-        if dup:
+        if dup and replacing and (dup.get("id") or "") in ("yt:" + (prev_yt or ""),):
+            dup = None
+        if dup and not replacing:
             print(f"{iid}: same title already on the channel ({dup['id']}); not uploading again")
             if not dry:
                 r.update(publish_blocked=f"repeat: title already on channel ({dup['id']})"[:300],
@@ -491,7 +510,7 @@ def main(argv=None):
                     sha = posted_history.sha256_file(f)
                 except OSError:
                     sha = None
-                why = posted_history.conflict(r, hist, sha=sha)
+                why = None if replacing else posted_history.conflict(r, hist, sha=sha)
                 if why:
                     raise _Repeat(why)
                 r["asset_sha256"] = sha
@@ -513,6 +532,13 @@ def main(argv=None):
             bp.save(p, r); changed.append(iid)
             continue
         move_failed_buffer_post(r)
+        if prev_yt:
+            r["yt_prev_video_id"] = prev_yt
+            try:
+                set_video_private(tok, prev_yt)
+                print(f"{iid}: previous upload set to private (not deleted)")
+            except Exception as e:
+                warns.append(f"{iid}: could not private previous upload: {e}")
         record_upload(r, video, publish_at, now)
         bp.save(p, r); changed.append(iid)
         for k in posted_history.keys_of(r):

@@ -24,6 +24,10 @@ on:
         description: "Skip the >6h late-slot guard, only for ids listed in the ids input"
         type: boolean
         default: false
+      replace:
+        description: "Re-upload the ids (new file from asset_url) and set the previous YouTube video to private; never deletes"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -53,6 +57,7 @@ jobs:
           IDS: ${{ github.event.inputs.ids }}
           DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
           FORCE: ${{ github.event.inputs.force == 'true' && '1' || '0' }}
+          REPLACE: ${{ github.event.inputs.replace == 'true' && '1' || '0' }}
         run: |
           git pull --ff-only -q || true
           python3 scripts/manual_qc.py || true

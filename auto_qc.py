@@ -293,6 +293,35 @@ def mask_story_captions(fr, layout: dict | None, t: float):
     return fr if out is None else out
 
 
+
+def check_tail_freeze(path: Path, *, window_s: float = 3.0, min_dur: float = 0.8) -> dict | None:
+    """Fail when the last `window_s` of the video holds a frozen frame for >= `min_dur` seconds."""
+    import re, subprocess
+    path = Path(path)
+    meta = _probe(path)
+    dur = float(meta.get("dur") or 0)
+    if dur < 1.0:
+        return None
+    start = max(0.0, dur - float(window_s))
+    try:
+        r = subprocess.run(
+            ["ffmpeg", "-ss", f"{start:.3f}", "-i", str(path),
+             "-vf", f"freezedetect=n=0.003:d={min_dur:.3f}", "-an", "-f", "null", "-"],
+            capture_output=True, text=True, timeout=120,
+        )
+        err = (r.stderr or "") + (r.stdout or "")
+    except Exception:
+        return None
+    starts = [float(x) for x in re.findall(r"freeze_start:\s*([0-9.]+)", err)]
+    durs = [float(x) for x in re.findall(r"freeze_duration:\s*([0-9.]+)", err)]
+    if not durs and not starts:
+        return None
+    longest = max(durs) if durs else (float(window_s) - min(starts) if starts else 0.0)
+    if longest + 1e-6 < float(min_dur):
+        return None
+    return {"duration": round(longest, 3), "at": round(start + (starts[-1] if starts else 0), 3)}
+
+
 def check(path: Path, layout: dict | None = None, caption_y: int = 1420) -> dict:
     path = Path(path)
     issues = []
@@ -433,6 +462,9 @@ def check(path: Path, layout: dict | None = None, caption_y: int = 1420) -> dict
                 speech_vols.append(mv)
         if speech_vols and max(speech_vols) <= -32:
             issues.append(f"dialogue inaudible during speech (mean_volume={sum(speech_vols)/len(speech_vols):.1f} dB)")
+    frz = check_tail_freeze(path)
+    if frz:
+        issues.append(f"tail freeze {frz['duration']:.1f}s in the last 3s (held frame)")
     return {
         "ok": not issues,
         "issues": issues,

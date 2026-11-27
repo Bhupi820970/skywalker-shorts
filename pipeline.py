@@ -125,7 +125,7 @@ OVERLAY_TEXT = False       # never burn type onto the footage itself
 TARGET_DUR = 32.0
 MIN_OUTPUT_DUR = 18.0   # hard floor: never publish shorter than 18s
 MIN_UNIQUE_DUR = 20.0   # planner aim floor (about 20-28s). Hard publish min stays 18s; cap stays ~32s.
-END_CARD = 2.4
+END_CARD = 0.0  # frozen end still looked like a 2-3s hang (27 Nov 2026); end on moving footage
 END_STILL = 52.0           # Godzilla lightning still (mezzanine time)
 HOOK_TEXT = "Nobody was ready for this"
 HOOK_LINES = ["Nobody was ready for this"]
@@ -3320,7 +3320,7 @@ def prepare_bed(music: dict, dur: float, dst: Path) -> Path:
     seamless-loop crossfade can stitch last→first without a quiet tail.
     """
     start = music["start"]
-    fade_out = 0.05
+    fade_out = 0.7
     afilt = (
         f"atrim=start={start:.3f}:duration={dur:.3f},asetpts=PTS-STARTPTS,"
         f"afade=t=in:st=0:d=0.03,afade=t=out:st={max(0.05, dur - fade_out):.3f}:d={fade_out:.3f},"
@@ -3390,7 +3390,7 @@ def _mix_two_act(music: dict, dur: float, src: Path | None, edl: list[dict]) -> 
         L = max(0.5, dur - T)
         run(["ffmpeg", "-y", "-ss", f"{d:.3f}", "-t", f"{L + 0.05:.3f}", "-i", str(music["path"]), "-af",
              f"loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=in:st=0:d=0.02,"
-             f"afade=t=out:st={max(0.05, L - 0.05):.3f}:d=0.05,"
+             f"afade=t=out:st={max(0.05, L - 0.7):.3f}:d=0.7,"
              f"aresample=48000", "-c:a", "pcm_s16le", str(song)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         tr = {}
         tp = WORK / "transcript.json"
@@ -3918,7 +3918,8 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
             pass
     if not used_chunks:
         run(cmd)
-    apply_seamless_loop(out, loop_s=0.5)
+    # No end still and no last-frame hold: a 0.5s xfade of the opener onto the tail
+    # also looked like a hang, so the video ends on moving footage with only an audio fade.
     try:
         import cover as covermod
         src_url = ""
@@ -4600,7 +4601,7 @@ def main():
     if DIALOGUE_EDIT and _raw_target <= 32.0:
         _raw_target = DLG_DEFAULT_TOTAL       # live items say 26 s (song-only rule); ref dialogue edits run 46-60 s
     TARGET_DUR = max(MIN_UNIQUE_DUR + 0.5, min(_raw_target, MAX_TOTAL_DUR) - END_CARD - 1.5)
-    print(f"  body target {TARGET_DUR:.1f}s (+{END_CARD:.1f}s end still, cap {MAX_TOTAL_DUR:.0f}s)")
+    print(f"  body target {TARGET_DUR:.1f}s (end still {END_CARD:.1f}s, cap {MAX_TOTAL_DUR:.0f}s)")
     PLATE_H_TARGET = even(args.plate_h) if args.plate_h else 0
     STABILIZE = not args.no_stabilize
     OVERLAY_TEXT = False  # never burn type onto the footage
