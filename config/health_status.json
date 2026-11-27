@@ -1,10 +1,14 @@
 {
-  "at": "2026-11-27 10:06 IST",
-  "slots_checked": 9,
-  "ready": [],
+  "at": "2026-11-27 11:15 IST",
+  "slots_checked": 8,
+  "ready": [
+    {
+      "slot": "2026-11-27T11:30:00+05:30",
+      "id": "stock",
+      "how": "backup_stock"
+    }
+  ],
   "short": [
-    "2026-11-27T09:00:00+05:30",
-    "2026-11-27T11:30:00+05:30",
     "2026-11-27T13:30:00+05:30",
     "2026-11-27T16:00:00+05:30",
     "2026-11-27T18:30:00+05:30",
@@ -29,6 +33,7 @@
     "20261114-2030-missionimpossible",
     "stock-nobody2-03",
     "stock-venom3-01",
+    "stock-jjk-02",
     "stock-suzume-01",
     "stock-dragonballdaima-03",
     "stock-deadpool3-03",
@@ -74,6 +79,7 @@
     "20261124-0900-dandadanevil",
     "stock-dandadanevil-04",
     "20261116-1330-superman",
+    "20261127-0900-strangerthings",
     "stock-cyberpunkedgerunners-01",
     "stock-twisters-03",
     "stock-dune2-01",
@@ -108,6 +114,7 @@
     "stock-wickedforgood-01",
     "20261121-1330-weatheringwithyou",
     "20261115-1330-avatarfireandash",
+    "20261127-1130-dune",
     "stock-cyberpunkedgerunners-02",
     "stock-firforce3-01",
     "stock-tronares-04",
@@ -128,6 +135,7 @@
     "stock-cyberpunkedgerunners-06",
     "20261123-0900-weatheringwithyou",
     "stock-avatarfireandash-01",
+    "stock-thebatman-02",
     "stock-zootopia2-01",
     "20261122-0900-dragonballdaima",
     "stock-kaiju8-01",
@@ -153,8 +161,8 @@
   ],
   "extra_ready_target": 2,
   "stock_ready": 3,
-  "stock_pending": 24,
-  "stock_used": 41,
+  "stock_pending": 20,
+  "stock_used": 43,
   "stock_target": 30,
   "stock_need_refill": true,
   "stock_assigned": [],

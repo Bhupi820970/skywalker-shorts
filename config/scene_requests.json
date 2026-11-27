@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-27 10:06 IST",
+ "generated_at": "2026-11-27 11:16 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 216,
+ "release_scene_clips": 217,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -231,42 +231,6 @@
     "shorts",
     "trending",
     "suzume"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "oppenheimer",
-   "slot": "2026-11-29T09:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261129-0900-oppenheimer",
-   "pillar": "hollywood",
-   "words": "OPPENHEIMER",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "OPPENHEIMER fight scene official clip",
-    "OPPENHEIMER best scene official clip",
-    "OPPENHEIMER official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=MeIk9ap1u_E",
-   "missing_assets": [],
-   "on_release": [
-    "oppenheimer_scene1_h264.mp4"
-   ],
-   "hook": "He watched the sky turn into fire",
-   "title": "He watched the sky turn into fire | Oppenheimer | #edit",
-   "tags": [
-    "oppenheimer",
-    "nolan",
-    "hollywood",
-    "cillianmurphy",
-    "edit",
-    "phonk",
-    "aura"
    ],
    "market": "US/UK"
   },
@@ -501,6 +465,45 @@
    "title": "Okarun was never ready for this | Dandadan | #edit",
    "tags": [
     "dandadan",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dandadanevil",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dandadanevil",
+   "pillar": "anime",
+   "words": "DAN DA DAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DAN DA DAN fight scene official clip",
+    "DAN DA DAN best scene official clip",
+    "DAN DA DAN official clip"
+   ],
+   "official_channels": [
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
+   "missing_assets": [],
+   "on_release": [
+    "dandadanevil_scene1_h264.mp4"
+   ],
+   "hook": "Evil Eye was a lonely kid",
+   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+   "tags": [
+    "dandadanevil",
     "anime",
     "animeedit",
     "edit",
@@ -1469,39 +1472,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "spiderverse",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-spiderverse",
-   "pillar": "hollywood",
-   "words": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SPIDER-MAN: ACROSS THE SPIDER-VERSE fight scene official clip",
-    "SPIDER-MAN: ACROSS THE SPIDER-VERSE best scene official clip",
-    "SPIDER-MAN: ACROSS THE SPIDER-VERSE official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=GPitD0-mkYA",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Why did every Spider-Man chase him here?",
-   "title": "Why did every Spider-Man chase him here? | Spider-Man: Across The Spider-Verse | #edit",
-   "tags": [
-    "spiderverse",
-    "milesmorales",
-    "spiderman",
-    "animation",
-    "sony",
-    "spiderverseedit"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "spiritedaway",
    "slot": "9999",
    "for": "backup_pool",
@@ -1610,7 +1580,8 @@
     "spyxfamilycodewhite_scene3_h264.mp4"
    ],
    "on_release": [
-    "spyxfamilycodewhite_scene1_h264.mp4"
+    "spyxfamilycodewhite_scene1_h264.mp4",
+    "spyxfamilycodewhite_scene2_h264.mp4"
    ],
    "hook": "Loid almost blew his cover",
    "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
@@ -1782,44 +1753,6 @@
     "shorts",
     "trending",
     "sakura"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "witchhatatelier",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-witchhatatelier",
-   "pillar": "anime",
-   "words": "WITCH HAT ATELIER",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "WITCH HAT ATELIER fight scene official clip",
-    "WITCH HAT ATELIER best scene official clip",
-    "WITCH HAT ATELIER official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "TVアニメ「とんがり帽子のアトリエ」公式 and 2 more"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=uNprGrZfkkQ",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Coco drew her first spell",
-   "title": "Coco drew her first spell | Witch Hat Atelier | #edit",
-   "tags": [
-    "witchhatatelier",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "coco"
    ],
    "market": "US/UK"
   },
