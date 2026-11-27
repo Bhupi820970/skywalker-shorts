@@ -56,18 +56,6 @@
    "state": "used",
    "video": "20261120-0900-onepieceegghead"
   },
-  "arcane2_scene5_h264.mp4": {
-   "at": "2026-11-27T09:30:44+00:00",
-   "owner": "45971326134-1-20261127-2230-arcane2",
-   "platform": "render",
-   "state": "reserved"
-  },
-  "arcane_scene1_h264.mp4": {
-   "at": "2026-11-27T09:30:46+00:00",
-   "owner": "45971326134-1-20261127-2230-arcane2",
-   "platform": "render",
-   "state": "reserved"
-  },
   "arcane_scene2_h264.mp4": {
    "at": "2026-11-27T03:29:05+00:00",
    "owner": "45928361817-1-stock-jjk-02",
