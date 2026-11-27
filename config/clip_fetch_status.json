@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T03:32:09Z",
-  "last_upload_at": "2026-11-27T03:32:07Z"
+  "last_run_at": "2026-11-27T03:33:29Z",
+  "last_upload_at": "2026-11-27T03:33:29Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -47,6 +47,7 @@
   "yt:BEO2D_hhXDs",
   "yt:BU--ttm4nYs",
   "yt:CFjI21M9wZs",
+  "yt:CSR7_V02S5Y",
   "yt:Cc4MnWO33F8",
   "yt:DDAHHPGcLzo",
   "yt:DIefkYvjq6E",
@@ -235,7 +236,8 @@
   "yt:yVvafJ0Skx0",
   "yt:yWBA876qftM",
   "yt:yjOEfazi9Mc",
-  "yt:zBrkG3aeWCc"
+  "yt:zBrkG3aeWCc",
+  "yt:zhsAd5ORk1Y"
  ],
  "clips": [
   {
@@ -2877,6 +2879,28 @@
    "kbps": 3719,
    "by": "box",
    "at": "2026-11-27T03:32:07Z"
+  },
+  {
+   "asset": "blackcloverasta_scene1_h264.mp4",
+   "id": "yt:zhsAd5ORk1Y",
+   "title": "Julius vs. Conrad | Black Clover: Sword of the Wizard King | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2749,
+   "by": "box",
+   "at": "2026-11-27T03:33:29Z"
+  },
+  {
+   "asset": "blackcloverasta_scene2_h264.mp4",
+   "id": "yt:CSR7_V02S5Y",
+   "title": "Black Clover: Sword of the Wizard King | \"Here I Stand\" - TREASURE | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3640,
+   "by": "box",
+   "at": "2026-11-27T03:33:29Z"
   }
  ],
  "github": {

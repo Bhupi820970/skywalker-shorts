@@ -2974,6 +2974,31 @@
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
       "category": "tv"
+    },
+    {
+      "slug": "blackcloverasta",
+      "pillar": "anime",
+      "words": "BLACK CLOVER",
+      "hook": "Why Asta keeps breaking his limits",
+      "title": "Why Asta keeps breaking his limits 💀 | Asta vs Ladros | #edit",
+      "description": "Why Asta keeps breaking his limits. From official Black Clover clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #blackclover #asta #animeedit",
+      "tags": [
+        "blackclover",
+        "asta",
+        "animeedit",
+        "shonen",
+        "anime",
+        "animetiktok",
+        "blackbulls"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=zhsAd5ORk1Y",
+      "scene_assets": [
+        "blackcloverasta_scene1_h264.mp4",
+        "blackcloverasta_scene2_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
