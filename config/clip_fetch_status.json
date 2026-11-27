@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T02:58:30Z",
-  "last_upload_at": "2026-11-27T02:58:30Z"
+  "last_run_at": "2026-11-27T02:58:40Z",
+  "last_upload_at": "2026-11-27T02:58:40Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -23,6 +23,7 @@
   "yt:3bMYgo_S0Kc",
   "yt:3nwBwJiyQ_g",
   "yt:4ZkOJjwRYoQ",
+  "yt:4frfkxIubLc",
   "yt:54qbDXVGBDI",
   "yt:5oRczmZ6dGU",
   "yt:5yb2N3pnztU",
@@ -196,6 +197,7 @@
   "yt:rpWPQlBz2Bk",
   "yt:sM9Uqtia-Lo",
   "yt:snriHOhBzR4",
+  "yt:spMqxS3a-H0",
   "yt:stjZKBhQ3lg",
   "yt:tHfiXfk8Cgo",
   "yt:tIiipIHwTa4",
@@ -2613,6 +2615,28 @@
    "kbps": 2219,
    "by": "box",
    "at": "2026-11-27T02:58:30Z"
+  },
+  {
+   "asset": "onepieceegghead_scene2_h264.mp4",
+   "id": "yt:spMqxS3a-H0",
+   "title": "ONE PIECE: Zoro vs. Mihawk Fight | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1428,
+   "by": "box",
+   "at": "2026-11-27T02:58:40Z"
+  },
+  {
+   "asset": "onepieceegghead_scene3_h264.mp4",
+   "id": "yt:4frfkxIubLc",
+   "title": "Luffy vs. Captain Smoker | ONE PIECE: Season 2 | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2056,
+   "by": "box",
+   "at": "2026-11-27T02:58:40Z"
   }
  ],
  "github": {
