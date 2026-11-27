@@ -1,14 +1,21 @@
 {
-  "at": "2026-11-27 11:40 IST",
+  "at": "2026-11-27 12:06 IST",
   "alert": false,
-  "ready": 3,
-  "pending": 22,
+  "ready": 4,
+  "pending": 16,
   "target": 20,
   "refill_at": 8,
   "alert_at": 2,
   "refilling": true,
-  "short_slots": [],
+  "short_slots": [
+    "2026-11-27T18:30:00+05:30",
+    "2026-11-27T20:30:00+05:30",
+    "2026-11-27T22:30:00+05:30",
+    "2026-11-28T06:30:00+05:30",
+    "2026-11-28T09:00:00+05:30",
+    "2026-11-28T11:30:00+05:30"
+  ],
   "issues": [
-    "seed file; health rewrites this every run"
+    "6 slot(s) in the next 24h without a finished video"
   ]
 }

@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-27 11:23 IST",
+ "generated_at": "2026-11-27 12:06 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 217,
+ "release_scene_clips": 221,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -859,7 +859,9 @@
    "missing_assets": [
     "jjk0_scene1_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "jjk0_scene2_h264.mp4"
+   ],
    "hook": "Yuta only fights for her",
    "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
    "tags": [
@@ -1533,11 +1535,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=hBgWzYapwi8",
    "missing_assets": [
-    "spyxfamily3_scene1_h264.mp4",
     "spyxfamily3_scene2_h264.mp4",
     "spyxfamily3_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "spyxfamily3_scene1_h264.mp4"
+   ],
    "hook": "Anya knows every single secret",
    "title": "Anya knows every single secret | Spy x Family | #edit",
    "tags": [
@@ -1549,50 +1552,6 @@
     "trending",
     "anya",
     "loid"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "spyxfamilycodewhite",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-spyxfamilycodewhite",
-   "pillar": "anime",
-   "words": "SPY X FAMILY",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SPY X FAMILY fight scene official clip",
-    "SPY X FAMILY best scene official clip",
-    "SPY X FAMILY official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "Sony Pictures Entertainment",
-    "Sony Pictures Releasing Australia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=TLpqTS1iKSM",
-   "missing_assets": [
-    "spyxfamilycodewhite_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "spyxfamilycodewhite_scene1_h264.mp4",
-    "spyxfamilycodewhite_scene2_h264.mp4"
-   ],
-   "hook": "Loid almost blew his cover",
-   "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
-   "tags": [
-    "spyxfamilycodewhite",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "anya"
    ],
    "market": "US/UK"
   },
@@ -1710,48 +1669,6 @@
     "vinland",
     "anime",
     "ihavenoenemies"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "windbreaker",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-windbreaker",
-   "pillar": "anime",
-   "words": "WIND BREAKER",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "WIND BREAKER fight scene official clip",
-    "WIND BREAKER best scene official clip",
-    "WIND BREAKER official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll India"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=AHx6LbgczvQ",
-   "missing_assets": [
-    "windbreaker_scene2_h264.mp4",
-    "windbreaker_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "windbreaker_scene1_h264.mp4"
-   ],
-   "hook": "Sakura only fights for his town",
-   "title": "Sakura only fights for his town | Wind Breaker | #edit",
-   "tags": [
-    "windbreaker",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "sakura"
    ],
    "market": "US/UK"
   },
