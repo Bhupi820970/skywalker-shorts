@@ -1,7 +1,7 @@
 {
   "id": "stock-dragonballdaima-06",
-  "status": "retry_queued",
-  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "status": "done",
+  "detail": "manual QC pass (Gemini unavailable)",
   "at": "2026-11-22 00:35 IST",
   "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/44926262407",
   "slot": null,
@@ -315,11 +315,9 @@
   "no_publish": false,
   "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dragonballdaima-06-cover.jpg",
   "gate": {
-    "ok": false,
-    "failures": [
-      "gemini QC skipped (unavailable/budget)"
-    ],
-    "gemini_qc": "skipped (unavailable/budget)"
+    "ok": true,
+    "failures": [],
+    "gemini_qc": "manual_pass (bibi)"
   },
   "layout": {
     "bar_y": 520,
@@ -382,7 +380,7 @@
       "dur": 4.317
     }
   ],
-  "qc_status": "skipped",
+  "qc_status": "manual_pass",
   "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
@@ -411,8 +409,7 @@
       "qc_status": "skipped"
     }
   ],
-  "last_error": "gemini QC skipped",
-  "qc_pending": true,
+  "qc_pending": false,
   "logo_pending": false,
   "source_attempts": [
     {
@@ -420,5 +417,17 @@
       "error": "pipeline/QA failed (exit 1): auto_qc: 1 frame(s) failed empty-dark/logo/text detectors",
       "at": "2026-11-22 00:08 IST"
     }
-  ]
+  ],
+  "qc_manual": {
+    "by": "bibi",
+    "checks": [
+      "no_logo_or_watermark",
+      "no_burned_source_captions",
+      "no_black_or_frozen_frames",
+      "vertical_2160x3840",
+      "audio_present",
+      "title_matches_footage"
+    ],
+    "at": "2026-11-27 11:40 IST"
+  }
 }

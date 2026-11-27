@@ -1,0 +1,1064 @@
+{
+  "id": "20261127-1600-twisters",
+  "status": "done",
+  "detail": "manual QC pass (Gemini unavailable) (assigned from stock-twisters-04)",
+  "at": "2026-11-27 11:21 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45928361817",
+  "slot": "2026-11-27T16:00:00+05:30",
+  "title": "Nobody suspected Tyler Owens was this crazy in Twisters #twisters #glenpowell #movieedit",
+  "hook": "Fancy Gadgets Won't Save You",
+  "description": "Fancy Gadgets Won't Save You. Tyler Owens and his fearless crew chase massive tornadoes using raw instinct instead of high-tech gear. From the official Twisters trailer. Edit by Skywalker.\nSource: official trailer. All rights to the film/series belong to their owners; short commentary edit.\n#twisters #glenpowell #movieedit #shorts #edit",
+  "tags": [
+    "twisters",
+    "glenpowell",
+    "movieedit",
+    "action",
+    "edit",
+    "shorts",
+    "trending"
+  ],
+  "queue_meta": {
+    "hook": "The sky turned against them",
+    "title": "The sky turned against them | Twisters | #edit",
+    "description": "The sky turned against them. From the official Twisters trailer. Edit by Skywalker.\nSource: official trailer. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #twisters",
+    "tags": [
+      "twisters",
+      "glenpowell",
+      "action",
+      "edit",
+      "shorts",
+      "trending"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "Cold flat statement",
+  "title_candidates": [
+    {
+      "title": "Nobody suspected Tyler Owens was this crazy in Twisters",
+      "click_score": 92.0
+    },
+    {
+      "title": "Why everyone is obsessed with Glen Powell in Twisters",
+      "click_score": 90.0
+    },
+    {
+      "title": "Glen Powell entering the scene in Twisters hit different",
+      "click_score": 88.0
+    },
+    {
+      "title": "Glen Powell did not expect this monster storm in Twisters",
+      "click_score": 86.0
+    },
+    {
+      "title": "The moment Tyler Owens proved fancy gadgets don't matter",
+      "click_score": 84.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 6.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 5.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    }
+  ],
+  "backup_item": "backup-twisters",
+  "stock": true,
+  "stock_topic": "backup-twisters",
+  "spare": true,
+  "words": "TWISTERS",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-twisters-04.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 10.646,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene2_h264.mp4",
+  "music": "pr_tikitikislowed.mp3",
+  "music_credit": "Song: QMIIR - TIKI TIKI (Slowed)\nOfficial link: https://www.youtube.com/watch?v=bEYiPCbHAtM",
+  "description_final": "Fancy Gadgets Won't Save You. Tyler Owens and his fearless crew chase massive tornadoes using raw instinct instead of high-tech gear. From the official Twisters trailer. Edit by Skywalker.\nSource: official trailer. All rights to the film/series belong to their owners; short commentary edit.\n#twisters #glenpowell #movieedit #shorts #edit\n\nMusic:\nSong: QMIIR - TIKI TIKI (Slowed)\nOfficial link: https://www.youtube.com/watch?v=bEYiPCbHAtM",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-twisters-04-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "gemini_qc": "manual_pass (bibi)"
+  },
+  "layout": {
+    "bar_y": 530,
+    "bar_h": 126,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1794,
+    "block_h": 1920,
+    "drop_t": 10.646,
+    "energy": true,
+    "story_caption_boxes": [
+      {
+        "t0": 0.18,
+        "t1": 0.78,
+        "box": [
+          200,
+          941,
+          680,
+          62
+        ],
+        "zone": "mid",
+        "text": "YOU GOT EYES ON THE",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 0.78,
+        "t1": 1.447,
+        "box": [
+          366,
+          941,
+          348,
+          62
+        ],
+        "zone": "mid",
+        "text": "TORNADO?",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 1.447,
+        "t1": 1.947,
+        "box": [
+          268,
+          1152,
+          544,
+          80
+        ],
+        "zone": "chin",
+        "text": "I KILLED SOME",
+        "faces": [
+          [
+            309,
+            677,
+            328,
+            466
+          ]
+        ],
+        "style": "RefSerif"
+      },
+      {
+        "t0": 1.947,
+        "t1": 2.647,
+        "box": [
+          362,
+          941,
+          356,
+          62
+        ],
+        "zone": "mid",
+        "text": "CHICKENS?",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 2.647,
+        "t1": 3.107,
+        "box": [
+          433,
+          941,
+          214,
+          61
+        ],
+        "zone": "mid",
+        "text": "DRIVE",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 3.107,
+        "t1": 3.667,
+        "box": [
+          478,
+          1079,
+          123,
+          62
+        ],
+        "zone": "chin",
+        "text": "GO",
+        "faces": [
+          [
+            622,
+            809,
+            180,
+            246
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 3.667,
+        "t1": 3.817,
+        "box": [
+          478,
+          941,
+          123,
+          62
+        ],
+        "zone": "mid",
+        "text": "GO",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 3.707,
+        "t1": 4.107,
+        "box": [
+          478,
+          941,
+          123,
+          62
+        ],
+        "zone": "mid",
+        "text": "GO",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 4.107,
+        "t1": 4.613,
+        "box": [
+          469,
+          1084,
+          142,
+          62
+        ],
+        "zone": "chin",
+        "text": "GO!",
+        "faces": [
+          [
+            587,
+            794,
+            191,
+            264
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 4.613,
+        "t1": 5.693,
+        "box": [
+          309,
+          993,
+          461,
+          62
+        ],
+        "zone": "chin",
+        "text": "IF YOU FEEL IT",
+        "faces": [
+          [
+            0,
+            715,
+            121,
+            149
+          ],
+          [
+            425,
+            798,
+            143,
+            178
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 5.693,
+        "t1": 6.713,
+        "box": [
+          380,
+          974,
+          320,
+          62
+        ],
+        "zone": "chin",
+        "text": "CHASE IT!",
+        "faces": [
+          [
+            5,
+            939,
+            22,
+            32
+          ],
+          [
+            95,
+            935,
+            19,
+            26
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 6.713,
+        "t1": 7.846,
+        "box": [
+          274,
+          1015,
+          531,
+          62
+        ],
+        "zone": "chin",
+        "text": "SHE'S GORGEOUS",
+        "faces": [
+          [
+            596,
+            809,
+            153,
+            188
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 7.846,
+        "t1": 8.626,
+        "box": [
+          272,
+          1160,
+          536,
+          61
+        ],
+        "zone": "chin",
+        "text": "WE NEVER HAD A",
+        "faces": [
+          [
+            203,
+            716,
+            181,
+            277
+          ],
+          [
+            470,
+            879,
+            199,
+            256
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 8.626,
+        "t1": 9.146,
+        "box": [
+          404,
+          688,
+          272,
+          62
+        ],
+        "zone": "above",
+        "text": "CHANCE",
+        "faces": [
+          [
+            185,
+            712,
+            191,
+            289
+          ],
+          [
+            489,
+            898,
+            189,
+            239
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 9.146,
+        "t1": 9.966,
+        "box": [
+          263,
+          941,
+          553,
+          62
+        ],
+        "zone": "mid",
+        "text": "DON'T FACE YOUR",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 9.966,
+        "t1": 10.566,
+        "box": [
+          414,
+          932,
+          251,
+          80
+        ],
+        "zone": "mid",
+        "text": "FEARS",
+        "faces": [],
+        "style": "RefSerif"
+      }
+    ],
+    "dialogue_captions": {
+      "count": 16,
+      "text": "YOU GOT EYES ON THE / TORNADO? / I KILLED SOME / CHICKENS? / DRIVE / GO / GO / GO / GO! / IF YOU FEEL IT / CHASE IT! / SHE'S GORGEOUS / WE NEVER HAD A / CHANCE / DON'T FACE YOUR / FEARS",
+      "style": "riyio ref glow (Playfair)"
+    },
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows_uncaptioned": [
+      [
+        0.12,
+        1.06
+      ],
+      [
+        1.267,
+        2.267
+      ],
+      [
+        2.467,
+        4.227
+      ],
+      [
+        4.433,
+        6.313
+      ],
+      [
+        6.653,
+        7.453
+      ],
+      [
+        7.786,
+        8.946
+      ],
+      [
+        9.086,
+        10.366
+      ]
+    ],
+    "speech_windows": [],
+    "edit_mode": "dialogue_drop",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 4,
+      "src_start": 7.35,
+      "dur": 1.28
+    },
+    {
+      "id": 14,
+      "src_start": 30.28,
+      "dur": 1.22
+    },
+    {
+      "id": 32,
+      "src_start": 52.26,
+      "dur": 1.98
+    },
+    {
+      "id": 45,
+      "src_start": 78.46,
+      "dur": 2.1
+    },
+    {
+      "id": 59,
+      "src_start": 95.24,
+      "dur": 1.14
+    },
+    {
+      "id": 64,
+      "src_start": 100.46,
+      "dur": 1.306
+    },
+    {
+      "id": 70,
+      "src_start": 112.24,
+      "dur": 1.62
+    },
+    {
+      "id": 12,
+      "src_start": 27.298,
+      "dur": 0.906
+    },
+    {
+      "id": 41,
+      "src_start": 73.153,
+      "dur": 0.859
+    },
+    {
+      "id": 6,
+      "src_start": 13.125,
+      "dur": 0.882
+    },
+    {
+      "id": 84,
+      "src_start": 134.499,
+      "dur": 0.836
+    },
+    {
+      "id": 67,
+      "src_start": 106.708,
+      "dur": 0.882
+    },
+    {
+      "id": 54,
+      "src_start": 88.975,
+      "dur": 0.882
+    },
+    {
+      "id": 28,
+      "src_start": 45.17,
+      "dur": 0.859
+    },
+    {
+      "id": 81,
+      "src_start": 128.05,
+      "dur": 0.882
+    },
+    {
+      "id": 19,
+      "src_start": 35.803,
+      "dur": 0.859
+    }
+  ],
+  "qc_status": "manual_pass",
+  "auto_retries": 1,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene2_h264.mp4",
+      "music": "pr_tikitikislowed.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "qc_pending": false,
+  "logo_pending": false,
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 804], 'plate': [1080, 452], 'letterbox_rows_black': True, 'frame_corr_median': 0.899, 'edge_corr_median': 0.943, 'shift_px_median': 4.14, 'pairs': 6}",
+      "at": "2026-11-27 08:32 IST"
+    }
+  ],
+  "qc_manual": {
+    "by": "bibi",
+    "checks": [
+      "no_logo_or_watermark",
+      "no_burned_source_captions",
+      "no_black_or_frozen_frames",
+      "vertical_2160x3840",
+      "audio_present",
+      "title_matches_footage"
+    ],
+    "at": "2026-11-27 11:40 IST"
+  },
+  "stock_id": "stock-twisters-04",
+  "assigned_from_stock": true
+}

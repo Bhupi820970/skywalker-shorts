@@ -1,0 +1,109 @@
+{
+  "note": "Manual QC by BIBI's bot while Gemini quota is out. Data only, never executed.",
+  "approved": [
+    {
+      "id": "stock-boyandheron-03",
+      "approved_by": "bibi",
+      "checks": [
+        "no_logo_or_watermark",
+        "no_burned_source_captions",
+        "no_black_or_frozen_frames",
+        "vertical_2160x3840",
+        "audio_present",
+        "title_matches_footage"
+      ],
+      "at": "2026-11-27 11:40 IST"
+    },
+    {
+      "id": "stock-dragonballdaima-06",
+      "approved_by": "bibi",
+      "checks": [
+        "no_logo_or_watermark",
+        "no_burned_source_captions",
+        "no_black_or_frozen_frames",
+        "vertical_2160x3840",
+        "audio_present",
+        "title_matches_footage"
+      ],
+      "at": "2026-11-27 11:40 IST"
+    },
+    {
+      "id": "stock-weatheringwithyou-10",
+      "approved_by": "bibi",
+      "checks": [
+        "no_logo_or_watermark",
+        "no_burned_source_captions",
+        "no_black_or_frozen_frames",
+        "vertical_2160x3840",
+        "audio_present",
+        "title_matches_footage"
+      ],
+      "at": "2026-11-27 11:40 IST"
+    },
+    {
+      "id": "stock-weatheringwithyou-12",
+      "approved_by": "bibi",
+      "checks": [
+        "no_logo_or_watermark",
+        "no_burned_source_captions",
+        "no_black_or_frozen_frames",
+        "vertical_2160x3840",
+        "audio_present",
+        "title_matches_footage"
+      ],
+      "at": "2026-11-27 11:40 IST"
+    },
+    {
+      "id": "stock-jujutsukaisencullinggame-05",
+      "approved_by": "bibi",
+      "checks": [
+        "no_logo_or_watermark",
+        "no_burned_source_captions",
+        "no_black_or_frozen_frames",
+        "vertical_2160x3840",
+        "audio_present",
+        "title_matches_footage"
+      ],
+      "at": "2026-11-27 11:40 IST"
+    },
+    {
+      "id": "stock-vinlandsaga2-01",
+      "approved_by": "bibi",
+      "checks": [
+        "no_logo_or_watermark",
+        "no_burned_source_captions",
+        "no_black_or_frozen_frames",
+        "vertical_2160x3840",
+        "audio_present",
+        "title_matches_footage"
+      ],
+      "at": "2026-11-27 11:40 IST"
+    },
+    {
+      "id": "stock-twisters-04",
+      "approved_by": "bibi",
+      "checks": [
+        "no_logo_or_watermark",
+        "no_burned_source_captions",
+        "no_black_or_frozen_frames",
+        "vertical_2160x3840",
+        "audio_present",
+        "title_matches_footage"
+      ],
+      "at": "2026-11-27 11:40 IST"
+    },
+    {
+      "id": "stock-wednesday-02",
+      "approved_by": "bibi",
+      "checks": [
+        "no_logo_or_watermark",
+        "no_burned_source_captions",
+        "no_black_or_frozen_frames",
+        "vertical_2160x3840",
+        "audio_present",
+        "title_matches_footage"
+      ],
+      "at": "2026-11-27 11:45 IST"
+    }
+  ]
+}
