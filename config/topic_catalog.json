@@ -1336,7 +1336,10 @@
       "scene_assets": [
         "arcane2_scene1_h264.mp4",
         "arcane2_scene2_h264.mp4",
-        "arcane2_scene3_h264.mp4"
+        "arcane2_scene3_h264.mp4",
+        "arcane2_scene4_h264.mp4",
+        "arcane2_scene5_h264.mp4",
+        "arcane2_scene6_h264.mp4"
       ],
       "fallback_asset": "arcane2_trailer_h264.mp4",
       "content_kind": "best scene",

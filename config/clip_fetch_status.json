@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T02:18:45Z",
-  "last_upload_at": "2026-11-27T02:18:45Z"
+  "last_run_at": "2026-11-27T02:27:48Z",
+  "last_upload_at": "2026-11-27T02:27:48Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -62,6 +62,7 @@
   "yt:HfzQRra9lmw",
   "yt:HgwIz90uzTg",
   "yt:HtkYBLLx0Mc",
+  "yt:Hv9scUWXzMg",
   "yt:HyFzn8JjmpA",
   "yt:IXbnzEHZDPg",
   "yt:IkNsD9sSYzU",
@@ -78,6 +79,7 @@
   "yt:Lbmsv1tcgf8",
   "yt:LmWrEpYpUec",
   "yt:LtAkyPyUhgY",
+  "yt:MYY4fGzvAJY",
   "yt:MeIk9ap1u_E",
   "yt:MgVkBzXOc8Q",
   "yt:MokxwHbscQ8",
@@ -92,6 +94,7 @@
   "yt:PwxHvnK_sA0",
   "yt:PzkEqhVByw4",
   "yt:Q4Tr7giZaXM",
+  "yt:QEF3FA5sj0g",
   "yt:QeSym53bZYg",
   "yt:QnhcD_tnyA0",
   "yt:QzZLiknSbdk",
@@ -2505,6 +2508,39 @@
    "kbps": 3454,
    "by": "box",
    "at": "2026-11-27T02:18:45Z"
+  },
+  {
+   "asset": "arcane2_scene4_h264.mp4",
+   "id": "yt:MYY4fGzvAJY",
+   "title": "Arcane Season 2 | Nothing to Lose | Official Clip | Geeked Week | Netflix",
+   "channel": "Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1710,
+   "by": "box",
+   "at": "2026-11-27T02:27:48Z"
+  },
+  {
+   "asset": "arcane2_scene5_h264.mp4",
+   "id": "yt:Hv9scUWXzMg",
+   "title": "Arcane: Temporada 2 | Nada que perder | Clip oficial | Geeked Week | Netflix",
+   "channel": "Netflix Latinoamérica",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1721,
+   "by": "box",
+   "at": "2026-11-27T02:27:48Z"
+  },
+  {
+   "asset": "arcane2_scene6_h264.mp4",
+   "id": "yt:QEF3FA5sj0g",
+   "title": "Sevika's New Arm | Arcane: Season 2 | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3218,
+   "by": "box",
+   "at": "2026-11-27T02:27:48Z"
   }
  ],
  "github": {
