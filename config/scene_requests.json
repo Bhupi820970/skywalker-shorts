@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-27 07:57 IST",
+ "generated_at": "2026-11-27 08:18 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 181,
+ "release_scene_clips": 186,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -473,47 +473,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "dandadanevil",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-dandadanevil",
-   "pillar": "anime",
-   "words": "DAN DA DAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DAN DA DAN fight scene official clip",
-    "DAN DA DAN best scene official clip",
-    "DAN DA DAN official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
-   "missing_assets": [
-    "dandadanevil_scene2_h264.mp4"
-   ],
-   "on_release": [
-    "dandadanevil_scene1_h264.mp4"
-   ],
-   "hook": "Evil Eye was a lonely kid",
-   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
-   "tags": [
-    "dandadanevil",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "okarun"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "dbsuperhero",
    "slot": "9999",
    "for": "backup_pool",
@@ -537,10 +496,11 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=fAfLl6_0h7Y",
    "missing_assets": [
-    "dbsuperhero_scene1_h264.mp4",
     "dbsuperhero_scene2_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "dbsuperhero_scene1_h264.mp4"
+   ],
    "hook": "Gohan woke up the beast",
    "title": "Gohan woke up the beast | Dragon Ball Super | #edit",
    "tags": [
