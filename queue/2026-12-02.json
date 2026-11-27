@@ -68,6 +68,40 @@
   "fallback_asset": "pathaan_scene1_h264.mp4"
  },
  {
+  "id": "20261202-1130-blackcloverasta",
+  "slot": "2026-12-02T11:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=zhsAd5ORk1Y",
+  "template": "whitebar",
+  "hook": "Why Asta keeps breaking his limits",
+  "words": "BLACK CLOVER",
+  "title": "Why Asta keeps breaking his limits 💀 | Asta vs Ladros | #edit",
+  "description": "Why Asta keeps breaking his limits. From official Black Clover clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #blackclover #asta #animeedit",
+  "tags": [
+   "blackclover",
+   "asta",
+   "animeedit",
+   "shonen",
+   "anime",
+   "animetiktok",
+   "blackbulls"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/blackcloverasta_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/blackcloverasta_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/blackcloverasta_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/blackcloverasta_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "blackcloverasta_scene1_h264.mp4"
+ },
+ {
   "id": "20261202-1330-gladiatormaximus",
   "slot": "2026-12-02T13:30:00+05:30",
   "pillar": "hollywood",
@@ -100,6 +134,40 @@
   ],
   "fallback_release": "sources",
   "fallback_asset": "gladiatormaximus_scene1_h264.mp4"
+ },
+ {
+  "id": "20261202-1600-interstellarcooper",
+  "slot": "2026-12-02T16:00:00+05:30",
+  "pillar": "hollywood",
+  "source_url": "https://www.youtube.com/watch?v=c7dTavaNXYQ",
+  "template": "whitebar",
+  "hook": "Why Cooper never gave up hope",
+  "words": "INTERSTELLAR",
+  "title": "Why Cooper never gave up hope 💀 | Docking sequence | #edit",
+  "description": "Why Cooper never gave up hope. From official Interstellar clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #interstellar #cooper #nolan",
+  "tags": [
+   "interstellar",
+   "cooper",
+   "nolan",
+   "scifi",
+   "movieedit",
+   "space",
+   "cinema"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/interstellarcooper_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/interstellarcooper_scene2_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/interstellarcooper_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/interstellarcooper_scene2_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "interstellarcooper_scene1_h264.mp4"
  },
  {
   "id": "20261202-1830-witchhatatelier",
@@ -136,6 +204,41 @@
   ],
   "fallback_release": "sources",
   "fallback_asset": "witchhatatelier_scene1_h264.mp4"
+ },
+ {
+  "id": "20261202-2030-squidgame",
+  "slot": "2026-12-02T20:30:00+05:30",
+  "pillar": "anime",
+  "source_url": "https://www.youtube.com/watch?v=_rs3OAp2SFM",
+  "template": "whitebar",
+  "hook": "Why Gi-hun went back in",
+  "words": "SQUID GAME",
+  "title": "Why Gi-hun went back in | Squid Game | #edit",
+  "description": "Why Gi-hun went back in. From official Squid Game clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #squidgame #anime #edit",
+  "tags": [
+   "squidgame",
+   "anime",
+   "edit",
+   "shorts"
+  ],
+  "target_dur": 26,
+  "status": "queued",
+  "market": "US/UK",
+  "content_kind": "best scene",
+  "fallback_mp4": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene4_h264.mp4"
+  ],
+  "sources": [
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene4_h264.mp4"
+  ],
+  "fallback_release": "sources",
+  "fallback_asset": "squidgame_scene1_h264.mp4"
  },
  {
   "id": "20261202-2230-pulpvincent",

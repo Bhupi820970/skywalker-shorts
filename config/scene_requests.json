@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-27 08:18 IST",
+ "generated_at": "2026-11-27 09:38 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 186,
+ "release_scene_clips": 216,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -231,6 +231,42 @@
     "shorts",
     "trending",
     "suzume"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "oppenheimer",
+   "slot": "2026-11-29T09:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261129-0900-oppenheimer",
+   "pillar": "hollywood",
+   "words": "OPPENHEIMER",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "OPPENHEIMER fight scene official clip",
+    "OPPENHEIMER best scene official clip",
+    "OPPENHEIMER official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=MeIk9ap1u_E",
+   "missing_assets": [],
+   "on_release": [
+    "oppenheimer_scene1_h264.mp4"
+   ],
+   "hook": "He watched the sky turn into fire",
+   "title": "He watched the sky turn into fire | Oppenheimer | #edit",
+   "tags": [
+    "oppenheimer",
+    "nolan",
+    "hollywood",
+    "cillianmurphy",
+    "edit",
+    "phonk",
+    "aura"
    ],
    "market": "US/UK"
   },
@@ -1095,11 +1131,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=3BgfbZt2GXY",
    "missing_assets": [
-    "mhafinal_scene1_h264.mp4",
     "mhafinal_scene2_h264.mp4",
     "mhafinal_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "mhafinal_scene1_h264.mp4"
+   ],
    "hook": "Bakugo finally understood Deku",
    "title": "Bakugo finally understood Deku | My Hero Academia | #edit",
    "tags": [
@@ -1233,49 +1270,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "onepieceegghead",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-onepieceegghead",
-   "pillar": "anime",
-   "words": "ONE PIECE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ONE PIECE fight scene official clip",
-    "ONE PIECE best scene official clip",
-    "ONE PIECE official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "ONE PIECE Official - ENG"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=G9bqtUiyxyQ",
-   "missing_assets": [
-    "onepieceegghead_scene2_h264.mp4",
-    "onepieceegghead_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "onepieceegghead_scene1_h264.mp4"
-   ],
-   "hook": "Luffy laughs while gods fall",
-   "title": "Luffy laughs while gods fall | One Piece | #edit",
-   "tags": [
-    "onepieceegghead",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "luffy"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "oshinoko2",
    "slot": "9999",
    "for": "backup_pool",
@@ -1394,44 +1388,6 @@
     "shorts",
     "trending",
     "subaru"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "sakamotodays",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-sakamotodays",
-   "pillar": "anime",
-   "words": "SAKAMOTO DAYS",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SAKAMOTO DAYS fight scene official clip",
-    "SAKAMOTO DAYS best scene official clip",
-    "SAKAMOTO DAYS official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=05EIB6kOu6Y",
-   "missing_assets": [
-    "sakamotodays_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "sakamotodays_scene1_h264.mp4"
-   ],
-   "hook": "Retired assassin still hits hardest",
-   "title": "Retired assassin still hits hardest | Sakamoto Days | #edit",
-   "tags": [
-    "sakamotodays",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "sakamoto"
    ],
    "market": "US/UK"
   },
@@ -1710,42 +1666,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "topgunmaverick",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-topgunmaverick",
-   "pillar": "hollywood",
-   "words": "TOP GUN MAVERICK",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "TOP GUN MAVERICK fight scene official clip",
-    "TOP GUN MAVERICK best scene official clip",
-    "TOP GUN MAVERICK official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=KElCq5eCegE",
-   "missing_assets": [],
-   "on_release": [
-    "topgunmaverick_scene2_h264.mp4"
-   ],
-   "hook": "Why Maverick is the greatest pilot",
-   "title": "Why Maverick is the greatest pilot | The final training run | #edit",
-   "tags": [
-    "topgun",
-    "maverick",
-    "tomcruise",
-    "movieedit",
-    "phonk",
-    "aviation",
-    "action"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "undeadunluck",
    "slot": "9999",
    "for": "backup_pool",
@@ -1808,11 +1728,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=l3zQNgXdmj0",
    "missing_assets": [
-    "vinlandsaga2_scene1_h264.mp4",
-    "vinlandsaga2_scene2_h264.mp4",
     "vinlandsaga2_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "vinlandsaga2_scene1_h264.mp4",
+    "vinlandsaga2_scene2_h264.mp4"
+   ],
    "hook": "Thorfinn took every punch",
    "title": "Thorfinn took every punch | Vinland Saga | #edit",
    "tags": [
@@ -1885,11 +1806,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=AHx6LbgczvQ",
    "missing_assets": [
-    "windbreaker_scene1_h264.mp4",
     "windbreaker_scene2_h264.mp4",
     "windbreaker_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "windbreaker_scene1_h264.mp4"
+   ],
    "hook": "Sakura only fights for his town",
    "title": "Sakura only fights for his town | Wind Breaker | #edit",
    "tags": [
@@ -1938,48 +1860,6 @@
     "shorts",
     "trending",
     "coco"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "yourname",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-yourname",
-   "pillar": "anime",
-   "words": "YOUR NAME",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "YOUR NAME fight scene official clip",
-    "YOUR NAME best scene official clip",
-    "YOUR NAME official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll India",
-    "GKIDS Films",
-    "TOHO animation",
-    "TOHO",
-    "CoMix Wave Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
-   "missing_assets": [
-    "yourname_scene1_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "He forgot her name again",
-   "title": "He forgot her name again | Your Name | #edit",
-   "tags": [
-    "yourname",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "taki"
    ],
    "market": "US/UK"
   },
