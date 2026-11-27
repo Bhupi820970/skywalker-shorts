@@ -1986,7 +1986,9 @@
       "pillar": "hollywood",
       "source_url": "https://www.youtube.com/watch?v=KElCq5eCegE",
       "fallback_mp4": [
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene2_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene4_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "Why Maverick is the greatest pilot",
@@ -2008,7 +2010,9 @@
       "fallback_asset": "topgunmaverick_scene2_h264.mp4",
       "content_kind": "best scene",
       "scene_assets": [
-        "topgunmaverick_scene2_h264.mp4"
+        "topgunmaverick_scene2_h264.mp4",
+        "topgunmaverick_scene3_h264.mp4",
+        "topgunmaverick_scene4_h264.mp4"
       ],
       "added_by": "footage_refill",
       "category": "movie"
