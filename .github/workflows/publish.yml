@@ -55,6 +55,7 @@ jobs:
           FORCE: ${{ github.event.inputs.force == 'true' && '1' || '0' }}
         run: |
           git pull --ff-only -q || true
+          python3 scripts/manual_qc.py || true
           if [ -n "$SKY_YT_CLIENT_ID" ] && [ -n "$SKY_YT_CLIENT_SECRET" ] && [ -n "$SKY_YT_REFRESH_TOKEN" ]; then
             echo "via=youtube" >> "$GITHUB_OUTPUT"
             python3 scripts/yt_upload.py
