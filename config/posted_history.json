@@ -858,6 +858,18 @@
         "clip:twisters_scene2_h264.mp4",
         "sha:bdac9d535eff76acec2bf62b0bf7861082ee21bb35ba44cfa11b06985f051c8c"
       ]
+    },
+    {
+      "id": "20261127-0630-wednesday",
+      "at": "2026-11-27 11:24 IST",
+      "slot": "2026-11-27T06:30:00+05:30",
+      "title": "Why Wednesday never smiles | Wednesday | #edit",
+      "youtube_url": "https://youtube.com/shorts/t_wOWL8JY-g",
+      "keys": [
+        "asset:stock-wednesday-02.mp4",
+        "clip:wednesday_scene6_h264.mp4",
+        "sha:8d03297a52caf76f92cfa467d3ad95a3617b6a28ac0b7ca2970fc8418f4c3be3"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."

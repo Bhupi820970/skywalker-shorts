@@ -811,5 +811,17 @@
     "at": "2026-11-27 11:45 IST"
   },
   "stock_id": "stock-wednesday-02",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "asset_sha256": "8d03297a52caf76f92cfa467d3ad95a3617b6a28ac0b7ca2970fc8418f4c3be3",
+  "publish_via": "youtube",
+  "yt_video_id": "t_wOWL8JY-g",
+  "yt_uploaded_at": "2026-11-27 11:24 IST",
+  "yt_privacy": "public",
+  "yt_publish_at": "2026-11-27T11:24:01.823152+05:30",
+  "yt_status": "public",
+  "youtube_url": "https://youtube.com/shorts/t_wOWL8JY-g",
+  "buffer_post_id": "yt:t_wOWL8JY-g",
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-27T05:54:01.000Z",
+  "buffer_posted_at": "2026-11-27T05:54:01.000Z"
 }
