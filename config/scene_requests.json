@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27 09:38 IST",
+ "generated_at": "2026-11-27 10:06 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 216,
@@ -378,7 +378,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=4Gti6YqvMzE",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "bleachtybw_scene2_h264.mp4"
+   ],
    "hook": "Ichigo was born for this war",
    "title": "Ichigo was born for this war | Bleach | #edit",
    "tags": [
@@ -987,46 +989,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "kaiju8s2",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-kaiju8s2",
-   "pillar": "anime",
-   "words": "KAIJU NO. 8",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "KAIJU NO. 8 fight scene official clip",
-    "KAIJU NO. 8 best scene official clip",
-    "KAIJU NO. 8 official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll India",
-    "TOHO animation チャンネル"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=gd2pP8LgWVo",
-   "missing_assets": [],
-   "on_release": [
-    "kaiju8s2_scene1_h264.mp4"
-   ],
-   "hook": "Kafka cannot control it anymore",
-   "title": "Kafka cannot control it anymore | Kaiju No. 8 | #edit",
-   "tags": [
-    "kaiju8s2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "kafka"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "lazarus",
    "slot": "9999",
    "for": "backup_pool",
@@ -1411,9 +1373,7 @@
    "official_channels": [],
    "source_url": "https://www.youtube.com/watch?v=yjOEfazi9Mc",
    "missing_assets": [],
-   "on_release": [
-    "shahrukhkhan_scene1_h264.mp4"
-   ],
+   "on_release": [],
    "hook": "Why did the entire room freeze here?",
    "title": "Why did the entire room freeze here? | Jawan | #edit",
    "tags": [
