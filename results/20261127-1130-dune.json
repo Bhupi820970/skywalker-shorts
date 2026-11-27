@@ -412,5 +412,17 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-dune-01",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "asset_sha256": "a709b98ff36c33cbcd5419862cd0e9a7a636b717662c910df8cbba4083cc673c",
+  "publish_via": "youtube",
+  "yt_video_id": "w2Sno9wNGxs",
+  "yt_uploaded_at": "2026-11-27 11:15 IST",
+  "yt_privacy": "public",
+  "yt_publish_at": "2026-11-27T11:15:10.473350+05:30",
+  "yt_status": "public",
+  "youtube_url": "https://youtube.com/shorts/w2Sno9wNGxs",
+  "buffer_post_id": "yt:w2Sno9wNGxs",
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-27T05:45:10.000Z",
+  "buffer_posted_at": "2026-11-27T05:45:10.000Z"
 }

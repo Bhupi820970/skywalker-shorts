@@ -457,5 +457,17 @@
   ],
   "qc_status": "pass",
   "stock_id": "stock-strangerthings-01",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "asset_sha256": "56108a14a450a6d76d2d19e03b200feff42724ff212be23978ce96fa11059048",
+  "publish_via": "youtube",
+  "yt_video_id": "axMi2FskMGo",
+  "yt_uploaded_at": "2026-11-27 11:15 IST",
+  "yt_privacy": "public",
+  "yt_publish_at": "2026-11-27T11:15:10.473350+05:30",
+  "yt_status": "public",
+  "youtube_url": "https://youtube.com/shorts/axMi2FskMGo",
+  "buffer_post_id": "yt:axMi2FskMGo",
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-27T05:45:10.000Z",
+  "buffer_posted_at": "2026-11-27T05:45:10.000Z"
 }

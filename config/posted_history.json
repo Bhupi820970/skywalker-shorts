@@ -810,6 +810,30 @@
         "clip:gladiatormaximus_scene1_h264.mp4",
         "sha:a8333990e33efd3e0795116885dc7d96adc5363cc3d10bce99b07f818e42f0d4"
       ]
+    },
+    {
+      "id": "20261127-0900-strangerthings",
+      "at": "2026-11-27 11:15 IST",
+      "slot": "2026-11-27T09:00:00+05:30",
+      "title": "Eleven Faced The End Of Hawkins #strangerthings #eleven #scifi",
+      "youtube_url": "https://youtube.com/shorts/axMi2FskMGo",
+      "keys": [
+        "asset:stock-strangerthings-01.mp4",
+        "clip:strangerthings_scene1_h264.mp4",
+        "sha:56108a14a450a6d76d2d19e03b200feff42724ff212be23978ce96fa11059048"
+      ]
+    },
+    {
+      "id": "20261127-1130-dune",
+      "at": "2026-11-27 11:15 IST",
+      "slot": "2026-11-27T11:30:00+05:30",
+      "title": "Feyd-Rautha entering the scene is peak terror #dune #feydrautha #scifi",
+      "youtube_url": "https://youtube.com/shorts/w2Sno9wNGxs",
+      "keys": [
+        "asset:stock-dune-01.mp4",
+        "clip:dune_scene1_h264.mp4",
+        "sha:a709b98ff36c33cbcd5419862cd0e9a7a636b717662c910df8cbba4083cc673c"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."
