@@ -2999,6 +2999,31 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "interstellarcooper",
+      "pillar": "hollywood",
+      "words": "INTERSTELLAR",
+      "hook": "Why Cooper never gave up hope",
+      "title": "Why Cooper never gave up hope 💀 | Docking sequence | #edit",
+      "description": "Why Cooper never gave up hope. From official Interstellar clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #interstellar #cooper #nolan",
+      "tags": [
+        "interstellar",
+        "cooper",
+        "nolan",
+        "scifi",
+        "movieedit",
+        "space",
+        "cinema"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=c7dTavaNXYQ",
+      "scene_assets": [
+        "interstellarcooper_scene1_h264.mp4",
+        "interstellarcooper_scene2_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }

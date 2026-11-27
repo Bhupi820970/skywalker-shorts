@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T03:33:29Z",
-  "last_upload_at": "2026-11-27T03:33:29Z"
+  "last_run_at": "2026-11-27T03:41:54Z",
+  "last_upload_at": "2026-11-27T03:41:54Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -13,6 +13,7 @@
   "yt:0Z_mA7n5zIA",
   "yt:1QZamgwEjiw",
   "yt:1VUqQqUlSv4",
+  "yt:1Y5JBB3BG_0",
   "yt:1fLbuwAUbhg",
   "yt:1gvGn8NtIpE",
   "yt:1oiRkOT4Z_4",
@@ -156,6 +157,7 @@
   "yt:aoi11BdfpoM",
   "yt:b2l8sz4TAY4",
   "yt:bV0RAcuG2Ao",
+  "yt:c7dTavaNXYQ",
   "yt:c8o3ATfaS6w",
   "yt:cbft6JWPkpA",
   "yt:chjVPTdBel8",
@@ -2901,6 +2903,28 @@
    "kbps": 3640,
    "by": "box",
    "at": "2026-11-27T03:33:29Z"
+  },
+  {
+   "asset": "interstellarcooper_scene1_h264.mp4",
+   "id": "yt:c7dTavaNXYQ",
+   "title": "Interstellar docking scene 4K IMAX High quality",
+   "channel": "4K movie clips",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 10761,
+   "by": "box",
+   "at": "2026-11-27T03:41:54Z"
+  },
+  {
+   "asset": "interstellarcooper_scene2_h264.mp4",
+   "id": "yt:1Y5JBB3BG_0",
+   "title": "Entrare in un buco nero | Interstellar",
+   "channel": "Amazon Prime Video Italia",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2520,
+   "by": "box",
+   "at": "2026-11-27T03:41:54Z"
   }
  ],
  "github": {
