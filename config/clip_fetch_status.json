@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T17:10:25Z",
-  "last_upload_at": "2026-11-27T17:10:25Z"
+  "last_run_at": "2026-11-27T17:13:09Z",
+  "last_upload_at": "2026-11-27T17:13:09Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -13,6 +13,7 @@
   "yt:0OzLbsNUKH4",
   "yt:0Sfm2DTiGzg",
   "yt:0Z_mA7n5zIA",
+  "yt:0nlJuwO0GDs",
   "yt:14VgD5IfWi8",
   "yt:1QZamgwEjiw",
   "yt:1VUqQqUlSv4",
@@ -158,6 +159,7 @@
   "yt:Za4kyckczXI",
   "yt:ZivADyFlILE",
   "yt:Zq4zTcIM0yQ",
+  "yt:_E0_bV8GrLo",
   "yt:_GFcWG0M-YM",
   "yt:_grmduuECm4",
   "yt:_lmn16npMXw",
@@ -255,6 +257,7 @@
   "yt:yWBA876qftM",
   "yt:yjOEfazi9Mc",
   "yt:zBrkG3aeWCc",
+  "yt:zP7AGWiw8Uw",
   "yt:zhsAd5ORk1Y"
  ],
  "clips": [
@@ -3117,6 +3120,39 @@
    "kbps": 3444,
    "by": "box",
    "at": "2026-11-27T17:10:25Z"
+  },
+  {
+   "asset": "arcane_scene5_h264.mp4",
+   "id": "yt:_E0_bV8GrLo",
+   "title": "Arcane Season 2 | Nothing to Lose | Official Clip | Geeked Week | Netflix",
+   "channel": "Netflix Malaysia",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2757,
+   "by": "box",
+   "at": "2026-11-27T17:13:09Z"
+  },
+  {
+   "asset": "arcane_scene6_h264.mp4",
+   "id": "yt:0nlJuwO0GDs",
+   "title": "Get Jinxed (ft. Djerv) | Official Music Video - League of Legends",
+   "channel": "League of Legends",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1974,
+   "by": "box",
+   "at": "2026-11-27T17:13:09Z"
+  },
+  {
+   "asset": "arcane_scene7_h264.mp4",
+   "id": "yt:zP7AGWiw8Uw",
+   "title": "Arcane: Animated Series |  A Score To Settle",
+   "channel": "League of Legends",
+   "kind": "scene",
+   "res": "2048x1080",
+   "kbps": 1953,
+   "by": "box",
+   "at": "2026-11-27T17:13:09Z"
   }
  ],
  "github": {
