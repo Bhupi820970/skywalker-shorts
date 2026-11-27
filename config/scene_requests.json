@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-27 06:22 IST",
+ "generated_at": "2026-11-27 07:57 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 177,
+ "release_scene_clips": 180,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -76,83 +76,6 @@
     "shorts",
     "trending",
     "saitama"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "boyandheron",
-   "slot": "2026-11-27T13:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261127-1330-boyandheron",
-   "pillar": "anime",
-   "words": "THE BOY AND THE HERON",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "THE BOY AND THE HERON fight scene official clip",
-    "THE BOY AND THE HERON best scene official clip",
-    "THE BOY AND THE HERON official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YU5eVD0J3_A",
-   "missing_assets": [],
-   "on_release": [
-    "boyandheron_scene2_h264.mp4"
-   ],
-   "hook": "The heron knew his secret",
-   "title": "The heron knew his secret | The Boy and the Heron | #edit",
-   "tags": [
-    "boyandheron",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "mahito"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "arcane2",
-   "slot": "2026-11-27T22:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261127-2230-arcane2",
-   "pillar": "anime",
-   "words": "ARCANE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ARCANE fight scene official clip",
-    "ARCANE best scene official clip",
-    "ARCANE official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Still Watching Netflix"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-   "missing_assets": [],
-   "on_release": [
-    "arcane2_scene2_h264.mp4"
-   ],
-   "hook": "Jinx never wanted this war",
-   "title": "Jinx never wanted this war | Arcane | #edit",
-   "tags": [
-    "arcane2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "jinx"
    ],
    "market": "US/UK"
   },
@@ -268,6 +191,46 @@
     "shorts",
     "trending",
     "hinata"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "suzume",
+   "slot": "2026-11-29T06:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261129-0630-suzume",
+   "pillar": "romance",
+   "words": "SUZUME",
+   "scene_types": [
+    "romantic",
+    "emotional",
+    "confession"
+   ],
+   "search_queries": [
+    "SUZUME romantic scene",
+    "SUZUME emotional scene",
+    "SUZUME official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll India",
+    "GKIDS Films",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
+   "missing_assets": [],
+   "on_release": [
+    "suzume_scene2_h264.mp4"
+   ],
+   "hook": "The door would not stay closed",
+   "title": "The door would not stay closed | Suzume | #edit",
+   "tags": [
+    "suzume",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "suzume"
    ],
    "market": "US/UK"
   },
@@ -471,6 +434,45 @@
    "market": "US/UK"
   },
   {
+   "slug": "dandadan",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dandadan",
+   "pillar": "anime",
+   "words": "DAN DA DAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DAN DA DAN fight scene official clip",
+    "DAN DA DAN best scene official clip",
+    "DAN DA DAN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=iiwOVqGtZj4",
+   "missing_assets": [],
+   "on_release": [
+    "dandadan_scene2_h264.mp4"
+   ],
+   "hook": "Okarun was never ready for this",
+   "title": "Okarun was never ready for this | Dandadan | #edit",
+   "tags": [
+    "dandadan",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "okarun"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "dandadanevil",
    "slot": "9999",
    "for": "backup_pool",
@@ -589,39 +591,6 @@
     "shorts",
     "trending",
     "senku"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "dune",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-dune",
-   "pillar": "anime",
-   "words": "DUNE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DUNE fight scene official clip",
-    "DUNE best scene official clip",
-    "DUNE official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=2HSKZhb3J_M",
-   "missing_assets": [],
-   "on_release": [
-    "dune_scene1_h264.mp4"
-   ],
-   "hook": "Why Paul stopped being human",
-   "title": "Why Paul stopped being human | Dune | #edit",
-   "tags": [
-    "dune",
-    "anime",
-    "edit",
-    "shorts"
    ],
    "market": "US/UK"
   },
@@ -1764,7 +1733,9 @@
    "missing_assets": [
     "spyxfamilycodewhite_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "spyxfamilycodewhite_scene1_h264.mp4"
+   ],
    "hook": "Loid almost blew his cover",
    "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
    "tags": [
@@ -1775,46 +1746,6 @@
     "shorts",
     "trending",
     "anya"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "suzume",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-suzume",
-   "pillar": "anime",
-   "words": "SUZUME",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SUZUME fight scene official clip",
-    "SUZUME best scene official clip",
-    "SUZUME official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll India",
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=Pbu0f1JgzVw",
-   "missing_assets": [],
-   "on_release": [
-    "suzume_scene2_h264.mp4"
-   ],
-   "hook": "She keeps closing doors alone",
-   "title": "She keeps closing doors alone | Suzume | #edit",
-   "tags": [
-    "suzume",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "suzume"
    ],
    "market": "US/UK"
   },
