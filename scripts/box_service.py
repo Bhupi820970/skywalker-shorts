@@ -875,13 +875,17 @@ def secrets_ready() -> set[str]:
 
 def step_dispatch(st: dict) -> None:
     """Dispatch a workflow only when GitHub's own cron is late. Off until the secrets it needs exist."""
-    if os.environ.get("SKY_BOX_DISPATCH", "0") != "1":  # off by default: health/render/publish can post
+    full = os.environ.get("SKY_BOX_DISPATCH", "0") == "1"
+    safe = os.environ.get("SKY_BOX_DISPATCH_SAFE", "0") == "1"   # health + render only (neither posts by itself)
+    if not (full or safe):  # off by default: health/render/publish can post
         return
     names = secrets_ready()
     if "GEMINI_API_KEY" not in names:
         return
     now = datetime.now(IST)
     for wf, (max_age, earliest) in JOBS.items():
+        if not full and wf not in ("health.yml", "render.yml"):
+            continue
         if wf == "publish.yml" and ("BUFFER_API_KEY" not in names or os.environ.get("SKY_BOX_PUBLISH", "0") != "1"):
             continue
         if earliest and now.strftime("%H:%M") < earliest:

@@ -37,7 +37,7 @@ def test_ass_look_and_safe_placement(tmp_path):
                    video_for_faces=None, out_ass=tmp_path / "s.ass")
     assert out and out["pattern"] in CP.BY_ID
     txt = (tmp_path / "s.ass").read_text()
-    assert "Anton" in txt and r"\fscx80\fscy80\t(0,90,\fscx100\fscy100)" in txt
+    assert "Playfair Display" in txt and r"\fscx120\fscy120\t(0,200,\fscx100\fscy100)" in txt
     assert "&H00C42EFF&" in txt or out["pattern"] not in ("P01",)  # hot pink present in palettes
     assert sc.qa(out["boxes"], LAY) == []
     for b in out["boxes"]:

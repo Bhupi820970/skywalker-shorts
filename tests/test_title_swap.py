@@ -307,7 +307,7 @@ def test_skips_recently_posted_swap_destination(tmp_path):
     """A slot that already auto-swapped to Animal must not pick Animal again."""
     from datetime import datetime, timedelta, timezone
     IST = timezone(timedelta(hours=5, minutes=30))
-    now = datetime(2026, 11, 19, 11, 0, tzinfo=IST)
+    now = datetime.now(IST)   # relative: a fixed 2026-11-18 slot aged out of the 'recent' window and broke this test
     topics = [
         {
             "slug": "animal",
@@ -332,10 +332,11 @@ def test_skips_recently_posted_swap_destination(tmp_path):
     ]
     repo = _repo(tmp_path, topics)
     (repo / "results").mkdir()
+    _slot = (now - timedelta(days=1)).replace(hour=6, minute=30, second=0, microsecond=0).isoformat()
     (repo / "results" / "20261118-0630-spyxfamily3.json").write_text(json.dumps({
         "id": "20261118-0630-spyxfamily3",
         "status": "done",
-        "slot": "2026-11-18T06:30:00+05:30",
+        "slot": _slot,
         "words": "ANIMAL",
         "swapped_to": "animal",
         "title": "Ranvijay walked in and changed everything #animal #ranbirkapoor #bollywood",

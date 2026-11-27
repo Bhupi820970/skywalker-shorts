@@ -99,8 +99,8 @@ def test_caption_fonts_are_static_bold():
     for f in (DC.FONT_SANS, DC.FONT_SERIF):
         assert f.exists() and (ROOT / "fonts" / f"OFL-{f.stem.split('-')[0]}.txt").exists()
         ImageFont.truetype(str(f), 40)
-    assert DC.SANS_NAME == "Montserrat Bold" and DC.SERIF_NAME == "Cinzel Bold"
-    assert 37 <= DC.SIZE_TALK <= 46 and 55 <= DC.SIZE_DRAMA <= 66               # ref cap height 2.4-2.9 % / 4.3 %
+    assert DC.SANS_NAME == "Playfair Display" and DC.SERIF_NAME == "Playfair Display"   # approved v2 riyio glow
+    assert 70 <= DC.SIZE_TALK <= 90 and 85 <= DC.SIZE_DRAMA <= 105                      # v2: slightly bigger
 
 
 def test_typewriter_and_outline_lines(tmp_path):
@@ -113,7 +113,7 @@ def test_typewriter_and_outline_lines(tmp_path):
     assert serif and sans
     assert max(ln.count(r"\t(") for ln in serif) >= len("WINTER")             # typed letter by letter
     assert r"\1a&HFF&\bord2" in txt                                              # outline-only impact word
-    assert all(abs(b["box"][0] + b["box"][2] / 2 - 540) < 2 for b in res["boxes"])   # centred like the refs
+    assert all(0 <= b["box"][0] and b["box"][0] + b["box"][2] <= 1080 for b in res["boxes"])   # inside the picture
 
 
 # ------------------------------------------------------------------ Gemini dialogue plan (validated)

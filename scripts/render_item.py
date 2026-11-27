@@ -1113,8 +1113,8 @@ JOB_T0 = time.monotonic()
 # started past 115 min. Hard cap: at 138 min a watchdog stops the job and writes the result
 # json with the exact reason (v10 Weathering looped source->title->backup until the step was
 # killed at 150 min with no result).
-JOB_BUDGET_S = float(os.environ.get("SKY_JOB_BUDGET_MIN", "115")) * 60.0
-HARD_CAP_S = float(os.environ.get("SKY_HARD_CAP_MIN", "138")) * 60.0
+JOB_BUDGET_S = float(os.environ.get("SKY_JOB_BUDGET_MIN", "75")) * 60.0
+HARD_CAP_S = float(os.environ.get("SKY_HARD_CAP_MIN", "87")) * 60.0
 MAX_SOURCES_PER_JOB = int(os.environ.get("SKY_MAX_SOURCES", "12"))
 if (item or {}).get("demo") and not os.environ.get("SKY_MAX_SOURCES"):
     # Demos fail fast: the queued footage plus at most two proven swaps (~20-28 min each with

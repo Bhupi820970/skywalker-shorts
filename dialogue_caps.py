@@ -1,19 +1,11 @@
-"""Reference-style dialogue captions for Skywalker dialogue edits (riyio 0b4b8b8 port, re-measured on ref1/ref2
-Nov 24 2026 - "ek ek baariki dekh kr vasa kr").
-
-Measured on the refs (720 px wide frames) and scaled to our 1080 px plate:
-- talk lines: bold geometric sans (Montserrat Bold), ALL CAPS, wide tracking (~0.17 em), cap height 2.4-2.9 % of the
-  width (font ~42 px), one line of 1-5 words, white with a soft glow; meaning words in an accent colour with the
-  same-colour glow (gold "YOUR NAILS", blue "NICE TO MEET", green outline-only "LOT OF MONEY").
-- dramatic lines (the drop line / short threat-power-cold lines): Trajan-like serif caps (Cinzel Bold), cap height
-  ~4.3 % (font ~60 px), coloured glow, letters typed in one by one ("WINTER CAME").
-- glow: soft halo ~15-20 px (two ASS layers: blurred accent border under crisp text).
-- every line pops in 120 % -> 100 % in ~200 ms; words appear when they are spoken.
-- horizontally centred on the picture (refs never shift captions sideways), vertically just under the speaker's
-  chin (refs: 48-52 % of the frame = lower face), never over a face, picture centre without a face, always inside
-  the movie picture (the white hook bar above it is untouched).
-Only words a character SAYS (sky_lyrics guard: no sung part, no song title / lyrics, nothing outside the dialogue act).
-Written as an ASS file (libass, same burn path as the old lower-thirds).
+"""Riyio-style captions (approved v2, 27 Nov 2026):
+- Playfair Display, ALL CAPS, coloured glow on key words, white fillers; words appear as spoken.
+- Glow: two ASS layers (blurred colour halo under crisp text), pop 120 % -> 100 % in ~200 ms.
+- Placed BESIDE the speaking character (side of the face with more empty space), never on a face,
+  stable inside a shot (same side and Y for every line of that shot), inside the picture safe area.
+  The white hook bar above the picture is untouched.
+- Never cover source typography with a blur rectangle: use a clean source or crop burned-in subs out.
+Only words a character SAYS (sky_lyrics guard). Written as an ASS file (libass, same burn path as before).
 """
 from __future__ import annotations
 
@@ -21,9 +13,9 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-FONT_SANS = ROOT / "fonts" / "Montserrat-Bold.ttf"
-FONT_SERIF = ROOT / "fonts" / "Cinzel-Bold.ttf"
-SANS_NAME, SERIF_NAME = "Montserrat Bold", "Cinzel Bold"
+FONT_SANS = ROOT / "fonts" / "PlayfairDisplay.ttf"
+FONT_SERIF = ROOT / "fonts" / "PlayfairDisplay.ttf"
+SANS_NAME, SERIF_NAME = "Playfair Display", "Playfair Display"
 FONT, FONT_NAME = FONT_SERIF, SERIF_NAME          # back-compat names
 W, H = 1080, 1920
 MAX_WORDS, MAX_CHARS, GAP_S = 5, 16, 0.35   # ref lines span ~35-60 % of the width
@@ -44,9 +36,9 @@ MEANING = [
     (PINK, r"love|heart|miss|sorry|lost|cry|tears|alone|forget|together|kiss|beautiful|mother|father|family"),
     (BLUE, r"cold|winter|ice|calm|quiet|dark|night|sea|ocean|sky|dream|soul|ghost|time|remember"),
 ]
-SIZE_TALK, SIZE_DRAMA = 42, 60          # px on the 1080 wide frame: ref cap height 2.4-2.9 % / 4.3 % of the width
-SPACING_TALK, SPACING_DRAMA = 7, 3       # ASS \fsp: ref sans tracking ~0.17 em, serif ~0.05 em
-GLOW_BORD, GLOW_BLUR, GLOW_ALPHA = 7, 12, 0x60
+SIZE_TALK, SIZE_DRAMA = 80, 96          # v2: a bit bigger than the first riyio samples
+SPACING_TALK, SPACING_DRAMA = 4, 2
+GLOW_BORD, GLOW_BLUR, GLOW_ALPHA = 9, 14, 0x60
 TYPE_CHAR_S = 0.045                      # dramatic lines: one letter every 45 ms (capped to the first 60 % of the line)
 SIZE_FILLER, SIZE_KEY, SIZE_PUNCH = SIZE_TALK, SIZE_TALK, SIZE_DRAMA   # back-compat
 
@@ -204,33 +196,75 @@ def _overlap(a, b) -> int:
     return max(0, min(ax + aw, bx + bw) - max(ax, bx)) * max(0, min(ay + ah, by + bh) - max(ay, by))
 
 
-def place(tw: int, th: int, lay: dict, faces: list) -> tuple[tuple[int, int, int, int], str]:
-    """Horizontally centred on the picture (refs). Vertically just under the biggest face's chin, else lower
-    picture, else above the head; picture centre without a face. Never over a face, always inside the picture."""
+def _hit_box(box) -> tuple:
+    """Collision box without the glow pad, so the halo can sit close to a face without covering it."""
+    x, y, w, h = box
+    p = int(GLOW_BORD)
+    return (x + p, y + p, max(1, w - 2 * p), max(1, h - 2 * p))
+
+
+def _person_box(f) -> tuple:
+    """Keep-out around a face (head + a little shoulder): type sits beside the speaker, not on them."""
+    fx, fy, fw, fh = f
+    return (fx - 0.30 * fw, fy - 0.35 * fh, fw * 1.60, fh * 1.70)
+
+
+def place(tw: int, th: int, lay: dict, faces: list, locked: dict | None = None) -> tuple[tuple[int, int, int, int], str]:
+    """Beside the biggest face, on the side with more empty space (or between two heads / in the sky above).
+    Never over a face, clamped to the picture. With `locked` (same shot) reuse that side and Y so captions
+    do not jump inside a shot."""
     px, py, pw, ph = int(lay["plate_x"]), int(lay["plate_y"]), int(lay["plate_w"]), int(lay["plate_h"])
-    m = int(0.03 * pw)
+    m = int(0.04 * pw)
     if tw > pw - 2 * m:
         tw = pw - 2 * m
-    cx = px + pw / 2
-    cands = []
+    keep = [_person_box(f) for f in faces]
+
+    def clamp(cx, cy):
+        x0 = int(min(max(cx - tw / 2, px + m), px + pw - m - tw))
+        y0 = int(min(max(cy - th / 2, py + m), py + ph - m - th))
+        return (x0, y0, tw, th)
+
+    def score(box, zone, prefer):
+        hb = _hit_box(box)
+        ov = sum(_overlap(hb, k) for k in keep) + 2 * sum(_overlap(hb, tuple(f)) for f in faces)
+        pref = 0 if (prefer and zone == prefer) or zone == "between" else 80
+        return (ov, pref, box[1])
+
+    prefer, cands = None, []
     if faces:
         fx, fy, fw, fh = max(faces, key=lambda f: f[2] * f[3])
-        cands.append((cx, fy + fh + 0.10 * fh + th / 2, "chin"))
-        cands.append((cx, py + 0.80 * ph, "low"))
-        cands.append((cx, fy - 0.10 * fh - th / 2, "above"))
-        cands.append((fx + fw / 2, fy + fh + 0.10 * fh + th / 2, "chin_off"))
-    cands.append((cx, py + 0.52 * ph, "mid"))
+        fcx, fcy = fx + fw / 2, fy + fh / 2
+        prefer = "right" if fcx < px + pw / 2 else "left"
+        xs = sorted(faces, key=lambda f: f[0] + f[2] / 2)
+        if len(xs) >= 2:
+            for a_, b_ in zip(xs, xs[1:]):
+                cands.append((((a_[0] + a_[2]) + b_[0]) / 2, min(a_[1], b_[1]) - th / 2 - 6, "between"))
+        for sd in (prefer, "left" if prefer == "right" else "right"):
+            for dy in (0.0, 0.15, -0.15, 0.40, -0.35):
+                cx = fcx + 0.90 * fw + tw / 2 if sd == "right" else fcx - 0.90 * fw - tw / 2
+                cands.append((cx, fcy + dy * fh, sd))
+        cands.append((fcx, fy - 0.12 * fh - th / 2, "above"))
+    cands += [(px + 0.28 * pw, py + 0.20 * ph, "left"), (px + 0.72 * pw, py + 0.20 * ph, "right"),
+              (px + 0.28 * pw, py + 0.42 * ph, "left"), (px + 0.72 * pw, py + 0.42 * ph, "right")]
+    if locked:
+        prefer = locked.get("zone") or prefer
+        cy, side = locked.get("cy"), locked.get("zone")
+        if side in ("left", "right") and faces:
+            fx, fy, fw, fh = max(faces, key=lambda f: f[2] * f[3])
+            fcx = fx + fw / 2
+            xx = fcx + 0.90 * fw + tw / 2 if side == "right" else fcx - 0.90 * fw - tw / 2
+            cands.insert(0, (xx, cy if cy is not None else fy + fh / 2, side))
+        elif cy is not None:
+            cands.insert(0, (locked.get("cx", px + pw * 0.28), cy, side or "locked"))
     best = None
-    for x_c, cy, zone in cands:
-        x0 = int(min(max(x_c - tw / 2, px + m), px + pw - m - tw))
-        y0 = int(min(max(cy - th / 2, py + m), py + ph - m - th))
-        box = (x0, y0, tw, th)
-        ov = sum(_overlap(box, tuple(f)) for f in faces)
-        if best is None or ov < best[2]:
-            best = (box, zone, ov)
-        if ov <= 0.02 * tw * th:
+    for cx, cy, zone in cands:
+        box = clamp(cx, cy)
+        sc = score(box, zone, prefer)
+        if best is None or sc < best[0]:
+            best = (sc, box, zone)
+        if sc[0] <= 0.02 * tw * th and (not prefer or zone in (prefer, "between") or locked):
             break
-    return best[0], best[1]
+    return best[1], best[2]
 
 
 def _ass_col(rgb) -> str:
@@ -303,13 +337,24 @@ def _layers(items: list[dict], t0: float, t1: float) -> tuple[str, str]:
     return "".join(glow_parts), "".join(crisp_parts)
 
 
-def build(words: list[dict], end_s: float, lay: dict, faces_at=None, out_ass: Path | None = None) -> dict | None:
+def _shot_key(t: float, shots: list | None) -> int:
+    if not shots:
+        return 0
+    for i, (a, b) in enumerate(shots):
+        if float(a) - 0.02 <= t < float(b) + 0.02:
+            return i
+    return -1
+
+
+def build(words: list[dict], end_s: float, lay: dict, faces_at=None, out_ass: Path | None = None,
+          shots: list | None = None) -> dict | None:
     """words: mapped dialogue words on the output timeline ({t0, t1, word}); end_s = dialogue act end.
-    faces_at(t) -> [(x, y, w, h)] in 1080x1920 coords. Returns {boxes, ass, text} or None."""
+    faces_at(t) -> [(x, y, w, h)] in 1080x1920 coords. shots: [(t0, t1), ...] keeps placement stable inside a
+    shot. Returns {boxes, ass, text} or None."""
     groups = group_words(words, end_s)
     if not groups:
         return None
-    events, boxes = [], []
+    events, boxes, locked = [], [], {}
     for gi, g in enumerate(groups):
         t0 = float(g[0]["t0"])
         nxt = float(groups[gi + 1][0]["t0"]) if gi + 1 < len(groups) else end_s
@@ -319,14 +364,37 @@ def build(words: list[dict], end_s: float, lay: dict, faces_at=None, out_ass: Pa
         if t1 <= t0:
             continue
         items = style_group(g, gi, is_last=gi == len(groups) - 1)
-        tw, th = measure(items)
-        faces = []
-        if faces_at:
-            try:
-                faces = list(faces_at((t0 + t1) / 2) or [])
-            except Exception:
-                faces = []
-        (x, y, bw, bh), zone = place(tw, th, lay, faces)
+        sk = _shot_key((t0 + t1) / 2, shots)
+        if sk in locked:
+            faces = locked[sk]["faces"]
+        else:
+            faces = []
+            if faces_at:
+                try:
+                    faces = list(faces_at((t0 + t1) / 2) or [])
+                except Exception:
+                    faces = []
+        zone = "left"
+        x = y = bw = bh = 0
+        if faces:
+            fx, fy, fw, fh = max(faces, key=lambda f: f[2] * f[3])
+            mm = int(0.04 * int(lay["plate_w"]))
+            room = max(fx - (int(lay["plate_x"]) + mm), (int(lay["plate_x"]) + int(lay["plate_w"]) - mm) - (fx + fw))
+        else:
+            room = int(lay["plate_w"] * 0.55)
+        for sc in (1.0, 0.92, 0.84, 0.76, 0.68, 0.60, 0.52, 0.44, 0.38):
+            items_s = [dict(it, size=max(28, int(it["size"] * sc))) for it in items]
+            tw, th = measure(items_s)
+            if tw > max(32, room - 12) and sc > 0.38:
+                continue
+            (x, y, bw, bh), zone = place(tw, th, lay, faces, locked=locked.get(sk))
+            if all(_overlap(_hit_box((x, y, bw, bh)), tuple(f)) <= 0 for f in faces):
+                items = items_s
+                break
+        else:
+            items = items_s
+        if sk not in locked:
+            locked[sk] = {"zone": zone, "cy": y + bh / 2, "cx": x + bw / 2, "faces": faces}
         style = "RefSerif" if items[0].get("drama") else "RefSans"
         glow_txt, crisp_txt = _layers(items, t0, t1)
         pos = r"\an5\pos(%d,%d)\shad0\fscx120\fscy120\t(0,200,\fscx100\fscy100)\fad(40,90)" % (x + bw // 2, y + bh // 2)
@@ -352,6 +420,6 @@ def qa(boxes: list[dict], lay: dict) -> list[str]:
         x, y, w, h = c["box"]
         if x < px or x + w > px + pw or y < py or y + h > py + ph:
             bad.append(f"outside the picture: {c['text']}")
-        if any(_overlap((x, y, w, h), tuple(f)) > 0.02 * w * h for f in c.get("faces") or []):
+        if any(_overlap(_hit_box((x, y, w, h)), tuple(f)) > 0.02 * w * h for f in c.get("faces") or []):
             bad.append(f"over a face: {c['text']}")
     return bad

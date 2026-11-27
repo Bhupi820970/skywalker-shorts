@@ -3455,7 +3455,12 @@ def _reference_captions(edl: list[dict], tr: dict, lay: dict, video: Path, music
             if k not in cache:
                 cache[k] = story_captions.detect_faces(video, t, lay)
             return cache[k]
-        res = dialogue_caps.build(kept, T, lay, faces_at, WORK / "lowerthirds.ass")
+        shots = []
+        try:
+            shots = [(float(c["t0"]), float(c["t1"])) for c in (edl or []) if "t0" in c and "t1" in c]
+        except Exception:
+            shots = []
+        res = dialogue_caps.build(kept, T, lay, faces_at, WORK / "lowerthirds.ass", shots=shots or None)
         if res:
             bad = dialogue_caps.qa(res["boxes"], lay)
             if bad:

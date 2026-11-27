@@ -23,7 +23,7 @@ from pathlib import Path
 import caption_patterns as CP
 
 ROOT = Path(__file__).resolve().parent
-FONT = ROOT / "fonts" / "Anton-Regular.ttf"
+FONT = ROOT / "fonts" / "PlayfairDisplay.ttf"
 YUNET = ROOT / "models" / "face_detection_yunet_2023mar.onnx"
 W, H = 1080, 1920
 EVERY = 3
@@ -210,8 +210,8 @@ def _overlap(a, b) -> int:
 def place(words, pat, lay, faces, idx) -> dict | None:
     """Beside the biggest face on the side away from it; alternate sides without a face; never over a face."""
     px, py, pw, ph = int(lay["plate_x"]), int(lay["plate_y"]), int(lay["plate_w"]), int(lay["plate_h"])
-    key_px = int(pat["key"] * ph * 1.3) if len(words) <= 2 else int(pat["key_long"] * ph * 1.3)
-    fil_px = int(pat["filler"] * ph * 1.3)
+    key_px = int(pat["key"] * ph * 2.05) if len(words) <= 2 else int(pat["key_long"] * ph * 2.05)
+    fil_px = int(pat["filler"] * ph * 2.05)
     tw, th = measure(words, key_px, fil_px)
     margin = int(0.025 * pw)
     if tw > pw - 2 * margin:
@@ -233,12 +233,27 @@ def place(words, pat, lay, faces, idx) -> dict | None:
     side = 1 if idx % 2 else -1
     nf_y = py + pat["no_face_y"] * ph + yoff * 0.12 * ph
     cands += [(px + pw / 2 + side * pw * 0.22, nf_y), (px + pw / 2 - side * pw * 0.22, nf_y), (px + pw / 2, nf_y)]
-    for cx, cy in cands:
-        x0 = int(min(max(cx - tw / 2, px + margin), px + pw - margin - tw))
-        y0 = int(min(max(cy - th / 2, py + margin), py + ph - margin - th))
-        box = (x0, y0, tw, th)
-        if all(_overlap(box, f) <= 0.02 * tw * th for f in faces):
-            return {"box": box, "key_px": key_px, "fil_px": fil_px}
+    for _ in range(7):
+        for cx, cy in cands:
+            x0 = int(min(max(cx - tw / 2, px + margin), px + pw - margin - tw))
+            y0 = int(min(max(cy - th / 2, py + margin), py + ph - margin - th))
+            box = (x0, y0, tw, th)
+            if all(_overlap(box, f) <= 0.02 * tw * th for f in faces):
+                return {"box": box, "key_px": key_px, "fil_px": fil_px}
+        key_px, fil_px = max(22, int(key_px * 0.85)), max(18, int(fil_px * 0.85))   # shrink until a side slot is clear
+        tw, th = measure(words, key_px, fil_px)
+        cands = []
+        if faces:
+            fx, fy, fw, fh = max(faces, key=lambda f: f[2] * f[3])
+            fcx, fcy = fx + fw / 2, fy + fh / 2
+            side = 1 if fcx < px + pw / 2 else -1
+            for s in (side, -side):
+                cx = fcx + s * (pat["gap"] * fw + tw / 2)
+                cx += (1 if cx < px + pw / 2 else -1) * pat["nudge"] * pw
+                cands.append((cx, fcy + yoff * fh))
+        side = 1 if idx % 2 else -1
+        nf_y = py + pat["no_face_y"] * ph + yoff * 0.12 * ph
+        cands += [(px + pw / 2 + side * pw * 0.22, nf_y), (px + pw / 2 - side * pw * 0.22, nf_y), (px + pw / 2, nf_y)]
     return None
 
 
@@ -277,8 +292,10 @@ def build(*, item: dict, item_id: str, hook: str, beats: list[float], dur: float
                 parts.append(r"{\fs%d\c%s}%s" % (pl["key_px"], _ass_color(col), wd.upper()))
             else:
                 parts.append(r"{\fs%d\c&H00FFFFFF&}%s" % (pl["fil_px"], wd.upper()))
-        head = r"{\an5\pos(%d,%d)\fscx80\fscy80\t(0,90,\fscx100\fscy100)}" % (x + w // 2, y + h // 2)
-        events.append(f"Dialogue: 0,{_ts(t0)},{_ts(t1)},Neon,,0,0,0,,{head}" + " ".join(parts))
+        pos = r"{\an5\pos(%d,%d)\fscx120\fscy120\t(0,200,\fscx100\fscy100)\shad0}" % (x + w // 2, y + h // 2)
+        body = " ".join(parts)
+        events.append(f"Dialogue: 0,{_ts(t0)},{_ts(t1)},Neon,,0,0,0,," + pos + r"{\bord8\blur12\1a&HFF&}" + body)
+        events.append(f"Dialogue: 1,{_ts(t0)},{_ts(t1)},Neon,,0,0,0,," + pos + r"{\bord2\blur0.6}" + body)
         boxes.append({"t0": t0, "t1": t1, "box": [x, y, w, h], "text": " ".join(grp),
                       "faces": [list(f) for f in faces]})
     if not events:
@@ -292,7 +309,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Neon,Anton,72,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,4,6,5,0,0,0,1
+Style: Neon,Playfair Display,84,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,2,0,5,0,0,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

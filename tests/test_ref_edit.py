@@ -148,22 +148,32 @@ def test_caption_groups_and_meaning_colours():
     assert all(it["col"] == DC.WHITE for it in st if not it["key"])
 
 
-def test_caption_placement_under_chin_never_on_face():
+def test_caption_placement_beside_speaker_never_on_face():
     face = (452, 719, 287, 417)
     (x, y, w, h), zone = DC.place(400, 90, LAY, [face])
-    assert zone == "chin" and y >= face[1] + face[3] and abs(x + w / 2 - 540) < 2    # centred like the refs
+    assert zone in ("left", "between", "above")
+    assert DC._overlap(DC._hit_box((x, y, w, h)), face) == 0
     assert y + h <= LAY["plate_y"] + LAY["plate_h"]
-    big = (300, 700, 480, 560)                                                # face fills the picture
-    (x, y, w, h), zone = DC.place(400, 90, LAY, [big])
-    assert DC._overlap((x, y, w, h), big) <= DC._overlap((340, 1100, 400, 90), big)
+    # stable inside a shot: same side and Y when locked
+    (x2, y2, w2, h2), z2 = DC.place(300, 90, LAY, [face], locked={"zone": zone, "cy": y + h / 2, "cx": x + w / 2})
+    assert z2 == zone and abs((y2 + h2 / 2) - (y + h / 2)) <= 8
     (x, y, w, h), zone = DC.place(400, 90, LAY, [])
-    assert zone == "mid" and abs(x + w / 2 - 540) < 2
+    assert zone in ("left", "right") and abs(x + w / 2 - 540) > 80     # not centred over a missing face
+
+
+def test_build_keeps_side_and_y_inside_a_shot(tmp_path):
+    face = (700, 700, 200, 260)
+    res = DC.build(WORDS, 6.0, LAY, lambda t: [face], tmp_path / "s.ass", shots=[(0.0, 6.0)])
+    ys = {round(b["box"][1] + b["box"][3] / 2) for b in res["boxes"]}
+    assert {b["zone"] for b in res["boxes"]} == {res["boxes"][0]["zone"]}
+    assert max(ys) - min(ys) <= 40
+    assert not DC.qa(res["boxes"], LAY)
 
 
 def test_build_writes_reference_ass(tmp_path):
     res = DC.build(WORDS, 6.0, LAY, lambda t: [(452, 700, 200, 260)], tmp_path / "lowerthirds.ass")
     txt = (tmp_path / "lowerthirds.ass").read_text()
-    assert "Montserrat Bold" in txt and "Cinzel Bold" in txt and r"\fscx120\fscy120\t(0,200,\fscx100\fscy100)" in txt
+    assert "Playfair Display" in txt and r"\fscx120\fscy120\t(0,200,\fscx100\fscy100)" in txt
     assert txt.count("Dialogue:") == 2 * len(res["boxes"]) and len(res["boxes"]) >= 3   # glow layer + crisp layer
     assert all(b["t1"] <= 6.0 for b in res["boxes"]) and not DC.qa(res["boxes"], LAY)
     assert "KING" in res["text"]
