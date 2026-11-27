@@ -171,19 +171,51 @@ def check(root: Path | None = None, now: datetime | None = None) -> dict:
         "stock_used": stock["used"],
         "stock_target": stock["target"],
         "stock_need_refill": stock["need_refill"],
+        "stock_refilling": stock.get("refilling", False),
+        "stock_refill_at": stock.get("refill_at"),
+        "stock_alert_at": stock.get("alert_at"),
+        "stock_alert": bool(stock.get("alert")),
         "stock_assigned": [g["id"] for g in assigned],
-        "ok": not short and len(preuploaded_pool) >= 20,
+        "ok": not short and len(preuploaded_pool) >= 20 and not stock.get("alert"),
     }
+    issues = []
+    if stock.get("alert"):
+        issues.append(f"backup stock {stock['ready']} ready (<= {stock.get('alert_at')}): BIBI's bot must step in "
+                      f"(manual QC / pick) - Gemini or renders are not refilling")
+    if short:
+        issues.append(f"{len(short)} slot(s) in the next 24h without a finished video")
+    status["issues"] = issues
     return status
+
+
+def write_stock_alert(path: Path, status: dict) -> dict:
+    """Alert file BIBI's bot watches: present-tense state of the backup stock (data only)."""
+    alert = {
+        "at": status.get("at"),
+        "alert": bool(status.get("stock_alert")),
+        "ready": status.get("stock_ready"),
+        "pending": status.get("stock_pending"),
+        "target": status.get("stock_target"),
+        "refill_at": status.get("stock_refill_at"),
+        "alert_at": status.get("stock_alert_at"),
+        "refilling": status.get("stock_refilling"),
+        "short_slots": status.get("short") or [],
+        "issues": status.get("issues") or [],
+    }
+    path.write_text(json.dumps(alert, indent=2, ensure_ascii=False) + "\n")
+    if alert["alert"]:
+        print(f"::warning::backup stock alert: {alert['ready']} ready (<= {alert['alert_at']})")
+    return alert
 
 
 def main() -> int:
     status = check()
     out = (Path(os.environ.get("SKY_ROOT") or REPO) / "config" / "health_status.json")
     out.write_text(json.dumps(status, indent=2, ensure_ascii=False) + "\n")
+    write_stock_alert(out.parent / "backup_stock_alert.json", status)
     print(json.dumps({k: status[k] for k in ("slots_checked", "short", "need_render",
                                              "backup_pool_preuploaded",
-                                             "stock_ready", "stock_need_refill", "ok")}, indent=2))
+                                             "stock_ready", "stock_need_refill", "stock_alert", "ok")}, indent=2))
     # Non-zero only when a live slot in the next 24h has no finished video
     return 1 if status["short"] else 0
 

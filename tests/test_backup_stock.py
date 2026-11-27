@@ -79,23 +79,75 @@ def test_no_refill_when_at_target(tmp_path, monkeypatch):
     assert backup_stock.status_summary(root)["need_refill"] is False
 
 
-def test_refill_while_below_target(tmp_path, monkeypatch):
-    # 6 ready used to be above the old floor of 5; refill must still run toward 30.
-    root = _root(tmp_path, monkeypatch)
+def _ready_items(root, n, slug="zootopia2"):
     items = []
-    for i in range(5):
-        iid = f"stock-zootopia2-{i+1:02d}"
-        _write(root / "results" / f"{iid}.json", _ready_result(iid, stock_topic="backup-zootopia2"))
-        items.append({"id": iid, "slug": "zootopia2", "topic_id": "backup-zootopia2",
+    for i in range(n):
+        iid = f"stock-{slug}-{i+1:02d}"
+        _write(root / "results" / f"{iid}.json", _ready_result(iid, stock_topic=f"backup-{slug}"))
+        items.append({"id": iid, "slug": slug, "topic_id": f"backup-{slug}",
                       "status": "ready", "asset_url": _ready_result(iid)["asset_url"]})
+    return items
+
+
+def test_refill_while_below_target(tmp_path, monkeypatch):
+    # BIBI rule 27 Nov: 7 ready (< refill_at 8) starts a refill toward 20.
+    root = _root(tmp_path, monkeypatch)
+    items = _ready_items(root, 7)
     _write(root / "config" / "backup_stock.json", {
-        "target": 30, "refill_at": 5, "max_refill_per_run": 2, "items": items
+        "target": 20, "refill_at": 8, "max_refill_per_run": 2, "items": items
     })
     assert backup_stock.status_summary(root)["need_refill"] is True
     ids = backup_stock.next_refill_ids(root, limit=2)
     assert len(ids) == 2
-    # already has stock-zootopia2-01..05, next zootopia2 would be 06; other topics start at 01
+    # already has stock-zootopia2-01..07, next zootopia2 would be 08; other topics start at 01
     assert "stock-zootopia2-01" not in ids
+
+
+def test_no_refill_between_floor_and_target_until_below_8(tmp_path, monkeypatch):
+    root = _root(tmp_path, monkeypatch)
+    items = _ready_items(root, 10)
+    _write(root / "config" / "backup_stock.json", {
+        "target": 20, "refill_at": 8, "max_refill_per_run": 2, "items": items
+    })
+    s = backup_stock.status_summary(root)
+    assert s["need_refill"] is False and s["refilling"] is False and s["alert"] is False
+    assert backup_stock.next_refill_ids(root, limit=2) == []
+
+
+def test_refill_continues_to_20_once_started(tmp_path, monkeypatch):
+    # Hysteresis: a refill that started below 8 keeps going at 10 ready until 20.
+    root = _root(tmp_path, monkeypatch)
+    items = _ready_items(root, 10)
+    _write(root / "config" / "backup_stock.json", {
+        "target": 20, "refill_at": 8, "max_refill_per_run": 2, "refilling": True, "items": items
+    })
+    assert backup_stock.status_summary(root)["need_refill"] is True
+    assert len(backup_stock.next_refill_ids(root, limit=2)) == 2
+
+
+def test_refill_caps_in_flight_renders(tmp_path, monkeypatch):
+    # Gemini-friendly: never more than max_in_flight (4) stock renders pending at once.
+    root = _root(tmp_path, monkeypatch)
+    now = datetime(2026, 11, 27, 12, 0, tzinfo=IST)
+    items = _ready_items(root, 1)
+    for slug in ("kalki2898ad", "superman", "dune", "arcane"):
+        items.append({"id": f"stock-{slug}-01", "slug": slug, "topic_id": f"backup-{slug}",
+                      "status": "pending", "queued_at": "2026-11-27 11:30 IST"})
+    _write(root / "config" / "backup_stock.json", {
+        "target": 20, "refill_at": 8, "max_refill_per_run": 2, "items": items
+    })
+    s = backup_stock.status_summary(root, now)
+    assert s["pending"] == 4 and s["need_refill"] is False
+    assert s["alert"] is True  # 1 ready <= alert_at 2
+    assert backup_stock.next_refill_ids(root, limit=2, now=now) == []
+
+
+def test_refill_flag_clears_at_target():
+    man = {"target": 20, "refill_at": 8, "refilling": True,
+           "items": [{"id": f"stock-x-{i:02d}", "status": "ready", "asset_url": "u"} for i in range(20)]}
+    assert backup_stock.update_refill_flag(man) is False
+    man["items"] = man["items"][:7]
+    assert backup_stock.update_refill_flag(man) is True
 
 
 def test_assign_marks_used_and_never_reuses(tmp_path, monkeypatch):
@@ -610,7 +662,7 @@ def test_stale_pending_does_not_block_refill(tmp_path, monkeypatch):
         "queued_at": "2026-11-25 10:11 IST",
     })
     _write(root / "config" / "backup_stock.json", {
-        "target": 30, "refill_at": 5, "max_refill_per_run": 2, "items": items
+        "target": 20, "refill_at": 8, "max_refill_per_run": 2, "items": items
     })
     summary = backup_stock.status_summary(root, now)
     assert summary["ready"] == 5

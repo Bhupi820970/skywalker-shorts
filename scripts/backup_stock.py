@@ -8,10 +8,13 @@ or QC-rejects, or an official slot is missing from the queue entirely, the next
 unused stock video is assigned immediately. A queued item that is still
 rendering is given until ~60 minutes before the slot. Buffer then posts it at
 the slot time (or shareNow if late).
-Used entries are never posted twice. Whenever ready stock is below the
-target of 30, health dispatches a few new stock renders per run (evergreen
-sources-release topics only, 2 per run, own concurrency group) until 30 is
-reached again.
+Used entries are never posted twice. Stock is only used when a slot has no fresh
+video (Gemini out of quota / errored, or the run failed).
+BIBI's rule (27 Nov): keep ~20 ready. When ready drops below 8 the manifest flips
+to `refilling` and health dispatches a few stock renders per run (evergreen
+sources-release topics only, 2 per run, at most 4 in flight so the Gemini keys
+are not burned) until 20 are ready again. Ready <= 2 is an alert (BIBI's bot steps in).
+Thresholds live in config/backup_stock.json (target / refill_at / alert_at).
 """
 from __future__ import annotations
 
@@ -27,10 +30,12 @@ REPO = Path(__file__).resolve().parent.parent
 IST = timezone(timedelta(hours=5, minutes=30))
 MANIFEST = "config/backup_stock.json"
 STOCK_RE = re.compile(r"^stock-(.+)-(\d{2})$")
-TARGET = 30
-REFILL_AT = 5
+TARGET = 20
+REFILL_AT = 8
+ALERT_AT = 2
 MAX_REFILL = 2
-MIN_READY = 4
+MAX_IN_FLIGHT = 4
+MIN_READY = REFILL_AT
 RETIRE_AFTER = 2
 RELEASE = "backup-stock"
 LEAD_MIN = 60
@@ -75,6 +80,8 @@ def load_manifest(root: Path | None = None) -> dict:
             "target": TARGET,
             "refill_at": REFILL_AT,
             "max_refill_per_run": MAX_REFILL,
+            "alert_at": ALERT_AT,
+            "max_in_flight": MAX_IN_FLIGHT,
             "release": RELEASE,
             "items": [],
         }
@@ -85,6 +92,8 @@ def load_manifest(root: Path | None = None) -> dict:
     d.setdefault("target", TARGET)
     d.setdefault("refill_at", REFILL_AT)
     d.setdefault("max_refill_per_run", MAX_REFILL)
+    d.setdefault("alert_at", ALERT_AT)
+    d.setdefault("max_in_flight", MAX_IN_FLIGHT)
     d.setdefault("release", RELEASE)
     d.setdefault("items", [])
     return d
@@ -717,8 +726,39 @@ def sync(root: Path | None = None, now: datetime | None = None) -> dict:
     man["items"] = sorted(by_id.values(), key=lambda e: e.get("id") or "")
     _apply_retirements(man, root, now)
     mark_duplicate_scenes(man, root)
+    update_refill_flag(man)
     save_manifest(man, root)
     return man
+
+
+def _cfg(man: dict, key: str, default: int) -> int:
+    try:
+        return int(man.get(key) if man.get(key) is not None else default)
+    except Exception:
+        return default
+
+
+def update_refill_flag(man: dict) -> bool:
+    """Hysteresis: start refilling when ready < refill_at (8), stop once ready >= target (20)."""
+    ready = len(ready_entries(man))
+    if ready < _cfg(man, "refill_at", REFILL_AT):
+        man["refilling"] = True
+    elif ready >= _cfg(man, "target", TARGET):
+        man["refilling"] = False
+    else:
+        man["refilling"] = bool(man.get("refilling"))
+    return man["refilling"]
+
+
+def refill_need(man: dict) -> int:
+    """How many new stock renders may be queued now (0 = none)."""
+    if not update_refill_flag(man):
+        return 0
+    ready = len(ready_entries(man))
+    pending = len(pending_entries(man))
+    need = _cfg(man, "target", TARGET) - ready - pending
+    room = _cfg(man, "max_in_flight", MAX_IN_FLIGHT) - pending
+    return max(0, min(need, room))
 
 
 def mark_duplicate_scenes(man: dict, root: Path) -> list[str]:
@@ -1037,9 +1077,9 @@ def next_refill_ids(root: Path | None = None, limit: int | None = None,
     cap = int(limit if limit is not None else man.get("max_refill_per_run") or MAX_REFILL)
     ready = ready_entries(man)
     pending = pending_entries(man)
-    # Keep filling (capped per run) until ready+pending reaches the target of 30.
-    # refill_at is kept in the manifest for compatibility but no longer gates this.
-    need = target - len(ready) - len(pending)
+    # Refill only once ready < refill_at (8), then keep going (capped per run, few in
+    # flight) until the target (20) is ready again.
+    need = refill_need(man)
     if need <= 0 or cap <= 0:
         return []
     pool = [b for b in load_pool(root) if has_preuploaded(b)]
@@ -1186,16 +1226,22 @@ def status_summary(root: Path | None = None, now: datetime | None = None) -> dic
     pending = pending_entries(man)
     used = [e for e in man.get("items") or [] if e.get("status") == "used"]
     retired = sorted(retired_slugs(root, man))
-    below = len(ready) < MIN_READY
+    refill_at = _cfg(man, "refill_at", REFILL_AT)
+    alert_at = _cfg(man, "alert_at", ALERT_AT)
+    below = len(ready) < refill_at
+    need = refill_need(man)
     return {
         "ready": len(ready),
         "pending": len(pending),
         "used": len(used),
         "target": int(man.get("target") or TARGET),
-        "min_ready": MIN_READY,
+        "min_ready": refill_at,
         "below_ready_floor": below,
-        "refill_at": int(man.get("refill_at") or REFILL_AT),
-        "need_refill": below or (len(ready) + len(pending)) < int(man.get("target") or TARGET),
+        "refill_at": refill_at,
+        "alert_at": alert_at,
+        "refilling": bool(man.get("refilling")),
+        "need_refill": need > 0,
+        "alert": len(ready) <= alert_at,
         "ready_ids": [e["id"] for e in ready],
         "pending_ids": [e["id"] for e in pending],
         "retired": retired,

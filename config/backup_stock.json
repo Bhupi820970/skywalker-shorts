@@ -1,9 +1,11 @@
 {
-  "target": 30,
-  "refill_at": 5,
+  "target": 20,
+  "refill_at": 8,
+  "alert_at": 2,
+  "max_in_flight": 4,
   "max_refill_per_run": 2,
   "release": "backup-stock",
-  "note": "Pre-rendered, Gemini-QC-passed backup Shorts on the backup-stock release. No slot until assigned. Whenever ready is below 30, health fills back to 30 a few per run. Used entries are never posted twice.",
+  "note": "Pre-rendered, QC-passed backup Shorts on the backup-stock release, used ONLY when a slot has no fresh video (Gemini out/errored or run failed). BIBI rule 27 Nov: keep ~20 ready; when ready < 8 health refills (2 per run, max 4 in flight) back to 20; ready <= 2 = alert. Used entries are never posted twice.",
   "items": [
     {
       "id": "stock-alienromulus-01",

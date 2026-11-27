@@ -1,7 +1,8 @@
 name: health
 
 # Verify next 24h official (+ extra queue) slots are covered; assign ready stock to failed/missing/imminent slots;
-# keep backup pool healthy; refill pre-rendered stock (2/run) until the target of 30; auto-fill queue.
+# keep backup pool healthy; refill pre-rendered stock when ready < 8 (2/run, max 4 in flight) back to 20
+# (config/backup_stock.json); ready <= 2 -> config/backup_stock_alert.json alert; auto-fill queue.
 # GitHub's schedule is best-effort and was firing only every few hours (13-16 Nov), so the box
 # also dispatches this via the old box timer (retired) when the newest run is >28 min old.
 # Double triggers are harmless: one concurrency group, and checkout uses latest main (not the
@@ -60,7 +61,7 @@ jobs:
           if [ -n "$short" ] || [ "$pre" -lt 20 ]; then echo "need_backup=1" >> "$GITHUB_OUTPUT"; else echo "need_backup=0" >> "$GITHUB_OUTPUT"; fi
           git config user.name "skywalker-health"
           git config user.email "actions@users.noreply.github.com"
-          git add config/health_status.json config/backup_stock.json config/scene_requests.json queue/ results/*.json || true
+          git add config/health_status.json config/backup_stock_alert.json config/backup_stock.json config/scene_requests.json queue/ results/*.json || true
           git diff --cached --quiet || {
             git commit -m "health: $(date -u +%F-%H%M)"
             for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
