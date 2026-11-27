@@ -3046,6 +3046,33 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "godofwar",
+      "pillar": "hollywood",
+      "words": "GOD OF WAR RAGNAROK",
+      "hook": "Why Kratos finally forgave his past",
+      "title": "Why Kratos finally forgave his past | God Of War Ragnarok | #edit",
+      "description": "Why Kratos finally forgave his past. From official God Of War Ragnarok clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #godofwar #kratos #atreus",
+      "tags": [
+        "godofwar",
+        "kratos",
+        "atreus",
+        "godofwarragnarok",
+        "playstation",
+        "gameedit"
+      ],
+      "market": "US/UK",
+      "source_url": "https://www.youtube.com/watch?v=ZjucT-UZzgg",
+      "scene_assets": [
+        "godofwar_scene1_h264.mp4",
+        "godofwar_scene2_h264.mp4",
+        "godofwar_scene3_h264.mp4",
+        "godofwar_scene4_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box",
+      "category": "game"
     }
   ]
 }

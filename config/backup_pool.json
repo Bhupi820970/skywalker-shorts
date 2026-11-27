@@ -2346,6 +2346,43 @@
       ],
       "added_by": "footage_refill",
       "category": "movie"
+    },
+    {
+      "id": "backup-godofwar",
+      "pillar": "hollywood",
+      "source_url": "https://www.youtube.com/watch?v=ZjucT-UZzgg",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/godofwar_scene1_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/godofwar_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/godofwar_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/godofwar_scene4_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Kratos finally forgave his past",
+      "words": "GOD OF WAR RAGNAROK",
+      "title": "Why Kratos finally forgave his past | God Of War Ragnarok | #edit",
+      "description": "Why Kratos finally forgave his past. From official God Of War Ragnarok clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #godofwar #kratos #atreus",
+      "tags": [
+        "godofwar",
+        "kratos",
+        "atreus",
+        "godofwarragnarok",
+        "playstation",
+        "gameedit"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "godofwar_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "godofwar_scene1_h264.mp4",
+        "godofwar_scene2_h264.mp4",
+        "godofwar_scene3_h264.mp4",
+        "godofwar_scene4_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "game"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T17:15:11Z",
-  "last_upload_at": "2026-11-27T17:15:11Z"
+  "last_run_at": "2026-11-27T17:20:49Z",
+  "last_upload_at": "2026-11-27T17:20:49Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -64,6 +64,7 @@
   "yt:EKuVC2aVdI8",
   "yt:EovTf8Mydo4",
   "yt:Ev0FRl7IRkU",
+  "yt:F3jePdO9_jc",
   "yt:F_ftAIUnCjI",
   "yt:FfrhAqjQUFI",
   "yt:Fn9gKhU_2_Q",
@@ -159,6 +160,7 @@
   "yt:ZVTDEZvFU6k",
   "yt:Za4kyckczXI",
   "yt:ZivADyFlILE",
+  "yt:ZjucT-UZzgg",
   "yt:Zq4zTcIM0yQ",
   "yt:_E0_bV8GrLo",
   "yt:_GFcWG0M-YM",
@@ -236,6 +238,7 @@
   "yt:ppOVLojanC8",
   "yt:pyu-1cJiDls",
   "yt:r9oI7Kvqwsg",
+  "yt:rClXqZD2Xrs",
   "yt:rFKSrOALWdw",
   "yt:rH8FCwzOdpI",
   "yt:rpWPQlBz2Bk",
@@ -245,6 +248,7 @@
   "yt:stjZKBhQ3lg",
   "yt:tHfiXfk8Cgo",
   "yt:tIiipIHwTa4",
+  "yt:tQH0YK1rGVc",
   "yt:tR4OVXK6tG8",
   "yt:tSukOsMkYnE",
   "yt:u15tEo0wsQI",
@@ -3201,6 +3205,50 @@
    "kbps": 1390,
    "by": "box",
    "at": "2026-11-27T17:15:11Z"
+  },
+  {
+   "asset": "godofwar_scene1_h264.mp4",
+   "id": "yt:ZjucT-UZzgg",
+   "title": "God Of War Ragnarök - Myths of Midgard | PS5 & PS4 Games",
+   "channel": "PlayStation",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 10122,
+   "by": "box",
+   "at": "2026-11-27T17:20:49Z"
+  },
+  {
+   "asset": "godofwar_scene2_h264.mp4",
+   "id": "yt:F3jePdO9_jc",
+   "title": "God of War Ragnarök | Tráiler de la historia | PS5, PS4",
+   "channel": "PlayStation Latinoamérica",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 14340,
+   "by": "box",
+   "at": "2026-11-27T17:20:49Z"
+  },
+  {
+   "asset": "godofwar_scene3_h264.mp4",
+   "id": "yt:rClXqZD2Xrs",
+   "title": "God of War – Full TV Commercial | PS4",
+   "channel": "PlayStation",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2826,
+   "by": "box",
+   "at": "2026-11-27T17:20:49Z"
+  },
+  {
+   "asset": "godofwar_scene4_h264.mp4",
+   "id": "yt:tQH0YK1rGVc",
+   "title": "God of War Ragnarök - All Parents Can Relate | PS5 & PS4 Games",
+   "channel": "PlayStation",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 16302,
+   "by": "box",
+   "at": "2026-11-27T17:20:49Z"
   }
  ],
  "github": {
