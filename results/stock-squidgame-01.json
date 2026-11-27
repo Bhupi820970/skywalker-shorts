@@ -1,0 +1,511 @@
+{
+  "id": "stock-squidgame-01",
+  "status": "retry_queued",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-27 10:20 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45938252525",
+  "slot": null,
+  "title": "Why Gi-hun went back in | Squid Game | #edit",
+  "hook": "Why Gi-hun went back in",
+  "description": "Why Gi-hun went back in. From official Squid Game clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #squidgame #anime #edit",
+  "tags": [
+    "squidgame",
+    "anime",
+    "edit",
+    "shorts"
+  ],
+  "queue_meta": {
+    "hook": "Why Gi-hun went back in",
+    "title": "Why Gi-hun went back in | Squid Game | #edit",
+    "description": "Why Gi-hun went back in. From official Squid Game clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #squidgame #anime #edit",
+    "tags": [
+      "squidgame",
+      "anime",
+      "edit",
+      "shorts"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    }
+  ],
+  "backup_item": "backup-squidgame",
+  "stock": true,
+  "stock_topic": "backup-squidgame",
+  "spare": true,
+  "words": "SQUID GAME",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-squidgame-01.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 16.708,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene1_h264.mp4",
+  "music": "pr_montagemalquimiaslowedh6itamn7san7osmcme.mp3",
+  "music_credit": "Song: Phonk Time - MONTAGEM ALQUIMIA (SLOWED) - h6itam, n7san7os & Mc Menor Do Alvorada\nOfficial link: https://www.youtube.com/watch?v=wFUAYxi9zpo",
+  "description_final": "Why Gi-hun went back in. From official Squid Game clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #squidgame #anime #edit\n\nMusic:\nSong: Phonk Time - MONTAGEM ALQUIMIA (SLOWED) - h6itam, n7san7os & Mc Menor Do Alvorada\nOfficial link: https://www.youtube.com/watch?v=wFUAYxi9zpo",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-squidgame-01-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 516,
+    "bar_h": 140,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1780,
+    "block_h": 1920,
+    "drop_t": 16.708,
+    "energy": true,
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 8001,
+      "src_start": 38.351,
+      "dur": 1.5
+    },
+    {
+      "id": 8006,
+      "src_start": 62.0,
+      "dur": 1.774
+    },
+    {
+      "id": 9001,
+      "src_start": 67.325,
+      "dur": 1.625
+    },
+    {
+      "id": 7001,
+      "src_start": 22.808,
+      "dur": 1.649
+    },
+    {
+      "id": 2,
+      "src_start": 6.3,
+      "dur": 2.159
+    },
+    {
+      "id": 23,
+      "src_start": 123.874,
+      "dur": 2.159
+    },
+    {
+      "id": 10,
+      "src_start": 74.762,
+      "dur": 1.649
+    },
+    {
+      "id": 21,
+      "src_start": 107.461,
+      "dur": 1.649
+    },
+    {
+      "id": 24001,
+      "src_start": 133.446,
+      "dur": 2.544
+    },
+    {
+      "id": 8003101,
+      "src_start": 50.681,
+      "dur": 1.5
+    },
+    {
+      "id": 21002,
+      "src_start": 115.469,
+      "dur": 1.5
+    },
+    {
+      "id": 13,
+      "src_start": 93.802,
+      "dur": 0.711
+    },
+    {
+      "id": 16,
+      "src_start": 100.058,
+      "dur": 0.711
+    },
+    {
+      "id": 7003,
+      "src_start": 32.086,
+      "dur": 0.97
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/squidgame_scene1_h264.mp4",
+      "music": "pr_montagemalquimiaslowedh6itamn7san7osmcme.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false
+}
