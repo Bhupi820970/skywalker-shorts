@@ -1,82 +1,10 @@
 {
- "generated_at": "2026-11-27 15:44 IST",
+ "generated_at": "2026-11-27 17:32 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 224,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "don2",
-   "slot": "2026-11-27T16:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261127-1600-don2",
-   "pillar": "bollywood",
-   "words": "DON 2",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DON 2 fight scene official clip",
-    "DON 2 best scene official clip",
-    "DON 2 official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=Q4Tr7giZaXM",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Don let them think they had won",
-   "title": "Don let them think they had won | Don 2 | #edit",
-   "tags": [
-    "don2",
-    "shahrukhkhan",
-    "srk",
-    "don",
-    "bollywoodedit",
-    "bollywood"
-   ],
-   "market": "IN"
-  },
-  {
-   "slug": "arcane2",
-   "slot": "2026-11-27T22:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261127-2230-arcane2",
-   "pillar": "anime",
-   "words": "ARCANE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ARCANE fight scene official clip",
-    "ARCANE best scene official clip",
-    "ARCANE official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Still Watching Netflix"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
-   "missing_assets": [],
-   "on_release": [
-    "arcane2_scene2_h264.mp4"
-   ],
-   "hook": "Jinx never wanted this war",
-   "title": "Jinx never wanted this war | Arcane | #edit",
-   "tags": [
-    "arcane2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "jinx"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "dragonballdaima",
    "slot": "2026-11-28T09:00:00+05:30",
@@ -504,45 +432,6 @@
    "title": "Okarun was never ready for this | Dandadan | #edit",
    "tags": [
     "dandadan",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "okarun"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "dandadanevil",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-dandadanevil",
-   "pillar": "anime",
-   "words": "DAN DA DAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DAN DA DAN fight scene official clip",
-    "DAN DA DAN best scene official clip",
-    "DAN DA DAN official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YuIR94VIC7k",
-   "missing_assets": [],
-   "on_release": [
-    "dandadanevil_scene1_h264.mp4"
-   ],
-   "hook": "Evil Eye was a lonely kid",
-   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
-   "tags": [
-    "dandadanevil",
     "anime",
     "animeedit",
     "edit",
@@ -1276,6 +1165,46 @@
    "market": "US/UK"
   },
   {
+   "slug": "onepieceegghead",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-onepieceegghead",
+   "pillar": "anime",
+   "words": "ONE PIECE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ONE PIECE fight scene official clip",
+    "ONE PIECE best scene official clip",
+    "ONE PIECE official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "ONE PIECE Official - ENG"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=G9bqtUiyxyQ",
+   "missing_assets": [],
+   "on_release": [
+    "onepieceegghead_scene2_h264.mp4"
+   ],
+   "hook": "Luffy laughs while gods fall",
+   "title": "Luffy laughs while gods fall | One Piece | #edit",
+   "tags": [
+    "onepieceegghead",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "luffy"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "onepunchman3",
    "slot": "9999",
    "for": "backup_pool",
@@ -1510,41 +1439,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "spiderverse",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-spiderverse",
-   "pillar": "hollywood",
-   "words": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SPIDER-MAN: ACROSS THE SPIDER-VERSE fight scene official clip",
-    "SPIDER-MAN: ACROSS THE SPIDER-VERSE best scene official clip",
-    "SPIDER-MAN: ACROSS THE SPIDER-VERSE official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=GPitD0-mkYA",
-   "missing_assets": [],
-   "on_release": [
-    "spiderverse_scene3_h264.mp4"
-   ],
-   "hook": "Why did every Spider-Man chase him here?",
-   "title": "Why did every Spider-Man chase him here? | Spider-Man: Across The Spider-Verse | #edit",
-   "tags": [
-    "spiderverse",
-    "milesmorales",
-    "spiderman",
-    "animation",
-    "sony",
-    "spiderverseedit"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "spiritedaway",
    "slot": "9999",
    "for": "backup_pool",
@@ -1623,6 +1517,42 @@
     "trending",
     "anya",
     "loid"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "topgunmaverick",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-topgunmaverick",
+   "pillar": "hollywood",
+   "words": "TOP GUN MAVERICK",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "TOP GUN MAVERICK fight scene official clip",
+    "TOP GUN MAVERICK best scene official clip",
+    "TOP GUN MAVERICK official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=KElCq5eCegE",
+   "missing_assets": [],
+   "on_release": [
+    "topgunmaverick_scene2_h264.mp4"
+   ],
+   "hook": "Why Maverick is the greatest pilot",
+   "title": "Why Maverick is the greatest pilot | The final training run | #edit",
+   "tags": [
+    "topgun",
+    "maverick",
+    "tomcruise",
+    "movieedit",
+    "phonk",
+    "aviation",
+    "action"
    ],
    "market": "US/UK"
   },
@@ -1740,6 +1670,48 @@
     "vinland",
     "anime",
     "ihavenoenemies"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "yourname",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-yourname",
+   "pillar": "anime",
+   "words": "YOUR NAME",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "YOUR NAME fight scene official clip",
+    "YOUR NAME best scene official clip",
+    "YOUR NAME official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll India",
+    "GKIDS Films",
+    "TOHO animation",
+    "TOHO",
+    "CoMix Wave Films"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=Ja1q9DnLI6M",
+   "missing_assets": [],
+   "on_release": [
+    "yourname_scene2_h264.mp4"
+   ],
+   "hook": "He forgot her name again",
+   "title": "He forgot her name again | Your Name | #edit",
+   "tags": [
+    "yourname",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "taki"
    ],
    "market": "US/UK"
   },
