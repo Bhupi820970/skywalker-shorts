@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-27 11:40 IST",
+  "alert": false,
+  "ready": 3,
+  "pending": 22,
+  "target": 20,
+  "refill_at": 8,
+  "alert_at": 2,
+  "refilling": true,
+  "short_slots": [],
+  "issues": [
+    "seed file; health rewrites this every run"
+  ]
+}
