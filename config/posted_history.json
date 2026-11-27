@@ -834,6 +834,30 @@
         "clip:dune_scene1_h264.mp4",
         "sha:a709b98ff36c33cbcd5419862cd0e9a7a636b717662c910df8cbba4083cc673c"
       ]
+    },
+    {
+      "id": "20261127-1330-vinlandsaga2",
+      "at": "2026-11-27 11:22 IST",
+      "slot": "2026-11-27T13:30:00+05:30",
+      "title": "Thorfinn took every punch | Vinland Saga | #edit",
+      "youtube_url": "https://youtube.com/shorts/tBnKXP93Wf4",
+      "keys": [
+        "asset:stock-vinlandsaga2-01.mp4",
+        "clip:vinlandsaga2_scene2_h264.mp4",
+        "sha:0a08ac76ac9e4e8c2a5c28fa158572c7d6d35c7512d4210c60544cafd7a4f61f"
+      ]
+    },
+    {
+      "id": "20261127-1600-twisters",
+      "at": "2026-11-27 11:22 IST",
+      "slot": "2026-11-27T16:00:00+05:30",
+      "title": "Nobody suspected Tyler Owens was this crazy in Twisters #twisters #glenpowell #movieedit",
+      "youtube_url": "https://youtube.com/shorts/6-Na_-3IzhU",
+      "keys": [
+        "asset:stock-twisters-04.mp4",
+        "clip:twisters_scene2_h264.mp4",
+        "sha:bdac9d535eff76acec2bf62b0bf7861082ee21bb35ba44cfa11b06985f051c8c"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."

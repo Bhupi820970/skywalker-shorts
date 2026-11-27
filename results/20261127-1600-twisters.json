@@ -1060,5 +1060,16 @@
     "at": "2026-11-27 11:40 IST"
   },
   "stock_id": "stock-twisters-04",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "asset_sha256": "bdac9d535eff76acec2bf62b0bf7861082ee21bb35ba44cfa11b06985f051c8c",
+  "publish_via": "youtube",
+  "yt_video_id": "6-Na_-3IzhU",
+  "yt_uploaded_at": "2026-11-27 11:22 IST",
+  "yt_privacy": "private",
+  "yt_publish_at": "2026-11-27T16:00:00+05:30",
+  "yt_status": "scheduled",
+  "youtube_url": "https://youtube.com/shorts/6-Na_-3IzhU",
+  "buffer_post_id": "yt:6-Na_-3IzhU",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-27T10:30:00.000Z"
 }
