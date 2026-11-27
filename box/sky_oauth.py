@@ -24,7 +24,7 @@ STATE = os.environ.get("SKY_OAUTH_STATE") or os.path.join(_CFG, "sky_oauth_state
 REPO = os.environ.get("SKY_GH_REPO", "Bhupi820970/skywalker-shorts")
 GH_CONFIG_DIR = os.environ.get("SKY_GH_CONFIG_DIR") or os.environ.get("GH_CONFIG_DIR")  # None = gh default login
 REDIRECT = "http://localhost"
-SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly"
+SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtube"   # + youtube: needed to private a replaced upload
 AUTH = "https://accounts.google.com/o/oauth2/v2/auth"
 TOKEN = "https://oauth2.googleapis.com/token"
 DEFAULT_HANDLE = "@skywalker-k3i"

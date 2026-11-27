@@ -133,6 +133,17 @@ def set_video_private(tok, video_id):
         classify_http_error(code, raw.decode(errors="replace"))
 
 
+def can_modify_videos(tok):
+    """True when the access token may edit a video's privacy (youtube or youtube.force-ssl scope)."""
+    try:
+        req = urllib.request.Request("https://oauth2.googleapis.com/tokeninfo?" + urllib.parse.urlencode({"access_token": tok}))
+        code, _, raw = _open(req, 30)
+        scopes = set(str(json.loads(raw.decode() or "{}").get("scope") or "").split())
+    except Exception:
+        return False
+    return bool(scopes & {"https://www.googleapis.com/auth/youtube", "https://www.googleapis.com/auth/youtube.force-ssl"})
+
+
 def my_channel(tok):
     d = api_get(tok, "channels", {"part": "snippet,contentDetails", "mine": "true"})
     items = d.get("items") or []
@@ -466,6 +477,13 @@ def main(argv=None):
         if already_published(r) and not replacing:
             continue
         prev_yt = r.get("yt_video_id") if replacing else None
+        if replacing and not can_modify_videos(tok):
+            # 27 Nov 2026: replaces uploaded a 2nd copy and could not private the first (token had only
+            # youtube.upload + readonly) -> two videos in one slot. Refuse instead of duplicating.
+            msg = f"{iid}: REPLACE refused - the YouTube token cannot edit videos (needs the youtube / youtube.force-ssl scope); re-run box/sky_oauth.py"
+            print(f"::error::{msg}")
+            failed.append(msg)
+            continue
         if backup_stock.slot_post_conflicts(r, all_r):
             print(f"{iid}: slot already covered by another result; not posting")
             continue
