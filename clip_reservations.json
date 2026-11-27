@@ -658,10 +658,11 @@
    "state": "reserved"
   },
   "vinlandsaga2_scene2_h264.mp4": {
-   "at": "2026-11-27T05:04:52+00:00",
+   "at": "2026-11-27T05:28:10+00:00",
    "owner": "45940984400-1-stock-vinlandsaga2-01",
    "platform": "render",
-   "state": "reserved"
+   "state": "used",
+   "video": "stock-vinlandsaga2-01"
   },
   "violetevergarden_scene1_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
