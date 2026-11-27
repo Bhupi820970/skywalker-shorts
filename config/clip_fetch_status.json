@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-26T18:25:03Z",
-  "last_upload_at": "2026-11-26T17:33:31Z"
+  "last_run_at": "2026-11-27T02:18:45Z",
+  "last_upload_at": "2026-11-27T02:18:45Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -118,6 +118,7 @@
   "yt:YJ8vvIAxcss",
   "yt:YR6UqlVdJFY",
   "yt:YRL74JmhVgk",
+  "yt:YU5eVD0J3_A",
   "yt:YnLlX4x1lag",
   "yt:YuIR94VIC7k",
   "yt:YwgTPwxPZ9A",
@@ -2493,6 +2494,17 @@
    "kbps": 2687,
    "by": "box",
    "at": "2026-11-26T17:33:31Z"
+  },
+  {
+   "asset": "boyandheron_scene3_h264.mp4",
+   "id": "yt:YU5eVD0J3_A",
+   "title": "THE BOY AND THE HERON Official Clip | Flight of the Warawara",
+   "channel": "GKIDS Films",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 3454,
+   "by": "box",
+   "at": "2026-11-27T02:18:45Z"
   }
  ],
  "github": {
