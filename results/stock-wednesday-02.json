@@ -809,5 +809,9 @@
       "title_matches_footage"
     ],
     "at": "2026-11-27 11:45 IST"
-  }
+  },
+  "stock_used": true,
+  "assigned_slot": "2026-11-27T06:30:00+05:30",
+  "assigned_result": "20261127-0630-wednesday",
+  "used_at": "2026-11-27 11:23 IST"
 }
