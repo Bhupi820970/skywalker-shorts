@@ -873,6 +873,18 @@
         "clip:wednesday_scene6_h264.mp4",
         "sha:8d03297a52caf76f92cfa467d3ad95a3617b6a28ac0b7ca2970fc8418f4c3be3"
       ]
+    },
+    {
+      "id": "20261127-2230-arcane2",
+      "at": "2026-11-27 17:31 IST",
+      "slot": "2026-11-27T22:30:00+05:30",
+      "title": "Sakura only fights for his town | Wind Breaker | #edit",
+      "youtube_url": "https://youtube.com/shorts/MCM8LgK8gPg",
+      "keys": [
+        "asset:render-20261127-2230-arcane2.mp4",
+        "clip:windbreaker_scene2_h264.mp4",
+        "sha:c5ad4400c9240a18dbf40b6ba58e77583f48ebdf80c1fd17e1858b21637e596a"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."
