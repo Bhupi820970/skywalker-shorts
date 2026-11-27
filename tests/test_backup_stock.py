@@ -648,3 +648,18 @@ def test_fresh_pending_still_counts_toward_target(tmp_path, monkeypatch):
     assert summary["pending"] == 25
     assert summary["need_refill"] is False
     assert backup_stock.next_refill_ids(root, limit=2, now=now) == []
+
+
+def test_unassigned_stock_song_does_not_block_itself(tmp_path, monkeypatch):
+    """An unassigned stock render must not count as a recently used song (27 Nov 2026: every ready stock
+    video blocked itself, so no stock was ever given to a missed slot)."""
+    _root(tmp_path, monkeypatch)
+    now = datetime(2026, 11, 27, 11, 0, tzinfo=IST)
+    at = "2026-11-27 08:00 IST"
+    _write(tmp_path / "results" / "stock-a-01.json",
+           _ready_result("stock-a-01", music="song_a.mp3", at=at))
+    _write(tmp_path / "results" / "20261127-0900-b.json",
+           _ready_result("20261127-0900-b", music="song_b.mp3", at=at, slot="2026-11-27T09:00:00+05:30"))
+    used = backup_stock._recent_music_files(tmp_path, now)
+    assert "song_b.mp3" in used
+    assert "song_a.mp3" not in used

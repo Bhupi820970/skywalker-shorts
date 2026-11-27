@@ -782,6 +782,31 @@ def pending_entries(man: dict) -> list[dict]:
     return [e for e in man.get("items") or [] if e.get("status") == "pending"]
 
 
+def _recent_music_files(root: Path, now: datetime, days: float = 3) -> list[str]:
+    """Songs of videos that were really used in the last `days` days (assigned/posted renders).
+
+    Unassigned stock renders are not "used": counting them made every ready stock video block itself
+    (its own song looked recently used), so no stock was ever assigned to a missed slot (27 Nov 2026).
+    """
+    import music_lib
+    from datetime import timedelta
+    cut = now - timedelta(days=days)
+    out: list[str] = []
+    for r in iter_results(root):
+        if r.get("status") != "done" or not r.get("music"):
+            continue
+        if parse_stock_id(r.get("id") or "") and not r.get("stock_used") and not r.get("assigned_slot"):
+            continue
+        dt = music_lib._parse_result_when(r)
+        if dt is None:
+            continue
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=now.tzinfo)
+        if dt >= cut:
+            out.append(str(r["music"]))
+    return list(dict.fromkeys(out))
+
+
 def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
                buffer_posts: list | None = None, slot_s: str | None = None) -> dict | None:
     ready = ready_entries(man)
@@ -819,7 +844,7 @@ def pick_stock(man: dict, root: Path, day: str, now: datetime | None = None,
             import music_lib
             music = src.get("music") or ""
             if music:
-                recent = set(music_lib.recent_excludes(root / "results", root, days=3, now=now))
+                recent = set(music_lib.expand_same_song(root, _recent_music_files(root, now)))
                 if music in recent or any(music_lib._norm_music(music) == music_lib._norm_music(x) for x in recent):
                     return True
         except Exception:
