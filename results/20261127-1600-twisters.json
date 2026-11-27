@@ -1070,7 +1070,6 @@
   "yt_status": "scheduled",
   "youtube_url": "https://youtube.com/shorts/VjVCngeSwwI",
   "yt_prev_video_id": "6-Na_-3IzhU",
-  "buffer_post_id": "yt:VjVCngeSwwI",
-  "buffer_status": "scheduled",
-  "buffer_due_at": "2026-11-27T10:30:00.000Z"
+  "publish_blocked": "repeat: same hook already posted (yt:6-Na_-3IzhU): 'nobody suspected tyler owens was this crazy in twisters'",
+  "publish_blocked_at": "2026-11-27 13:19 IST"
 }
