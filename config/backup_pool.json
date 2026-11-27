@@ -1767,7 +1767,10 @@
       "source_url": "https://www.youtube.com/watch?v=2HSKZhb3J_M",
       "fallback_mp4": [
         "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene1_h264.mp4",
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene2_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene2_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene4_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene5_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "Why Paul stopped being human",
@@ -1787,7 +1790,10 @@
       "content_kind": "best scene",
       "scene_assets": [
         "dune_scene1_h264.mp4",
-        "dune_scene2_h264.mp4"
+        "dune_scene2_h264.mp4",
+        "dune_scene3_h264.mp4",
+        "dune_scene4_h264.mp4",
+        "dune_scene5_h264.mp4"
       ],
       "added_by": "footage_refill",
       "category": "movie"
