@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T06:27:45Z",
-  "last_upload_at": "2026-11-27T06:27:45Z"
+  "last_run_at": "2026-11-27T06:28:53Z",
+  "last_upload_at": "2026-11-27T06:28:53Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -116,6 +116,7 @@
   "yt:SCsN5TMuGOw",
   "yt:Si7fxN6bbwU",
   "yt:T6IVOvy1KZo",
+  "yt:TLpqTS1iKSM",
   "yt:Tmhp5oyCDeo",
   "yt:TtX8DNALc3I",
   "yt:UJTRunuVXhM",
@@ -2985,6 +2986,17 @@
    "kbps": 2371,
    "by": "box",
    "at": "2026-11-27T06:27:45Z"
+  },
+  {
+   "asset": "spyxfamilycodewhite_scene3_h264.mp4",
+   "id": "yt:TLpqTS1iKSM",
+   "title": "Loid's \"Fall\" | SPY x FAMILY CODE: White | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1608,
+   "by": "box",
+   "at": "2026-11-27T06:28:53Z"
   }
  ],
  "github": {
