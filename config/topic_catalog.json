@@ -1788,7 +1788,8 @@
       "source_url": "https://www.youtube.com/watch?v=BU--ttm4nYs",
       "scene_assets": [
         "princessmononoke_scene1_h264.mp4",
-        "princessmononoke_scene2_h264.mp4"
+        "princessmononoke_scene2_h264.mp4",
+        "princessmononoke_scene3_h264.mp4"
       ],
       "fallback_asset": "princessmononoke_trailer_h264.mp4",
       "content_kind": "best scene",
