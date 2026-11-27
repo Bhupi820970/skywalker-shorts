@@ -1,20 +1,21 @@
 {
   "id": "20261128-0630-rrr",
-  "status": "retry_queued",
-  "detail": "all 3 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): auto_qc: 2 near-duplicate shot pair(s) in the output",
-  "at": "2026-11-28 01:48 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/46053981511",
+  "status": "failed",
+  "detail": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
+  "at": "2026-11-28 02:45 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/46063004451",
   "slot": "2026-11-28T06:30:00+05:30",
-  "title": "Why Kratos finally forgave his past | God Of War Ragnarok | #edit",
-  "hook": "Why Kratos finally forgave his past",
-  "description": "Why Kratos finally forgave his past. From official God Of War Ragnarok clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #godofwar #kratos #atreus",
+  "title": "Why he dominates the sky | Hrithik's aerial combat | #edit",
+  "hook": "Why he dominates the sky",
+  "description": "Why he dominates the sky. From official Fighter clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #fighter #hrithikroshan #bollywood",
   "tags": [
-    "godofwar",
-    "kratos",
-    "atreus",
-    "godofwarragnarok",
-    "playstation",
-    "gameedit"
+    "fighter",
+    "hrithikroshan",
+    "bollywood",
+    "movieedit",
+    "phonk",
+    "action",
+    "edit"
   ],
   "queue_meta": null,
   "gemini_meta": false,
@@ -32,20 +33,34 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key2",
+      "s": 15.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key3",
-      "s": 100.8,
+      "s": 21.1,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key3",
-      "s": 22.7,
+      "s": 14.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 4.2,
       "ok": true
     },
     {
@@ -58,92 +73,33 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 429"
+      "s": 65.6,
+      "ok": true
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 30.6,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "s": 25.3,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "hook",
       "model": "gemini-3.5-flash",
       "key": "key1",
       "err": "HTTP 429"
     },
     {
-      "purpose": "hook",
+      "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key2",
       "err": "HTTP 429"
     },
     {
-      "purpose": "hook",
+      "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "s": 28.8,
+      "s": 23.1,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
-      "key": "key5",
-      "s": 11.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "s": 37.8,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "s": 9.3,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "s": 10.6,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "s": 48.6,
+      "key": "key3",
+      "s": 63.7,
       "ok": true
     }
   ],
@@ -151,7 +107,7 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "words": "GOD OF WAR RAGNAROK",
+  "words": "FIGHTER",
   "edit_format": "action",
   "title_swaps": [
     {
@@ -164,14 +120,14 @@
     {
       "from": "thebatman",
       "from_words": "THE BATMAN",
-      "to": "godofwar",
-      "to_words": "GOD OF WAR RAGNAROK",
-      "reason": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3840, 2160], 'letterbox_free': [1920, 806], 'plate': [1080, 452], 'letterbox_rows_black': True, 'frame_corr_median': 0.694, 'edge_corr_median': 0.737, 'shift_px_median': 2.93, 'pairs': 6}"
+      "to": "fighther",
+      "to_words": "FIGHTER",
+      "reason": "download failed: quarantined 1 clip(s) that keep failing the logo/scene filter: thebatman_scene5_h264.mp4 | no unused official source left for this topic (scene clips already posted on the channel)"
     }
   ],
   "swapped_from": "thebatman",
-  "swapped_to": "godofwar",
-  "auto_retries": 0,
+  "swapped_to": "fighther",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
@@ -185,31 +141,31 @@
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3840, 2160], 'letterbox_free': [1920, 806], 'plate': [1080, 452], 'letterbox_rows_black': True, 'frame_corr_median': 0.694, 'edge_corr_median': 0.737, 'shift_px_median': 2.93, 'pairs': 6}",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene3_h264.mp4",
-      "music": "pr_7fva1p4g1xk.mp3",
+      "error": "download failed: quarantined 1 clip(s) that keep failing the logo/scene filter: thebatman_scene5_h264.mp4 | no unused official source left for this topic (scene clips already posted on the channel)",
+      "source": null,
+      "music": null,
       "qc_status": null
     },
     {
       "attempt": 1,
       "ok": false,
-      "error": "time budget reached; last: pipeline/QA failed (exit 1): auto_qc: 2 near-duplicate shot pair(s) in the output",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/godofwar_scene4_h264.mp4",
-      "music": "pr_7fva1p4g1xk.mp3",
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene2_h264.mp4",
+      "music": "pr_velasnegrasslowed2ndmoonx.mp3",
       "qc_status": null
     }
   ],
-  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): auto_qc: 2 near-duplicate shot pair(s) in the output",
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
   "source_attempts": [
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene3_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [3840, 2160], 'letterbox_free': [1920, 806], 'plate': [1080, 452], 'letterbox_rows_black': True, 'frame_corr_median': 0.694, 'edge_corr_median': 0.737, 'shift_px_median': 2.93, 'pairs': 6}",
-      "at": "2026-11-28 01:08 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-28 02:21 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/godofwar_scene4_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): auto_qc: 2 near-duplicate shot pair(s) in the output",
-      "at": "2026-11-28 01:48 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/fighther_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-28 02:45 IST"
     }
   ]
 }
