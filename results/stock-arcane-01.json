@@ -600,5 +600,9 @@
       "error": "pipeline/QA failed (exit 1): only 17.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; auto_qc: 2 frame(s) failed empty-dark/logo/text detectors; auto_qc: only 17.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publish",
       "at": "2026-11-26 18:39 IST"
     }
-  ]
+  ],
+  "stock_used": true,
+  "assigned_slot": "2026-11-28T06:30:00+05:30",
+  "assigned_result": "20261128-0630-arcane",
+  "used_at": "2026-11-28 04:24 IST"
 }

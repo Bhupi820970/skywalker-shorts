@@ -1,10 +1,48 @@
 {
- "generated_at": "2026-11-28 02:36 IST",
+ "generated_at": "2026-11-28 04:24 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 242,
  "max_clips_per_title": 3,
  "requests": [
+  {
+   "slug": "dragonballdaima",
+   "slot": "2026-11-28T09:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261128-0900-dragonballdaima",
+   "pillar": "anime",
+   "words": "DRAGON BALL DAIMA",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DRAGON BALL DAIMA fight scene official clip",
+    "DRAGON BALL DAIMA best scene official clip",
+    "DRAGON BALL DAIMA official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+   "missing_assets": [],
+   "on_release": [
+    "dragonballdaima_scene3_h264.mp4"
+   ],
+   "hook": "Goku got small, not weak",
+   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+   "tags": [
+    "dragonballdaima",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "goku"
+   ],
+   "market": "US/UK"
+  },
   {
    "slug": "weatheringwithyou",
    "slot": "2026-11-28T13:30:00+05:30",
