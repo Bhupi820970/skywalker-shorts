@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T02:27:48Z",
-  "last_upload_at": "2026-11-27T02:27:48Z"
+  "last_run_at": "2026-11-27T02:28:33Z",
+  "last_upload_at": "2026-11-27T02:28:33Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -155,6 +155,7 @@
   "yt:exdsbFvhocI",
   "yt:fPX0C-g5xpU",
   "yt:fS8SjwHwJyU",
+  "yt:fdbJ-a5xPmo",
   "yt:fmKWuAVt1vI",
   "yt:gDhtSggAoNI",
   "yt:gPECYXOC9z4",
@@ -2541,6 +2542,17 @@
    "kbps": 3218,
    "by": "box",
    "at": "2026-11-27T02:27:48Z"
+  },
+  {
+   "asset": "boyandheron_scene4_h264.mp4",
+   "id": "yt:fdbJ-a5xPmo",
+   "title": "Ghibli Fest 2025 | THE BOY AND THE HERON",
+   "channel": "GKIDS Films",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2938,
+   "by": "box",
+   "at": "2026-11-27T02:28:33Z"
   }
  ],
  "github": {
