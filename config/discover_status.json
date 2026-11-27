@@ -3,24 +3,6 @@
   "queued_ids": [],
   "skipped": [
     {
-      "slug": "gladiatoriiclash",
-      "url": "https://www.youtube.com/watch?v=CjXDHjZOXzo",
-      "channel": "Movieclips",
-      "title": "Gladiator II (2024) - All Hail Macrinus (Denzel Washington)! Scene | Movieclips",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "Gladiator II Official Arena Combat",
-      "hook": "The arena demands blood today"
-    },
-    {
-      "slug": "gladiatoriiclash",
-      "url": "https://www.youtube.com/watch?v=mkQduzl3v7k",
-      "channel": "Movieclips",
-      "title": "Gladiator II (2024) - Denzel Washington's Macrinus Betrays the Emperors Scene | Movieclips",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "Gladiator II Official Arena Combat",
-      "hook": "The arena demands blood today"
-    },
-    {
       "slug": "gta6",
       "url": "https://www.youtube.com/watch?v=_yl5ELcmugI",
       "channel": "Rockstar Games",
@@ -39,67 +21,31 @@
       "hook": "She already knew"
     },
     {
-      "slug": "bridgerton",
-      "url": "https://www.youtube.com/watch?v=eKhh9VerYms",
-      "channel": "Netflix",
-      "title": "Bridgerton Season 3 | Official Clip | Netflix",
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=D35O7FE7IbM",
+      "channel": "Prime Video",
+      "title": "Conrad Finds Out Jeremiah Cheated on Belly | The Summer I Turned Pretty | Prime Video",
       "skip": "youtube_bot_check",
-      "words": "BRIDGERTON",
-      "hook": "She already knew"
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss"
     },
     {
-      "slug": "lalaland",
-      "url": "https://www.youtube.com/watch?v=cZAw8qxn0ZE",
-      "channel": "Lionsgate Movies",
-      "title": "La La Land (2016 Movie) Official Clip – “City Of Stars”",
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=7uBDNbwM504",
+      "channel": "Prime Video",
+      "title": "Belly’s Boardwalk Flashback | The Summer I Turned Pretty | Prime Video",
       "skip": "youtube_bot_check",
-      "words": "LA LA LAND",
-      "hook": "They almost said it"
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss"
     },
     {
-      "slug": "lalaland",
-      "url": "https://www.youtube.com/watch?v=rEIKmxr8z9E",
-      "channel": "Lionsgate Movies",
-      "title": "La La Land (2016 Movie) Official Clip – “Thanks For Coming”",
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=P955C1UbiFY",
+      "channel": "Prime Video",
+      "title": "Jeremiah Gets Angry at Conrad on Thanksgiving | The Summer I Turned Pretty | Clip | Prime Video",
       "skip": "youtube_bot_check",
-      "words": "LA LA LAND",
-      "hook": "They almost said it"
-    },
-    {
-      "slug": "lalaland",
-      "url": "https://www.youtube.com/watch?v=_8w9rOpV3gc",
-      "channel": "Movieclips",
-      "title": "La La Land (2016) - A Lovely Night Scene (5/11) | Movieclips",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "LA LA LAND",
-      "hook": "They almost said it"
-    },
-    {
-      "slug": "lalaland",
-      "url": "https://www.youtube.com/watch?v=7CVfTd-_qbc",
-      "channel": "Movieclips",
-      "title": "La La Land (2016) - Another Day of Sun Scene (1/11) | Movieclips",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "LA LA LAND",
-      "hook": "They almost said it"
-    },
-    {
-      "slug": "lalaland",
-      "url": "https://www.youtube.com/watch?v=b65C_muXajk",
-      "channel": "Movieclips",
-      "title": "La La Land (2016) - I'm Not Good Enough Scene (9/11) | Movieclips",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "LA LA LAND",
-      "hook": "They almost said it"
-    },
-    {
-      "slug": "lalaland",
-      "url": "https://www.youtube.com/watch?v=cmkZeTX5fq0",
-      "channel": "Movieclips",
-      "title": "La La Land (2016) - Someone in the Crowd Scene (2/11) | Movieclips",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "LA LA LAND",
-      "hook": "They almost said it"
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss"
     },
     {
       "slug": "thesummeritp",
@@ -112,19 +58,10 @@
     },
     {
       "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=8Jz7GGm-I8E",
+      "url": "https://www.youtube.com/watch?v=_w1YmoDdnk4",
       "channel": "Prime Video",
-      "title": "Conrad Offers to Help Belly Wedding Shop | The Summer I Turned Pretty | Prime Video",
-      "skip": "youtube_bot_check",
-      "words": "THE SUMMER I TURNED PRETTY",
-      "hook": "This was the almost-kiss"
-    },
-    {
-      "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=k-ZbYlEdMd4",
-      "channel": "Prime Video",
-      "title": "Jeremiah and Belly Call Off The Wedding | The Summer I Turned Pretty | Prime Video",
-      "skip": "youtube_bot_check",
+      "title": "Jeremiah Rescues Belly | The Summer I Turned Pretty | Prime Video",
+      "skip": "sample budget",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss"
     },
@@ -145,6 +82,24 @@
       "skip": "youtube_bot_check",
       "words": "ONE DAY",
       "hook": "They kept missing it"
+    },
+    {
+      "slug": "crazyrichasians",
+      "url": "https://www.youtube.com/watch?v=2odn_xMxuXM",
+      "channel": "MOVIE CLIPS",
+      "title": "Crazy Rich Asians - The New Lady of the House (Opening Scene)",
+      "skip": "youtube_bot_check",
+      "words": "CRAZY RICH ASIANS",
+      "hook": "The room went quiet"
+    },
+    {
+      "slug": "crazyrichasians",
+      "url": "https://www.youtube.com/watch?v=ZrsYIthVY-Y",
+      "channel": "Movieclips",
+      "title": "Crazy Rich Asians (2018) - Rich Lunch Scene (2/9)",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "CRAZY RICH ASIANS",
+      "hook": "The room went quiet"
     }
   ],
   "needs_box_sample": [
@@ -169,33 +124,33 @@
       "official": true
     },
     {
-      "slug": "bridgerton",
-      "url": "https://www.youtube.com/watch?v=eKhh9VerYms",
-      "channel": "Netflix",
-      "title": "Bridgerton Season 3 | Official Clip | Netflix",
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=D35O7FE7IbM",
+      "channel": "Prime Video",
+      "title": "Conrad Finds Out Jeremiah Cheated on Belly | The Summer I Turned Pretty | Prime Video",
       "skip": "youtube_bot_check",
-      "words": "BRIDGERTON",
-      "hook": "She already knew",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss",
       "official": true
     },
     {
-      "slug": "lalaland",
-      "url": "https://www.youtube.com/watch?v=cZAw8qxn0ZE",
-      "channel": "Lionsgate Movies",
-      "title": "La La Land (2016 Movie) Official Clip – “City Of Stars”",
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=7uBDNbwM504",
+      "channel": "Prime Video",
+      "title": "Belly’s Boardwalk Flashback | The Summer I Turned Pretty | Prime Video",
       "skip": "youtube_bot_check",
-      "words": "LA LA LAND",
-      "hook": "They almost said it",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss",
       "official": true
     },
     {
-      "slug": "lalaland",
-      "url": "https://www.youtube.com/watch?v=rEIKmxr8z9E",
-      "channel": "Lionsgate Movies",
-      "title": "La La Land (2016 Movie) Official Clip – “Thanks For Coming”",
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=P955C1UbiFY",
+      "channel": "Prime Video",
+      "title": "Jeremiah Gets Angry at Conrad on Thanksgiving | The Summer I Turned Pretty | Clip | Prime Video",
       "skip": "youtube_bot_check",
-      "words": "LA LA LAND",
-      "hook": "They almost said it",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss",
       "official": true
     },
     {
@@ -203,26 +158,6 @@
       "url": "https://www.youtube.com/watch?v=K8gBwJu5X1A",
       "channel": "Prime Video",
       "title": "Conrad Tells Belly She’s Heartless | The Summer I Turned Pretty | Prime Video",
-      "skip": "youtube_bot_check",
-      "words": "THE SUMMER I TURNED PRETTY",
-      "hook": "This was the almost-kiss",
-      "official": true
-    },
-    {
-      "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=8Jz7GGm-I8E",
-      "channel": "Prime Video",
-      "title": "Conrad Offers to Help Belly Wedding Shop | The Summer I Turned Pretty | Prime Video",
-      "skip": "youtube_bot_check",
-      "words": "THE SUMMER I TURNED PRETTY",
-      "hook": "This was the almost-kiss",
-      "official": true
-    },
-    {
-      "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=k-ZbYlEdMd4",
-      "channel": "Prime Video",
-      "title": "Jeremiah and Belly Call Off The Wedding | The Summer I Turned Pretty | Prime Video",
       "skip": "youtube_bot_check",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss",
@@ -247,6 +182,16 @@
       "words": "ONE DAY",
       "hook": "They kept missing it",
       "official": true
+    },
+    {
+      "slug": "crazyrichasians",
+      "url": "https://www.youtube.com/watch?v=2odn_xMxuXM",
+      "channel": "MOVIE CLIPS",
+      "title": "Crazy Rich Asians - The New Lady of the House (Opening Scene)",
+      "skip": "youtube_bot_check",
+      "words": "CRAZY RICH ASIANS",
+      "hook": "The room went quiet",
+      "official": true
     }
   ],
   "dry_run": false,
@@ -256,5 +201,5 @@
     "x_below_1080": 0,
     "x_unknown": 0
   },
-  "last_run_at": "2026-11-26 19:53 IST"
+  "last_run_at": "2026-11-27 19:47 IST"
 }
