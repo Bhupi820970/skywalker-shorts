@@ -140,7 +140,11 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=Way9Dexny3w",
       "fallback_asset": "dune2_trailer_h264.mp4",
-      "category": "movie"
+      "category": "movie",
+      "scene_assets": [
+        "dune2_scene1_h264.mp4"
+      ],
+      "content_kind": "best scene"
     },
     {
       "slug": "alienromulus",

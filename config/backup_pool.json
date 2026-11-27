@@ -2299,6 +2299,37 @@
       ],
       "added_by": "footage_refill",
       "category": "anime"
+    },
+    {
+      "id": "backup-dune2",
+      "pillar": "movie",
+      "source_url": "https://www.youtube.com/watch?v=bV1Unml2PuM",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune2_scene1_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Paul Atreides became something else",
+      "words": "DUNE PART TWO",
+      "title": "Paul Atreides became something else | the desert answers | #edit",
+      "description": "Paul Atreides became something else. The desert answers from the official Dune: Part Two trailer. Edit by Skywalker.\nSource: official trailer. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dune",
+      "tags": [
+        "dune",
+        "duneparttwo",
+        "timotheechalamet",
+        "edit",
+        "shorts",
+        "trending"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "dune2_scene1_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "dune2_scene1_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "movie"
     }
   ]
 }
