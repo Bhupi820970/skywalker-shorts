@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-27 13:22 IST",
+  "at": "2026-11-27 13:24 IST",
   "slots_checked": 9,
   "ready": [
     {
@@ -11,10 +11,14 @@
       "slot": "2026-11-27T13:30:00+05:30",
       "id": "stock",
       "how": "backup_stock"
+    },
+    {
+      "slot": "2026-11-27T16:00:00+05:30",
+      "id": "stock",
+      "how": "backup_stock"
     }
   ],
   "short": [
-    "2026-11-27T16:00:00+05:30",
     "2026-11-27T18:30:00+05:30",
     "2026-11-27T20:30:00+05:30",
     "2026-11-27T22:30:00+05:30",
@@ -187,6 +191,6 @@
   "stock_assigned": [],
   "ok": false,
   "issues": [
-    "7 slot(s) in the next 24h without a finished video"
+    "6 slot(s) in the next 24h without a finished video"
   ]
 }
