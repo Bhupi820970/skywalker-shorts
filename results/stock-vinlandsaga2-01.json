@@ -1,0 +1,1130 @@
+{
+  "id": "stock-vinlandsaga2-01",
+  "status": "retry_queued",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-27 10:58 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45940984400",
+  "slot": null,
+  "title": "Thorfinn took every punch | Vinland Saga | #edit",
+  "hook": "Thorfinn took every punch",
+  "description": "Thorfinn took every punch. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #vinlandsaga2",
+  "tags": [
+    "vinlandsaga2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "thorfinn"
+  ],
+  "queue_meta": {
+    "hook": "Thorfinn took every punch",
+    "title": "Thorfinn took every punch | Vinland Saga | #edit",
+    "description": "Thorfinn took every punch. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #vinlandsaga2",
+    "tags": [
+      "vinlandsaga2",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "thorfinn"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    }
+  ],
+  "backup_item": "backup-vinlandsaga2",
+  "stock": true,
+  "stock_topic": "backup-vinlandsaga2",
+  "spare": true,
+  "words": "VINLAND SAGA",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-vinlandsaga2-01.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 20.92,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene2_h264.mp4",
+  "music": "pr_pisanoasfalto.mp3",
+  "music_credit": "Song: Phonk Time - PISA NO ASFALTO\nOfficial link: https://www.youtube.com/watch?v=dno0DBaT-Rc",
+  "description_final": "Thorfinn took every punch. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #vinlandsaga2\n\nMusic:\nSong: Phonk Time - PISA NO ASFALTO\nOfficial link: https://www.youtube.com/watch?v=dno0DBaT-Rc",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-vinlandsaga2-01-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 518,
+    "bar_h": 138,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1782,
+    "block_h": 1920,
+    "drop_t": 20.92,
+    "energy": true,
+    "story_caption_boxes": [
+      {
+        "t0": 0.18,
+        "t1": 1.04,
+        "box": [
+          257,
+          985,
+          566,
+          62
+        ],
+        "zone": "chin",
+        "text": "WHY ISN'T HE OUT",
+        "faces": [
+          [
+            984,
+            903,
+            78,
+            98
+          ],
+          [
+            0,
+            986,
+            40,
+            90
+          ],
+          [
+            228,
+            791,
+            105,
+            147
+          ],
+          [
+            710,
+            814,
+            105,
+            156
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 1.04,
+        "t1": 1.74,
+        "box": [
+          218,
+          958,
+          643,
+          62
+        ],
+        "zone": "chin",
+        "text": "HERE TO SEE FATHER",
+        "faces": [
+          [
+            993,
+            908,
+            79,
+            98
+          ],
+          [
+            232,
+            792,
+            102,
+            151
+          ],
+          [
+            0,
+            989,
+            40,
+            89
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 1.74,
+        "t1": 2.647,
+        "box": [
+          448,
+          962,
+          183,
+          62
+        ],
+        "zone": "chin",
+        "text": "OFF?",
+        "faces": [
+          [
+            1001,
+            905,
+            81,
+            105
+          ],
+          [
+            229,
+            788,
+            114,
+            159
+          ],
+          [
+            -1,
+            996,
+            41,
+            84
+          ],
+          [
+            723,
+            814,
+            102,
+            152
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 2.647,
+        "t1": 3.847,
+        "box": [
+          243,
+          985,
+          593,
+          62
+        ],
+        "zone": "chin",
+        "text": "HE GOT YESTERDAY",
+        "faces": [
+          [
+            985,
+            905,
+            79,
+            96
+          ],
+          [
+            0,
+            985,
+            41,
+            90
+          ],
+          [
+            234,
+            796,
+            96,
+            141
+          ],
+          [
+            665,
+            812,
+            116,
+            158
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 3.847,
+        "t1": 5.187,
+        "box": [
+          192,
+          827,
+          695,
+          62
+        ],
+        "zone": "chin",
+        "text": "WHEN THORFINN DOES",
+        "faces": [
+          [
+            218,
+            798,
+            21,
+            27
+          ],
+          [
+            554,
+            797,
+            19,
+            24
+          ],
+          [
+            343,
+            798,
+            20,
+            26
+          ],
+          [
+            64,
+            812,
+            20,
+            26
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 5.187,
+        "t1": 6.347,
+        "box": [
+          395,
+          828,
+          289,
+          62
+        ],
+        "zone": "chin",
+        "text": "TURN UP",
+        "faces": [
+          [
+            562,
+            800,
+            20,
+            26
+          ],
+          [
+            222,
+            802,
+            20,
+            25
+          ],
+          [
+            350,
+            802,
+            20,
+            24
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 6.347,
+        "t1": 6.927,
+        "box": [
+          467,
+          1170,
+          146,
+          62
+        ],
+        "zone": "chin",
+        "text": "YES",
+        "faces": [
+          [
+            398,
+            804,
+            266,
+            337
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 6.927,
+        "t1": 8.813,
+        "box": [
+          259,
+          1170,
+          561,
+          62
+        ],
+        "zone": "chin",
+        "text": "OF COURSE I WILL",
+        "faces": [
+          [
+            409,
+            807,
+            276,
+            342
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 8.813,
+        "t1": 10.413,
+        "box": [
+          355,
+          1133,
+          370,
+          62
+        ],
+        "zone": "chin",
+        "text": "THANK YOU",
+        "faces": [
+          [
+            386,
+            748,
+            279,
+            350
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 10.413,
+        "t1": 11.653,
+        "box": [
+          220,
+          884,
+          640,
+          62
+        ],
+        "zone": "chin",
+        "text": "PALMS OF MY HANDS",
+        "faces": [
+          [
+            846,
+            736,
+            101,
+            135
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 11.653,
+        "t1": 12.773,
+        "box": [
+          196,
+          892,
+          687,
+          62
+        ],
+        "zone": "chin",
+        "text": "ARE PEELING MY BACK",
+        "faces": [
+          [
+            850,
+            740,
+            110,
+            139
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 12.773,
+        "t1": 14.047,
+        "box": [
+          362,
+          895,
+          356,
+          62
+        ],
+        "zone": "chin",
+        "text": "SIDES RAW",
+        "faces": [
+          [
+            864,
+            734,
+            110,
+            147
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 14.047,
+        "t1": 15.787,
+        "box": [
+          228,
+          941,
+          624,
+          62
+        ],
+        "zone": "mid",
+        "text": "MORD MAGNI CHECK",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 15.787,
+        "t1": 17.047,
+        "box": [
+          231,
+          877,
+          618,
+          62
+        ],
+        "zone": "chin",
+        "text": "THE RIGGING GRIMM",
+        "faces": [
+          [
+            703,
+            708,
+            88,
+            154
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 17.047,
+        "t1": 17.927,
+        "box": [
+          261,
+          869,
+          558,
+          62
+        ],
+        "zone": "chin",
+        "text": "YOU AND HARKON",
+        "faces": [
+          [
+            632,
+            713,
+            106,
+            142
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 17.927,
+        "t1": 19.38,
+        "box": [
+          260,
+          873,
+          560,
+          62
+        ],
+        "zone": "chin",
+        "text": "SECURE THE OARS",
+        "faces": [
+          [
+            632,
+            716,
+            109,
+            143
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 19.38,
+        "t1": 20.8,
+        "box": [
+          250,
+          932,
+          579,
+          80
+        ],
+        "zone": "mid",
+        "text": "NOT TO WORRY",
+        "faces": [],
+        "style": "RefSerif"
+      }
+    ],
+    "dialogue_captions": {
+      "count": 17,
+      "text": "WHY ISN'T HE OUT / HERE TO SEE FATHER / OFF? / HE GOT YESTERDAY / WHEN THORFINN DOES / TURN UP / YES / OF COURSE I WILL / THANK YOU / PALMS OF MY HANDS / ARE PEELING MY BACK / SIDES RAW / MORD MAGNI CHECK / THE RIGGING GRIMM / YOU AND HARKON / SECURE THE OARS / NOT TO WORRY",
+      "style": "riyio ref glow (Playfair)"
+    },
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows_uncaptioned": [
+      [
+        0.0,
+        3.447
+      ],
+      [
+        3.787,
+        5.967
+      ],
+      [
+        6.287,
+        8.427
+      ],
+      [
+        8.753,
+        10.033
+      ],
+      [
+        10.353,
+        13.653
+      ],
+      [
+        13.987,
+        19.007
+      ],
+      [
+        19.32,
+        20.8
+      ]
+    ],
+    "speech_windows": [],
+    "edit_mode": "dialogue_drop",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 7,
+      "src_start": 16.09,
+      "dur": 2.48
+    },
+    {
+      "id": 7,
+      "src_start": 20.57,
+      "dur": 1.2
+    },
+    {
+      "id": 8,
+      "src_start": 24.55,
+      "dur": 2.52
+    },
+    {
+      "id": 12,
+      "src_start": 35.68,
+      "dur": 2.48
+    },
+    {
+      "id": 13,
+      "src_start": 41.15,
+      "dur": 1.62
+    },
+    {
+      "id": 31,
+      "src_start": 91.92,
+      "dur": 3.64
+    },
+    {
+      "id": 34,
+      "src_start": 102.08,
+      "dur": 5.36
+    },
+    {
+      "id": 36,
+      "src_start": 114.52,
+      "dur": 1.62
+    },
+    {
+      "id": 38,
+      "src_start": 128.814,
+      "dur": 0.464
+    },
+    {
+      "id": 23,
+      "src_start": 71.689,
+      "dur": 0.464
+    },
+    {
+      "id": 3,
+      "src_start": 6.441,
+      "dur": 0.464
+    },
+    {
+      "id": 30,
+      "src_start": 86.813,
+      "dur": 0.464
+    },
+    {
+      "id": 19,
+      "src_start": 54.716,
+      "dur": 0.464
+    },
+    {
+      "id": 17,
+      "src_start": 50.172,
+      "dur": 0.464
+    },
+    {
+      "id": 28,
+      "src_start": 82.341,
+      "dur": 0.441
+    },
+    {
+      "id": 15,
+      "src_start": 45.605,
+      "dur": 0.464
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene2_h264.mp4",
+      "music": "pr_pisanoasfalto.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false,
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): auto_qc: 1 near-duplicate shot pair(s) in the output",
+      "at": "2026-11-27 10:34 IST"
+    }
+  ]
+}
