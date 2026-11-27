@@ -100,7 +100,7 @@ def test_caption_fonts_are_static_bold():
         assert f.exists() and (ROOT / "fonts" / f"OFL-{f.stem.split('-')[0]}.txt").exists()
         ImageFont.truetype(str(f), 40)
     assert DC.SANS_NAME == "Playfair Display" and DC.SERIF_NAME == "Playfair Display"   # approved v2 riyio glow
-    assert 70 <= DC.SIZE_TALK <= 90 and 85 <= DC.SIZE_DRAMA <= 105                      # v2: slightly bigger
+    assert 80 <= DC.SIZE_TALK <= 96 and 95 <= DC.SIZE_DRAMA <= 112                      # v2: slightly bigger
 
 
 def test_typewriter_and_outline_lines(tmp_path):

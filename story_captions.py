@@ -154,9 +154,12 @@ def beat_slots(beats: list[float], dur: float, n: int, start: float = 1.3, tail:
 
 
 def _font(size: int):
+    """PIL font that matches what libass draws for ASS \\fs<size> (libass sizes by ascent+descent, not em)."""
     from PIL import ImageFont
     try:
-        return ImageFont.truetype(str(FONT), max(8, int(size)))
+        ref = ImageFont.truetype(str(FONT), 100)
+        asc, desc = ref.getmetrics()
+        return ImageFont.truetype(str(FONT), max(8, int(round(size * 100.0 / max(1, asc + desc)))))
     except Exception:
         return ImageFont.load_default()
 
@@ -210,8 +213,8 @@ def _overlap(a, b) -> int:
 def place(words, pat, lay, faces, idx) -> dict | None:
     """Beside the biggest face on the side away from it; alternate sides without a face; never over a face."""
     px, py, pw, ph = int(lay["plate_x"]), int(lay["plate_y"]), int(lay["plate_w"]), int(lay["plate_h"])
-    key_px = int(pat["key"] * ph * 2.05) if len(words) <= 2 else int(pat["key_long"] * ph * 2.05)
-    fil_px = int(pat["filler"] * ph * 2.05)
+    key_px = int(pat["key"] * ph * 2.6) if len(words) <= 2 else int(pat["key_long"] * ph * 2.6)
+    fil_px = int(pat["filler"] * ph * 2.6)
     tw, th = measure(words, key_px, fil_px)
     margin = int(0.025 * pw)
     if tw > pw - 2 * margin:

@@ -36,7 +36,7 @@ MEANING = [
     (PINK, r"love|heart|miss|sorry|lost|cry|tears|alone|forget|together|kiss|beautiful|mother|father|family"),
     (BLUE, r"cold|winter|ice|calm|quiet|dark|night|sea|ocean|sky|dream|soul|ghost|time|remember"),
 ]
-SIZE_TALK, SIZE_DRAMA = 80, 96          # v2: a bit bigger than the first riyio samples
+SIZE_TALK, SIZE_DRAMA = 88, 104          # v2: a bit bigger than the first riyio samples
 SPACING_TALK, SPACING_DRAMA = 4, 2
 GLOW_BORD, GLOW_BLUR, GLOW_ALPHA = 9, 14, 0x60
 TYPE_CHAR_S = 0.045                      # dramatic lines: one letter every 45 ms (capped to the first 60 % of the line)
@@ -170,9 +170,14 @@ def _style_planned(g: list[dict], gi: int, is_last: bool) -> list[dict]:
 
 
 def _font(size: int, drama: bool = False):
+    """PIL font whose glyphs match what libass draws for ASS \\fs<size> (libass sizes by ascent+descent, not em)."""
     from PIL import ImageFont
     try:
-        return ImageFont.truetype(str(FONT_SERIF if drama else FONT_SANS), max(8, int(size)))
+        path = str(FONT_SERIF if drama else FONT_SANS)
+        ref = ImageFont.truetype(path, 100)
+        asc, desc = ref.getmetrics()
+        em = max(8, int(round(size * 100.0 / max(1, asc + desc))))
+        return ImageFont.truetype(path, em)
     except Exception:
         return ImageFont.load_default()
 
@@ -327,13 +332,13 @@ def _layers(items: list[dict], t0: float, t1: float) -> tuple[str, str]:
         g_col = it["col"] if it["key"] else it["glow"]
         ga = GLOW_ALPHA if (it["key"] or it.get("drama")) else 0x90
         g_rev = (r"\3a&HFF&\t(%d,%d,\3a%s)" % (fade[0], fade[1], _alpha(ga))) if dt > 0 else r"\3a" + _alpha(ga)
-        glow_parts.append(r"{\1a&HFF&\3c%s%s}%s%s" % (_ass_col(g_col), g_rev, txt, sep))
+        glow_parts.append(r"{\fs%d\1a&HFF&\3c%s%s}%s%s" % (it["size"], _ass_col(g_col), g_rev, txt, sep))
         if it.get("outline"):
             c_rev = (r"\3a&HFF&\t(%d,%d,\3a&H00&)" % fade) if dt > 0 else r"\3a&H00&"
-            crisp_parts.append(r"{\1a&HFF&\bord2\3c%s%s}%s%s" % (_ass_col(it["col"]), c_rev, txt, sep))
+            crisp_parts.append(r"{\fs%d\1a&HFF&\bord2\3c%s%s}%s%s" % (it["size"], _ass_col(it["col"]), c_rev, txt, sep))
         else:
             c_rev = (r"\alpha&HFF&\t(%d,%d,\alpha&H00&)" % fade) if dt > 0 else r"\alpha&H00&"
-            crisp_parts.append(r"{\bord0\c%s%s}%s%s" % (_ass_col(it["col"]), c_rev, txt, sep))
+            crisp_parts.append(r"{\fs%d\bord0\c%s%s}%s%s" % (it["size"], _ass_col(it["col"]), c_rev, txt, sep))
     return "".join(glow_parts), "".join(crisp_parts)
 
 
@@ -381,7 +386,7 @@ def build(words: list[dict], end_s: float, lay: dict, faces_at=None, out_ass: Pa
             mm = int(0.04 * int(lay["plate_w"]))
             room = max(fx - (int(lay["plate_x"]) + mm), (int(lay["plate_x"]) + int(lay["plate_w"]) - mm) - (fx + fw))
         else:
-            room = int(lay["plate_w"] * 0.55)
+            room = int(lay["plate_w"]) - 2 * int(0.04 * int(lay["plate_w"]))
         for sc in (1.0, 0.92, 0.84, 0.76, 0.68, 0.60, 0.52, 0.44, 0.38):
             items_s = [dict(it, size=max(28, int(it["size"] * sc))) for it in items]
             tw, th = measure(items_s)

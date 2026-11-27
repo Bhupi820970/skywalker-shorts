@@ -260,3 +260,24 @@ def test_pipeline_wiring():
               'layout["edit_mode"] = "dialogue_drop"', "MAX_TOTAL_DUR = DLG_MAX_TOTAL if DIALOGUE_EDIT else 32.0"):
         assert s in PIPE, s
     assert "DLG_ACT1_FRAC, DLG_ACT1_MAX_FRAC, DLG_ACT1_MIN_S = 0.68, 0.85, 10.0" in PIPE
+
+
+@pytest.mark.skipif(not FF, reason="ffmpeg missing")
+def test_placed_box_is_at_least_as_wide_as_the_drawn_text(tmp_path):
+    """Regression: measured box was narrower than libass text (font size is ascent+descent in ASS), so lines were clipped."""
+    import re
+    from PIL import Image
+    ws = [{"t0": i * 0.05, "t1": 0.05 + i * 0.05, "word": w} for i, w in enumerate("DONT FACE YOUR".split())]
+    res = DC.build(ws, 3.0, LAY, None, tmp_path / "c.ass")
+    b = res["boxes"][0]
+    s = re.sub(r"\\pos\(\d+,\d+\)", r"\\pos(540,960)", (tmp_path / "c.ass").read_text())
+    (tmp_path / "c2.ass").write_text(s)
+    png = tmp_path / "f.png"
+    r = subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "color=c=black:s=1080x1920:d=2",
+                        "-vf", f"ass={tmp_path / 'c2.ass'}:fontsdir={ROOT / 'fonts'}", "-ss", "0.4",
+                        "-frames:v", "1", str(png)], capture_output=True)
+    if r.returncode != 0:
+        pytest.skip("ffmpeg without libass")
+    im = np.array(Image.open(png).convert("L"))
+    xs = np.where((im > 140).any(axis=0))[0]
+    assert xs.max() - xs.min() <= b["box"][2]
