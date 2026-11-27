@@ -1,0 +1,1534 @@
+{
+  "id": "20261127-0900-shahrukhkhan",
+  "status": "retry_queued",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
+  "at": "2026-11-27 10:04 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45919346865",
+  "slot": "2026-11-27T09:00:00+05:30",
+  "title": "Why Trevor scares even Michael | Gta V | #edit",
+  "hook": "Why Trevor scares even Michael",
+  "description": "Why Trevor scares even Michael. From official Gta V clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gta5 #anime #edit",
+  "tags": [
+    "gta5",
+    "anime",
+    "edit",
+    "shorts"
+  ],
+  "queue_meta": {
+    "hook": "Why Trevor scares even Michael",
+    "title": "Why Trevor scares even Michael | Gta V | #edit",
+    "description": "Why Trevor scares even Michael. From official Gta V clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gta5 #anime #edit",
+    "tags": [
+      "gta5",
+      "anime",
+      "edit",
+      "shorts"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 4.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 8.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key4",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.8-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    }
+  ],
+  "backup_item": "backup-shahrukhkhan",
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "GTA V",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "shahrukhkhan",
+      "from_words": "JAWAN",
+      "to": "dune",
+      "to_words": "DUNE",
+      "reason": "pipeline/QA failed (exit 1): only 2.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    },
+    {
+      "from": "dune",
+      "from_words": "DUNE",
+      "to": "dandadan",
+      "to_words": "DAN DA DAN",
+      "reason": "pipeline/QA failed (exit 1): only 2.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering"
+    },
+    {
+      "from": "dandadan",
+      "from_words": "DAN DA DAN",
+      "to": "gta5",
+      "to_words": "GTA V",
+      "reason": "pipeline/QA failed (exit 1): only 6.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "dandadan",
+  "swapped_to": "gta5",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261127-0900-shahrukhkhan",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261127-0900-shahrukhkhan/render-20261127-0900-shahrukhkhan.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 22.42,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene1_h264.mp4",
+  "music": "pr_semescapar.mp3",
+  "music_credit": "Song: REMY - SEM ESCAPAR\nOfficial link: https://www.youtube.com/watch?v=05qhu_3w-Os",
+  "description_final": "Why Trevor scares even Michael. From official Gta V clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #gta5 #anime #edit\n\nMusic:\nSong: REMY - SEM ESCAPAR\nOfficial link: https://www.youtube.com/watch?v=05qhu_3w-Os",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261127-0900-shahrukhkhan/render-20261127-0900-shahrukhkhan-cover.jpg",
+  "gate": {
+    "ok": false,
+    "failures": [
+      "gemini QC skipped (unavailable/budget)"
+    ],
+    "gemini_qc": "skipped (unavailable/budget)"
+  },
+  "layout": {
+    "bar_y": 534,
+    "bar_h": 122,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1798,
+    "block_h": 1920,
+    "drop_t": 22.42,
+    "energy": true,
+    "story_caption_boxes": [
+      {
+        "t0": 0.18,
+        "t1": 1.06,
+        "box": [
+          224,
+          941,
+          631,
+          62
+        ],
+        "zone": "mid",
+        "text": "THE GAME WORLD IS",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 1.06,
+        "t1": 1.92,
+        "box": [
+          363,
+          941,
+          353,
+          62
+        ],
+        "zone": "mid",
+        "text": "BEAUTIFUL",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 1.92,
+        "t1": 2.8,
+        "box": [
+          325,
+          941,
+          430,
+          62
+        ],
+        "zone": "mid",
+        "text": "MASSIVE AND",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 2.8,
+        "t1": 3.78,
+        "box": [
+          399,
+          870,
+          282,
+          62
+        ],
+        "zone": "chin",
+        "text": "DIVERSE",
+        "faces": [
+          [
+            520,
+            840,
+            22,
+            28
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 3.78,
+        "t1": 4.86,
+        "box": [
+          232,
+          941,
+          616,
+          62
+        ],
+        "zone": "mid",
+        "text": "FOR THE FIRST TIME",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 4.86,
+        "t1": 5.46,
+        "box": [
+          222,
+          916,
+          635,
+          62
+        ],
+        "zone": "chin",
+        "text": "THE GAME FEATURES",
+        "faces": [
+          [
+            840,
+            816,
+            69,
+            91
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 5.46,
+        "t1": 6.58,
+        "box": [
+          393,
+          908,
+          294,
+          62
+        ],
+        "zone": "chin",
+        "text": "NOT ONE",
+        "faces": [
+          [
+            869,
+            803,
+            70,
+            96
+          ],
+          [
+            224,
+            760,
+            53,
+            87
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 6.58,
+        "t1": 7.7,
+        "box": [
+          190,
+          879,
+          699,
+          62
+        ],
+        "zone": "chin",
+        "text": "BUT THREE WOULD -BE",
+        "faces": [
+          [
+            544,
+            806,
+            55,
+            70
+          ],
+          [
+            340,
+            771,
+            49,
+            74
+          ],
+          [
+            837,
+            798,
+            57,
+            74
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 7.7,
+        "t1": 8.747,
+        "box": [
+          382,
+          868,
+          315,
+          80
+        ],
+        "zone": "chin",
+        "text": "HEROES",
+        "faces": [
+          [
+            318,
+            775,
+            65,
+            85
+          ],
+          [
+            581,
+            807,
+            45,
+            68
+          ],
+          [
+            860,
+            810,
+            51,
+            69
+          ]
+        ],
+        "style": "RefSerif"
+      },
+      {
+        "t0": 8.747,
+        "t1": 9.347,
+        "box": [
+          228,
+          885,
+          624,
+          62
+        ],
+        "zone": "chin",
+        "text": "WHAT DID YOU JUST",
+        "faces": [
+          [
+            714,
+            782,
+            77,
+            94
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 9.347,
+        "t1": 10.18,
+        "box": [
+          353,
+          833,
+          374,
+          62
+        ],
+        "zone": "chin",
+        "text": "SAY TO ME?",
+        "faces": [
+          [
+            401,
+            783,
+            29,
+            42
+          ],
+          [
+            139,
+            782,
+            36,
+            47
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 10.18,
+        "t1": 10.94,
+        "box": [
+          204,
+          941,
+          671,
+          62
+        ],
+        "zone": "mid",
+        "text": "THE LESS SAID ABOUT",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 10.94,
+        "t1": 11.46,
+        "box": [
+          465,
+          941,
+          150,
+          61
+        ],
+        "zone": "mid",
+        "text": "HIM",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 11.46,
+        "t1": 12.58,
+        "box": [
+          348,
+          941,
+          383,
+          61
+        ],
+        "zone": "mid",
+        "text": "THE BETTER",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 12.58,
+        "t1": 13.36,
+        "box": [
+          233,
+          848,
+          613,
+          62
+        ],
+        "zone": "chin",
+        "text": "THIS HELPS TO GIVE",
+        "faces": [
+          [
+            398,
+            798,
+            39,
+            46
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 13.36,
+        "t1": 14.1,
+        "box": [
+          308,
+          941,
+          464,
+          62
+        ],
+        "zone": "mid",
+        "text": "MISSIONS NEW",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 14.1,
+        "t1": 14.68,
+        "box": [
+          369,
+          1170,
+          342,
+          62
+        ],
+        "zone": "chin",
+        "text": "LEVELS OF",
+        "faces": [
+          [
+            1005,
+            1170,
+            20,
+            27
+          ],
+          [
+            1036,
+            1199,
+            23,
+            31
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 14.68,
+        "t1": 15.7,
+        "box": [
+          301,
+          1170,
+          478,
+          62
+        ],
+        "zone": "chin",
+        "text": "DIVERSITY AND",
+        "faces": [
+          [
+            1049,
+            1208,
+            22,
+            28
+          ],
+          [
+            1019,
+            1178,
+            20,
+            25
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 15.7,
+        "t1": 16.713,
+        "box": [
+          373,
+          1170,
+          334,
+          62
+        ],
+        "zone": "chin",
+        "text": "INTENSITY",
+        "faces": [
+          [
+            1042,
+            1195,
+            20,
+            25
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 16.713,
+        "t1": 17.373,
+        "box": [
+          285,
+          839,
+          509,
+          62
+        ],
+        "zone": "chin",
+        "text": "WHEN NOT ON A",
+        "faces": [
+          [
+            405,
+            816,
+            16,
+            21
+          ],
+          [
+            254,
+            813,
+            9,
+            11
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 17.373,
+        "t1": 18.073,
+        "box": [
+          399,
+          847,
+          281,
+          62
+        ],
+        "zone": "chin",
+        "text": "MISSION",
+        "faces": [
+          [
+            644,
+            822,
+            18,
+            23
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 18.073,
+        "t1": 18.853,
+        "box": [
+          253,
+          858,
+          574,
+          62
+        ],
+        "zone": "chin",
+        "text": "THE USE OF THREE",
+        "faces": [
+          [
+            738,
+            830,
+            20,
+            26
+          ],
+          [
+            607,
+            820,
+            10,
+            12
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 18.853,
+        "t1": 19.733,
+        "box": [
+          250,
+          915,
+          579,
+          62
+        ],
+        "zone": "chin",
+        "text": "LEAD CHARACTERS",
+        "faces": [
+          [
+            719,
+            890,
+            18,
+            23
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 19.733,
+        "t1": 20.913,
+        "box": [
+          238,
+          1170,
+          603,
+          62
+        ],
+        "zone": "chin",
+        "text": "ALSO ALLOW FOR A",
+        "faces": [
+          [
+            1037,
+            1171,
+            20,
+            26
+          ],
+          [
+            1006,
+            1201,
+            22,
+            27
+          ],
+          [
+            683,
+            946,
+            20,
+            26
+          ]
+        ],
+        "style": "RefSans"
+      },
+      {
+        "t0": 20.913,
+        "t1": 21.333,
+        "box": [
+          375,
+          941,
+          329,
+          62
+        ],
+        "zone": "mid",
+        "text": "TOUCH OF",
+        "faces": [],
+        "style": "RefSans"
+      },
+      {
+        "t0": 21.333,
+        "t1": 22.299,
+        "box": [
+          315,
+          931,
+          449,
+          81
+        ],
+        "zone": "mid",
+        "text": "VOYEURISM",
+        "faces": [],
+        "style": "RefSerif"
+      }
+    ],
+    "dialogue_captions": {
+      "count": 26,
+      "text": "THE GAME WORLD IS / BEAUTIFUL / MASSIVE AND / DIVERSE / FOR THE FIRST TIME / THE GAME FEATURES / NOT ONE / BUT THREE WOULD -BE / HEROES / WHAT DID YOU JUST / SAY TO ME? / THE LESS SAID ABOUT / HIM / THE BETTER / THIS HELPS TO GIVE / MISSIONS NEW / LEVELS OF / DIVERSITY AND / INTENSITY / WHEN NOT ON A / MISSION / THE USE OF THREE / LEAD CHARACTERS / ALSO ALLOW FOR A / TOUCH OF / VOYEURISM",
+      "style": "riyio ref glow (Playfair)"
+    },
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows_uncaptioned": [
+      [
+        0.12,
+        3.4
+      ],
+      [
+        3.6,
+        10.0
+      ],
+      [
+        10.12,
+        12.2
+      ],
+      [
+        12.52,
+        16.32
+      ],
+      [
+        16.653,
+        22.113
+      ]
+    ],
+    "speech_windows": [],
+    "edit_mode": "dialogue_drop",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 7,
+      "src_start": 15.68,
+      "dur": 3.62
+    },
+    {
+      "id": 26,
+      "src_start": 55.03,
+      "dur": 4.98
+    },
+    {
+      "id": 31,
+      "src_start": 67.13,
+      "dur": 1.46
+    },
+    {
+      "id": 38,
+      "src_start": 82.17,
+      "dur": 2.42
+    },
+    {
+      "id": 55,
+      "src_start": 114.38,
+      "dur": 4.14
+    },
+    {
+      "id": 60,
+      "src_start": 124.92,
+      "dur": 5.8
+    },
+    {
+      "id": 20,
+      "src_start": 38.304,
+      "dur": 0.836
+    },
+    {
+      "id": 3,
+      "src_start": 8.646,
+      "dur": 0.859
+    },
+    {
+      "id": 48,
+      "src_start": 101.472,
+      "dur": 0.859
+    },
+    {
+      "id": 41,
+      "src_start": 92.113,
+      "dur": 0.859
+    },
+    {
+      "id": 13,
+      "src_start": 28.766,
+      "dur": 0.859
+    },
+    {
+      "id": 36,
+      "src_start": 75.803,
+      "dur": 0.859
+    },
+    {
+      "id": 16,
+      "src_start": 32.887,
+      "dur": 0.859
+    },
+    {
+      "id": 22,
+      "src_start": 41.492,
+      "dur": 0.859
+    },
+    {
+      "id": 5,
+      "src_start": 12.35,
+      "dur": 0.859
+    },
+    {
+      "id": 75,
+      "src_start": 151.484,
+      "dur": 0.836
+    }
+  ],
+  "qc_status": "skipped",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 2.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shahrukhkhan_scene1_h264.mp4",
+      "music": "pr_tacnqyvpl1s.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 2.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shahrukhkhan_scene1_h264.mp4",
+      "music": "pr_semescapar.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 6.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shahrukhkhan_scene1_h264.mp4",
+      "music": "pr_ytsearch1yirumariverflowsinyou.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/gta5_scene1_h264.mp4",
+      "music": "pr_semescapar.mp3",
+      "qc_status": "skipped"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_pending": true,
+  "logo_pending": false,
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shahrukhkhan_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 2.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-27 08:11 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shahrukhkhan_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 2.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering",
+      "at": "2026-11-27 08:21 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadan_scene4_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 2.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering; only 17.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-27 08:48 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/shahrukhkhan_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 6.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-27 09:03 IST"
+    }
+  ]
+}

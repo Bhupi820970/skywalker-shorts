@@ -1,9 +1,9 @@
 {
   "id": "20261127-0630-taarezameenpar",
-  "status": "retry_queued",
-  "detail": "final logo scan: no Gemini verdict; render kept, will re-check with the next key (no re-render)",
-  "at": "2026-11-27 04:26 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45901153671",
+  "status": "failed",
+  "detail": "gemini QC skipped after retries; not marking ready",
+  "at": "2026-11-27 08:00 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45919346865",
   "slot": "2026-11-27T06:30:00+05:30",
   "title": "Nobody expected Eleven to save Mike like this #strangerthings #eleven #netflix",
   "hook": "Nobody Touches Her Friends",
@@ -16,370 +16,83 @@
     "edit",
     "shorts"
   ],
-  "queue_meta": {
-    "hook": "Why Vecna wanted Max",
-    "title": "Why Vecna wanted Max | Stranger Things | #edit",
-    "description": "Why Vecna wanted Max. From official Stranger Things clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #strangerthings #anime #edit",
-    "tags": [
-      "strangerthings",
-      "anime",
-      "edit",
-      "shorts"
-    ]
-  },
-  "gemini_meta": true,
-  "hook_source": "gemini",
-  "hook_style": "bold claim",
-  "title_candidates": [
-    {
-      "title": "Nobody expected Eleven to save Mike like this",
-      "click_score": 94.0
-    },
-    {
-      "title": "The moment Eleven proved she was unstoppable in Stranger Things",
-      "click_score": 90.0
-    },
-    {
-      "title": "The bullies did not expect Eleven to show up",
-      "click_score": 86.0
-    },
-    {
-      "title": "When Eleven showed her real power at the cliff",
-      "click_score": 83.0
-    },
-    {
-      "title": "Stranger Things quarry scene was pure cold revenge",
-      "click_score": 78.0
-    }
-  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
   "gemini_calls": [
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
       "key": "key2",
       "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
       "key": "key3",
       "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "s": 88.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "s": 74.1,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
       "key": "key4",
       "err": "HTTP 429"
     },
     {
-      "purpose": "scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-flash-latest",
       "key": "key5",
       "err": "HTTP 429"
     },
     {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
       "key": "key6",
       "err": "HTTP 429"
     },
     {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "s": 85.2,
-      "ok": true
-    },
-    {
-      "purpose": "qc",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
       "key": "key7",
       "err": "HTTP 429"
     },
     {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
+      "purpose": "logo_final",
+      "model": "gemini-3.8-flash",
       "key": "key2",
       "err": "HTTP 429"
     },
     {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
+      "purpose": "logo_final",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.8-flash",
       "key": "key3",
       "err": "HTTP 429"
     },
     {
-      "purpose": "qc",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
       "key": "key4",
       "err": "HTTP 429"
     },
     {
-      "purpose": "qc",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
       "key": "key5",
       "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-flash-latest",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "s": 117.5,
-      "ok": true
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
-      "key": "key6",
-      "err": "HTTP 503"
     },
     {
       "purpose": "logo_final",
@@ -396,44 +109,38 @@
     {
       "purpose": "logo_final",
       "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
       "key": "key1",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_final",
       "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
       "key": "key3",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_final",
-      "model": "gemini-flash-latest",
+      "model": "gemini-3.8-flash",
       "key": "key4",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_final",
-      "model": "gemini-flash-latest",
+      "model": "gemini-3.8-flash",
       "key": "key5",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_final",
-      "model": "gemini-flash-latest",
+      "model": "gemini-3.8-flash",
       "key": "key6",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_final",
-      "model": "gemini-flash-latest",
-      "key": "key1",
-      "err": "TimeoutError"
+      "err": "HTTP 429"
     }
   ],
   "backup_item": null,
@@ -453,8 +160,31 @@
   ],
   "swapped_from": "taarezameenpar",
   "swapped_to": "strangerthings",
+  "auto_retries": 2,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "download failed: quarantined 4 clip(s) that keep failing the logo/scene filter: taarezameenpar_scene1_h264.mp4, taarezameenpar_scene2_h264.mp4, taarezameenpar_scene3_h264.mp4, taarezameenpar_scene4_h264.mp4",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "final logo scan: no Gemini verdict",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene2_h264.mp4",
+      "music": "pr_montagemalquimiaslowedh6itamn7san7osmcme.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": "gemini QC skipped",
+  "qc_status": "skipped",
   "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261127-0630-taarezameenpar",
   "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261127-0630-taarezameenpar/render-20261127-0630-taarezameenpar.mp4",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261127-0630-taarezameenpar/render-20261127-0630-taarezameenpar-cover.jpg",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -469,8 +199,6 @@
   "music": "pr_montagemalquimiaslowedh6itamn7san7osmcme.mp3",
   "music_credit": "Song: Phonk Time - MONTAGEM ALQUIMIA (SLOWED) - h6itam, n7san7os & Mc Menor Do Alvorada\nOfficial link: https://www.youtube.com/watch?v=wFUAYxi9zpo",
   "description_final": "Nobody Touches Her Friends. Eleven uses her powers to catch Mike mid-air at the quarry cliff and turns the tables on the bullies. From the official Stranger Things trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#strangerthings #eleven #netflix #shorts #edit\n\nMusic:\nSong: Phonk Time - MONTAGEM ALQUIMIA (SLOWED) - h6itam, n7san7os & Mc Menor Do Alvorada\nOfficial link: https://www.youtube.com/watch?v=wFUAYxi9zpo",
-  "no_publish": false,
-  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261127-0630-taarezameenpar/render-20261127-0630-taarezameenpar-cover.jpg",
   "gate": {
     "ok": false,
     "failures": [
@@ -520,25 +248,7 @@
     },
     "logo_pending_only": true
   },
-  "layout": {
-    "bar_y": 526,
-    "bar_h": 132,
-    "plate_y": 658,
-    "video_y": 658,
-    "plate_x": 0,
-    "plate_w": 1080,
-    "plate_h": 604,
-    "region_h": 1788,
-    "block_h": 1920,
-    "drop_t": 16.904,
-    "energy": true,
-    "caption_y": 1290,
-    "captions": [],
-    "speech_windows": [],
-    "edit_mode": "music_only",
-    "edit_format": "action",
-    "blur_fill": true
-  },
+  "no_publish": false,
   "scenes_picked": [
     {
       "id": 27,
@@ -606,28 +316,23 @@
       "dur": 0.696
     }
   ],
-  "qc_status": "pass",
-  "auto_retries": 1,
-  "max_auto_retries": 1,
-  "attempts": [
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "download failed: quarantined 4 clip(s) that keep failing the logo/scene filter: taarezameenpar_scene1_h264.mp4, taarezameenpar_scene2_h264.mp4, taarezameenpar_scene3_h264.mp4, taarezameenpar_scene4_h264.mp4",
-      "source": null,
-      "music": null,
-      "qc_status": null
-    },
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "final logo scan: no Gemini verdict",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/strangerthings_scene2_h264.mp4",
-      "music": "pr_montagemalquimiaslowedh6itamn7san7osmcme.mp3",
-      "qc_status": "pass"
-    }
-  ],
-  "last_error": "final logo scan: no Gemini verdict",
-  "qc_pending": true,
-  "logo_pending": true
+  "layout": {
+    "bar_y": 526,
+    "bar_h": 132,
+    "plate_y": 658,
+    "video_y": 658,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 604,
+    "region_h": 1788,
+    "block_h": 1920,
+    "drop_t": 16.904,
+    "energy": true,
+    "caption_y": 1290,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  }
 }
