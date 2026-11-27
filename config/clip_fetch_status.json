@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T02:46:02Z",
-  "last_upload_at": "2026-11-27T02:46:02Z"
+  "last_run_at": "2026-11-27T02:58:30Z",
+  "last_upload_at": "2026-11-27T02:58:30Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -147,6 +147,7 @@
   "yt:c8o3ATfaS6w",
   "yt:cbft6JWPkpA",
   "yt:chjVPTdBel8",
+  "yt:ciaL325dUos",
   "yt:ckEUVyKanhw",
   "yt:dBof63VAfzU",
   "yt:dhzjwuWCWu4",
@@ -2601,6 +2602,17 @@
    "kbps": 2993,
    "by": "box",
    "at": "2026-11-27T02:46:02Z"
+  },
+  {
+   "asset": "mhafinal_scene1_h264.mp4",
+   "id": "yt:ciaL325dUos",
+   "title": "Deku & Todoroki's EPIC Fight Scene | My Hero Academia",
+   "channel": "Amazon Prime Video UK & IE",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2219,
+   "by": "box",
+   "at": "2026-11-27T02:58:30Z"
   }
  ],
  "github": {
