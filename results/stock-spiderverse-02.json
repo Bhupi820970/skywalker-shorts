@@ -1,26 +1,61 @@
 {
   "id": "stock-spiderverse-02",
-  "status": "retry_queued",
-  "detail": "all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-27 04:30 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45901085936",
+  "status": "failed",
+  "detail": "time budget reached; last: pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering",
+  "at": "2026-11-27 10:42 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45928361817",
   "slot": null,
-  "title": "Why did every Spider-Man chase him here? | Spider-Man: Across The Spider-Verse | #edit",
-  "hook": "Why did every Spider-Man chase him here?",
-  "description": "Why did every Spider-Man chase him here?. From official Spider-Man: Across The Spider-Verse clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #spiderverse #milesmorales #spiderman",
+  "title": "Retired assassin still hits hardest | Sakamoto Days | #edit",
+  "hook": "Retired assassin still hits hardest",
+  "description": "Retired assassin still hits hardest. From official Sakamoto Days clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #sakamotodays",
   "tags": [
-    "spiderverse",
-    "milesmorales",
-    "spiderman",
-    "animation",
-    "sony",
-    "spiderverseedit"
+    "sakamotodays",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "sakamoto"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "Retired assassin still hits hardest",
+    "title": "Retired assassin still hits hardest | Sakamoto Days | #edit",
+    "description": "Retired assassin still hits hardest. From official Sakamoto Days clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #sakamotodays",
+    "tags": [
+      "sakamotodays",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "sakamoto"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "savage flat statement",
+  "title_candidates": [
+    {
+      "title": "Maverick Pushed Beyond His Limits",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody Survives A Dogfight Like This",
+      "click_score": 88.0
+    },
+    {
+      "title": "Maverick Facing The Impossible Odds",
+      "click_score": 85.0
+    },
+    {
+      "title": "The Brutal Reality Of Aerial Combat",
+      "click_score": 82.0
+    },
+    {
+      "title": "Maverick Caught In The Kill Zone",
+      "click_score": 79.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "logo_scenes",
@@ -62,102 +97,215 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key7",
-      "err": "HTTP 503"
+      "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.8-flash",
-      "key": "key7",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
       "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 17.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
       "key": "key7",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key6",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key6",
       "err": "HTTP 503"
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 3.2,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 4.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.8,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 3.5,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 1.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 3.8,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 34.9,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
+      "key": "key6",
       "s": 2.5,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.9,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 3.3,
+      "key": "key6",
+      "s": 3.6,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 2.7,
+      "key": "key6",
+      "s": 2.1,
       "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.1-flash-lite",
-      "key": "key1",
-      "s": 5.4,
+      "key": "key6",
+      "s": 6.0,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 4.0,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 10.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 4.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 1.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 2.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 4.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 21.3,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 6.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 6.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 19.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 14.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key6",
+      "s": 25.2,
       "ok": true
     }
   ],
@@ -165,39 +313,75 @@
   "stock": true,
   "stock_topic": "backup-spiderverse",
   "spare": true,
-  "words": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
-  "edit_format": null,
-  "title_swaps": null,
-  "swapped_from": null,
-  "swapped_to": null,
-  "auto_retries": 0,
+  "words": "SAKAMOTO DAYS",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "spidermanacrossthespiderverse",
+      "from_words": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
+      "to": "topgunmaverick",
+      "to_words": "TOP GUN MAVERICK",
+      "reason": "download failed: quarantined 4 clip(s) that keep failing the logo/scene filter: spiderverse_scene1_h264.mp4, spiderverse_scene2_h264.mp4, spiderverse_scene3_h264.mp4, spiderverse_scene4_h264.mp4"
+    },
+    {
+      "from": "topgunmaverick",
+      "from_words": "TOP GUN MAVERICK",
+      "to": "sakamotodays",
+      "to_words": "SAKAMOTO DAYS",
+      "reason": "pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "topgunmaverick",
+  "swapped_to": "sakamotodays",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene3_h264.mp4",
-      "music": "pr_xy0zyu6tgeq.mp3",
+      "error": "download failed: quarantined 4 clip(s) that keep failing the logo/scene filter: spiderverse_scene1_h264.mp4, spiderverse_scene2_h264.mp4, spiderverse_scene3_h264.mp4, spiderverse_scene4_h264.mp4",
+      "source": null,
+      "music": null,
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene4_h264.mp4",
+      "music": "pr_7fva1p4g1xk.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene3_h264.mp4",
+      "music": "pr_velasnegrasslowed2ndmoonx.mp3",
       "qc_status": null
     }
   ],
-  "last_error": "pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering",
   "source_attempts": [
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene1_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.861, 'edge_corr_median': 0.943, 'shift_px_median': 3.44, 'pairs': 6}",
-      "at": "2026-11-27 03:55 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene3_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"1.04s burned-in subtitle 'NO!'\", \"1.54s burned-in subtitle 'NO!'\", \"2.04s burned-in subtitle 'TAKING'\", \"2.54s burned-in subtitle 'TAKING A HIT'\", \"3.04s burned-in subtitle 'WHAT'\", \"3.54s burned-in subtitle 'WHAT FUCK WAS'\", \"4.04s burned-in subtitle 'WHA",
+      "at": "2026-11-27 09:46 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene2_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.742, 'edge_corr_median': 0.868, 'shift_px_median': 17.3, 'pairs': 3}; auto_qc: 1 frame(s) failed empty-dark",
-      "at": "2026-11-27 04:24 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene4_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-27 09:51 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiderverse_scene3_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-27 04:30 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-27 10:17 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene3_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; No usable scenes after filtering",
+      "at": "2026-11-27 10:42 IST"
     }
   ]
 }

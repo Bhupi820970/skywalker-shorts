@@ -1,9 +1,9 @@
 {
   "id": "stock-thebatman-02",
-  "status": "retry_queued",
-  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render)",
-  "at": "2026-11-27 04:27 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45901085936",
+  "status": "done",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render) (QC retry pass)",
+  "at": "2026-11-27 09:26 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45928361817",
   "slot": null,
   "title": "Why Batman scares the criminals | Batman enters the club | #edit",
   "hook": "Why Batman scares the criminals",
@@ -17,382 +17,55 @@
     "brucewayne",
     "action"
   ],
-  "queue_meta": {
-    "hook": "Why Batman scares the criminals",
-    "title": "Why Batman scares the criminals | Batman enters the club | #edit",
-    "description": "Why Batman scares the criminals. From official The Batman clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #batman #thebatman #dc",
-    "tags": [
-      "batman",
-      "thebatman",
-      "dc",
-      "movieedit",
-      "phonk",
-      "brucewayne",
-      "action"
-    ]
-  },
-  "gemini_meta": true,
-  "hook_source": "queue",
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
   "hook_style": null,
   "title_candidates": null,
   "gemini_calls": [
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
       "key": "key1",
       "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
       "key": "key2",
-      "err": "TimeoutError"
+      "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "qc",
       "model": "gemini-3.5-flash",
       "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "s": 110.0,
+      "s": 74.1,
       "ok": true
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
       "key": "key3",
       "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 503"
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
     },
     {
-      "purpose": "logo_scenes",
+      "purpose": "logo_final",
       "model": "gemini-3.5-flash",
-      "key": "key6",
-      "s": 92.0,
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 7.0,
       "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "s": 105.3,
-      "ok": true
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 76.2,
-      "ok": true
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "TimeoutError"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "qc",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "TimeoutError"
     }
   ],
   "backup_item": "backup-thebatman",
@@ -404,8 +77,30 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
+  "auto_retries": 1,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
+      "music": "pr_xy0zyu6tgeq.mp3",
+      "qc_status": "skipped"
+    },
+    {
+      "attempt": "qc_retry",
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
+      "music": "pr_xy0zyu6tgeq.mp3"
+    }
+  ],
+  "last_error": null,
+  "qc_status": "pass",
   "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
   "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-thebatman-02.mp4",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-thebatman-02-cover.jpg",
   "qa": {
     "no_crop": true,
     "caption": true,
@@ -414,40 +109,47 @@
     "no_logo": true,
     "exposure": true
   },
-  "drop_t": null,
   "energy": false,
   "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
   "music": "pr_xy0zyu6tgeq.mp3",
   "music_credit": "Song: Zericxxn - Raya (Slowed)\nOfficial link: https://www.youtube.com/watch?v=xY0ZyU6TGeQ",
   "description_final": "Why Batman scares the criminals. From official The Batman clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #batman #thebatman #dc\n\nMusic:\nSong: Zericxxn - Raya (Slowed)\nOfficial link: https://www.youtube.com/watch?v=xY0ZyU6TGeQ",
-  "no_publish": false,
-  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-thebatman-02-cover.jpg",
   "gate": {
-    "ok": false,
-    "failures": [
-      "gemini QC skipped (unavailable/budget)"
-    ],
-    "gemini_qc": "skipped (unavailable/budget)"
+    "ok": true,
+    "failures": [],
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 50,
+      "masked_rows": [
+        [
+          0.3187,
+          0.3823
+        ]
+      ]
+    },
+    "logo_verdict": true
   },
-  "layout": {
-    "bar_y": 612,
-    "bar_h": 122,
-    "plate_y": 734,
-    "video_y": 734,
-    "plate_x": 0,
-    "plate_w": 1080,
-    "plate_h": 452,
-    "region_h": 1798,
-    "block_h": 1920,
-    "drop_t": null,
-    "energy": false,
-    "caption_y": 1214,
-    "captions": [],
-    "speech_windows": [],
-    "edit_mode": "music_only",
-    "edit_format": "action",
-    "blur_fill": true
-  },
+  "no_publish": false,
   "scenes_picked": [
     {
       "id": 41,
@@ -523,20 +225,23 @@
       "dur": 1.5
     }
   ],
-  "qc_status": "skipped",
-  "auto_retries": 0,
-  "max_auto_retries": 1,
-  "attempts": [
-    {
-      "attempt": 1,
-      "ok": false,
-      "error": "gemini QC skipped",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
-      "music": "pr_xy0zyu6tgeq.mp3",
-      "qc_status": "skipped"
-    }
-  ],
-  "last_error": "gemini QC skipped",
-  "qc_pending": true,
-  "logo_pending": false
+  "layout": {
+    "bar_y": 612,
+    "bar_h": 122,
+    "plate_y": 734,
+    "video_y": 734,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 452,
+    "region_h": 1798,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "caption_y": 1214,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  }
 }
