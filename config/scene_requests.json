@@ -1,48 +1,10 @@
 {
- "generated_at": "2026-11-27 14:55 IST",
+ "generated_at": "2026-11-27 15:44 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 224,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "onepunchman3",
-   "slot": "2026-11-27T09:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261127-0900-onepunchman3",
-   "pillar": "anime",
-   "words": "ONE PUNCH MAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ONE PUNCH MAN fight scene official clip",
-    "ONE PUNCH MAN best scene official clip",
-    "ONE PUNCH MAN official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll India",
-    "Netflix Anime",
-    "vizmedia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Saitama ends fights in one hit",
-   "title": "Saitama ends fights in one hit | One Punch Man | #edit",
-   "tags": [
-    "onepunchman3",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "saitama"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "don2",
    "slot": "2026-11-27T16:00:00+05:30",
@@ -75,6 +37,45 @@
     "bollywood"
    ],
    "market": "IN"
+  },
+  {
+   "slug": "arcane2",
+   "slot": "2026-11-27T22:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261127-2230-arcane2",
+   "pillar": "anime",
+   "words": "ARCANE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ARCANE fight scene official clip",
+    "ARCANE best scene official clip",
+    "ARCANE official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Still Watching Netflix"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=MYY4fGzvAJY",
+   "missing_assets": [],
+   "on_release": [
+    "arcane2_scene2_h264.mp4"
+   ],
+   "hook": "Jinx never wanted this war",
+   "title": "Jinx never wanted this war | Arcane | #edit",
+   "tags": [
+    "arcane2",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "jinx"
+   ],
+   "market": "US/UK"
   },
   {
    "slug": "dragonballdaima",
@@ -1271,6 +1272,44 @@
     "shorts",
     "trending",
     "rudeus"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "onepunchman3",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-onepunchman3",
+   "pillar": "anime",
+   "words": "ONE PUNCH MAN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "ONE PUNCH MAN fight scene official clip",
+    "ONE PUNCH MAN best scene official clip",
+    "ONE PUNCH MAN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll India",
+    "Netflix Anime",
+    "vizmedia"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=lgZDNZbggVg",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Saitama ends fights in one hit",
+   "title": "Saitama ends fights in one hit | One Punch Man | #edit",
+   "tags": [
+    "onepunchman3",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "saitama"
    ],
    "market": "US/UK"
   },
