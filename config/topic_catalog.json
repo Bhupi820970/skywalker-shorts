@@ -1832,7 +1832,9 @@
       "scene_assets": [
         "dandadanevil_scene1_h264.mp4",
         "dandadanevil_scene2_h264.mp4",
-        "dandadanevil_scene3_h264.mp4"
+        "dandadanevil_scene3_h264.mp4",
+        "dandadanevil_scene4_h264.mp4",
+        "dandadanevil_scene5_h264.mp4"
       ],
       "fallback_asset": "dandadanevil_trailer_h264.mp4",
       "content_kind": "best scene",

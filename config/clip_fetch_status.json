@@ -1,11 +1,12 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T02:30:10Z",
-  "last_upload_at": "2026-11-27T02:28:33Z"
+  "last_run_at": "2026-11-27T02:32:34Z",
+  "last_upload_at": "2026-11-27T02:32:34Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
   "yt:-RuSqMYcQK0",
+  "yt:-VE7havwyoM",
   "yt:01nJH1Mek6I",
   "yt:05EIB6kOu6Y",
   "yt:0OzLbsNUKH4",
@@ -17,6 +18,7 @@
   "yt:1oiRkOT4Z_4",
   "yt:20hcTad8EWk",
   "yt:2HSKZhb3J_M",
+  "yt:2RPYcli_GnA",
   "yt:2_BkCz3OnlY",
   "yt:3bMYgo_S0Kc",
   "yt:3nwBwJiyQ_g",
@@ -76,6 +78,7 @@
   "yt:Kw3935PH01E",
   "yt:LIRxNpQ8Hqg",
   "yt:LQ4EcIUTqj4",
+  "yt:LZ1BhU8TZhA",
   "yt:Lbmsv1tcgf8",
   "yt:LmWrEpYpUec",
   "yt:LtAkyPyUhgY",
@@ -2553,6 +2556,39 @@
    "kbps": 2938,
    "by": "box",
    "at": "2026-11-27T02:28:33Z"
+  },
+  {
+   "asset": "dandadanevil_scene2_h264.mp4",
+   "id": "yt:-VE7havwyoM",
+   "title": "Okarun Finally Gets It | DAN DA DAN | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2497,
+   "by": "box",
+   "at": "2026-11-27T02:32:34Z"
+  },
+  {
+   "asset": "dandadanevil_scene4_h264.mp4",
+   "id": "yt:2RPYcli_GnA",
+   "title": "Don't Challenge Turbo Granny | DAN DA DAN | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1894,
+   "by": "box",
+   "at": "2026-11-27T02:32:34Z"
+  },
+  {
+   "asset": "dandadanevil_scene5_h264.mp4",
+   "id": "yt:LZ1BhU8TZhA",
+   "title": "CHI-CHI-CHIQUITITA | DANDADAN | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1350,
+   "by": "box",
+   "at": "2026-11-27T02:32:34Z"
   }
  ],
  "github": {
