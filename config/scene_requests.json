@@ -1,46 +1,10 @@
 {
- "generated_at": "2026-11-27 12:06 IST",
+ "generated_at": "2026-11-27 13:08 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 221,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "taarezameenpar",
-   "slot": "2026-11-27T06:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261127-0630-taarezameenpar",
-   "pillar": "romance",
-   "words": "TAARE ZAMEEN PAR",
-   "scene_types": [
-    "romantic",
-    "emotional",
-    "confession"
-   ],
-   "search_queries": [
-    "TAARE ZAMEEN PAR romantic scene",
-    "TAARE ZAMEEN PAR emotional scene",
-    "TAARE ZAMEEN PAR official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=1oiRkOT4Z_4",
-   "missing_assets": [],
-   "on_release": [
-    "taarezameenpar_scene4_h264.mp4"
-   ],
-   "hook": "The painting said what he could not",
-   "title": "The painting said what he could not | Taare Zameen Par | #edit",
-   "tags": [
-    "taarezameenpar",
-    "ishaan",
-    "bollywood",
-    "edit",
-    "phonk",
-    "emotional",
-    "aura"
-   ],
-   "market": "IN"
-  },
   {
    "slug": "onepunchman3",
    "slot": "2026-11-27T09:00:00+05:30",
@@ -153,6 +117,45 @@
     "trending",
     "hina",
     "hodaka"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "cyberpunkedgerunners",
+   "slot": "2026-11-28T18:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261128-1830-cyberpunkedgerunners",
+   "pillar": "anime",
+   "words": "CYBERPUNK",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "CYBERPUNK fight scene official clip",
+    "CYBERPUNK best scene official clip",
+    "CYBERPUNK official clip"
+   ],
+   "official_channels": [
+    "Netflix",
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+   "missing_assets": [],
+   "on_release": [
+    "cyberpunkedgerunners_scene5_h264.mp4"
+   ],
+   "hook": "David paid for the legendary life",
+   "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
+   "tags": [
+    "cyberpunkedgerunners",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "david"
    ],
    "market": "US/UK"
   },
@@ -1470,6 +1473,41 @@
     "trending",
     "jinwoo",
     "sungjinwoo"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "spiderverse",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-spiderverse",
+   "pillar": "hollywood",
+   "words": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "SPIDER-MAN: ACROSS THE SPIDER-VERSE fight scene official clip",
+    "SPIDER-MAN: ACROSS THE SPIDER-VERSE best scene official clip",
+    "SPIDER-MAN: ACROSS THE SPIDER-VERSE official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=GPitD0-mkYA",
+   "missing_assets": [],
+   "on_release": [
+    "spiderverse_scene3_h264.mp4"
+   ],
+   "hook": "Why did every Spider-Man chase him here?",
+   "title": "Why did every Spider-Man chase him here? | Spider-Man: Across The Spider-Verse | #edit",
+   "tags": [
+    "spiderverse",
+    "milesmorales",
+    "spiderman",
+    "animation",
+    "sony",
+    "spiderverseedit"
    ],
    "market": "US/UK"
   },
