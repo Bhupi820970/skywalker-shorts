@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T03:03:12Z",
-  "last_upload_at": "2026-11-27T03:03:12Z"
+  "last_run_at": "2026-11-27T03:11:20Z",
+  "last_upload_at": "2026-11-27T03:11:20Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -54,6 +54,7 @@
   "yt:EKuVC2aVdI8",
   "yt:EovTf8Mydo4",
   "yt:Ev0FRl7IRkU",
+  "yt:F_ftAIUnCjI",
   "yt:Fn9gKhU_2_Q",
   "yt:FpR2IaKqF64",
   "yt:GGZdoD7gYnE",
@@ -186,6 +187,7 @@
   "yt:mSXxPBQmPAw",
   "yt:ms8jkPQ5cvM",
   "yt:nBks1vcJQvk",
+  "yt:nzzkkwOoXSU",
   "yt:oL75W3ubBgQ",
   "yt:olEGtoYs_8A",
   "yt:ouKbrNiaPxo",
@@ -2673,6 +2675,28 @@
    "kbps": 1723,
    "by": "box",
    "at": "2026-11-27T03:03:12Z"
+  },
+  {
+   "asset": "vinlandsaga2_scene1_h264.mp4",
+   "id": "yt:nzzkkwOoXSU",
+   "title": "A Warrior's Vengeance: Thorfinn vs. Askeladd | VINLAND SAGA | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1488,
+   "by": "box",
+   "at": "2026-11-27T03:11:20Z"
+  },
+  {
+   "asset": "vinlandsaga2_scene2_h264.mp4",
+   "id": "yt:F_ftAIUnCjI",
+   "title": "Sailing to War | Vinland Saga | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1494,
+   "by": "box",
+   "at": "2026-11-27T03:11:20Z"
   }
  ],
  "github": {
