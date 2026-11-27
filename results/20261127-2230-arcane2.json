@@ -1,25 +1,38 @@
 {
   "id": "20261127-2230-arcane2",
-  "status": "retry_queued",
-  "detail": "all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.9, 'edge_corr_median': 0.874, 'shift_px_median': 4.27, 'pairs': 6}",
-  "at": "2026-11-27 15:42 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45971326134",
+  "status": "done",
+  "detail": "rendered 2160x3840 (chunked lanczos 1920x1080 source -> 2160x3840), QA ok (title auto-swap to WIND BREAKER)",
+  "at": "2026-11-27 16:48 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45980306469",
   "slot": "2026-11-27T22:30:00+05:30",
-  "title": "Jinx never wanted this war | Arcane | #edit",
-  "hook": "Jinx never wanted this war",
-  "description": "Jinx never wanted this war. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #arcane2",
+  "title": "Sakura only fights for his town | Wind Breaker | #edit",
+  "hook": "Sakura only fights for his town",
+  "description": "Sakura only fights for his town. From official Wind Breaker clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #windbreaker",
   "tags": [
-    "arcane2",
+    "windbreaker",
     "anime",
     "animeedit",
     "edit",
     "shorts",
     "trending",
-    "jinx"
+    "sakura"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
+  "queue_meta": {
+    "hook": "Sakura only fights for his town",
+    "title": "Sakura only fights for his town | Wind Breaker | #edit",
+    "description": "Sakura only fights for his town. From official Wind Breaker clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #windbreaker",
+    "tags": [
+      "windbreaker",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "sakura"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "queue",
   "hook_style": null,
   "title_candidates": null,
   "gemini_calls": [
@@ -27,90 +40,137 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 120.9,
+      "s": 23.0,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 80.1,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 58.3,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 34.0,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 29.4,
-      "ok": true
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "s": 73.1,
+      "s": 67.5,
       "ok": true
     },
     {
       "purpose": "scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 26.5,
-      "ok": true
+      "err": "HTTP 503"
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
       "key": "key1",
-      "s": 36.2,
-      "ok": true
+      "err": "HTTP 503"
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
       "key": "key1",
-      "err": "HTTP 429"
+      "err": "HTTP 503"
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 27.5,
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.5,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 19.3,
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.2,
       "ok": true
     },
     {
       "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 20.8,
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 15.7,
       "ok": true
     },
     {
-      "purpose": "hook",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "s": 9.3,
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.3,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 10.0,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 4.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.0,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.9,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 10.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 0.8,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.7,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 2.4,
       "ok": true
     }
   ],
@@ -118,39 +178,260 @@
   "stock": null,
   "stock_topic": null,
   "spare": null,
-  "words": "ARCANE",
-  "edit_format": null,
-  "title_swaps": null,
-  "swapped_from": null,
-  "swapped_to": null,
-  "auto_retries": 0,
+  "words": "WIND BREAKER",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "arcane2",
+      "from_words": "ARCANE",
+      "to": "spyxfamilycodewhite",
+      "to_words": "SPY X FAMILY",
+      "reason": "download failed: quarantined 4 clip(s) that keep failing the logo/scene filter: arcane2_scene4_h264.mp4, arcane2_scene5_h264.mp4, arcane2_scene6_h264.mp4, arcane_scene1_h264.mp4 | no unused official source left for this topic (scene clips already posted on the channel)"
+    },
+    {
+      "from": "spyxfamilycodewhite",
+      "from_words": "SPY X FAMILY",
+      "to": "windbreaker",
+      "to_words": "WIND BREAKER",
+      "reason": "pipeline/QA failed (exit 1): only 11.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "spyxfamilycodewhite",
+  "swapped_to": "windbreaker",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.9, 'edge_corr_median': 0.874, 'shift_px_median': 4.27, 'pairs': 6}",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene1_h264.mp4",
-      "music": "pr_7fva1p4g1xk.mp3",
+      "error": "download failed: quarantined 4 clip(s) that keep failing the logo/scene filter: arcane2_scene4_h264.mp4, arcane2_scene5_h264.mp4, arcane2_scene6_h264.mp4, arcane_scene1_h264.mp4 | no unused official source left for this topic (scene clips already posted on the channel)",
+      "source": null,
+      "music": null,
       "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 11.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4",
+      "music": "pr_miamorbxkqxaxeos.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/windbreaker_scene2_h264.mp4",
+      "music": "pr_montagemodorijapanesefunk.mp3",
+      "qc_status": "pass"
     }
   ],
-  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.9, 'edge_corr_median': 0.874, 'shift_px_median': 4.27, 'pairs': 6}",
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/render-20261127-2230-arcane2",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261127-2230-arcane2/render-20261127-2230-arcane2.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 17.85,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/windbreaker_scene2_h264.mp4",
+  "music": "pr_montagemodorijapanesefunk.mp3",
+  "music_credit": "Song: Phonk Time - MONTAGEM ODORI / JAPANESE FUNK\nOfficial link: https://www.youtube.com/watch?v=IZFo1FpFpjY",
+  "description_final": "Sakura only fights for his town. From official Wind Breaker clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #windbreaker\n\nMusic:\nSong: Phonk Time - MONTAGEM ODORI / JAPANESE FUNK\nOfficial link: https://www.youtube.com/watch?v=IZFo1FpFpjY",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/render-20261127-2230-arcane2/render-20261127-2230-arcane2-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 19.18,
+      "audio": true
+    },
+    "lufs": -13.8,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.1,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 40,
+      "ignored": [
+        "5.54s Chinese text on background signage",
+        "16.04s Chinese text on background signage"
+      ],
+      "masked_rows": [
+        [
+          0.275,
+          0.3417
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 528,
+    "bar_h": 128,
+    "plate_y": 656,
+    "video_y": 656,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 608,
+    "region_h": 1792,
+    "block_h": 1920,
+    "drop_t": 17.85,
+    "energy": true,
+    "caption_y": 1292,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 51,
+      "src_start": 109.276,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 11,
+      "src_start": 17.643,
+      "dur": 2.421,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 31,
+      "src_start": 61.895,
+      "dur": 1.649,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 21,
+      "src_start": 47.293,
+      "dur": 2.882,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 62,
+      "src_start": 127.044,
+      "dur": 2.337
+    },
+    {
+      "id": 15,
+      "src_start": 32.407,
+      "dur": 0.669,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 75,
+      "src_start": 150.192,
+      "dur": 0.961,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 7,
+      "src_start": 8.3,
+      "dur": 1.378,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 66,
+      "src_start": 135.093,
+      "dur": 1.42,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 26,
+      "src_start": 57.845,
+      "dur": 0.711,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 56,
+      "src_start": 119.369,
+      "dur": 0.669,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 53,
+      "src_start": 114.072,
+      "dur": 1.253,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 41,
+      "src_start": 86.67,
+      "dur": 1.011,
+      "gemini_score": 4.0,
+      "reason": "gemini score 4.0"
+    }
+  ],
+  "qc_status": "pass",
   "source_attempts": [
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane2_scene4_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "at": "2026-11-27 15:00 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 13.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-27 15:55 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane2_scene5_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 2.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-27 15:21 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 5.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-27 16:00 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene1_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.9, 'edge_corr_median': 0.874, 'shift_px_median': 4.27, 'pairs': 6}",
-      "at": "2026-11-27 15:42 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 11.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-27 16:07 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/windbreaker_scene1_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 13.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 14.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-27 16:25 IST"
     }
   ]
 }

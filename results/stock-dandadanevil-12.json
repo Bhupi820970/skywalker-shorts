@@ -1,415 +1,73 @@
 {
   "id": "stock-dandadanevil-12",
-  "status": "retry_queued",
-  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 13.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-  "at": "2026-11-27 11:11 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45938252525",
+  "status": "failed",
+  "detail": "time budget reached; last: gemini QC reject: Well-executed edit following template requirements with clear audio, synchronized captions, and proper beat drop layout.",
+  "at": "2026-11-27 17:22 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45980306469",
   "slot": null,
-  "title": "Why Maverick is the greatest pilot | The final training run | #edit",
-  "hook": "Why Maverick is the greatest pilot",
-  "description": "Why Maverick is the greatest pilot. From official Top Gun Maverick clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #topgun #maverick #tomcruise",
+  "title": "Howl taking total control of the room is peak Ghibli #howlsmovingcastle #animeedit #ghibli",
+  "hook": "Howl Rules This House",
+  "description": "Howl Rules This House. Howl calmly steps into the kitchen to take command of Calcifer and feed the household. From the official The Boy And The Heron trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#howlsmovingcastle #animeedit #ghibli #shorts #edit",
   "tags": [
-    "topgun",
-    "maverick",
-    "tomcruise",
-    "movieedit",
-    "phonk",
-    "aviation",
-    "action"
+    "howlsmovingcastle",
+    "animeedit",
+    "ghibli",
+    "boyandheron",
+    "anime",
+    "edit",
+    "shorts",
+    "trending",
+    "mahito"
   ],
-  "queue_meta": null,
-  "gemini_meta": false,
-  "hook_source": null,
-  "hook_style": null,
-  "title_candidates": null,
+  "queue_meta": {
+    "hook": "The heron knew his secret",
+    "title": "The heron knew his secret | The Boy and the Heron | #edit",
+    "description": "The heron knew his secret. From official The Boy and the Heron clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #boyandheron",
+    "tags": [
+      "boyandheron",
+      "anime",
+      "animeedit",
+      "edit",
+      "shorts",
+      "trending",
+      "mahito"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "bold savage statement",
+  "title_candidates": [
+    {
+      "title": "Howl taking total control of the room is peak Ghibli",
+      "click_score": 94.0
+    },
+    {
+      "title": "Nobody suspected Howl would dominate the scene like this",
+      "click_score": 89.0
+    },
+    {
+      "title": "Howl did not expect Sophie to bully his fire demon",
+      "click_score": 85.0
+    },
+    {
+      "title": "When Howl steps in nobody dares to argue",
+      "click_score": 81.0
+    },
+    {
+      "title": "The exact moment Howl changed the entire room dynamic",
+      "click_score": 78.0
+    }
+  ],
   "gemini_calls": [
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "s": 23.8,
+      "s": 11.0,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 503"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
       "err": "HTTP 429"
@@ -418,313 +76,239 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key2",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key3",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "s": 28.7,
+      "s": 30.7,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 10.0,
+      "ok": true
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 62.4,
+      "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 83.8,
+      "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key1",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
       "key": "key2",
       "err": "HTTP 429"
     },
     {
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 5.8,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 6.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 12.2,
+      "ok": true
+    },
+    {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 14.2,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 14.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
       "key": "key3",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key4",
-      "err": "HTTP 429"
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 52.1,
+      "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
-      "key": "key5",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key6",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.5-flash",
-      "key": "key7",
-      "err": "HTTP 429"
-    },
-    {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
       "key": "key1",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "s": 80.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
       "key": "key2",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
       "key": "key3",
       "err": "HTTP 429"
     },
     {
       "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
+      "model": "gemini-3.5-flash",
       "key": "key4",
-      "err": "HTTP 429"
+      "s": 39.0,
+      "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key5",
-      "err": "HTTP 429"
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 71.6,
+      "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key6",
-      "err": "HTTP 429"
+      "purpose": "hook",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 10.8,
+      "ok": true
     },
     {
-      "purpose": "logo_scenes",
-      "model": "gemini-3.8-flash",
-      "key": "key7",
-      "err": "HTTP 429"
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 77.4,
+      "ok": true
     }
   ],
   "backup_item": "backup-dandadanevil",
   "stock": true,
   "stock_topic": "backup-dandadanevil",
   "spare": true,
-  "words": "TOP GUN MAVERICK",
+  "words": "THE BOY AND THE HERON",
   "edit_format": "action",
   "title_swaps": [
     {
       "from": "dandadan",
       "from_words": "DAN DA DAN",
+      "to": "thebatman",
+      "to_words": "THE BATMAN",
+      "reason": "download failed: quarantined 4 clip(s) that keep failing the logo/scene filter: dandadanevil_scene2_h264.mp4, dandadanevil_scene4_h264.mp4, dandadanevil_scene5_h264.mp4, dandadan_scene4_h264.mp4 | no unused official source left for this topic (scene clips already posted on the channel)"
+    },
+    {
+      "from": "thebatman",
+      "from_words": "THE BATMAN",
       "to": "topgunmaverick",
       "to_words": "TOP GUN MAVERICK",
-      "reason": "pipeline/QA failed (exit 1): only 6.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+      "reason": "download failed: quarantined 5 clip(s) that keep failing the logo/scene filter: dandadanevil_scene2_h264.mp4, dandadanevil_scene4_h264.mp4, dandadanevil_scene5_h264.mp4, dandadan_scene4_h264.mp4, thebatman_scene5_h264.mp4 | no unused official source left for this topic (scene clips already posted on the channel)"
+    },
+    {
+      "from": "topgunmaverick",
+      "from_words": "TOP GUN MAVERICK",
+      "to": "boyandheron",
+      "to_words": "THE BOY AND THE HERON",
+      "reason": "pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
     }
   ],
-  "swapped_from": "dandadan",
-  "swapped_to": "topgunmaverick",
-  "auto_retries": 0,
+  "swapped_from": "topgunmaverick",
+  "swapped_to": "boyandheron",
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
-      "error": "pipeline/QA failed (exit 1): only 6.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene5_h264.mp4",
-      "music": "pr_acidoiiislowedudiennxxmcdenny.mp3",
+      "error": "download failed: quarantined 4 clip(s) that keep failing the logo/scene filter: dandadanevil_scene2_h264.mp4, dandadanevil_scene4_h264.mp4, dandadanevil_scene5_h264.mp4, dandadan_scene4_h264.mp4 | no unused official source left for this topic (scene clips already posted on the channel)",
+      "source": null,
+      "music": null,
       "qc_status": null
     },
     {
       "attempt": 1,
       "ok": false,
-      "error": "time budget reached; last: pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 13.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene4_h264.mp4",
-      "music": "pr_acidoiiislowedudiennxxmcdenny.mp3",
+      "error": "download failed: quarantined 5 clip(s) that keep failing the logo/scene filter: dandadanevil_scene2_h264.mp4, dandadanevil_scene4_h264.mp4, dandadanevil_scene5_h264.mp4, dandadan_scene4_h264.mp4, thebatman_scene5_h264.mp4 | no unused official source left for this topic (scene clips already posted on the channel)",
+      "source": null,
+      "music": null,
       "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene4_h264.mp4",
+      "music": "pr_7fva1p4g1xk.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "time budget reached; last: gemini QC reject: Well-executed edit following template requirements with clear audio, synchronized captions, and proper beat drop layout.",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene2_h264.mp4",
+      "music": "pr_7fva1p4g1xk.mp3",
+      "qc_status": "fail"
     }
   ],
-  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 13.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "last_error": "time budget reached; last: gemini QC reject: Well-executed edit following template requirements with clear audio, synchronized captions, and proper beat drop layout.",
   "source_attempts": [
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 17.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-27 10:04 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene3_h264.mp4",
+      "error": "publish gate failed: logo scan: {\"final\": [\"1.04s burned-in text overlay ('NO!')\", \"1.54s burned-in text overlay ('NO!')\", \"2.04s burned-in text overlay ('DON'T GIVE ME')\", \"3.04s burned-in text overlay ('YOU GOT HIM')\", \"3.54s burned-in text overlay ('MAN!')\", \"5.04s burned-in text overlay ('THE')\"",
+      "at": "2026-11-27 16:51 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene4_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-27 10:22 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/topgunmaverick_scene4_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-27 16:55 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene5_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 6.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-27 10:32 IST"
-    },
-    {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene2_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 17.9s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 11.8s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-27 10:56 IST"
-    },
-    {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dandadanevil_scene4_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): only 13.1s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut; only 13.4s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
-      "at": "2026-11-27 11:11 IST"
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/boyandheron_scene2_h264.mp4",
+      "error": "gemini QC reject: Well-executed edit following template requirements with clear audio, synchronized captions, and proper beat drop layout.",
+      "at": "2026-11-27 17:22 IST"
     }
   ]
 }
