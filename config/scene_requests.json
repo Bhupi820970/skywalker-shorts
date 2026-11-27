@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-27 13:08 IST",
+ "generated_at": "2026-11-27 13:20 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 221,
+ "release_scene_clips": 224,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -117,45 +117,6 @@
     "trending",
     "hina",
     "hodaka"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "cyberpunkedgerunners",
-   "slot": "2026-11-28T18:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261128-1830-cyberpunkedgerunners",
-   "pillar": "anime",
-   "words": "CYBERPUNK",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "CYBERPUNK fight scene official clip",
-    "CYBERPUNK best scene official clip",
-    "CYBERPUNK official clip"
-   ],
-   "official_channels": [
-    "Netflix",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
-   "missing_assets": [],
-   "on_release": [
-    "cyberpunkedgerunners_scene5_h264.mp4"
-   ],
-   "hook": "David paid for the legendary life",
-   "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
-   "tags": [
-    "cyberpunkedgerunners",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "david"
    ],
    "market": "US/UK"
   },
