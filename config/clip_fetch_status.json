@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T03:22:03Z",
-  "last_upload_at": "2026-11-27T03:22:03Z"
+  "last_run_at": "2026-11-27T03:31:07Z",
+  "last_upload_at": "2026-11-27T03:31:07Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -137,12 +137,15 @@
   "yt:YwgTPwxPZ9A",
   "yt:Z1mcQ6CzXo8",
   "yt:Z2FKji5UeXU",
+  "yt:ZIQiMxCkxAg",
   "yt:ZRPgxFmaxoU",
+  "yt:ZTkdCBSZbno",
   "yt:ZVTDEZvFU6k",
   "yt:Za4kyckczXI",
   "yt:ZivADyFlILE",
   "yt:Zq4zTcIM0yQ",
   "yt:_GFcWG0M-YM",
+  "yt:_grmduuECm4",
   "yt:_lmn16npMXw",
   "yt:_rs3OAp2SFM",
   "yt:aLBVDoD7beU",
@@ -2817,6 +2820,39 @@
    "kbps": 1381,
    "by": "box",
    "at": "2026-11-27T03:22:03Z"
+  },
+  {
+   "asset": "violetevergarden_scene4_h264.mp4",
+   "id": "yt:ZIQiMxCkxAg",
+   "title": "Violet Evergarden | Clip: Olivia's \"One Day\" Wish | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1648,
+   "by": "box",
+   "at": "2026-11-27T03:31:07Z"
+  },
+  {
+   "asset": "violetevergarden_scene5_h264.mp4",
+   "id": "yt:ZTkdCBSZbno",
+   "title": "Violet's Love | Violet Evergarden: the Movie | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1979,
+   "by": "box",
+   "at": "2026-11-27T03:31:07Z"
+  },
+  {
+   "asset": "violetevergarden_scene6_h264.mp4",
+   "id": "yt:_grmduuECm4",
+   "title": "Violet Evergarden | Now Streaming | Netflix",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1681,
+   "by": "box",
+   "at": "2026-11-27T03:31:07Z"
   }
  ],
  "github": {

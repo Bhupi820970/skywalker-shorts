@@ -2259,6 +2259,42 @@
       ],
       "added_by": "footage_refill",
       "category": "tv"
+    },
+    {
+      "id": "backup-violetevergarden",
+      "pillar": "anime",
+      "source_url": "https://www.youtube.com/watch?v=ZIQiMxCkxAg",
+      "fallback_mp4": [
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene4_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene5_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene6_h264.mp4"
+      ],
+      "template": "whitebar",
+      "hook": "Why Violet had to learn human emotions",
+      "words": "VIOLET EVERGARDEN",
+      "title": "Why Violet had to learn human emotions | Violet's final letter | #edit",
+      "description": "Why Violet had to learn human emotions. From official Violet Evergarden clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #violetevergarden #violet #animeedit",
+      "tags": [
+        "violetevergarden",
+        "violet",
+        "animeedit",
+        "phonk",
+        "emotional",
+        "anime",
+        "kyotoanimation"
+      ],
+      "target_dur": 26,
+      "market": "US/UK",
+      "fallback_release": "sources",
+      "fallback_asset": "violetevergarden_scene4_h264.mp4",
+      "content_kind": "best scene",
+      "scene_assets": [
+        "violetevergarden_scene4_h264.mp4",
+        "violetevergarden_scene5_h264.mp4",
+        "violetevergarden_scene6_h264.mp4"
+      ],
+      "added_by": "footage_refill",
+      "category": "anime"
     }
   ]
 }

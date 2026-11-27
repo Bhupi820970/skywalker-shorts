@@ -2208,7 +2208,10 @@
       "scene_assets": [
         "violetevergarden_scene1_h264.mp4",
         "violetevergarden_scene2_h264.mp4",
-        "violetevergarden_scene3_h264.mp4"
+        "violetevergarden_scene3_h264.mp4",
+        "violetevergarden_scene4_h264.mp4",
+        "violetevergarden_scene5_h264.mp4",
+        "violetevergarden_scene6_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
