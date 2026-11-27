@@ -1,0 +1,416 @@
+{
+  "id": "20261127-1130-dune",
+  "status": "done",
+  "detail": "rendered 2160x3840 (4K source, scaled to 2160x3840 (chunked)), QA ok (assigned from stock-dune-01)",
+  "at": "2026-11-27 11:14 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45785893322",
+  "slot": "2026-11-27T11:30:00+05:30",
+  "title": "Feyd-Rautha entering the scene is peak terror #dune #feydrautha #scifi",
+  "hook": "Feyd-Rautha Claims His Throne",
+  "description": "Feyd-Rautha Claims His Throne. The sociopathic Feyd-Rautha Harkonnen makes a terrifying entrance, signaling the beginning of a brutal conflict on Arrakis. From the official Dune trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dune #feydrautha #scifi #shorts #edit",
+  "tags": [
+    "dune",
+    "feydrautha",
+    "scifi",
+    "anime",
+    "edit",
+    "shorts"
+  ],
+  "queue_meta": {
+    "hook": "Why Paul stopped being human",
+    "title": "Why Paul stopped being human | Dune | #edit",
+    "description": "Why Paul stopped being human. From official Dune clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dune #anime #edit",
+    "tags": [
+      "dune",
+      "anime",
+      "edit",
+      "shorts"
+    ]
+  },
+  "gemini_meta": true,
+  "hook_source": "gemini",
+  "hook_style": "savage statement",
+  "title_candidates": [
+    {
+      "title": "Feyd-Rautha entering the scene is peak terror",
+      "click_score": 92.0
+    },
+    {
+      "title": "Nobody suspected Feyd-Rautha was this dangerous",
+      "click_score": 88.0
+    },
+    {
+      "title": "Watch the moment Feyd-Rautha changes the war",
+      "click_score": 85.0
+    },
+    {
+      "title": "The Harkonnens did not expect this level of violence",
+      "click_score": 82.0
+    },
+    {
+      "title": "Feyd-Rautha reminds everyone why he is lethal",
+      "click_score": 79.0
+    }
+  ],
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 1.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 7.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.7,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.4,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 6.5,
+      "ok": true
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 6.7,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "s": 1.8,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-dune",
+  "stock": true,
+  "stock_topic": "backup-dune",
+  "spare": true,
+  "words": "DUNE",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene1_h264.mp4",
+      "music": "pr_montagemdune.mp3",
+      "qc_status": "pass"
+    }
+  ],
+  "last_error": null,
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dune-01.mp4",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "drop_t": 14.988,
+  "energy": true,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dune_scene1_h264.mp4",
+  "music": "pr_montagemdune.mp3",
+  "music_credit": "Song: Phonk Time - MONTAGEM DUNE\nOfficial link: https://www.youtube.com/watch?v=Vfsh6klaYSs",
+  "description_final": "Feyd-Rautha Claims His Throne. The sociopathic Feyd-Rautha Harkonnen makes a terrifying entrance, signaling the beginning of a brutal conflict on Arrakis. From the official Dune trailer. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#dune #feydrautha #scifi #shorts #edit\n\nMusic:\nSong: Phonk Time - MONTAGEM DUNE\nOfficial link: https://www.youtube.com/watch?v=Vfsh6klaYSs",
+  "no_publish": false,
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dune-01-cover.jpg",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "probe": {
+      "w": 2160,
+      "h": 3840,
+      "dur": 25.2,
+      "audio": true
+    },
+    "lufs": -13.9,
+    "audio_check": {
+      "mode": "music_only",
+      "isolated": false,
+      "speech_segments": 0,
+      "act2_song_dbfs": -16.8,
+      "voice_dbfs": -99.0,
+      "song_switches": 1
+    },
+    "subtitle_cues": 0,
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 52,
+      "masked_rows": [
+        [
+          0.3167,
+          0.3823
+        ]
+      ]
+    },
+    "logo_verdict": true,
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_pending_only": false
+  },
+  "layout": {
+    "bar_y": 608,
+    "bar_h": 126,
+    "plate_y": 734,
+    "video_y": 734,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 452,
+    "region_h": 1794,
+    "block_h": 1920,
+    "drop_t": 14.988,
+    "energy": true,
+    "caption_y": 1214,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "scenes_picked": [
+    {
+      "id": 13,
+      "src_start": 43.043,
+      "dur": 1.5,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    },
+    {
+      "id": 20,
+      "src_start": 55.806,
+      "dur": 1.713,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 6,
+      "src_start": 6.757,
+      "dur": 1.5,
+      "gemini_score": 5.0,
+      "reason": "gemini score 5.0"
+    },
+    {
+      "id": 9,
+      "src_start": 18.477,
+      "dur": 1.649,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 11,
+      "src_start": 29.446,
+      "dur": 1.788,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 28,
+      "src_start": 134.009,
+      "dur": 2.0,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 26,
+      "src_start": 125.0,
+      "dur": 1.553,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 23,
+      "src_start": 118.577,
+      "dur": 1.5,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 22002,
+      "src_start": 77.599,
+      "dur": 1.785,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 30,
+      "src_start": 142.017,
+      "dur": 2.497,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 3,
+      "src_start": 3.365,
+      "dur": 0.808,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 16,
+      "src_start": 47.464,
+      "dur": 1.128,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 7001,
+      "src_start": 15.37,
+      "dur": 0.898,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 22003,
+      "src_start": 95.116,
+      "dur": 1.337,
+      "gemini_score": 6.0,
+      "reason": "gemini score 6.0"
+    }
+  ],
+  "qc_status": "pass",
+  "stock_id": "stock-dune-01",
+  "assigned_from_stock": true
+}

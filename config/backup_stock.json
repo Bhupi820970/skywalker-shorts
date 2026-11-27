@@ -874,7 +874,8 @@
       "topic_id": "backup-dandadanevil",
       "slug": "dandadanevil",
       "status": "pending",
-      "queued_at": "2026-11-27 09:39 IST"
+      "queued_at": "2026-11-27 09:39 IST",
+      "result_id": "stock-dandadanevil-12"
     },
     {
       "id": "stock-dbsuperhero-01",
@@ -1102,10 +1103,13 @@
       "id": "stock-dune-01",
       "topic_id": "backup-dune",
       "slug": "dune",
-      "status": "ready",
+      "status": "used",
       "queued_at": "2026-11-26 14:15 IST",
       "result_id": "stock-dune-01",
-      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dune-01.mp4"
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-dune-01.mp4",
+      "assigned_slot": "2026-11-27T11:30:00+05:30",
+      "assigned_result": "20261127-1130-dune",
+      "used_at": "2026-11-27 11:14 IST"
     },
     {
       "id": "stock-dune2-01",
@@ -1382,7 +1386,7 @@
       "id": "stock-gta5-02",
       "topic_id": "backup-gta5",
       "slug": "gta5",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-27 01:37 IST",
       "result_id": "stock-gta5-02",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-gta5-02.mp4"
@@ -1434,7 +1438,7 @@
       "id": "stock-jjk-02",
       "topic_id": "backup-jjk",
       "slug": "jjk",
-      "status": "pending",
+      "status": "ready",
       "queued_at": "2026-11-27 01:37 IST",
       "result_id": "stock-jjk-02",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-jjk-02.mp4"
@@ -1871,7 +1875,7 @@
       "id": "stock-spiderverse-02",
       "topic_id": "backup-spiderverse",
       "slug": "spiderverse",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-27 03:22 IST",
       "result_id": "stock-spiderverse-02"
     },
@@ -1880,16 +1884,21 @@
       "topic_id": "backup-squidgame",
       "slug": "squidgame",
       "status": "pending",
-      "queued_at": "2026-11-27 09:39 IST"
+      "queued_at": "2026-11-27 09:39 IST",
+      "result_id": "stock-squidgame-01",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-squidgame-01.mp4"
     },
     {
       "id": "stock-strangerthings-01",
       "topic_id": "backup-strangerthings",
       "slug": "strangerthings",
-      "status": "ready",
+      "status": "used",
       "queued_at": "2026-11-26 16:17 IST",
       "result_id": "stock-strangerthings-01",
-      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-strangerthings-01.mp4"
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-strangerthings-01.mp4",
+      "assigned_slot": "2026-11-27T09:00:00+05:30",
+      "assigned_result": "20261127-0900-strangerthings",
+      "used_at": "2026-11-27 11:14 IST"
     },
     {
       "id": "stock-superman-01",
@@ -1956,7 +1965,7 @@
       "id": "stock-thebatman-02",
       "topic_id": "backup-thebatman",
       "slug": "thebatman",
-      "status": "pending",
+      "status": "ready",
       "queued_at": "2026-11-27 03:22 IST",
       "result_id": "stock-thebatman-02",
       "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-thebatman-02.mp4"
@@ -2042,7 +2051,8 @@
       "slug": "twisters",
       "status": "pending",
       "queued_at": "2026-11-26 22:39 IST",
-      "result_id": "stock-twisters-04"
+      "result_id": "stock-twisters-04",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-twisters-04.mp4"
     },
     {
       "id": "stock-venom3-01",
@@ -2077,7 +2087,9 @@
       "topic_id": "backup-vinlandsaga2",
       "slug": "vinlandsaga2",
       "status": "pending",
-      "queued_at": "2026-11-27 10:06 IST"
+      "queued_at": "2026-11-27 10:06 IST",
+      "result_id": "stock-vinlandsaga2-01",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-vinlandsaga2-01.mp4"
     },
     {
       "id": "stock-weatheringwithyou-01",
@@ -2318,7 +2330,8 @@
       "slug": "wednesday",
       "status": "pending",
       "queued_at": "2026-11-27 03:23 IST",
-      "result_id": "stock-wednesday-02"
+      "result_id": "stock-wednesday-02",
+      "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-wednesday-02.mp4"
     },
     {
       "id": "stock-wickedforgood-01",
@@ -2353,7 +2366,7 @@
       "id": "stock-witchhatatelier-02",
       "topic_id": "backup-witchhatatelier",
       "slug": "witchhatatelier",
-      "status": "pending",
+      "status": "failed",
       "queued_at": "2026-11-27 03:23 IST",
       "result_id": "stock-witchhatatelier-02"
     },
@@ -65879,6 +65892,68 @@
         "20261119-1730-bluegiant"
       ],
       "retired_at": "2026-11-27 10:06 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "stock-bluegiant-03",
+        "20261119-1730-bluegiant"
+      ],
+      "retired_at": "2026-11-27 11:14 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-08",
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal"
+      ],
+      "retired_at": "2026-11-27 11:14 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Video unavailable. This content isn’t available. | yt-dlp:ERROR: [youtube] yWBA876qftM: Video unavailable. This content isn’t available. | yt-dlp:ERROR: [youtube] CT7ZsgVtumY: Video unav",
+      "fail_count": 2,
+      "failed_ids": [
+        "stock-firforce3-04",
+        "20261120-0900-firforce3"
+      ],
+      "retired_at": "2026-11-27 11:14 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "stock-bluegiant-03",
+        "20261119-1730-bluegiant"
+      ],
+      "retired_at": "2026-11-27 11:14 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-08",
+        "stock-aotfinal-09",
+        "20261120-1130-aotfinal"
+      ],
+      "retired_at": "2026-11-27 11:14 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Video unavailable. This content isn’t available. | yt-dlp:ERROR: [youtube] yWBA876qftM: Video unavailable. This content isn’t available. | yt-dlp:ERROR: [youtube] CT7ZsgVtumY: Video unav",
+      "fail_count": 2,
+      "failed_ids": [
+        "stock-firforce3-04",
+        "20261120-0900-firforce3"
+      ],
+      "retired_at": "2026-11-27 11:14 IST"
     }
   ]
 }
