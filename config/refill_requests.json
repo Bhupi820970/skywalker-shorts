@@ -1,38 +1,40 @@
 {
- "generated_at": "2026-11-27 06:18 IST",
+ "generated_at": "2026-11-27 16:54 IST",
  "max_clips_per_title": 4,
  "min_height": 1080,
- "deficit_videos": 33,
+ "deficit_videos": 25,
  "requests": [
   {
    "slug": "apothecarydiaries",
    "pillar": "anime",
-   "words": "APOTHECARY DIARIES",
+   "words": "THE APOTHECARY DIARIES",
    "characters": [
     "Maomao",
     "Jinshi"
    ],
    "scene_types": [
     "romance",
+    "comedy",
     "emotional"
    ],
    "search_queries": [
-    "The Apothecary Diaries clip english dub",
-    "Apothecary Diaries Maomao Jinshi scene",
-    "Apothecary Diaries official clip"
+    "the apothecary diaries clip crunchyroll",
+    "apothecary diaries jinshi maomao clip official crunchyroll",
+    "apothecary diaries english dub clip crunchyroll dubs"
    ],
    "official_channels": [
-    "TOHO animation",
-    "Netflix Anime"
+    "Crunchyroll"
    ],
    "links": [],
-   "hook": "Why Jinshi cannot stop watching her",
-   "title": "Why Jinshi cannot stop watching her | Apothecary Diaries | #edit",
+   "hook": "Why did Jinshi lose his composure here",
+   "title": "Why did Jinshi lose his composure here | The Apothecary Diaries | #edit",
    "tags": [
     "apothecarydiaries",
-    "anime",
-    "edit",
-    "shorts"
+    "maomao",
+    "jinshi",
+    "animeedit",
+    "animeromance",
+    "crunchyroll"
    ],
    "market": "US/UK",
    "refill": true,
@@ -41,34 +43,37 @@
    "known_topic": false
   },
   {
-   "slug": "dune",
-   "pillar": "anime",
-   "words": "DUNE",
+   "slug": "dune2",
+   "pillar": "hollywood",
+   "words": "DUNE: PART TWO",
    "characters": [
     "Paul Atreides",
-    "Chani"
+    "Feyd-Rautha"
    ],
    "scene_types": [
+    "aura",
     "fight",
-    "emotional",
-    "aura"
+    "emotional"
    ],
    "search_queries": [
-    "Dune Part Two official clip",
-    "Dune Part Two Paul sandworm ride clip"
+    "dune part two official clip warner bros",
+    "dune 2 paul atreides scene clip movieclips",
+    "dune part 2 knife fight clip warner bros"
    ],
    "official_channels": [
     "Warner Bros. Pictures",
     "Movieclips"
    ],
    "links": [],
-   "hook": "Why Paul stopped being human",
-   "title": "Why Paul stopped being human | Dune | #edit",
+   "hook": "Why Paul accepted the dangerous duel",
+   "title": "Paul Atreides became something else | the desert answers | #edit",
    "tags": [
     "dune",
-    "anime",
-    "edit",
-    "shorts"
+    "dune2",
+    "paulatreides",
+    "timotheechalamet",
+    "movieedit",
+    "warnerbros"
    ],
    "market": "US/UK",
    "refill": true,
@@ -77,37 +82,37 @@
    "known_topic": true
   },
   {
-   "slug": "spiderverse",
+   "slug": "arcane",
    "pillar": "hollywood",
-   "words": "SPIDER-VERSE",
+   "words": "ARCANE",
    "characters": [
-    "Miles",
-    "Gwen",
-    "Miguel"
+    "Jinx",
+    "Vi"
    ],
    "scene_types": [
-    "fight",
     "emotional",
+    "fight",
     "aura"
    ],
    "search_queries": [
-    "Across the Spider-Verse official clip",
-    "Spider-Man Into the Spider-Verse official clip Sony Pictures"
+    "arcane jinx scene clip league of legends",
+    "arcane season 2 clip netflix",
+    "arcane jinx official scene clip netflix"
    ],
    "official_channels": [
-    "Sony Pictures Entertainment",
-    "Sony Pictures Animation"
+    "League of Legends",
+    "Netflix"
    ],
    "links": [],
-   "hook": "Why Miles refused to follow the canon",
-   "title": "Why did every Spider-Man chase him here? | Spider-Man: Across The Spider-Verse | #edit",
+   "hook": "Why Jinx could not shoot her sister",
+   "title": "Jinx finally loses her mind | Arcane | #edit",
    "tags": [
-    "spiderverse",
-    "milesmorales",
-    "spiderman",
-    "animation",
-    "sony",
-    "spiderverseedit"
+    "arcane",
+    "jinx",
+    "vi",
+    "arcaneedit",
+    "leagueoflegends",
+    "netflix"
    ],
    "market": "US/UK",
    "refill": true,
@@ -117,37 +122,34 @@
   },
   {
    "slug": "cyberpunk2077",
-   "pillar": "anime",
+   "pillar": "hollywood",
    "words": "CYBERPUNK 2077",
    "characters": [
     "V",
     "Johnny Silverhand"
    ],
    "scene_types": [
-    "fight",
     "emotional",
     "aura"
    ],
    "search_queries": [
-    "Cyberpunk 2077 official gameplay",
-    "Cyberpunk 2077 Phantom Liberty official cinematic",
-    "Cyberpunk 2077 Johnny Silverhand official cinematic"
+    "cyberpunk 2077 cinematic clip cd projekt red",
+    "cyberpunk 2077 johnny silverhand scene clip official",
+    "cyberpunk 2077 phantom liberty clip cd projekt red"
    ],
    "official_channels": [
-    "Cyberpunk 2077",
     "CD PROJEKT RED"
    ],
    "links": [],
-   "hook": "Why Johnny never left V's head",
+   "hook": "Why Johnny saved V despite everything",
    "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
    "tags": [
-    "cyberpunk",
-    "edgerunners",
-    "davidmartinez",
-    "animeedit",
-    "phonk",
-    "netflix",
-    "anime"
+    "cyberpunk2077",
+    "johnnysilverhand",
+    "cdprojektred",
+    "gaming",
+    "keanureeves",
+    "gameedit"
    ],
    "market": "US/UK",
    "refill": true,
@@ -156,71 +158,271 @@
    "known_topic": true
   },
   {
-   "slug": "squidgame",
-   "pillar": "anime",
-   "words": "SQUID GAME",
+   "slug": "strangerthings",
+   "pillar": "hollywood",
+   "words": "STRANGER THINGS",
    "characters": [
-    "Gi-hun",
-    "Front Man"
+    "Eleven",
+    "Max Mayfield",
+    "Vecna"
    ],
    "scene_types": [
-    "fight",
     "emotional",
+    "fight",
     "aura"
    ],
    "search_queries": [
-    "Squid Game official clip Netflix",
-    "Squid Game season 2 clip Netflix"
+    "stranger things running up that hill scene clip netflix",
+    "stranger things max scene clip netflix",
+    "stranger things eleven official clip netflix"
    ],
    "official_channels": [
-    "Netflix"
+    "Netflix",
+    "Stranger Things"
    ],
    "links": [],
-   "hook": "Why Gi-hun went back in",
-   "title": "Why Gi-hun went back in | Squid Game | #edit",
+   "hook": "Why Max ran back to her friends",
+   "title": "Why Vecna wanted Max | Stranger Things | #edit",
    "tags": [
-    "squidgame",
-    "anime",
-    "edit",
-    "shorts"
+    "strangerthings",
+    "maxmayfield",
+    "eleven",
+    "netflix",
+    "strangerthings4",
+    "tvedit"
    ],
    "market": "US/UK",
    "refill": true,
    "category": "tv",
    "prefer_english": true,
+   "known_topic": true
+  },
+  {
+   "slug": "dandadanevil",
+   "pillar": "anime",
+   "words": "DANDADAN",
+   "characters": [
+    "Okarun",
+    "Momo Ayase"
+   ],
+   "scene_types": [
+    "romance",
+    "emotional",
+    "fight"
+   ],
+   "search_queries": [
+    "dandadan english dub clip netflix anime",
+    "dandadan okarun momo scene clip crunchyroll",
+    "dandadan official clip netflix anime"
+   ],
+   "official_channels": [
+    "Netflix Anime",
+    "Crunchyroll"
+   ],
+   "links": [],
+   "hook": "Why Okarun refused to let her go",
+   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
+   "tags": [
+    "dandadan",
+    "okarun",
+    "momoayase",
+    "animeedit",
+    "romanceanime",
+    "netflixanime"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "anime",
+   "prefer_english": true,
+   "known_topic": true
+  },
+  {
+   "slug": "rrr",
+   "pillar": "south",
+   "words": "RRR",
+   "characters": [
+    "Komaram Bheem",
+    "Alluri Sitarama Raju"
+   ],
+   "scene_types": [
+    "fight",
+    "aura",
+    "emotional"
+   ],
+   "search_queries": [
+    "rrr movie official clip dvv entertainment",
+    "rrr bheem fight scene clip pen movies",
+    "rrr official scene clip variance films"
+   ],
+   "official_channels": [
+    "Netflix Anime",
+    "Netflix",
+    "TOHO animation"
+   ],
+   "links": [],
+   "hook": "Why Raju had to arrest his brother",
+   "title": "Why Bheem unleashed the wild beasts 💀 | Bheem palace entry | #edit",
+   "tags": [
+    "rrr",
+    "rrrmovie",
+    "bheem",
+    "ramaraju",
+    "ssrajamouli",
+    "indiancinema"
+   ],
+   "market": "IN",
+   "refill": true,
+   "category": "movie",
+   "prefer_english": true,
+   "known_topic": true
+  },
+  {
+   "slug": "spiderverse",
+   "pillar": "hollywood",
+   "words": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
+   "characters": [
+    "Miles Morales",
+    "Gwen Stacy"
+   ],
+   "scene_types": [
+    "romance",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "across the spider verse official clip sony pictures",
+    "spider verse rooftop scene clip sony pictures entertainment",
+    "spider verse miles gwen clip movieclips"
+   ],
+   "official_channels": [
+    "Sony Pictures Entertainment",
+    "Movieclips"
+   ],
+   "links": [],
+   "hook": "Why Gwen could not reveal the truth",
+   "title": "Why did every Spider-Man chase him here? | Spider-Man: Across The Spider-Verse | #edit",
+   "tags": [
+    "spiderverse",
+    "milesmorales",
+    "gwenstacy",
+    "acrossthespiderverse",
+    "sonypictures",
+    "animation"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "cartoon",
+   "prefer_english": true,
+   "known_topic": true
+  },
+  {
+   "slug": "godofwar",
+   "pillar": "hollywood",
+   "words": "GOD OF WAR RAGNAROK",
+   "characters": [
+    "Kratos",
+    "Atreus"
+   ],
+   "scene_types": [
+    "emotional",
+    "fight",
+    "aura"
+   ],
+   "search_queries": [
+    "god of war ragnarok story clip playstation",
+    "god of war ragnarok kratos atreus scene clip playstation",
+    "god of war ragnarok cinematic scene playstation"
+   ],
+   "official_channels": [
+    "PlayStation"
+   ],
+   "links": [],
+   "hook": "Why Kratos finally forgave his past",
+   "title": "Why Kratos finally forgave his past | God Of War Ragnarok | #edit",
+   "tags": [
+    "godofwar",
+    "kratos",
+    "atreus",
+    "godofwarragnarok",
+    "playstation",
+    "gameedit"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "game",
+   "prefer_english": true,
    "known_topic": false
+  },
+  {
+   "slug": "wednesday",
+   "pillar": "hollywood",
+   "words": "WEDNESDAY",
+   "characters": [
+    "Wednesday Addams",
+    "Enid Sinclair"
+   ],
+   "scene_types": [
+    "emotional",
+    "aura",
+    "comedy"
+   ],
+   "search_queries": [
+    "wednesday netflix clip official",
+    "wednesday addams enid hug clip netflix",
+    "wednesday scene official clip netflix"
+   ],
+   "official_channels": [
+    "Netflix"
+   ],
+   "links": [],
+   "hook": "Why Wednesday finally broke her rule",
+   "title": "Why Wednesday never smiles | Wednesday | #edit",
+   "tags": [
+    "wednesday",
+    "wednesdayaddams",
+    "enid",
+    "netflix",
+    "tvedit",
+    "jennaortega"
+   ],
+   "market": "US/UK",
+   "refill": true,
+   "category": "tv",
+   "prefer_english": true,
+   "known_topic": true
   },
   {
    "slug": "yourname",
    "pillar": "anime",
    "words": "YOUR NAME",
    "characters": [
-    "Taki",
-    "Mitsuha"
+    "Taki Tachibana",
+    "Mitsuha Miyamizu"
    ],
    "scene_types": [
     "romance",
     "emotional"
    ],
    "search_queries": [
-    "Your Name official clip english",
-    "Your Name Taki Mitsuha scene clip GKIDS"
+    "your name clip toho animation",
+    "your name English dub clip crunchyroll",
+    "your name katawaredoki scene clip official"
    ],
    "official_channels": [
-    "GKIDS Films",
-    "TOHO"
+    "Netflix Anime",
+    "Netflix",
+    "TOHO animation"
    ],
    "links": [],
-   "hook": "Why Taki kept forgetting her name",
+   "hook": "Why they could not write their names down",
    "title": "He forgot her name again | Your Name | #edit",
    "tags": [
     "yourname",
-    "anime",
+    "kiminonawa",
+    "taki",
+    "mitsuha",
     "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "taki"
+    "romance"
    ],
    "market": "US/UK",
    "refill": true,
@@ -263,189 +465,6 @@
    "category": "movie",
    "prefer_english": true,
    "known_topic": false
-  },
-  {
-   "slug": "kungfupanda",
-   "pillar": "anime",
-   "words": "KUNG FU PANDA",
-   "characters": [
-    "Po",
-    "Tai Lung"
-   ],
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "Kung Fu Panda official clip DreamWorks",
-    "Kung Fu Panda Po vs Tai Lung clip"
-   ],
-   "official_channels": [
-    "DreamWorks Animation",
-    "Universal Pictures"
-   ],
-   "links": [],
-   "hook": "Why Tai Lung feared Po",
-   "title": "Why Tai Lung feared Po | Kung Fu Panda | #edit",
-   "tags": [
-    "kungfupanda",
-    "anime",
-    "edit",
-    "shorts"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "category": "cartoon",
-   "prefer_english": true,
-   "known_topic": false
-  },
-  {
-   "slug": "eldenring",
-   "pillar": "anime",
-   "words": "ELDEN RING",
-   "characters": [
-    "Tarnished",
-    "Malenia"
-   ],
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ELDEN RING official gameplay",
-    "ELDEN RING Shadow of the Erdtree official gameplay reveal"
-   ],
-   "official_channels": [
-    "ELDEN RING",
-    "BANDAI NAMCO Entertainment America"
-   ],
-   "links": [],
-   "hook": "Why nobody beats Malenia first try",
-   "title": "Why nobody beats Malenia first try | Elden Ring | #edit",
-   "tags": [
-    "eldenring",
-    "anime",
-    "edit",
-    "shorts"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "category": "game",
-   "prefer_english": true,
-   "known_topic": false
-  },
-  {
-   "slug": "wednesday",
-   "pillar": "anime",
-   "words": "WEDNESDAY",
-   "characters": [
-    "Wednesday",
-    "Enid"
-   ],
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "Wednesday official clip Netflix",
-    "Wednesday dance scene clip Netflix"
-   ],
-   "official_channels": [
-    "Netflix"
-   ],
-   "links": [],
-   "hook": "Why Wednesday never smiles",
-   "title": "Why Wednesday never smiles | Wednesday | #edit",
-   "tags": [
-    "wednesday",
-    "anime",
-    "edit",
-    "shorts"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "category": "tv",
-   "prefer_english": true,
-   "known_topic": true
-  },
-  {
-   "slug": "violetevergarden",
-   "pillar": "anime",
-   "words": "VIOLET EVERGARDEN",
-   "characters": [
-    "Violet",
-    "Gilbert"
-   ],
-   "scene_types": [
-    "romance",
-    "emotional"
-   ],
-   "search_queries": [
-    "Violet Evergarden clip netflix",
-    "Violet Evergarden movie scene english"
-   ],
-   "official_channels": [
-    "Netflix Anime",
-    "Netflix"
-   ],
-   "links": [],
-   "hook": "Why Violet never stopped writing",
-   "title": "Why Violet had to learn human emotions | Violet's final letter | #edit",
-   "tags": [
-    "violetevergarden",
-    "violet",
-    "animeedit",
-    "phonk",
-    "emotional",
-    "anime",
-    "kyotoanimation"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "category": "anime",
-   "prefer_english": true,
-   "known_topic": true
-  },
-  {
-   "slug": "topgunmaverick",
-   "pillar": "hollywood",
-   "words": "TOP GUN MAVERICK",
-   "characters": [
-    "Maverick",
-    "Rooster"
-   ],
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "Top Gun Maverick official clip",
-    "Top Gun Maverick dogfight clip Paramount"
-   ],
-   "official_channels": [
-    "Paramount Pictures"
-   ],
-   "links": [],
-   "hook": "Why Maverick broke every rule",
-   "title": "Why Maverick is the greatest pilot | The final training run | #edit",
-   "tags": [
-    "topgun",
-    "maverick",
-    "tomcruise",
-    "movieedit",
-    "phonk",
-    "aviation",
-    "action"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "category": "movie",
-   "prefer_english": true,
-   "known_topic": true
   }
  ]
 }
