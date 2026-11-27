@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-27T02:58:40Z",
-  "last_upload_at": "2026-11-27T02:58:40Z"
+  "last_run_at": "2026-11-27T03:03:12Z",
+  "last_upload_at": "2026-11-27T03:03:12Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -24,6 +24,7 @@
   "yt:3nwBwJiyQ_g",
   "yt:4ZkOJjwRYoQ",
   "yt:4frfkxIubLc",
+  "yt:4rjOp217lBk",
   "yt:54qbDXVGBDI",
   "yt:5oRczmZ6dGU",
   "yt:5yb2N3pnztU",
@@ -104,6 +105,7 @@
   "yt:QzZLiknSbdk",
   "yt:RGenZI9HT_Y",
   "yt:SCsN5TMuGOw",
+  "yt:Si7fxN6bbwU",
   "yt:T6IVOvy1KZo",
   "yt:Tmhp5oyCDeo",
   "yt:TtX8DNALc3I",
@@ -190,6 +192,7 @@
   "yt:p-TNgUQvmSU",
   "yt:pEwoisyyvl0",
   "yt:pcuH1H5-loY",
+  "yt:pe14KCakHJs",
   "yt:ppOVLojanC8",
   "yt:r9oI7Kvqwsg",
   "yt:rFKSrOALWdw",
@@ -2637,6 +2640,39 @@
    "kbps": 2056,
    "by": "box",
    "at": "2026-11-27T02:58:40Z"
+  },
+  {
+   "asset": "sakamotodays_scene3_h264.mp4",
+   "id": "yt:pe14KCakHJs",
+   "title": "Osaragi-sensei's Lesson | SAKAMOTO DAYS | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1312,
+   "by": "box",
+   "at": "2026-11-27T03:03:12Z"
+  },
+  {
+   "asset": "sakamotodays_scene4_h264.mp4",
+   "id": "yt:Si7fxN6bbwU",
+   "title": "Unconventional Weapons in SAKAMOTO DAYS | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3217,
+   "by": "box",
+   "at": "2026-11-27T03:03:12Z"
+  },
+  {
+   "asset": "sakamotodays_scene5_h264.mp4",
+   "id": "yt:4rjOp217lBk",
+   "title": "Takamura Pest Control | SAKAMOTO DAYS | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1723,
+   "by": "box",
+   "at": "2026-11-27T03:03:12Z"
   }
  ],
  "github": {

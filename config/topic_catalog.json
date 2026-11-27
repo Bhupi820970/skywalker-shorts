@@ -682,7 +682,9 @@
       "scene_assets": [
         "sakamotodays_scene1_h264.mp4",
         "sakamotodays_scene2_h264.mp4",
-        "sakamotodays_scene3_h264.mp4"
+        "sakamotodays_scene3_h264.mp4",
+        "sakamotodays_scene4_h264.mp4",
+        "sakamotodays_scene5_h264.mp4"
       ],
       "fallback_asset": "sakamotodays_trailer_h264.mp4",
       "content_kind": "best scene",
