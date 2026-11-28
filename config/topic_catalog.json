@@ -3236,6 +3236,33 @@
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
+    },
+    {
+      "slug": "dhoom3",
+      "pillar": "bollywood",
+      "words": "DHOOM 3",
+      "hook": "Why Sahir pulled off the ultimate heist",
+      "title": "Why Sahir pulled off the ultimate heist | Chicago bike chase | #edit",
+      "description": "Why Sahir pulled off the ultimate heist. From official Dhoom 3 clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #dhoom3 #aamirkhan #yrf",
+      "tags": [
+        "dhoom3",
+        "aamirkhan",
+        "yrf",
+        "bollywood",
+        "action",
+        "massedit",
+        "chase"
+      ],
+      "market": "IN",
+      "source_url": "https://www.youtube.com/watch?v=JLf3GLVPRaU",
+      "scene_assets": [
+        "dhoom3_scene1_h264.mp4",
+        "dhoom3_scene2_h264.mp4",
+        "dhoom3_scene3_h264.mp4",
+        "dhoom3_scene4_h264.mp4"
+      ],
+      "content_kind": "best scene",
+      "added_by": "clip_fetch:box"
     }
   ]
 }
