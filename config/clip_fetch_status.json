@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T02:33:45Z",
-  "last_upload_at": "2026-11-28T02:33:43Z"
+  "last_run_at": "2026-11-28T02:46:16Z",
+  "last_upload_at": "2026-11-28T02:46:16Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -15,6 +15,7 @@
   "yt:0Z_mA7n5zIA",
   "yt:0nlJuwO0GDs",
   "yt:14VgD5IfWi8",
+  "yt:1HBGXgjZEGk",
   "yt:1QZamgwEjiw",
   "yt:1VUqQqUlSv4",
   "yt:1Y5JBB3BG_0",
@@ -66,6 +67,7 @@
   "yt:EovTf8Mydo4",
   "yt:Ev0FRl7IRkU",
   "yt:F3jePdO9_jc",
+  "yt:FH44_pDxs-A",
   "yt:F_ftAIUnCjI",
   "yt:FfrhAqjQUFI",
   "yt:Fn9gKhU_2_Q",
@@ -86,6 +88,7 @@
   "yt:IDxFrIfaUbE",
   "yt:IXbnzEHZDPg",
   "yt:IkNsD9sSYzU",
+  "yt:IyQzMB5QGQU",
   "yt:J2Bh68GTUOU",
   "yt:JJOX735mOnA",
   "yt:JKvNlvV6ZW4",
@@ -107,6 +110,7 @@
   "yt:MeIk9ap1u_E",
   "yt:MgVkBzXOc8Q",
   "yt:MokxwHbscQ8",
+  "yt:MpHR0OPqCbs",
   "yt:N-xHcvug3WI",
   "yt:NakTu_VZxJ0",
   "yt:OJixXuR7Xcc",
@@ -3321,6 +3325,50 @@
    "kbps": 2197,
    "by": "box",
    "at": "2026-11-28T02:33:43Z"
+  },
+  {
+   "asset": "bleachthbw_scene1_h264.mp4",
+   "id": "yt:MpHR0OPqCbs",
+   "title": "\"Please...protect the Soul Society...\" | BLEACH: Thousand-Year Blood War | VIZ",
+   "channel": "vizmedia",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1846,
+   "by": "box",
+   "at": "2026-11-28T02:46:16Z"
+  },
+  {
+   "asset": "bleachthbw_scene2_h264.mp4",
+   "id": "yt:1HBGXgjZEGk",
+   "title": "Ichigo Unleashes His Getsugatensho | BLEACH: Thousand-Year Blood War - The Calamity | VIZ",
+   "channel": "vizmedia",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2853,
+   "by": "box",
+   "at": "2026-11-28T02:46:16Z"
+  },
+  {
+   "asset": "bleachthbw_scene3_h264.mp4",
+   "id": "yt:IyQzMB5QGQU",
+   "title": "Blood Chains Ichigo Revealed | BLEACH: Thousand-Year Blood War - The Calamity | VIZ",
+   "channel": "vizmedia",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1569,
+   "by": "box",
+   "at": "2026-11-28T02:46:16Z"
+  },
+  {
+   "asset": "bleachthbw_scene4_h264.mp4",
+   "id": "yt:FH44_pDxs-A",
+   "title": "Yhwach Breaks Ichigo’s Tensa Zangetsu | BLEACH: Thousand-Year Blood War - The Calamity | VIZ",
+   "channel": "vizmedia",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2382,
+   "by": "box",
+   "at": "2026-11-28T02:46:16Z"
   }
  ],
  "github": {
