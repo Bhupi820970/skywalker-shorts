@@ -909,6 +909,18 @@
         "clip:cyberpunkedgerunners_scene5_h264.mp4",
         "sha:19a2b4f4f7f64207daa547bcf0d66927071b49aa46b8014d99191ae09f204b12"
       ]
+    },
+    {
+      "id": "20261128-1130-thebatman",
+      "at": "2026-11-28 08:35 IST",
+      "slot": "2026-11-28T11:30:00+05:30",
+      "title": "Why Batman scares the criminals | Batman enters the club | #edit",
+      "youtube_url": "https://youtube.com/shorts/lrgSKsw3Dus",
+      "keys": [
+        "asset:stock-thebatman-02.mp4",
+        "clip:thebatman_scene4_h264.mp4",
+        "sha:f92a575059e7954d815fc9eac22945ce6dd4767abc73d37375b6cf04ffea24f6"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."

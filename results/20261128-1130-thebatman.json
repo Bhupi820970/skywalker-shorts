@@ -245,5 +245,16 @@
     "blur_fill": true
   },
   "stock_id": "stock-thebatman-02",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "asset_sha256": "f92a575059e7954d815fc9eac22945ce6dd4767abc73d37375b6cf04ffea24f6",
+  "publish_via": "youtube",
+  "yt_video_id": "lrgSKsw3Dus",
+  "yt_uploaded_at": "2026-11-28 08:35 IST",
+  "yt_privacy": "private",
+  "yt_publish_at": "2026-11-28T11:30:00+05:30",
+  "yt_status": "scheduled",
+  "youtube_url": "https://youtube.com/shorts/lrgSKsw3Dus",
+  "buffer_post_id": "yt:lrgSKsw3Dus",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-28T06:00:00.000Z"
 }
