@@ -2143,7 +2143,9 @@
       "scene_assets": [
         "gangsofwasseypur_scene1_h264.mp4",
         "gangsofwasseypur_scene2_h264.mp4",
-        "gangsofwasseypur_scene3_h264.mp4"
+        "gangsofwasseypur_scene3_h264.mp4",
+        "gangsofwasseypur_scene4_h264.mp4",
+        "gangsofwasseypur_scene5_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box",
