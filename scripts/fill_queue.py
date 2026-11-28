@@ -86,6 +86,48 @@ def _norm_text(text: str) -> str:
     return " ".join((text or "").casefold().split())
 
 
+def _posted_hooks(root: Path | None = None) -> set[str]:
+    """Hooks and title cores already on the channel.
+
+    Seeded from posted_history and stats/latest.json so fill_queue does
+    not re-queue a line that already went out (25 Nov review + 28 Nov review).
+    """
+    root = Path(root or REPO)
+    hooks: set[str] = set()
+
+    def add(text: str, *, title: bool = False) -> None:
+        raw = text or ""
+        if title:
+            raw = raw.split("#")[0]
+        n = _norm_text(raw)
+        if n:
+            hooks.add(n)
+
+    ph = root / "config" / "posted_history.json"
+    try:
+        data = json.loads(ph.read_text())
+        for it in (data.get("items") if isinstance(data, dict) else data) or []:
+            if not isinstance(it, dict):
+                continue
+            add(it.get("hook") or "")
+            add(it.get("title") or "", title=True)
+    except Exception:
+        pass
+    stats = root / "stats" / "latest.json"
+    try:
+        data = json.loads(stats.read_text())
+        videos = data.get("videos") if isinstance(data, dict) else None
+        if isinstance(videos, dict):
+            for v in videos.values():
+                if not isinstance(v, dict):
+                    continue
+                add(v.get("hook") or "")
+                add(v.get("title") or "", title=True)
+    except Exception:
+        pass
+    return hooks
+
+
 def _used_in_days(days: list[str]) -> tuple[set[str], set[str]]:
     """Slugs and hooks already queued in the given days.
 
@@ -182,6 +224,7 @@ def fill_day(day: str, catalog: list[dict], used: set[str], have: set[str] | Non
     if not catalog:
         return 0
     used_hooks = used_hooks if used_hooks is not None else set()
+    used_hooks = set(used_hooks) | _posted_hooks()
     pool = [t for t in catalog if t["slug"] not in used]
     # Do not fall back to already-queued slugs; identical hooks in the
     # lookahead window weaken the channel. Leave a slot empty rather than
@@ -376,6 +419,7 @@ def main() -> int:
         print("empty topic catalog", file=sys.stderr)
         return 1
     used, used_hooks = _used_in_days(_window_days())
+    used_hooks |= _posted_hooks()
     have = release_assets()
     total = 0
     # Always cover through min_ahead_days (plus one extra day of buffer).

@@ -1,36 +1,39 @@
 [
  {
-  "id": "20261201-0630-wednesday",
+  "id": "20261201-0630-spyxfamilycodewhite",
   "slot": "2026-12-01T06:30:00+05:30",
   "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=NakTu_VZxJ0",
+  "source_url": "https://www.youtube.com/watch?v=TLpqTS1iKSM",
   "template": "whitebar",
-  "hook": "Why Wednesday never smiles",
-  "words": "WEDNESDAY",
-  "title": "Why Wednesday never smiles | Wednesday | #edit",
-  "description": "Why Wednesday never smiles. From official Wednesday clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #wednesday #anime #edit",
+  "hook": "Loid almost blew his cover",
+  "words": "SPY X FAMILY",
+  "title": "Loid almost blew his cover | Spy x Family Code White | #edit",
+  "description": "Loid almost blew his cover. From official Spy x Family Code White clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #spyxfamilycodewhite",
   "tags": [
-   "wednesday",
+   "spyxfamilycodewhite",
    "anime",
+   "animeedit",
    "edit",
-   "shorts"
+   "shorts",
+   "trending",
+   "anya"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/wednesday_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spyxfamilycodewhite_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "wednesday_scene1_h264.mp4"
+  "fallback_asset": "spyxfamilycodewhite_scene1_h264.mp4"
  },
  {
   "id": "20261201-0900-spiderverse",

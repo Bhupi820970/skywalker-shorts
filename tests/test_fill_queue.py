@@ -70,3 +70,52 @@ def test_fill_day_does_not_clone_window_slug(tmp_path, monkeypatch):
 def test_item_slug_parses_compound_ids():
     assert fq._item_slug({"id": "20261125-1600-cyberpunkedgerunners"}) == "cyberpunkedgerunners"
     assert fq._item_slug({"id": "bad"}) == ""
+
+
+def test_posted_hooks_reads_history_and_stats(tmp_path, monkeypatch):
+    (tmp_path / "config").mkdir()
+    (tmp_path / "stats").mkdir()
+    (tmp_path / "config" / "posted_history.json").write_text(json.dumps({
+        "items": [
+            {"id": "20261121-2230-arcane", "title": "Jinx finally loses her mind #arcane #jinx",
+             "hook": "Jinx finally loses her mind"}
+        ]
+    }))
+    (tmp_path / "stats" / "latest.json").write_text(json.dumps({
+        "videos": {
+            "abc": {"title": "Thorfinn took every punch | Vinland Saga | #edit",
+                    "hook": "Thorfinn took every punch"}
+        }
+    }))
+    monkeypatch.setattr(fq, "REPO", tmp_path)
+    hooks = fq._posted_hooks()
+    assert "jinx finally loses her mind" in hooks
+    assert "thorfinn took every punch" in hooks
+    assert "thorfinn took every punch | vinland saga |" in hooks
+
+
+def test_fill_day_skips_hooks_already_on_channel(tmp_path, monkeypatch):
+    qdir = tmp_path / "queue"
+    qdir.mkdir()
+    monkeypatch.setattr(fq, "QUEUE", qdir)
+    monkeypatch.setattr(fq, "_posted_hooks", lambda root=None: {"jinx finally loses her mind"})
+    day = "2026-11-30"
+    (qdir / (day + ".json")).write_text("[]" + chr(10))
+    catalog = [
+        {
+            "slug": "arcane",
+            "pillar": "anime",
+            "words": "ARCANE",
+            "hook": "Jinx finally loses her mind",
+            "title": "Jinx finally loses her mind | Arcane | #edit",
+            "description": "From official clips. Edit by Skywalker.",
+            "tags": ["arcane"],
+            "source_url": "https://www.youtube.com/watch?v=bbbbbbbbbbb",
+            "scene_assets": ["arcane_scene1_h264.mp4"],
+            "content_kind": "best scene",
+        }
+    ]
+    have = {"arcane_scene1_h264.mp4"}
+    added = fq.fill_day(day, catalog, set(), have, set())
+    assert added == 0
+    assert json.loads((qdir / (day + ".json")).read_text()) == []

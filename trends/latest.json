@@ -1,19 +1,19 @@
 {
  "hook_styles": [
-  "Pov: You realized he is him. (Pov: You realized he is him.)",
-  "They were not ready for this. (They were not ready for this.)",
-  "Best scene in history? 👇 (Best scene in history? 👇)",
-  "Watch the last two seconds. (Watch the last two seconds.)",
-  "Why he cannot stop watching her. (Why he cannot stop watching her.)",
-  "He just changed the game. (He just changed the game.)"
+  "Character-specific scene hook (Jinx finally loses her mind).",
+  "The moment + exact action (The moment Ashitaka stopped an entire war).",
+  "Why + a precise character beat (Why David could not stop the cyberpsychosis).",
+  "Short past-tense observation (He Stopped Both Swords / Peace Was Never Option).",
+  "Love: a quiet specific feeling (She brought the sun just for him).",
+  "Avoid generic greatest/villain lines and cloned titles already on the channel."
  ],
  "title_patterns": [
-  "<hook> 💀 | <character/movie> 🔥 #edit",
-  "<hook> 💀 | <vibe/adjective> | #shorts",
-  "<hook> 💀 | <movie name> | #trending",
-  "<hook> 💀 | <character name> GOD MODE | #viral"
+  "<scene-specific hook> | <movie/series> | #edit",
+  "The moment <character did X> #<franchise> #<character> #animeedit",
+  "Why <character> <precise beat> | <short scene cue> | #edit",
+  "<character> <does the iconic thing> #<franchise> #<character> #action"
  ],
- "best_length_s": 24,
+ "best_length_s": 26,
  "posting_times_ist": [
   "06:30",
   "09:00",
@@ -84,14 +84,14 @@
   "ZenithEdits - Sets the standard for modern cinematic subtitle placement."
  ],
  "our_insights": [
-  "Curiosity-based hooks perform significantly better than generic ones.",
-  "Videos with clearly defined beat drops (drop_t) gain higher retention.",
-  "The 24-29s range is our sweet spot; anything longer sees a sharp drop-off.",
-  "Our 'Why' hooks are resonating well, but need to be paired with higher energy music.",
-  "Looping endings are currently underutilized in our library; we need to prioritize seamless transitions."
+  "25-27 Nov window: scene-specific hooks won (Cyberpunk David 3985, Mononoke 'stopped an entire war' 3876, John Wick 'Reminds Them Who He Is' 1741). Generic lines flopped (Gladiator 'Never Leaves A Witness' 53 after a same-day Gladiator repeat).",
+  "Love format is still strong (9 of 10 love Shorts over 1,000; Weathering and Kaiju No. 8 both crossed in this window), but this window's biggest spikes were character-specific action beats at 24-27s.",
+  "Do not re-queue a hook or title already on the channel (Jinx, David cyberpsychosis, Wednesday, Thorfinn). Same franchise twice in a day hurts (two Gladiator posts 26 Nov).",
+  "24-27s remains the sweet spot. 06:30, 18:30 and 22:30 IST stay the liveliest slots. Animal clips are stalled under 1,000 — stop adding more Animal slots.",
+  "Keep official scene clips only, video centered, no crop. GTA 6 official gameplay stays gated until launch."
  ],
- "generated_at": "2026-11-16 11:58 IST",
+ "generated_at": "2026-11-28 11:30 IST",
  "research_chars": 3598,
  "yt_sample": 32,
- "own_videos": 32
+ "own_videos": 95
 }

@@ -1,37 +1,39 @@
 [
  {
-  "id": "20261203-0630-vinlandsaga2",
+  "id": "20261203-0630-mononoke",
   "slot": "2026-12-03T06:30:00+05:30",
   "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=l3zQNgXdmj0",
+  "source_url": "https://www.youtube.com/watch?v=xpJWvpumgxs",
   "template": "whitebar",
-  "hook": "Thorfinn took every punch",
-  "words": "VINLAND SAGA",
-  "title": "Thorfinn took every punch | Vinland Saga | #edit",
-  "description": "Thorfinn took every punch. From official Vinland Saga clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #vinlandsaga2",
+  "hook": "The Medicine Seller sees everything",
+  "words": "MONONOKE",
+  "title": "The Medicine Seller sees everything | Mononoke | #edit",
+  "description": "The Medicine Seller sees everything. From official Mononoke clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #mononoke",
   "tags": [
-   "vinlandsaga2",
+   "mononoke",
    "anime",
    "animeedit",
    "edit",
    "shorts",
    "trending",
-   "thorfinn"
+   "medicineseller"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene3_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/vinlandsaga2_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/mononoke_scene3_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "vinlandsaga2_scene1_h264.mp4"
+  "fallback_asset": "mononoke_scene1_h264.mp4"
  },
  {
   "id": "20261203-0900-mhafinal",

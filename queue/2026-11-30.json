@@ -1,37 +1,37 @@
 [
  {
-  "id": "20261130-0630-jujutsukaisencullinggame",
+  "id": "20261130-0630-spiritedaway",
   "slot": "2026-11-30T06:30:00+05:30",
   "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
+  "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
   "template": "whitebar",
-  "hook": "Yuji has nothing left to lose",
-  "words": "JUJUTSU KAISEN",
-  "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
-  "description": "Yuji has nothing left to lose. From official Jujutsu Kaisen clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #jujutsukaisencullinggame",
+  "hook": "Chihiro had to forget her name",
+  "words": "SPIRITED AWAY",
+  "title": "Chihiro had to forget her name | Spirited Away | #edit",
+  "description": "Chihiro had to forget her name. From official Spirited Away clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #spiritedaway",
   "tags": [
-   "jujutsukaisencullinggame",
+   "spiritedaway",
    "anime",
    "animeedit",
    "edit",
    "shorts",
    "trending",
-   "yuji"
+   "chihiro"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiritedaway_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiritedaway_scene2_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/jujutsukaisencullinggame_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiritedaway_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/spiritedaway_scene2_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "jujutsukaisencullinggame_scene1_h264.mp4"
+  "fallback_asset": "spiritedaway_scene1_h264.mp4"
  },
  {
   "id": "20261130-0900-dune",
@@ -164,33 +164,42 @@
   "fallback_asset": "shershaah_scene1_h264.mp4"
  },
  {
-  "id": "20261130-1830-arcane",
+  "id": "20261130-1830-bleachthbw",
   "slot": "2026-11-30T18:30:00+05:30",
   "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=ZVTDEZvFU6k",
+  "source_url": "https://www.youtube.com/watch?v=MpHR0OPqCbs",
   "template": "whitebar",
-  "hook": "Jinx finally loses her mind",
-  "words": "ARCANE",
-  "title": "Jinx finally loses her mind | Arcane | #edit",
-  "description": "Jinx finally loses her mind. From official Arcane clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #arcane #anime #edit",
+  "hook": "Why Ichigo unlocked his true power",
+  "words": "BLEACH THOUSAND YEAR BLOOD WAR",
+  "title": "Why Ichigo unlocked his true power | Ichigo Bankai arrival | #edit",
+  "description": "Why Ichigo unlocked his true power. From official Bleach Thousand Year Blood War clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #bleach #bleachtybw #ichigo",
   "tags": [
-   "arcane",
+   "bleach",
+   "bleachtybw",
+   "ichigo",
+   "bankai",
    "anime",
-   "edit",
-   "shorts"
+   "animeedit",
+   "kurosaki"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachthbw_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachthbw_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachthbw_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachthbw_scene4_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/arcane_scene1_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachthbw_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachthbw_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachthbw_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/bleachthbw_scene4_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "arcane_scene1_h264.mp4"
+  "fallback_asset": "bleachthbw_scene1_h264.mp4"
  },
  {
   "id": "20261130-2030-gta5",
@@ -228,37 +237,35 @@
   "fallback_asset": "gta5_scene1_h264.mp4"
  },
  {
-  "id": "20261130-2230-cyberpunk2077",
+  "id": "20261130-2230-hellsparadise",
   "slot": "2026-11-30T22:30:00+05:30",
   "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+  "source_url": "https://www.youtube.com/watch?v=JKvNlvV6ZW4",
   "template": "whitebar",
-  "hook": "Why David could not stop the cyberpsychosis",
-  "words": "CYBERPUNK EDGERUNNERS",
-  "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
-  "description": "Why David could not stop the cyberpsychosis. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #cyberpunk #edgerunners #davidmartinez",
+  "hook": "Gabimaru fights to go home",
+  "words": "HELL'S PARADISE",
+  "title": "Gabimaru fights to go home | Hell's Paradise | #edit",
+  "description": "Gabimaru fights to go home. From official Hell's Paradise clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #hellsparadise",
   "tags": [
-   "cyberpunk",
-   "edgerunners",
-   "davidmartinez",
+   "hellsparadise",
+   "anime",
    "animeedit",
-   "phonk",
-   "netflix",
-   "anime"
+   "edit",
+   "shorts",
+   "trending",
+   "gabimaru"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunk2077_scene2_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/hellsparadise_scene1_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "cyberpunk2077_scene1_h264.mp4"
+  "fallback_asset": "hellsparadise_scene1_h264.mp4"
  }
 ]

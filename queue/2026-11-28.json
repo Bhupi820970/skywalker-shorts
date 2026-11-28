@@ -175,40 +175,44 @@
   "fallback_asset": "vikram_scene1_h264.mp4"
  },
  {
-  "id": "20261128-1830-cyberpunkedgerunners",
+  "id": "20261128-1830-sakamotodays",
   "slot": "2026-11-28T18:30:00+05:30",
   "pillar": "anime",
-  "source_url": "https://www.youtube.com/watch?v=YRL74JmhVgk",
+  "source_url": "https://www.youtube.com/watch?v=05EIB6kOu6Y",
   "template": "whitebar",
-  "hook": "David paid for the legendary life",
-  "words": "CYBERPUNK",
-  "title": "David paid for the legendary life | Cyberpunk Edgerunners | #edit",
-  "description": "David wanted to be a legend. From official Cyberpunk Edgerunners clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #cyberpunkedgerunners",
+  "hook": "Retired assassin still hits hardest",
+  "words": "SAKAMOTO DAYS",
+  "title": "Retired assassin still hits hardest | Sakamoto Days | #edit",
+  "description": "Retired assassin still hits hardest. From official Sakamoto Days clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #sakamotodays",
   "tags": [
-   "cyberpunkedgerunners",
+   "sakamotodays",
    "anime",
    "animeedit",
    "edit",
    "shorts",
    "trending",
-   "david"
+   "sakamoto"
   ],
   "target_dur": 26,
   "status": "queued",
   "market": "US/UK",
   "content_kind": "best scene",
   "fallback_mp4": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene4_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene5_h264.mp4"
   ],
   "sources": [
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene1_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene2_h264.mp4",
-   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/cyberpunkedgerunners_scene3_h264.mp4"
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene1_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene2_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene3_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene4_h264.mp4",
+   "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene5_h264.mp4"
   ],
   "fallback_release": "sources",
-  "fallback_asset": "cyberpunkedgerunners_scene1_h264.mp4"
+  "fallback_asset": "sakamotodays_scene1_h264.mp4"
  },
  {
   "id": "20261128-2030-leomovie",
