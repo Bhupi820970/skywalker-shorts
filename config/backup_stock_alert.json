@@ -1,8 +1,8 @@
 {
-  "at": "2026-11-29 00:06 IST",
+  "at": "2026-11-29 00:07 IST",
   "alert": true,
   "ready": 0,
-  "pending": 4,
+  "pending": 2,
   "target": 20,
   "refill_at": 8,
   "alert_at": 7,
