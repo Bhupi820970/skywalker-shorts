@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-28 19:12 IST",
+ "generated_at": "2026-11-28 19:35 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 302,
+ "release_scene_clips": 303,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -1289,11 +1289,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=TG-HGj5V5TM",
    "missing_assets": [
-    "rezero3_scene1_h264.mp4",
     "rezero3_scene2_h264.mp4",
     "rezero3_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "rezero3_scene1_h264.mp4"
+   ],
    "hook": "Subaru dies so they can live",
    "title": "Subaru dies so they can live | Re:Zero | #edit",
    "tags": [
