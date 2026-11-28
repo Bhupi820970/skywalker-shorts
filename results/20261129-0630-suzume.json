@@ -1,0 +1,331 @@
+{
+  "id": "20261129-0630-suzume",
+  "status": "retry_queued",
+  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.974, 'edge_corr_median': 0.969, 'shift_px_median': 1.8, 'pairs': 6}; auto_qc: 3 near-duplicate shot pair(s) in the output",
+  "at": "2026-11-29 00:32 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/46172629567",
+  "slot": "2026-11-29T06:30:00+05:30",
+  "title": "Why Violet had to learn human emotions | Violet's final letter | #edit",
+  "hook": "Why Violet had to learn human emotions",
+  "description": "Why Violet had to learn human emotions. From official Violet Evergarden clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #violetevergarden #violet #animeedit",
+  "tags": [
+    "violetevergarden",
+    "violet",
+    "animeedit",
+    "phonk",
+    "emotional",
+    "anime",
+    "kyotoanimation"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "s": 3.5,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 1.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 1.9,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 3.2,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 2.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-flash-latest",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "s": 16.5,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key2",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.1-flash-lite",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 132.7,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key3",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key3",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key2",
+      "err": "TimeoutError"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.8-flash",
+      "key": "key1",
+      "err": "HTTP 503"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "s": 37.8,
+      "ok": true
+    },
+    {
+      "purpose": "hook",
+      "model": "gemini-flash-latest",
+      "key": "key1",
+      "s": 10.7,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "VIOLET EVERGARDEN",
+  "edit_format": "love",
+  "title_swaps": [
+    {
+      "from": "suzume",
+      "from_words": "SUZUME",
+      "to": "violetevergarden",
+      "to_words": "VIOLET EVERGARDEN",
+      "reason": "pipeline/QA failed (exit 1): only 1.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut"
+    }
+  ],
+  "swapped_from": "suzume",
+  "swapped_to": "violetevergarden",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): only 1.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene3_h264.mp4",
+      "music": "sw_memoryreboot.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.974, 'edge_corr_median': 0.969, 'shift_px_median': 1.8, 'pairs': 6}; auto_qc: 3 near-duplicate shot pair(s) in the output",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene4_h264.mp4",
+      "music": "pr_ytsearch1joehisaishionesummersdaypiano.mp3",
+      "qc_status": null
+    }
+  ],
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.974, 'edge_corr_median': 0.969, 'shift_px_median': 1.8, 'pairs': 6}; auto_qc: 3 near-duplicate shot pair(s) in the output",
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 8.0s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-28 23:42 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/suzume_scene3_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): only 1.6s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-28 23:51 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/violetevergarden_scene4_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): QA no_crop failed: {'ok': False, 'source': [1920, 1080], 'letterbox_free': [1920, 1080], 'plate': [1080, 608], 'letterbox_rows_black': True, 'frame_corr_median': 0.974, 'edge_corr_median': 0.969, 'shift_px_median': 1.8, 'pairs': 6}; auto_qc: 3 near-duplicate shot pair(s)",
+      "at": "2026-11-29 00:32 IST"
+    }
+  ]
+}
