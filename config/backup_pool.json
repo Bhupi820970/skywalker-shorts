@@ -2042,7 +2042,11 @@
       "fallback_mp4": [
         "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene1_h264.mp4",
         "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene2_h264.mp4",
-        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene3_h264.mp4"
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene3_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene4_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene5_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene6_h264.mp4",
+        "https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/twisters_scene7_h264.mp4"
       ],
       "template": "whitebar",
       "hook": "The sky turned against them",
@@ -2065,7 +2069,11 @@
       "scene_assets": [
         "twisters_scene1_h264.mp4",
         "twisters_scene2_h264.mp4",
-        "twisters_scene3_h264.mp4"
+        "twisters_scene3_h264.mp4",
+        "twisters_scene4_h264.mp4",
+        "twisters_scene5_h264.mp4",
+        "twisters_scene6_h264.mp4",
+        "twisters_scene7_h264.mp4"
       ],
       "added_by": "footage_refill",
       "category": "movie"

@@ -189,7 +189,11 @@
       "scene_assets": [
         "twisters_scene1_h264.mp4",
         "twisters_scene2_h264.mp4",
-        "twisters_scene3_h264.mp4"
+        "twisters_scene3_h264.mp4",
+        "twisters_scene4_h264.mp4",
+        "twisters_scene5_h264.mp4",
+        "twisters_scene6_h264.mp4",
+        "twisters_scene7_h264.mp4"
       ],
       "content_kind": "best scene"
     },
