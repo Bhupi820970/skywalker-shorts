@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T14:53:25Z",
-  "last_upload_at": "2026-11-28T13:54:25Z"
+  "last_run_at": "2026-11-28T17:11:10Z",
+  "last_upload_at": "2026-11-28T17:11:10Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -180,6 +180,7 @@
   "yt:VwwZU7YgC6A",
   "yt:W28kNzz50pw",
   "yt:WGXmDsOwW4k",
+  "yt:X1aFkAkFASk",
   "yt:X5npfFNjrgU",
   "yt:XnseVYTF8_0",
   "yt:XxFyjEtUock",
@@ -217,6 +218,7 @@
   "yt:b2l8sz4TAY4",
   "yt:bV0RAcuG2Ao",
   "yt:bV1Unml2PuM",
+  "yt:bcGgq5LSnwo",
   "yt:c7dTavaNXYQ",
   "yt:c8o3ATfaS6w",
   "yt:cbft6JWPkpA",
@@ -268,6 +270,7 @@
   "yt:kcXgCtylzbA",
   "yt:l5ZiW3mCuE4",
   "yt:lEM5nJ-AUiM",
+  "yt:lPpfK1K1qNU",
   "yt:laROLKDI3jM",
   "yt:m3G3Z6HYNE0",
   "yt:mSXxPBQmPAw",
@@ -4013,6 +4016,39 @@
    "kbps": 4421,
    "by": "box",
    "at": "2026-11-28T13:54:25Z"
+  },
+  {
+   "asset": "infinitywar_scene1_h264.mp4",
+   "id": "yt:X1aFkAkFASk",
+   "title": "Avengers: Doomsday | Special Look | In Theaters December 18",
+   "channel": "Marvel Entertainment",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 8030,
+   "by": "box",
+   "at": "2026-11-28T17:11:10Z"
+  },
+  {
+   "asset": "infinitywar_scene2_h264.mp4",
+   "id": "yt:lPpfK1K1qNU",
+   "title": "Avengers vs Ultron - Battle of Sokovia - Avengers: Age of Ultron (2015) Movie CLIP HD",
+   "channel": "TopMovieClips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 4729,
+   "by": "box",
+   "at": "2026-11-28T17:11:10Z"
+  },
+  {
+   "asset": "infinitywar_scene3_h264.mp4",
+   "id": "yt:bcGgq5LSnwo",
+   "title": "Bring Me Thanos! Thor Arrives In Wakanda   Avengers Infinity War 2018 Movie CLIP 4K",
+   "channel": "BestMovieClips",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 11709,
+   "by": "box",
+   "at": "2026-11-28T17:11:10Z"
   }
  ],
  "github": {
