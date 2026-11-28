@@ -1,7 +1,7 @@
 {
-  "at": "2026-11-28 16:11 IST",
+  "at": "2026-11-28 17:15 IST",
   "alert": true,
-  "ready": 1,
+  "ready": 0,
   "pending": 8,
   "target": 20,
   "refill_at": 8,
@@ -19,7 +19,7 @@
     "2026-11-29T16:00:00+05:30"
   ],
   "issues": [
-    "backup stock 1 ready (<= 2): BIBI's bot must step in (manual QC / pick) - Gemini or renders are not refilling",
+    "backup stock 0 ready (<= 2): BIBI's bot must step in (manual QC / pick) - Gemini or renders are not refilling",
     "9 slot(s) in the next 24h without a finished video"
   ]
 }

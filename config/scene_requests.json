@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-28 16:11 IST",
+ "generated_at": "2026-11-28 17:15 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 295,
+ "release_scene_clips": 300,
  "max_clips_per_title": 3,
  "requests": [
   {
@@ -189,82 +189,6 @@
     "shorts",
     "trending",
     "chihiro"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "deathnote",
-   "slot": "2026-11-30T13:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261130-1330-deathnote",
-   "pillar": "anime",
-   "words": "DEATH NOTE",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DEATH NOTE fight scene official clip",
-    "DEATH NOTE best scene official clip",
-    "DEATH NOTE official clip"
-   ],
-   "official_channels": [],
-   "source_url": "https://www.youtube.com/watch?v=Z1mcQ6CzXo8",
-   "missing_assets": [],
-   "on_release": [
-    "deathnote_scene1_h264.mp4"
-   ],
-   "hook": "Why Light thought he outsmarted everyone",
-   "title": "Why Light thought he outsmarted everyone | Light potato chip scene | #edit",
-   "tags": [
-    "deathnote",
-    "lightyagami",
-    "llawliet",
-    "animeedit",
-    "kira",
-    "deathnoteedit",
-    "psychological"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "aotfinal",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-aotfinal",
-   "pillar": "anime",
-   "words": "ATTACK ON TITAN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "ATTACK ON TITAN fight scene official clip",
-    "ATTACK ON TITAN best scene official clip",
-    "ATTACK ON TITAN official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll Dubs",
-    "The Official Dubbers"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=g2fGSThhFl4",
-   "missing_assets": [
-    "aotfinal_scene1_h264.mp4"
-   ],
-   "on_release": [],
-   "hook": "Mikasa never stopped protecting him",
-   "title": "Mikasa never stopped protecting him | Attack on Titan | #edit",
-   "tags": [
-    "aotfinal",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "eren"
    ],
    "market": "US/UK"
   },
@@ -530,11 +454,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=j8YijNavM7Y",
    "missing_assets": [
-    "drstone_scene1_h264.mp4",
     "drstone_scene2_h264.mp4",
     "drstone_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "drstone_scene1_h264.mp4"
+   ],
    "hook": "Senku rebuilt the world with science",
    "title": "Senku rebuilt the world with science | Dr. Stone | #edit",
    "tags": [
@@ -570,11 +495,12 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=ThozbbykMdY",
    "missing_assets": [
-    "firforce3_scene1_h264.mp4",
     "firforce3_scene2_h264.mp4",
     "firforce3_scene3_h264.mp4"
    ],
-   "on_release": [],
+   "on_release": [
+    "firforce3_scene1_h264.mp4"
+   ],
    "hook": "Shinra moves faster than fire",
    "title": "Shinra moves faster than fire | Fire Force | #edit",
    "tags": [

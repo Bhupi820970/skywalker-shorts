@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-28 16:11 IST",
+  "at": "2026-11-28 17:15 IST",
   "slots_checked": 9,
   "ready": [],
   "short": [
@@ -58,6 +58,7 @@
     "stock-avatarfireandash-03",
     "20261114-1730-kalki2898ad",
     "stock-arcane-01",
+    "20261128-1600-jjk",
     "stock-twisters-02",
     "20261115-1830-deadpool3",
     "20261125-1600-stock-dandadanevil",
@@ -170,9 +171,9 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 1,
+  "stock_ready": 0,
   "stock_pending": 8,
-  "stock_used": 49,
+  "stock_used": 50,
   "stock_target": 20,
   "stock_need_refill": false,
   "stock_refilling": true,
@@ -182,7 +183,7 @@
   "stock_assigned": [],
   "ok": false,
   "issues": [
-    "backup stock 1 ready (<= 2): BIBI's bot must step in (manual QC / pick) - Gemini or renders are not refilling",
+    "backup stock 0 ready (<= 2): BIBI's bot must step in (manual QC / pick) - Gemini or renders are not refilling",
     "9 slot(s) in the next 24h without a finished video"
   ]
 }
