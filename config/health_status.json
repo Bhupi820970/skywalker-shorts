@@ -9,7 +9,7 @@
     },
     {
       "slot": "2026-11-28T11:30:00+05:30",
-      "id": "20261128-1130-thebatman",
+      "id": "stock",
       "how": "backup_stock"
     }
   ],
@@ -186,9 +186,7 @@
   "stock_refill_at": 8,
   "stock_alert_at": 2,
   "stock_alert": true,
-  "stock_assigned": [
-    "20261128-1130-thebatman"
-  ],
+  "stock_assigned": [],
   "ok": false,
   "issues": [
     "backup stock 1 ready (<= 2): BIBI's bot must step in (manual QC / pick) - Gemini or renders are not refilling",
