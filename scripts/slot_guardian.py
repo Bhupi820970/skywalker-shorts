@@ -267,7 +267,7 @@ def _assign_entry(root: Path, ent: dict, slot_s: str, now: datetime) -> dict | N
     man = backup_stock.load_manifest(root)
     orig = backup_stock.pick_stock
 
-    def _only(man_, root_, day, now=None, buffer_posts=None):
+    def _only(man_, root_, day, now=None, buffer_posts=None, **_kw):
         return ent
 
     backup_stock.pick_stock = _only  # type: ignore
