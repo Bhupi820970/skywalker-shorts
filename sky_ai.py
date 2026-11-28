@@ -738,6 +738,15 @@ def subtitle_text(work: Path) -> str:
     return " / ".join(x for x in out if x)[:1500]
 
 
+def no_banner_expected(expected: str) -> str:
+    """User (Nov 28): no white hook bar on screen; the frame must be clean."""
+    expected = re.sub(r"a tight WHITE bar with black italic English hook text.*?movie frame",
+                      "NO banner and NO hook text on screen (clean frame): the full, uncropped landscape movie frame",
+                      expected, count=1, flags=re.S)
+    expected = expected.replace("The bar is a band at the top; ", "").replace(", scaled to fit under the bar without cropping", ", scaled to fit without cropping")
+    return expected + " A white bar or hook text on screen is a DEFECT now."
+
+
 def qc_audio_mode(ac_mode: str = "", layout_mode: str = "", edit_format: str = "") -> str:
     """Which QC audio rule to apply. Owner rule: no dialogue anywhere, so song-only - except the opt-in riyio-style
     dialogue edit (BiBi Nov 24 2026), which is judged as a dialogue -> drop -> montage edit."""
@@ -867,6 +876,8 @@ def qc_judge(video: Path, work: Path, hook: str, title: str, description: str) -
     if mode == "dialogue_drop":
         cap_ok = " except the intended dialogue captions under the speaker"
     # BiBi Nov 24 ref-edit techniques: intended style, not defects
+    if os.environ.get("SKY_BANNER", "0") != "1":
+        expected = no_banner_expected(expected)
     expected += (" Intended style effects (never a defect): a slow push-in (up to ~5%) on dialogue / slow shots, "
                  "quick zoom pushes with motion blur, a short shake on the hits, a tiny colour split and single-frame "
                  "light flashes on montage beats, and a split-second of silence with a rising sub-bass right before "

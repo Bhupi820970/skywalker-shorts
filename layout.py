@@ -23,8 +23,8 @@ def whitebar_layout(plate_h: int, bar_h: int, plate_w: int | None = None) -> dic
     bar_h = int(bar_h)
     if bar_h % 2:
         bar_h += 1
-    if bar_h < 2:
-        bar_h = 2
+    if bar_h < 0:
+        bar_h = 0
     if bar_h > H - 4:
         bar_h = H - 4
         if bar_h % 2:

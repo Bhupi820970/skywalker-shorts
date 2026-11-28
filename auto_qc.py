@@ -393,7 +393,7 @@ def check(path: Path, layout: dict | None = None, caption_y: int = 1420) -> dict
             cap_hits += 1
     if blacklist:
         issues.append(f"{len(blacklist)} frame(s) failed empty-dark/logo/text detectors")
-    if layout and checked and banner_hits < max(2, checked // 5):
+    if layout and int(layout.get("bar_h") or 0) > 0 and checked and banner_hits < max(2, checked // 5):
         issues.append("hook banner not visible often enough")
     # captions start at 0.4s and cover ~16-20s; require visibility on a portion
     if checked and cap_hits < 2:

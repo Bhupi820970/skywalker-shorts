@@ -35,6 +35,7 @@ import argparse
 import json
 import math
 import os
+SHOW_BANNER = os.environ.get("SKY_BANNER", "0") == "1"
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -3730,7 +3731,9 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
     if not bar.exists():
         draw_caption_bar(bar, hook_lines())
     pw, ph = _mezz_size(silent)
-    bar_h = Image.open(bar).size[1]
+    # User (Nov 28): no white hook banner on screen. Clean frame; the hook goes
+    # only in the title/description. Set SKY_BANNER=1 to bring the bar back.
+    bar_h = Image.open(bar).size[1] if SHOW_BANNER else 0
     lay = whitebar_layout(ph, bar_h, pw)
     layout = {
         "bar_y": lay["bar_y"], "bar_h": lay["bar_h"],
@@ -3869,8 +3872,10 @@ def mux_final(silent: Path, music: dict, ass: Path, grad: Path, out: Path, dur: 
         f"eq=brightness={_fill_brightness()}:saturation=0.80:contrast=0.95,setsar=1[bg];"
         f"[fg]scale={lay['plate_w']}:{lay['plate_h']}:flags=lanczos,setsar=1[plate];"
         f"[bg][plate]overlay={lay['plate_x']}:{lay['plate_y']}:format=auto[vid];"
-        f"[2:v]format=rgb24,scale={W}:{lay['bar_h']}[bar];"
-        f"[vid][bar]overlay=0:{lay['bar_y']}:format=auto{fx},format=yuv420p{ass_extra}[v]"
+        + (f"[2:v]format=rgb24,scale={W}:{lay['bar_h']}[bar];"
+           f"[vid][bar]overlay=0:{lay['bar_y']}:format=auto{fx},format=yuv420p{ass_extra}[v]"
+           if lay["bar_h"] > 0 else
+           f"[vid]null{fx},format=yuv420p{ass_extra}[v]")
     )
     layout["blur_fill"] = True
     (WORK / "layout.json").write_text(json.dumps(layout, default=str))
@@ -4306,7 +4311,7 @@ def qa_extra(out: Path, mezz: Path, src: Path, crop, edl: list[dict]) -> dict:
         white = float((barr > 235).mean()) if barr.size else 0.0
         ink = float((barr < 60).mean()) if barr.size else 0.0
         flush = int(lay["plate_y"]) == int(lay["bar_y"]) + int(lay["bar_h"])
-        cap_ok = white > 0.6 and 0.01 < ink < 0.4 and flush
+        cap_ok = (white > 0.6 and 0.01 < ink < 0.4 and flush) if int(lay["bar_h"]) > 0 else True
         checks["caption"] = {"ok": cap_ok, "white_frac": round(white, 3), "ink_frac": round(ink, 3),
                              "bar_y": lay["bar_y"], "bar_h": lay["bar_h"], "flush": flush}
     else:
