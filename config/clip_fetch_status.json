@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T17:25:16Z",
-  "last_upload_at": "2026-11-28T17:25:16Z"
+  "last_run_at": "2026-11-28T17:27:23Z",
+  "last_upload_at": "2026-11-28T17:27:23Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -173,6 +173,7 @@
   "yt:VAdGW7QDJiU",
   "yt:VAikfIsQyRM",
   "yt:VEjVqXiiUNY",
+  "yt:VOLKJJvfAbg",
   "yt:VVBziwNCHq8",
   "yt:VdQA71NE21A",
   "yt:VepJbZ4UJyc",
@@ -4085,6 +4086,17 @@
    "kbps": 4068,
    "by": "box",
    "at": "2026-11-28T17:25:16Z"
+  },
+  {
+   "asset": "kabirsingh_scene1_h264.mp4",
+   "id": "yt:VOLKJJvfAbg",
+   "title": "Bekhayali Full Song | Kabir Singh | Shahid K,Kiara A|Sandeep Reddy Vanga | Sachet-Parampara | Irshad",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1539,
+   "by": "box",
+   "at": "2026-11-28T17:27:23Z"
   }
  ],
  "github": {
