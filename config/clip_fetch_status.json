@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T09:47:27Z",
-  "last_upload_at": "2026-11-28T09:47:26Z"
+  "last_run_at": "2026-11-28T10:05:22Z",
+  "last_upload_at": "2026-11-28T10:05:22Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -83,6 +83,7 @@
   "yt:GAk3eYDMDFw",
   "yt:GGZdoD7gYnE",
   "yt:GPitD0-mkYA",
+  "yt:GXEjzN8zD3U",
   "yt:Guxx_KTm_6M",
   "yt:HGCsAcFzaFw",
   "yt:HKyswzGF4jo",
@@ -3774,6 +3775,28 @@
    "kbps": 2687,
    "by": "box",
    "at": "2026-11-28T09:47:26Z"
+  },
+  {
+   "asset": "fightclub_scene1_h264.mp4",
+   "id": "yt:L6eLKzWXwi8",
+   "title": "FIGHT CLUB Clip - First Rule (1999) Brad Pitt",
+   "channel": "JoBlo Movie Clips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1501,
+   "by": "box",
+   "at": "2026-11-28T10:05:22Z"
+  },
+  {
+   "asset": "fightclub_scene2_h264.mp4",
+   "id": "yt:GXEjzN8zD3U",
+   "title": "FIGHT CLUB Clip - \"Marla's Bus\" (1999) Helena Bonham Carter",
+   "channel": "JoBlo Movie Clips",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 4486,
+   "by": "box",
+   "at": "2026-11-28T10:05:22Z"
   }
  ],
  "github": {
