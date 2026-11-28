@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T03:46:27Z",
-  "last_upload_at": "2026-11-28T02:59:09Z"
+  "last_run_at": "2026-11-28T05:44:53Z",
+  "last_upload_at": "2026-11-28T05:44:53Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -3405,6 +3405,17 @@
    "kbps": 1385,
    "by": "box",
    "at": "2026-11-28T02:59:09Z"
+  },
+  {
+   "asset": "spyxfamily3_scene1_h264.mp4",
+   "id": "yt:U_rWZK_8vUY",
+   "title": "『SPY×FAMILY』オープニング主題歌アニメ映像／“SPY × FAMILY” Opening theme song animation",
+   "channel": "TOHO animation チャンネル",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2371,
+   "by": "box",
+   "at": "2026-11-28T05:44:53Z"
   }
  ],
  "github": {
