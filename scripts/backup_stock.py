@@ -680,6 +680,14 @@ def _entry_status(ent: dict, root: Path, now: datetime) -> str:
     if r and r.get("status") == "done" and not (r or {}).get("stock_used"):
         return "not_ready"
     if r and r.get("status") in ("retry_queued",):
+        # A retry that never ran must time out too, or it blocks refill forever.
+        at = str(r.get("at") or ent.get("queued_at") or "")
+        try:
+            dt = datetime.strptime(at.replace(" IST", "")[:16], "%Y-%m-%d %H:%M").replace(tzinfo=IST)
+            if now - dt >= timedelta(hours=PENDING_HOURS):
+                return "failed"
+        except Exception:
+            pass
         return "pending"
     if ent.get("status") == "pending":
         at = ent.get("queued_at") or ""
