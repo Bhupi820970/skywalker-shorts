@@ -165,24 +165,6 @@
    "state": "used",
    "video": "20261124-2230-cyberpunk2077"
   },
-  "cyberpunk2077_scene3_h264.mp4": {
-   "at": "2026-11-28T18:39:12+00:00",
-   "owner": "46176896767-1-stock-cyberpunk2077-03",
-   "platform": "render",
-   "state": "reserved"
-  },
-  "cyberpunk2077_scene4_h264.mp4": {
-   "at": "2026-11-28T18:39:15+00:00",
-   "owner": "46176896767-1-stock-cyberpunk2077-03",
-   "platform": "render",
-   "state": "reserved"
-  },
-  "cyberpunk2077_scene6_h264.mp4": {
-   "at": "2026-11-28T18:39:22+00:00",
-   "owner": "46176896767-1-stock-cyberpunk2077-03",
-   "platform": "render",
-   "state": "reserved"
-  },
   "cyberpunkedgerunners_scene1_h264.mp4": {
    "at": "2026-11-26T16:25:15+00:00",
    "owner": "seed",
