@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T06:01:26Z",
-  "last_upload_at": "2026-11-28T06:01:26Z"
+  "last_run_at": "2026-11-28T06:15:05Z",
+  "last_upload_at": "2026-11-28T06:15:05Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -270,6 +270,7 @@
   "yt:votcOf5cYCM",
   "yt:w323iXW02G4",
   "yt:wSenrOeeLrA",
+  "yt:wkUbExsii2Y",
   "yt:xPJLyIFyF50",
   "yt:xlrj36cAzj4",
   "yt:xpJWvpumgxs",
@@ -3428,6 +3429,28 @@
    "kbps": 1463,
    "by": "box",
    "at": "2026-11-28T06:01:26Z"
+  },
+  {
+   "asset": "vinlandsaga2_scene3_h264.mp4",
+   "id": "yt:Zt85YuG0-_Y",
+   "title": "Canute's Famous Tide Speech | VINLAND SAGA | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1463,
+   "by": "box",
+   "at": "2026-11-28T06:15:05Z"
+  },
+  {
+   "asset": "vinlandsaga2_scene4_h264.mp4",
+   "id": "yt:wkUbExsii2Y",
+   "title": "Thorfinn: Journey of the Lost Child | Vinland Saga | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1696,
+   "by": "box",
+   "at": "2026-11-28T06:15:05Z"
   }
  ],
  "github": {

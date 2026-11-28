@@ -1088,7 +1088,8 @@
       "scene_assets": [
         "vinlandsaga2_scene1_h264.mp4",
         "vinlandsaga2_scene2_h264.mp4",
-        "vinlandsaga2_scene3_h264.mp4"
+        "vinlandsaga2_scene3_h264.mp4",
+        "vinlandsaga2_scene4_h264.mp4"
       ],
       "fallback_asset": "vinlandsaga2_trailer_h264.mp4",
       "content_kind": "best scene",
