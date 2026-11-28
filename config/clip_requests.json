@@ -1,39 +1,74 @@
 {
- "generated_at": "2026-11-27 17:45 IST",
+ "generated_at": "2026-11-28 17:13 IST",
  "max_clips_per_title": 5,
  "min_height": 1080,
  "requests": [
   {
    "slug": "sololeveling",
    "pillar": "anime",
-   "words": "SOLO LEVELING",
+   "words": "SOLO LEVELING JINWOO VS IGRIS",
    "characters": [
-    "Sung Jinwoo"
+    "Sung Jinwoo",
+    "Igris"
    ],
    "scene_types": [
     "fight",
-    "aura",
-    "entrance"
+    "aura"
    ],
    "search_queries": [
-    "Solo Leveling Sung Jinwoo fight clip",
-    "Solo Leveling I arise scene clip",
-    "Solo Leveling Jinwoo shadow army clip"
+    "Solo Leveling Jinwoo vs Igris official scene clip",
+    "Solo Leveling Sung Jinwoo job change quest clip",
+    "Solo Leveling Igris fight scene HD"
    ],
    "official_channels": [
     "Aniplex USA",
-    "Sony Pictures Entertainment"
+    "Netflix Anime"
    ],
-   "hook": "Why Sung Jinwoo single handedly turned the tide",
-   "title": "Why Sung Jinwoo single handedly turned the tide | Sung Jinwoo shadow army | #edit",
+   "hook": "Why Jinwoo refused to give up",
+   "title": "Why Jinwoo refused to give up 💀 | Jinwoo vs Igris | #edit",
    "tags": [
     "sololeveling",
     "sungjinwoo",
+    "igris",
     "anime",
     "animedit",
-    "shadowmonarch",
-    "solo",
-    "leveling"
+    "soloedit",
+    "shadowmonarch"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "attackontitan",
+   "pillar": "anime",
+   "words": "ATTACK ON TITAN LEVI VS BEAST TITAN",
+   "characters": [
+    "Levi Ackerman",
+    "Zeke Yeager"
+   ],
+   "scene_types": [
+    "fight",
+    "aura"
+   ],
+   "search_queries": [
+    "Attack on Titan Levi vs Beast Titan official scene clip",
+    "Levi shredding Beast Titan scene clip",
+    "Attack on Titan Season 3 Levi fight clip"
+   ],
+   "official_channels": [
+    "Pony Canyon",
+    "Netflix Anime"
+   ],
+   "hook": "Why Levi showed no mercy to Zeke",
+   "title": "Why Levi showed no mercy to Zeke 💀 | Levi vs Beast Titan | #edit",
+   "tags": [
+    "attackontitan",
+    "leviackerman",
+    "aot",
+    "beasttitan",
+    "anime",
+    "animedit",
+    "levi"
    ],
    "market": "US/UK",
    "known_topic": false
@@ -41,356 +76,312 @@
   {
    "slug": "chainsawman",
    "pillar": "anime",
-   "words": "CHAINSAW MAN",
+   "words": "CHAINSAW MAN MAKIMA TRAIN SCENE",
    "characters": [
-    "Denji",
     "Makima"
    ],
    "scene_types": [
-    "fight",
     "aura",
     "entrance"
    ],
    "search_queries": [
-    "Chainsaw Man Makima shrine scene clip",
-    "Chainsaw Man Denji fight scene clip",
-    "Chainsaw Man hotel fight scene clip"
+    "Chainsaw Man Makima train shoot scene clip",
+    "Chainsaw Man Makima powers revealed official clip",
+    "Makima train scene 4k clip"
    ],
    "official_channels": [
-    "Sony Pictures Entertainment",
-    "MAPPA"
+    "MAPPA CHANNEL",
+    "Sony Pictures Entertainment"
    ],
-   "hook": "Why Makima commands total obedience",
-   "title": "Why Makima commands total obedience | Makima shrine scene | #edit",
+   "hook": "Why everyone feared Makima on that train",
+   "title": "Why everyone feared Makima on that train 💀 | Makima train scene | #edit",
    "tags": [
     "chainsawman",
-    "denji",
     "makima",
+    "csm",
     "anime",
     "animedit",
-    "csm",
-    "animeedit"
+    "makimaedit",
+    "denji"
    ],
    "market": "US/UK",
-   "known_topic": false
+   "known_topic": true
   },
   {
    "slug": "demonslayer",
    "pillar": "anime",
-   "words": "DEMON SLAYER",
+   "words": "DEMON SLAYER RENGOKU VS AKAZA",
    "characters": [
     "Kyojuro Rengoku",
     "Akaza"
    ],
    "scene_types": [
     "fight",
-    "emotional",
-    "aura"
+    "emotional"
    ],
    "search_queries": [
-    "Demon Slayer Rengoku vs Akaza fight clip",
-    "Demon Slayer Mugen Train Rengoku scene clip",
-    "Demon Slayer Rengoku final form clip"
+    "Demon Slayer Rengoku vs Akaza official scene clip",
+    "Mugen Train Rengoku final stance clip",
+    "Demon Slayer Rengoku flame hashira fight clip"
    ],
    "official_channels": [
     "Aniplex USA",
     "Sony Pictures Entertainment"
    ],
-   "hook": "Why Rengoku fought until his final breath",
-   "title": "Why Rengoku fought until his final breath | Rengoku vs Akaza | #edit",
+   "hook": "Why Rengoku never backed down",
+   "title": "Why Rengoku never backed down 💀 | Rengoku vs Akaza | #edit",
    "tags": [
     "demonslayer",
     "rengoku",
     "akaza",
-    "anime",
     "kimetsunoyaiba",
-    "animeedit",
-    "mugentrain"
+    "mugentrain",
+    "anime",
+    "animedit"
    ],
    "market": "US/UK",
    "known_topic": true
   },
   {
-   "slug": "vinlandsaga",
+   "slug": "apothecarydiaries",
    "pillar": "anime",
-   "words": "VINLAND SAGA",
+   "words": "APOTHECARY DIARIES MAOMAO MOONLIGHT DANCE",
    "characters": [
-    "Thorfinn",
-    "Askeladd"
+    "Maomao",
+    "Jinshi"
    ],
    "scene_types": [
-    "emotional",
-    "fight",
+    "romance",
     "aura"
    ],
    "search_queries": [
-    "Vinland Saga Askeladd final scene clip",
-    "Vinland Saga Thorfinn vs Askeladd fight clip",
-    "Vinland Saga Askeladd speech clip"
+    "The Apothecary Diaries Maomao dancing scene official clip",
+    "Maomao moonlight dance Jinshi clip",
+    "The Apothecary Diaries episode 19 clip"
    ],
    "official_channels": [
-    "Netflix Anime",
     "TOHO animation"
    ],
-   "hook": "Why Askeladd gave Thorfinn one last lesson",
-   "title": "Why Askeladd gave Thorfinn one last lesson | Askeladd final moment | #edit",
+   "hook": "Why Jinshi could not take his eyes off Maomao",
+   "title": "Why Jinshi could not take his eyes off Maomao 💀 | Maomao moonlight dance | #edit",
    "tags": [
-    "vinlandsaga",
-    "thorfinn",
-    "askeladd",
+    "theapothecarydiaries",
+    "maomao",
+    "jinshi",
+    "kusuriyanohitorigoto",
     "anime",
-    "animeedit",
-    "vikings",
-    "seinen"
+    "animedit",
+    "romance"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "bleachthbw",
-   "pillar": "anime",
-   "words": "BLEACH THOUSAND YEAR BLOOD WAR",
+   "slug": "catchingfire",
+   "pillar": "hollywood",
+   "words": "HUNGER GAMES CATCHING FIRE KATNISS ARENA ENTRANCE",
    "characters": [
-    "Ichigo Kurosaki",
-    "Yhwach"
+    "Katniss Everdeen",
+    "Peeta Mellark"
    ],
    "scene_types": [
-    "fight",
     "entrance",
     "aura"
    ],
    "search_queries": [
-    "Bleach Thousand Year Blood War Ichigo arrival clip",
-    "Bleach TYBW Ichigo Bankai scene clip",
-    "Bleach TYBW Yamamoto Bankai clip"
+    "Catching Fire Katniss cornucopia entrance clip",
+    "The Hunger Games Catching Fire arena start official clip",
+    "Katniss rising into the arena clip"
    ],
    "official_channels": [
-    "VIZ Media"
+    "Lionsgate Movies",
+    "Movieclips"
    ],
-   "hook": "Why Ichigo unlocked his true power",
-   "title": "Why Ichigo unlocked his true power | Ichigo Bankai arrival | #edit",
+   "hook": "Why Katniss did not hesitate for a second",
+   "title": "Why Katniss did not hesitate for a second 💀 | Katniss enters the arena | #edit",
    "tags": [
-    "bleach",
-    "bleachtybw",
-    "ichigo",
-    "bankai",
-    "anime",
-    "animeedit",
-    "kurosaki"
-   ],
-   "market": "US/UK",
-   "known_topic": false
-  },
-  {
-   "slug": "fightclub",
-   "pillar": "hollywood",
-   "words": "FIGHT CLUB",
-   "characters": [
-    "Tyler Durden",
-    "The Narrator"
-   ],
-   "scene_types": [
-    "aura",
-    "entrance",
-    "emotional"
-   ],
-   "search_queries": [
-    "Fight Club Tyler Durden speech scene clip",
-    "Fight Club first rule scene clip",
-    "Fight Club end scene clip"
-   ],
-   "official_channels": [
-    "Movieclips",
-    "20th Century Studios"
-   ],
-   "hook": "Why Tyler Durden became an icon",
-   "title": "Why Tyler Durden became an icon | Tyler Durden speech | #edit",
-   "tags": [
-    "fightclub",
-    "tylerdurden",
-    "bradpitt",
-    "hollywood",
-    "cinematic",
+    "hungergames",
+    "katnisseverdeen",
+    "catchingfire",
+    "jenniferlawrence",
     "movieedit",
-    "sigma"
+    "cinema",
+    "hollywood"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "thedarkknight",
+   "slug": "infinitywar",
    "pillar": "hollywood",
-   "words": "THE DARK KNIGHT",
+   "words": "AVENGERS INFINITY WAR THOR ARRIVES IN WAKANDA",
    "characters": [
-    "The Joker",
-    "Batman"
+    "Thor",
+    "Rocket Raccoon",
+    "Groot"
    ],
    "scene_types": [
     "entrance",
-    "aura",
-    "emotional"
-   ],
-   "search_queries": [
-    "The Dark Knight Joker interrogation scene clip",
-    "The Dark Knight Joker pencil trick scene clip",
-    "The Dark Knight Joker bank heist clip"
-   ],
-   "official_channels": [
-    "Warner Bros. Pictures",
-    "Movieclips"
-   ],
-   "hook": "Why Joker never feared the Batman",
-   "title": "Why Joker never feared the Batman | Joker interrogation scene | #edit",
-   "tags": [
-    "thedarkknight",
-    "joker",
-    "batman",
-    "heathledger",
-    "hollywood",
-    "movieclips",
-    "dc"
-   ],
-   "market": "US/UK",
-   "known_topic": true
-  },
-  {
-   "slug": "madmaxfuryroad",
-   "pillar": "hollywood",
-   "words": "MAD MAX FURY ROAD",
-   "characters": [
-    "Max Rockatansky",
-    "Imperator Furiosa"
-   ],
-   "scene_types": [
     "fight",
-    "entrance",
     "aura"
    ],
    "search_queries": [
-    "Mad Max Fury Road storm scene clip",
-    "Mad Max Fury Road Furiosa fight clip",
-    "Mad Max Fury Road chase scene clip"
+    "Avengers Infinity War Thor arrives in Wakanda official clip",
+    "Thor Bring Me Thanos scene clip",
+    "Infinity War Wakanda battle Thor entrance clip"
    ],
    "official_channels": [
-    "Warner Bros. Pictures",
+    "Marvel Entertainment",
     "Movieclips"
    ],
-   "hook": "Why Furiosa never surrendered in the wasteland",
-   "title": "Why Furiosa never surrendered in the wasteland | Sandstorm chase scene | #edit",
+   "hook": "Why Thor's entrance changed the entire war",
+   "title": "Why Thor's entrance changed the entire war 💀 | Thor arrives in Wakanda | #edit",
    "tags": [
-    "madmax",
-    "furyroad",
-    "tomhardy",
-    "charlizetheron",
-    "hollywood",
-    "action",
+    "infinitywar",
+    "thor",
+    "avengers",
+    "marvel",
+    "mcu",
+    "thoredit",
     "movieedit"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "whiplash",
+   "slug": "darkknight",
    "pillar": "hollywood",
-   "words": "WHIPLASH",
+   "words": "THE DARK KNIGHT JOKER INTERROGATION SCENE",
    "characters": [
-    "Andrew Neiman",
-    "Terence Fletcher"
+    "The Joker",
+    "Batman"
    ],
    "scene_types": [
-    "emotional",
     "aura",
-    "entrance"
+    "emotional"
    ],
    "search_queries": [
-    "Whiplash drum solo final scene clip",
-    "Whiplash Fletcher tempo scene clip",
-    "Whiplash Andrew drum practice clip"
+    "The Dark Knight Joker interrogation scene official clip",
+    "Batman hits Joker interrogation room clip",
+    "Heath Ledger Joker interrogation scene HD"
    ],
    "official_channels": [
-    "Sony Pictures Classics",
+    "Warner Bros. Pictures",
     "Movieclips"
    ],
-   "hook": "Why Fletcher pushed Andrew past his limits",
-   "title": "Why Fletcher pushed Andrew past his limits | Final drum performance | #edit",
+   "hook": "Why Batman lost control in this room",
+   "title": "Why Batman lost control in this room 💀 | Joker interrogation scene | #edit",
    "tags": [
-    "whiplash",
-    "andrewneiman",
-    "jksimmons",
-    "milesteller",
-    "hollywood",
-    "cinematic",
-    "drama"
+    "thedarkknight",
+    "joker",
+    "batman",
+    "heathledger",
+    "christophernolan",
+    "movieedit",
+    "cinema"
    ],
    "market": "US/UK",
    "known_topic": false
   },
   {
-   "slug": "bajiraomastani",
-   "pillar": "bollywood",
-   "words": "BAJIRAO MASTANI",
+   "slug": "furyroad",
+   "pillar": "hollywood",
+   "words": "MAD MAX FURY ROAD SANDSTORM CHASE",
    "characters": [
-    "Peshwa Bajirao"
+    "Max Rockatansky",
+    "Nux",
+    "Imperator Furiosa"
    ],
    "scene_types": [
     "fight",
+    "aura"
+   ],
+   "search_queries": [
+    "Mad Max Fury Road sandstorm scene official clip",
+    "Mad Max Fury Road Into the storm scene clip",
+    "Fury Road desert chase clip HD"
+   ],
+   "official_channels": [
+    "Warner Bros. Pictures",
+    "Movieclips"
+   ],
+   "hook": "Why Nux drove straight into the storm",
+   "title": "Why Nux drove straight into the storm 💀 | Sandstorm chase scene | #edit",
+   "tags": [
+    "madmax",
+    "furyroad",
+    "tomhardy",
+    "charlizetheron",
+    "action",
+    "movieedit",
+    "hollywood"
+   ],
+   "market": "US/UK",
+   "known_topic": false
+  },
+  {
+   "slug": "kabirsingh",
+   "pillar": "bollywood",
+   "words": "KABIR SINGH CLASSROOM ENTRANCE SCENE",
+   "characters": [
+    "Kabir Singh"
+   ],
+   "scene_types": [
     "entrance",
     "aura"
    ],
    "search_queries": [
-    "Bajirao Mastani war entrance scene clip",
-    "Bajirao Mastani sword fight scene clip",
-    "Bajirao Mastani battle scene clip"
+    "Kabir Singh classroom scene official clip",
+    "Kabir Singh college entrance fight clip",
+    "Kabir Singh Shahid Kapoor entry scene"
    ],
    "official_channels": [
-    "Eros Now",
     "T-Series"
    ],
-   "hook": "Why Bajirao never lost a single battle",
-   "title": "Why Bajirao never lost a single battle | Bajirao battlefield entrance | #edit",
+   "hook": "Why Kabir Singh made everyone freeze",
+   "title": "Why Kabir Singh made everyone freeze 💀 | Kabir enters the college | #edit",
    "tags": [
-    "bajiraomastani",
-    "ranveersingh",
+    "kabirsingh",
+    "shahidkapoor",
     "bollywood",
-    "historical",
-    "indiancinema",
-    "massedit",
-    "bajirao"
+    "bollywoodedit",
+    "kabir",
+    "mass",
+    "hindi"
    ],
    "market": "IN",
    "known_topic": false
   },
   {
-   "slug": "dhoom3",
+   "slug": "uri",
    "pillar": "bollywood",
-   "words": "DHOOM 3",
+   "words": "URI THE SURGICAL STRIKE VIHAAN SPEECH",
    "characters": [
-    "Sahir",
-    "Samar"
+    "Major Vihaan Singh Shergill"
    ],
    "scene_types": [
-    "entrance",
-    "aura",
-    "fight"
+    "emotional",
+    "aura"
    ],
    "search_queries": [
-    "Dhoom 3 bike chase scene clip",
-    "Dhoom 3 Chicago heist clip",
-    "Dhoom 3 Aamir Khan bike transformation clip"
+    "Uri The Surgical Strike How's the josh scene clip",
+    "Vicky Kaushal Uri speech to soldiers official clip",
+    "Uri surgical strike base attack scene clip"
    ],
    "official_channels": [
-    "YRF"
+    "RSVP Movies",
+    "Zee Music Company"
    ],
-   "hook": "Why Sahir pulled off the ultimate heist",
-   "title": "Why Sahir pulled off the ultimate heist | Chicago bike chase | #edit",
+   "hook": "Why Major Vihaan's speech ignited the troops",
+   "title": "Why Major Vihaan's speech ignited the troops 💀 | How's the Josh scene | #edit",
    "tags": [
-    "dhoom3",
-    "aamirkhan",
-    "yrf",
+    "uri",
+    "vickykaushal",
+    "howsthejosh",
     "bollywood",
-    "action",
-    "massedit",
-    "chase"
+    "bollywoodedit",
+    "indianarmy",
+    "hindi"
    ],
    "market": "IN",
    "known_topic": false
@@ -398,103 +389,101 @@
   {
    "slug": "omshantiom",
    "pillar": "bollywood",
-   "words": "OM SHANTI OM",
+   "words": "OM SHANTI OM AWARDS SPEECH SCENE",
    "characters": [
     "Om Kapoor",
     "Shanti Priya"
    ],
    "scene_types": [
     "emotional",
-    "entrance",
     "aura"
    ],
    "search_queries": [
-    "Om Shanti Om fire scene clip",
-    "Om Shanti Om climax confrontation clip",
-    "Om Shanti Om awards speech scene clip"
+    "Om Shanti Om award speech scene official clip",
+    "Shah Rukh Khan Om Shanti Om climax speech clip",
+    "Om Shanti Om dialogues official video clip"
    ],
    "official_channels": [
+    "T-Series",
     "Red Chillies Entertainment"
    ],
-   "hook": "Why Om remembered his past life",
-   "title": "Why Om remembered his past life | Climax fire scene | #edit",
+   "hook": "Why SRK's speech in Om Shanti Om hits hard",
+   "title": "Why SRK's speech in Om Shanti Om hits hard 💀 | Om Kapoor award speech | #edit",
    "tags": [
     "omshantiom",
     "srk",
     "shahrukhkhan",
-    "redchillies",
+    "deepikapadukone",
     "bollywood",
-    "drama",
-    "cinema"
+    "bollywoodedit",
+    "hindi"
    ],
    "market": "IN",
-   "known_topic": false
+   "known_topic": true
   },
   {
    "slug": "baahubali2",
    "pillar": "south",
-   "words": "BAAHUBALI 2 THE CONCLUSION",
+   "words": "BAAHUBALI 2 CORONATION SCENE",
    "characters": [
     "Amarendra Baahubali",
     "Bhallaladeva"
    ],
    "scene_types": [
     "entrance",
-    "aura",
-    "fight"
+    "aura"
    ],
    "search_queries": [
-    "Baahubali 2 coronation entrance scene clip",
-    "Baahubali 2 battle fight scene clip",
-    "Baahubali 2 climax fight clip"
+    "Baahubali 2 Amarendra Baahubali oath taking scene clip",
+    "Baahubali 2 coronation scene official clip",
+    "Prabhas Baahubali oath scene HD"
    ],
    "official_channels": [
-    "Dharma Productions",
-    "Arka Media Works"
+    "T-Series",
+    "Dharma Productions"
    ],
-   "hook": "Why Baahubali was loved by the entire kingdom",
-   "title": "Why Baahubali was loved by the entire kingdom | Baahubali coronation scene | #edit",
+   "hook": "Why the entire kingdom cheered for Baahubali",
+   "title": "Why the entire kingdom cheered for Baahubali 💀 | Baahubali coronation scene | #edit",
    "tags": [
     "baahubali",
-    "prabhas",
-    "southcinema",
-    "telugucinema",
-    "massedit",
     "baahubali2",
-    "tollywood"
+    "prabhas",
+    "ssrajamouli",
+    "southedit",
+    "tollywood",
+    "massedit"
    ],
    "market": "IN",
-   "known_topic": false
+   "known_topic": true
   },
   {
-   "slug": "kgfchapter1",
+   "slug": "jailer",
    "pillar": "south",
-   "words": "KGF CHAPTER 1",
+   "words": "JAILER MUTHUVEL PANDIAN MASS CROWN SCENE",
    "characters": [
-    "Rocky Bhai"
+    "Tiger Muthuvel Pandian"
    ],
    "scene_types": [
-    "entrance",
     "aura",
-    "fight"
+    "entrance"
    ],
    "search_queries": [
-    "KGF Chapter 1 Rocky entry scene clip",
-    "KGF Chapter 1 Garuda hammer scene clip",
-    "KGF Chapter 1 gold mine fight clip"
+    "Jailer Rajinikanth crown mass scene official clip",
+    "Jailer Muthuvel Pandian transformation clip",
+    "Jailer Rajinikanth climax mass scene clip"
    ],
    "official_channels": [
-    "Hombale Films"
+    "Sun Pictures"
    ],
-   "hook": "Why Rocky took over the mine single handedly",
-   "title": "Why Rocky took over the mine single handedly | Rocky Garuda hammer scene | #edit",
+   "hook": "Why Muthuvel Pandian showed his true side",
+   "title": "Why Muthuvel Pandian showed his true side 💀 | Jailer mass entrance | #edit",
    "tags": [
-    "kgf",
-    "rockybhai",
-    "yash",
-    "hombale",
-    "kannada",
-    "southcinema",
+    "jailer",
+    "rajinikanth",
+    "thalaivar",
+    "sunpictures",
+    "kollywood",
+    "southedit",
     "massedit"
    ],
    "market": "IN",
