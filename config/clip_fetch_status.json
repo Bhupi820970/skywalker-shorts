@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T05:52:05Z",
-  "last_upload_at": "2026-11-28T05:44:53Z"
+  "last_run_at": "2026-11-28T06:01:26Z",
+  "last_upload_at": "2026-11-28T06:01:26Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -170,6 +170,7 @@
   "yt:ZivADyFlILE",
   "yt:ZjucT-UZzgg",
   "yt:Zq4zTcIM0yQ",
+  "yt:Zt85YuG0-_Y",
   "yt:_E0_bV8GrLo",
   "yt:_GFcWG0M-YM",
   "yt:_grmduuECm4",
@@ -3416,6 +3417,17 @@
    "kbps": 2371,
    "by": "box",
    "at": "2026-11-28T05:44:53Z"
+  },
+  {
+   "asset": "vinlandsaga_scene1_h264.mp4",
+   "id": "yt:Zt85YuG0-_Y",
+   "title": "Canute's Famous Tide Speech | VINLAND SAGA | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1463,
+   "by": "box",
+   "at": "2026-11-28T06:01:26Z"
   }
  ],
  "github": {
