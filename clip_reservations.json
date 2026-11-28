@@ -77,6 +77,12 @@
    "state": "used",
    "video": "stock-jjk-02"
   },
+  "arcane_scene6_h264.mp4": {
+   "at": "2026-11-28T19:05:03+00:00",
+   "owner": "46176782977-1-stock-arcane-02",
+   "platform": "render",
+   "state": "reserved"
+  },
   "arcane_scene7_h264.mp4": {
    "at": "2026-11-28T18:54:53+00:00",
    "owner": "46176782977-1-stock-arcane2-04",
