@@ -340,5 +340,7 @@
     "blur_fill": true
   },
   "stock_id": "stock-jjk-02",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "publish_blocked": "repeat: same hook already posted (20261120-0900-onepieceegghead): 'jinx finally loses her mind'",
+  "publish_blocked_at": "2026-11-28 16:11 IST"
 }
