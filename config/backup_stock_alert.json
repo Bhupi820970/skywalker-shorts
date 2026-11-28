@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-28 12:24 IST",
+  "at": "2026-11-28 16:11 IST",
   "alert": true,
   "ready": 1,
   "pending": 8,
@@ -8,17 +8,18 @@
   "alert_at": 2,
   "refilling": true,
   "short_slots": [
-    "2026-11-28T13:30:00+05:30",
     "2026-11-28T16:00:00+05:30",
     "2026-11-28T18:30:00+05:30",
     "2026-11-28T20:30:00+05:30",
     "2026-11-28T22:30:00+05:30",
     "2026-11-29T06:30:00+05:30",
     "2026-11-29T09:00:00+05:30",
-    "2026-11-29T11:30:00+05:30"
+    "2026-11-29T11:30:00+05:30",
+    "2026-11-29T13:30:00+05:30",
+    "2026-11-29T16:00:00+05:30"
   ],
   "issues": [
     "backup stock 1 ready (<= 2): BIBI's bot must step in (manual QC / pick) - Gemini or renders are not refilling",
-    "8 slot(s) in the next 24h without a finished video"
+    "9 slot(s) in the next 24h without a finished video"
   ]
 }

@@ -1,31 +1,26 @@
 {
-  "at": "2026-11-28 12:24 IST",
+  "at": "2026-11-28 16:11 IST",
   "slots_checked": 9,
-  "ready": [
-    {
-      "slot": "2026-11-28T11:30:00+05:30",
-      "id": "stock",
-      "how": "backup_stock"
-    }
-  ],
+  "ready": [],
   "short": [
-    "2026-11-28T13:30:00+05:30",
     "2026-11-28T16:00:00+05:30",
     "2026-11-28T18:30:00+05:30",
     "2026-11-28T20:30:00+05:30",
     "2026-11-28T22:30:00+05:30",
     "2026-11-29T06:30:00+05:30",
     "2026-11-29T09:00:00+05:30",
-    "2026-11-29T11:30:00+05:30"
+    "2026-11-29T11:30:00+05:30",
+    "2026-11-29T13:30:00+05:30",
+    "2026-11-29T16:00:00+05:30"
   ],
   "need_render": [
-    "20261128-1600-vikram",
-    "20261128-1830-sakamotodays",
     "20261128-2030-leomovie",
     "20261128-2230-haikyuudumpster",
     "20261129-0630-suzume",
     "20261129-0900-oppenheimer",
-    "20261129-1130-don2"
+    "20261129-1130-don2",
+    "20261129-1330-princessmononoke",
+    "20261129-1600-fighther"
   ],
   "backup_pool_size": 69,
   "backup_pool_preuploaded": 69,
@@ -188,6 +183,6 @@
   "ok": false,
   "issues": [
     "backup stock 1 ready (<= 2): BIBI's bot must step in (manual QC / pick) - Gemini or renders are not refilling",
-    "8 slot(s) in the next 24h without a finished video"
+    "9 slot(s) in the next 24h without a finished video"
   ]
 }

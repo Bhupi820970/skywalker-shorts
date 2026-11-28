@@ -338,5 +338,9 @@
     "edit_mode": "music_only",
     "edit_format": "love",
     "blur_fill": true
-  }
+  },
+  "stock_used": true,
+  "assigned_slot": "2026-11-28T16:00:00+05:30",
+  "assigned_result": "20261128-1600-jjk",
+  "used_at": "2026-11-28 16:11 IST"
 }

@@ -1,85 +1,10 @@
 {
- "generated_at": "2026-11-28 12:24 IST",
+ "generated_at": "2026-11-28 16:11 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 257,
+ "release_scene_clips": 295,
  "max_clips_per_title": 3,
  "requests": [
-  {
-   "slug": "dragonballdaima",
-   "slot": "2026-11-28T09:00:00+05:30",
-   "for": "slot",
-   "item_id": "20261128-0900-dragonballdaima",
-   "pillar": "anime",
-   "words": "DRAGON BALL DAIMA",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DRAGON BALL DAIMA fight scene official clip",
-    "DRAGON BALL DAIMA best scene official clip",
-    "DRAGON BALL DAIMA official clip"
-   ],
-   "official_channels": [
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Goku got small, not weak",
-   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
-   "tags": [
-    "dragonballdaima",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "goku"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "weatheringwithyou",
-   "slot": "2026-11-28T13:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261128-1330-weatheringwithyou",
-   "pillar": "romance",
-   "words": "WEATHERING WITH YOU",
-   "scene_types": [
-    "romantic",
-    "emotional",
-    "confession"
-   ],
-   "search_queries": [
-    "WEATHERING WITH YOU romantic scene",
-    "WEATHERING WITH YOU emotional scene",
-    "WEATHERING WITH YOU official clip"
-   ],
-   "official_channels": [
-    "GKIDS Films"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=HtkYBLLx0Mc",
-   "missing_assets": [],
-   "on_release": [
-    "weatheringwithyou_scene1_h264.mp4"
-   ],
-   "hook": "The sky followed them",
-   "title": "The sky followed them | Weathering With You | #edit",
-   "tags": [
-    "weatheringwithyou",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "hina",
-    "hodaka"
-   ],
-   "market": "US/UK"
-  },
   {
    "slug": "vikram",
    "slot": "2026-11-28T16:00:00+05:30",
@@ -101,7 +26,7 @@
    "source_url": "https://www.youtube.com/watch?v=0Z_mA7n5zIA",
    "missing_assets": [],
    "on_release": [
-    "vikram_scene3_h264.mp4"
+    "vikram_scene1_h264.mp4"
    ],
    "hook": "Vikram came back to finish the job",
    "title": "Vikram came back to finish the job | Vikram | #edit",
@@ -228,85 +153,6 @@
    "market": "IN"
   },
   {
-   "slug": "undeadunluck",
-   "slot": "2026-11-29T20:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261129-2030-undeadunluck",
-   "pillar": "anime",
-   "words": "UNDEAD UNLUCK",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "UNDEAD UNLUCK fight scene official clip",
-    "UNDEAD UNLUCK best scene official clip",
-    "UNDEAD UNLUCK official clip"
-   ],
-   "official_channels": [
-    "Anime! on TMS Official Channel",
-    "vizmedia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
-   "missing_assets": [],
-   "on_release": [
-    "undeadunluck_scene1_h264.mp4"
-   ],
-   "hook": "One touch changed his life",
-   "title": "One touch changed his life | Undead Unluck | #edit",
-   "tags": [
-    "undeadunluck",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "andy"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "jjk0",
-   "slot": "2026-11-29T22:30:00+05:30",
-   "for": "slot",
-   "item_id": "20261129-2230-jjk0",
-   "pillar": "romance",
-   "words": "JUJUTSU KAISEN 0",
-   "scene_types": [
-    "romantic",
-    "emotional",
-    "confession"
-   ],
-   "search_queries": [
-    "JUJUTSU KAISEN 0 romantic scene",
-    "JUJUTSU KAISEN 0 emotional scene",
-    "JUJUTSU KAISEN 0 official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll Store Australia",
-    "Prime Video India"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=9xnSDHDW5QQ",
-   "missing_assets": [],
-   "on_release": [
-    "jjk0_scene2_h264.mp4"
-   ],
-   "hook": "Yuta only fights for her",
-   "title": "Yuta only fights for her | Jujutsu Kaisen 0 | #edit",
-   "tags": [
-    "jjk0",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "yuta"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "spiritedaway",
    "slot": "2026-11-30T06:30:00+05:30",
    "for": "slot",
@@ -330,7 +176,9 @@
    ],
    "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
    "missing_assets": [],
-   "on_release": [],
+   "on_release": [
+    "spiritedaway_scene3_h264.mp4"
+   ],
    "hook": "Chihiro had to forget her name",
    "title": "Chihiro had to forget her name | Spirited Away | #edit",
    "tags": [
@@ -341,6 +189,42 @@
     "shorts",
     "trending",
     "chihiro"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "deathnote",
+   "slot": "2026-11-30T13:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261130-1330-deathnote",
+   "pillar": "anime",
+   "words": "DEATH NOTE",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DEATH NOTE fight scene official clip",
+    "DEATH NOTE best scene official clip",
+    "DEATH NOTE official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=Z1mcQ6CzXo8",
+   "missing_assets": [],
+   "on_release": [
+    "deathnote_scene1_h264.mp4"
+   ],
+   "hook": "Why Light thought he outsmarted everyone",
+   "title": "Why Light thought he outsmarted everyone | Light potato chip scene | #edit",
+   "tags": [
+    "deathnote",
+    "lightyagami",
+    "llawliet",
+    "animeedit",
+    "kira",
+    "deathnoteedit",
+    "psychological"
    ],
    "market": "US/UK"
   },
@@ -581,6 +465,46 @@
     "shorts",
     "trending",
     "okarun"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "dbsuperhero",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-dbsuperhero",
+   "pillar": "anime",
+   "words": "DRAGON BALL SUPER",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DRAGON BALL SUPER fight scene official clip",
+    "DRAGON BALL SUPER best scene official clip",
+    "DRAGON BALL SUPER official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Crunchyroll Dubs",
+    "Sony Pictures India"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=fAfLl6_0h7Y",
+   "missing_assets": [],
+   "on_release": [
+    "dbsuperhero_scene1_h264.mp4"
+   ],
+   "hook": "Gohan woke up the beast",
+   "title": "Gohan woke up the beast | Dragon Ball Super | #edit",
+   "tags": [
+    "dbsuperhero",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "gohan"
    ],
    "market": "US/UK"
   },
