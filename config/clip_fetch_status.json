@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T17:11:10Z",
-  "last_upload_at": "2026-11-28T17:11:10Z"
+  "last_run_at": "2026-11-28T17:25:16Z",
+  "last_upload_at": "2026-11-28T17:25:16Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -202,6 +202,7 @@
   "yt:Za4kyckczXI",
   "yt:ZivADyFlILE",
   "yt:ZjucT-UZzgg",
+  "yt:ZnIkMhuNmjo",
   "yt:Zq4zTcIM0yQ",
   "yt:Zt85YuG0-_Y",
   "yt:_E0_bV8GrLo",
@@ -263,6 +264,7 @@
   "yt:iiwOVqGtZj4",
   "yt:j9EgOsPLRxc",
   "yt:jeQYEIQ6eHw",
+  "yt:k4Lpr1sqKbQ",
   "yt:k8YiqM0Y-78",
   "yt:kLzss5E20jM",
   "yt:kUYD24MrRMs",
@@ -314,6 +316,7 @@
   "yt:uNprGrZfkkQ",
   "yt:us2H4xQD6cw",
   "yt:v9Nz7iDwDQM",
+  "yt:vhVDbJl8nBo",
   "yt:votcOf5cYCM",
   "yt:w323iXW02G4",
   "yt:wSenrOeeLrA",
@@ -4049,6 +4052,39 @@
    "kbps": 11709,
    "by": "box",
    "at": "2026-11-28T17:11:10Z"
+  },
+  {
+   "asset": "furyroad_scene1_h264.mp4",
+   "id": "yt:vhVDbJl8nBo",
+   "title": "MAD MAX: FURY ROAD Clip - \"Sand & Showers\" (2015) Tom Hardy",
+   "channel": "JoBlo Movie Clips",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 7668,
+   "by": "box",
+   "at": "2026-11-28T17:25:16Z"
+  },
+  {
+   "asset": "furyroad_scene2_h264.mp4",
+   "id": "yt:k4Lpr1sqKbQ",
+   "title": "Mad Max: Fury Road - Attack on the War Rig Scene (1/10) | Movieclips",
+   "channel": "Movieclips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3807,
+   "by": "box",
+   "at": "2026-11-28T17:25:16Z"
+  },
+  {
+   "asset": "furyroad_scene3_h264.mp4",
+   "id": "yt:ZnIkMhuNmjo",
+   "title": "Mad Max: Fury Road - Motorcycle Gang Attack Scene (4/10) | Movieclips",
+   "channel": "Movieclips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 4068,
+   "by": "box",
+   "at": "2026-11-28T17:25:16Z"
   }
  ],
  "github": {
