@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T09:05:24Z",
-  "last_upload_at": "2026-11-28T09:05:24Z"
+  "last_run_at": "2026-11-28T09:11:07Z",
+  "last_upload_at": "2026-11-28T09:11:07Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -44,11 +44,13 @@
   "yt:7LzDcr20SHc",
   "yt:7M5mqAE1dv8",
   "yt:7RINhZ-959Q",
+  "yt:8qY-f6Xgfv0",
   "yt:8sOJxGx7aio",
   "yt:9QvzrledPxg",
   "yt:9vzlmyNNt70",
   "yt:A1dnxXrpN-o",
   "yt:ARIlzBXdzvo",
+  "yt:AWvRcWDr5y8",
   "yt:AXbeD92Ty50",
   "yt:AhNYcpN1pEU",
   "yt:B0pIISs-o8w",
@@ -154,6 +156,7 @@
   "yt:VVBziwNCHq8",
   "yt:VofN1x93TG0",
   "yt:VwwZU7YgC6A",
+  "yt:W28kNzz50pw",
   "yt:WGXmDsOwW4k",
   "yt:X5npfFNjrgU",
   "yt:XnseVYTF8_0",
@@ -274,6 +277,7 @@
   "yt:u15tEo0wsQI",
   "yt:u5AXBGxKNHo",
   "yt:uNprGrZfkkQ",
+  "yt:us2H4xQD6cw",
   "yt:v9Nz7iDwDQM",
   "yt:votcOf5cYCM",
   "yt:w323iXW02G4",
@@ -3559,6 +3563,50 @@
    "kbps": 1904,
    "by": "box",
    "at": "2026-11-28T09:05:24Z"
+  },
+  {
+   "asset": "madmaxfuryroad_scene1_h264.mp4",
+   "id": "yt:W28kNzz50pw",
+   "title": "Mad Max: Fury Road - I Live, I Die, I Live Again Scene (2/10) | Movieclips",
+   "channel": "Movieclips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2961,
+   "by": "box",
+   "at": "2026-11-28T09:11:07Z"
+  },
+  {
+   "asset": "madmaxfuryroad_scene2_h264.mp4",
+   "id": "yt:AWvRcWDr5y8",
+   "title": "Mad Max: Fury Road - Max Retaliates Scene (6/10) | Movieclips",
+   "channel": "Movieclips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1403,
+   "by": "box",
+   "at": "2026-11-28T09:11:07Z"
+  },
+  {
+   "asset": "madmaxfuryroad_scene3_h264.mp4",
+   "id": "yt:us2H4xQD6cw",
+   "title": "Max Vs Furiosa Fight Scene | MAD MAX FURY ROAD (2015) Sci-Fi, Movie CLIP HD",
+   "channel": "JoBlo Movie Clips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3410,
+   "by": "box",
+   "at": "2026-11-28T09:11:07Z"
+  },
+  {
+   "asset": "madmaxfuryroad_scene4_h264.mp4",
+   "id": "yt:8qY-f6Xgfv0",
+   "title": "Dementus Attacks The Citadel Scene FURIOSA: A MAD MAX SAGA (2024) MovieCLIP HD",
+   "channel": "Movie clips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2043,
+   "by": "box",
+   "at": "2026-11-28T09:11:07Z"
   }
  ],
  "github": {
