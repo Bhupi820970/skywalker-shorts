@@ -1,0 +1,246 @@
+{
+  "id": "20261128-1830-sakamotodays",
+  "status": "retry_queued",
+  "detail": "all 2 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering; only 4.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "at": "2026-11-28 12:22 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/46114560490",
+  "slot": "2026-11-28T18:30:00+05:30",
+  "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+  "hook": "Goku got small, not weak",
+  "description": "Goku got small, not weak. From official Dragon Ball Daima clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #anime #dragonballdaima",
+  "tags": [
+    "dragonballdaima",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "goku"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 24.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 17.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 25.4,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "JSONDecodeError"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 22.6,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "s": 20.8,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key6",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "s": 5.9,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 35.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "s": 13.1,
+      "ok": true
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key5",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "scenes",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 26.2,
+      "ok": true
+    }
+  ],
+  "backup_item": null,
+  "stock": null,
+  "stock_topic": null,
+  "spare": null,
+  "words": "DRAGON BALL DAIMA",
+  "edit_format": "action",
+  "title_swaps": [
+    {
+      "from": "sakamotodays",
+      "from_words": "SAKAMOTO DAYS",
+      "to": "dragonballdaima",
+      "to_words": "DRAGON BALL DAIMA",
+      "reason": "pipeline/QA failed (exit 1): No usable scenes after filtering"
+    }
+  ],
+  "swapped_from": "sakamotodays",
+  "swapped_to": "dragonballdaima",
+  "auto_retries": 0,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene5_h264.mp4",
+      "music": "pr_sombraycorazn.mp3",
+      "qc_status": null
+    },
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering; only 4.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene3_h264.mp4",
+      "music": "pr_edw864ulya.mp3",
+      "qc_status": null
+    }
+  ],
+  "last_error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering; only 4.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+  "source_attempts": [
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene4_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-28 11:53 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/sakamotodays_scene5_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
+      "at": "2026-11-28 11:59 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene2_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering; only 7.2s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-28 12:15 IST"
+    },
+    {
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/dragonballdaima_scene3_h264.mp4",
+      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering; only 4.3s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-28 12:22 IST"
+    }
+  ]
+}
