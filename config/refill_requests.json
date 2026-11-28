@@ -1,41 +1,43 @@
 {
- "generated_at": "2026-11-28 03:07 IST",
+ "generated_at": "2026-11-28 09:44 IST",
  "max_clips_per_title": 4,
  "min_height": 1080,
- "deficit_videos": 8,
+ "deficit_videos": 4,
  "requests": [
   {
    "slug": "apothecarydiaries",
    "pillar": "anime",
-   "words": "THE APOTHECARY DIARIES",
+   "words": "MAOMAO REJECTS THE IMPERIAL PALACE",
    "characters": [
     "Maomao",
     "Jinshi"
    ],
    "scene_types": [
     "romance",
-    "emotional",
-    "comedy"
+    "comedy",
+    "emotional"
    ],
    "search_queries": [
-    "apothecary diaries maomao jinshi clip crunchyroll",
-    "apothecary diaries moonlit garden clip crunchyroll collection",
-    "the apothecary diaries ox bezoar scene clip crunchyroll",
-    "apothecary diaries jinshi frog scene clip crunchyroll"
+    "apothecary diaries clip crunchyroll",
+    "maomao jinshi dialogue english dub clip crunchyroll",
+    "apothecary diaries scene crunchyroll dub",
+    "maomao poison test clip crunchyroll"
    ],
    "official_channels": [
+    "Netflix Anime",
+    "Netflix",
     "TOHO animation"
    ],
    "links": [],
-   "hook": "Why Jinshi Secretly Reacted Like That",
-   "title": "Why Jinshi Secretly Reacted Like That | The Apothecary Diaries | #edit",
+   "hook": "Why did Maomao refuse his proposal?",
+   "title": "Why did Maomao refuse his proposal? | Maomao Rejects The Imperial Palace | #edit",
    "tags": [
     "apothecarydiaries",
     "maomao",
     "jinshi",
     "anime",
-    "romance",
-    "animedit"
+    "animedub",
+    "romance"
    ],
    "market": "US/UK",
    "refill": true,
@@ -46,36 +48,35 @@
   {
    "slug": "twisters",
    "pillar": "hollywood",
-   "words": "TWISTERS",
+   "words": "TYLER RIDES INTO THE TORNADO",
    "characters": [
-    "Kate Carter",
-    "Tyler Owens"
+    "Tyler Owens",
+    "Kate Carter"
    ],
    "scene_types": [
     "aura",
-    "fight",
-    "emotional"
+    "fight"
    ],
    "search_queries": [
-    "twisters tornado rodeo scene clip warner bros",
-    "twisters tyler owens rain scene clip warner bros pictures",
-    "twisters film best scene clip universal pictures",
-    "twisters finale tornado clip warner bros"
+    "twisters tornado scene clip movieclips",
+    "twisters tyler owens scene universal pictures",
+    "twisters official movie clip warner bros"
    ],
    "official_channels": [
+    "Universal Pictures",
     "Warner Bros. Pictures",
-    "Universal Pictures"
+    "Movieclips"
    ],
    "links": [],
-   "hook": "The Split Second Tyler Realized The Danger",
+   "hook": "Why did he drive straight into it?",
    "title": "The sky turned against them | Twisters | #edit",
    "tags": [
     "twisters",
-    "glenpowell",
+    "tylerowens",
     "twistersmovie",
-    "hollywood",
     "action",
-    "movieclip"
+    "hollywood",
+    "movieclips"
    ],
    "market": "US/UK",
    "refill": true,
@@ -86,36 +87,35 @@
   {
    "slug": "arcane",
    "pillar": "hollywood",
-   "words": "ARCANE",
+   "words": "JINX SHOWS HER TRUE POWER",
    "characters": [
     "Jinx",
     "Vi"
    ],
    "scene_types": [
     "emotional",
-    "fight",
-    "aura"
+    "aura",
+    "fight"
    ],
    "search_queries": [
-    "arcane jinx tea party scene clip netflix",
-    "arcane jinx vs ekko fight scene clip league of legends",
-    "arcane season 2 jinx clip netflix",
-    "arcane jinx flare scene clip netflix anime"
+    "arcane jinx tea party clip netflix",
+    "arcane season 1 jinx scene league of legends",
+    "arcane jinx vi clip netflix official"
    ],
    "official_channels": [
     "Netflix",
     "League of Legends"
    ],
    "links": [],
-   "hook": "The Hidden Meaning Behind Jinx's Blue Flare",
+   "hook": "Why did Jinx pull the trigger?",
    "title": "Jinx finally loses her mind | Arcane | #edit",
    "tags": [
     "arcane",
     "jinx",
+    "arcanejinx",
     "leagueoflegends",
     "netflix",
-    "animation",
-    "arcaneedit"
+    "animation"
    ],
    "market": "US/UK",
    "refill": true,
@@ -126,35 +126,34 @@
   {
    "slug": "cyberpunk2077",
    "pillar": "hollywood",
-   "words": "CYBERPUNK 2077",
+   "words": "V CONFRONTS JOHNNY SILVERHAND",
    "characters": [
     "V",
     "Johnny Silverhand"
    ],
    "scene_types": [
-    "fight",
     "aura",
     "emotional"
    ],
    "search_queries": [
-    "cyberpunk 2077 phantom liberty cinematic clip cyberpunk 2077",
-    "cyberpunk 2077 johnny silverhand oil field clip cyberpunk 2077",
-    "cyberpunk 2077 songbird scene clip cyberpunk 2077"
+    "cyberpunk 2077 johnny silverhand dialogue clip cd projekt red",
+    "cyberpunk 2077 official gameplay scene ign",
+    "cyberpunk 2077 phantom liberty scene official"
    ],
    "official_channels": [
     "Cyberpunk 2077",
     "CD PROJEKT RED"
    ],
    "links": [],
-   "hook": "Why Johnny Finally Trusted V In Night City",
+   "hook": "Why did Johnny betray V's trust?",
    "title": "Why David could not stop the cyberpsychosis | David enters the final battle | #edit",
    "tags": [
     "cyberpunk2077",
     "johnnysilverhand",
     "cdprojektred",
     "gaming",
-    "cyberpunk",
-    "v"
+    "keanureeves",
+    "gameplay"
    ],
    "market": "US/UK",
    "refill": true,
@@ -163,78 +162,39 @@
    "known_topic": true
   },
   {
-   "slug": "strangerthings",
+   "slug": "wednesday",
    "pillar": "hollywood",
-   "words": "STRANGER THINGS",
+   "words": "WEDNESDAY INTERROGATES TYLER",
    "characters": [
-    "Max Mayfield",
-    "Vecna"
+    "Wednesday Addams",
+    "Tyler Galpin"
    ],
    "scene_types": [
-    "emotional",
-    "aura"
+    "aura",
+    "emotional"
    ],
    "search_queries": [
-    "stranger things max running from vecna clip netflix",
-    "stranger things dear billy scene clip netflix",
-    "stranger things max running up that hill clip netflix"
+    "wednesday addams tyler interrogation clip netflix",
+    "wednesday official clip netflix",
+    "wednesday addams scene netflix after school"
    ],
    "official_channels": [
     "Netflix"
    ],
    "links": [],
-   "hook": "How Max Escaped Vecna's Mind Trap",
-   "title": "Why Vecna wanted Max | Stranger Things | #edit",
+   "hook": "Why was Wednesday holding a blade?",
+   "title": "Why Wednesday never smiles | Wednesday | #edit",
    "tags": [
-    "strangerthings",
-    "maxmayfield",
-    "vecna",
+    "wednesday",
+    "wednesdayaddams",
     "netflix",
-    "tvshow",
-    "strangerthings4"
+    "tvseries",
+    "jennaortega",
+    "mystery"
    ],
    "market": "US/UK",
    "refill": true,
    "category": "tv",
-   "prefer_english": true,
-   "known_topic": true
-  },
-  {
-   "slug": "dandadanevil",
-   "pillar": "anime",
-   "words": "DANDADAN",
-   "characters": [
-    "Momo Ayase",
-    "Okarun"
-   ],
-   "scene_types": [
-    "romance",
-    "fight",
-    "comedy",
-    "aura"
-   ],
-   "search_queries": [
-    "dandadan momo okarun scene clip crunchyroll",
-    "dandadan turbo granny fight clip crunchyroll collection",
-    "dandadan episode clip netflix anime"
-   ],
-   "official_channels": [
-    "Netflix Anime"
-   ],
-   "links": [],
-   "hook": "The Unspoken Tension Between Okarun And Momo",
-   "title": "Evil Eye was a lonely kid | Dan Da Dan Evil Eye | #edit",
-   "tags": [
-    "dandadan",
-    "okarun",
-    "momoayase",
-    "anime",
-    "romance",
-    "dandadanedit"
-   ],
-   "market": "US/UK",
-   "refill": true,
-   "category": "anime",
    "prefer_english": true,
    "known_topic": true
   }
