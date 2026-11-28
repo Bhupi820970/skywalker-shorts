@@ -534,6 +534,13 @@
       "used_at": "2026-11-28 07:34 IST"
     },
     {
+      "id": "stock-boyandheron-04",
+      "topic_id": "backup-boyandheron",
+      "slug": "boyandheron",
+      "status": "pending",
+      "queued_at": "2026-11-28 22:32 IST"
+    },
+    {
       "id": "stock-chainsawman-01",
       "topic_id": "backup-chainsawman",
       "slug": "chainsawman",
@@ -691,6 +698,13 @@
       "status": "failed",
       "queued_at": "2026-11-26 17:46 IST",
       "result_id": "stock-cyberpunk2077-01"
+    },
+    {
+      "id": "stock-cyberpunk2077-02",
+      "topic_id": "backup-cyberpunk2077",
+      "slug": "cyberpunk2077",
+      "status": "pending",
+      "queued_at": "2026-11-28 22:32 IST"
     },
     {
       "id": "stock-cyberpunkedgerunners-01",
@@ -76067,6 +76081,68 @@
       "failed_ids": [
         "stock-bluegiant-03",
         "20261119-1730-bluegiant"
+      ],
+      "retired_at": "2026-11-28 22:32 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-08",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-09"
+      ],
+      "retired_at": "2026-11-28 22:32 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Video unavailable. This content isn’t available. | yt-dlp:ERROR: [youtube] yWBA876qftM: Video unavailable. This content isn’t available. | yt-dlp:ERROR: [youtube] CT7ZsgVtumY: Video unav",
+      "fail_count": 2,
+      "failed_ids": [
+        "stock-firforce3-04",
+        "20261120-0900-firforce3"
+      ],
+      "retired_at": "2026-11-28 22:32 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
+      ],
+      "retired_at": "2026-11-28 22:32 IST"
+    },
+    {
+      "slug": "aotfinal",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 3,
+      "failed_ids": [
+        "stock-aotfinal-08",
+        "20261120-1130-aotfinal",
+        "stock-aotfinal-09"
+      ],
+      "retired_at": "2026-11-28 22:32 IST"
+    },
+    {
+      "slug": "firforce3",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Video unavailable. This content isn’t available. | yt-dlp:ERROR: [youtube] yWBA876qftM: Video unavailable. This content isn’t available. | yt-dlp:ERROR: [youtube] CT7ZsgVtumY: Video unav",
+      "fail_count": 2,
+      "failed_ids": [
+        "stock-firforce3-04",
+        "20261120-0900-firforce3"
+      ],
+      "retired_at": "2026-11-28 22:32 IST"
+    },
+    {
+      "slug": "bluegiant",
+      "reason": "download failed: yt-dlp:ERROR: [youtube] l3zQNgXdmj0: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-",
+      "fail_count": 2,
+      "failed_ids": [
+        "20261119-1730-bluegiant",
+        "stock-bluegiant-03"
       ],
       "retired_at": "2026-11-28 22:32 IST"
     }
