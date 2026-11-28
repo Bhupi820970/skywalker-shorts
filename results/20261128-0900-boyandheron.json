@@ -723,5 +723,16 @@
     "at": "2026-11-27 11:40 IST"
   },
   "stock_id": "stock-boyandheron-03",
-  "assigned_from_stock": true
+  "assigned_from_stock": true,
+  "asset_sha256": "19a2b4f4f7f64207daa547bcf0d66927071b49aa46b8014d99191ae09f204b12",
+  "publish_via": "youtube",
+  "yt_video_id": "udybFxbSspE",
+  "yt_uploaded_at": "2026-11-28 07:34 IST",
+  "yt_privacy": "private",
+  "yt_publish_at": "2026-11-28T09:00:00+05:30",
+  "yt_status": "scheduled",
+  "youtube_url": "https://youtube.com/shorts/udybFxbSspE",
+  "buffer_post_id": "yt:udybFxbSspE",
+  "buffer_status": "scheduled",
+  "buffer_due_at": "2026-11-28T03:30:00.000Z"
 }

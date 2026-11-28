@@ -897,6 +897,18 @@
         "clip:arcane_scene3_h264.mp4",
         "sha:aa4b31fd9b9056bdd6e1c6cc5bf567040dd5c2ae20312e608ec70f93eb859339"
       ]
+    },
+    {
+      "id": "20261128-0900-boyandheron",
+      "at": "2026-11-28 07:34 IST",
+      "slot": "2026-11-28T09:00:00+05:30",
+      "title": "Nobody suspected David was this dangerous #cyberpunkedgerunners #davidmartinez #animeedit",
+      "youtube_url": "https://youtube.com/shorts/udybFxbSspE",
+      "keys": [
+        "asset:stock-boyandheron-03.mp4",
+        "clip:cyberpunkedgerunners_scene5_h264.mp4",
+        "sha:19a2b4f4f7f64207daa547bcf0d66927071b49aa46b8014d99191ae09f204b12"
+      ]
     }
   ],
   "note": "Content already on the channel. Publish, stock assignment and renders refuse any clip:/asset:/sha: key listed here. Append-only; never delete entries."
