@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T08:57:35Z",
-  "last_upload_at": "2026-11-28T08:57:35Z"
+  "last_run_at": "2026-11-28T09:03:53Z",
+  "last_upload_at": "2026-11-28T09:03:53Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -98,6 +98,7 @@
   "yt:KElCq5eCegE",
   "yt:KaB7tTJ2T5o",
   "yt:Kw3935PH01E",
+  "yt:L6eLKzWXwi8",
   "yt:L8-KC5YGw-o",
   "yt:LIRxNpQ8Hqg",
   "yt:LQ4EcIUTqj4",
@@ -3523,6 +3524,17 @@
    "kbps": 3043,
    "by": "box",
    "at": "2026-11-28T08:57:35Z"
+  },
+  {
+   "asset": "fightclub_scene1_h264.mp4",
+   "id": "yt:L6eLKzWXwi8",
+   "title": "FIGHT CLUB Clip - First Rule (1999) Brad Pitt",
+   "channel": "JoBlo Movie Clips",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1501,
+   "by": "box",
+   "at": "2026-11-28T09:03:53Z"
   }
  ],
  "github": {
