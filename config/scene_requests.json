@@ -1,10 +1,46 @@
 {
- "generated_at": "2026-11-28 10:16 IST",
+ "generated_at": "2026-11-28 12:23 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
- "release_scene_clips": 253,
+ "release_scene_clips": 257,
  "max_clips_per_title": 3,
  "requests": [
+  {
+   "slug": "dragonballdaima",
+   "slot": "2026-11-28T09:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261128-0900-dragonballdaima",
+   "pillar": "anime",
+   "words": "DRAGON BALL DAIMA",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DRAGON BALL DAIMA fight scene official clip",
+    "DRAGON BALL DAIMA best scene official clip",
+    "DRAGON BALL DAIMA official clip"
+   ],
+   "official_channels": [
+    "Netflix Anime"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+   "missing_assets": [],
+   "on_release": [],
+   "hook": "Goku got small, not weak",
+   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+   "tags": [
+    "dragonballdaima",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "goku"
+   ],
+   "market": "US/UK"
+  },
   {
    "slug": "weatheringwithyou",
    "slot": "2026-11-28T13:30:00+05:30",
@@ -121,6 +157,116 @@
    "market": "US/UK"
   },
   {
+   "slug": "don2",
+   "slot": "2026-11-29T11:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261129-1130-don2",
+   "pillar": "bollywood",
+   "words": "DON 2",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "DON 2 fight scene official clip",
+    "DON 2 best scene official clip",
+    "DON 2 official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=Q4Tr7giZaXM",
+   "missing_assets": [],
+   "on_release": [
+    "don2_scene4_h264.mp4"
+   ],
+   "hook": "Why Don surrendered himself to police",
+   "title": "Why Don surrendered himself to police 💀 | Don prison break | #edit",
+   "tags": [
+    "don2",
+    "shahrukhkhan",
+    "srk",
+    "don",
+    "bollywoodedit",
+    "bollywood"
+   ],
+   "market": "IN"
+  },
+  {
+   "slug": "fighther",
+   "slot": "2026-11-29T16:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261129-1600-fighther",
+   "pillar": "bollywood",
+   "words": "FIGHTER",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "FIGHTER fight scene official clip",
+    "FIGHTER best scene official clip",
+    "FIGHTER official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=eifvzpMt_lE",
+   "missing_assets": [],
+   "on_release": [
+    "fighther_scene3_h264.mp4"
+   ],
+   "hook": "Why he dominates the sky",
+   "title": "Why he dominates the sky | Hrithik's aerial combat | #edit",
+   "tags": [
+    "fighter",
+    "hrithikroshan",
+    "bollywood",
+    "movieedit",
+    "phonk",
+    "action",
+    "edit"
+   ],
+   "market": "IN"
+  },
+  {
+   "slug": "undeadunluck",
+   "slot": "2026-11-29T20:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261129-2030-undeadunluck",
+   "pillar": "anime",
+   "words": "UNDEAD UNLUCK",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "UNDEAD UNLUCK fight scene official clip",
+    "UNDEAD UNLUCK best scene official clip",
+    "UNDEAD UNLUCK official clip"
+   ],
+   "official_channels": [
+    "Anime! on TMS Official Channel",
+    "vizmedia"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
+   "missing_assets": [],
+   "on_release": [
+    "undeadunluck_scene1_h264.mp4"
+   ],
+   "hook": "One touch changed his life",
+   "title": "One touch changed his life | Undead Unluck | #edit",
+   "tags": [
+    "undeadunluck",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "andy"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "jjk0",
    "slot": "2026-11-29T22:30:00+05:30",
    "for": "slot",
@@ -161,42 +307,40 @@
    "market": "US/UK"
   },
   {
-   "slug": "jujutsukaisencullinggame",
+   "slug": "spiritedaway",
    "slot": "2026-11-30T06:30:00+05:30",
    "for": "slot",
-   "item_id": "20261130-0630-jujutsukaisencullinggame",
+   "item_id": "20261130-0630-spiritedaway",
    "pillar": "anime",
-   "words": "JUJUTSU KAISEN",
+   "words": "SPIRITED AWAY",
    "scene_types": [
     "fight",
     "emotional",
     "aura"
    ],
    "search_queries": [
-    "JUJUTSU KAISEN fight scene official clip",
-    "JUJUTSU KAISEN best scene official clip",
-    "JUJUTSU KAISEN official clip"
+    "SPIRITED AWAY fight scene official clip",
+    "SPIRITED AWAY best scene official clip",
+    "SPIRITED AWAY official clip"
    ],
    "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "TOHO animation チャンネル and 2 more"
+    "Crunchyroll Store Australia",
+    "GKIDS Films",
+    "Netflix Anime"
    ],
-   "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
+   "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
    "missing_assets": [],
-   "on_release": [
-    "jujutsukaisencullinggame_scene2_h264.mp4"
-   ],
-   "hook": "Yuji has nothing left to lose",
-   "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+   "on_release": [],
+   "hook": "Chihiro had to forget her name",
+   "title": "Chihiro had to forget her name | Spirited Away | #edit",
    "tags": [
-    "jujutsukaisencullinggame",
+    "spiritedaway",
     "anime",
     "animeedit",
     "edit",
     "shorts",
     "trending",
-    "yuji"
+    "chihiro"
    ],
    "market": "US/UK"
   },
@@ -437,48 +581,6 @@
     "shorts",
     "trending",
     "okarun"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "dbsuperhero",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-dbsuperhero",
-   "pillar": "anime",
-   "words": "DRAGON BALL SUPER",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "DRAGON BALL SUPER fight scene official clip",
-    "DRAGON BALL SUPER best scene official clip",
-    "DRAGON BALL SUPER official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll Dubs",
-    "Sony Pictures India"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=fAfLl6_0h7Y",
-   "missing_assets": [
-    "dbsuperhero_scene2_h264.mp4"
-   ],
-   "on_release": [
-    "dbsuperhero_scene1_h264.mp4"
-   ],
-   "hook": "Gohan woke up the beast",
-   "title": "Gohan woke up the beast | Dragon Ball Super | #edit",
-   "tags": [
-    "dbsuperhero",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "gohan"
    ],
    "market": "US/UK"
   },
@@ -828,6 +930,46 @@
     "animeedit",
     "anime",
     "gojo"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "jujutsukaisencullinggame",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-jujutsukaisencullinggame",
+   "pillar": "anime",
+   "words": "JUJUTSU KAISEN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "JUJUTSU KAISEN fight scene official clip",
+    "JUJUTSU KAISEN best scene official clip",
+    "JUJUTSU KAISEN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "TOHO animation チャンネル and 2 more"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
+   "missing_assets": [],
+   "on_release": [
+    "jujutsukaisencullinggame_scene2_h264.mp4"
+   ],
+   "hook": "Yuji has nothing left to lose",
+   "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+   "tags": [
+    "jujutsukaisencullinggame",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "yuji"
    ],
    "market": "US/UK"
   },
@@ -1391,44 +1533,6 @@
    "market": "US/UK"
   },
   {
-   "slug": "spiritedaway",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-spiritedaway",
-   "pillar": "anime",
-   "words": "SPIRITED AWAY",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "SPIRITED AWAY fight scene official clip",
-    "SPIRITED AWAY best scene official clip",
-    "SPIRITED AWAY official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll Store Australia",
-    "GKIDS Films",
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
-   "missing_assets": [],
-   "on_release": [],
-   "hook": "Chihiro had to forget her name",
-   "title": "Chihiro had to forget her name | Spirited Away | #edit",
-   "tags": [
-    "spiritedaway",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "chihiro"
-   ],
-   "market": "US/UK"
-  },
-  {
    "slug": "spyxfamily3",
    "slot": "9999",
    "for": "backup_pool",
@@ -1505,87 +1609,6 @@
     "phonk",
     "aviation",
     "action"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "undeadunluck",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-undeadunluck",
-   "pillar": "anime",
-   "words": "UNDEAD UNLUCK",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "UNDEAD UNLUCK fight scene official clip",
-    "UNDEAD UNLUCK best scene official clip",
-    "UNDEAD UNLUCK official clip"
-   ],
-   "official_channels": [
-    "Anime! on TMS Official Channel",
-    "vizmedia"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
-   "missing_assets": [],
-   "on_release": [
-    "undeadunluck_scene1_h264.mp4"
-   ],
-   "hook": "One touch changed his life",
-   "title": "One touch changed his life | Undead Unluck | #edit",
-   "tags": [
-    "undeadunluck",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "andy"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "vinlandsaga2",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-vinlandsaga2",
-   "pillar": "anime",
-   "words": "VINLAND SAGA",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "VINLAND SAGA fight scene official clip",
-    "VINLAND SAGA best scene official clip",
-    "VINLAND SAGA official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Crunchyroll India",
-    "MAPPA CHANNEL"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=l3zQNgXdmj0",
-   "missing_assets": [
-    "vinlandsaga2_scene3_h264.mp4"
-   ],
-   "on_release": [
-    "vinlandsaga2_scene2_h264.mp4"
-   ],
-   "hook": "Thorfinn took every punch",
-   "title": "Thorfinn took every punch | Vinland Saga | #edit",
-   "tags": [
-    "vinlandsaga2",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "thorfinn"
    ],
    "market": "US/UK"
   },
