@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T09:42:19Z",
-  "last_upload_at": "2026-11-28T09:37:12Z"
+  "last_run_at": "2026-11-28T09:47:26Z",
+  "last_upload_at": "2026-11-28T09:47:26Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -3763,6 +3763,17 @@
    "kbps": 11338,
    "by": "box",
    "at": "2026-11-28T09:37:12Z"
+  },
+  {
+   "asset": "jjk0_scene1_h264.mp4",
+   "id": "yt:ealC2TsX6es",
+   "title": "Nanami vs. Spirits | Black Flash | Jujutsu Kaisen 0 | Prime Video India",
+   "channel": "Prime Video India",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2687,
+   "by": "box",
+   "at": "2026-11-28T09:47:26Z"
   }
  ],
  "github": {
