@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T10:19:23Z",
-  "last_upload_at": "2026-11-28T10:05:22Z"
+  "last_run_at": "2026-11-28T10:27:25Z",
+  "last_upload_at": "2026-11-28T10:27:25Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -138,6 +138,7 @@
   "yt:P8oy60PML6k",
   "yt:PBqaM8txf9I",
   "yt:PDtrzr-LtIc",
+  "yt:PF-BYUMaGjg",
   "yt:Pbu0f1JgzVw",
   "yt:PcZii0OWtAE",
   "yt:PwxHvnK_sA0",
@@ -282,6 +283,7 @@
   "yt:spMqxS3a-H0",
   "yt:stjZKBhQ3lg",
   "yt:t0tmNi-4mtw",
+  "yt:tBFVAb1rcE0",
   "yt:tHfiXfk8Cgo",
   "yt:tIiipIHwTa4",
   "yt:tQH0YK1rGVc",
@@ -3797,6 +3799,28 @@
    "kbps": 4486,
    "by": "box",
    "at": "2026-11-28T10:05:22Z"
+  },
+  {
+   "asset": "fightclub_scene3_h264.mp4",
+   "id": "yt:PF-BYUMaGjg",
+   "title": "FIGHT CLUB Opening Scene (1999) Edward Norton",
+   "channel": "JoBlo Movie Clips",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 3501,
+   "by": "box",
+   "at": "2026-11-28T10:27:25Z"
+  },
+  {
+   "asset": "fightclub_scene4_h264.mp4",
+   "id": "yt:tBFVAb1rcE0",
+   "title": "FIGHT CLUB Clip - \"Plane\" (1999) Brad Pitt",
+   "channel": "JoBlo Movie Clips",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 4661,
+   "by": "box",
+   "at": "2026-11-28T10:27:25Z"
   }
  ],
  "github": {
