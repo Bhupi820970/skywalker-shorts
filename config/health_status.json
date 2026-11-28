@@ -1,30 +1,35 @@
 {
-  "at": "2026-11-28 04:30 IST",
-  "slots_checked": 8,
+  "at": "2026-11-28 07:34 IST",
+  "slots_checked": 9,
   "ready": [
     {
       "slot": "2026-11-28T06:30:00+05:30",
       "id": "stock",
       "how": "backup_stock"
+    },
+    {
+      "slot": "2026-11-28T09:00:00+05:30",
+      "id": "20261128-0900-boyandheron",
+      "how": "backup_stock"
     }
   ],
   "short": [
-    "2026-11-28T09:00:00+05:30",
     "2026-11-28T11:30:00+05:30",
     "2026-11-28T13:30:00+05:30",
     "2026-11-28T16:00:00+05:30",
     "2026-11-28T18:30:00+05:30",
     "2026-11-28T20:30:00+05:30",
-    "2026-11-28T22:30:00+05:30"
+    "2026-11-28T22:30:00+05:30",
+    "2026-11-29T06:30:00+05:30"
   ],
   "need_render": [
-    "20261128-0900-dragonballdaima",
     "20261128-1130-gangsofwasseypur",
     "20261128-1330-weatheringwithyou",
     "20261128-1600-vikram",
     "20261128-1830-cyberpunkedgerunners",
     "20261128-2030-leomovie",
-    "20261128-2230-haikyuudumpster"
+    "20261128-2230-haikyuudumpster",
+    "20261129-0630-suzume"
   ],
   "backup_pool_size": 69,
   "backup_pool_preuploaded": 69,
@@ -146,6 +151,7 @@
     "stock-missionimpossible-02",
     "stock-cyberpunkedgerunners-06",
     "20261123-0900-weatheringwithyou",
+    "20261128-0900-boyandheron",
     "stock-avatarfireandash-01",
     "stock-thebatman-02",
     "stock-zootopia2-01",
@@ -172,18 +178,21 @@
     "stock-sololeveling-02"
   ],
   "extra_ready_target": 2,
-  "stock_ready": 3,
+  "stock_ready": 2,
   "stock_pending": 8,
-  "stock_used": 47,
+  "stock_used": 48,
   "stock_target": 20,
   "stock_need_refill": false,
   "stock_refilling": true,
   "stock_refill_at": 8,
   "stock_alert_at": 2,
-  "stock_alert": false,
-  "stock_assigned": [],
+  "stock_alert": true,
+  "stock_assigned": [
+    "20261128-0900-boyandheron"
+  ],
   "ok": false,
   "issues": [
+    "backup stock 2 ready (<= 2): BIBI's bot must step in (manual QC / pick) - Gemini or renders are not refilling",
     "7 slot(s) in the next 24h without a finished video"
   ]
 }

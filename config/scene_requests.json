@@ -1,47 +1,45 @@
 {
- "generated_at": "2026-11-28 04:30 IST",
+ "generated_at": "2026-11-28 07:34 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 242,
  "max_clips_per_title": 3,
  "requests": [
   {
-   "slug": "dragonballdaima",
-   "slot": "2026-11-28T09:00:00+05:30",
+   "slug": "gangsofwasseypur",
+   "slot": "2026-11-28T11:30:00+05:30",
    "for": "slot",
-   "item_id": "20261128-0900-dragonballdaima",
-   "pillar": "anime",
-   "words": "DRAGON BALL DAIMA",
+   "item_id": "20261128-1130-gangsofwasseypur",
+   "pillar": "bollywood",
+   "words": "GANGS OF WASSEYPUR",
    "scene_types": [
     "fight",
     "emotional",
     "aura"
    ],
    "search_queries": [
-    "DRAGON BALL DAIMA fight scene official clip",
-    "DRAGON BALL DAIMA best scene official clip",
-    "DRAGON BALL DAIMA official clip"
+    "GANGS OF WASSEYPUR fight scene official clip",
+    "GANGS OF WASSEYPUR best scene official clip",
+    "GANGS OF WASSEYPUR official clip"
    ],
-   "official_channels": [
-    "Netflix Anime"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=j5dwAVn4eJM",
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=5oRczmZ6dGU",
    "missing_assets": [],
    "on_release": [
-    "dragonballdaima_scene3_h264.mp4"
+    "gangsofwasseypur_scene2_h264.mp4"
    ],
-   "hook": "Goku got small, not weak",
-   "title": "Goku got small, not weak | Dragon Ball Daima | #edit",
+   "hook": "Faizal walked in like the town already knew",
+   "title": "Faizal walked in like the town already knew | Gangs of Wasseypur | #edit",
    "tags": [
-    "dragonballdaima",
-    "anime",
-    "animeedit",
+    "gangsofwasseypur",
+    "faizalkhan",
+    "bollywood",
     "edit",
-    "shorts",
-    "trending",
-    "goku"
+    "phonk",
+    "aura",
+    "classic"
    ],
-   "market": "US/UK"
+   "market": "IN"
   },
   {
    "slug": "weatheringwithyou",
@@ -159,6 +157,46 @@
     "shorts",
     "trending",
     "yuta"
+   ],
+   "market": "US/UK"
+  },
+  {
+   "slug": "jujutsukaisencullinggame",
+   "slot": "2026-11-30T06:30:00+05:30",
+   "for": "slot",
+   "item_id": "20261130-0630-jujutsukaisencullinggame",
+   "pillar": "anime",
+   "words": "JUJUTSU KAISEN",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "JUJUTSU KAISEN fight scene official clip",
+    "JUJUTSU KAISEN best scene official clip",
+    "JUJUTSU KAISEN official clip"
+   ],
+   "official_channels": [
+    "Crunchyroll",
+    "Netflix Anime",
+    "TOHO animation チャンネル and 2 more"
+   ],
+   "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
+   "missing_assets": [],
+   "on_release": [
+    "jujutsukaisencullinggame_scene2_h264.mp4"
+   ],
+   "hook": "Yuji has nothing left to lose",
+   "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
+   "tags": [
+    "jujutsukaisencullinggame",
+    "anime",
+    "animeedit",
+    "edit",
+    "shorts",
+    "trending",
+    "yuji"
    ],
    "market": "US/UK"
   },
@@ -687,6 +725,41 @@
    "market": "US/UK"
   },
   {
+   "slug": "godofwar",
+   "slot": "9999",
+   "for": "backup_pool",
+   "item_id": "backup-godofwar",
+   "pillar": "hollywood",
+   "words": "GOD OF WAR RAGNAROK",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "GOD OF WAR RAGNAROK fight scene official clip",
+    "GOD OF WAR RAGNAROK best scene official clip",
+    "GOD OF WAR RAGNAROK official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=ZjucT-UZzgg",
+   "missing_assets": [],
+   "on_release": [
+    "godofwar_scene3_h264.mp4"
+   ],
+   "hook": "Why Kratos finally forgave his past",
+   "title": "Why Kratos finally forgave his past | God Of War Ragnarok | #edit",
+   "tags": [
+    "godofwar",
+    "kratos",
+    "atreus",
+    "godofwarragnarok",
+    "playstation",
+    "gameedit"
+   ],
+   "market": "US/UK"
+  },
+  {
    "slug": "hellsparadise",
    "slot": "9999",
    "for": "backup_pool",
@@ -755,46 +828,6 @@
     "animeedit",
     "anime",
     "gojo"
-   ],
-   "market": "US/UK"
-  },
-  {
-   "slug": "jujutsukaisencullinggame",
-   "slot": "9999",
-   "for": "backup_pool",
-   "item_id": "backup-jujutsukaisencullinggame",
-   "pillar": "anime",
-   "words": "JUJUTSU KAISEN",
-   "scene_types": [
-    "fight",
-    "emotional",
-    "aura"
-   ],
-   "search_queries": [
-    "JUJUTSU KAISEN fight scene official clip",
-    "JUJUTSU KAISEN best scene official clip",
-    "JUJUTSU KAISEN official clip"
-   ],
-   "official_channels": [
-    "Crunchyroll",
-    "Netflix Anime",
-    "TOHO animation チャンネル and 2 more"
-   ],
-   "source_url": "https://www.youtube.com/watch?v=w1YzClnTZ8c",
-   "missing_assets": [],
-   "on_release": [
-    "jujutsukaisencullinggame_scene2_h264.mp4"
-   ],
-   "hook": "Yuji has nothing left to lose",
-   "title": "Yuji has nothing left to lose | Jujutsu Kaisen | #edit",
-   "tags": [
-    "jujutsukaisencullinggame",
-    "anime",
-    "animeedit",
-    "edit",
-    "shorts",
-    "trending",
-    "yuji"
    ],
    "market": "US/UK"
   },
