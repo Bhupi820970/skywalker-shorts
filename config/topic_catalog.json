@@ -957,7 +957,8 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=g2fGSThhFl4",
       "scene_assets": [
-        "aotfinal_scene1_h264.mp4"
+        "aotfinal_scene1_h264.mp4",
+        "aotfinal_scene2_h264.mp4"
       ],
       "fallback_asset": "aotfinal_trailer_h264.mp4",
       "content_kind": "best scene",
