@@ -1,7 +1,7 @@
 {
   "target": 20,
   "refill_at": 8,
-  "alert_at": 2,
+  "alert_at": 7,
   "max_in_flight": 4,
   "max_refill_per_run": 2,
   "release": "backup-stock",
