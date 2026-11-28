@@ -1772,7 +1772,8 @@
       "source_url": "https://www.youtube.com/watch?v=70NhEBzLKU8",
       "scene_assets": [
         "spiritedaway_scene1_h264.mp4",
-        "spiritedaway_scene2_h264.mp4"
+        "spiritedaway_scene2_h264.mp4",
+        "spiritedaway_scene3_h264.mp4"
       ],
       "fallback_asset": "spiritedaway_trailer_h264.mp4",
       "content_kind": "best scene",
