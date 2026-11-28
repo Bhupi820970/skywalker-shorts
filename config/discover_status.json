@@ -3,6 +3,51 @@
   "queued_ids": [],
   "skipped": [
     {
+      "slug": "yournamereunion",
+      "url": "https://www.youtube.com/watch?v=vEFoOcev00s",
+      "channel": "Movieclips",
+      "title": "The Impossible (4/10) Movie CLIP - What's Your Name? (2012) HD",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "Your Name Official Scene: The Staircase Meeting",
+      "hook": "Destiny brings them together again"
+    },
+    {
+      "slug": "yournamereunion",
+      "url": "https://www.youtube.com/watch?v=xaILTs-_1z4",
+      "channel": "Movieclips",
+      "title": "The Neverending Story (9/10) Movie CLIP - Call My Name (1984) HD",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "Your Name Official Scene: The Staircase Meeting",
+      "hook": "Destiny brings them together again"
+    },
+    {
+      "slug": "yournamereunion",
+      "url": "https://www.youtube.com/watch?v=oAb2_-uv41Y",
+      "channel": "Movieclips",
+      "title": "Ghost (5/10) Movie CLIP - Oda Mae Demands Respect (1990) HD",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "Your Name Official Scene: The Staircase Meeting",
+      "hook": "Destiny brings them together again"
+    },
+    {
+      "slug": "yournamereunion",
+      "url": "https://www.youtube.com/watch?v=PeGDBR0Ej_0",
+      "channel": "Movieclips",
+      "title": "The Bourne Identity (1/10) Movie CLIP - What's Your Name? (2002) HD",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "Your Name Official Scene: The Staircase Meeting",
+      "hook": "Destiny brings them together again"
+    },
+    {
+      "slug": "pastlivesbarscene",
+      "url": "https://www.youtube.com/watch?v=moUP4npVea8",
+      "channel": "A24",
+      "title": "Past Lives | In-Yun | Official Clip HD | A24",
+      "skip": "youtube_bot_check",
+      "words": "Past Lives Official Clip: The Bar Conversation",
+      "hook": "What if they chose differently?"
+    },
+    {
       "slug": "gta6",
       "url": "https://www.youtube.com/watch?v=_yl5ELcmugI",
       "channel": "Rockstar Games",
@@ -21,19 +66,118 @@
       "hook": "She already knew"
     },
     {
+      "slug": "bridgerton",
+      "url": "https://www.youtube.com/watch?v=eKhh9VerYms",
+      "channel": "Netflix",
+      "title": "Bridgerton Season 3 | Official Clip | Netflix",
+      "skip": "youtube_bot_check",
+      "words": "BRIDGERTON",
+      "hook": "She already knew"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=cZAw8qxn0ZE",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “City Of Stars”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=RiGU83Y4xcQ",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Play The Set List”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=NMmJQdRZRpg",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Callback”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=rEIKmxr8z9E",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Thanks For Coming”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=_8w9rOpV3gc",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - A Lovely Night Scene (5/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=7CVfTd-_qbc",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - Another Day of Sun Scene (1/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=cmkZeTX5fq0",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - Someone in the Crowd Scene (2/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=b65C_muXajk",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - I'm Not Good Enough Scene (9/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=DOmIpiTMs2w",
+      "channel": "Movieclips",
+      "title": "La La Land (2016) - I Ran Scene (4/11) | Movieclips",
+      "skip": "known logo-burn official channel; looking for another official clip",
+      "words": "LA LA LAND",
+      "hook": "They almost said it"
+    },
+    {
       "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=D35O7FE7IbM",
+      "url": "https://www.youtube.com/watch?v=8Jz7GGm-I8E",
       "channel": "Prime Video",
-      "title": "Conrad Finds Out Jeremiah Cheated on Belly | The Summer I Turned Pretty | Prime Video",
+      "title": "Conrad Offers to Help Belly Wedding Shop | The Summer I Turned Pretty | Prime Video",
       "skip": "youtube_bot_check",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss"
     },
     {
       "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=7uBDNbwM504",
+      "url": "https://www.youtube.com/watch?v=KzjW7Uxz9Ew",
       "channel": "Prime Video",
-      "title": "Belly’s Boardwalk Flashback | The Summer I Turned Pretty | Prime Video",
+      "title": "Conrad Tells Belly He Still Loves Her | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss"
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=gqPptZPnpbc",
+      "channel": "Prime Video",
+      "title": "Belly’s Birthday | The Summer I Turned Pretty | Prime Video",
       "skip": "youtube_bot_check",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss"
@@ -42,7 +186,7 @@
       "slug": "thesummeritp",
       "url": "https://www.youtube.com/watch?v=P955C1UbiFY",
       "channel": "Prime Video",
-      "title": "Jeremiah Gets Angry at Conrad on Thanksgiving | The Summer I Turned Pretty | Clip | Prime Video",
+      "title": "Belly and Conrad's Awkward Thanksgiving Dinner | The Summer I Turned Pretty | Clip | Prime Video",
       "skip": "youtube_bot_check",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss"
@@ -52,15 +196,6 @@
       "url": "https://www.youtube.com/watch?v=K8gBwJu5X1A",
       "channel": "Prime Video",
       "title": "Conrad Tells Belly She’s Heartless | The Summer I Turned Pretty | Prime Video",
-      "skip": "youtube_bot_check",
-      "words": "THE SUMMER I TURNED PRETTY",
-      "hook": "This was the almost-kiss"
-    },
-    {
-      "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=_w1YmoDdnk4",
-      "channel": "Prime Video",
-      "title": "Jeremiah Rescues Belly | The Summer I Turned Pretty | Prime Video",
       "skip": "sample budget",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss"
@@ -82,27 +217,19 @@
       "skip": "youtube_bot_check",
       "words": "ONE DAY",
       "hook": "They kept missing it"
-    },
-    {
-      "slug": "crazyrichasians",
-      "url": "https://www.youtube.com/watch?v=2odn_xMxuXM",
-      "channel": "MOVIE CLIPS",
-      "title": "Crazy Rich Asians - The New Lady of the House (Opening Scene)",
-      "skip": "youtube_bot_check",
-      "words": "CRAZY RICH ASIANS",
-      "hook": "The room went quiet"
-    },
-    {
-      "slug": "crazyrichasians",
-      "url": "https://www.youtube.com/watch?v=ZrsYIthVY-Y",
-      "channel": "Movieclips",
-      "title": "Crazy Rich Asians (2018) - Rich Lunch Scene (2/9)",
-      "skip": "known logo-burn official channel; looking for another official clip",
-      "words": "CRAZY RICH ASIANS",
-      "hook": "The room went quiet"
     }
   ],
   "needs_box_sample": [
+    {
+      "slug": "pastlivesbarscene",
+      "url": "https://www.youtube.com/watch?v=moUP4npVea8",
+      "channel": "A24",
+      "title": "Past Lives | In-Yun | Official Clip HD | A24",
+      "skip": "youtube_bot_check",
+      "words": "Past Lives Official Clip: The Bar Conversation",
+      "hook": "What if they chose differently?",
+      "official": true
+    },
     {
       "slug": "gta6",
       "url": "https://www.youtube.com/watch?v=_yl5ELcmugI",
@@ -124,10 +251,60 @@
       "official": true
     },
     {
+      "slug": "bridgerton",
+      "url": "https://www.youtube.com/watch?v=eKhh9VerYms",
+      "channel": "Netflix",
+      "title": "Bridgerton Season 3 | Official Clip | Netflix",
+      "skip": "youtube_bot_check",
+      "words": "BRIDGERTON",
+      "hook": "She already knew",
+      "official": true
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=cZAw8qxn0ZE",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “City Of Stars”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it",
+      "official": true
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=RiGU83Y4xcQ",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Play The Set List”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it",
+      "official": true
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=NMmJQdRZRpg",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Callback”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it",
+      "official": true
+    },
+    {
+      "slug": "lalaland",
+      "url": "https://www.youtube.com/watch?v=rEIKmxr8z9E",
+      "channel": "Lionsgate Movies",
+      "title": "La La Land (2016 Movie) Official Clip – “Thanks For Coming”",
+      "skip": "youtube_bot_check",
+      "words": "LA LA LAND",
+      "hook": "They almost said it",
+      "official": true
+    },
+    {
       "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=D35O7FE7IbM",
+      "url": "https://www.youtube.com/watch?v=8Jz7GGm-I8E",
       "channel": "Prime Video",
-      "title": "Conrad Finds Out Jeremiah Cheated on Belly | The Summer I Turned Pretty | Prime Video",
+      "title": "Conrad Offers to Help Belly Wedding Shop | The Summer I Turned Pretty | Prime Video",
       "skip": "youtube_bot_check",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss",
@@ -135,9 +312,19 @@
     },
     {
       "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=7uBDNbwM504",
+      "url": "https://www.youtube.com/watch?v=KzjW7Uxz9Ew",
       "channel": "Prime Video",
-      "title": "Belly’s Boardwalk Flashback | The Summer I Turned Pretty | Prime Video",
+      "title": "Conrad Tells Belly He Still Loves Her | The Summer I Turned Pretty | Prime Video",
+      "skip": "youtube_bot_check",
+      "words": "THE SUMMER I TURNED PRETTY",
+      "hook": "This was the almost-kiss",
+      "official": true
+    },
+    {
+      "slug": "thesummeritp",
+      "url": "https://www.youtube.com/watch?v=gqPptZPnpbc",
+      "channel": "Prime Video",
+      "title": "Belly’s Birthday | The Summer I Turned Pretty | Prime Video",
       "skip": "youtube_bot_check",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss",
@@ -147,17 +334,7 @@
       "slug": "thesummeritp",
       "url": "https://www.youtube.com/watch?v=P955C1UbiFY",
       "channel": "Prime Video",
-      "title": "Jeremiah Gets Angry at Conrad on Thanksgiving | The Summer I Turned Pretty | Clip | Prime Video",
-      "skip": "youtube_bot_check",
-      "words": "THE SUMMER I TURNED PRETTY",
-      "hook": "This was the almost-kiss",
-      "official": true
-    },
-    {
-      "slug": "thesummeritp",
-      "url": "https://www.youtube.com/watch?v=K8gBwJu5X1A",
-      "channel": "Prime Video",
-      "title": "Conrad Tells Belly She’s Heartless | The Summer I Turned Pretty | Prime Video",
+      "title": "Belly and Conrad's Awkward Thanksgiving Dinner | The Summer I Turned Pretty | Clip | Prime Video",
       "skip": "youtube_bot_check",
       "words": "THE SUMMER I TURNED PRETTY",
       "hook": "This was the almost-kiss",
@@ -182,16 +359,6 @@
       "words": "ONE DAY",
       "hook": "They kept missing it",
       "official": true
-    },
-    {
-      "slug": "crazyrichasians",
-      "url": "https://www.youtube.com/watch?v=2odn_xMxuXM",
-      "channel": "MOVIE CLIPS",
-      "title": "Crazy Rich Asians - The New Lady of the House (Opening Scene)",
-      "skip": "youtube_bot_check",
-      "words": "CRAZY RICH ASIANS",
-      "hook": "The room went quiet",
-      "official": true
     }
   ],
   "dry_run": false,
@@ -201,5 +368,5 @@
     "x_below_1080": 0,
     "x_unknown": 0
   },
-  "last_run_at": "2026-11-27 19:47 IST"
+  "last_run_at": "2026-11-28 19:04 IST"
 }
