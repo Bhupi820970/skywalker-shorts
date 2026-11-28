@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T10:39:28Z",
-  "last_upload_at": "2026-11-28T10:39:27Z"
+  "last_run_at": "2026-11-28T10:47:22Z",
+  "last_upload_at": "2026-11-28T10:47:22Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -51,6 +51,7 @@
   "yt:8qY-f6Xgfv0",
   "yt:8sOJxGx7aio",
   "yt:9HSxYztyXTY",
+  "yt:9NPpQJHx5N8",
   "yt:9QvzrledPxg",
   "yt:9vzlmyNNt70",
   "yt:A1dnxXrpN-o",
@@ -3917,6 +3918,17 @@
    "kbps": 2845,
    "by": "box",
    "at": "2026-11-28T10:39:27Z"
+  },
+  {
+   "asset": "deathnote_scene2_h264.mp4",
+   "id": "yt:9NPpQJHx5N8",
+   "title": "Death Note | Clip: L Confronts Light | Netflix",
+   "channel": "Still Watching Netflix",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2420,
+   "by": "box",
+   "at": "2026-11-28T10:47:22Z"
   }
  ],
  "github": {

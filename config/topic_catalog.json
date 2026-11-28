@@ -2748,7 +2748,8 @@
       "market": "US/UK",
       "source_url": "https://www.youtube.com/watch?v=Z1mcQ6CzXo8",
       "scene_assets": [
-        "deathnote_scene1_h264.mp4"
+        "deathnote_scene1_h264.mp4",
+        "deathnote_scene2_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
