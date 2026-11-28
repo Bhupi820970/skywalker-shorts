@@ -1563,7 +1563,10 @@
       "source_url": "https://www.youtube.com/watch?v=KouVeivPcOI",
       "scene_assets": [
         "undeadunluck_scene1_h264.mp4",
-        "undeadunluck_scene2_h264.mp4"
+        "undeadunluck_scene2_h264.mp4",
+        "undeadunluck_scene3_h264.mp4",
+        "undeadunluck_scene4_h264.mp4",
+        "undeadunluck_scene5_h264.mp4"
       ],
       "fallback_asset": "undeadunluck_trailer_h264.mp4",
       "content_kind": "best scene",
