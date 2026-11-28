@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T06:41:01Z",
-  "last_upload_at": "2026-11-28T06:15:05Z"
+  "last_run_at": "2026-11-28T06:48:23Z",
+  "last_upload_at": "2026-11-28T06:48:23Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -231,6 +231,7 @@
   "yt:l5ZiW3mCuE4",
   "yt:lEM5nJ-AUiM",
   "yt:laROLKDI3jM",
+  "yt:m3G3Z6HYNE0",
   "yt:mSXxPBQmPAw",
   "yt:ms8jkPQ5cvM",
   "yt:nBks1vcJQvk",
@@ -3451,6 +3452,17 @@
    "kbps": 1696,
    "by": "box",
    "at": "2026-11-28T06:15:05Z"
+  },
+  {
+   "asset": "dbsuperhero_scene2_h264.mp4",
+   "id": "yt:m3G3Z6HYNE0",
+   "title": "The Battle Against Majin Buu | Dragon Ball DAIMA | Clip | Netflix Anime",
+   "channel": "Netflix Anime",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3491,
+   "by": "box",
+   "at": "2026-11-28T06:48:23Z"
   }
  ],
  "github": {
