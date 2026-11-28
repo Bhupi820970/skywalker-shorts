@@ -1,7 +1,7 @@
 {
  "box": {
-  "last_run_at": "2026-11-28T17:27:23Z",
-  "last_upload_at": "2026-11-28T17:27:23Z"
+  "last_run_at": "2026-11-28T19:21:02Z",
+  "last_upload_at": "2026-11-28T19:21:02Z"
  },
  "done_ids": [
   "yt:-E7adh8RbuM",
@@ -29,6 +29,7 @@
   "yt:2RPYcli_GnA",
   "yt:2_BkCz3OnlY",
   "yt:2dDbMpbWGmk",
+  "yt:3VDtsKbq-2g",
   "yt:3bMYgo_S0Kc",
   "yt:3nwBwJiyQ_g",
   "yt:4ZkOJjwRYoQ",
@@ -68,6 +69,7 @@
   "yt:CFjI21M9wZs",
   "yt:CSR7_V02S5Y",
   "yt:Cc4MnWO33F8",
+  "yt:CvSDe7kQ5h8",
   "yt:D6eJo5XdMhc",
   "yt:DDAHHPGcLzo",
   "yt:DIefkYvjq6E",
@@ -315,6 +317,7 @@
   "yt:u15tEo0wsQI",
   "yt:u5AXBGxKNHo",
   "yt:uNprGrZfkkQ",
+  "yt:uTDMVdzIhqQ",
   "yt:us2H4xQD6cw",
   "yt:v9Nz7iDwDQM",
   "yt:vhVDbJl8nBo",
@@ -333,6 +336,7 @@
   "yt:zBrkG3aeWCc",
   "yt:zP7AGWiw8Uw",
   "yt:zhsAd5ORk1Y",
+  "yt:zvLvXhXfdVM",
   "yt:zvbukjztF9c"
  ],
  "clips": [
@@ -4097,6 +4101,50 @@
    "kbps": 1539,
    "by": "box",
    "at": "2026-11-28T17:27:23Z"
+  },
+  {
+   "asset": "uri_scene1_h264.mp4",
+   "id": "yt:CvSDe7kQ5h8",
+   "title": "URI | Naye Hindustan Ka Josh | Vicky K, Yami G, Paresh R | Aditya D | 11th Jan 2019",
+   "channel": "RSVP Movies",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 2837,
+   "by": "box",
+   "at": "2026-11-28T19:21:02Z"
+  },
+  {
+   "asset": "uri_scene2_h264.mp4",
+   "id": "yt:uTDMVdzIhqQ",
+   "title": "Jagga Jiteya - Full Video | URI | Vicky Kaushal & Yami Gautam | Daler Mehndi, Dee MC & Shashwat S",
+   "channel": "Zee Music Company",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 1678,
+   "by": "box",
+   "at": "2026-11-28T19:21:02Z"
+  },
+  {
+   "asset": "uri_scene3_h264.mp4",
+   "id": "yt:3VDtsKbq-2g",
+   "title": "URI | From Vicky Kaushal To Major Vihaan Singh Shergill | Aditya Dhar | 11th Jan",
+   "channel": "RSVP Movies",
+   "kind": "scene",
+   "res": "1920x1080",
+   "kbps": 3019,
+   "by": "box",
+   "at": "2026-11-28T19:21:02Z"
+  },
+  {
+   "asset": "uri_scene4_h264.mp4",
+   "id": "yt:zvLvXhXfdVM",
+   "title": "Vande Mataram (Full Video) - The Fighter Anthem: Hrithik Roshan | Deepika, Anil K | Vishal-Sheykhar",
+   "channel": "T-Series",
+   "kind": "scene",
+   "res": "3840x2160",
+   "kbps": 14396,
+   "by": "box",
+   "at": "2026-11-28T19:21:02Z"
   }
  ],
  "github": {
