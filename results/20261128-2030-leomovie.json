@@ -1,9 +1,9 @@
 {
   "id": "20261128-2030-leomovie",
-  "status": "retry_queued",
-  "detail": "all 1 in-job attempt(s) failed; auto-retry 1/1 will be dispatched: time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
-  "at": "2026-11-28 17:14 IST",
-  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/46136043404",
+  "status": "failed",
+  "detail": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
+  "at": "2026-11-28 18:04 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/46141382537",
   "slot": "2026-11-28T20:30:00+05:30",
   "title": "The cafe already knew who he was | Leo | #edit",
   "hook": "The cafe already knew who he was",
@@ -26,42 +26,42 @@
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 22.4,
+      "s": 29.5,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 20.3,
+      "s": 150.1,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 17.7,
+      "s": 12.2,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 18.2,
+      "s": 54.8,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 24.7,
+      "s": 15.0,
       "ok": true
     },
     {
       "purpose": "logo_scenes",
       "model": "gemini-3.5-flash",
       "key": "key1",
-      "s": 13.3,
+      "s": 17.5,
       "ok": true
     }
   ],
@@ -74,14 +74,14 @@
   "title_swaps": null,
   "swapped_from": null,
   "swapped_to": null,
-  "auto_retries": 0,
+  "auto_retries": 1,
   "max_auto_retries": 1,
   "attempts": [
     {
       "attempt": 1,
       "ok": false,
       "error": "time budget reached; last: pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4",
       "music": "pr_nt4ef9ysynm.mp3",
       "qc_status": null
     }
@@ -90,13 +90,13 @@
   "source_attempts": [
     {
       "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene1_h264.mp4",
-      "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "at": "2026-11-28 16:43 IST"
+      "error": "pipeline/QA failed (exit 1): only 1.5s of unique clean shots (need ≥18s, aim 20-28s); not repeating shots and not publishing a short cut",
+      "at": "2026-11-28 17:43 IST"
     },
     {
-      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene2_h264.mp4",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/leomovie_scene3_h264.mp4",
       "error": "pipeline/QA failed (exit 1): No usable scenes after filtering",
-      "at": "2026-11-28 17:14 IST"
+      "at": "2026-11-28 18:04 IST"
     }
   ]
 }
