@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28 08:45 IST",
+ "generated_at": "2026-11-28 10:12 IST",
  "note": "GitHub never downloads. The box fetches these official >=1080p scene clips (no trailers, no watermarked / logo-burn channels) and uploads them to the `sources` release.",
  "release_listed": true,
  "release_scene_clips": 253,
@@ -43,6 +43,42 @@
     "hodaka"
    ],
    "market": "US/UK"
+  },
+  {
+   "slug": "vikram",
+   "slot": "2026-11-28T16:00:00+05:30",
+   "for": "slot",
+   "item_id": "20261128-1600-vikram",
+   "pillar": "south",
+   "words": "VIKRAM",
+   "scene_types": [
+    "fight",
+    "emotional",
+    "aura"
+   ],
+   "search_queries": [
+    "VIKRAM fight scene official clip",
+    "VIKRAM best scene official clip",
+    "VIKRAM official clip"
+   ],
+   "official_channels": [],
+   "source_url": "https://www.youtube.com/watch?v=0Z_mA7n5zIA",
+   "missing_assets": [],
+   "on_release": [
+    "vikram_scene3_h264.mp4"
+   ],
+   "hook": "Vikram came back to finish the job",
+   "title": "Vikram came back to finish the job | Vikram | #edit",
+   "tags": [
+    "vikram",
+    "kamalhaasan",
+    "south",
+    "edit",
+    "phonk",
+    "aura",
+    "action"
+   ],
+   "market": "IN"
   },
   {
    "slug": "haikyuudumpster",
