@@ -3317,7 +3317,9 @@
       "source_url": "https://www.youtube.com/watch?v=7z1bv8CtQxs",
       "scene_assets": [
         "baahubali2_scene1_h264.mp4",
-        "baahubali2_scene2_h264.mp4"
+        "baahubali2_scene2_h264.mp4",
+        "baahubali2_scene3_h264.mp4",
+        "baahubali2_scene4_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
