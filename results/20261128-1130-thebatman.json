@@ -1,0 +1,249 @@
+{
+  "id": "20261128-1130-thebatman",
+  "status": "done",
+  "detail": "gemini QC skipped; render kept, will re-check with the next key (no re-render) (QC retry pass) (assigned from stock-thebatman-02)",
+  "at": "2026-11-28 08:35 IST",
+  "run_url": "https://github.com/Bhupi820970/skywalker-shorts/actions/runs/45928361817",
+  "slot": "2026-11-28T11:30:00+05:30",
+  "title": "Why Batman scares the criminals | Batman enters the club | #edit",
+  "hook": "Why Batman scares the criminals",
+  "description": "Why Batman scares the criminals. From official The Batman clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #batman #thebatman #dc",
+  "tags": [
+    "batman",
+    "thebatman",
+    "dc",
+    "movieedit",
+    "phonk",
+    "brucewayne",
+    "action"
+  ],
+  "queue_meta": null,
+  "gemini_meta": false,
+  "hook_source": null,
+  "hook_style": null,
+  "title_candidates": null,
+  "gemini_calls": [
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "qc",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "s": 74.1,
+      "ok": true
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key3",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key1",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key2",
+      "err": "HTTP 429"
+    },
+    {
+      "purpose": "logo_final",
+      "model": "gemini-3.5-flash",
+      "key": "key4",
+      "s": 7.0,
+      "ok": true
+    }
+  ],
+  "backup_item": "backup-thebatman",
+  "stock": true,
+  "stock_topic": "backup-thebatman",
+  "spare": true,
+  "words": "THE BATMAN",
+  "edit_format": null,
+  "title_swaps": null,
+  "swapped_from": null,
+  "swapped_to": null,
+  "auto_retries": 1,
+  "max_auto_retries": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "error": "gemini QC skipped",
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
+      "music": "pr_xy0zyu6tgeq.mp3",
+      "qc_status": "skipped"
+    },
+    {
+      "attempt": "qc_retry",
+      "ok": true,
+      "error": null,
+      "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
+      "music": "pr_xy0zyu6tgeq.mp3"
+    }
+  ],
+  "last_error": null,
+  "qc_status": "pass",
+  "release_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/tag/backup-stock",
+  "asset_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-thebatman-02.mp4",
+  "cover_url": "https://github.com/Bhupi820970/skywalker-shorts/releases/download/backup-stock/stock-thebatman-02-cover.jpg",
+  "qa": {
+    "no_crop": true,
+    "caption": true,
+    "audio": true,
+    "no_shake": true,
+    "no_logo": true,
+    "exposure": true
+  },
+  "energy": false,
+  "source": "gh:https://github.com/Bhupi820970/skywalker-shorts/releases/download/sources/thebatman_scene4_h264.mp4",
+  "music": "pr_xy0zyu6tgeq.mp3",
+  "music_credit": "Song: Zericxxn - Raya (Slowed)\nOfficial link: https://www.youtube.com/watch?v=xY0ZyU6TGeQ",
+  "description_final": "Why Batman scares the criminals. From official The Batman clips. Edit by Skywalker.\nSource: official studio/distributor clip. All rights to the film/series belong to their owners; short commentary edit.\n#edit #shorts #batman #thebatman #dc\n\nMusic:\nSong: Zericxxn - Raya (Slowed)\nOfficial link: https://www.youtube.com/watch?v=xY0ZyU6TGeQ",
+  "gate": {
+    "ok": true,
+    "failures": [],
+    "gemini_qc": {
+      "pass": true,
+      "scores": {
+        "hook": 10.0,
+        "title": 10.0,
+        "speech_clarity": 10.0,
+        "shake": 10.0,
+        "crop": 10.0,
+        "length": 10.0,
+        "layout": 10.0,
+        "clean_footage": 10.0,
+        "captions": 10.0,
+        "post_worthy": 10.0
+      },
+      "reasons": [],
+      "low": [],
+      "logos_seen": [],
+      "watched_video": true
+    },
+    "logo_scan": {
+      "ok": true,
+      "hits": {},
+      "frames": 50,
+      "masked_rows": [
+        [
+          0.3187,
+          0.3823
+        ]
+      ]
+    },
+    "logo_verdict": true
+  },
+  "no_publish": false,
+  "scenes_picked": [
+    {
+      "id": 41,
+      "src_start": 126.209,
+      "dur": 1.5,
+      "gemini_score": 8.5,
+      "reason": "gemini score 8.5"
+    },
+    {
+      "id": 34,
+      "src_start": 113.739,
+      "dur": 2.099,
+      "gemini_score": 9.0,
+      "reason": "gemini score 9.0"
+    },
+    {
+      "id": 29,
+      "src_start": 92.593,
+      "dur": 1.834,
+      "gemini_score": 7.0,
+      "reason": "gemini score 7.0"
+    },
+    {
+      "id": 11002,
+      "src_start": 22.376,
+      "dur": 1.586,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 10,
+      "src_start": 14.89,
+      "dur": 2.754,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 33,
+      "src_start": 106.523,
+      "dur": 2.719,
+      "gemini_score": 6.5,
+      "reason": "gemini score 6.5"
+    },
+    {
+      "id": 12,
+      "src_start": 27.945,
+      "dur": 1.834,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 19001,
+      "src_start": 63.012,
+      "dur": 3.042,
+      "gemini_score": 8.0,
+      "reason": "gemini score 8.0"
+    },
+    {
+      "id": 15,
+      "src_start": 43.168,
+      "dur": 1.5,
+      "gemini_score": 7.5,
+      "reason": "gemini score 7.5"
+    },
+    {
+      "id": 44,
+      "src_start": 129.963,
+      "dur": 1.588
+    },
+    {
+      "id": 46,
+      "src_start": 148.148,
+      "dur": 1.5
+    }
+  ],
+  "layout": {
+    "bar_y": 612,
+    "bar_h": 122,
+    "plate_y": 734,
+    "video_y": 734,
+    "plate_x": 0,
+    "plate_w": 1080,
+    "plate_h": 452,
+    "region_h": 1798,
+    "block_h": 1920,
+    "drop_t": null,
+    "energy": false,
+    "caption_y": 1214,
+    "captions": [],
+    "speech_windows": [],
+    "edit_mode": "music_only",
+    "edit_format": "action",
+    "blur_fill": true
+  },
+  "stock_id": "stock-thebatman-02",
+  "assigned_from_stock": true
+}

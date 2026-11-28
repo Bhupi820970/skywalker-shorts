@@ -243,5 +243,9 @@
     "edit_mode": "music_only",
     "edit_format": "action",
     "blur_fill": true
-  }
+  },
+  "stock_used": true,
+  "assigned_slot": "2026-11-28T11:30:00+05:30",
+  "assigned_result": "20261128-1130-thebatman",
+  "used_at": "2026-11-28 08:35 IST"
 }
