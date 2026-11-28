@@ -728,11 +728,13 @@
   "publish_via": "youtube",
   "yt_video_id": "udybFxbSspE",
   "yt_uploaded_at": "2026-11-28 07:34 IST",
-  "yt_privacy": "private",
+  "yt_privacy": "public",
   "yt_publish_at": "2026-11-28T09:00:00+05:30",
-  "yt_status": "scheduled",
+  "yt_status": "public",
   "youtube_url": "https://youtube.com/shorts/udybFxbSspE",
   "buffer_post_id": "yt:udybFxbSspE",
-  "buffer_status": "scheduled",
-  "buffer_due_at": "2026-11-28T03:30:00.000Z"
+  "buffer_status": "sent",
+  "buffer_due_at": "2026-11-28T03:30:00.000Z",
+  "yt_checked_public": true,
+  "buffer_posted_at": "2026-11-28T03:30:00.000Z"
 }
