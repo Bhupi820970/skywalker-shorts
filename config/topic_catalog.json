@@ -3288,7 +3288,11 @@
       "source_url": "https://www.youtube.com/watch?v=D6eJo5XdMhc",
       "scene_assets": [
         "omshantiom_scene1_h264.mp4",
-        "omshantiom_scene2_h264.mp4"
+        "omshantiom_scene2_h264.mp4",
+        "omshantiom_scene3_h264.mp4",
+        "omshantiom_scene4_h264.mp4",
+        "omshantiom_scene5_h264.mp4",
+        "omshantiom_scene6_h264.mp4"
       ],
       "content_kind": "best scene",
       "added_by": "clip_fetch:box"
